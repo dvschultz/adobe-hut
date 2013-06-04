@@ -1,0 +1,1 @@
+﻿function readCSV (thePath) {    if (File(thePath).exists == true) {        var file = File(thePath);        file.open("r");        file.encoding= 'BINARY';        var theText = file.read();        file.close();        return String(theText).split(",");    }};
