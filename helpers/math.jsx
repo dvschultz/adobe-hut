@@ -1,0 +1,1 @@
+﻿function degToRad(deg) {    var rad = deg * Math.PI/180;    return rad;}
