@@ -1,0 +1,233 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: DocumentPreset</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, documentpreset">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>DocumentPreset</h1></td></tr>
+<tr><td>&nbsp;</td><td>A preset that contains all of the new document settings.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#duplicate" title="Duplicates the DocumentPreset.">duplicate</a>, <a href="#extractLabel" title="Gets the label value associated with the specified key.">extractLabel</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#insertLabel" title="Sets the label to the value associated with the specified key.">insertLabel</a>, <a href="#remove" title="Deletes the DocumentPreset.">remove</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#toSource" title="Generates a string which, if executed, will return the DocumentPreset.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Application.html">Application</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>DocumentPreset</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="bottom"></a>bottom</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The bottom edge of the DocumentPreset.</td></tr>
+<tr><td><a name="columnCount"></a>columnCount</td><td><a href="pc_number.html">number</a> (range: 1 - 216)</td>
+<td>r/w</td><td>The number of columns to place on the page.</td></tr>
+<tr><td><a name="columnGutter"></a>columnGutter</td><td>Measurement Unit (Number or String) (range: 0 - 1440)</td>
+<td>r/w</td><td>The distance between columns.</td></tr>
+<tr><td><a name="createPrimaryTextFrame"></a>createPrimaryTextFrame</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the document A-master has primary text frames when a new document is created.</td></tr>
+<tr><td><a name="documentBleedBottomOffset"></a>documentBleedBottomOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the bottom document bleed. Note: To set the bleed bottom offset, document bleed uniform size must be false.</td></tr>
+<tr><td><a name="documentBleedInsideOrLeftOffset"></a>documentBleedInsideOrLeftOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the inside or left document bleed. Note: To set the bleed inside or left offset, document bleed uniform size must be false.</td></tr>
+<tr><td><a name="documentBleedOutsideOrRightOffset"></a>documentBleedOutsideOrRightOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the outside or right document bleed. Note: To set the bleed outside or right offset, document bleed uniform size must be false.</td></tr>
+<tr><td><a name="documentBleedTopOffset"></a>documentBleedTopOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the top document bleed.</td></tr>
+<tr><td><a name="documentBleedUniformSize"></a>documentBleedUniformSize</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses the document bleed top offset value for bleed offset measurements on all sides of the document. The default setting is true.</td></tr>
+<tr><td><a name="documentSlugUniformSize"></a>documentSlugUniformSize</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses the slug top offset value for slug measurements on all sides of the document. The default value is false.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="facingPages"></a>facingPages</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the document has facing pages.</td></tr>
+<tr><td><a name="id"></a>id</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The unique ID of the DocumentPreset.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the DocumentPreset within its containing object.</td></tr>
+<tr><td><a name="intent"></a>intent</td><td><a href="pe_DocumentIntentOptions.html">DocumentIntentOptions</a>:<br>DocumentIntentOptions.PRINT_INTENT<br>DocumentIntentOptions.WEB_INTENT<br>DocumentIntentOptions.DPS_INTENT</td>
+<td>r/w</td><td>The intent for a document.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="label"></a>label</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A property that can be set to any string.</td></tr>
+<tr><td><a name="left"></a>left</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The left edge of the DocumentPreset.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The name of the DocumentPreset.</td></tr>
+<tr><td><a name="pageHeight"></a>pageHeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The height of the page.</td></tr>
+<tr><td><a name="pageOrientation"></a>pageOrientation</td><td><a href="pe_PageOrientation.html">PageOrientation</a>:<br>PageOrientation.LANDSCAPE<br>PageOrientation.PORTRAIT</td>
+<td>r/w</td><td>The page orientation.</td></tr>
+<tr><td><a name="pageSize"></a>pageSize</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The size of the page.</td></tr>
+<tr><td><a name="pageWidth"></a>pageWidth</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The width of the page.</td></tr>
+<tr><td><a name="pagesPerDocument"></a>pagesPerDocument</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of pages in the document. (Range: 1 to 9999)</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Application.html">Application</a></td>
+<td>readonly</td><td>The parent of the DocumentPreset (a Application).</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="right"></a>right</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The right edge of the DocumentPreset.</td></tr>
+<tr><td><a name="slugBottomOffset"></a>slugBottomOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the bottom slug. Note: To set the slug bottom offset, document slug uniform size must be false.</td></tr>
+<tr><td><a name="slugInsideOrLeftOffset"></a>slugInsideOrLeftOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the inside or left slug. Note: To set the slug inside or left offset, document slug uniform size must be false.</td></tr>
+<tr><td><a name="slugRightOrOutsideOffset"></a>slugRightOrOutsideOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the outside or right slug. Note: To set the slug right or outside offset, document slug uniform size must be false.</td></tr>
+<tr><td><a name="slugTopOffset"></a>slugTopOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the top slug.</td></tr>
+<tr><td><a name="startPageNumber"></a>startPageNumber</td><td><a href="pc_number.html">number</a> (range: 1 - 999999)</td>
+<td>r/w</td><td>The starting page number for a document. This is the same as the starting page number for the first section of a document. Default value is 1.</td></tr>
+<tr class="lastRow"><td><a name="top"></a>top</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The top edge of the DocumentPreset.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="duplicate"></a><a href="pc_DocumentPreset.html">DocumentPreset</a> <span class="func">duplicate</span> ()<br>
+Duplicates the DocumentPreset.</p>
+
+<p class="spaceBelow"><a name="extractLabel"></a>string <span class="func">extractLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Gets the label value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_DocumentPreset.html">DocumentPreset</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="insertLabel"></a><span class="rett">void</span>  <span class="func">insertLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+Sets the label to the value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_string.html">string</a></td><td>The value.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes the DocumentPreset.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the DocumentPreset.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#nextItem">DocumentPresets.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>DocumentPreset</b>)
+</p><p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#previousItem">DocumentPresets.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>DocumentPreset</b>)
+</p><p class="hangIndent"><a href="pc_Document.html">Document</a> <a href="pc_Documents.html#add">Documents.add</a>
+		([<span class="arg">showingWindow</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">documentPreset</span>:
+<b>DocumentPreset</b>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>DocumentPreset</b> <b>DocumentPreset</b>.<a href="pc_DocumentPreset.html#duplicate">duplicate</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>DocumentPreset</b> <b>DocumentPreset</b>.<a href="pc_DocumentPreset.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#[]">DocumentPresets.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#add">DocumentPresets.add</a> ([<span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#anyItem">DocumentPresets.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>DocumentPreset</b> <a href="pc_DocumentPresets.html#everyItem">DocumentPresets.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#firstItem">DocumentPresets.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#item">DocumentPresets.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#itemByID">DocumentPresets.itemByID</a> (<span class="arg">id</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#itemByName">DocumentPresets.itemByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>DocumentPreset</b> <a href="pc_DocumentPresets.html#itemByRange">DocumentPresets.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#lastItem">DocumentPresets.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#middleItem">DocumentPresets.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#nextItem">DocumentPresets.nextItem</a> (<span class="arg">obj</span>:
+<b>DocumentPreset</b>)
+</p>
+<p class="hangIndent"><b>DocumentPreset</b> <a href="pc_DocumentPresets.html#previousItem">DocumentPresets.previousItem</a> (<span class="arg">obj</span>:
+<b>DocumentPreset</b>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: IndexOptions</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, indexoptions">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>IndexOptions</h1></td></tr>
+<tr><td>&nbsp;</td><td>Index options. Base Class: <a href="pc_Preference.html">Preference</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#toSource" title="Generates a string which, if executed, will return the IndexOptions.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Application.html">Application</a> | <a href="pc_Document.html">Document</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_Preference.html">Preference</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>IndexOptions</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="beforeCrossReferenceSeparator"></a>beforeCrossReferenceSeparator</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The character(s) inserted at the start of cross references.</td></tr>
+<tr><td><a name="betweenEntriesSeparator"></a>betweenEntriesSeparator</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The character(s) inserted between index entries when runin-style index format is used for nested topics.</td></tr>
+<tr><td><a name="betweenPageNumbersSeparator"></a>betweenPageNumbersSeparator</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The character(s) inserted between separate page numbers, page numbers and page ranges, and series of page ranges.</td></tr>
+<tr><td><a name="crossReferenceStyle"></a>crossReferenceStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a></td>
+<td>r/w</td><td>The character style applied to cross references.</td></tr>
+<tr><td><a name="crossReferenceTopicStyle"></a>crossReferenceTopicStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a></td>
+<td>r/w</td><td>The character style applied to cross reference topics.</td></tr>
+<tr><td><a name="entryEndSeparator"></a>entryEndSeparator</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The character(s) inserted at the end of each index entry.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="followingTopicSeparator"></a>followingTopicSeparator</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The character(s) inserted after each index topic.</td></tr>
+<tr><td><a name="includeBookDocuments"></a>includeBookDocuments</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, includes topics and page references from all the documents in a book.</td></tr>
+<tr><td><a name="includeEmptyIndexSections"></a>includeEmptyIndexSections</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, displays headings for sections with no index topics. Note: Valid only when include section headings is true.</td></tr>
+<tr><td><a name="includeHiddenEntries"></a>includeHiddenEntries</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, includes topics and page references on hidden layers.</td></tr>
+<tr><td><a name="includeSectionHeadings"></a>includeSectionHeadings</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, displays the letters of the alphabet as index section headings.</td></tr>
+<tr><td><a name="indexFormat"></a>indexFormat</td><td><a href="pe_IndexFormat.html">IndexFormat</a>:<br>IndexFormat.RUNIN_FORMAT<br>IndexFormat.NESTED_FORMAT</td>
+<td>r/w</td><td>The format for level 2 and lower index topics.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="level1Style"></a>level1Style</td><td><a href="pc_ParagraphStyle.html">ParagraphStyle</a></td>
+<td>r/w</td><td>The paragraph style applied to level 1 index topics.</td></tr>
+<tr><td><a name="level2Style"></a>level2Style</td><td><a href="pc_ParagraphStyle.html">ParagraphStyle</a></td>
+<td>r/w</td><td>The paragraph style applied to level 2 index topics.</td></tr>
+<tr><td><a name="level3Style"></a>level3Style</td><td><a href="pc_ParagraphStyle.html">ParagraphStyle</a></td>
+<td>r/w</td><td>The paragraph style applied to level 3 index topics.</td></tr>
+<tr><td><a name="level4Style"></a>level4Style</td><td><a href="pc_ParagraphStyle.html">ParagraphStyle</a></td>
+<td>r/w</td><td>The paragraph style applied to level 4 index topics.</td></tr>
+<tr><td><a name="pageNumberStyle"></a>pageNumberStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a></td>
+<td>r/w</td><td>The character style applied to page numbers in the index.</td></tr>
+<tr><td><a name="pageRangeSeparator"></a>pageRangeSeparator</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The character(s) inserted between page numbers to indicate a page range.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Application.html">Application</a><br><a href="pc_Document.html">Document</a></td>
+<td>readonly</td><td>The parent of the IndexOptions (a Document or Application).</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="replaceExistingIndex"></a>replaceExistingIndex</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, replaces the content of the existing index. Note: Replaces only index content; does not update the index location or other index properties that may have been changed.</td></tr>
+<tr><td><a name="sectionHeadingStyle"></a>sectionHeadingStyle</td><td><a href="pc_ParagraphStyle.html">ParagraphStyle</a></td>
+<td>r/w</td><td>The paragraph style applied to index section headings. Note: Valid when include section headings is true.</td></tr>
+<tr><td><a name="title"></a>title</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The title of the generated index.</td></tr>
+<tr class="lastRow"><td><a name="titleStyle"></a>titleStyle</td><td><a href="pc_ParagraphStyle.html">ParagraphStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The paragraph style applied to the title of the generated index. Can also accept: String.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_IndexOptions.html">IndexOptions</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the IndexOptions.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.indexGenerationOptions</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Document.html">Document</a>.indexGenerationOptions</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>IndexOptions</b> <b>IndexOptions</b>.<a href="pc_IndexOptions.html#getElements">getElements</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

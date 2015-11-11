@@ -1,0 +1,89 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: About these pages</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, about these pages">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td width="33%"><h1>Adobe InDesign CS6</h1></td><td width="50%"><h2>About these pages</h2></td><td width="17%"></td></tr><tr class="lastRow"><td>&nbsp;</td><td><div><p class="spaceBelow">The ExtendScript Toolkit Editor comes with a built-in Help function, which displays all objects accessible in JavaScript for InDesign, Bridge, Illustrator, and Photoshop. It does so by sending a request to the target program to output an XML data
+file, containing the prototypes and definitions for all of its scriptable components. This XML file is saved in a cache (presumably
+because it's a lengthy operation) and subsequentially displayed when requested. If it detects a new plugin, the request is sent again
+and the XML file is rebuilt from scratch. That means that online help for any new scriptable plugin commands are available
+<i>immediately</i> for your new scripts. Amazing!</p>
+
+<p class="spaceBelow">XML is a very readable data format ... if you're a bithead like me! But wouldn't it be nice to be able to format
+this help text <i>just as you like</i>, and be readable (and searchable!) in your favourite program, such as your web browser? Well, the
+XML format has a unique advantage over just about any other data file. It's highly structured, and this content can be manipulated using
+XSLT — the Extensible Stylesheet Language Transformations language, as defined by the World Wide Web Consortium (W3C). An XSLT
+stylesheet can sort and manipulate XML input, insert all kinds of extra data (such as, oh, a copyright manifest at the top of every
+output), and write the result to one or more output files. What has that to do with these 750 pages of HTML? I didn't create a single
+one of them. (<i>This</i> page is created 'All By Hand'<sup>TM</sup> — but it's not part of Adobe's XML files.)</p>
+
+<p class="spaceBelow">So I wrote an XSLT stylesheet to read, parse, split, and sort the huge input file, and to output it as formatted
+and hyperlinked HTML pages. This was no mean task at all — the input file is over 113,000 lines long, and the latest version of the
+style sheet contains just under a thousand lines. All in all, it took me more than 50 hours of hard work to create the output you see
+before you. But wait! couldn't I just have search-and-replaced the XML commands into HTML? Sure — manually sorting and such, but
+still doable. But if I ever want to change something — say, I want 4 columns of index instead of 3, or I don't want to use tables
+anymore, but real CSS3 columns — all I have to do is re-write a (small) part of the XSLT style sheet and let the Saxon XSLT
+interpreter go over the XML again. If my installation of InDesign is upgraded with some scriptable plugin, all I have to do is run Saxon
+again. Since the XML help for CS4 has the same formatting, I can run Saxon again on <i>its</i> help file. And there you have it! Another
+entirely new set of more than 750 files, all properly indexed and hyperlinked, without me doing any more than changing how it should
+look!<sup><a href="#notea">a</a></sup></p>
+
+<p class="spaceBelow">Understanding XML is easy, especially if you are well-versed in HTML. If the latter, you should really know about
+XHTML — the well-formatted younger brother of that plain old tack-together-with-sticky-tape that grew so bloated over the years.
+XML is even more so structured, and the step over shouldn't be difficult. XSLT is something quite else. First off, it's defined in terms
+of XML (meaning: you can run an XSLT style sheet over an XSLT style sheet, for example to format it for printing or viewing). It's a
+programming language, but it doesn't work in the do-this-then-that sequential steps; instead, it's a <i>procedural</i> language, and it
+describes what to do on each and every XML element it encounters in the input XML document. Writing your first XSLT style sheet can be
+frustrating (usually, because your first attempts don't appear to do anything at all) until you get into the proper mind set. Soon you
+will be scanning every folder on your computer for XML files to examine! (Mac OS X users: a <code>.plist</code> configuration file is
+also XML; lots of other files in that system are as well.)</p>
+
+<p class="spaceBelow">So, why <i>did</i> I work so hard on writing the sheet for this? Well, it was fun to create something new — a
+good reason in itself. Besides, I needed the training. As a typesetter, one of my upcoming jobs includes a dictionary that is being
+assembled as Excel data. I experimented with a small data set, exporting it from Excel as XML, and then converting it to plain text,
+sorting entries and concatenating duplicates all in one go. After that I reckoned, "INX" — InDesign's compatibility file format
+— "is <i>also</i> an XML file", and went on to include all necessary formatting, from pages and paragraphs, right up to the style
+and formatting of individual words. Saxon still didn't break into a sweat — and now all I have to do if the complete data comes in,
+is export it to XML, run my sheet over it to create an INX output file, and open that one with InDesign. The publisher will be amazed if
+he receives a complete set of proofs within a couple of hours (let's be generous), no matter if it's a hundred pages of output or a
+thousand. How does that sound for page throughput!?</p>
+
+<h3>Acknowledgements</h3>
+
+<p class="spaceBelow">The first CHM conversion of the files for CS3 was done by fellow scripting enthousiast ABC GREEN. Additionally, he helped me set up my system to compile other versions as well. Thanks, mate!</p>
+
+<h3>Note</h3>
+<p><small><sup><a name="notea">a</a></sup> Due to a hard disk crash of my Windows machine I lost all of my installed programs. Fortunately, my good friend René Kramer (1967-2010) was able to rescue most (if not all) of my data. Thanks, René - that bottle of whiskey was well earned. Enjoy it, whereever you are.</small></p>
+<p><small>So <em>this</em> version is not created with Saxon on a Windows computer. Working on my Mac, I downloaded <a href="http://sourceforge.net/projects/kernowforsaxon/">Kernow for Saxon</a>. The older version 1.4 comes complete with a Java interface and Saxon 8B, and to my surprise (and relief) it took just a few clicks to re-generate the entire Help set anew. I said it before and I'll say it again: Support Open Source Software!</small></p>
+</div></td></tr></table><table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

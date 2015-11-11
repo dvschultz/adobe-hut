@@ -1,0 +1,622 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Table</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, table">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Table</h1></td></tr>
+<tr><td>&nbsp;</td><td>A table.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#autoTag" title="Tag the object or the parent story using default tags defined in XML preference.">autoTag</a>, <a href="#changeGlyph" title="Finds glyphs that match the find what value and replaces the glyphs with the change to value.">changeGlyph</a>, <a href="#changeGrep" title="Finds text that matches the find what value and replaces the text with the change to value.">changeGrep</a>, <a href="#changeText" title="Finds text that matches the find what value and replaces the text with the change to value.">changeText</a>, <a href="#changeTransliterate" title="Finds text that matches the find character type value and replaces the text with the change character type value.">changeTransliterate</a>, <a href="#clearTableStyleOverrides" title="Clear Table Style Overrides">clearTableStyleOverrides</a>, <a href="#convertBulletsAndNumberingToText" title="Convert bullets and numbering to text.">convertBulletsAndNumberingToText</a>, <a href="#convertToText" title="Converts the table to text.">convertToText</a>, <a href="#createOutlines" title="Converts text to outlines. Each line of text becomes a polygon object. When the converted text is a single letter that has no internal spaces or detached parts, the polygon contains only a single path. Note: To determine whether a font allows the creation of outlines, see allow outlines.">createOutlines</a>, <a href="#extractLabel" title="Gets the label value associated with the specified key.">extractLabel</a>, <a href="#findGlyph" title="Finds glyphs that match the find what value.">findGlyph</a>, <a href="#findGrep" title="Finds text that matches the find what value.">findGrep</a>, <a href="#findText" title="Finds text that matches the find what value.">findText</a>, <a href="#findTransliterate" title="Finds text that matches the find character type value.">findTransliterate</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#insertLabel" title="Sets the label to the value associated with the specified key.">insertLabel</a>, <a href="#markup" title="Associates the page item with the specified XML element while preserving existing content.">markup</a>, <a href="#recompose" title="Recomposes the text in the Table.">recompose</a>, <a href="#remove" title="Deletes the Table.">remove</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#select" title="Selects the object.">select</a>, <a href="#toSource" title="Generates a string which, if executed, will return the Table.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a>, <a href="#unmerge" title="Unmerges all merged cells in the Table.">unmerge</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Cell.html">Cell</a> | <a href="pc_Character.html">Character</a> | <a href="pc_InsertionPoint.html">InsertionPoint</a> | <a href="pc_Line.html">Line</a> | <a href="pc_Paragraph.html">Paragraph</a> | <a href="pc_Story.html">Story</a> | <a href="pc_Text.html">Text</a> | <a href="pc_TextColumn.html">TextColumn</a> | <a href="pc_TextFrame.html">TextFrame</a> | <a href="pc_TextStyleRange.html">TextStyleRange</a> | <a href="pc_Word.html">Word</a> | <a href="pc_XMLElement.html">XMLElement</a> | <a href="pc_XmlStory.html">XmlStory</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Table</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Cell.html">Cell</a> | <a href="pc_Column.html">Column</a> | <a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a> | <a href="pc_Row.html">Row</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="allGraphics"></a>allGraphics</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Graphic.html">Graphic</a></td>
+<td>readonly</td><td>Lists all graphics contained by the Table.</td></tr>
+<tr><td><a name="allPageItems"></a>allPageItems</td><td><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a></td>
+<td>readonly</td><td>Lists all page items contained by the Table.</td></tr>
+<tr><td><a name="alternatingFills"></a>alternatingFills</td><td><a href="pe_AlternatingFillsTypes.html">AlternatingFillsTypes</a>:<br>AlternatingFillsTypes.NO_ALTERNATING_PATTERN<br>AlternatingFillsTypes.ALTERNATING_ROWS<br>AlternatingFillsTypes.ALTERNATING_COLUMNS</td>
+<td>r/w</td><td>The pattern for alternating fills.</td></tr>
+<tr><td><a name="appliedTableStyle"></a>appliedTableStyle</td><td><a href="pc_String.html">String</a><br><a href="pc_TableStyle.html">TableStyle</a></td>
+<td>r/w</td><td>The table style applied to the table. Can also accept: String.</td></tr>
+<tr><td><a name="associatedXMLElement"></a>associatedXMLElement</td><td><a href="pc_XMLItem.html">XMLItem</a></td>
+<td>readonly</td><td>The XML element associated with the Table.</td></tr>
+<tr><td><a name="bodyRowCount"></a>bodyRowCount</td><td><a href="pc_number.html">number</a> (range: 1 - 10000)</td>
+<td>r/w</td><td>The number of body rows.</td></tr>
+<tr><td><a name="bottomBorderStrokeColor"></a>bottomBorderStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The color, specified as a swatch (color, gradient, tint, or mixed ink), of the bottom border stroke.</td></tr>
+<tr><td><a name="bottomBorderStrokeGapColor"></a>bottomBorderStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The gap color, specified as a swatch (color, gradient, tint, or mixed ink), of the bottom border stroke. Note: Valid only when bottom border stroke type is not solid.</td></tr>
+<tr><td><a name="bottomBorderStrokeGapOverprint"></a>bottomBorderStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap of the bottom border stroke will overprint. Note: Valid only when bottom border stroke type is not solid.</td></tr>
+<tr><td><a name="bottomBorderStrokeGapTint"></a>bottomBorderStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of the bottom border stroke. (Range: 0 to 100) Note: Valid only when bottom border stroke type is not solid.</td></tr>
+<tr><td><a name="bottomBorderStrokeOverprint"></a>bottomBorderStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the bottom border stroke will overprint.</td></tr>
+<tr><td><a name="bottomBorderStrokeTint"></a>bottomBorderStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the bottom border stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="bottomBorderStrokeType"></a>bottomBorderStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the bottom border. Can also accept: String.</td></tr>
+<tr><td><a name="bottomBorderStrokeWeight"></a>bottomBorderStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the bottom border stroke.</td></tr>
+<tr><td><a name="breakFooters"></a>breakFooters</td><td><a href="pe_HeaderFooterBreakTypes.html">HeaderFooterBreakTypes</a>:<br>HeaderFooterBreakTypes.IN_ALL_TEXT_COLUMNS<br>HeaderFooterBreakTypes.ONCE_PER_TEXT_FRAME<br>HeaderFooterBreakTypes.ONCE_PER_PAGE</td>
+<td>r/w</td><td>The footer placement.</td></tr>
+<tr><td><a name="breakHeaders"></a>breakHeaders</td><td><a href="pe_HeaderFooterBreakTypes.html">HeaderFooterBreakTypes</a>:<br>HeaderFooterBreakTypes.IN_ALL_TEXT_COLUMNS<br>HeaderFooterBreakTypes.ONCE_PER_TEXT_FRAME<br>HeaderFooterBreakTypes.ONCE_PER_PAGE</td>
+<td>r/w</td><td>The header placement.</td></tr>
+<tr><td><a name="buttons"></a>buttons</td><td><a href="pc_Buttons.html">Buttons</a> <a class="sing" href="pc_Button.html">Button</a></td>
+<td>readonly</td><td>A collection of buttons.</td></tr>
+<tr><td><a name="cells"></a>cells</td><td><a href="pc_Cells.html">Cells</a> <a class="sing" href="pc_Cell.html">Cell</a></td>
+<td>readonly</td><td>A collection of table cells.</td></tr>
+<tr><td><a name="changes"></a>changes</td><td><a href="pc_Changes.html">Changes</a> <a class="sing" href="pc_Change.html">Change</a></td>
+<td>readonly</td><td>A collection of changes.</td></tr>
+<tr><td><a name="checkBoxes"></a>checkBoxes</td><td><a href="pc_CheckBoxes.html">CheckBoxes</a></td>
+<td>readonly</td><td>A collection of checkboxes.</td></tr>
+<tr><td><a name="columnCount"></a>columnCount</td><td><a href="pc_number.html">number</a> (range: 1 - 200)</td>
+<td>r/w</td><td>The number of columns.</td></tr>
+<tr><td><a name="columnFillsPriority"></a>columnFillsPriority</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, hides alternating row fills. If false, hides alternating column fills.</td></tr>
+<tr><td><a name="columns"></a>columns</td><td><a href="pc_Columns.html">Columns</a> <a class="sing" href="pc_Column.html">Column</a></td>
+<td>readonly</td><td>A collection of table columns.</td></tr>
+<tr><td><a name="comboBoxes"></a>comboBoxes</td><td><a href="pc_ComboBoxes.html">ComboBoxes</a></td>
+<td>readonly</td><td>A collection of comboboxes.</td></tr>
+<tr><td><a name="contents"></a>contents</td><td><a href="pc_Array.html">Array</a> of <br><a href="pe_SpecialCharacters.html">SpecialCharacters</a><br>Strings</td>
+<td>r/w</td><td>The contents to place in cells, specified as an array whose first item populates the top left cell and whose second item populates the next cell to the right, and so on until each cell in the top row is populated, at which point the next item populates the left-most cell in the second row, and so on. Note: If the array contains fewer strings than the table contains cells, the remaining cells are left blank. Can return: Array of Strings or SpecialCharacters enumerators. Can also accept: Array of Strings, SpecialCharacters enumerators or NothingEnum enumerators.</td></tr>
+<tr><td><a name="displayCollapsed"></a>displayCollapsed</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, then the table will show collapsed in story and galley views.</td></tr>
+<tr><td><a name="displayOrder"></a>displayOrder</td><td><a href="pe_DisplayOrderOptions.html">DisplayOrderOptions</a>:<br>DisplayOrderOptions.ORDER_BY_ROWS<br>DisplayOrderOptions.ORDER_BY_COLUMNS</td>
+<td>r/w</td><td>Specifies the order the table cells will display in when viewing in story and galley views.</td></tr>
+<tr><td><a name="endColumnFillColor"></a>endColumnFillColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The fill color, specified as a swatch (color, gradient, tint, or mixed ink), of columns in the second alternating fill group. Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="endColumnFillCount"></a>endColumnFillCount</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of columns in the second alternating fills group. Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="endColumnFillOverprint"></a>endColumnFillOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the columns in the second alternating fills group will overprint. Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="endColumnFillTint"></a>endColumnFillTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the columns in the second alternating fills group. (Range: 0 to 100) Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="endColumnLineStyle"></a>endColumnLineStyle</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of columns in the second alternating strokes group. Can also accept: String.</td></tr>
+<tr><td><a name="endColumnStrokeColor"></a>endColumnStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The stroke color, specified as a swatch (color, gradient, tint, or mixed ink), of column borders in the second alternating column strokes group. Note: Valid when end column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endColumnStrokeCount"></a>endColumnStrokeCount</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of columns in the second alternating column strokes group.</td></tr>
+<tr><td><a name="endColumnStrokeGapColor"></a>endColumnStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The stroke gap color, specified as a swatch (color, gradient, tint, or mixed ink), of column borders in the second alternating column strokes group. Note: Valid when end column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endColumnStrokeGapOverprint"></a>endColumnStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap of the column border stroke in the second alternating column strokes group will overprint. Note: Valid when end column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endColumnStrokeGapTint"></a>endColumnStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of column borders in the second alternating column strokes group. (Range: 0 to 100) Note: Valid when end column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endColumnStrokeOverprint"></a>endColumnStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the column borders in the second alternating column strokes group will overprint. Note: Valid when end column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endColumnStrokeTint"></a>endColumnStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of column borders in the second alternating column strokes group. (Range: 0 to 100) Note: Valid when end column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endColumnStrokeWeight"></a>endColumnStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of column borders in the second alternating column strokes group. Note: Valid when end column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endRowFillColor"></a>endRowFillColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The fill color, specified as a swatch (color, gradient, tint, or mixed ink), of rows in the second alternating fills group. Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="endRowFillCount"></a>endRowFillCount</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of rows in the second alternating fills group. Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="endRowFillOverprint"></a>endRowFillOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the rows in the second alternating fills group will overprint. Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="endRowFillTint"></a>endRowFillTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the rows in the second alternating fills group. (Range: 0 to 100) Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="endRowStrokeColor"></a>endRowStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The stroke color, specified as a swatch (color, gradient, tint, or mixed ink), of row borders in the second alternating row strokes group. Note: Valid when end row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endRowStrokeCount"></a>endRowStrokeCount</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of rows in the second alternating row strokes group.</td></tr>
+<tr><td><a name="endRowStrokeGapColor"></a>endRowStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The gap color, specified as a swatch (color, gradient, tint, or mixed ink), of row borders in the second alternating rows group. Note: Valid when end row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endRowStrokeGapOverprint"></a>endRowStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap of the row borders in the second alternating rows group will overprint. Note: Valid when end row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endRowStrokeGapTint"></a>endRowStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of rows in the second alternating strokes group. (Range: 0 to 100) Note: Valid when end row stroke count is 1 or greater and end row stroke type is not solid.</td></tr>
+<tr><td><a name="endRowStrokeOverprint"></a>endRowStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the rows in the second alternating rows group will overprint. Note: Valid when end row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endRowStrokeTint"></a>endRowStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the row borders in the second alternating strokes group. (Range: 0 to 100) Note: Valid when end row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="endRowStrokeType"></a>endRowStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of rows in the second alternating strokes group. Can also accept: String.</td></tr>
+<tr><td><a name="endRowStrokeWeight"></a>endRowStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of row borders in the second alternating row strokes group. Note: Valid when end row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="epstexts"></a>epstexts</td><td><a href="pc_EPSTexts.html">EPSTexts</a> <a class="sing" href="pc_EPSText.html">EPSText</a></td>
+<td>readonly</td><td>EPSTexts</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="footerRowCount"></a>footerRowCount</td><td><a href="pc_number.html">number</a> (range: 0 - 25)</td>
+<td>r/w</td><td>The number of footer rows.</td></tr>
+<tr><td><a name="formFields"></a>formFields</td><td><a href="pc_FormFields.html">FormFields</a> <a class="sing" href="pc_FormField.html">FormField</a></td>
+<td>readonly</td><td>A collection of form fields.</td></tr>
+<tr><td><a name="graphicLines"></a>graphicLines</td><td><a href="pc_GraphicLines.html">GraphicLines</a> <a class="sing" href="pc_GraphicLine.html">GraphicLine</a></td>
+<td>readonly</td><td>A collection of graphic lines.</td></tr>
+<tr><td><a name="groups"></a>groups</td><td><a href="pc_Groups.html">Groups</a> <a class="sing" href="pc_Group.html">Group</a></td>
+<td>readonly</td><td>A collection of groups.</td></tr>
+<tr><td><a name="headerRowCount"></a>headerRowCount</td><td><a href="pc_number.html">number</a> (range: 0 - 25)</td>
+<td>r/w</td><td>The number of header rows.</td></tr>
+<tr><td><a name="height"></a>height</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The height of the Table. For a table or column, specifies the sum of the row heights.</td></tr>
+<tr><td><a name="hiddenTexts"></a>hiddenTexts</td><td><a href="pc_HiddenTexts.html">HiddenTexts</a> <a class="sing" href="pc_HiddenText.html">HiddenText</a></td>
+<td>readonly</td><td>A collection of hidden text objects.</td></tr>
+<tr><td><a name="id"></a>id</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The unique ID of the Table.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the Table within its containing object.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="label"></a>label</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A property that can be set to any string.</td></tr>
+<tr><td><a name="leftBorderStrokeColor"></a>leftBorderStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The color, specified as a swatch (color, gradient, tint, or mixed ink), of the left border stroke.</td></tr>
+<tr><td><a name="leftBorderStrokeGapColor"></a>leftBorderStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The gap color, specified as a swatch (color, gradient, tint, or mixed ink), of the left border stroke. Note: Valid only when left border stroke type is not solid.</td></tr>
+<tr><td><a name="leftBorderStrokeGapOverprint"></a>leftBorderStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap of the left border stroke will overprint. Note: Valid only when left border stroke type is not solid.</td></tr>
+<tr><td><a name="leftBorderStrokeGapTint"></a>leftBorderStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of the left border stroke. (Range: 0 to 100) Note: Valid only when left border stroke type is not solid.</td></tr>
+<tr><td><a name="leftBorderStrokeOverprint"></a>leftBorderStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the left border stroke will overprint.</td></tr>
+<tr><td><a name="leftBorderStrokeTint"></a>leftBorderStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the left border stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="leftBorderStrokeType"></a>leftBorderStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the left border. Can also accept: String.</td></tr>
+<tr><td><a name="leftBorderStrokeWeight"></a>leftBorderStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the left border stroke.</td></tr>
+<tr><td><a name="listBoxes"></a>listBoxes</td><td><a href="pc_ListBoxes.html">ListBoxes</a></td>
+<td>readonly</td><td>A collection of listboxes.</td></tr>
+<tr><td><a name="multiStateObjects"></a>multiStateObjects</td><td><a href="pc_MultiStateObjects.html">MultiStateObjects</a> <a class="sing" href="pc_MultiStateObject.html">MultiStateObject</a></td>
+<td>readonly</td><td>A collection of multi-state objects.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The name of the Table; this is an alias to the Table's label property.</td></tr>
+<tr><td><a name="notes"></a>notes</td><td><a href="pc_Notes.html">Notes</a> <a class="sing" href="pc_Note.html">Note</a></td>
+<td>readonly</td><td>A collection of notes.</td></tr>
+<tr><td><a name="ovals"></a>ovals</td><td><a href="pc_Ovals.html">Ovals</a> <a class="sing" href="pc_Oval.html">Oval</a></td>
+<td>readonly</td><td>A collection of ellipses.</td></tr>
+<tr><td><a name="pageItems"></a>pageItems</td><td><a href="pc_PageItems.html">PageItems</a> <a class="sing" href="pc_PageItem.html">PageItem</a></td>
+<td>readonly</td><td>The page items collection, which can be used to process all page items in a container (such as a document, page, or group), regardless of type.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Cell.html">Cell</a><br><a href="pc_Character.html">Character</a><br><a href="pc_InsertionPoint.html">InsertionPoint</a><br><a href="pc_Line.html">Line</a><br><a href="pc_Paragraph.html">Paragraph</a><br><a href="pc_Story.html">Story</a><br><a href="pc_Text.html">Text</a><br><a href="pc_TextColumn.html">TextColumn</a><br><a href="pc_TextFrame.html">TextFrame</a><br><a href="pc_TextStyleRange.html">TextStyleRange</a><br><a href="pc_Word.html">Word</a><br><a href="pc_XMLElement.html">XMLElement</a><br><a href="pc_XmlStory.html">XmlStory</a></td>
+<td>readonly</td><td>The parent of the Table (a XMLElement, XmlStory, TextFrame, Text, InsertionPoint, TextStyleRange, Paragraph, TextColumn, Line, Word, Character, Story or Cell).</td></tr>
+<tr><td><a name="polygons"></a>polygons</td><td><a href="pc_Polygons.html">Polygons</a> <a class="sing" href="pc_Polygon.html">Polygon</a></td>
+<td>readonly</td><td>A collection of polygons.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="radioButtons"></a>radioButtons</td><td><a href="pc_RadioButtons.html">RadioButtons</a> <a class="sing" href="pc_RadioButton.html">RadioButton</a></td>
+<td>readonly</td><td>A collection of radio buttons.</td></tr>
+<tr><td><a name="rectangles"></a>rectangles</td><td><a href="pc_Rectangles.html">Rectangles</a> <a class="sing" href="pc_Rectangle.html">Rectangle</a></td>
+<td>readonly</td><td>A collection of rectangles.</td></tr>
+<tr><td><a name="rightBorderStrokeColor"></a>rightBorderStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The color, specified as a swatch (color, gradient, tint, or mixed ink), of the right border stroke.</td></tr>
+<tr><td><a name="rightBorderStrokeGapColor"></a>rightBorderStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The gap color, specified as a swatch (color, gradient, tint, or mixed ink), of the right border stroke. Note: Valid only when right border stroke type is not solid.</td></tr>
+<tr><td><a name="rightBorderStrokeGapOverprint"></a>rightBorderStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the right border stroke will overprint. Note: Valid only when right border stroke type is not solid.</td></tr>
+<tr><td><a name="rightBorderStrokeGapTint"></a>rightBorderStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of the right border stroke. (Range: 0 to 100) Note: Valid only when right border stroke type is not solid.</td></tr>
+<tr><td><a name="rightBorderStrokeOverprint"></a>rightBorderStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the right border stroke will overprint.</td></tr>
+<tr><td><a name="rightBorderStrokeTint"></a>rightBorderStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the right border stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="rightBorderStrokeType"></a>rightBorderStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the right border. Can also accept: String.</td></tr>
+<tr><td><a name="rightBorderStrokeWeight"></a>rightBorderStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the right border stroke.</td></tr>
+<tr><td><a name="rows"></a>rows</td><td><a href="pc_Rows.html">Rows</a> <a class="sing" href="pc_Row.html">Row</a></td>
+<td>readonly</td><td>A collection of table rows.</td></tr>
+<tr><td><a name="signatureFields"></a>signatureFields</td><td><a href="pc_SignatureFields.html">SignatureFields</a> <a class="sing" href="pc_SignatureField.html">SignatureField</a></td>
+<td>readonly</td><td>A collection of signature fields.</td></tr>
+<tr><td><a name="skipFirstAlternatingFillColumns"></a>skipFirstAlternatingFillColumns</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of columns on the left side of the table to skip before applying the column fill color. Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="skipFirstAlternatingFillRows"></a>skipFirstAlternatingFillRows</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of body rows at the beginning of the table to skip before applying the row fill color. Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="skipFirstAlternatingStrokeColumns"></a>skipFirstAlternatingStrokeColumns</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of columns on the left of the table in which to skip border stroke formatting. Note: Valid when start column stroke count is 1 or greater and/or end column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="skipFirstAlternatingStrokeRows"></a>skipFirstAlternatingStrokeRows</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of body rows at the beginning of the table in which to skip border stroke formatting. Note: Valid when start row stroke count is 1 or greater and/or end row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="skipFirstHeader"></a>skipFirstHeader</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, skips the first occurrence of header rows.</td></tr>
+<tr><td><a name="skipLastAlternatingFillColumns"></a>skipLastAlternatingFillColumns</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number columns on the right side of the table in which to not apply the column fill color. Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="skipLastAlternatingFillRows"></a>skipLastAlternatingFillRows</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of body rows at the end of the table in which to not apply the row fill color. Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="skipLastAlternatingStrokeColumns"></a>skipLastAlternatingStrokeColumns</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of columns on the right side of the table in which to skip border stroke formatting. Note: Valid when start column stroke count is 1 or greater and/or end column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="skipLastAlternatingStrokeRows"></a>skipLastAlternatingStrokeRows</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of body rows at the end of the table in which to skip border stroke formatting. Note: Valid when start row stroke count is 1 or greater and/or end row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="skipLastFooter"></a>skipLastFooter</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, skips the last occurrence of footer rows.</td></tr>
+<tr><td><a name="spaceAfter"></a>spaceAfter</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The space below the table.</td></tr>
+<tr><td><a name="spaceBefore"></a>spaceBefore</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The space above the table.</td></tr>
+<tr><td><a name="splineItems"></a>splineItems</td><td><a href="pc_SplineItems.html">SplineItems</a> <a class="sing" href="pc_SplineItem.html">SplineItem</a></td>
+<td>readonly</td><td>The spline items collection.</td></tr>
+<tr><td><a name="startColumnFillColor"></a>startColumnFillColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The fill color, specified as a swatch (color, gradient, tint, or mixed ink), of columns in the first alternating fills group. Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="startColumnFillCount"></a>startColumnFillCount</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of columns in the first alternating fills group. Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="startColumnFillOverprint"></a>startColumnFillOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the columns in the first alternating fills group will overprint. Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="startColumnFillTint"></a>startColumnFillTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the columns in the first alternating fills group. (Range: 0 to 100) Note: Valid when alternating fills are defined for table columns.</td></tr>
+<tr><td><a name="startColumnStrokeColor"></a>startColumnStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The stroke color, specified as a swatch (color, gradient, tint, or mixed ink), of column borders in the first alternating column strokes group.</td></tr>
+<tr><td><a name="startColumnStrokeCount"></a>startColumnStrokeCount</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of columns in the first alternating column strokes group.</td></tr>
+<tr><td><a name="startColumnStrokeGapColor"></a>startColumnStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The stroke gap color, specified as a swatch (color, gradient, tint, or mixed ink), of column borders in the first alternating column strokes group. Note: Valid when start column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startColumnStrokeGapOverprint"></a>startColumnStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap of the column borders in the first alternating column strokes group will overprint. Note: Valid when start column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startColumnStrokeGapTint"></a>startColumnStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of column borders in the first alternating column strokes group. (Range: 0 to 100) Note: Valid when start column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startColumnStrokeOverprint"></a>startColumnStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the column borders in the first alternating column strokes group will overprint. Note: Valid when start column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startColumnStrokeTint"></a>startColumnStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of column borders in the first alternating column strokes group. (Range: 0 to 100) Note: Valid when start column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startColumnStrokeType"></a>startColumnStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of columns in the first alternating strokes group. Can also accept: String.</td></tr>
+<tr><td><a name="startColumnStrokeWeight"></a>startColumnStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of column borders in the first alternating column strokes group. Note: Valid when start column stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startRowFillColor"></a>startRowFillColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The fill color, specified as a swatch (color, gradient, tint, or mixed ink), of rows in the first alternating fills group. Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="startRowFillCount"></a>startRowFillCount</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of rows in the first alternating fills group. Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="startRowFillOverprint"></a>startRowFillOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the rows in the first alternating fills group will overprint. Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="startRowFillTint"></a>startRowFillTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the rows in the first alternating fills group. (Range: 0 to 100) Note: Valid when alternating fills are defined for table rows.</td></tr>
+<tr><td><a name="startRowStrokeColor"></a>startRowStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The color, specified as a swatch (color, gradient, tint, or mixed ink), of row borders in the first alternating row strokes group. Note: Valid when start row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startRowStrokeCount"></a>startRowStrokeCount</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of rows in the first alternating row strokes group.</td></tr>
+<tr><td><a name="startRowStrokeGapColor"></a>startRowStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The stroke gap color of row borders in the first alternating row strokes group, specified as a swatch (color, gradient, tint, or mixed ink). Note: Valid when start row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startRowStrokeGapOverprint"></a>startRowStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the row border stroke in the first alternating row strokes group will overprint. Note: Valid when start row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startRowStrokeGapTint"></a>startRowStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of row borders in the first alternating rows group. (Range: 0 to 100) Note: Valid when start row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startRowStrokeOverprint"></a>startRowStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the row borders in the first alternating row strokes group will overprint. Note: Valid when start row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startRowStrokeTint"></a>startRowStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the borders in the first alternating row strokes group. (Range: 0 to 100) Note: Valid when start row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="startRowStrokeType"></a>startRowStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of rows in the first alternating strokes group. Can also accept: String.</td></tr>
+<tr><td><a name="startRowStrokeWeight"></a>startRowStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of row borders in the first alternating row strokes group. Note: Valid when start row stroke count is 1 or greater.</td></tr>
+<tr><td><a name="storyOffset"></a>storyOffset</td><td><a href="pc_InsertionPoint.html">InsertionPoint</a></td>
+<td>readonly</td><td>The insertion point before the table in the story containing the table.</td></tr>
+<tr><td><a name="strokeOrder"></a>strokeOrder</td><td><a href="pe_StrokeOrderTypes.html">StrokeOrderTypes</a>:<br>StrokeOrderTypes.ROW_ON_TOP<br>StrokeOrderTypes.COLUMN_ON_TOP<br>StrokeOrderTypes.BEST_JOINS<br>StrokeOrderTypes.INDESIGN_2_COMPATIBILITY</td>
+<td>r/w</td><td>The order in which to display row and column strokes at corners.</td></tr>
+<tr><td><a name="tableDirection"></a>tableDirection</td><td><a href="pe_TableDirectionOptions.html">TableDirectionOptions</a>:<br>TableDirectionOptions.LEFT_TO_RIGHT_DIRECTION<br>TableDirectionOptions.RIGHT_TO_LEFT_DIRECTION</td>
+<td>r/w</td><td>The direction of the the table</td></tr>
+<tr><td><a name="textBoxes"></a>textBoxes</td><td><a href="pc_TextBoxes.html">TextBoxes</a></td>
+<td>readonly</td><td>A collection of text boxes.</td></tr>
+<tr><td><a name="textFrames"></a>textFrames</td><td><a href="pc_TextFrames.html">TextFrames</a> <a class="sing" href="pc_TextFrame.html">TextFrame</a></td>
+<td>readonly</td><td>A collection of text frames.</td></tr>
+<tr><td><a name="textVariableInstances"></a>textVariableInstances</td><td><a href="pc_TextVariableInstances.html">TextVariableInstances</a> <a class="sing" href="pc_TextVariableInstance.html">TextVariableInstance</a></td>
+<td>readonly</td><td>A collection of text variable instances.</td></tr>
+<tr><td><a name="topBorderStrokeColor"></a>topBorderStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The color, specified as a swatch (color, gradient, tint, or mixed ink), of the table's top border stroke.</td></tr>
+<tr><td><a name="topBorderStrokeGapColor"></a>topBorderStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The gap color, specified as a swatch (color, gradient, tint, or mixed ink), of the table's top border stroke. Note: Valid only when top border stroke type is not solid.</td></tr>
+<tr><td><a name="topBorderStrokeGapOverprint"></a>topBorderStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap of the top border stroke will overprint. Note: Valid only when top border stroke type is not solid.</td></tr>
+<tr><td><a name="topBorderStrokeGapTint"></a>topBorderStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of the table's top border stroke. (Range: 0 to 100) Note: Valid only when top border stroke type is not solid.</td></tr>
+<tr><td><a name="topBorderStrokeOverprint"></a>topBorderStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the top border strokes will overprint.</td></tr>
+<tr><td><a name="topBorderStrokeTint"></a>topBorderStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the table's top border stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="topBorderStrokeType"></a>topBorderStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the top border. Can also accept: String.</td></tr>
+<tr><td><a name="topBorderStrokeWeight"></a>topBorderStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the table's top border stroke.</td></tr>
+<tr class="lastRow"><td><a name="width"></a>width</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The width of the Table. For a table or row, specifies the sum of the column widths.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="autoTag"></a><span class="rett">void</span>  <span class="func">autoTag</span> ()<br>
+Tag the object or the parent story using default tags defined in XML preference.</p>
+
+<p class="spaceBelow"><a name="changeGlyph"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeGlyph</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds glyphs that match the find what value and replaces the glyphs with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeGrep"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeGrep</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value and replaces the text with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeText"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeText</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value and replaces the text with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeTransliterate"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeTransliterate</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find character type value and replaces the text with the change character type value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="clearTableStyleOverrides"></a><span class="rett">void</span>  <span class="func">clearTableStyleOverrides</span> ()<br>
+Clear Table Style Overrides</p>
+
+<p class="spaceBelow"><a name="convertBulletsAndNumberingToText"></a><span class="rett">void</span>  <span class="func">convertBulletsAndNumberingToText</span> ()<br>
+Convert bullets and numbering to text.</p>
+
+<p class="spaceBelow"><a name="convertToText"></a><a href="pc_Text.html">Text</a> <span class="func">convertToText</span> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>])<br>
+Converts the table to text.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>columnSeparator</td><td><a href="pc_string.html">string</a></td><td>The character to insert between the each column's content in the converted text. Note: Can be defined as any single character, such as a letter, number, or punctuation mark, or by typing a space or tab. Use the actual character rather than its name, such as ',' rather than 'Comma'. Precede double or single quotes or a backslash with an extra backslash as an escape character. For paragraphs, use ^p. (Optional)</td></tr>
+<tr class="lastRow"><td>rowSeparator</td><td><a href="pc_string.html">string</a></td><td>The character to use to separate each row's content in the converted text. Note: Can be defined as any single character, such as a letter, number, or punctuation mark, or by typing a space or tab. Use the actual character rather than its name, such as , rather than Comma. Precede double or single quotes or a backslash with an extra backslash as an escape character. For paragraphs, use ^p. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="createOutlines"></a><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a> <span class="func">createOutlines</span> ([<span class="arg">deleteOriginal</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])<br>
+Converts text to outlines. Each line of text becomes a polygon object. When the converted text is a single letter that has no internal spaces or detached parts, the polygon contains only a single path. Note: To determine whether a font allows the creation of outlines, see allow outlines.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>deleteOriginal</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, deletes the original text. If false, creates the outlines as separate object(s) on top of the text.  (Optional) (default: <b>true</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="extractLabel"></a>string <span class="func">extractLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Gets the label value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findGlyph"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findGlyph</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds glyphs that match the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findGrep"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findGrep</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findText"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findText</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findTransliterate"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findTransliterate</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find character type value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_Table.html">Table</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="insertLabel"></a><span class="rett">void</span>  <span class="func">insertLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+Sets the label to the value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_string.html">string</a></td><td>The value.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="markup"></a><span class="rett">void</span>  <span class="func">markup</span> (<span class="arg">using</span>:
+<a href="pc_XMLElement.html">XMLElement</a>)<br>
+Associates the page item with the specified XML element while preserving existing content.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>using</td><td><a href="pc_XMLElement.html">XMLElement</a></td><td>The XML element.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="recompose"></a><span class="rett">void</span>  <span class="func">recompose</span> ()<br>
+Recomposes the text in the Table.</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes the Table.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="select"></a><span class="rett">void</span>  <span class="func">select</span> ([<span class="arg">existingSelection</span>:
+<a href="pe_SelectionOptions.html">SelectionOptions</a>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])<br>
+Selects the object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>existingSelection</td><td><a href="pe_SelectionOptions.html">SelectionOptions</a>:<br>SelectionOptions.ADD_TO<br>SelectionOptions.REMOVE_FROM<br>SelectionOptions.REPLACE_WITH<br>SelectionOptions.SET_KEY</td><td>The selection status of the Table in relation to previously selected objects. (Optional) (default: <b>SelectionOptions.REPLACE_WITH</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the Table.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+<p class="spaceBelow"><a name="unmerge"></a><a href="pc_Array.html">Array</a> of <a href="pc_Cell.html">Cell</a> <span class="func">unmerge</span> ()<br>
+Unmerges all merged cells in the Table.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Column.html">Column</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLElement.html">XMLElement</a>.xmlContent</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#nextItem">Tables.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>Table</b>)
+</p><p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#previousItem">Tables.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>Table</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Table</b> <a href="pc_Character.html#convertToTable">Character.convertToTable</a> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">numberOfColumns</span>:
+<span class="argt">number</span>=<span class="defv">1</span>])
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_InsertionPoint.html#convertToTable">InsertionPoint.convertToTable</a> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">numberOfColumns</span>:
+<span class="argt">number</span>=<span class="defv">1</span>])
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Line.html#convertToTable">Line.convertToTable</a> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">numberOfColumns</span>:
+<span class="argt">number</span>=<span class="defv">1</span>])
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Paragraph.html#convertToTable">Paragraph.convertToTable</a> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">numberOfColumns</span>:
+<span class="argt">number</span>=<span class="defv">1</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Table</b> <b>Table</b>.<a href="pc_Table.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#[]">Tables.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#add">Tables.add</a> ([<span class="arg">to</span>:
+<a href="pe_LocationOptions.html">LocationOptions</a>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#anyItem">Tables.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Table</b> <a href="pc_Tables.html#everyItem">Tables.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#firstItem">Tables.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#item">Tables.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#itemByID">Tables.itemByID</a> (<span class="arg">id</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#itemByName">Tables.itemByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Table</b> <a href="pc_Tables.html#itemByRange">Tables.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#lastItem">Tables.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#middleItem">Tables.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#nextItem">Tables.nextItem</a> (<span class="arg">obj</span>:
+<b>Table</b>)
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Tables.html#previousItem">Tables.previousItem</a> (<span class="arg">obj</span>:
+<b>Table</b>)
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Text.html#convertToTable">Text.convertToTable</a> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">numberOfColumns</span>:
+<span class="argt">number</span>=<span class="defv">1</span>])
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_TextColumn.html#convertToTable">TextColumn.convertToTable</a> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">numberOfColumns</span>:
+<span class="argt">number</span>=<span class="defv">1</span>])
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_TextStyleRange.html#convertToTable">TextStyleRange.convertToTable</a> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">numberOfColumns</span>:
+<span class="argt">number</span>=<span class="defv">1</span>])
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_Word.html#convertToTable">Word.convertToTable</a> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">numberOfColumns</span>:
+<span class="argt">number</span>=<span class="defv">1</span>])
+</p>
+<p class="hangIndent"><b>Table</b> <a href="pc_XMLElement.html#convertElementToTable">XMLElement.convertElementToTable</a> (<span class="arg">rowTag</span>:
+<a href="pc_XMLTag.html">XMLTag</a>, <span class="arg">cellTag</span>:
+<a href="pc_XMLTag.html">XMLTag</a>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

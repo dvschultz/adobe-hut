@@ -1,0 +1,157 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: UITools</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, uitools">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>UITools</h1></td></tr>
+<tr><td>&nbsp;</td><td>The enumeration of tool box tools.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>UITools.ADD_ANCHOR_POINT</td><td>The add anchor point tool</td><td>1633767540  = 
+				'aaPt'
+			</td></tr>
+<tr><td>UITools.CONVERT_DIRECTION_POINT</td><td>The convert direction point tool</td><td>1667518580  = 
+				'cdPt'
+			</td></tr>
+<tr><td>UITools.DELETE_ANCHOR_POINT</td><td>The delete anchor point tool</td><td>1684099188  = 
+				'daPt'
+			</td></tr>
+<tr><td>UITools.DIRECT_SELECTION_TOOL</td><td>The direct selection tool</td><td>1685277812  = 
+				'dsLt'
+			</td></tr>
+<tr><td>UITools.ELLIPSE_FRAME_TOOL</td><td>The ellipse frame tool</td><td>1701205100  = 
+				'efTl'
+			</td></tr>
+<tr><td>UITools.ELLIPSE_TOOL</td><td>The ellipse tool</td><td>1701598316  = 
+				'elTl'
+			</td></tr>
+<tr><td>UITools.ERASE_TOOL</td><td>The erase tool</td><td>1701991269  = 
+				'erSe'
+			</td></tr>
+<tr><td>UITools.EYE_DROPPER_TOOL</td><td>The eye dropper tool</td><td>1701074028  = 
+				'edTl'
+			</td></tr>
+<tr><td>UITools.FREE_TRANSFORM_TOOL</td><td>The free transform tool</td><td>1718899820  = 
+				'ftTl'
+			</td></tr>
+<tr><td>UITools.GAP_TOOL</td><td>The gap tool</td><td>1734430836  = 
+				'gaPt'
+			</td></tr>
+<tr><td>UITools.GRADIENT_FEATHER_TOOL</td><td>The gradient feather tool</td><td>1734759532  = 
+				'gfTl'
+			</td></tr>
+<tr><td>UITools.GRADIENT_SWATCH_TOOL</td><td>The gradient swatch tool</td><td>1735611500  = 
+				'gsTl'
+			</td></tr>
+<tr><td>UITools.HAND_TOOL</td><td>The hand tool</td><td>1751209068  = 
+				'haTl'
+			</td></tr>
+<tr><td>UITools.LINE_TOOL</td><td>The line tool</td><td>1819169900  = 
+				'lnTl'
+			</td></tr>
+<tr><td>UITools.MEASURE_TOOL</td><td>The measure tool</td><td>1835357292  = 
+				'meTl'
+			</td></tr>
+<tr><td>UITools.MOTION_PATH_TOOL</td><td>The motion path tool</td><td>1836078188  = 
+				'mpTl'
+			</td></tr>
+<tr><td>UITools.NONE</td><td>No selection</td><td>1852796517  = 
+				'none'
+			</td></tr>
+<tr><td>UITools.NOTE_TOOL</td><td>The note tool</td><td>1852789868  = 
+				'noTl'
+			</td></tr>
+<tr><td>UITools.PAGE_TOOL</td><td>The page tool</td><td>1936741484  = 
+				'spTl'
+			</td></tr>
+<tr><td>UITools.PENCIL_TOOL</td><td>The pencil tool</td><td>1886274412  = 
+				'pnCl'
+			</td></tr>
+<tr><td>UITools.PEN_TOOL</td><td>The pen tool</td><td>1885687412  = 
+				'peNt'
+			</td></tr>
+<tr><td>UITools.PLACE_CURSOR_TOOL</td><td>The place cursor tool which gets set after an import via the Place command</td><td>1885557868  = 
+				'pcTl'
+			</td></tr>
+<tr><td>UITools.POLYGON_FRAME_TOOL</td><td>The polygon frame tool</td><td>1885754476  = 
+				'pfTl'
+			</td></tr>
+<tr><td>UITools.POLYGON_TOOL</td><td>The polygon tool</td><td>1886147692  = 
+				'plTl'
+			</td></tr>
+<tr><td>UITools.RECTANGLE_FRAME_TOOL</td><td>The rectangle frame tool</td><td>1919308908  = 
+				'rfTl'
+			</td></tr>
+<tr><td>UITools.RECTANGLE_TOOL</td><td>The rectangle tool</td><td>1919243372  = 
+				'reTl'
+			</td></tr>
+<tr><td>UITools.ROTATE_TOOL</td><td>The rotate tool</td><td>1919898732  = 
+				'roTl'
+			</td></tr>
+<tr><td>UITools.SCALE_TOOL</td><td>The scale tool</td><td>1935889516  = 
+				'scTl'
+			</td></tr>
+<tr><td>UITools.SCISSORS_TOOL</td><td>The scissors tool</td><td>1935891060  = 
+				'scZt'
+			</td></tr>
+<tr><td>UITools.SELECTION_TOOL</td><td>The selection tool</td><td>1936018548  = 
+				'seLt'
+			</td></tr>
+<tr><td>UITools.SHEAR_TOOL</td><td>The shear tool</td><td>1936217196  = 
+				'shTl'
+			</td></tr>
+<tr><td>UITools.SMOOTH_TOOL</td><td>The smooth tool</td><td>1936544872  = 
+				'smTh'
+			</td></tr>
+<tr><td>UITools.TABLE_TOOL</td><td>The table creation tool</td><td>1952601196  = 
+				'tbTl'
+			</td></tr>
+<tr><td>UITools.TYPE_ON_PATH_TOOL</td><td>The type on a path tool</td><td>1953452148  = 
+				'toPt'
+			</td></tr>
+<tr><td>UITools.TYPE_TOOL</td><td>The type tool</td><td>1954107508  = 
+				'tyPt'
+			</td></tr>
+<tr class="lastRow"><td>UITools.ZOOM_TOOL</td><td>The zoom tool</td><td>2053985388  = 
+				'zmTl'
+			</td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>As property</h3>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_ToolBox.html">ToolBox</a>.currentTool</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

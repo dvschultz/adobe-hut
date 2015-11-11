@@ -1,0 +1,73 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: ScriptUIBrush</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, scriptuibrush">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>ScriptUIBrush</h1></td></tr>
+<tr><td>&nbsp;</td><td><p>A painting brush that encapsulates a color or pattern used to fill paths.</p><p>
+        Create with&nbsp;<a href="pc_ScriptUIGraphics.html#newBrush">ScriptUIGraphics.newBrush()</a>. <b></b>Use as a value of &nbsp;<a href="pc_ScriptUIGraphics.html#backgroundColor">backgroundColor</a>&nbsp;properties, and pass as an argument to the&nbsp;<a href="pc_ScriptUIGraphics.html#fillPath">fillPath()</a>&nbsp;method.
+      </p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="color"></a>color</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a></td>
+<td>readonly</td><td>The brush color.<br>
+            The paint color to use when the type is SOLID_COLOR. <b></b>An array in the form [R, B, G, A] specifying the red, green, blue values of the color and the opacity (alpha channel) value as numbers in the range [0.0..1.0]. <b></b>An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque.
+          </td></tr>
+<tr><td><a name="theme"></a>theme</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>The theme name.<br>The name of a color theme to use for drawing when the type is THEME_COLOR. Theme colors are defined by the host application. </td></tr>
+<tr class="lastRow"><td><a name="type"></a>type</td><td><a href="pc_Number.html">Number</a></td>
+<td>readonly</td><td>The brush type, solid or theme.<br>One of these constants: ScriptUIGraphics.BrushType.SOLID_COLOR or ScriptUIGraphics.BrushType.THEME_COLOR</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_ScriptUIGraphics.html">ScriptUIGraphics</a>.backgroundColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIGraphics.html">ScriptUIGraphics</a>.disabledBackgroundColor</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent">void <a href="pc_ScriptUIGraphics.html#fillPath">ScriptUIGraphics.fillPath</a>
+		(<span class="arg">brush</span>:
+<b>ScriptUIBrush</b>[, <span class="arg">path</span>:
+<a href="pc_ScriptUIPath.html">ScriptUIPath</a>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>ScriptUIBrush</b> <a href="pc_ScriptUIGraphics.html#newBrush">ScriptUIGraphics.newBrush</a> (<span class="arg">type</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">color</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a> | <a href="pc_String.html">String</a>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

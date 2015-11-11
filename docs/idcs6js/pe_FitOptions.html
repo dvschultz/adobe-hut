@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: FitOptions</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, fitoptions">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>FitOptions</h1></td></tr>
+<tr><td>&nbsp;</td><td>Options for fitting content to a frame.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>FitOptions.APPLY_FRAME_FITTING_OPTIONS</td><td>Applies the current frame fitting options to the frame and content.</td><td>1634100847  = 
+				'affo'
+			</td></tr>
+<tr><td>FitOptions.CENTER_CONTENT</td><td>Centers content in the frame; preserves the frame size as well as content size and proportions. Note: If the content is larger than the frame, content around the edges is obscured.</td><td>1667591779  = 
+				'cenc'
+			</td></tr>
+<tr><td>FitOptions.CONTENT_TO_FRAME</td><td>Resizes content to fit the frame. Note: Content that is a different size than the frame appears stretched or squeezed.</td><td>1668575078  = 
+				'ctof'
+			</td></tr>
+<tr><td>FitOptions.FILL_PROPORTIONALLY</td><td>Resizes content to fill the frame while perserving the proportions of the content. If the content and frame have different proportions, some of the content is obscured by the bounding box of the frame.</td><td>1718185072  = 
+				'filp'
+			</td></tr>
+<tr><td>FitOptions.FRAME_TO_CONTENT</td><td>Resizes the frame so it fits the content.</td><td>1718906723  = 
+				'ftoc'
+			</td></tr>
+<tr class="lastRow"><td>FitOptions.PROPORTIONALLY</td><td>Resizes content to fit the frame while preserving content proportions. If the content and frame have different proportions, some empty space appears in the frame.</td><td>1668247152  = 
+				'conp'
+			</td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>In function</h3>
+
+<p class="hangIndent">void  <a href="pc_Button.html#fit">Button.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_CheckBox.html#fit">CheckBox.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_ComboBox.html#fit">ComboBox.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_EPS.html#fit">EPS.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_EPSText.html#fit">EPSText.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_FormField.html#fit">FormField.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_Graphic.html#fit">Graphic.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_GraphicLine.html#fit">GraphicLine.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_Group.html#fit">Group.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_HtmlItem.html#fit">HtmlItem.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_Image.html#fit">Image.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_ImportedPage.html#fit">ImportedPage.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_ListBox.html#fit">ListBox.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_MediaItem.html#fit">MediaItem.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_Movie.html#fit">Movie.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_MultiStateObject.html#fit">MultiStateObject.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_Oval.html#fit">Oval.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_PDF.html#fit">PDF.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_PICT.html#fit">PICT.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_PageItem.html#fit">PageItem.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_Polygon.html#fit">Polygon.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_RadioButton.html#fit">RadioButton.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_Rectangle.html#fit">Rectangle.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_SignatureField.html#fit">SignatureField.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_Sound.html#fit">Sound.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_SplineItem.html#fit">SplineItem.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_TextBox.html#fit">TextBox.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_TextFrame.html#fit">TextFrame.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+<p class="hangIndent">void  <a href="pc_WMF.html#fit">WMF.fit</a> (<span class="arg">given</span>:
+<b>FitOptions</b>)
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,619 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Page</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, page">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Page</h1></td></tr>
+<tr><td>&nbsp;</td><td>A page.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#contentPlace" title="Duplicate an object and place it into the target.">contentPlace</a>, <a href="#deleteAllLayoutSnapshots" title="Delete all layout snapshots for this Page.">deleteAllLayoutSnapshots</a>, <a href="#deleteLayoutSnapshot" title="Delete the snapshot of the layout for the current Page size and shape.">deleteLayoutSnapshot</a>, <a href="#detach" title="Detaches an overridden master page item from the master page.">detach</a>, <a href="#duplicate" title="Duplicates the page.">duplicate</a>, <a href="#extractLabel" title="Gets the label value associated with the specified key.">extractLabel</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#insertLabel" title="Sets the label to the value associated with the specified key.">insertLabel</a>, <a href="#move" title="Moves the page.">move</a>, <a href="#place" title="Places the file.">place</a>, <a href="#placeAndLink" title="Deprecated: Use contentPlace method. Original Description: Create a linked story and place it into the target.">placeAndLink</a>, <a href="#placeXML" title="Places the XML element onto a page. If the place point is above an existing page item, place the XML element into the page item.">placeXML</a>, <a href="#reframe" title="Move the bounding box of the page item">reframe</a>, <a href="#remove" title="Deletes the Page.">remove</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#removeOverride" title="Removes the override from a previously overridden master page item.">removeOverride</a>, <a href="#resize" title="Resize the page item.">resize</a>, <a href="#resolve" title="Get the coordinates of the given location in the specified coordinate system.">resolve</a>, <a href="#select" title="Selects the object.">select</a>, <a href="#setContent" title="Replaces the content of XML element with content imported from a file.">setContent</a>, <a href="#snapshotCurrentLayout" title="Create a snapshot of the layout for the current Page size and shape.">snapshotCurrentLayout</a>, <a href="#toSource" title="Generates a string which, if executed, will return the Page.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a>, <a href="#transform" title="Transform the page item.">transform</a>, <a href="#transformValuesOf" title="Get the transformation values of the page item.">transformValuesOf</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_MasterSpread.html">MasterSpread</a> | <a href="pc_Spread.html">Spread</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Page</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_GridDataInformation.html">GridDataInformation</a> | <a href="pc_MarginPreference.html">MarginPreference</a> | <a href="pc_MutationEvent.html">MutationEvent</a> | <a href="pc_Preference.html">Preference</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="allGraphics"></a>allGraphics</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Graphic.html">Graphic</a></td>
+<td>readonly</td><td>Lists all graphics contained by the Page.</td></tr>
+<tr><td><a name="allPageItems"></a>allPageItems</td><td><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a></td>
+<td>readonly</td><td>Lists all page items contained by the Page.</td></tr>
+<tr><td><a name="appliedAlternateLayout"></a>appliedAlternateLayout</td><td><a href="pc_Section.html">Section</a></td>
+<td>readonly</td><td>The alternate layout section to which the page belongs.</td></tr>
+<tr><td><a name="appliedMaster"></a>appliedMaster</td><td><a href="pc_MasterSpread.html">MasterSpread</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The master spread applied to the Page. Can also accept: NothingEnum enumerator.</td></tr>
+<tr><td><a name="appliedSection"></a>appliedSection</td><td><a href="pc_Section.html">Section</a></td>
+<td>readonly</td><td>The section to which the page belongs.</td></tr>
+<tr><td><a name="appliedTrapPreset"></a>appliedTrapPreset</td><td><a href="pc_String.html">String</a><br><a href="pc_TrapPreset.html">TrapPreset</a></td>
+<td>r/w</td><td>The trap preset applied to the page. Can also accept: String.</td></tr>
+<tr><td><a name="bounds"></a>bounds</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td>
+<td>readonly</td><td>The bounds of the Page, in the format [y1, x1, y2, x2].</td></tr>
+<tr><td><a name="buttons"></a>buttons</td><td><a href="pc_Buttons.html">Buttons</a> <a class="sing" href="pc_Button.html">Button</a></td>
+<td>readonly</td><td>A collection of buttons.</td></tr>
+<tr><td><a name="checkBoxes"></a>checkBoxes</td><td><a href="pc_CheckBoxes.html">CheckBoxes</a></td>
+<td>readonly</td><td>A collection of checkboxes.</td></tr>
+<tr><td><a name="comboBoxes"></a>comboBoxes</td><td><a href="pc_ComboBoxes.html">ComboBoxes</a></td>
+<td>readonly</td><td>A collection of comboboxes.</td></tr>
+<tr><td><a name="documentOffset"></a>documentOffset</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The sequential number of the page within the document.</td></tr>
+<tr><td><a name="epstexts"></a>epstexts</td><td><a href="pc_EPSTexts.html">EPSTexts</a> <a class="sing" href="pc_EPSText.html">EPSText</a></td>
+<td>readonly</td><td>EPSTexts</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="formFields"></a>formFields</td><td><a href="pc_FormFields.html">FormFields</a> <a class="sing" href="pc_FormField.html">FormField</a></td>
+<td>readonly</td><td>A collection of form fields.</td></tr>
+<tr><td><a name="graphicLines"></a>graphicLines</td><td><a href="pc_GraphicLines.html">GraphicLines</a> <a class="sing" href="pc_GraphicLine.html">GraphicLine</a></td>
+<td>readonly</td><td>A collection of graphic lines.</td></tr>
+<tr><td><a name="gridData"></a>gridData</td><td><a href="pc_GridDataInformation.html">GridDataInformation</a></td>
+<td>readonly</td><td>Default grid properties. Note: Applies to named, layout, and frame (story) grids.</td></tr>
+<tr><td><a name="groups"></a>groups</td><td><a href="pc_Groups.html">Groups</a> <a class="sing" href="pc_Group.html">Group</a></td>
+<td>readonly</td><td>A collection of groups.</td></tr>
+<tr><td><a name="guides"></a>guides</td><td><a href="pc_Guides.html">Guides</a> <a class="sing" href="pc_Guide.html">Guide</a></td>
+<td>readonly</td><td>A collection of guides.</td></tr>
+<tr><td><a name="id"></a>id</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The unique ID of the Page.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the Page within its containing object.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="label"></a>label</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A property that can be set to any string.</td></tr>
+<tr><td><a name="layoutRule"></a>layoutRule</td><td><a href="pe_LayoutRuleOptions.html">LayoutRuleOptions</a>:<br>LayoutRuleOptions.OFF<br>LayoutRuleOptions.SCALE<br>LayoutRuleOptions.RECENTER<br>LayoutRuleOptions.GUIDE_BASED<br>LayoutRuleOptions.OBJECT_BASED<br>LayoutRuleOptions.USE_MASTER<br>LayoutRuleOptions.PRESERVE_EXISTING</td>
+<td>r/w</td><td>layout rule</td></tr>
+<tr><td><a name="listBoxes"></a>listBoxes</td><td><a href="pc_ListBoxes.html">ListBoxes</a></td>
+<td>readonly</td><td>A collection of listboxes.</td></tr>
+<tr><td><a name="marginPreferences"></a>marginPreferences</td><td><a href="pc_MarginPreference.html">MarginPreference</a></td>
+<td>readonly</td><td>Margin preference settings.</td></tr>
+<tr><td><a name="masterPageItems"></a>masterPageItems</td><td><a href="pc_Array.html">Array</a> of <br><a href="pc_Graphics.html">Graphics</a><br><a href="pc_Guides.html">Guides</a><br><a href="pc_Movies.html">Movies</a><br><a href="pc_PageItems.html">PageItems</a><br><a href="pc_Sounds.html">Sounds</a></td>
+<td>readonly</td><td>The items on a specified document page that originated on the applied master page and have not been overridden or detached. Can return: Array of PageItems, Guides, Graphics, Movies or Sounds.</td></tr>
+<tr><td><a name="masterPageTransform"></a>masterPageTransform</td><td><a href="pc_TransformationMatrix.html">TransformationMatrix</a></td>
+<td>r/w</td><td>The transform applied to the master page before it is applied to Page.</td></tr>
+<tr><td><a name="multiStateObjects"></a>multiStateObjects</td><td><a href="pc_MultiStateObjects.html">MultiStateObjects</a> <a class="sing" href="pc_MultiStateObject.html">MultiStateObject</a></td>
+<td>readonly</td><td>A collection of multi-state objects.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the Page.</td></tr>
+<tr><td><a name="optionalPage"></a>optionalPage</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>optional page for HTML5 pagination</td></tr>
+<tr><td><a name="ovals"></a>ovals</td><td><a href="pc_Ovals.html">Ovals</a> <a class="sing" href="pc_Oval.html">Oval</a></td>
+<td>readonly</td><td>A collection of ellipses.</td></tr>
+<tr><td><a name="pageColor"></a>pageColor</td><td>3 Reals (0 - 255)<br><a href="pe_PageColorOptions.html">PageColorOptions</a><br><a href="pe_UIColors.html">UIColors</a></td>
+<td>r/w</td><td>The color label of the Page, specified either as  an array of three doubles, each in the range 0 to 255 and representing R, G, and B values, or as a UI color. Can return: Array of 3 Reals (0 - 255) or UIColors enumerator or PageColorOptions enumerator.</td></tr>
+<tr><td><a name="pageItems"></a>pageItems</td><td><a href="pc_PageItems.html">PageItems</a> <a class="sing" href="pc_PageItem.html">PageItem</a></td>
+<td>readonly</td><td>The page items collection, which can be used to process all page items in a container (such as a document, page, or group), regardless of type.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_MasterSpread.html">MasterSpread</a><br><a href="pc_Spread.html">Spread</a></td>
+<td>readonly</td><td>The parent of the Page (a Spread or MasterSpread).</td></tr>
+<tr><td><a name="polygons"></a>polygons</td><td><a href="pc_Polygons.html">Polygons</a> <a class="sing" href="pc_Polygon.html">Polygon</a></td>
+<td>readonly</td><td>A collection of polygons.</td></tr>
+<tr><td><a name="preferences"></a>preferences</td><td><a href="pc_Preferences.html">Preferences</a> <a class="sing" href="pc_Preference.html">Preference</a></td>
+<td>readonly</td><td>A collection of preferences objects.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="radioButtons"></a>radioButtons</td><td><a href="pc_RadioButtons.html">RadioButtons</a> <a class="sing" href="pc_RadioButton.html">RadioButton</a></td>
+<td>readonly</td><td>A collection of radio buttons.</td></tr>
+<tr><td><a name="rectangles"></a>rectangles</td><td><a href="pc_Rectangles.html">Rectangles</a> <a class="sing" href="pc_Rectangle.html">Rectangle</a></td>
+<td>readonly</td><td>A collection of rectangles.</td></tr>
+<tr><td><a name="side"></a>side</td><td><a href="pe_PageSideOptions.html">PageSideOptions</a>:<br>PageSideOptions.RIGHT_HAND<br>PageSideOptions.LEFT_HAND<br>PageSideOptions.SINGLE_SIDED</td>
+<td>readonly</td><td>The side of the binding spine on which to place the page within the spread.</td></tr>
+<tr><td><a name="signatureFields"></a>signatureFields</td><td><a href="pc_SignatureFields.html">SignatureFields</a> <a class="sing" href="pc_SignatureField.html">SignatureField</a></td>
+<td>readonly</td><td>A collection of signature fields.</td></tr>
+<tr><td><a name="snapshotBlendingMode"></a>snapshotBlendingMode</td><td><a href="pe_SnapshotBlendingModes.html">SnapshotBlendingModes</a>:<br>SnapshotBlendingModes.IGNORE_LAYOUT_SNAPSHOTS<br>SnapshotBlendingModes.USE_NEAREST_SNAPSHOT<br>SnapshotBlendingModes.LIMITED_SNAPSHOT_BLENDING<br>SnapshotBlendingModes.FULL_SNAPSHOT_BLENDING</td>
+<td>r/w</td><td>snapshot blending mode</td></tr>
+<tr><td><a name="splineItems"></a>splineItems</td><td><a href="pc_SplineItems.html">SplineItems</a> <a class="sing" href="pc_SplineItem.html">SplineItem</a></td>
+<td>readonly</td><td>The spline items collection.</td></tr>
+<tr><td><a name="tabOrder"></a>tabOrder</td><td><a href="pc_Array.html">Array</a> of <br><a href="pc_Buttons.html">Buttons</a><br><a href="pc_CheckBoxes.html">CheckBoxes</a><br><a href="pc_ComboBoxes.html">ComboBoxes</a><br><a href="pc_ListBoxes.html">ListBoxes</a><br><a href="pc_RadioButtons.html">RadioButtons</a><br><a href="pc_SignatureFields.html">SignatureFields</a><br><a href="pc_TextBoxes.html">TextBoxes</a></td>
+<td>r/w</td><td>The order in which the focus moves to different form fields in the PDF when the tab key is pressed. Can return: Array of Buttons, CheckBoxes, ComboBoxes, ListBoxes, RadioButtons, TextBoxes or SignatureFields.</td></tr>
+<tr><td><a name="textBoxes"></a>textBoxes</td><td><a href="pc_TextBoxes.html">TextBoxes</a></td>
+<td>readonly</td><td>A collection of text boxes.</td></tr>
+<tr class="lastRow"><td><a name="textFrames"></a>textFrames</td><td><a href="pc_TextFrames.html">TextFrames</a> <a class="sing" href="pc_TextFrame.html">TextFrame</a></td>
+<td>readonly</td><td>A collection of text frames.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="contentPlace"></a><a href="pc_Array.html">Array</a> of <span class="rett">any</span>  <span class="func">contentPlace</span> (<span class="arg">pageItems</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a>[, <span class="arg">linkPageItems</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">linkStories</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">mapStyles</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">placePoint</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>][, <span class="arg">destinationLayer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Duplicate an object and place it into the target.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>pageItems</td><td><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a></td><td>One or more page items to place or load</td></tr>
+<tr><td>linkPageItems</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to link pageItems in content placer (if true it will override link stories value) (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>linkStories</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to link stories in content placer (only applicable for single story, pageItem links will also be created in case of more than one item) (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>mapStyles</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to map styles in content placer (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>placePoint</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td><td>The point at which to place (Optional)</td></tr>
+<tr><td>destinationLayer</td><td><a href="pc_Layer.html">Layer</a></td><td>The layer on which to place (Optional)</td></tr>
+<tr class="lastRow"><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to display the link options dialog (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="deleteAllLayoutSnapshots"></a><span class="rett">void</span>  <span class="func">deleteAllLayoutSnapshots</span> ()<br>
+Delete all layout snapshots for this Page.</p>
+
+<p class="spaceBelow"><a name="deleteLayoutSnapshot"></a><span class="rett">void</span>  <span class="func">deleteLayoutSnapshot</span> ()<br>
+Delete the snapshot of the layout for the current Page size and shape.</p>
+
+<p class="spaceBelow"><a name="detach"></a><span class="rett">void</span>  <span class="func">detach</span> ()<br>
+Detaches an overridden master page item from the master page.</p>
+
+<p class="spaceBelow"><a name="duplicate"></a><a href="pc_Page.html">Page</a> <span class="func">duplicate</span> ([<span class="arg">to</span>:
+<a href="pe_LocationOptions.html">LocationOptions</a>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>])<br>
+Duplicates the page.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>to</td><td><a href="pe_LocationOptions.html">LocationOptions</a>:<br>LocationOptions.BEFORE<br>LocationOptions.AFTER<br>LocationOptions.AT_END<br>LocationOptions.AT_BEGINNING<br>LocationOptions.UNKNOWN</td><td>The location at which to place the duplicate page relative to the reference object or within the document or spread.  (Optional) (default: <b>LocationOptions.AT_END</b>)</td></tr>
+<tr class="lastRow"><td>reference</td><td><a href="pc_Page.html">Page</a><br><a href="pc_Spread.html">Spread</a></td><td>The reference object. Note: Required when the to value specifies before or after. Can accept: Page or Spread. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="extractLabel"></a>string <span class="func">extractLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Gets the label value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_Page.html">Page</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="insertLabel"></a><span class="rett">void</span>  <span class="func">insertLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+Sets the label to the value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_string.html">string</a></td><td>The value.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="move"></a><a href="pc_Page.html">Page</a> <span class="func">move</span> ([<span class="arg">to</span>:
+<a href="pe_LocationOptions.html">LocationOptions</a>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">binding</span>:
+<a href="pe_BindingOptions.html">BindingOptions</a>=<span class="defv">BindingOptions.DEFAULT_VALUE</span>])<br>
+Moves the page.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>to</td><td><a href="pe_LocationOptions.html">LocationOptions</a>:<br>LocationOptions.BEFORE<br>LocationOptions.AFTER<br>LocationOptions.AT_END<br>LocationOptions.AT_BEGINNING<br>LocationOptions.UNKNOWN</td><td>The new location of the page relative to the reference object or within the document or spread.  (Optional) (default: <b>LocationOptions.AT_END</b>)</td></tr>
+<tr><td>reference</td><td><a href="pc_Page.html">Page</a><br><a href="pc_Spread.html">Spread</a></td><td>The reference object. Note: Required when the to parameter value specifies before or after. Can accept: Page or Spread. (Optional)</td></tr>
+<tr class="lastRow"><td>binding</td><td><a href="pe_BindingOptions.html">BindingOptions</a>:<br>BindingOptions.RIGHT_ALIGN<br>BindingOptions.LEFT_ALIGN<br>BindingOptions.DEFAULT_VALUE</td><td>The location of the binding spine in spreads. (Optional) (default: <b>BindingOptions.DEFAULT_VALUE</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="place"></a><a href="pc_Array.html">Array</a> of <span class="rett">any</span>  <span class="func">place</span> (<span class="arg">fileName</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">placePoint</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>][, <span class="arg">destinationLayer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">autoflowing</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])<br>
+Places the file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>fileName</td><td><a href="pc_File.html">File</a></td><td>The file to place</td></tr>
+<tr><td>placePoint</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td><td>The point at which to place (Optional)</td></tr>
+<tr><td>destinationLayer</td><td><a href="pc_Layer.html">Layer</a></td><td>The layer on which to place (Optional)</td></tr>
+<tr><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to display the import options dialog (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>autoflowing</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to autoflow placed text (Optional) (default: <b>false</b>)</td></tr>
+<tr class="lastRow"><td>withProperties</td><td><a href="pc_Object.html">Object</a></td><td>Initial values for properties of the placed object(s) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="placeAndLink"></a><a href="pc_Story.html">Story</a> <span class="func">placeAndLink</span> (<span class="arg">parentStory</span>:
+<a href="pc_Story.html">Story</a>[, <span class="arg">placePoint</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>][, <span class="arg">destinationLayer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Deprecated: Use contentPlace method. Original Description: Create a linked story and place it into the target.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>parentStory</td><td><a href="pc_Story.html">Story</a></td><td>The story to place and link from.</td></tr>
+<tr><td>placePoint</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td><td>The point at which to place (Optional)</td></tr>
+<tr><td>destinationLayer</td><td><a href="pc_Layer.html">Layer</a></td><td>The layer on which to place (Optional)</td></tr>
+<tr class="lastRow"><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to display the link options dialog (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="placeXML"></a><a href="pc_PageItem.html">PageItem</a> <span class="func">placeXML</span> (<span class="arg">using</span>:
+<a href="pc_XMLElement.html">XMLElement</a>, <span class="arg">placePoint</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>[, <span class="arg">autoflowing</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Places the XML element onto a page. If the place point is above an existing page item, place the XML element into the page item.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>using</td><td><a href="pc_XMLElement.html">XMLElement</a></td><td>The XML element to place.</td></tr>
+<tr><td>placePoint</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td><td>The point at which to place the object, specified in the format [x, y].</td></tr>
+<tr class="lastRow"><td>autoflowing</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, autoflows placed text. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="reframe"></a><span class="rett">void</span>  <span class="func">reframe</span> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">opposingCorners</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>)<br>
+Move the bounding box of the page item
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>in</td><td>boundsKind:BoundingBoxLimits<br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Ordered array containing coordinateSpace:CoordinateSpaces</td><td>The bounding box to resize. Can accept: CoordinateSpaces enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.</td></tr>
+<tr class="lastRow"><td>opposingCorners</td><td><a href="pc_Array.html">Array</a> of 
+						any
+					</td><td>Opposing corners of new bounding box in the given coordinate space</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes the Page.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="removeOverride"></a><span class="rett">void</span>  <span class="func">removeOverride</span> ()<br>
+Removes the override from a previously overridden master page item.</p>
+
+<p class="spaceBelow"><a name="resize"></a><span class="rett">void</span>  <span class="func">resize</span> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<a href="pe_ResizeMethods.html">ResizeMethods</a>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Resize the page item.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>in</td><td><a href="pe_BoundingBoxLimits.html">BoundingBoxLimits</a><br>boundsKind:BoundingBoxLimits<br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Ordered array containing coordinateSpace:CoordinateSpaces</td><td>The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.</td></tr>
+<tr><td>from</td><td><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pc_Array.html">Array</a> of 2 Reals<br><a href="pc_Array.html">Array</a> of Arrays of 2 Reals<br><a href="pe_BoundingBoxLimits.html">BoundingBoxLimits</a><br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Long Integers</td><td>The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.</td></tr>
+<tr><td>by</td><td><a href="pe_ResizeMethods.html">ResizeMethods</a>:<br>ResizeMethods.ADDING_CURRENT_DIMENSIONS_TO<br>ResizeMethods.MULTIPLYING_CURRENT_DIMENSIONS_BY<br>ResizeMethods.REPLACING_CURRENT_DIMENSIONS_WITH<br>ResizeMethods.RESHAPING_AREA_TO_RATIO<br>ResizeMethods.RESHAPING_BORDER_TO_RATIO</td><td>How the current dimensions are affected by the given values</td></tr>
+<tr><td>values</td><td><a href="pc_Array.html">Array</a> of :<br><a href="pc_Array.html">Array</a> of Reals<br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br><a href="pe_ResizeConstraints.html">ResizeConstraints</a></td><td>The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method). Can accept: Array of Reals, ResizeConstraints enumerators or CoordinateSpaces enumerators.</td></tr>
+<tr><td>resizeIndividually</td><td><a href="pc_Boolean.html">bool</a></td><td>If false and multiple page items are targeted, the new dimensions are attained only by moving the individual items rather than resizing them. (Optional) (default: <b>true</b>)</td></tr>
+<tr class="lastRow"><td>consideringRulerUnits</td><td><a href="pc_Boolean.html">bool</a></td><td>If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="resolve"></a><span class="rett">any</span>  <span class="func">resolve</span> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Get the coordinates of the given location in the specified coordinate system.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>location</td><td><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pc_Array.html">Array</a> of 2 Reals<br><a href="pc_Array.html">Array</a> of Arrays of 2 Reals<br><a href="pe_BoundingBoxLimits.html">BoundingBoxLimits</a><br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Long Integers</td><td>The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.</td></tr>
+<tr><td>in</td><td><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>:<br>CoordinateSpaces.PASTEBOARD_COORDINATES<br>CoordinateSpaces.PARENT_COORDINATES<br>CoordinateSpaces.INNER_COORDINATES<br>CoordinateSpaces.PAGE_COORDINATES<br>CoordinateSpaces.SPREAD_COORDINATES</td><td>The coordinate space to use.</td></tr>
+<tr class="lastRow"><td>consideringRulerUnits</td><td><a href="pc_Boolean.html">bool</a></td><td>If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="select"></a><span class="rett">void</span>  <span class="func">select</span> ([<span class="arg">existingSelection</span>:
+<a href="pe_SelectionOptions.html">SelectionOptions</a>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])<br>
+Selects the object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>existingSelection</td><td><a href="pe_SelectionOptions.html">SelectionOptions</a>:<br>SelectionOptions.ADD_TO<br>SelectionOptions.REMOVE_FROM<br>SelectionOptions.REPLACE_WITH<br>SelectionOptions.SET_KEY</td><td>The selection status of the Page in relation to previously selected objects. (Optional) (default: <b>SelectionOptions.REPLACE_WITH</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setContent"></a><a href="pc_PageItem.html">PageItem</a> <span class="func">setContent</span> (<span class="arg">using</span>:
+<span class="argt">string</span>[, <span class="arg">relativeBasePath</span>:
+<span class="argt">string</span>])<br>
+Replaces the content of XML element with content imported from a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>using</td><td><a href="pc_string.html">string</a></td><td>The file path to the import file.</td></tr>
+<tr class="lastRow"><td>relativeBasePath</td><td><a href="pc_string.html">string</a></td><td>Base path used to resolve relative paths. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="snapshotCurrentLayout"></a><span class="rett">void</span>  <span class="func">snapshotCurrentLayout</span> ()<br>
+Create a snapshot of the layout for the current Page size and shape.</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the Page.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+<p class="spaceBelow"><a name="transform"></a><span class="rett">void</span>  <span class="func">transform</span> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Transform the page item.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>in</td><td><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>:<br>CoordinateSpaces.PASTEBOARD_COORDINATES<br>CoordinateSpaces.PARENT_COORDINATES<br>CoordinateSpaces.INNER_COORDINATES<br>CoordinateSpaces.PAGE_COORDINATES<br>CoordinateSpaces.SPREAD_COORDINATES</td><td>The coordinate space to use</td></tr>
+<tr><td>from</td><td><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pc_Array.html">Array</a> of 2 Reals<br><a href="pc_Array.html">Array</a> of Arrays of 2 Reals<br><a href="pe_BoundingBoxLimits.html">BoundingBoxLimits</a><br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Long Integers</td><td>The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.</td></tr>
+<tr><td>withMatrix</td><td><a href="pc_Array.html">Array</a> of 6 Reals<br><a href="pc_TransformationMatrix.html">TransformationMatrix</a></td><td>Transform matrix. Can accept: Array of 6 Reals or TransformationMatrix.</td></tr>
+<tr><td>replacingCurrent</td><td><a href="pc_Array.html">Array</a> of <a href="pe_MatrixContent.html">MatrixContent</a><br>Long Integer<br><a href="pe_MatrixContent.html">MatrixContent</a></td><td>Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.  Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two. Can accept: MatrixContent enumerator, Array of MatrixContent enumerators or Long Integer. (Optional)</td></tr>
+<tr class="lastRow"><td>consideringRulerUnits</td><td><a href="pc_Boolean.html">bool</a></td><td>If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="transformValuesOf"></a><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <span class="func">transformValuesOf</span> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)<br>
+Get the transformation values of the page item.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>in</td><td><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>:<br>CoordinateSpaces.PASTEBOARD_COORDINATES<br>CoordinateSpaces.PARENT_COORDINATES<br>CoordinateSpaces.INNER_COORDINATES<br>CoordinateSpaces.PAGE_COORDINATES<br>CoordinateSpaces.SPREAD_COORDINATES</td><td>The coordinate space to use</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Bookmark.html">Bookmark</a>.destination</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button.html">Button</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CheckBox.html">CheckBox</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ComboBox.html">ComboBox</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPS.html">EPS</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPSText.html">EPSText</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FormField.html">FormField</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Graphic.html">Graphic</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GraphicLine.html">GraphicLine</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group.html">Group</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Guide.html">Guide</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_HtmlItem.html">HtmlItem</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_HyperlinkPageDestination.html">HyperlinkPageDestination</a>.destinationPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Image.html">Image</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ImportedPage.html">ImportedPage</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_LayoutWindow.html">LayoutWindow</a>.activePage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox.html">ListBox</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MarginPreference.html">MarginPreference</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MediaItem.html">MediaItem</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Movie.html">Movie</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MultiStateObject.html">MultiStateObject</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Oval.html">Oval</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDF.html">PDF</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PICT.html">PICT</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Polygon.html">Polygon</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton.html">RadioButton</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Rectangle.html">Rectangle</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Section.html">Section</a>.pageStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SignatureField.html">SignatureField</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Sound.html">Sound</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SplineItem.html">SplineItem</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextBox.html">TextBox</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.parentPage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_WMF.html">WMF</a>.parentPage</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent">varies=any <a href="pc_Button.html#override">Button.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_CheckBox.html#override">CheckBox.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_ComboBox.html#override">ComboBox.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_EPS.html#override">EPS.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_EPSText.html#override">EPSText.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_FormField.html#override">FormField.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_Graphic.html#override">Graphic.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_GraphicLine.html#override">GraphicLine.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_Group.html#override">Group.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_Guide.html#override">Guide.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_HtmlItem.html#override">HtmlItem.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent"><a href="pc_HyperlinkExternalPageDestination.html">HyperlinkExternalPageDestination</a> <a href="pc_HyperlinkExternalPageDestinations.html#add">HyperlinkExternalPageDestinations.add</a>
+		([<span class="arg">destination</span>:
+<b>Page</b>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_HyperlinkPageDestination.html">HyperlinkPageDestination</a> <a href="pc_HyperlinkPageDestinations.html#add">HyperlinkPageDestinations.add</a>
+		([<span class="arg">destination</span>:
+<b>Page</b>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent">varies=any <a href="pc_Image.html#override">Image.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_ImportedPage.html#override">ImportedPage.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_ListBox.html#override">ListBox.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_MediaItem.html#override">MediaItem.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_Movie.html#override">Movie.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_MultiStateObject.html#override">MultiStateObject.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_Oval.html#override">Oval.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_PDF.html#override">PDF.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_PICT.html#override">PICT.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_PageItem.html#override">PageItem.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#nextItem">Pages.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>Page</b>)
+</p><p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#previousItem">Pages.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_Polygon.html#override">Polygon.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_RadioButton.html#override">RadioButton.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_Rectangle.html#override">Rectangle.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent"><a href="pc_Section.html">Section</a> <a href="pc_Sections.html#add">Sections.add</a>
+		([<span class="arg">reference</span>:
+<b>Page</b>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent">varies=any <a href="pc_SignatureField.html#override">SignatureField.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_Sound.html#override">Sound.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_SplineItem.html#override">SplineItem.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_TextBox.html#override">TextBox.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_TextFrame.html#override">TextFrame.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p><p class="hangIndent">varies=any <a href="pc_WMF.html#override">WMF.override</a>
+		(<span class="arg">destinationPage</span>:
+<b>Page</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Page</b> <b>Page</b>.<a href="pc_Page.html#duplicate">duplicate</a> ([<span class="arg">to</span>:
+<a href="pe_LocationOptions.html">LocationOptions</a>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Page</b> <b>Page</b>.<a href="pc_Page.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>Page</b> <b>Page</b>.<a href="pc_Page.html#move">move</a> ([<span class="arg">to</span>:
+<a href="pe_LocationOptions.html">LocationOptions</a>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">binding</span>:
+<a href="pe_BindingOptions.html">BindingOptions</a>=<span class="defv">BindingOptions.DEFAULT_VALUE</span>])
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#[]">Pages.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#add">Pages.add</a> ([<span class="arg">at</span>:
+<a href="pe_LocationOptions.html">LocationOptions</a>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#anyItem">Pages.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Page</b> <a href="pc_Pages.html#everyItem">Pages.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#firstItem">Pages.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#item">Pages.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#itemByID">Pages.itemByID</a> (<span class="arg">id</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#itemByName">Pages.itemByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Page</b> <a href="pc_Pages.html#itemByRange">Pages.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#lastItem">Pages.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#middleItem">Pages.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#nextItem">Pages.nextItem</a> (<span class="arg">obj</span>:
+<b>Page</b>)
+</p>
+<p class="hangIndent"><b>Page</b> <a href="pc_Pages.html#previousItem">Pages.previousItem</a> (<span class="arg">obj</span>:
+<b>Page</b>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: ReflectionInfo</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, reflectioninfo">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>ReflectionInfo</h1></td></tr>
+<tr><td>&nbsp;</td><td>Provides information about a method, a property or a method parameters.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Reflection.html">Reflection</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>ReflectionInfo</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="arguments"></a>arguments</td><td><a href="pc_Array.html">Array</a> of <b>ReflectionInfo</b></td>
+<td>readonly</td><td>The description of method or function arguments.</td></tr>
+<tr><td><a name="dataType"></a>dataType</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The data type.</td></tr>
+<tr><td><a name="defaultValue"></a>defaultValue</td><td>any</td>
+<td>readonly</td><td>The default value.</td></tr>
+<tr><td><a name="description"></a>description</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The long description text.</td></tr>
+<tr><td><a name="help"></a>help</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The short description text.</td></tr>
+<tr><td><a name="isCollection"></a>isCollection</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Contains true if the class describes a collection class.</td></tr>
+<tr><td><a name="max"></a>max</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The maximum value.</td></tr>
+<tr><td><a name="min"></a>min</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The minimum value.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The element name.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Reflection.html">Reflection</a></td>
+<td>readonly</td><td>The class object that this element belongs to.</td></tr>
+<tr><td><a name="sampleCode"></a>sampleCode</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>Sample code, if present.</td></tr>
+<tr><td><a name="sampleFile"></a>sampleFile</td><td><a href="pc_File.html">File</a></td>
+<td>readonly</td><td>A file containing sample code. May be null.</td></tr>
+<tr class="lastRow"><td><a name="type"></a>type</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The element type.<br>One of unknown, readonly, readwrite, createonly, method or parameter.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Reflection.html">Reflection</a>.methods</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Reflection.html">Reflection</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Reflection.html">Reflection</a>.staticMethods</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Reflection.html">Reflection</a>.staticProperties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ReflectionInfo.html">ReflectionInfo</a>.arguments</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>ReflectionInfo</b> <a href="pc_Reflection.html#find">Reflection.find</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

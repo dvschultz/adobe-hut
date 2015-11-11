@@ -1,0 +1,200 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: FlashPlayer</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, flashplayer">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>FlashPlayer</h1></td></tr>
+<tr><td>&nbsp;</td><td><p>A control that contains a Flash Player, which can load and play Flash movies stored in SWF files. </p><p>The ScriptUI FlashPlayer element runs the Flash application within an Adobe application. The Flash application runs ActionScript, a different implementation of JavaScript from the ExtendScript version of JavaScript that Adobe applications run. A control object of this type contains functions that allow your script to load SWF files, control movie playback, and communicate with the ActionScript environment. </p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Registers an event handler for a particular type of event occuring in this element.">addEventListener</a>, <a href="#callback" title="A function definition for a callback from the Flash ActionScript environment.">callback</a>, <a href="#dispatchEvent" title="Simulates the occurrence of an event in this target.">dispatchEvent</a>, <a href="#hide" title="Hides this element.">hide</a>, <a href="#invokePlayerFunction" title="Invokes an ActionScript function defined in the Flash application.">invokePlayerFunction</a>, <a href="#loadMovie" title="Loads a movie into the Flash Player, and begins playing it.">loadMovie</a>, <a href="#notify" title="Sends a notification message, simulating the specified user interaction event.">notify</a>, <a href="#playMovie" title="Restarts a movie that has been stopped.">playMovie</a>, <a href="#removeEventListener" title="Unregisters an event handler for a particular type of event occuring in this element.">removeEventListener</a>, <a href="#show" title="Shows this element.">show</a>, <a href="#stopMovie" title="Halts playback of the current movie.">stopMovie</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>FlashPlayer</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="active"></a>active</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>True if this element is active.<br>
+            An active control is the one with keyboard focusóthat is, the one that accepts keystrokes, or in the case of a&nbsp;<a href="pc_Button (SUI).html">Button</a>, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
+          </td></tr>
+<tr><td><a name="alignment"></a>alignment</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>
+            The alignment style for this element. If defined, this value overrides the <i>alignChildren</i> setting for the parent container.
+          <br>
+            This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
+            <br>&bull;&nbsp;
+              For orientation=row:<b>top</b>, <b>bottom</b>, <b>fill</b>
+            
+            <br>&bull;&nbsp;
+              For orientation=column: <b>left</b>, <b>right</b>, <b>fill</b>
+            
+            <br>&bull;&nbsp;
+              For orientation=stack:<b>top</b>, <b>bottom</b>, <b>left</b>, <b>right</b>, <b>fill</b>
+            
+          </td></tr>
+<tr><td><a name="bounds"></a>bounds</td><td><a href="pc_Bounds.html">Bounds</a></td>
+<td>r/w</td><td>The boundaries of the element, in parent-relative coordinates. <br>Setting an element's size or location changes its bounds property, and vice-versa.</td></tr>
+<tr><td><a name="enabled"></a>enabled</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>True if this element is enabled.<br>An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance. </td></tr>
+<tr><td><a name="helpTip"></a>helpTip</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The help text that is displayed when the mouse hovers over the element.</td></tr>
+<tr><td><a name="indent"></a>indent</td><td><a href="pc_Number.html">Number</a> (min: 0)</td>
+<td>r/w</td><td>The number of pixels to indent the element during automatic layout.<br>Applies for column orientation and left alignment, or row orientation and top alignment.</td></tr>
+<tr><td><a name="location"></a>location</td><td><a href="pc_Point.html">Point</a></td>
+<td>r/w</td><td>The upper left corner of this element relative to its parent.<br>The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa. </td></tr>
+<tr><td><a name="maximumSize"></a>maximumSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td> The maximum height and width to which the element can be resized.</td></tr>
+<tr><td><a name="minimumSize"></a>minimumSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td> The minimum height and width to which the element can be resized.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The parent element.</td></tr>
+<tr><td><a name="preferredSize"></a>preferredSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td>The preferred size, used by layout managers to determine the best size for each element.<br>If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default. </td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>An object that contains one or more creation properties of the container (properties used only when the element is created). <br>A FlashPlayer object has no creation properties. </td></tr>
+<tr><td><a name="size"></a>size</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td>The current dimensions of this element.<br>
+            Initially undefined, and unless explicitly set by a script, it is defined by a&nbsp;LayoutManager&nbsp;. A script can explicitly set size before the layout manager is invoked to establish an element size other than the <i>preferredSize</i> or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
+          </td></tr>
+<tr><td><a name="type"></a>type</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>The element type, "flashplayer".</td></tr>
+<tr><td><a name="visible"></a>visible</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>True if this element is shown, false if it is hidden.<br>When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.</td></tr>
+<tr><td><a name="window"></a>window</td><td><a href="pc_Window (SUI).html">Window (SUI)</a></td>
+<td>readonly</td><td>The window that this element belongs to.</td></tr>
+<tr class="lastRow"><td><a name="windowBounds"></a>windowBounds</td><td><a href="pc_Bounds.html">Bounds</a></td>
+<td>readonly</td><td>The bounds of this element relative to the top-level parent window.</td></tr>
+</table></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Events</h4><p class="spaceBelow"><a name="callback"></a><span class="rett">void</span>  <span class="func">callback</span> ()<br>
+A function definition for a callback from the Flash ActionScript environment.<br>
+The Flash ActionScript code can call any callback function defined on the ExtendScript side of the FlashPlayer object, invoking it by name as a property of the control object. The function can take any arguments of a supported data types, and can return any value of a supported data type. data types:Number, String, Boolean, null, undefined, Object, Array. </p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_Boolean.html">Boolean</a> <span class="func">addEventListener</span> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])<br>
+Registers an event handler for a particular type of event occuring in this element.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventName</td><td><a href="pc_String.html">String</a></td><td>The name of the event.<br>
+                Event names are listed in the <i>JavaScript Tools Guide</i>.
+              </td></tr>
+<tr><td>handler</td><td><a href="pc_Function.html">Function</a></td><td>The function that handles the event.<br>
+                This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the&nbsp;UIEvent&nbsp;object.
+              </td></tr>
+<tr class="lastRow"><td>capturePhase</td><td><a href="pc_Boolean.html">Boolean</a></td><td>When true, the handler is called only in the capturing phase of the event propagation.  (default: <b>false</b>)<br>Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="dispatchEvent"></a><a href="pc_Event.html">Event</a> <span class="func">dispatchEvent</span> ()<br>
+Simulates the occurrence of an event in this target. <br>
+
+            A script can create a&nbsp;<a href="pc_UIEvent.html">UIEvent</a>&nbsp;object for a specific event and pass it to this method to start the event propagation for the event.
+          </p>
+
+<p class="spaceBelow"><a name="hide"></a><span class="rett">void</span>  <span class="func">hide</span> ()<br>
+Hides this element.</p>
+
+<p class="spaceBelow"><a name="invokePlayerFunction"></a><span class="rett">Any</span> <span class="func">invokePlayerFunction</span> (<span class="arg">name</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">argument</span>:
+<span class="argt">Any</span>])<br>
+Invokes an ActionScript function defined in the Flash application.<br>
+Returns the result of the invoked function, which must be one of the allowed types. The ActionScript class and date objects are not supported as return values.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>name</td><td><a href="pc_String.html">String</a></td><td>The name of a Flash ActionScript function that has been registered with the ExternalInterface object by the currently loaded SWF file.</td></tr>
+<tr class="lastRow"><td>argument</td><td>Any</td><td>An argument to pass through to the function.<br>
+                There can be any number of arguments. An argument must be one of these data types:Number, String, Boolean, null, undefined, Object, Array. No other data types are supported.
+               (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="loadMovie"></a><span class="rett">void</span>  <span class="func">loadMovie</span> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>)<br>
+Loads a movie into the Flash Player, and begins playing it.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>file</td><td><a href="pc_File.html">File</a></td><td>The File object for the SWF file to load.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="notify"></a><span class="rett">void</span>  <span class="func">notify</span> ([<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>])<br>
+Sends a notification message, simulating the specified user interaction event. 
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>eventName</td><td><a href="pc_String.html">String</a></td><td>The name of the control event handler to call. <br>
+                One of: <b>onClick</b>, <b>onChange</b>, <b>onChanging</b>. By default, simulates the <b>onChange</b> event for an edittext control, an <b>onClick</b> event for controls that support that event.
+               (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="playMovie"></a><span class="rett">void</span>  <span class="func">playMovie</span> ([<span class="arg">rewind</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])<br>
+Restarts a movie that has been stopped.<br>
+
+            Do not use on a movie that is currently playing.<br>The stopMovie()-playMovie() sequence does not work for SWF files produced by Flex, or for some files produced by Flash Authoring (depending on how they were implemented).
+          
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>rewind</td><td><a href="pc_Boolean.html">Boolean</a></td><td>When true, restarts the movie from the beginning; otherwise, starts playing from the	point where it was stopped. (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">Boolean</a> <span class="func">removeEventListener</span> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])<br>
+Unregisters an event handler for a particular type of event occuring in this element.<br>
+ All arguments must be identical to those that were used to register the event handler.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventName</td><td><a href="pc_String.html">String</a></td><td>The name of the event.</td></tr>
+<tr><td>handler</td><td><a href="pc_Function.html">Function</a></td><td>The function that handles the event.</td></tr>
+<tr class="lastRow"><td>capturePhase</td><td><a href="pc_Boolean.html">Boolean</a></td><td>Whether to call the handler only in the capturing phase of the event propagation. (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="show"></a><span class="rett">void</span>  <span class="func">show</span> ()<br>
+Shows this element.<br>
+ When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.</p>
+
+<p class="spaceBelow"><a name="stopMovie"></a><span class="rett">void</span>  <span class="func">stopMovie</span> ()<br>
+Halts playback of the current movie.<br>
+
+            The stopMovie()-playMovie() sequence does not work for SWF files produced by Flex, or for some files produced by Flash Authoring (depending on how they were implemented).<br>Using stopMovie() from the player's hosting environment has no effect on an SWF file playing in a ScriptUI Flash Player element. It is, however, possible to produce an SWF using Flash Authoring that can stop itself in response to user interaction.
+          </p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

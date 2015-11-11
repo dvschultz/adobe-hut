@@ -1,0 +1,141 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: DropShadowSetting</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, dropshadowsetting">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>DropShadowSetting</h1></td></tr>
+<tr><td>&nbsp;</td><td><p class="spaceBelow">Drop shadow settings. Base Class: <a href="pc_Preference.html">Preference</a></p><p>Superclass of <a href="pc_FindChangeDropShadowSetting.html">FindChangeDropShadowSetting</a></p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#toSource" title="Generates a string which, if executed, will return the DropShadowSetting.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_ContentTransparencySetting.html">ContentTransparencySetting</a> | <a href="pc_FillTransparencySetting.html">FillTransparencySetting</a> | <a href="pc_StrokeTransparencySetting.html">StrokeTransparencySetting</a> | <a href="pc_TransparencySetting.html">TransparencySetting</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_Preference.html">Preference</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>DropShadowSetting</center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_FindChangeDropShadowSetting.html">FindChangeDropShadowSetting</a></center></td></tr></table><table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="angle"></a>angle</td><td><a href="pc_number.html">number</a> (range: -180 - 180)</td>
+<td>r/w</td><td>The angle at which the shadow is thrown</td></tr>
+<tr><td><a name="blendMode"></a>blendMode</td><td><a href="pe_BlendMode.html">BlendMode</a>:<br>BlendMode.NORMAL<br>BlendMode.MULTIPLY<br>BlendMode.SCREEN<br>BlendMode.OVERLAY<br>BlendMode.SOFT_LIGHT<br>BlendMode.HARD_LIGHT<br>BlendMode.COLOR_DODGE<br>BlendMode.COLOR_BURN<br>BlendMode.DARKEN<br>BlendMode.LIGHTEN<br>BlendMode.DIFFERENCE<br>BlendMode.EXCLUSION<br>BlendMode.HUE<br>BlendMode.SATURATION<br>BlendMode.COLOR<br>BlendMode.LUMINOSITY</td>
+<td>r/w</td><td>The blending mode for the drop shadow effect.</td></tr>
+<tr><td><a name="distance"></a>distance</td><td>Measurement Unit (Number or String) (range: 0 - 1000)</td>
+<td>r/w</td><td>The distance between the item and its shadow</td></tr>
+<tr><td><a name="effectColor"></a>effectColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The color applied to the drop shadow, specified as a swatch (color, gradient, tint, or mixed ink), or as an array of color values. The color mode dictates the array values: for RGB, specify three values, each in the range 0 to 255, in the format [R,G,B]; for CMYK, specify four values, each as a percentage and each in the range 0 to 100, in the format [C,M,Y,K]; for LAB, specify three values in the format [L,A,B], with L in the range 0 to 100 and A and B in the range -128 to 127.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="honorOtherEffects"></a>honorOtherEffects</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the drop shadow will take into account other non-shadow effects.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="knockedOut"></a>knockedOut</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the layer will knock out the drop shadow.</td></tr>
+<tr><td><a name="mode"></a>mode</td><td><a href="pe_ShadowMode.html">ShadowMode</a>:<br>ShadowMode.NONE<br>ShadowMode.DROP</td>
+<td>r/w</td><td>The shadow mode.</td></tr>
+<tr><td><a name="noise"></a>noise</td><td><a href="pc_number.html">number</a> (range: 0 - 100)</td>
+<td>r/w</td><td>The amount (as a percentage) of noise applied to the shadow. (Range: 0 to 100)</td></tr>
+<tr><td><a name="opacity"></a>opacity</td><td><a href="pc_number.html">number</a> (range: 0 - 100)</td>
+<td>r/w</td><td>The opacity of the drop shadow (as a percentage). (Range: 0 to 100)</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_ContentTransparencySetting.html">ContentTransparencySetting</a><br><a href="pc_FillTransparencySetting.html">FillTransparencySetting</a><br><a href="pc_StrokeTransparencySetting.html">StrokeTransparencySetting</a><br><a href="pc_TransparencySetting.html">TransparencySetting</a></td>
+<td>readonly</td><td>The parent of the DropShadowSetting (a TransparencySetting, StrokeTransparencySetting, FillTransparencySetting or ContentTransparencySetting).</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="size"></a>size</td><td>Measurement Unit (Number or String) (range: 0 - 144)</td>
+<td>r/w</td><td>The radius (in pixels) of the blur applied to the drop shadow. (Range depends on the unit type. For points: 0 to 144; for picas: 0p0 to 12p0; for inches: 0 to 2; for mm: 0 to 50.08; for cm: 0 to 5.08; for ciceros: 0c0 to 11c3.128.)</td></tr>
+<tr><td><a name="spread"></a>spread</td><td><a href="pc_number.html">number</a> (range: 0 - 100)</td>
+<td>r/w</td><td>The amount (as a percentage of the blur width) to spread the footprint of the drop shadow and reduce the radius of the blur. (Range: 0 to 100)</td></tr>
+<tr><td><a name="useGlobalLight"></a>useGlobalLight</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses the global light angle.</td></tr>
+<tr><td><a name="xOffset"></a>xOffset</td><td>Measurement Unit (Number or String) (range: -1000 - 1000)</td>
+<td>r/w</td><td>The horizontal offset of the drop shadow. Range depends on the unit type. For points: -1000 to 1000; for picas: -83p4 to 83p4; for inches: -13.8889 to 13.8889; for mm: -352.778 to 352.778; for cm: -35.277 to 35.277; for ciceros: -78c2.389 to 78c2.389.</td></tr>
+<tr class="lastRow"><td><a name="yOffset"></a>yOffset</td><td>Measurement Unit (Number or String) (range: -1000 - 1000)</td>
+<td>r/w</td><td>The vertical offset of the drop shadow. (Range depends on the unit type. For points: -1000 to 1000; for picas: -83p4 to 83p4; for inches: -13.8889 to 13.8889; for mm: -352.778 to 352.778; for cm: -35.277 to 35.277; for ciceros: -78c2.389 to 78c2.389)</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_DropShadowSetting.html">DropShadowSetting</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the DropShadowSetting.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_ContentTransparencySetting.html">ContentTransparencySetting</a>.dropShadowSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FillTransparencySetting.html">FillTransparencySetting</a>.dropShadowSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StrokeTransparencySetting.html">StrokeTransparencySetting</a>.dropShadowSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TransparencySetting.html">TransparencySetting</a>.dropShadowSettings</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>DropShadowSetting</b> <b>DropShadowSetting</b>.<a href="pc_DropShadowSetting.html#getElements">getElements</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

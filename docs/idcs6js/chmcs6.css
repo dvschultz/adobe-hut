@@ -1,0 +1,255 @@
+
+/*
+	This file and its associated files are a derivative of original data from Adobe.
+	This implementation thereof is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. ß 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+*/
+
+/* For debugging purposes only:
+
+Color set: 624
+
+*/
+
+html { background: #eee; color: #111; line-height:133%; font: 100% Baskerville, Calibri, Arial, "Times New Roman", Times, serif;  }
+
+body { background: #fff; color: #111; line-height:133%; font: 100% Baskerville, Calibri, Arial, "Times New Roman", Times, serif; }
+
+* { padding: 0; margin: 0; }
+
+
+
+/*---:[ core layout elements ]:---*/
+
+#container { width: 100em; margin: 0 auto; }
+
+	#page { padding: 2em; }
+
+		#header { padding: 2.2em 1.1em; border-bottom: 3px double #ddd; clear: both; }
+
+		#content_box { width: 100%; /*background: url('images/dot-ddd.gif') 51.3em 0 repeat-y;*/ }
+
+			#content { width: 62.0em; float: left; }
+
+				.post_box { margin: 0 2.2em 0 1.1em; border-top: 1px dotted #bbb; }
+				
+				.top { border: none !important; }
+
+			#sidebars { width: 33.9em; float: right; }
+
+				#sidebars_box { width: 100%; /*background: url('images/ddd-1x2.gif') 50% 0 repeat-y;*/ }
+				
+				.pad_sidebars { padding-top: 2.2em;  }
+				
+					.sidebar { width: 50%; float: left; /* background: url('images/ddd-1x2.gif') 0% 0 repeat-y;*/  }
+
+		#footer { padding-top: 1.1em; color: #888; border-top: 3px double #ddd; text-align: right; }
+
+
+
+/*---:[ global elements ]:---*/
+
+a, a:visited { color: #2361a1; text-decoration: none; }
+
+a:hover { color: #2361a1; text-decoration: underline; }
+
+a img { border: none; }
+
+blockquote { border-left: 1px solid #ddd; color: #666; }
+
+acronym { font-weight: bold; font-size: 0.786em; line-height: 1em; text-transform: uppercase; letter-spacing: 1px; border-bottom: none; cursor: help; }
+
+abbr { font-size: 1em; line-height: 1em; border-bottom: none; }
+
+sub, sup { line-height: 0.5em; }
+
+code { font-family: Consolas, "Andale Mono", "Courier New", Courier; font-size:90%; background-color: #A68; }
+
+pre { margin-bottom: 1.833em; padding: 0.75em 0.917em; font: normal 0.857em/1.5em Consolas, "Andale Mono", Courier, "Courier New"; background: #fee; border: 1px solid #edd; overflow: auto; clear: both; }
+
+p.bottom { margin: 0; }
+
+/*---:[ headlines ]:---*/
+
+h1 {color:#624; font-weight: bold; }
+
+h2 { font-weight: bold; font-size: 133%; line-height: 150%; }
+
+	h2 a, h2 a:visited { color: #111; text-decoration: none; }
+
+	h2 a:hover { color: #a62f71; }
+	
+h3 { font-weight: normal; color:#624; font-size: 112%; line-height: 125%;
+	margin: 0 0 0.25em 0;  }
+
+h3.sidehead {
+	color: black;
+	text-align: right;
+	font-weight: bold;
+	padding: 0 .33em .33em .33em;
+/*	background:url(img/header_bg.gif) top right repeat; */
+}
+
+h4 { font-weight: bold; color:#624; font-size: 112%; line-height: 125%;
+	margin: 0 0 0.25em 0;  }
+
+/* --:[ common texts ]: -- */
+
+p.spaceBelow { margin-bottom: 0.5em; }
+
+.hangIndent { margin-left:2em; text-indent: -2em; }
+
+
+/* --:[ tables ]: -- */
+
+table {border:solid 1px black; border-collapse: collapse; margin-bottom: 0.5em; }
+
+tr { vertical-align:top; }
+
+th {
+	background-color: #624;
+	color: white;
+	font-weight: bold;
+	text-align: left;
+	border-right: solid 1px black;
+	border-bottom: solid 1px black;
+	padding:6px;
+}
+
+td { 	border-bottom: solid 1px black;
+	padding: 6px; }
+
+td.sidehead { border-right: none; border-bottom: solid 1px black; padding: 6px 0 0 0; }
+
+tr.lastRow td { border-bottom: 0px; }
+
+
+table.example { text-align: left; padding:3px; border: none; margin: 0.33em auto 0.33em 0em; }
+td.example { padding: .5em; border: none; font: normal 0.857em/1.5em Consolas, "Andale Mono", Courier, "Courier New"; background: #A68; }
+table.example tr td { padding: 3px .5em 3px 0em; border: none; margin: 0; }
+
+
+table.framed { padding:3px; border: 0px; margin: 0.33em auto 0.33em auto; }
+
+table.framed tr td { padding: 3px .5em 3px .5em; border: solid 1px #624; margin: 0; }
+
+table.framedc { margin: 0.33em auto 0.33em auto; }
+
+table.framedc tr td {
+	padding: 3px 1em 3px 1em;
+	margin: 0;
+	border: solid 1px black;
+	font-weight: bold;
+	background-color: #A68;
+}
+
+table.framedb { margin: 0.33em auto 0.33em auto;
+	padding: 3px 1em 3px 1em;
+	font-weight: normal;
+	border: none 0px white;
+}
+
+table.framedb tr,table.framedb tr td {
+	background-color: #846;
+	border-radius: 0.75em;
+	border: none 0px white;
+}
+
+table.framedb tr td a { color: #D9B; }
+
+/* --:[ common overrides ]: -- */
+
+.toctop { vertical-align:bottom; }
+
+.bottomline { font-size: 110%; background: #eee; }
+
+/* --:[ a special section for function lines ]: -- */
+
+/* bool removeEventListener (eventType:string, handler:any[, captures:bool=false]) */
+
+	/* Return Type -- "bool" */
+		.rett { color: #003366; }
+
+	/* Function Name -- "removeEventListener" */
+		.func { font-weight: bold; }
+
+	/* Argument -- "eventType", "handler", "captures" */
+		.arg { color: green; }
+
+	/* Argument type -- "string", "any", "bool" */
+		.argt { color: black; font-style:italic; }
+
+	/* Default value -- "false" */
+		.defv { font-weight: bold; }
+
+/* --:[ a special section for the index headings ]: -- */
+table.index {
+	border-collapse: collapse;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+tr.indexHead {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+th.index {
+/*	background:url(img/header_bg.gif) top left repeat; */
+	text-align: center;
+	font-size: 125%;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+th.index a, th.index a:visited {
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+}
+
+th.index a:hover {
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+	background:white;
+}
+
+.hot {
+	font-weight: bold;
+	color: #D9B;
+}
+
+.sing {
+	font-size: 90%;
+	background-color:  #EAC;
+	border-radius: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.na {
+	font-weight: normal;
+	color: silver;
+}
+	

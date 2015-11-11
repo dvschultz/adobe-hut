@@ -1,0 +1,304 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: ResizeMethods</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, resizemethods">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>ResizeMethods</h1></td></tr>
+<tr><td>&nbsp;</td><td>Resize methods.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>ResizeMethods.ADDING_CURRENT_DIMENSIONS_TO</td><td>Add additional width and height to current values</td><td>1215264592  = 
+				'HowP'
+			</td></tr>
+<tr><td>ResizeMethods.MULTIPLYING_CURRENT_DIMENSIONS_BY</td><td>Multiply current width and height by the given factors</td><td>1215264589  = 
+				'HowM'
+			</td></tr>
+<tr><td>ResizeMethods.REPLACING_CURRENT_DIMENSIONS_WITH</td><td>Change width and height overriding current values</td><td>1215264581  = 
+				'HowE'
+			</td></tr>
+<tr><td>ResizeMethods.RESHAPING_AREA_TO_RATIO</td><td>Change width to height ratio keeping the current area</td><td>1215264577  = 
+				'HowA'
+			</td></tr>
+<tr class="lastRow"><td>ResizeMethods.RESHAPING_BORDER_TO_RATIO</td><td>Change width to height ratio keeping the current perimeter</td><td>1215264595  = 
+				'HowS'
+			</td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>In function</h3>
+
+<p class="hangIndent">void  <a href="pc_Button.html#resize">Button.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_CheckBox.html#resize">CheckBox.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ComboBox.html#resize">ComboBox.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_EPS.html#resize">EPS.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_EPSText.html#resize">EPSText.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_FormField.html#resize">FormField.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Graphic.html#resize">Graphic.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_GraphicLine.html#resize">GraphicLine.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Group.html#resize">Group.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_HtmlItem.html#resize">HtmlItem.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Image.html#resize">Image.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ImportedPage.html#resize">ImportedPage.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ListBox.html#resize">ListBox.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MediaItem.html#resize">MediaItem.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Movie.html#resize">Movie.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MultiStateObject.html#resize">MultiStateObject.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Oval.html#resize">Oval.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PDF.html#resize">PDF.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PICT.html#resize">PICT.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Page.html#resize">Page.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PageItem.html#resize">PageItem.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Polygon.html#resize">Polygon.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_RadioButton.html#resize">RadioButton.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Rectangle.html#resize">Rectangle.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_SignatureField.html#resize">SignatureField.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Sound.html#resize">Sound.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_SplineItem.html#resize">SplineItem.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextBox.html#resize">TextBox.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextFrame.html#resize">TextFrame.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_WMF.html#resize">WMF.resize</a> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<b>ResizeMethods</b>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

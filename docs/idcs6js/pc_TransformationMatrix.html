@@ -1,0 +1,358 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: TransformationMatrix</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, transformationmatrix">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>TransformationMatrix</h1></td></tr>
+<tr><td>&nbsp;</td><td>A transformation matrix.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#catenateMatrix" title="Multiply the transformation matrix by another.">catenateMatrix</a>, <a href="#changeCoordinates" title="Multiply the point by the matrix.">changeCoordinates</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#invertMatrix" title="Invert the transformation matrix.">invertMatrix</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#rotateMatrix" title="Rotate the transformation matrix.">rotateMatrix</a>, <a href="#scaleMatrix" title="Scale the transformation matrix.">scaleMatrix</a>, <a href="#shearMatrix" title="Shear the transformation matrix.">shearMatrix</a>, <a href="#toSource" title="Generates a string which, if executed, will return the TransformationMatrix.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a>, <a href="#translateMatrix" title="Translate the transformation matrix.">translateMatrix</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Application.html">Application</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>TransformationMatrix</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="clockwiseShearAngle"></a>clockwiseShearAngle</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The shear angle of the transformation matrix.</td></tr>
+<tr><td><a name="counterclockwiseRotationAngle"></a>counterclockwiseRotationAngle</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The rotation angle of the transformation matrix.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="horizontalScaleFactor"></a>horizontalScaleFactor</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The horizontal scale factor of the transformation matrix.</td></tr>
+<tr><td><a name="horizontalTranslation"></a>horizontalTranslation</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The horizontal translation of the transformation matrix.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the TransformationMatrix within its containing object.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="matrixMapping"></a>matrixMapping</td><td><a href="pc_Array.html">Array</a> of <br><a href="pc_Array.html">Array</a> of 2 Arrays of 2 Reals</td>
+<td>readonly</td><td>The mapping the transformation matrix performs on the unit triangle. Can return: Array of Array of 2 Arrays of 2 Reals.</td></tr>
+<tr><td><a name="matrixValues"></a>matrixValues</td><td><a href="pc_Array.html">Array</a> of <a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The values of the transformation matrix.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the TransformationMatrix.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Application.html">Application</a></td>
+<td>readonly</td><td>The parent of the TransformationMatrix (a Application).</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="verticalScaleFactor"></a>verticalScaleFactor</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The vertical scale factor of the transformation matrix.</td></tr>
+<tr class="lastRow"><td><a name="verticalTranslation"></a>verticalTranslation</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The vertical translation of the transformation matrix.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="catenateMatrix"></a><a href="pc_TransformationMatrix.html">TransformationMatrix</a> <span class="func">catenateMatrix</span> (<span class="arg">withMatrix</span>:
+<b>TransformationMatrix</b>)<br>
+Multiply the transformation matrix by another.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>withMatrix</td><td><span class="rett">TransformationMatrix</span></td><td>The right hand matrix factor</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeCoordinates"></a><a href="pc_Array.html">Array</a> of number <span class="func">changeCoordinates</span> (<span class="arg">point</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">number</span>)<br>
+Multiply the point by the matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>point</td><td><a href="pc_Array.html">Array</a> of <a href="pc_number.html">number</a></td><td>The point to transform</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="invertMatrix"></a><a href="pc_TransformationMatrix.html">TransformationMatrix</a> <span class="func">invertMatrix</span> ()<br>
+Invert the transformation matrix.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="rotateMatrix"></a><a href="pc_TransformationMatrix.html">TransformationMatrix</a> <span class="func">rotateMatrix</span> ([<span class="arg">byAngle</span>:
+<span class="argt">number</span>][, <span class="arg">byCosine</span>:
+<span class="argt">number</span>][, <span class="arg">bySine</span>:
+<span class="argt">number</span>])<br>
+Rotate the transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>byAngle</td><td><a href="pc_number.html">number</a></td><td>The counterclockwise rotation angle (Optional)</td></tr>
+<tr><td>byCosine</td><td><a href="pc_number.html">number</a></td><td>The cosine of the desired rotation (Optional)</td></tr>
+<tr class="lastRow"><td>bySine</td><td><a href="pc_number.html">number</a></td><td>The sine of the desired rotation (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="scaleMatrix"></a><a href="pc_TransformationMatrix.html">TransformationMatrix</a> <span class="func">scaleMatrix</span> ([<span class="arg">horizontallyBy</span>:
+<span class="argt">number</span>][, <span class="arg">verticallyBy</span>:
+<span class="argt">number</span>])<br>
+Scale the transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>horizontallyBy</td><td><a href="pc_number.html">number</a></td><td>The horizontal scale factor (Optional)</td></tr>
+<tr class="lastRow"><td>verticallyBy</td><td><a href="pc_number.html">number</a></td><td>The vertical scale factor (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="shearMatrix"></a><a href="pc_TransformationMatrix.html">TransformationMatrix</a> <span class="func">shearMatrix</span> ([<span class="arg">byAngle</span>:
+<span class="argt">number</span>][, <span class="arg">bySlope</span>:
+<span class="argt">number</span>])<br>
+Shear the transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>byAngle</td><td><a href="pc_number.html">number</a></td><td>The horizontal shear angle (Optional)</td></tr>
+<tr class="lastRow"><td>bySlope</td><td><a href="pc_number.html">number</a></td><td>The horizontal shear slope (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the TransformationMatrix.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+<p class="spaceBelow"><a name="translateMatrix"></a><a href="pc_TransformationMatrix.html">TransformationMatrix</a> <span class="func">translateMatrix</span> ([<span class="arg">horizontallyBy</span>:
+<span class="argt">number</span>][, <span class="arg">verticallyBy</span>:
+<span class="argt">number</span>])<br>
+Translate the transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>horizontallyBy</td><td><a href="pc_number.html">number</a></td><td>The horizontal translation distance (Optional)</td></tr>
+<tr class="lastRow"><td>verticallyBy</td><td><a href="pc_number.html">number</a></td><td>The vertical translation distance (Optional)</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Page.html">Page</a>.masterPageTransform</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#nextItem">TransformationMatrices.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>TransformationMatrix</b>)
+</p><p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#previousItem">TransformationMatrices.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>TransformationMatrix</b>)
+</p><p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrix.html#catenateMatrix">TransformationMatrix.catenateMatrix</a>
+		(<span class="arg">withMatrix</span>:
+<b>TransformationMatrix</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Button.html#transformValuesOf">Button.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_CheckBox.html#transformValuesOf">CheckBox.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_ComboBox.html#transformValuesOf">ComboBox.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_EPS.html#transformValuesOf">EPS.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_EPSText.html#transformValuesOf">EPSText.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_FormField.html#transformValuesOf">FormField.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Graphic.html#transformValuesOf">Graphic.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_GraphicLine.html#transformValuesOf">GraphicLine.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Group.html#transformValuesOf">Group.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Guide.html#transformValuesOf">Guide.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_HtmlItem.html#transformValuesOf">HtmlItem.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Image.html#transformValuesOf">Image.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_ImportedPage.html#transformValuesOf">ImportedPage.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_ListBox.html#transformValuesOf">ListBox.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_MasterSpread.html#transformValuesOf">MasterSpread.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_MediaItem.html#transformValuesOf">MediaItem.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Movie.html#transformValuesOf">Movie.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_MultiStateObject.html#transformValuesOf">MultiStateObject.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Oval.html#transformValuesOf">Oval.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_PDF.html#transformValuesOf">PDF.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_PICT.html#transformValuesOf">PICT.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Page.html#transformValuesOf">Page.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_PageItem.html#transformValuesOf">PageItem.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Polygon.html#transformValuesOf">Polygon.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_RadioButton.html#transformValuesOf">RadioButton.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Rectangle.html#transformValuesOf">Rectangle.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_SignatureField.html#transformValuesOf">SignatureField.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Sound.html#transformValuesOf">Sound.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_SplineItem.html#transformValuesOf">SplineItem.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_Spread.html#transformValuesOf">Spread.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_TextBox.html#transformValuesOf">TextBox.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_TextFrame.html#transformValuesOf">TextFrame.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#[]">TransformationMatrices.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#add">TransformationMatrices.add</a> ([<span class="arg">horizontalScaleFactor</span>:
+<span class="argt">number</span>][, <span class="arg">verticalScaleFactor</span>:
+<span class="argt">number</span>][, <span class="arg">clockwiseShearAngle</span>:
+<span class="argt">number</span>][, <span class="arg">counterclockwiseRotationAngle</span>:
+<span class="argt">number</span>][, <span class="arg">horizontalTranslation</span>:
+<span class="argt">number</span>][, <span class="arg">verticalTranslation</span>:
+<span class="argt">number</span>][, <span class="arg">matrixValues</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">number</span>][, <span class="arg">matrixMapping</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#anyItem">TransformationMatrices.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#everyItem">TransformationMatrices.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#firstItem">TransformationMatrices.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#item">TransformationMatrices.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#itemByName">TransformationMatrices.itemByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#itemByRange">TransformationMatrices.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#lastItem">TransformationMatrices.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#middleItem">TransformationMatrices.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#nextItem">TransformationMatrices.nextItem</a> (<span class="arg">obj</span>:
+<b>TransformationMatrix</b>)
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <a href="pc_TransformationMatrices.html#previousItem">TransformationMatrices.previousItem</a> (<span class="arg">obj</span>:
+<b>TransformationMatrix</b>)
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <b>TransformationMatrix</b>.<a href="pc_TransformationMatrix.html#catenateMatrix">catenateMatrix</a> (<span class="arg">withMatrix</span>:
+<b>TransformationMatrix</b>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <b>TransformationMatrix</b>.<a href="pc_TransformationMatrix.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <b>TransformationMatrix</b>.<a href="pc_TransformationMatrix.html#invertMatrix">invertMatrix</a> ()
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <b>TransformationMatrix</b>.<a href="pc_TransformationMatrix.html#rotateMatrix">rotateMatrix</a> ([<span class="arg">byAngle</span>:
+<span class="argt">number</span>][, <span class="arg">byCosine</span>:
+<span class="argt">number</span>][, <span class="arg">bySine</span>:
+<span class="argt">number</span>])
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <b>TransformationMatrix</b>.<a href="pc_TransformationMatrix.html#scaleMatrix">scaleMatrix</a> ([<span class="arg">horizontallyBy</span>:
+<span class="argt">number</span>][, <span class="arg">verticallyBy</span>:
+<span class="argt">number</span>])
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <b>TransformationMatrix</b>.<a href="pc_TransformationMatrix.html#shearMatrix">shearMatrix</a> ([<span class="arg">byAngle</span>:
+<span class="argt">number</span>][, <span class="arg">bySlope</span>:
+<span class="argt">number</span>])
+</p>
+<p class="hangIndent"><b>TransformationMatrix</b> <b>TransformationMatrix</b>.<a href="pc_TransformationMatrix.html#translateMatrix">translateMatrix</a> ([<span class="arg">horizontallyBy</span>:
+<span class="argt">number</span>][, <span class="arg">verticallyBy</span>:
+<span class="argt">number</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TransformationMatrix</b> <a href="pc_WMF.html#transformValuesOf">WMF.transformValuesOf</a> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

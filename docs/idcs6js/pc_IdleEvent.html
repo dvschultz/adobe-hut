@@ -1,0 +1,110 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: IdleEvent</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, idleevent">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>IdleEvent</h1></td></tr>
+<tr><td>&nbsp;</td><td>An idle event. Base Class: <a href="pc_Event.html">Event</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#preventDefault" title="Cancels the default behavior of the event on its target.">preventDefault</a>, <a href="#stopPropagation" title="Stops propagation of the event beyond the current target.">stopPropagation</a>, <a href="#toSource" title="Generates a string which, if executed, will return the IdleEvent.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_IdleTask.html">IdleTask</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_Event.html">Event</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>IdleEvent</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="bubbles"></a>bubbles</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the event supports the bubbling phase of propagation.</td></tr>
+<tr><td><a name="cancelable"></a>cancelable</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the default behavior of the event on its target can be canceled.</td></tr>
+<tr><td><a name="currentTarget"></a>currentTarget</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The current propagation target of the event.</td></tr>
+<tr><td><a name="defaultPrevented"></a>defaultPrevented</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the default behavior of the event on its target has been canceled.</td></tr>
+<tr><td><a name="eventPhase"></a>eventPhase</td><td><a href="pe_EventPhases.html">EventPhases</a>:<br>EventPhases.NOT_DISPATCHING<br>EventPhases.AT_TARGET<br>EventPhases.BUBBLING_PHASE<br>EventPhases.DONE</td>
+<td>readonly</td><td>The current propagation phase of the event.</td></tr>
+<tr><td><a name="eventType"></a>eventType</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the event.</td></tr>
+<tr><td><a name="id"></a>id</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The unique ID of the IdleEvent.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the IdleEvent within its containing object.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_IdleTask.html">IdleTask</a></td>
+<td>readonly</td><td>The parent of the IdleEvent (a IdleTask).</td></tr>
+<tr><td><a name="propagationStopped"></a>propagationStopped</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, propagation of the event beyond the current target has been stopped.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="target"></a>target</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The target of the event.</td></tr>
+<tr><td><a name="timeAllocated"></a>timeAllocated</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>Amount of time allocated to this task at the time the event was dispatched.</td></tr>
+<tr class="lastRow"><td><a name="timeStamp"></a>timeStamp</td><td><a href="pc_Date.html">Date</a></td>
+<td>readonly</td><td>The time the event was initialized.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr class="lastRow"><td><a name="ON_IDLE"></a>ON_IDLE</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>Dispatched at idle time for this IdleEvent. This event does not bubble. This event is not cancelable. (default: <b>onIdle</b>)</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_IdleEvent.html">IdleEvent</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="preventDefault"></a><span class="rett">void</span>  <span class="func">preventDefault</span> ()<br>
+Cancels the default behavior of the event on its target.</p>
+
+<p class="spaceBelow"><a name="stopPropagation"></a><span class="rett">void</span>  <span class="func">stopPropagation</span> ()<br>
+Stops propagation of the event beyond the current target.</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the IdleEvent.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>IdleEvent</b> <b>IdleEvent</b>.<a href="pc_IdleEvent.html#getElements">getElements</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

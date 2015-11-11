@@ -1,0 +1,349 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Book</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, book">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Book</h1></td></tr>
+<tr><td>&nbsp;</td><td>A book.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#close" title="Close the Book">close</a>, <a href="#exportFile" title="Exports the book to a file.">exportFile</a>, <a href="#extractLabel" title="Gets the label value associated with the specified key.">extractLabel</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#insertLabel" title="Sets the label to the value associated with the specified key.">insertLabel</a>, <a href="#packageForPrint" title="Packages the document.">packageForPrint</a>, <a href="#preflight" title="Preflight a book and optionally save the resulting report.">preflight</a>, <a href="#print" title="Prints the Book(s).">print</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#repaginate" title="Repaginates the book.">repaginate</a>, <a href="#save" title="Saves the book.">save</a>, <a href="#synchronize" title="Synchronizes the entire book to the style source document.">synchronize</a>, <a href="#toSource" title="Generates a string which, if executed, will return the Book.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a>, <a href="#updateAllCrossReferences" title="Updates the cross references in the entire book.">updateAllCrossReferences</a>, <a href="#updateAllNumbers" title="Update all numbers (e.g. Page numbers, chapter numbers and paragraph numbers) throughout the book.">updateAllNumbers</a>, <a href="#updateChapterAndParagraphNumbers" title="Updates chapter numbers and paragraph numbers throughout the book.">updateChapterAndParagraphNumbers</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Application.html">Application</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Book</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_BookContent.html">BookContent</a> | <a href="pc_EPubExportPreference.html">EPubExportPreference</a> | <a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a> | <a href="pc_Preference.html">Preference</a> | <a href="pc_PreflightBookOption.html">PreflightBookOption</a> | <a href="pc_PrintPreference.html">PrintPreference</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="automaticDocumentConversion"></a>automaticDocumentConversion</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, automatically converts the book content object during repagination and synchronization.</td></tr>
+<tr><td><a name="automaticPagination"></a>automaticPagination</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, automatically updates page numbers when pages in book content files are added, deleted, or rearranged.</td></tr>
+<tr><td><a name="bookContents"></a>bookContents</td><td><a href="pc_BookContents.html">BookContents</a> <a class="sing" href="pc_BookContent.html">BookContent</a></td>
+<td>readonly</td><td>A collection of book content objects.</td></tr>
+<tr><td><a name="epubExportPreferences"></a>epubExportPreferences</td><td><a href="pc_EPubExportPreference.html">EPubExportPreference</a></td>
+<td>readonly</td><td>EPub export preference settings.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="filePath"></a>filePath</td><td><a href="pc_File.html">File</a></td>
+<td>readonly</td><td>The full path to the file.</td></tr>
+<tr><td><a name="fullName"></a>fullName</td><td><a href="pc_File.html">File</a></td>
+<td>readonly</td><td>The full path to the Book, including the name of the Book.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the Book within its containing object.</td></tr>
+<tr><td><a name="insertBlankPage"></a>insertBlankPage</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, inserts a blank page as necessary to fill in page number gaps caused by the odd or even specification set in the repagination option.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="label"></a>label</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A property that can be set to any string.</td></tr>
+<tr><td><a name="mergeIdenticalLayers"></a>mergeIdenticalLayers</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, merges identically named layers when exporting to PDF.</td></tr>
+<tr><td><a name="modified"></a>modified</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the Book has been modified since it was last saved.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the Book.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Application.html">Application</a></td>
+<td>readonly</td><td>The parent of the Book (a Application).</td></tr>
+<tr><td><a name="preferences"></a>preferences</td><td><a href="pc_Preferences.html">Preferences</a> <a class="sing" href="pc_Preference.html">Preference</a></td>
+<td>readonly</td><td>A collection of preferences objects.</td></tr>
+<tr><td><a name="preflightBookOptions"></a>preflightBookOptions</td><td><a href="pc_PreflightBookOption.html">PreflightBookOption</a></td>
+<td>readonly</td><td>Preflight book option settings.</td></tr>
+<tr><td><a name="printPreferences"></a>printPreferences</td><td><a href="pc_PrintPreference.html">PrintPreference</a></td>
+<td>readonly</td><td>Print preference settings.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="repaginationOption"></a>repaginationOption</td><td><a href="pe_RepaginateOption.html">RepaginateOption</a>:<br>RepaginateOption.NEXT_PAGE<br>RepaginateOption.NEXT_ODD_PAGE<br>RepaginateOption.NEXT_EVEN_PAGE</td>
+<td>r/w</td><td>Page numbering options for book content objects within the book.</td></tr>
+<tr><td><a name="saved"></a>saved</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the Book has been saved since it was created.</td></tr>
+<tr><td><a name="smartMatchStyleGroups"></a>smartMatchStyleGroups</td><td><a href="pe_SmartMatchOptions.html">SmartMatchOptions</a>:<br>SmartMatchOptions.MATCH_STYLE_PATH<br>SmartMatchOptions.MATCH_STYLE_NAME</td>
+<td>r/w</td><td>How to match styles with same name while synchronizing a book.</td></tr>
+<tr><td><a name="styleSourceDocument"></a>styleSourceDocument</td><td><a href="pc_BookContent.html">BookContent</a><br><a href="pc_Document.html">Document</a></td>
+<td>r/w</td><td>Current style source document. Can return: Document or BookContent.</td></tr>
+<tr><td><a name="synchronizeBulletNumberingList"></a>synchronizeBulletNumberingList</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize bullets and numbering.</td></tr>
+<tr><td><a name="synchronizeCellStyle"></a>synchronizeCellStyle</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize cell styles.</td></tr>
+<tr><td><a name="synchronizeCharacterStyle"></a>synchronizeCharacterStyle</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize character styles.</td></tr>
+<tr><td><a name="synchronizeConditionalText"></a>synchronizeConditionalText</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize conditional text.</td></tr>
+<tr><td><a name="synchronizeMasterPage"></a>synchronizeMasterPage</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize master pages.</td></tr>
+<tr><td><a name="synchronizeObjectStyle"></a>synchronizeObjectStyle</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize object styles.</td></tr>
+<tr><td><a name="synchronizeParagraphStyle"></a>synchronizeParagraphStyle</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize paragraph styles.</td></tr>
+<tr><td><a name="synchronizeSwatch"></a>synchronizeSwatch</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize swatches.</td></tr>
+<tr><td><a name="synchronizeTableOfContentStyle"></a>synchronizeTableOfContentStyle</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize table of content styles.</td></tr>
+<tr><td><a name="synchronizeTableStyle"></a>synchronizeTableStyle</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize table styles.</td></tr>
+<tr><td><a name="synchronizeTextVariable"></a>synchronizeTextVariable</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize text variables.</td></tr>
+<tr class="lastRow"><td><a name="synchronizeTrapStyle"></a>synchronizeTrapStyle</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, synchronize trap styles.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="close"></a><span class="rett">void</span>  <span class="func">close</span> ([<span class="arg">saving</span>:
+<a href="pe_SaveOptions.html">SaveOptions</a>=<span class="defv">SaveOptions.ASK</span>][, <span class="arg">savingIn</span>:
+<a href="pc_File.html">File</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Close the Book
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>saving</td><td><a href="pe_SaveOptions.html">SaveOptions</a>:<br>SaveOptions.NO<br>SaveOptions.ASK<br>SaveOptions.YES</td><td>Whether to save changes before closing the Book (Optional) (default: <b>SaveOptions.ASK</b>)</td></tr>
+<tr><td>savingIn</td><td><a href="pc_File.html">File</a></td><td>The file in which to save the Book (Optional)</td></tr>
+<tr><td>versionComments</td><td><a href="pc_string.html">string</a></td><td>The comment for this version (Optional)</td></tr>
+<tr class="lastRow"><td>forceSave</td><td><a href="pc_Boolean.html">bool</a></td><td>Forcibly save a version (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="exportFile"></a><span class="rett">void</span>  <span class="func">exportFile</span> (<span class="arg">format</span>:
+<span class="argt">varies</span>[, <span class="arg">to</span>:
+<a href="pc_File.html">File</a>][, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">whichDocuments</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_BookContent.html">BookContent</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Exports the book to a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>format</td><td><a href="pe_ExportFormat.html">ExportFormat</a><br><a href="pc_String.html">String</a></td><td>The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.</td></tr>
+<tr><td>to</td><td><a href="pc_File.html">File</a></td><td>The file to which to export the book. (Optional)</td></tr>
+<tr><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>Used to specify if the PDF Export Options Dialog needs to be shown or not (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>using</td><td><a href="pc_PDFExportPreset.html">PDFExportPreset</a></td><td>Used to specify the presets for the export which can be the object of the preset type, enumeration for existing presets or user defined presets, or a string naming the preset to be used, but in case Showing Options is true, the preset specified in the Export Dialog will over ride this parameter (Optional)</td></tr>
+<tr><td>whichDocuments</td><td><a href="pc_Array.html">Array</a> of <a href="pc_BookContent.html">BookContent</a></td><td>Used to specify a list of book content references, from the current book, where the list may contain duplicate entries and if the list is not specified then the entire book contents shall be exported (Optional)</td></tr>
+<tr><td>versionComments</td><td><a href="pc_string.html">string</a></td><td>The comment for this version. (Optional)</td></tr>
+<tr class="lastRow"><td>forceSave</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, forcibly saves a version. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="extractLabel"></a>string <span class="func">extractLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Gets the label value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_Book.html">Book</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="insertLabel"></a><span class="rett">void</span>  <span class="func">insertLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+Sets the label to the value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_string.html">string</a></td><td>The value.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="packageForPrint"></a><a href="pc_Boolean.html">bool</a>  <span class="func">packageForPrint</span> (<span class="arg">to</span>:
+<a href="pc_File.html">File</a>, <span class="arg">copyingFonts</span>:
+<span class="argt">bool</span>, <span class="arg">copyingLinkedGraphics</span>:
+<span class="argt">bool</span>, <span class="arg">copyingProfiles</span>:
+<span class="argt">bool</span>, <span class="arg">updatingGraphics</span>:
+<span class="argt">bool</span>, <span class="arg">includingHiddenLayers</span>:
+<span class="argt">bool</span>, <span class="arg">ignorePreflightErrors</span>:
+<span class="argt">bool</span>, <span class="arg">creatingReport</span>:
+<span class="argt">bool</span>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Packages the document.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>to</td><td><a href="pc_File.html">File</a></td><td>The folder, alias, or path in which to place the packaged files.</td></tr>
+<tr><td>copyingFonts</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, copies fonts used in the document to the package folder.</td></tr>
+<tr><td>copyingLinkedGraphics</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, copies linked graphics files to the package folder.</td></tr>
+<tr><td>copyingProfiles</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, copies color profiles to the package folder.</td></tr>
+<tr><td>updatingGraphics</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, updates graphics links to the package folder.</td></tr>
+<tr><td>includingHiddenLayers</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, copies fonts and links from hidden layers to the package.</td></tr>
+<tr><td>ignorePreflightErrors</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, ignores preflight errors and proceeds with the packaging. If false, cancels the packaging when errors exist.</td></tr>
+<tr><td>creatingReport</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, creates a package report that includes printing instructions, print settings, lists of fonts, links and required inks, and other information.</td></tr>
+<tr><td>versionComments</td><td><a href="pc_string.html">string</a></td><td>The comments for the version. (Optional)</td></tr>
+<tr class="lastRow"><td>forceSave</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, forcibly saves a version. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="preflight"></a><span class="rett">void</span>  <span class="func">preflight</span> ([<span class="arg">to</span>:
+<a href="pc_File.html">File</a>][, <span class="arg">autoOpen</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Preflight a book and optionally save the resulting report.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>to</td><td><a href="pc_File.html">File</a></td><td>The preflight report to save to. (Optional)</td></tr>
+<tr class="lastRow"><td>autoOpen</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, automatically open the report after creation. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="print"></a><span class="rett">void</span>  <span class="func">print</span> ([<span class="arg">printDialog</span>:
+<span class="argt">bool</span>][, <span class="arg">using</span>:
+<span class="argt">varies</span>])<br>
+Prints the Book(s).
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>printDialog</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to invoke the print dialog (Optional)</td></tr>
+<tr class="lastRow"><td>using</td><td><a href="pc_PrinterPreset.html">PrinterPreset</a><br><a href="pe_PrinterPresetTypes.html">PrinterPresetTypes</a></td><td>Printer preset to use. Can accept: PrinterPresetTypes enumerator or PrinterPreset. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="repaginate"></a><span class="rett">void</span>  <span class="func">repaginate</span> ()<br>
+Repaginates the book.</p>
+
+<p class="spaceBelow"><a name="save"></a><span class="rett">void</span>  <span class="func">save</span> ([<span class="arg">to</span>:
+<a href="pc_File.html">File</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Saves the book.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>to</td><td><a href="pc_File.html">File</a></td><td>The file path. Note: Required only if the book has not been previously saved. If the book has previously been saved, specifying a path saves a copy and closes the original book. (Optional)</td></tr>
+<tr><td>versionComments</td><td><a href="pc_string.html">string</a></td><td>The comment for this version. (Optional)</td></tr>
+<tr class="lastRow"><td>forceSave</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, forcibly saves a version. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="synchronize"></a><span class="rett">void</span>  <span class="func">synchronize</span> ()<br>
+Synchronizes the entire book to the style source document.</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the Book.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+<p class="spaceBelow"><a name="updateAllCrossReferences"></a><span class="rett">void</span>  <span class="func">updateAllCrossReferences</span> ()<br>
+Updates the cross references in the entire book.</p>
+
+<p class="spaceBelow"><a name="updateAllNumbers"></a><span class="rett">void</span>  <span class="func">updateAllNumbers</span> ()<br>
+Update all numbers (e.g. Page numbers, chapter numbers and paragraph numbers) throughout the book.</p>
+
+<p class="spaceBelow"><a name="updateChapterAndParagraphNumbers"></a><span class="rett">void</span>  <span class="func">updateChapterAndParagraphNumbers</span> ()<br>
+Updates chapter numbers and paragraph numbers throughout the book.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.activeBook</p>
+</p>
+<p><p class="hangIndent"><a href="pc_BookContent.html">BookContent</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPubExportPreference.html">EPubExportPreference</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PreflightBookOption.html">PreflightBookOption</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.parent</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>Book</b> <a href="pc_Books.html#nextItem">Books.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>Book</b>)
+</p><p class="hangIndent"><b>Book</b> <a href="pc_Books.html#previousItem">Books.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>Book</b>)
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of <a href="pc_Story.html">Story</a> <a href="pc_Document.html#createTOC">Document.createTOC</a>
+		(<span class="arg">using</span>:
+<a href="pc_TOCStyle.html">TOCStyle</a>[, <span class="arg">replacing</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">fromBook</span>:
+<b>Book</b>][, <span class="arg">placePoint</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>][, <span class="arg">includeOverset</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">destinationLayer</span>:
+<a href="pc_Layer.html">Layer</a>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Book</b> <b>Book</b>.<a href="pc_Book.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#[]">Books.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#add">Books.add</a> (<span class="arg">fullName</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#anyItem">Books.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Book</b> <a href="pc_Books.html#everyItem">Books.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#firstItem">Books.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#item">Books.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#itemByName">Books.itemByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Book</b> <a href="pc_Books.html#itemByRange">Books.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#lastItem">Books.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#middleItem">Books.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#nextItem">Books.nextItem</a> (<span class="arg">obj</span>:
+<b>Book</b>)
+</p>
+<p class="hangIndent"><b>Book</b> <a href="pc_Books.html#previousItem">Books.previousItem</a> (<span class="arg">obj</span>:
+<b>Book</b>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

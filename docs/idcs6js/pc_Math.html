@@ -1,0 +1,213 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Math</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, math">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Math</h1></td></tr>
+<tr><td>&nbsp;</td><td>A global object containing a set of math functions and constants.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#abs" title="Returns the absolute value of a number.">abs</a>, <a href="#acos" title="Returns the arc cosine(in radians) of a number.">acos</a>, <a href="#asin" title="Returns the arc sin(in radians) of a number.">asin</a>, <a href="#atan" title="Returns the arc tangent(in radians) of a number.">atan</a>, <a href="#atan2" title="Returns the arc tangent of the quotient of its arguments (y/x).">atan2</a>, <a href="#ceil" title="Rounds the number up to the nearest integer.">ceil</a>, <a href="#cos" title="Returns the cosine of an angle provided in radians.">cos</a>, <a href="#exp" title="Returns Math.E raised to the power of a number.">exp</a>, <a href="#floor" title="Rounds a number down to the nearest integer.">floor</a>, <a href="#log" title="Returns the natural logarithm of a number.">log</a>, <a href="#max" title="Returns the maximum of two numbers.">max</a>, <a href="#min" title="Returns the minimum of two numbers.">min</a>, <a href="#pow" title="Returns x raised to the power of y.">pow</a>, <a href="#random" title="Returns a pseudo-random number from 0.0 up to but not including 1.0.">random</a>, <a href="#round" title="Rounds a number to the nearest integer.">round</a>, <a href="#sin" title="Returns the sine of an angle provided in radians.">sin</a>, <a href="#sqrt" title="Returns the square root of a number.">sqrt</a>, <a href="#tan" title="Returns the tangent of an angle provided in radians.">tan</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="E"></a>E</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>Euler's constant and the base of natural logarithms. (default: <b>2.7182818284590452354</b>)</td></tr>
+<tr><td><a name="LN10"></a>LN10</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The natural logarithm of 10. (default: <b>2.302585092994046</b>)</td></tr>
+<tr><td><a name="LN2"></a>LN2</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The natural logarithm of 2. (default: <b>0.6931471805599453</b>)</td></tr>
+<tr><td><a name="LOG10E"></a>LOG10E</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The base 10 logarithm of e. (default: <b>0.4342944819032518</b>)</td></tr>
+<tr><td><a name="LOG2E"></a>LOG2E</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The base 2 logarithm of e. (default: <b>1.4426950408886934</b>)</td></tr>
+<tr><td><a name="PI"></a>PI</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The ratio of the circumference of a circle to its diameter. (default: <b>3.14159265358979323846</b>)</td></tr>
+<tr><td><a name="SQRT1_2"></a>SQRT1_2</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The reciprocal of the square root of 1/2. (default: <b>0.7071067811865476</b>)</td></tr>
+<tr class="lastRow"><td><a name="SQRT2"></a>SQRT2</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The square root of 2. (default: <b>1.4142135623730951</b>)</td></tr>
+</table></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><p class="spaceBelow"><a name="abs"></a>number <span class="func">abs</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the absolute value of a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.abs(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="acos"></a>number <span class="func">acos</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the arc cosine(in radians) of a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.acos(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="asin"></a>number <span class="func">asin</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the arc sin(in radians) of a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.asin(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="atan"></a>number <span class="func">atan</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the arc tangent(in radians) of a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.atan(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="atan2"></a>number <span class="func">atan2</span> (<span class="arg">y</span>:
+<span class="argt">number</span>, <span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the arc tangent of the quotient of its arguments (y/x).
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>y</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.atan2(y,x)</td></tr></table>
+
+<p class="spaceBelow"><a name="ceil"></a>number <span class="func">ceil</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Rounds the number up to the nearest integer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.ceil(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="cos"></a>number <span class="func">cos</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the cosine of an angle provided in radians.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>An angle, in radians.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.cos(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="exp"></a>number <span class="func">exp</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns Math.E raised to the power of a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.exp(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="floor"></a>number <span class="func">floor</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Rounds a number down to the nearest integer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.floor(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="log"></a>number <span class="func">log</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the natural logarithm of a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.log(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="max"></a>number <span class="func">max</span> (<span class="arg">x</span>:
+<span class="argt">number</span>, <span class="arg">y</span>:
+<span class="argt">number</span>)<br>
+Returns the maximum of two numbers.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>x</td><td><a href="pc_number.html">number</a></td><td></td></tr>
+<tr class="lastRow"><td>y</td><td><a href="pc_number.html">number</a></td><td></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.max(x,y)</td></tr></table>
+
+<p class="spaceBelow"><a name="min"></a>number <span class="func">min</span> (<span class="arg">x</span>:
+<span class="argt">number</span>, <span class="arg">y</span>:
+<span class="argt">number</span>)<br>
+Returns the minimum of two numbers.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>x</td><td><a href="pc_number.html">number</a></td><td>Numbers.</td></tr>
+<tr class="lastRow"><td>y</td><td><a href="pc_number.html">number</a></td><td></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.min(x,y)</td></tr></table>
+
+<p class="spaceBelow"><a name="pow"></a>number <span class="func">pow</span> (<span class="arg">x</span>:
+<span class="argt">number</span>, <span class="arg">y</span>:
+<span class="argt">number</span>)<br>
+Returns x raised to the power of y.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>x</td><td><a href="pc_number.html">number</a></td><td>Numbers.</td></tr>
+<tr class="lastRow"><td>y</td><td><a href="pc_number.html">number</a></td><td></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.pow(x,y)</td></tr></table>
+
+<p class="spaceBelow"><a name="random"></a>number <span class="func">random</span> ()<br>
+Returns a pseudo-random number from 0.0 up to but not including 1.0. Range: 0.0 - 0.999999999999999</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.random()</td></tr></table>
+
+<p class="spaceBelow"><a name="round"></a>number <span class="func">round</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Rounds a number to the nearest integer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.round(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="sin"></a>number <span class="func">sin</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the sine of an angle provided in radians.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>An angle, in radians.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.sin(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="sqrt"></a>number <span class="func">sqrt</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the square root of a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>A number.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.sqrt(x)</td></tr></table>
+
+<p class="spaceBelow"><a name="tan"></a>number <span class="func">tan</span> (<span class="arg">x</span>:
+<span class="argt">number</span>)<br>
+Returns the tangent of an angle provided in radians.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>x</td><td><a href="pc_number.html">number</a></td><td>An angle, in radians.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Math.tan(x)</td></tr></table>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

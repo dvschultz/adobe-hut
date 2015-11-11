@@ -1,0 +1,1 @@
+﻿var myDoc = app.activeDocument;// returns number of pages$.writeln(myDoc.pages.length);

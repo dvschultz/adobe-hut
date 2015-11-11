@@ -1,0 +1,241 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: SelectionOptions</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, selectionoptions">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>SelectionOptions</h1></td></tr>
+<tr><td>&nbsp;</td><td>Options for selection status in relation to previously selected objects.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>SelectionOptions.ADD_TO</td><td>Adds the object to the existing selection; if no object was previously selected, makes the object the only selected object.</td><td>1633969202  = 
+				'add2'
+			</td></tr>
+<tr><td>SelectionOptions.REMOVE_FROM</td><td>Deselects the object.</td><td>1919249734  = 
+				'remF'
+			</td></tr>
+<tr><td>SelectionOptions.REPLACE_WITH</td><td>Selects the object and deselects any previously selected objects.</td><td>1919250519  = 
+				'repW'
+			</td></tr>
+<tr class="lastRow"><td>SelectionOptions.SET_KEY</td><td>Sets the key object. At least 2 objects must be selected, and the key object specified must be one of them.</td><td>1936028779  = 
+				'setk'
+			</td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>In function</h3>
+
+<p class="hangIndent">void  <a href="pc_Application.html#select">Application.select</a> (<span class="arg">selectableItems</span>:
+<span class="argt">varies</span>[, <span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Asset.html#select">Asset.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Button.html#select">Button.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Cell.html#select">Cell.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Character.html#select">Character.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_CheckBox.html#select">CheckBox.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Column.html#select">Column.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ComboBox.html#select">ComboBox.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_DTD.html#select">DTD.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Document.html#select">Document.select</a> (<span class="arg">selectableItems</span>:
+<span class="argt">varies</span>[, <span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_EPS.html#select">EPS.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_EPSText.html#select">EPSText.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_FormField.html#select">FormField.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Graphic.html#select">Graphic.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_GraphicLine.html#select">GraphicLine.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Group.html#select">Group.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Guide.html#select">Guide.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_HtmlItem.html#select">HtmlItem.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Image.html#select">Image.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ImportedPage.html#select">ImportedPage.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_InsertionPoint.html#select">InsertionPoint.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_LayoutWindow.html#select">LayoutWindow.select</a> (<span class="arg">selectableItems</span>:
+<span class="argt">varies</span>[, <span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_LibraryPanel.html#select">LibraryPanel.select</a> (<span class="arg">selectableItems</span>:
+<span class="argt">varies</span>[, <span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Line.html#select">Line.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ListBox.html#select">ListBox.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MasterSpread.html#select">MasterSpread.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MediaItem.html#select">MediaItem.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Movie.html#select">Movie.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MultiStateObject.html#select">MultiStateObject.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Oval.html#select">Oval.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PDF.html#select">PDF.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PICT.html#select">PICT.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Page.html#select">Page.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PageItem.html#select">PageItem.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Paragraph.html#select">Paragraph.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Polygon.html#select">Polygon.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_RadioButton.html#select">RadioButton.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Rectangle.html#select">Rectangle.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Row.html#select">Row.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_SignatureField.html#select">SignatureField.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Sound.html#select">Sound.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_SplineItem.html#select">SplineItem.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Spread.html#select">Spread.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_StoryWindow.html#select">StoryWindow.select</a> (<span class="arg">selectableItems</span>:
+<span class="argt">varies</span>[, <span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Table.html#select">Table.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Text.html#select">Text.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextBox.html#select">TextBox.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextColumn.html#select">TextColumn.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextFrame.html#select">TextFrame.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextStyleRange.html#select">TextStyleRange.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_WMF.html#select">WMF.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Window.html#select">Window.select</a> (<span class="arg">selectableItems</span>:
+<span class="argt">varies</span>[, <span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Word.html#select">Word.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_XMLAttribute.html#select">XMLAttribute.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_XMLComment.html#select">XMLComment.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_XMLElement.html#select">XMLElement.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_XMLInstruction.html#select">XMLInstruction.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_XMLItem.html#select">XMLItem.select</a> ([<span class="arg">existingSelection</span>:
+<b>SelectionOptions</b>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

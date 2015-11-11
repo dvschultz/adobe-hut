@@ -1,0 +1,439 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Array</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, array">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Array</h1></td></tr>
+<tr><td>&nbsp;</td><td>
+				An array with integer indexing and a&nbsp;<i>length</i>&nbsp;property.
+			</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Array" title="Creates and returns a new array.">Array</a>, <a href="#concat" title="Returns a new array created by concatenating the given values to the end of the original array.">concat</a>, <a href="#join" title="Joins all elements of the array into a string; optionally, each element is separated by delimiter.">join</a>, <a href="#pop" title="Removes the last element from the array, decreases the length by 1, and returns the value of the element.">pop</a>, <a href="#push" title="Places one or more values onto the end of the array and increases length by n.">push</a>, <a href="#reverse" title="Reverses the order of the elements in the array.">reverse</a>, <a href="#shift" title="Removes the first element from the array, decreases the length by 1, and returns the value of the element.">shift</a>, <a href="#slice" title="Creates a new array, which contains a subset of the original array's elements.">slice</a>, <a href="#sort" title="Sorts the elements of the array in place, using the given function to compare to elements.">sort</a>, <a href="#splice" title="Removes num elements from the array beginning with index, start.">splice</a>, <a href="#toLocaleString" title="Converts an array to a string and returns the string (localized).">toLocaleString</a>, <a href="#toSource" title="Creates a string representation of this object that can be fed back to&nbsp;eval()&nbsp;to re-create an object. Works only with built-in classes.">toSource</a>, <a href="#toString" title="Converts an array to a string and returns the string.">toString</a>, <a href="#unshift" title="Adds one or more elements to the beginning of the array.">unshift</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr class="lastRow"><td><a name="length"></a>length</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The length of the array</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Array"></a><a href="pc_Array.html">Array</a> <span class="func">Array</span> (<span class="arg">length</span>:
+<span class="argt">number</span>[, <span class="arg">element</span>:
+<span class="argt">any</span>])<br>
+Creates and returns a new array.<br>
+Takes any number of parameters, which become the elements of the array, or a single value which becomes the length of an empty array. Note that you cannot create a one-element array, as the single parameter value is interpreted as the length. Returns the new array.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>length</td><td><a href="pc_number.html">number</a></td><td>If no other parameters are passed, the initial length of the empty array.<br>Otherwise, the first element.</td></tr>
+<tr class="lastRow"><td>element</td><td>
+						any
+					</td><td>If there is more than one parameter, the array is initialized with the given parameters. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">
+						new Array()<br>
+						new Array (length)<br>
+						new Array (11, 22, 33, 44)
+					</td></tr></table>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="concat"></a><a href="pc_Array.html">Array</a> <span class="func">concat</span> (<span class="arg">value</span>:
+<span class="argt">any</span>)<br>
+Returns a new array created by concatenating the given values to the end of the original array.<br>
+The original array is unchanged.  If an array is provided as a parameter to concat(), each of its elements are appended as separate array elements at the end of the new array.  Returns a new array, the result of concatenation the given values to the end of the original array.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td>
+						any
+					</td><td>Any number of values to be added to the end of the array.<br>Can also be arrays.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.concat(value1,...valueN)</td></tr></table>
+
+<p class="spaceBelow"><a name="join"></a>string <span class="func">join</span> ([<span class="arg">delimiter</span>:
+<span class="argt">string</span>])<br>
+Joins all elements of the array into a string; optionally, each element is separated by delimiter.<br>
+Returns the string containing the joined elements and delimiters.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>delimiter</td><td><a href="pc_string.html">string</a></td><td>A string used to separate each element of the array.<br>If omitted, the array elements are separated with a comma. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.join(delimiter)</td></tr></table>
+
+<p class="spaceBelow"><a name="pop"></a><span class="rett">any</span>  <span class="func">pop</span> ()<br>
+Removes the last element from the array, decreases the length by 1, and returns the value of the element.<br>
+Returns the value of the deleted array element.</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.pop()</td></tr></table>
+
+<p class="spaceBelow"><a name="push"></a>number <span class="func">push</span> (<span class="arg">value</span>:
+<span class="argt">number</span>)<br>
+Places one or more values onto the end of the array and increases length by n.<br>
+Returns the new length of the array.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_number.html">number</a></td><td>Any number of values to be pushed onto the end of the array.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.push(value1,...valueN)</td></tr></table>
+
+<p class="spaceBelow"><a name="reverse"></a><a href="pc_Array.html">Array</a> <span class="func">reverse</span> ()<br>
+Reverses the order of the elements in the array.<br>
+Returns the reversed array.</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.reverse()</td></tr></table>
+
+<p class="spaceBelow"><a name="shift"></a><span class="rett">any</span>  <span class="func">shift</span> ()<br>
+Removes the first element from the array, decreases the length by 1, and returns the value of the element.<br>
+Returns the value of the deleted array element.</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.shift()</td></tr></table>
+
+<p class="spaceBelow"><a name="slice"></a><a href="pc_Array.html">Array</a> <span class="func">slice</span> ()<br>
+Creates a new array, which contains a subset of the original array's elements.<br>
+The slice begins with the index start, and continues up to, but not including the index, end.  If start or end is a negative number, the indexed is resolved counting backwards from the end of the array resulting in the element array[array. length + negativeIndex]. Returns a new array containing elements array[start] through array[end-1].</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.slice(start, end)</td></tr></table>
+
+<p class="spaceBelow"><a name="sort"></a><span class="rett">void</span>  <span class="func">sort</span> (<span class="arg">userFunction</span>:
+<a href="pc_Function.html">Function</a>)<br>
+Sorts the elements of the array in place, using the given function to compare to elements.<br>
+If no function is provided, the elements are sorted alphabetically.  Returns no return value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>userFunction</td><td><a href="pc_Function.html">Function</a></td><td>A user-supplied function of the form userFunction(a, b) which returns less than 0 if a is greater than b, 0 if a and b are equal, and greater than 0 if b is greater than a.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.sort(userFunction)</td></tr></table>
+
+<p class="spaceBelow"><a name="splice"></a><a href="pc_Array.html">Array</a> <span class="func">splice</span> (<span class="arg">start</span>:
+<span class="argt">number</span>[, <span class="arg">num</span>:
+<span class="argt">number</span>][, <span class="arg">value</span>:
+<span class="argt">any</span>])<br>
+Removes num elements from the array beginning with index, start.<br>
+Optionally insert new elements beginning at index start.  To ensure contiguity, elements are moved up to fill in any gaps.  Returns a new array containing any elements deleted from the original array.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>start</td><td><a href="pc_number.html">number</a></td><td>The index of the first element to remove. Negative values are relative to the end of the array.<br></td></tr>
+<tr><td>num</td><td><a href="pc_number.html">number</a></td><td>The number of array elements to remove, including start. If omitted, all elements from array index start to the end of the array are removed.<br> (Optional)</td></tr>
+<tr class="lastRow"><td>value</td><td>
+						any
+					</td><td>A list of one or more values to be added to the array starting at index start.<br>Must specify a value for num, to use this argument. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.splice(start, num, value1, ...valuen)</td></tr></table>
+
+<p class="spaceBelow"><a name="toLocaleString"></a>string <span class="func">toLocaleString</span> ()<br>
+Converts an array to a string and returns the string (localized).</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+
+						Creates a string representation of this object that can be fed back to&nbsp;<a href="pc_global.html">eval()</a>&nbsp;to re-create an object. Works only with built-in classes.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Converts an array to a string and returns the string.<br>
+Yields the same result as array. join() when called without a parameter.  Returns a comma-separated list of all the elements of the array.</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.toString()</td></tr></table>
+
+<p class="spaceBelow"><a name="unshift"></a>number <span class="func">unshift</span> (<span class="arg">value</span>:
+<span class="argt">any</span>)<br>
+Adds one or more elements to the beginning of the array.<br>
+Returns the new array length.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td>
+						any
+					</td><td>The values of one or more elements to be added to the beginning of the array.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">array.unshift(value1,...valuen)</td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.userColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Assignment.html">Assignment</a>.frameColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_AutoCorrectTable.html">AutoCorrectTable</a>.autoCorrectWordPairList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a>.alerts</p>
+</p>
+<p><p class="hangIndent"><a href="pc_BaselineFrameGridOption.html">BaselineFrameGridOption</a>.baselineFrameGridColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.gradientFillStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.appliedConditions</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.gradientFillStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.gradientStrokeStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.baselineFrameGridColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.insetSpacing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.strokeDashAndGap</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.appliedConditions</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.gradientFillStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.gradientStrokeStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.gradientFillStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.gradientStrokeStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.parentTextFrames</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.gradientFillStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.gradientStrokeStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.previewColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CjkGridPreference.html">CjkGridPreference</a>.layoutGridColorIndex</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Condition.html">Condition</a>.indicatorColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DocumentPreference.html">DocumentPreference</a>.columnGuideColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DocumentPreference.html">DocumentPreference</a>.marginGuideColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeGradientFeatherSetting.html">FindChangeGradientFeatherSetting</a>.gradientStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGlyphPreference.html">FindGlyphPreference</a>.rosFontGroup</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.appliedConditions</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.gradientFillStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.gradientStrokeStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.baselineFrameGridColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.insetSpacing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.strokeDashAndGap</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.appliedConditions</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.gradientFillStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.gradientStrokeStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.gradientFillStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.gradientStrokeStart</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Footnote.html">Footnote</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GalleyPreference.html">GalleyPreference</a>.backgroundColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GalleyPreference.html">GalleyPreference</a>.textColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GridPreference.html">GridPreference</a>.baselineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GridPreference.html">GridPreference</a>.gridColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Guide.html">Guide</a>.guideColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GuidePreference.html">GuidePreference</a>.rulerGuidesColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Hyperlink.html">Hyperlink</a>.borderColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.parentTextFrames</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Layer.html">Layer</a>.layerColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_LayoutWindow.html">LayoutWindow</a>.transformReferencePoint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.parentTextFrames</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.subItems</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MasterSpread.html">MasterSpread</a>.pageColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_NotePreference.html">NotePreference</a>.noteColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Page.html">Page</a>.masterPageItems</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Page.html">Page</a>.pageColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Page.html">Page</a>.tabOrder</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.parentTextFrames</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.previewColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PasteboardPreference.html">PasteboardPreference</a>.bleedGuideColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PasteboardPreference.html">PasteboardPreference</a>.previewBackgroundColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PasteboardPreference.html">PasteboardPreference</a>.slugGuideColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Path.html">Path</a>.entirePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RuleDataObject.html">RuleDataObject</a>.dataValue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptPreference.html">ScriptPreference</a>.scriptsList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ShowHideFieldsBehavior.html">ShowHideFieldsBehavior</a>.fieldsToHide</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ShowHideFieldsBehavior.html">ShowHideFieldsBehavior</a>.fieldsToShow</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SmartGuidePreference.html">SmartGuidePreference</a>.guideColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SpellPreference.html">SpellPreference</a>.misspelledWordColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SpellPreference.html">SpellPreference</a>.repeatedWordColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SpellPreference.html">SpellPreference</a>.uncapitalizedSentenceColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SpellPreference.html">SpellPreference</a>.uncapitalizedWordColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.textContainers</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.parentTextFrames</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.parentTextFrames</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFramePreference.html">TextFramePreference</a>.insetSpacing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.parentTextFrames</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextWrapPreference.html">TextWrapPreference</a>.textWrapOffset</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TrackChangesPreference.html">TrackChangesPreference</a>.backgroundColorForAddedText</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TrackChangesPreference.html">TrackChangesPreference</a>.backgroundColorForDeletedText</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TrackChangesPreference.html">TrackChangesPreference</a>.backgroundColorForMovedText</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TrackChangesPreference.html">TrackChangesPreference</a>.changeBarColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TrackChangesPreference.html">TrackChangesPreference</a>.textColorForAddedText</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TrackChangesPreference.html">TrackChangesPreference</a>.textColorForDeletedText</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TrackChangesPreference.html">TrackChangesPreference</a>.textColorForMovedText</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TransformationMatrix.html">TransformationMatrix</a>.matrixMapping</p>
+</p>
+<p><p class="hangIndent"><a href="pc_WatermarkPreference.html">WatermarkPreference</a>.watermarkFontColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.parentTextFrames</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLPreference.html">XMLPreference</a>.defaultCellTagColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLPreference.html">XMLPreference</a>.defaultImageTagColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLPreference.html">XMLPreference</a>.defaultStoryTagColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLPreference.html">XMLPreference</a>.defaultTableTagColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLTag.html">XMLTag</a>.tagColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.opentypeFeatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.tabList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.textContainers</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent">any <a href="pc_Function.html#apply">Function.apply</a>
+		(<span class="arg">thisObj</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">args</span>:
+<b>Array</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Array</b> <b>Array</b>.<a href="pc_Array.html#Array">Array</a> (<span class="arg">length</span>:
+<span class="argt">number</span>[, <span class="arg">element</span>:
+<span class="argt">any</span>])
+</p>
+<p class="hangIndent"><b>Array</b> <b>Array</b>.<a href="pc_Array.html#concat">concat</a> (<span class="arg">value</span>:
+<span class="argt">any</span>)
+</p>
+<p class="hangIndent"><b>Array</b> <b>Array</b>.<a href="pc_Array.html#reverse">reverse</a> ()
+</p>
+<p class="hangIndent"><b>Array</b> <b>Array</b>.<a href="pc_Array.html#slice">slice</a> ()
+</p>
+<p class="hangIndent"><b>Array</b> <b>Array</b>.<a href="pc_Array.html#splice">splice</a> (<span class="arg">start</span>:
+<span class="argt">number</span>[, <span class="arg">num</span>:
+<span class="argt">number</span>][, <span class="arg">value</span>:
+<span class="argt">any</span>])
+</p>
+<p class="hangIndent"><b>Array</b> <a href="pc_Folder.html#getFiles">Folder.getFiles</a> (<span class="arg">mask</span>:
+<span class="argt">any</span>)
+</p>
+<p class="hangIndent"><b>Array</b> <a href="pc_RegExp.html#exec">RegExp.exec</a> (<span class="arg">text</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><b>Array</b> <a href="pc_String.html#match">String.match</a> (<span class="arg">regexp</span>:
+<a href="pc_RegExp.html">RegExp</a>)
+</p>
+<p class="hangIndent"><b>Array</b> <a href="pc_XML.html#inScopeNamespaces">XML.inScopeNamespaces</a> ()
+</p>
+<p class="hangIndent"><b>Array</b> <a href="pc_XML.html#namespaceDeclarations">XML.namespaceDeclarations</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

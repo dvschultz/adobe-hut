@@ -1,0 +1,96 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Namespace</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, namespace">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Namespace</h1></td></tr>
+<tr><td>&nbsp;</td><td>A XML namespace object.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Namespace" title="Creates a Namespace object.">Namespace</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="prefix"></a>prefix</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The named prefix.</td></tr>
+<tr class="lastRow"><td><a name="uri"></a>uri</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The URI.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Namespace"></a><a href="pc_Namespace.html">Namespace</a> <span class="func">Namespace</span> (<span class="arg">prefix</span>:
+<span class="argt">any</span>[, <span class="arg">uri</span>:
+<span class="argt">string</span>])<br>
+Creates a Namespace object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>prefix</td><td>
+						any
+					</td><td>
+								The URI  prefix, specified as an existing Namespace object, QName object, or string.
+							<br>
+								
+									<br>&bull;&nbsp;
+										If this is a Namespace or a&nbsp;<a href="pc_QName.html">QName</a> object, the URI and prefix are set to that of the object.
+									
+									<br>&bull;&nbsp;If this is a string, the prefix is set to that string, and the URI must be specified.
+								
+							</td></tr>
+<tr class="lastRow"><td>uri</td><td><a href="pc_string.html">string</a></td><td>The URI if the prefix is specified as a string. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">new Namespace ("adobe", "http:/www.adobe.com")</td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><a href="pc_XML.html">XML</a> <a href="pc_XML.html#addNamespace">XML.addNamespace</a>
+		(<span class="arg">namespace</span>:
+<b>Namespace</b>)
+</p><p class="hangIndent"><a href="pc_XML.html">XML</a> <a href="pc_XML.html#removeNamespace">XML.removeNamespace</a>
+		(<span class="arg">namespace</span>:
+<b>Namespace</b>)
+</p><p class="hangIndent">void <a href="pc_XML.html#setNamespace">XML.setNamespace</a>
+		(<span class="arg">namespace</span>:
+<b>Namespace</b>)
+</p><p class="hangIndent">void <a href="pc_global.html#setDefaultXMLNamespace">global.setDefaultXMLNamespace</a>
+		(<span class="arg">namespace</span>:
+<b>Namespace</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Namespace</b> <b>Namespace</b>.<a href="pc_Namespace.html#Namespace">Namespace</a> (<span class="arg">prefix</span>:
+<span class="argt">any</span>[, <span class="arg">uri</span>:
+<span class="argt">string</span>])
+</p>
+<p class="hangIndent"><b>Namespace</b> <a href="pc_XML.html#namespace">XML.namespace</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

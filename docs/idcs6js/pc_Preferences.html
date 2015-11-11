@@ -1,0 +1,257 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Preferences</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, preferences">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Preferences</h1></td></tr>
+<tr><td>&nbsp;</td><td>A collection of preferences objects.<p>See also <a href="pc_Preference.html">Preference</a>.</p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#[]" title="Returns the Preference with the specified index.">[]</a>, <a href="#anyItem" title="Returns any Preference in the collection.">anyItem</a>, <a href="#count" title="Displays the number of elements in the Preference.">count</a>, <a href="#everyItem" title="Returns every Preference in the collection.">everyItem</a>, <a href="#firstItem" title="Returns the first Preference in the collection.">firstItem</a>, <a href="#item" title="Returns the Preference with the specified index or name.">item</a>, <a href="#itemByRange" title="Returns the Preferences within the specified range.">itemByRange</a>, <a href="#lastItem" title="Returns the last Preference in the collection.">lastItem</a>, <a href="#middleItem" title="Returns the middle Preference in the collection.">middleItem</a>, <a href="#nextItem" title="Returns the Preference whose index follows the specified Preference in the collection.">nextItem</a>, <a href="#previousItem" title="Returns the Preference with the index previous to the specified index.">previousItem</a>, <a href="#toSource" title="Generates a string which, if executed, will return the Preference.">toSource</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr class="lastRow"><td><a name="length"></a>length</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The number of objects in the collection.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="[]"></a><a href="pc_Preference.html">Preference</a> <span class="func">[]</span> (<span class="arg">index</span>:
+<span class="argt">number</span>)<br>
+Returns the Preference with the specified index.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>index</td><td><a href="pc_number.html">number</a></td><td>The index.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="anyItem"></a><a href="pc_Preference.html">Preference</a> <span class="func">anyItem</span> ()<br>
+Returns any Preference in the collection.</p>
+
+<p class="spaceBelow"><a name="count"></a>number <span class="func">count</span> ()<br>
+Displays the number of elements in the Preference.</p>
+
+<p class="spaceBelow"><a name="everyItem"></a><a href="pc_Array.html">Array</a> of <a href="pc_Preference.html">Preference</a> <span class="func">everyItem</span> ()<br>
+Returns every Preference in the collection.</p>
+
+<p class="spaceBelow"><a name="firstItem"></a><a href="pc_Preference.html">Preference</a> <span class="func">firstItem</span> ()<br>
+Returns the first Preference in the collection.</p>
+
+<p class="spaceBelow"><a name="item"></a><a href="pc_Preference.html">Preference</a> <span class="func">item</span> (<span class="arg">index</span>:
+<span class="argt">varies</span>)<br>
+Returns the Preference with the specified index or name.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>index</td><td>Long Integer<br><a href="pc_String.html">String</a></td><td>The index or name. Can accept: Long Integer or String.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="itemByRange"></a><a href="pc_Array.html">Array</a> of <a href="pc_Preference.html">Preference</a> <span class="func">itemByRange</span> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)<br>
+Returns the Preferences within the specified range.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>from</td><td>Long Integer<br><a href="pc_Preference.html">Preference</a><br><a href="pc_String.html">String</a></td><td>The Preference, index, or name at the beginning of the range. Can accept: Preference, Long Integer or String.</td></tr>
+<tr class="lastRow"><td>to</td><td>Long Integer<br><a href="pc_Preference.html">Preference</a><br><a href="pc_String.html">String</a></td><td>The Preference, index, or name at the end of the range. Can accept: Preference, Long Integer or String.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="lastItem"></a><a href="pc_Preference.html">Preference</a> <span class="func">lastItem</span> ()<br>
+Returns the last Preference in the collection.</p>
+
+<p class="spaceBelow"><a name="middleItem"></a><a href="pc_Preference.html">Preference</a> <span class="func">middleItem</span> ()<br>
+Returns the middle Preference in the collection.</p>
+
+<p class="spaceBelow"><a name="nextItem"></a><a href="pc_Preference.html">Preference</a> <span class="func">nextItem</span> (<span class="arg">obj</span>:
+<a href="pc_Preference.html">Preference</a>)<br>
+Returns the Preference whose index follows the specified Preference in the collection.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>obj</td><td><a href="pc_Preference.html">Preference</a></td><td>The Preference whose index comes before the desired Preference.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="previousItem"></a><a href="pc_Preference.html">Preference</a> <span class="func">previousItem</span> (<span class="arg">obj</span>:
+<a href="pc_Preference.html">Preference</a>)<br>
+Returns the Preference with the index previous to the specified index.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>obj</td><td><a href="pc_Preference.html">Preference</a></td><td>The index of the Preference that follows the desired Preference.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the Preference.</p>
+
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Book.html">Book</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button.html">Button</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CheckBox.html">CheckBox</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ComboBox.html">ComboBox</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ContentTransparencySetting.html">ContentTransparencySetting</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DataMerge.html">DataMerge</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Document.html">Document</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPS.html">EPS</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPSText.html">EPSText</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FillTransparencySetting.html">FillTransparencySetting</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeContentTransparencySetting.html">FindChangeContentTransparencySetting</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeFillTransparencySetting.html">FindChangeFillTransparencySetting</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeStrokeTransparencySetting.html">FindChangeStrokeTransparencySetting</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeTransparencySetting.html">FindChangeTransparencySetting</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FormField.html">FormField</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Graphic.html">Graphic</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GraphicLine.html">GraphicLine</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group.html">Group</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_HtmlItem.html">HtmlItem</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Image.html">Image</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ImportedPage.html">ImportedPage</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Link.html">Link</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox.html">ListBox</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MasterSpread.html">MasterSpread</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MediaItem.html">MediaItem</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Movie.html">Movie</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MultiStateObject.html">MultiStateObject</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_NamedGrid.html">NamedGrid</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ObjectStyle.html">ObjectStyle</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Oval.html">Oval</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDF.html">PDF</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PICT.html">PICT</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Page.html">Page</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItemDefault.html">PageItemDefault</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Polygon.html">Polygon</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton.html">RadioButton</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Rectangle.html">Rectangle</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SignatureField.html">SignatureField</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Sound.html">Sound</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SplineItem.html">SplineItem</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Spread.html">Spread</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StrokeTransparencySetting.html">StrokeTransparencySetting</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextBox.html">TextBox</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextVariable.html">TextVariable</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextWrapPreference.html">TextWrapPreference</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TransparencySetting.html">TransparencySetting</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_WMF.html">WMF</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.preferences</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.preferences</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

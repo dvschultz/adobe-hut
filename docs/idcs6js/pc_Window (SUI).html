@@ -1,0 +1,479 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Window (SUI)</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, window (sui)">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Window (SUI)</h1></td></tr>
+<tr><td>&nbsp;</td><td><p>The instance represents a top-level window or dialog box, which contains user-interface elements.</p><p>
+        The globally available&nbsp;<a href="pc_Window (SUI).html">Window</a>&nbsp;object provides access to predefined and script-defined windows.
+      </p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Window" title="Creates a new window.">Window</a>, <a href="#add" title="Creates and returns a new control or container object and adds it to the children of this window.">add</a>, <a href="#addEventListener" title="Registers an event handler for a particular type of event occuring in this window.">addEventListener</a>, <a href="#alert" title="Displays a platform-standard dialog containing a short message and an OK button.">alert</a>, <a href="#center" title="Centers this window on screen or with repect to another window.">center</a>, <a href="#close" title="Closes this window.">close</a>, <a href="#confirm" title="Displays a platform-standard dialog containing a short message and two buttons labeled Yes and No.">confirm</a>, <a href="#dispatchEvent" title="Simulates the occurrence of an event in this target.">dispatchEvent</a>, <a href="#find" title="Use this method to find an existing window.">find</a>, <a href="#hide" title="Hides this windows.">hide</a>, <a href="#notify" title="Sends a notification message to all listeners, simulating the specified user interaction event.">notify</a>, <a href="#onActivate" title="An event-handler callback function, called when the window acquires the keyboard focus.">onActivate</a>, <a href="#onClose" title="An event-handler callback function, called when the window is about to be closed.">onClose</a>, <a href="#onDeactivate" title="An event-handler callback function, called when the window loses the keyboard focus.">onDeactivate</a>, <a href="#onMove" title="An event-handler callback function, called when the window has been moved">onMove</a>, <a href="#onMoving" title="An event-handler callback function, called when the window is being moved">onMoving</a>, <a href="#onResize" title="An event-handler callback function, called after the window has been resized">onResize</a>, <a href="#onResizing" title="An event-handler callback function, called while a window is being resized">onResizing</a>, <a href="#onShortcutKey" title="In Windows only, an event-handler callback function, called a shortcut-key sequence is typed that matches the&nbsp;shortcutKey&nbsp;value for this window.">onShortcutKey</a>, <a href="#onShow" title="An event-handler callback function, called just before the window is displayed">onShow</a>, <a href="#prompt" title="Displays a modal dialog that returns the userís text input.">prompt</a>, <a href="#remove" title="Removes the specified child control from this windowís children array.">remove</a>, <a href="#removeEventListener" title="Unregisters an event handler for a particular type of event occuring in this window.">removeEventListener</a>, <a href="#show" title="Makes this window visible.">show</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Window (SUI)</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="active"></a>active</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>Set to true to make this window active. <br>
+            <br>&bull;&nbsp;A modal dialog that is visible is by definition the active dialog.
+            <br>&bull;&nbsp;An active palette is the front-most window.
+            <br>&bull;&nbsp;
+              An active control is the one with focusóthat is, the one that accepts keystrokes, or in the case of a&nbsp;<a href="pc_Button (SUI).html">Button</a>, be selected when the user types  Return or Enter.
+            
+          </td></tr>
+<tr><td><a name="alignChildren"></a>alignChildren</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>Tells the layout manager how unlike-sized children of this container should be aligned within a column or row. <br>
+            Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, <b>alignment</b> for a child element overrides the <b>alignChildren</b> setting for the parent container. See <b>alignment</b> property for values.
+          </td></tr>
+<tr><td><a name="alignment"></a>alignment</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>
+            The alignment style for child elements of a container. If defined, this value overrides the <i>alignChildren</i> setting for the parent container.
+          <br>
+            This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
+            <br>&bull;&nbsp;
+              For orientation=row:<b>top</b>, <b>bottom</b>, <b>fill</b>
+            
+            <br>&bull;&nbsp;
+              For orientation=column: <b>left</b>, <b>right</b>, <b>fill</b>
+            
+            <br>&bull;&nbsp;
+              For orientation=stack:<b>top</b>, <b>bottom</b>, <b>left</b>, <b>right</b>, <b>fill</b>
+            
+          </td></tr>
+<tr><td><a name="bounds"></a>bounds</td><td><a href="pc_Bounds.html">Bounds</a></td>
+<td>r/w</td><td>The bounds of the window's drawable area, excluding the frame, in screen coordinates.</td></tr>
+<tr><td><a name="cancelElement"></a>cancelElement</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>
+            For windows of type <i>dialog</i>, the UI element to notify when the user presses a cancellation key combination.
+          <br>The cancellation key is the Esc key. By default, looks for a button whose name or text is "cancel" (case disregarded).</td></tr>
+<tr><td><a name="characters"></a>characters</td><td><a href="pc_Number.html">Number</a> (min: 0)</td>
+<td>r/w</td><td>A number of characters for which to reserve space when calculating the preferred size of the window. </td></tr>
+<tr><td><a name="children"></a>children</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The collection of UI elements that have been added to this container.<br>An array indexed by number or by a string containing an element's name. The length property of this array is the number of child elements for container elements, and is zero for controls.</td></tr>
+<tr><td><a name="defaultElement"></a>defaultElement</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>
+            For windows of type <b>dialog</b>, the UI element to notify when the user presses a Enter key.
+          <br>By default, looks for a button whose name or text is "ok" (case disregarded).</td></tr>
+<tr><td><a name="enabled"></a>enabled</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>True if this element is enabled.<br>An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance. </td></tr>
+<tr><td><a name="frameBounds"></a>frameBounds</td><td><a href="pc_Bounds.html">Bounds</a></td>
+<td>readonly</td><td>The bounds of the window frame in screen coordinates.<br> The frame consists of the title bar and borders that enclose the content region of a window, depending on the windowing system. </td></tr>
+<tr><td><a name="frameLocation"></a>frameLocation</td><td><a href="pc_Point.html">Point</a></td>
+<td>r/w</td><td>The top left corner of the window frame in screen coordinates.<br>
+            The same as [frameBounds.x, frameBounds.y]. Set this value to move the window frame to the specified location on the screen. The&nbsp;<a href="pc_Window (SUI).html#frameBounds">frameBounds</a>&nbsp;value changes accordingly.
+          </td></tr>
+<tr><td><a name="frameSize"></a>frameSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>readonly</td><td>The size and location of the window's frame in screen coordinates.</td></tr>
+<tr><td><a name="graphics"></a>graphics</td><td><a href="pc_ScriptUIGraphics.html">ScriptUIGraphics</a></td>
+<td>readonly</td><td>
+            The graphics object that can be used to customize the windowís appearance, in response to the <i>onDraw</i> event.
+          </td></tr>
+<tr><td><a name="helpTip"></a>helpTip</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The help text that is displayed when the mouse hovers over the element.</td></tr>
+<tr><td><a name="indent"></a>indent</td><td><a href="pc_Number.html">Number</a> (min: 0)</td>
+<td>r/w</td><td>The number of pixels to indent the element.</td></tr>
+<tr><td><a name="justify"></a>justify</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The default text justification style for child text elements.  (default: <b>left</b>)<br>
+            One of <b>left</b>, <b>center</b>, or <b>right</b>. Justification only works if this value is set on creation of the element.
+          </td></tr>
+<tr><td><a name="layout"></a>layout</td><td><a href="pc_LayoutManager.html">LayoutManager</a></td>
+<td>r/w</td><td>The layout manager for this container.<br>
+            The first time a container object is made visible, ScriptUI invokes this layout manager by calling its&nbsp;layout()&nbsp;function. Default is an instance of the&nbsp;LayoutManager&nbsp;class that is automatically created when the container element is created.
+          </td></tr>
+<tr><td><a name="location"></a>location</td><td><a href="pc_Point.html">Point</a></td>
+<td>r/w</td><td>The upper left corner of the window's drawable area.<br>The same as [bounds.x, bounds.y]. </td></tr>
+<tr><td><a name="margins"></a>margins</td><td><a href="pc_Number.html">Number</a></td>
+<td>r/w</td><td>The number of pixels between the edges of a container and the outermost child elements.<br> You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines. </td></tr>
+<tr><td><a name="maximized"></a>maximized</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>True if the window is expanded.</td></tr>
+<tr><td><a name="maximumSize"></a>maximumSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td>The largest rectangle to which the window can be resized.</td></tr>
+<tr><td><a name="minimized"></a>minimized</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>True if the window is minimized or iconified.</td></tr>
+<tr><td><a name="minimumSize"></a>minimumSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td>The smallest rectangle to which the window can be resized.</td></tr>
+<tr><td><a name="opacity"></a>opacity</td><td><a href="pc_Number.html">Number</a></td>
+<td>r/w</td><td>The opacity of the window, in the range [0..1].  (default: <b>1.0</b>)<br>A value of 1.0 (the default) makes the window completely opaque, a value of 0 makes it completely transparent. Intermediate values make it partially transparent to any degree.</td></tr>
+<tr><td><a name="orientation"></a>orientation</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The layout orientation of children in a container.<br>
+            Interpreted by the layout manager for the container. The default&nbsp;LayoutManager&nbsp; Object accepts the (case-insensitive) values <b>row</b>, <b>column</b>, or <b>stack</b>.  For window and panel, the default is column, and for group the default is row. The allowed values for the containerís <b>alignChildren</b> and its childrenís <b>alignment</b> properties depend on the orientation.
+          </td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The immediate parent element.</td></tr>
+<tr><td><a name="preferredSize"></a>preferredSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td>The preferred size of the window.<br>Used in automatic layout and resizing. To set a specific value for only one dimension, specify the other dimension as -1. </td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>An object that contains one or more creation properties of the container (properties used only when the element is created). <br>
+            Creation properties of a Window object can include:
+            <br>&bull;&nbsp;resizeable: When true, the window can be resized by the user. Default is false.
+            <br>&bull;&nbsp;su1PanelCoordinates: Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent windowís setting.
+            <br>&bull;&nbsp;closeButton: Bridge only. When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs. 
+            <br>&bull;&nbsp;maximizeButton: Bridge only. When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs.
+          </td></tr>
+<tr><td><a name="shortcutKey"></a>shortcutKey</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>
+            The keypress combination that invokes this element's&nbsp;<a href="pc_Window (SUI).html#onShortcutKey">onShortcutKey()</a>&nbsp;callback.
+          </td></tr>
+<tr><td><a name="size"></a>size</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td>The current size and location of the content area of the window in screen coordinates.</td></tr>
+<tr><td><a name="spacing"></a>spacing</td><td><a href="pc_Number.html">Number</a></td>
+<td>r/w</td><td>The number of pixels separating one child element from its adjacent sibling element.<br>Because each container holds only a single row or column of children, only a single spacing value is needed for a container. The default value is based on the type of container, and is chosen to match standard Adobe UI guidelines. </td></tr>
+<tr><td><a name="text"></a>text</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The title, label, or displayed text, a localizeable string.<br>Does not apply to containers of type group.</td></tr>
+<tr><td><a name="type"></a>type</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>The element type; "dialog", "palette", or "window".</td></tr>
+<tr><td><a name="visible"></a>visible</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>When true, the element is shown, when false it is hidden.<br>When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.</td></tr>
+<tr><td><a name="window"></a>window</td><td><b>Window (SUI)</b></td>
+<td>readonly</td><td>The window that this element belongs to.</td></tr>
+<tr class="lastRow"><td><a name="windowBounds"></a>windowBounds</td><td><a href="pc_Bounds.html">Bounds</a></td>
+<td>readonly</td><td>The bounds of this window relative to the top-level parent window.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="frameworkName"></a>frameworkName</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>
+            Deprecated. Use&nbsp;<a href="pc_ScriptUI.html#frameworkName">ScriptUI.frameworkName</a>&nbsp;instead.
+          </td></tr>
+<tr class="lastRow"><td><a name="version"></a>version</td><td>Any</td>
+<td>readonly</td><td>
+            Deprecated. Use&nbsp;<a href="pc_ScriptUI.html#version">ScriptUI.version</a>&nbsp;instead.
+          </td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Window"></a> <span class="func">Window</span> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">title</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])<br>
+Creates a new window.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>type</td><td><a href="pc_String.html">String</a></td><td>The window type.  <br>
+                One of:
+                
+                  <br>&bull;&nbsp;
+                    <b>window</b>: Creates a simple window that can be used as a main window for an application. (Not supported by Photoshop CS3.)
+                  
+                  <br>&bull;&nbsp;
+                    <b>palette</b>: Creates a modeless dialog, also called a floating palette. (Not supported by Photoshop CS3.)
+                  
+                  <br>&bull;&nbsp;
+                    <b>dialog</b>: Creates a modal dialog.
+                  
+                
+                This argument can also be a ScriptUI resource specification; in that case, all other arguments are ignored.
+              </td></tr>
+<tr><td>title</td><td><a href="pc_String.html">String</a></td><td>The window title, a localizable string. (Optional)</td></tr>
+<tr><td>bounds</td><td><a href="pc_Bounds.html">Bounds</a></td><td>The window's position and size. (Optional)</td></tr>
+<tr class="lastRow"><td>properties</td><td><a href="pc_Object.html">Object</a></td><td>An object containing creation-only properties.<br>
+                Can contain any of these properties:
+                
+                  <br>&bull;&nbsp;
+                    <b>resizeable</b>: When true, the window can be resized by the user. Default is false.
+                  
+                  <br>&bull;&nbsp;
+                    <b>su1PanelCoordinates</b>: Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent windowís setting.
+                  
+                  <br>&bull;&nbsp;
+                    <br>:  When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs.
+                  
+                  <br>&bull;&nbsp;
+                    <b>maximizeButton</b>:  When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs.
+                  
+                  <br>&bull;&nbsp;
+                    <b>minimizeButton</b>: When true, the title bar includes a button to minimize or iconify the window, if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Main windows cannot have a minimize button in Mac OS. Not used for dialogs.
+                  
+                  <br>&bull;&nbsp;
+                    <b>independent</b>:  When true, a window of type window is independent of other application windows, and can be hidden behind them in Windows. In Mac OS, has no effect. Default is false.
+                  
+                  <br>&bull;&nbsp;
+                    <b>borderless</b>:  When true, the window has no title bar or borders. Properties that control those features are ignored.
+                  
+                
+               (Optional)</td></tr>
+</table>
+</p>
+
+<h4>Class</h4><p class="spaceBelow"><a name="alert"></a><span class="rett">void</span>  <span class="func">alert</span> (<span class="arg">message</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">title</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">errorIcon</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])<br>
+Displays a platform-standard dialog containing a short message and an OK button.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>message</td><td><a href="pc_String.html">String</a></td><td>TThe string for the displayed message.</td></tr>
+<tr><td>title</td><td><a href="pc_String.html">String</a></td><td>A string to appear as the title of the dialog, if the platform supports a title. <br>Ignored in Mac OS, which does not support titles for alert dialogs. The default title string is "Script Alert". (Optional)</td></tr>
+<tr class="lastRow"><td>errorIcon</td><td><a href="pc_Boolean.html">Boolean</a></td><td>When true, the platform-standard alert icon is replaced by the platform-standard error icon in the dialog.  (default: <b>false</b>)<br>Ignored in Mac OS, which does not support icons for alert dialogs. </td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="confirm"></a><a href="pc_Boolean.html">Boolean</a> <span class="func">confirm</span> (<span class="arg">message</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">noAsDefault</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">title</span>:
+<a href="pc_String.html">String</a>])<br>
+Displays a platform-standard dialog containing a short message and two buttons labeled Yes and No.<br>
+Returns true if the user clicked Yes, false if the user clicked No.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>message</td><td><a href="pc_String.html">String</a></td><td>The string for the displayed message.</td></tr>
+<tr><td>noAsDefault</td><td><a href="pc_Boolean.html">Boolean</a></td><td>When true, the No button is the default choice, selected when the user types Enter.  (default: <b>false</b>)<br>Default is false, meaning that Yes is the default choice. </td></tr>
+<tr class="lastRow"><td>title</td><td><a href="pc_String.html">String</a></td><td>A string to appear as the title of the dialog, if the platform supports a title. <br>Ignored in Mac OS, which does not support titles for alert dialogs. The default title string is "Script Alert". (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="find"></a><a href="pc_Window.html">Window</a> <span class="func">find</span> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>, <span class="arg">title</span>:
+<a href="pc_String.html">String</a>)<br>
+Use this method to find an existing window. <br>
+
+            This includes windows defined by ScriptUI resource strings, windows already created by a script, and windows created by the application (if the application supports this case). This function is not supported by all applications. Returns a&nbsp;<a href="pc_Window (SUI).html">Window</a>&nbsp;object found or generated from the resource, or null if no such window or resource exists.
+          
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>type</td><td><a href="pc_String.html">String</a></td><td>The name of a predefined resource available to JavaScript in the current application; or the window type. <br>If a title is specified, the type is used if more than one window with that title is found. Can be null or the empty string. </td></tr>
+<tr class="lastRow"><td>title</td><td><a href="pc_String.html">String</a></td><td>The window title.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="prompt"></a><a href="pc_String.html">String</a> <span class="func">prompt</span> (<span class="arg">prompt</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">default</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">title</span>:
+<a href="pc_String.html">String</a>])<br>
+Displays a modal dialog that returns the userís text input.<br>
+Returns the value of the text edit field if the user clicked OK, null if the user clicked Cancel.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>prompt</td><td><a href="pc_String.html">String</a></td><td>The string for the displayed message.</td></tr>
+<tr><td>default</td><td><a href="pc_String.html">String</a></td><td>The initial value to be displayed in the text edit field. (Optional)</td></tr>
+<tr class="lastRow"><td>title</td><td><a href="pc_String.html">String</a></td><td>A string to appear as the title of the dialog. <br>In Windows, this appears in the windowís frame; in Mac OS it appears above the message. The default title string is "Script Prompt". (Optional)</td></tr>
+</table>
+</p>
+
+<h4>Events</h4><p class="spaceBelow"><a name="onActivate"></a><span class="rett">void</span>  <span class="func">onActivate</span> ()<br>
+An event-handler callback function, called when the window acquires the keyboard focus.<br>
+
+            Called when the user gives the window the keyboard focus by clicking it or otherwise making it the active window.
+          </p>
+
+<p class="spaceBelow"><a name="onClose"></a><a href="pc_Boolean.html">Boolean</a> <span class="func">onClose</span> ()<br>
+An event-handler callback function, called  when the window is about to be closed.<br>
+
+            Called when a request is made to close the window, either by an explicit call to the&nbsp;<a href="pc_Window (SUI).html#close">close()</a>&nbsp;function or by a user action (clicking the OS-specific close icon in the title bar). The function is called before the window actually closes; it can return false to cancel the close operation.
+          </p>
+
+<p class="spaceBelow"><a name="onDeactivate"></a><span class="rett">void</span>  <span class="func">onDeactivate</span> ()<br>
+An event-handler callback function, called when the window loses the keyboard focus.<br>
+
+            Called when the user moves the keyboard focus from the previously active window to another window.
+          </p>
+
+<p class="spaceBelow"><a name="onMove"></a><span class="rett">void</span>  <span class="func">onMove</span> ()<br>
+An event-handler callback function, called  when the window  has been moved</p>
+
+<p class="spaceBelow"><a name="onMoving"></a><span class="rett">void</span>  <span class="func">onMoving</span> ()<br>
+An event-handler callback function, called  when the window is being moved<br>
+Called while a window in being moved, each time the position changes. A handler can monitor the move operation.</p>
+
+<p class="spaceBelow"><a name="onResize"></a><span class="rett">void</span>  <span class="func">onResize</span> ()<br>
+An event-handler callback function, called after the window has been resized</p>
+
+<p class="spaceBelow"><a name="onResizing"></a><span class="rett">void</span>  <span class="func">onResizing</span> ()<br>
+An event-handler callback function, called while a window is being resized<br>
+Called while a window is being resized, each time the height or width changes. A handler can monitor the resize operation.</p>
+
+<p class="spaceBelow"><a name="onShortcutKey"></a><span class="rett">void</span>  <span class="func">onShortcutKey</span> ()<br>
+
+            In Windows only, an event-handler callback function, called a shortcut-key sequence is typed that matches the&nbsp;<a href="pc_Window (SUI).html#shortcutKey">shortcutKey</a>&nbsp;value for this window.
+          </p>
+
+<p class="spaceBelow"><a name="onShow"></a><span class="rett">void</span>  <span class="func">onShow</span> ()<br>
+An event-handler callback function, called just before the window is displayed<br>
+
+            Called when a request is made to open the window using the&nbsp;<a href="pc_Window (SUI).html#show">show()</a>&nbsp;method, before the window is made visible, but after automatic layout is complete. A handler can modify the results of the automatic layout.
+          </p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="add"></a><a href="pc_Object.html">Object</a> <span class="func">add</span> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])<br>
+Creates and returns a new control or container object and adds it to the children of this window. 
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>type</td><td><a href="pc_String.html">String</a></td><td>
+                The type of the child element, as specified for the type property.
+              <br>
+                Control types are listed in the <i>JavaScript Tools Guide</i>.
+              </td></tr>
+<tr><td>bounds</td><td><a href="pc_Bounds.html">Bounds</a></td><td>A bounds specification that describes the size and position of the new control or container, relative to its parent. <br>
+                If supplied, this value creates a new&nbsp;Bounds&nbsp;object which is assigned to the new objectís <b>bounds</b> property.
+               (Optional)</td></tr>
+<tr><td>text</td><td><a href="pc_String.html">String</a></td><td>The text or label, a localizable string.<br>
+                Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new objectís <b>text</b> property.
+               (Optional)</td></tr>
+<tr class="lastRow"><td>properties</td><td><a href="pc_Object.html">Object</a></td><td>An object that contains one or more creation properties of the new child (properties used only when the element is created). <br>
+                The creation properties depend on the element type. See <br> property of each control type.
+               (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="addEventListener"></a><a href="pc_Boolean.html">Boolean</a> <span class="func">addEventListener</span> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])<br>
+Registers an event handler for a particular type of event occuring in this window.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventName</td><td><a href="pc_String.html">String</a></td><td>The name of the event.<br>Predefined event names are: change, changing, move, moving, resize, resizing, show , enterKey, focus, blur, keydown, keyup, mousedown, mouseup, mousemove, mouseover, mouseout, click (detail = 1 for single, 2 for double).</td></tr>
+<tr><td>handler</td><td><a href="pc_Function.html">Function</a></td><td>The function that handles the event.<br>
+                This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the&nbsp;UIEvent&nbsp;object.
+              </td></tr>
+<tr class="lastRow"><td>capturePhase</td><td><a href="pc_Boolean.html">Boolean</a></td><td>When true, the handler is called only in the capturing phase of the event propagation.  (default: <b>false</b>)<br>Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="center"></a><span class="rett">void</span>  <span class="func">center</span> ([<span class="arg">window</span>:
+<b>Window</b>])<br>
+Centers this window on screen or with repect to another window.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>window</td><td><span class="rett">Window (SUI)</span></td><td>The relative window. If not specified, centers on the screen.  (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="close"></a><span class="rett">void</span>  <span class="func">close</span> ([<span class="arg">return</span>:
+<span class="argt">Any</span>])<br>
+Closes this window.<br>
+
+            . If an&nbsp;<a href="pc_Window (SUI).html#onClose">onClose()</a>&nbsp;callback is defined for the window, calls that function before closing the window.
+          
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>return</td><td>Any</td><td>A number to be returned from the show() method that invoked this window as a modal dialog. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="dispatchEvent"></a><a href="pc_UIEvent.html">UIEvent</a> <span class="func">dispatchEvent</span> ()<br>
+Simulates the occurrence of an event in this target. <br>
+
+            A script can create a&nbsp;<a href="pc_UIEvent.html">UIEvent</a>&nbsp;object for a specific event and pass it to this method to start the event propagation for the event.
+          </p>
+
+<p class="spaceBelow"><a name="hide"></a><span class="rett">void</span>  <span class="func">hide</span> ()<br>
+Hides this windows.<br>
+
+            When a window is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states. <br>&bull;&nbsp;For a modal dialog, closes the dialog and sets its result to 0.
+          </p>
+
+<p class="spaceBelow"><a name="notify"></a><span class="rett">void</span>  <span class="func">notify</span> ([<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>])<br>
+Sends a notification message to all listeners, simulating the specified user interaction event.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>eventName</td><td><a href="pc_String.html">String</a></td><td>The event name; if omitted, the default event is sent.<br>
+                One of: <b>onClose</b>, <b>onMove</b>, <b>onMoving</b>, <b>onResize</b>, <b>onResizing</b>, <b>onShow</b>
+               (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> (<span class="arg">what</span>:
+<span class="argt">Any</span>)<br>
+
+            Removes the specified child control from this windowís <b>children</b> array.
+          <br>
+ No error results if the child does not exist. 
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>what</td><td>Any</td><td>
+                The child control to remove, specified by 0-based index, text property value, or as a control object.
+              </td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">Boolean</a> <span class="func">removeEventListener</span> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])<br>
+Unregisters an event handler for a particular type of event occuring in this window.<br>
+ All arguments must be identical to those that were used to register the event handler.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventName</td><td><a href="pc_String.html">String</a></td><td>The name of the event.</td></tr>
+<tr><td>handler</td><td><a href="pc_Function.html">Function</a></td><td>The function that handles the event.</td></tr>
+<tr class="lastRow"><td>capturePhase</td><td><a href="pc_Boolean.html">Boolean</a></td><td>Whether to call the handler only in the capturing phase of the event propagation. (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="show"></a><span class="rett">void</span>  <span class="func">show</span> ()<br>
+Makes this window visible.<br>
+
+            If an&nbsp;<a href="pc_Window (SUI).html#onShow">onShow()</a>&nbsp;callback is defined for a window, calls that function before showing the window.When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states. <br>&bull;&nbsp;For a modal dialog, opens the dialog and does not return until the dialog is dismissed. If it is dismissed via the close() method, this method returns any result value passed to that method. Otherwise, returns 0.
+          </p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.window</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.window</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent">void <a href="pc_Window (SUI).html#center">Window.center</a>
+		([<span class="arg">window</span>:
+<b>Window</b>])
+</p></td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Column</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, column">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Column</h1></td></tr>
+<tr><td>&nbsp;</td><td>A table column.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#changeGlyph" title="Finds glyphs that match the find what value and replaces the glyphs with the change to value.">changeGlyph</a>, <a href="#changeGrep" title="Finds text that matches the find what value and replaces the text with the change to value.">changeGrep</a>, <a href="#changeText" title="Finds text that matches the find what value and replaces the text with the change to value.">changeText</a>, <a href="#changeTransliterate" title="Finds text that matches the find character type value and replaces the text with the change character type value.">changeTransliterate</a>, <a href="#createOutlines" title="Converts text to outlines. Each line of text becomes a polygon object. When the converted text is a single letter that has no internal spaces or detached parts, the polygon contains only a single path. Note: To determine whether a font allows the creation of outlines, see allow outlines.">createOutlines</a>, <a href="#findGlyph" title="Finds glyphs that match the find what value.">findGlyph</a>, <a href="#findGrep" title="Finds text that matches the find what value.">findGrep</a>, <a href="#findText" title="Finds text that matches the find what value.">findText</a>, <a href="#findTransliterate" title="Finds text that matches the find character type value.">findTransliterate</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#merge" title="Merges the cells.">merge</a>, <a href="#recompose" title="Recomposes the text in the Column.">recompose</a>, <a href="#redistribute" title="Redistributes the specified range of Columns so that the Columns have a uniform size. Note: The maximum or minimum height or width specified for some of the cells in the range may prevent them from being exactly even.">redistribute</a>, <a href="#remove" title="Deletes the Column.">remove</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#select" title="Selects the object.">select</a>, <a href="#split" title="Splits the cell along the specified axis.">split</a>, <a href="#toSource" title="Generates a string which, if executed, will return the Column.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a>, <a href="#unmerge" title="Unmerges all merged cells in the Column.">unmerge</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Table.html">Table</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Column</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Cell.html">Cell</a> | <a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="autoGrow"></a>autoGrow</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the height of the cell or the cells in the Column can increase or decrease automatically to fit cell content. Note: Allows cells to grow or shrink to the maximum or minimum height, if specified.</td></tr>
+<tr><td><a name="bottomEdgeStrokeColor"></a>bottomEdgeStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the bottom edge border stroke.</td></tr>
+<tr><td><a name="bottomEdgeStrokeGapColor"></a>bottomEdgeStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the bottom edge border stroke. Note: Not valid when bottom edge stroke type is solid.</td></tr>
+<tr><td><a name="bottomEdgeStrokeGapOverprint"></a>bottomEdgeStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the bottom edge border stroke will overprint. Note: Not valid when bottom edge stroke type is solid.</td></tr>
+<tr><td><a name="bottomEdgeStrokeGapTint"></a>bottomEdgeStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the bottom edge border stroke gap color. (Range: 0 to 100) Note: Not valid when bottom edge stroke type is solid.</td></tr>
+<tr><td><a name="bottomEdgeStrokeOverprint"></a>bottomEdgeStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the bottom edge border stroke will overprint.</td></tr>
+<tr><td><a name="bottomEdgeStrokeTint"></a>bottomEdgeStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the bottom edge border stroke.</td></tr>
+<tr><td><a name="bottomEdgeStrokeType"></a>bottomEdgeStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the bottom edge. Can also accept: String.</td></tr>
+<tr><td><a name="bottomEdgeStrokeWeight"></a>bottomEdgeStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the bottom edge border stroke.</td></tr>
+<tr><td><a name="bottomInset"></a>bottomInset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The bottom inset of the cell.</td></tr>
+<tr><td><a name="cells"></a>cells</td><td><a href="pc_Cells.html">Cells</a> <a class="sing" href="pc_Cell.html">Cell</a></td>
+<td>readonly</td><td>A collection of table cells.</td></tr>
+<tr><td><a name="clipContentToCell"></a>clipContentToCell</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, clips the cell's content to width and height of the cell.</td></tr>
+<tr><td><a name="columnSpan"></a>columnSpan</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The number of columns that the object spans.</td></tr>
+<tr><td><a name="columns"></a>columns</td><td><a href="pc_Columns.html">Columns</a> <a class="sing" href="pc_Column.html">Column</a></td>
+<td>readonly</td><td>A collection of table columns.</td></tr>
+<tr><td><a name="contents"></a>contents</td><td><a href="pc_Array.html">Array</a> of Strings<br><a href="pc_Array.html">Array</a> of Strings<br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_SpecialCharacters.html">SpecialCharacters</a><br><a href="pe_SpecialCharacters.html">SpecialCharacters</a><br><a href="pe_SpecialCharacters.html">SpecialCharacters</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on. Can return: String, SpecialCharacters enumerator or Array of Strings or SpecialCharacters enumerators. Can also accept: NothingEnum enumerator or Array of Strings, SpecialCharacters enumerators or NothingEnum enumerators.</td></tr>
+<tr><td><a name="diagonalLineInFront"></a>diagonalLineInFront</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, draws the diagonal line in front of cell contents.</td></tr>
+<tr><td><a name="diagonalLineStrokeColor"></a>diagonalLineStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The diagonal line color, specified as a swatch.</td></tr>
+<tr><td><a name="diagonalLineStrokeGapColor"></a>diagonalLineStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the diagonal line stroke. Note: Not valid when diagonal line stroke type is solid.</td></tr>
+<tr><td><a name="diagonalLineStrokeGapOverprint"></a>diagonalLineStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the stroke gap of the diagonal line will overprint. Note: Not valid when diagonal line stroke type is solid.</td></tr>
+<tr><td><a name="diagonalLineStrokeGapTint"></a>diagonalLineStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the diagonal line stroke gap color. Note: Not valid when diagonal line stroke type is solid.</td></tr>
+<tr><td><a name="diagonalLineStrokeOverprint"></a>diagonalLineStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the diagonal line stroke will overprint.</td></tr>
+<tr><td><a name="diagonalLineStrokeTint"></a>diagonalLineStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The diagonal line tint (as a percentage). (Range: 0 to 100)</td></tr>
+<tr><td><a name="diagonalLineStrokeType"></a>diagonalLineStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the diagonal line(s). Can also accept: String.</td></tr>
+<tr><td><a name="diagonalLineStrokeWeight"></a>diagonalLineStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The diagonal line stroke weight.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="fillColor"></a>fillColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object. Can also accept: String.</td></tr>
+<tr><td><a name="fillTint"></a>fillTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the fill of the object.</td></tr>
+<tr><td><a name="firstBaselineOffset"></a>firstBaselineOffset</td><td><a href="pe_FirstBaseline.html">FirstBaseline</a>:<br>FirstBaseline.ASCENT_OFFSET<br>FirstBaseline.CAP_HEIGHT<br>FirstBaseline.LEADING_OFFSET<br>FirstBaseline.EMBOX_HEIGHT<br>FirstBaseline.X_HEIGHT<br>FirstBaseline.FIXED_HEIGHT</td>
+<td>r/w</td><td>The distance between the baseline of the text and the top inset of the cell.</td></tr>
+<tr><td><a name="gradientFillAngle"></a>gradientFillAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The angle of a linear gradient applied to the fill of the object. (Range: -180 to 180)</td></tr>
+<tr><td><a name="gradientFillLength"></a>gradientFillLength</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The length (of a linear gradient) or radius (of a radial gradient) applied to the fill of the object.</td></tr>
+<tr><td><a name="gradientFillStart"></a>gradientFillStart</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The starting point (in page coordinates) of a gradient applied to the fill of the Column, in the format [x, y].</td></tr>
+<tr><td><a name="height"></a>height</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The height of the Column. For a table or column, specifies the sum of the row heights.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the Column within its containing object.</td></tr>
+<tr><td><a name="innerColumnStrokeColor"></a>innerColumnStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The color, specified as a swatch, of the inner column border stroke.</td></tr>
+<tr><td><a name="innerColumnStrokeGapColor"></a>innerColumnStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the inner column border stroke. Note: Not valid when inner column stroke type is solid.</td></tr>
+<tr><td><a name="innerColumnStrokeGapOverprint"></a>innerColumnStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the inner column border stroke will overprint. Note: Not valid when inner column stroke type is solid.</td></tr>
+<tr><td><a name="innerColumnStrokeGapTint"></a>innerColumnStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the inner column border stroke gap color. (Range: 0 to 100) Note: Not valid when inner column stroke type is solid.</td></tr>
+<tr><td><a name="innerColumnStrokeOverprint"></a>innerColumnStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the inner column border stroke will overprint.</td></tr>
+<tr><td><a name="innerColumnStrokeTint"></a>innerColumnStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the inner column border stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="innerColumnStrokeType"></a>innerColumnStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the inner column. Can also accept: String.</td></tr>
+<tr><td><a name="innerColumnStrokeWeight"></a>innerColumnStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the inner column border stroke.</td></tr>
+<tr><td><a name="innerRowStrokeColor"></a>innerRowStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The color, specified as a swatch, of the inner row border stroke.</td></tr>
+<tr><td><a name="innerRowStrokeGapColor"></a>innerRowStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the inner row border stroke. Note: Not valid when inner row stroke type is solid.</td></tr>
+<tr><td><a name="innerRowStrokeGapOverprint"></a>innerRowStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the inner row border stroke will overprint. Note: Not valid when inner row stroke type is solid.</td></tr>
+<tr><td><a name="innerRowStrokeGapTint"></a>innerRowStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the inner row border stroke. (Range: 0 to 100) Note: Not valid when inner row stroke type is solid.</td></tr>
+<tr><td><a name="innerRowStrokeOverprint"></a>innerRowStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the inner row border stroke will overprint.</td></tr>
+<tr><td><a name="innerRowStrokeTint"></a>innerRowStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the inner row border stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="innerRowStrokeType"></a>innerRowStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the inner row. Can also accept: String.</td></tr>
+<tr><td><a name="innerRowStrokeWeight"></a>innerRowStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the inner row border strokes.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="keepWithNextRow"></a>keepWithNextRow</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, keeps the row with the next row when the table is split across text frames or pages.</td></tr>
+<tr><td><a name="leftEdgeStrokeColor"></a>leftEdgeStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the left edge border stroke.</td></tr>
+<tr><td><a name="leftEdgeStrokeGapColor"></a>leftEdgeStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the left edge border stroke. Note: Not valid when left edge stroke type is solid.</td></tr>
+<tr><td><a name="leftEdgeStrokeGapOverprint"></a>leftEdgeStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the left edge border stroke will overprint. Note: Not valid when left edge stroke type is solid.</td></tr>
+<tr><td><a name="leftEdgeStrokeGapTint"></a>leftEdgeStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the left edge border stroke gap color. (Range: 0 to 100) Note: Not valid when left edge stroke type is solid.</td></tr>
+<tr><td><a name="leftEdgeStrokeOverprint"></a>leftEdgeStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the left edge border stroke will overprint.</td></tr>
+<tr><td><a name="leftEdgeStrokeTint"></a>leftEdgeStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the left edge border stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="leftEdgeStrokeType"></a>leftEdgeStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the left edge. Can also accept: String.</td></tr>
+<tr><td><a name="leftEdgeStrokeWeight"></a>leftEdgeStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the left edge border stroke.</td></tr>
+<tr><td><a name="leftInset"></a>leftInset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The left inset of the cell.</td></tr>
+<tr><td><a name="maximumHeight"></a>maximumHeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The maximum height to which cells in the Column may grow. Note: The maximum height cannot be exceeded even when auto grow is set to true. Also, the maximum height can affect redistribution.</td></tr>
+<tr><td><a name="minimumFirstBaselineOffset"></a>minimumFirstBaselineOffset</td><td>Measurement Unit (Number or String) (range: 0 - 8640)</td>
+<td>r/w</td><td>The space between the baseline of the text and the top inset of the frame or cell.</td></tr>
+<tr><td><a name="minimumHeight"></a>minimumHeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The minimum height of the cells in the Column. Note: When auto grow is true, cells can automatically grow larger than this amount when content is added. Also, the minimum height can affect redistribution.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the Column.</td></tr>
+<tr><td><a name="overflows"></a>overflows</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the story has overset text.</td></tr>
+<tr><td><a name="overprintFill"></a>overprintFill</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the fill of the object will overprint.</td></tr>
+<tr><td><a name="paragraphSpacingLimit"></a>paragraphSpacingLimit</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The maximum space that can be added between paragraphs in a cell. Note: Valid only when vertical justification is justified.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Table.html">Table</a></td>
+<td>readonly</td><td>The parent of the Column (a Table).</td></tr>
+<tr><td><a name="parentColumn"></a>parentColumn</td><td><b>Column</b></td>
+<td>readonly</td><td>The parent column of the cell.</td></tr>
+<tr><td><a name="parentRow"></a>parentRow</td><td><a href="pc_Row.html">Row</a></td>
+<td>readonly</td><td>The parent row of the cell.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="rightEdgeStrokeColor"></a>rightEdgeStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The color, specified as a swatch, of the right edge border stroke.</td></tr>
+<tr><td><a name="rightEdgeStrokeGapColor"></a>rightEdgeStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the right edge border stroke. Note: Not valid when right edge stroke type is solid.</td></tr>
+<tr><td><a name="rightEdgeStrokeGapOverprint"></a>rightEdgeStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the right edge border stroke will overprint. Note: Not valid when right edge stroke type is solid.</td></tr>
+<tr><td><a name="rightEdgeStrokeGapTint"></a>rightEdgeStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the right edge border stroke gap color. (Range: 0 to 100) Note: Not valid when right edge stroke type is solid.</td></tr>
+<tr><td><a name="rightEdgeStrokeOverprint"></a>rightEdgeStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the right edge border stroke will overprint.</td></tr>
+<tr><td><a name="rightEdgeStrokeTint"></a>rightEdgeStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the right edge border stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="rightEdgeStrokeType"></a>rightEdgeStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the right edge. Can also accept: String.</td></tr>
+<tr><td><a name="rightEdgeStrokeWeight"></a>rightEdgeStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the right edge border stroke.</td></tr>
+<tr><td><a name="rightInset"></a>rightInset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The right inset of the cell.</td></tr>
+<tr><td><a name="rotationAngle"></a>rotationAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The rotation angle (in degrees) of the cell, specified as one of the following values: 0, 90, 180, or 270.</td></tr>
+<tr><td><a name="rowSpan"></a>rowSpan</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The number of rows that the object spans.</td></tr>
+<tr><td><a name="rowType"></a>rowType</td><td><a href="pe_RowTypes.html">RowTypes</a>:<br>RowTypes.BODY_ROW<br>RowTypes.HEADER_ROW<br>RowTypes.FOOTER_ROW<br>RowTypes.MIXED_STATE</td>
+<td>r/w</td><td>The row type.</td></tr>
+<tr><td><a name="rows"></a>rows</td><td><a href="pc_Rows.html">Rows</a> <a class="sing" href="pc_Row.html">Row</a></td>
+<td>readonly</td><td>A collection of table rows.</td></tr>
+<tr><td><a name="startRow"></a>startRow</td><td><a href="pe_StartParagraph.html">StartParagraph</a>:<br>StartParagraph.ANYWHERE<br>StartParagraph.NEXT_COLUMN<br>StartParagraph.NEXT_FRAME<br>StartParagraph.NEXT_PAGE<br>StartParagraph.NEXT_ODD_PAGE<br>StartParagraph.NEXT_EVEN_PAGE</td>
+<td>r/w</td><td>Indicates where to start the row.</td></tr>
+<tr><td><a name="topEdgeStrokeColor"></a>topEdgeStrokeColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the top edge border stroke.</td></tr>
+<tr><td><a name="topEdgeStrokeGapColor"></a>topEdgeStrokeGapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the top edge border stroke. Note: Not valid when top edge stroke type is solid.</td></tr>
+<tr><td><a name="topEdgeStrokeGapOverprint"></a>topEdgeStrokeGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the top edge border stroke will overprint. Note: Not valid when top edge stroke type is solid.</td></tr>
+<tr><td><a name="topEdgeStrokeGapTint"></a>topEdgeStrokeGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the top edge border stroke gap color. (Range: 0 to 100) Note: Not valid when top edge stroke type is solid.</td></tr>
+<tr><td><a name="topEdgeStrokeOverprint"></a>topEdgeStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the top edge border stroke will overprint.</td></tr>
+<tr><td><a name="topEdgeStrokeTint"></a>topEdgeStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the top edge border stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="topEdgeStrokeType"></a>topEdgeStrokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the top edge. Can also accept: String.</td></tr>
+<tr><td><a name="topEdgeStrokeWeight"></a>topEdgeStrokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the top edge border stroke.</td></tr>
+<tr><td><a name="topInset"></a>topInset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The top inset of the cell.</td></tr>
+<tr><td><a name="topLeftDiagonalLine"></a>topLeftDiagonalLine</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, draws a diagonal line starting from the top left.</td></tr>
+<tr><td><a name="topRightDiagonalLine"></a>topRightDiagonalLine</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, draws a diagonal line starting from the top right.</td></tr>
+<tr><td><a name="verticalJustification"></a>verticalJustification</td><td><a href="pe_VerticalJustification.html">VerticalJustification</a>:<br>VerticalJustification.TOP_ALIGN<br>VerticalJustification.CENTER_ALIGN<br>VerticalJustification.BOTTOM_ALIGN<br>VerticalJustification.JUSTIFY_ALIGN</td>
+<td>r/w</td><td>The vertical alignment of cell.</td></tr>
+<tr><td><a name="width"></a>width</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The width of the Column. For a table or row, specifies the sum of the column widths.</td></tr>
+<tr class="lastRow"><td><a name="writingDirection"></a>writingDirection</td><td><a href="pe_HorizontalOrVertical.html">HorizontalOrVertical</a>:<br>HorizontalOrVertical.HORIZONTAL<br>HorizontalOrVertical.VERTICAL</td>
+<td>r/w</td><td>The direction of the text in the cell.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeGlyph"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeGlyph</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds glyphs that match the find what value and replaces the glyphs with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeGrep"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeGrep</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value and replaces the text with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeText"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeText</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value and replaces the text with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeTransliterate"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeTransliterate</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find character type value and replaces the text with the change character type value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="createOutlines"></a><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a> <span class="func">createOutlines</span> ([<span class="arg">deleteOriginal</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])<br>
+Converts text to outlines. Each line of text becomes a polygon object. When the converted text is a single letter that has no internal spaces or detached parts, the polygon contains only a single path. Note: To determine whether a font allows the creation of outlines, see allow outlines.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>deleteOriginal</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, deletes the original text. If false, creates the outlines as separate object(s) on top of the text.  (Optional) (default: <b>true</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findGlyph"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findGlyph</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds glyphs that match the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findGrep"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findGrep</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findText"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findText</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findTransliterate"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findTransliterate</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find character type value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_Column.html">Column</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="merge"></a><a href="pc_Cell.html">Cell</a> <span class="func">merge</span> ([<span class="arg">with</span>:
+<span class="argt">varies</span>])<br>
+Merges the cells.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>with</td><td><a href="pc_Cell.html">Cell</a><br><a href="pc_Column.html">Column</a><br><a href="pc_Row.html">Row</a></td><td>The cell(s) to merge with. Can accept: Cell, Row or Column. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="recompose"></a><span class="rett">void</span>  <span class="func">recompose</span> ()<br>
+Recomposes the text in the Column.</p>
+
+<p class="spaceBelow"><a name="redistribute"></a><span class="rett">void</span>  <span class="func">redistribute</span> (<span class="arg">using</span>:
+<a href="pe_HorizontalOrVertical.html">HorizontalOrVertical</a>[, <span class="arg">thru</span>:
+<span class="argt">varies</span>])<br>
+Redistributes the specified range of Columns so that the Columns have a uniform size. Note: The maximum or minimum height or width specified for some of the cells in the range may prevent them from being exactly even.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>using</td><td><a href="pe_HorizontalOrVertical.html">HorizontalOrVertical</a>:<br>HorizontalOrVertical.HORIZONTAL<br>HorizontalOrVertical.VERTICAL</td><td>The direction in which to redistribute.</td></tr>
+<tr class="lastRow"><td>thru</td><td><a href="pc_Cell.html">Cell</a><br><a href="pc_Column.html">Column</a><br><a href="pc_Row.html">Row</a></td><td>The last Column in the range. Can accept: Cell, Column or Row. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes the Column.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="select"></a><span class="rett">void</span>  <span class="func">select</span> ([<span class="arg">existingSelection</span>:
+<a href="pe_SelectionOptions.html">SelectionOptions</a>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])<br>
+Selects the object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>existingSelection</td><td><a href="pe_SelectionOptions.html">SelectionOptions</a>:<br>SelectionOptions.ADD_TO<br>SelectionOptions.REMOVE_FROM<br>SelectionOptions.REPLACE_WITH<br>SelectionOptions.SET_KEY</td><td>The selection status of the Column in relation to previously selected objects. (Optional) (default: <b>SelectionOptions.REPLACE_WITH</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="split"></a><span class="rett">void</span>  <span class="func">split</span> (<span class="arg">using</span>:
+<a href="pe_HorizontalOrVertical.html">HorizontalOrVertical</a>)<br>
+Splits the cell along the specified axis.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>using</td><td><a href="pe_HorizontalOrVertical.html">HorizontalOrVertical</a>:<br>HorizontalOrVertical.HORIZONTAL<br>HorizontalOrVertical.VERTICAL</td><td>The direction in which to split the cell.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the Column.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+<p class="spaceBelow"><a name="unmerge"></a><a href="pc_Array.html">Array</a> of <a href="pc_Cell.html">Cell</a> <span class="func">unmerge</span> ()<br>
+Unmerges all merged cells in the Column.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.parentColumn</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.parentColumn</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.parentColumn</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#nextItem">Columns.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>Column</b>)
+</p><p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#previousItem">Columns.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>Column</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Column</b> <b>Column</b>.<a href="pc_Column.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#[]">Columns.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#anyItem">Columns.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Column</b> <a href="pc_Columns.html#everyItem">Columns.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#firstItem">Columns.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#item">Columns.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#itemByName">Columns.itemByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Column</b> <a href="pc_Columns.html#itemByRange">Columns.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#lastItem">Columns.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#middleItem">Columns.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#nextItem">Columns.nextItem</a> (<span class="arg">obj</span>:
+<b>Column</b>)
+</p>
+<p class="hangIndent"><b>Column</b> <a href="pc_Columns.html#previousItem">Columns.previousItem</a> (<span class="arg">obj</span>:
+<b>Column</b>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: DefaultRenderingIntent</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, defaultrenderingintent">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>DefaultRenderingIntent</h1></td></tr>
+<tr><td>&nbsp;</td><td>The default rendering intent.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>DefaultRenderingIntent.ABSOLUTE_COLORIMETRIC</td><td>Aims to maintain color accuracy at the expense of color relationshps and is suitable for proofing to simulate the output of a particular device. Note: Leaves colors that fall inside the destination gamut unchanged and clips out-of-gamut colors.</td><td>1380540771  = 
+				'RIac'
+			</td></tr>
+<tr><td>DefaultRenderingIntent.PERCEPTUAL</td><td>Aims to preserve the visual relationship between colors so they are perceived as natural to the human eye, even though the color values themselves may change.</td><td>1380544611  = 
+				'RIpc'
+			</td></tr>
+<tr><td>DefaultRenderingIntent.RELATIVE_COLORIMETRIC</td><td>Compares the extreme highlight of the source color space to that of the destination color space and shifts all colors accordingly. Out-of-gamut colors are shifted to the closest reproducible color in the destination color space. Note: Preserves more of the original colors in an image than perceptual rendering intent does.</td><td>1380545123  = 
+				'RIrc'
+			</td></tr>
+<tr class="lastRow"><td>DefaultRenderingIntent.SATURATION</td><td>Tries to produce vivid colors in an image at the expense of color accuracy.</td><td>1380545377  = 
+				'RIsa'
+			</td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>As property</h3>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_ColorSetting.html">ColorSetting</a>.intent</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

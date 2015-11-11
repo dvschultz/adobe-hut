@@ -1,0 +1,842 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Table of Contents, Enum Suite</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, table of contents, enum suite">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr class="toctop"><td width="33%" valign="bottom"><h1>Adobe InDesign CS6 (8.0) Object Model</h1></td><td width="33%" valign="bottom"><h2>Contents</h2></td><td width="33%" valign="bottom"><h3><b>Enum Suite</b></h3></td></tr>
+<tr class="lastRow"><td><p>Not so much methods and properties - this is the complete list of all predefined constants. Yep, it's a lot.</p>
+</td><td><h3><a href="index_JavaScript Base Classes.html">JavaScript Base Classes</a></h3>
+<h3><a href="index_Assignment Suite.html">Assignment Suite</a></h3>
+<h3><a href="index_Basics Suite.html">Basics Suite</a></h3>
+<h3><a href="index_Book Suite.html">Book Suite</a></h3>
+<h3><a href="index_Color Suite.html">Color Suite</a></h3>
+<h3><a href="index_Datamerge Suite.html">Datamerge Suite</a></h3>
+<h3>Enum Suite</h3>
+<h3><a href="index_Hyperlinks Suite.html">Hyperlinks Suite</a></h3>
+<h3><a href="index_Indexing Suite.html">Indexing Suite</a></h3>
+<h3><a href="index_Interactive Elements Suite.html">Interactive Elements Suite</a></h3>
+<h3><a href="index_Layout Suite.html">Layout Suite</a></h3>
+<h3><a href="index_Libraries Suite.html">Libraries Suite</a></h3>
+<h3><a href="index_Links Suite.html">Links Suite</a></h3>
+<h3><a href="index_Object Styles Suite.html">Object Styles Suite</a></h3>
+<h3><a href="index_Preferences Suite.html">Preferences Suite</a></h3>
+<h3><a href="index_Preflight Suite.html">Preflight Suite</a></h3>
+<h3><a href="index_Stroke Styles Suite.html">Stroke Styles Suite</a></h3>
+<h3><a href="index_Table Of Contents Suite.html">Table Of Contents Suite</a></h3>
+<h3><a href="index_Tables Suite.html">Tables Suite</a></h3>
+<h3><a href="index_Text Suite.html">Text Suite</a></h3>
+<h3><a href="index_UI Suite.html">UI Suite</a></h3>
+<h3><a href="index_XML Suite.html">XML Suite</a></h3>
+<h3><a href="index_ScriptUI Classes.html">ScriptUI Classes</a></h3>
+</td><td>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <p><a href="pe_AcrobatCompatibility.html">AcrobatCompatibility</a></p>
+<p><a href="pe_AddPageOptions.html">AddPageOptions</a></p>
+<p><a href="pe_AdornmentOverprint.html">AdornmentOverprint</a></p>
+<p><a href="pe_AlignDistributeBounds.html">AlignDistributeBounds</a></p>
+<p><a href="pe_AlignOptions.html">AlignOptions</a></p>
+<p><a href="pe_AlignmentStyleOptions.html">AlignmentStyleOptions</a></p>
+<p><a href="pe_AlternateGlyphForms.html">AlternateGlyphForms</a></p>
+<p><a href="pe_AlternatingFillsTypes.html">AlternatingFillsTypes</a></p>
+<p><a href="pe_AnchorPoint.html">AnchorPoint</a></p>
+<p><a href="pe_AnchorPosition.html">AnchorPosition</a></p>
+<p><a href="pe_AnchoredRelativeTo.html">AnchoredRelativeTo</a></p>
+<p><a href="pe_AnimationEaseOptions.html">AnimationEaseOptions</a></p>
+<p><a href="pe_AnimationPlayOperations.html">AnimationPlayOperations</a></p>
+<p><a href="pe_AntiAliasType.html">AntiAliasType</a></p>
+<p><a href="pe_ArrangeBy.html">ArrangeBy</a></p>
+<p><a href="pe_ArrowHead.html">ArrowHead</a></p>
+<p><a href="pe_AssetType.html">AssetType</a></p>
+<p><a href="pe_AssignmentExportOptions.html">AssignmentExportOptions</a></p>
+<p><a href="pe_AssignmentStatus.html">AssignmentStatus</a></p>
+<p><a href="pe_AutoEnum.html">AutoEnum</a></p>
+<p><a href="pe_AutoSizingReferenceEnum.html">AutoSizingReferenceEnum</a></p>
+<p><a href="pe_AutoSizingTypeEnum.html">AutoSizingTypeEnum</a></p>
+<p><a href="pe_BalanceLinesStyle.html">BalanceLinesStyle</a></p>
+<p><a href="pe_BaselineFrameGridRelativeOption.html">BaselineFrameGridRelativeOption</a></p>
+<p><a href="pe_BaselineGridRelativeOption.html">BaselineGridRelativeOption</a></p>
+<p><a href="pe_BehaviorEvents.html">BehaviorEvents</a></p>
+<p><a href="pe_BevelAndEmbossDirection.html">BevelAndEmbossDirection</a></p>
+<p><a href="pe_BevelAndEmbossStyle.html">BevelAndEmbossStyle</a></p>
+<p><a href="pe_BevelAndEmbossTechnique.html">BevelAndEmbossTechnique</a></p>
+<p><a href="pe_BindingOptions.html">BindingOptions</a></p>
+<p><a href="pe_BitmapCompression.html">BitmapCompression</a></p>
+<p><a href="pe_BlendMode.html">BlendMode</a></p>
+<p><a href="pe_BlendingSpace.html">BlendingSpace</a></p>
+<p><a href="pe_BookContentStatus.html">BookContentStatus</a></p>
+<p><a href="pe_BookletTypeOptions.html">BookletTypeOptions</a></p>
+<p><a href="pe_BoundingBoxLimits.html">BoundingBoxLimits</a></p>
+<p><a href="pe_BuildingBlockTypes.html">BuildingBlockTypes</a></p>
+<p><a href="pe_BulletCharacterType.html">BulletCharacterType</a></p>
+<p><a href="pe_BulletListExportOption.html">BulletListExportOption</a></p>
+<p><a href="pe_Capitalization.html">Capitalization</a></p>
+<p><a href="pe_ChangeBackgroundColorChoices.html">ChangeBackgroundColorChoices</a></p>
+<p><a href="pe_ChangeCaseOptions.html">ChangeCaseOptions</a></p>
+<p><a href="pe_ChangeConditionsModes.html">ChangeConditionsModes</a></p>
+<p><a href="pe_ChangeMarkings.html">ChangeMarkings</a></p>
+<p><a href="pe_ChangeTextColorChoices.html">ChangeTextColorChoices</a></p>
+<p><a href="pe_ChangeTypes.html">ChangeTypes</a></p>
+<p><a href="pe_ChangebarLocations.html">ChangebarLocations</a></p>
+<p><a href="pe_ChangecaseMode.html">ChangecaseMode</a></p>
+<p><a href="pe_ChapterNumberSources.html">ChapterNumberSources</a></p>
+<p><a href="pe_CharacterAlignment.html">CharacterAlignment</a></p>
+<p><a href="pe_CharacterCountLocation.html">CharacterCountLocation</a></p>
+<p><a href="pe_CharacterDirectionOptions.html">CharacterDirectionOptions</a></p>
+<p><a href="pe_ClippingPathType.html">ClippingPathType</a></p>
+<p><a href="pe_ColorModel.html">ColorModel</a></p>
+<p><a href="pe_ColorOutputModes.html">ColorOutputModes</a></p>
+<p><a href="pe_ColorRenderingDictionary.html">ColorRenderingDictionary</a></p>
+<p><a href="pe_ColorSettingsPolicy.html">ColorSettingsPolicy</a></p>
+<p><a href="pe_ColorSpace.html">ColorSpace</a></p>
+<p><a href="pe_ComposeUsing.html">ComposeUsing</a></p>
+<p><a href="pe_CompressionQuality.html">CompressionQuality</a></p>
+<p><a href="pe_ConditionIndicatorMethod.html">ConditionIndicatorMethod</a></p>
+<p><a href="pe_ConditionIndicatorMode.html">ConditionIndicatorMode</a></p>
+<p><a href="pe_ConditionUnderlineIndicatorAppearance.html">ConditionUnderlineIndicatorAppearance</a></p>
+<p><a href="pe_ContainerType.html">ContainerType</a></p>
+<p><a href="pe_ContentType.html">ContentType</a></p>
+<p><a href="pe_ContourOptionsTypes.html">ContourOptionsTypes</a></p>
+<p><a href="pe_ConvertPageBreaks.html">ConvertPageBreaks</a></p>
+<p><a href="pe_ConvertShapeOptions.html">ConvertShapeOptions</a></p>
+<p><a href="pe_ConvertTablesOptions.html">ConvertTablesOptions</a></p>
+<p><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a></p>
+<p><a href="pe_CopyrightStatus.html">CopyrightStatus</a></p>
+<p><a href="pe_CornerOptions.html">CornerOptions</a></p>
+<p><a href="pe_CreateProxy.html">CreateProxy</a></p>
+<p><a href="pe_CrossReferenceType.html">CrossReferenceType</a></p>
+<p><a href="pe_CursorTypes.html">CursorTypes</a></p>
+<p><a href="pe_CustomLayoutTypeEnum.html">CustomLayoutTypeEnum</a></p>
+<p><a href="pe_DataFormat.html">DataFormat</a></p>
+<p><a href="pe_DefaultRenderingIntent.html">DefaultRenderingIntent</a></p>
+<p><a href="pe_DesignOptions.html">DesignOptions</a></p>
+<p><a href="pe_DiacriticPositionOptions.html">DiacriticPositionOptions</a></p>
+<p><a href="pe_DigitsTypeOptions.html">DigitsTypeOptions</a></p>
+<p><a href="pe_DimensionsConstraints.html">DimensionsConstraints</a></p>
+<p><a href="pe_DisplayOrderOptions.html">DisplayOrderOptions</a></p>
+<p><a href="pe_DisplaySettingOptions.html">DisplaySettingOptions</a></p>
+<p><a href="pe_DistributeOptions.html">DistributeOptions</a></p>
+<p><a href="pe_DocumentIntentOptions.html">DocumentIntentOptions</a></p>
+<p><a href="pe_DocumentPrintUiOptions.html">DocumentPrintUiOptions</a></p>
+<p><a href="pe_DynamicDocumentsJPEGQualityOptions.html">DynamicDocumentsJPEGQualityOptions</a></p>
+<p><a href="pe_DynamicDocumentsTextExportPolicy.html">DynamicDocumentsTextExportPolicy</a></p>
+<p><a href="pe_DynamicMediaHandlingOptions.html">DynamicMediaHandlingOptions</a></p>
+<p><a href="pe_DynamicTriggerEvents.html">DynamicTriggerEvents</a></p>
+<p><a href="pe_EPSColorSpace.html">EPSColorSpace</a></p>
+<p><a href="pe_EPSImageData.html">EPSImageData</a></p>
+<p><a href="pe_EditingState.html">EditingState</a></p>
+<p><a href="pe_EmptyFrameFittingOptions.html">EmptyFrameFittingOptions</a></p>
+<p><a href="pe_EndCap.html">EndCap</a></p>
+<p><a href="pe_EndJoin.html">EndJoin</a></p>
+<p><a href="pe_EpubCover.html">EpubCover</a></p>
+<p><a href="pe_EpubVersion.html">EpubVersion</a></p>
+<p><a href="pe_EventPhases.html">EventPhases</a></p>
+<p><a href="pe_ExportFormat.html">ExportFormat</a></p>
+<p><a href="pe_ExportLayerOptions.html">ExportLayerOptions</a></p>
+<p><a href="pe_ExportOrder.html">ExportOrder</a></p>
+<p><a href="pe_ExportPresetFormat.html">ExportPresetFormat</a></p>
+<p><a href="pe_ExportRangeOrAllPages.html">ExportRangeOrAllPages</a></p>
+<p><a href="pe_FeatherCornerType.html">FeatherCornerType</a></p>
+<p><a href="pe_FeatherMode.html">FeatherMode</a></p>
+<p><a href="pe_FeatureSetOptions.html">FeatureSetOptions</a></p>
+<p><a href="pe_FindChangeTransliterateCharacterTypes.html">FindChangeTransliterateCharacterTypes</a></p>
+<p><a href="pe_FirstBaseline.html">FirstBaseline</a></p>
+<p><a href="pe_FitDimension.html">FitDimension</a></p>
+<p><a href="pe_FitMethodSettings.html">FitMethodSettings</a></p>
+<p><a href="pe_FitOptions.html">FitOptions</a></p>
+<p><a href="pe_Fitting.html">Fitting</a></p>
+<p><a href="pe_FlattenerLevel.html">FlattenerLevel</a></p>
+<p><a href="pe_Flip.html">Flip</a></p>
+<p><a href="pe_FlipValues.html">FlipValues</a></p>
+<p><a href="pe_FloatingWindowPosition.html">FloatingWindowPosition</a></p>
+<p><a href="pe_FloatingWindowSize.html">FloatingWindowSize</a></p>
+<p><a href="pe_FollowShapeModeOptions.html">FollowShapeModeOptions</a></p>
+<p><a href="pe_FontDownloading.html">FontDownloading</a></p>
+<p><a href="pe_FontEmbedding.html">FontEmbedding</a></p>
+<p><a href="pe_FontStatus.html">FontStatus</a></p>
+<p><a href="pe_FontTypes.html">FontTypes</a></p>
+<p><a href="pe_FootnoteFirstBaseline.html">FootnoteFirstBaseline</a></p>
+<p><a href="pe_FootnoteMarkerPositioning.html">FootnoteMarkerPositioning</a></p>
+<p><a href="pe_FootnoteNumberingStyle.html">FootnoteNumberingStyle</a></p>
+<p><a href="pe_FootnotePrefixSuffix.html">FootnotePrefixSuffix</a></p>
+<p><a href="pe_FootnoteRestarting.html">FootnoteRestarting</a></p>
+<p><a href="pe_GIFOptionsPalette.html">GIFOptionsPalette</a></p>
+<p><a href="pe_GlobalClashResolutionStrategy.html">GlobalClashResolutionStrategy</a></p>
+<p><a href="pe_GlobalClashResolutionStrategyForMasterPage.html">GlobalClashResolutionStrategyForMasterPage</a></p>
+<p><a href="pe_GlowTechnique.html">GlowTechnique</a></p>
+<p><a href="pe_GoToZoomOptions.html">GoToZoomOptions</a></p>
+<p><a href="pe_GradientType.html">GradientType</a></p>
+<p><a href="pe_GridAlignment.html">GridAlignment</a></p>
+<p><a href="pe_GridViewSettings.html">GridViewSettings</a></p>
+<p><a href="pe_GuideTypeOptions.html">GuideTypeOptions</a></p>
+<p><a href="pe_HeaderFooterBreakTypes.html">HeaderFooterBreakTypes</a></p>
+<p><a href="pe_HeaderTypes.html">HeaderTypes</a></p>
+<p><a href="pe_HorizontalAlignment.html">HorizontalAlignment</a></p>
+<p><a href="pe_HorizontalOrVertical.html">HorizontalOrVertical</a></p>
+<p><a href="pe_HyperlinkAppearanceHighlight.html">HyperlinkAppearanceHighlight</a></p>
+<p><a href="pe_HyperlinkAppearanceStyle.html">HyperlinkAppearanceStyle</a></p>
+<p><a href="pe_HyperlinkAppearanceWidth.html">HyperlinkAppearanceWidth</a></p>
+<p><a href="pe_HyperlinkDestinationPageSetting.html">HyperlinkDestinationPageSetting</a></p>
+<p><a href="pe_ICCProfiles.html">ICCProfiles</a></p>
+<p><a href="pe_IconSizes.html">IconSizes</a></p>
+<p><a href="pe_ImageAlignmentType.html">ImageAlignmentType</a></p>
+<p><a href="pe_ImageConversion.html">ImageConversion</a></p>
+<p><a href="pe_ImageDataTypes.html">ImageDataTypes</a></p>
+<p><a href="pe_ImageExportOption.html">ImageExportOption</a></p>
+<p><a href="pe_ImageFormat.html">ImageFormat</a></p>
+<p><a href="pe_ImagePageBreakType.html">ImagePageBreakType</a></p>
+<p><a href="pe_ImageResolution.html">ImageResolution</a></p>
+<p><a href="pe_ImageSizeOption.html">ImageSizeOption</a></p>
+<p><a href="pe_ImportFormat.html">ImportFormat</a></p>
+<p><a href="pe_ImportPlatform.html">ImportPlatform</a></p>
+<p><a href="pe_ImportedPageCropOptions.html">ImportedPageCropOptions</a></p>
+<p><a href="pe_InCopyUIColors.html">InCopyUIColors</a></p>
+<p><a href="pe_IndexCapitalizationOptions.html">IndexCapitalizationOptions</a></p>
+<p><a href="pe_IndexFormat.html">IndexFormat</a></p>
+<p><a href="pe_InkTypes.html">InkTypes</a></p>
+<p><a href="pe_InnerGlowSource.html">InnerGlowSource</a></p>
+<p><a href="pe_InteractiveElementsOptions.html">InteractiveElementsOptions</a></p>
+<p><a href="pe_InteractivePDFInteractiveElementsOptions.html">InteractivePDFInteractiveElementsOptions</a></p>
+<p><a href="pe_JPEGOptionsFormat.html">JPEGOptionsFormat</a></p>
+<p><a href="pe_JPEGOptionsQuality.html">JPEGOptionsQuality</a></p>
+<p><a href="pe_JoinOptions.html">JoinOptions</a></p>
+<p><a href="pe_JpegColorSpaceEnum.html">JpegColorSpaceEnum</a></p>
+<p><a href="pe_Justification.html">Justification</a></p>
+<p><a href="pe_KashidasOptions.html">KashidasOptions</a></p>
+<p><a href="pe_KentenAlignment.html">KentenAlignment</a></p>
+<p><a href="pe_KentenCharacter.html">KentenCharacter</a></p>
+<p><a href="pe_KentenCharacterSet.html">KentenCharacterSet</a></p>
+<p><a href="pe_KinsokuHangTypes.html">KinsokuHangTypes</a></p>
+<p><a href="pe_KinsokuSet.html">KinsokuSet</a></p>
+<p><a href="pe_KinsokuType.html">KinsokuType</a></p>
+<p><a href="pe_LanguageAndRegion.html">LanguageAndRegion</a></p>
+<p><a href="pe_LayoutRuleOptions.html">LayoutRuleOptions</a></p>
+<p><a href="pe_Leading.html">Leading</a></p>
+<p><a href="pe_LeadingModel.html">LeadingModel</a></p>
+<p><a href="pe_LibraryPanelViews.html">LibraryPanelViews</a></p>
+<p><a href="pe_LineAlignment.html">LineAlignment</a></p>
+<p><a href="pe_LineSpacingType.html">LineSpacingType</a></p>
+<p><a href="pe_LinkStatus.html">LinkStatus</a></p>
+<p><a href="pe_ListAlignment.html">ListAlignment</a></p>
+<p><a href="pe_ListType.html">ListType</a></p>
+<p><a href="pe_LiveDrawingOptions.html">LiveDrawingOptions</a></p>
+<p><a href="pe_Locale.html">Locale</a></p>
+<p><a href="pe_LocationOptions.html">LocationOptions</a></p>
+<p><a href="pe_LockStateValues.html">LockStateValues</a></p>
+<p><a href="pe_MapType.html">MapType</a></p>
+<p><a href="pe_MarkLineWeight.html">MarkLineWeight</a></p>
+<p><a href="pe_MarkTypes.html">MarkTypes</a></p>
+<p><a href="pe_MatrixContent.html">MatrixContent</a></p>
+<p><a href="pe_MeasurementUnits.html">MeasurementUnits</a></p>
+<p><a href="pe_MojikumiTableDefaults.html">MojikumiTableDefaults</a></p>
+<p><a href="pe_MonoBitmapCompression.html">MonoBitmapCompression</a></p>
+<p><a href="pe_MoviePlayOperations.html">MoviePlayOperations</a></p>
+<p><a href="pe_MoviePosterTypes.html">MoviePosterTypes</a></p>
+<p><a href="pe_NestedStyleDelimiters.html">NestedStyleDelimiters</a></p>
+<p><a href="pe_NoteBackgrounds.html">NoteBackgrounds</a></p>
+<p><a href="pe_NoteColorChoices.html">NoteColorChoices</a></p>
+<p><a href="pe_NothingEnum.html">NothingEnum</a></p>
+<p><a href="pe_NumberedListExportOption.html">NumberedListExportOption</a></p>
+<p><a href="pe_NumberedParagraphsOptions.html">NumberedParagraphsOptions</a></p>
+<p><a href="pe_NumberingStyle.html">NumberingStyle</a></p>
+<p><a href="pe_OTFFigureStyle.html">OTFFigureStyle</a></p>
+<p><a href="pe_ObjectTypes.html">ObjectTypes</a></p>
+<p><a href="pe_OpenOptions.html">OpenOptions</a></p>
+<p><a href="pe_OpenTypeFeature.html">OpenTypeFeature</a></p>
+<p><a href="pe_OutlineJoin.html">OutlineJoin</a></p>
+<p><a href="pe_OverrideType.html">OverrideType</a></p>
+<p><a href="pe_PDFColorSpace.html">PDFColorSpace</a></p>
+<p><a href="pe_PDFCompressionType.html">PDFCompressionType</a></p>
+<p><a href="pe_PDFCrop.html">PDFCrop</a></p>
+<p><a href="pe_PDFJPEGQualityOptions.html">PDFJPEGQualityOptions</a></p>
+<p><a href="pe_PDFMarkWeight.html">PDFMarkWeight</a></p>
+<p><a href="pe_PDFProfileSelector.html">PDFProfileSelector</a></p>
+<p><a href="pe_PDFRasterCompressionOptions.html">PDFRasterCompressionOptions</a></p>
+<p><a href="pe_PDFXStandards.html">PDFXStandards</a></p>
+<p><a href="pe_PNGColorSpaceEnum.html">PNGColorSpaceEnum</a></p>
+<p><a href="pe_PNGExportRangeEnum.html">PNGExportRangeEnum</a></p>
+<p><a href="pe_PNGQualityEnum.html">PNGQualityEnum</a></p>
+<p><a href="pe_PPDValues.html">PPDValues</a></p>
+<p><a href="pe_PageBindingOptions.html">PageBindingOptions</a></p>
+<p><a href="pe_PageColorOptions.html">PageColorOptions</a></p>
+<p><a href="pe_PageLayoutOptions.html">PageLayoutOptions</a></p>
+<p><a href="pe_PageNumberPosition.html">PageNumberPosition</a></p>
+<p><a href="pe_PageNumberStyle.html">PageNumberStyle</a></p>
+<p><a href="pe_PageNumberingOptions.html">PageNumberingOptions</a></p>
+<p><a href="pe_PageOrientation.html">PageOrientation</a></p>
+<p><a href="pe_PagePositions.html">PagePositions</a></p>
+<p><a href="pe_PageRange.html">PageRange</a></p>
+<p><a href="pe_PageReferenceType.html">PageReferenceType</a></p>
+<p><a href="pe_PageSideOptions.html">PageSideOptions</a></p>
+<p><a href="pe_PageTransitionDirectionOptions.html">PageTransitionDirectionOptions</a></p>
+<p><a href="pe_PageTransitionDurationOptions.html">PageTransitionDurationOptions</a></p>
+<p><a href="pe_PageTransitionOverrideOptions.html">PageTransitionOverrideOptions</a></p>
+<p><a href="pe_PageTransitionTypeOptions.html">PageTransitionTypeOptions</a></p>
+<p><a href="pe_PageViewOptions.html">PageViewOptions</a></p>
+<p><a href="pe_PaginationOption.html">PaginationOption</a></p>
+<p><a href="pe_PanelLayoutResize.html">PanelLayoutResize</a></p>
+<p><a href="pe_PanningTypes.html">PanningTypes</a></p>
+<p><a href="pe_PaperSize.html">PaperSize</a></p>
+<p><a href="pe_PaperSizes.html">PaperSizes</a></p>
+<p><a href="pe_ParagraphDirectionOptions.html">ParagraphDirectionOptions</a></p>
+<p><a href="pe_ParagraphJustificationOptions.html">ParagraphJustificationOptions</a></p>
+<p><a href="pe_PathType.html">PathType</a></p>
+<p><a href="pe_PathTypeAlignments.html">PathTypeAlignments</a></p>
+<p><a href="pe_PdfMagnificationOptions.html">PdfMagnificationOptions</a></p>
+<p><a href="pe_PerformanceMetricOptions.html">PerformanceMetricOptions</a></p>
+<p><a href="pe_PlacedVectorProfilePolicy.html">PlacedVectorProfilePolicy</a></p>
+<p><a href="pe_PlayOperations.html">PlayOperations</a></p>
+<p><a href="pe_PointType.html">PointType</a></p>
+<p><a href="pe_Position.html">Position</a></p>
+<p><a href="pe_PositionalForms.html">PositionalForms</a></p>
+<p><a href="pe_PostScriptLevels.html">PostScriptLevels</a></p>
+<p><a href="pe_PreflightLayerOptions.html">PreflightLayerOptions</a></p>
+<p><a href="pe_PreflightProfileOptions.html">PreflightProfileOptions</a></p>
+<p><a href="pe_PreflightRuleFlag.html">PreflightRuleFlag</a></p>
+<p><a href="pe_PreflightScopeOptions.html">PreflightScopeOptions</a></p>
+<p><a href="pe_PreviewPagesOptions.html">PreviewPagesOptions</a></p>
+<p><a href="pe_PreviewSizeOptions.html">PreviewSizeOptions</a></p>
+<p><a href="pe_PreviewTypes.html">PreviewTypes</a></p>
+<p><a href="pe_PrintLayerOptions.html">PrintLayerOptions</a></p>
+<p><a href="pe_PrintPageOrientation.html">PrintPageOrientation</a></p>
+<p><a href="pe_Printer.html">Printer</a></p>
+<p><a href="pe_PrinterPresetTypes.html">PrinterPresetTypes</a></p>
+<p><a href="pe_Profile.html">Profile</a></p>
+<p><a href="pe_ProofingType.html">ProofingType</a></p>
+<p><a href="pe_RangeSortOrder.html">RangeSortOrder</a></p>
+<p><a href="pe_RasterCompressionOptions.html">RasterCompressionOptions</a></p>
+<p><a href="pe_RasterResolutionOptions.html">RasterResolutionOptions</a></p>
+<p><a href="pe_RecordSelection.html">RecordSelection</a></p>
+<p><a href="pe_RecordsPerPage.html">RecordsPerPage</a></p>
+<p><a href="pe_RenderingIntent.html">RenderingIntent</a></p>
+<p><a href="pe_RepaginateOption.html">RepaginateOption</a></p>
+<p><a href="pe_ResizeConstraints.html">ResizeConstraints</a></p>
+<p><a href="pe_ResizeMethods.html">ResizeMethods</a></p>
+<p><a href="pe_ResolveStyleClash.html">ResolveStyleClash</a></p>
+<p><a href="pe_RestartPolicy.html">RestartPolicy</a></p>
+<p><a href="pe_RotationDirection.html">RotationDirection</a></p>
+<p><a href="pe_RowTypes.html">RowTypes</a></p>
+<p><a href="pe_RubyAlignments.html">RubyAlignments</a></p>
+<p><a href="pe_RubyKentenPosition.html">RubyKentenPosition</a></p>
+<p><a href="pe_RubyOverhang.html">RubyOverhang</a></p>
+<p><a href="pe_RubyParentSpacing.html">RubyParentSpacing</a></p>
+<p><a href="pe_RubyTypes.html">RubyTypes</a></p>
+<p><a href="pe_RuleDataType.html">RuleDataType</a></p>
+<p><a href="pe_RuleWidth.html">RuleWidth</a></p>
+<p><a href="pe_RulerOrigin.html">RulerOrigin</a></p>
+<p><a href="pe_SWFBackgroundOptions.html">SWFBackgroundOptions</a></p>
+<p><a href="pe_SWFCurveQualityValue.html">SWFCurveQualityValue</a></p>
+<p><a href="pe_Sampling.html">Sampling</a></p>
+<p><a href="pe_SaveOptions.html">SaveOptions</a></p>
+<p><a href="pe_ScaleModes.html">ScaleModes</a></p>
+<p><a href="pe_Screeening.html">Screeening</a></p>
+<p><a href="pe_ScreenModeOptions.html">ScreenModeOptions</a></p>
+<p><a href="pe_ScriptLanguage.html">ScriptLanguage</a></p>
+<p><a href="pe_SearchModes.html">SearchModes</a></p>
+<p><a href="pe_SearchStrategies.html">SearchStrategies</a></p>
+<p><a href="pe_SelectAll.html">SelectAll</a></p>
+<p><a href="pe_SelectionOptions.html">SelectionOptions</a></p>
+<p><a href="pe_Sequences.html">Sequences</a></p>
+<p><a href="pe_ShadowMode.html">ShadowMode</a></p>
+<p><a href="pe_SignatureSizeOptions.html">SignatureSizeOptions</a></p>
+<p><a href="pe_SingleWordJustification.html">SingleWordJustification</a></p>
+<p><a href="pe_SmartMatchOptions.html">SmartMatchOptions</a></p>
+<p><a href="pe_SnapshotBlendingModes.html">SnapshotBlendingModes</a></p>
+<p><a href="pe_SortAssets.html">SortAssets</a></p>
+<p><a href="pe_SoundPosterTypes.html">SoundPosterTypes</a></p>
+<p><a href="pe_SourceFieldType.html">SourceFieldType</a></p>
+<p><a href="pe_SourceSpaces.html">SourceSpaces</a></p>
+<p><a href="pe_SourceType.html">SourceType</a></p>
+<p><a href="pe_SpanColumnCountOptions.html">SpanColumnCountOptions</a></p>
+<p><a href="pe_SpanColumnTypeOptions.html">SpanColumnTypeOptions</a></p>
+<p><a href="pe_SpecialCharacters.html">SpecialCharacters</a></p>
+<p><a href="pe_SpreadFlattenerLevel.html">SpreadFlattenerLevel</a></p>
+<p><a href="pe_StartParagraph.html">StartParagraph</a></p>
+<p><a href="pe_StateTypes.html">StateTypes</a></p>
+<p><a href="pe_StaticAlignmentOptions.html">StaticAlignmentOptions</a></p>
+<p><a href="pe_StoryDirectionOptions.html">StoryDirectionOptions</a></p>
+<p><a href="pe_StoryHorizontalOrVertical.html">StoryHorizontalOrVertical</a></p>
+<p><a href="pe_StoryTypes.html">StoryTypes</a></p>
+<p><a href="pe_StrokeAlignment.html">StrokeAlignment</a></p>
+<p><a href="pe_StrokeCornerAdjustment.html">StrokeCornerAdjustment</a></p>
+<p><a href="pe_StrokeFillProxyOptions.html">StrokeFillProxyOptions</a></p>
+<p><a href="pe_StrokeFillTargetOptions.html">StrokeFillTargetOptions</a></p>
+<p><a href="pe_StrokeOrderTypes.html">StrokeOrderTypes</a></p>
+<p><a href="pe_StyleConflict.html">StyleConflict</a></p>
+<p><a href="pe_StyleSheetExportOption.html">StyleSheetExportOption</a></p>
+<p><a href="pe_SyncConflictResolution.html">SyncConflictResolution</a></p>
+<p><a href="pe_TabStopAlignment.html">TabStopAlignment</a></p>
+<p><a href="pe_TableDirectionOptions.html">TableDirectionOptions</a></p>
+<p><a href="pe_TableFormattingOptions.html">TableFormattingOptions</a></p>
+<p><a href="pe_TagRaster.html">TagRaster</a></p>
+<p><a href="pe_TagTextExportCharacterSet.html">TagTextExportCharacterSet</a></p>
+<p><a href="pe_TagTextForm.html">TagTextForm</a></p>
+<p><a href="pe_TagTransparency.html">TagTransparency</a></p>
+<p><a href="pe_TagType.html">TagType</a></p>
+<p><a href="pe_TagVector.html">TagVector</a></p>
+<p><a href="pe_TaggedPDFStructureOrderOptions.html">TaggedPDFStructureOrderOptions</a></p>
+<p><a href="pe_TaskAlertType.html">TaskAlertType</a></p>
+<p><a href="pe_TaskState.html">TaskState</a></p>
+<p><a href="pe_TextExportCharacterSet.html">TextExportCharacterSet</a></p>
+<p><a href="pe_TextFrameContents.html">TextFrameContents</a></p>
+<p><a href="pe_TextImportCharacterSet.html">TextImportCharacterSet</a></p>
+<p><a href="pe_TextPathEffects.html">TextPathEffects</a></p>
+<p><a href="pe_TextStrokeAlign.html">TextStrokeAlign</a></p>
+<p><a href="pe_TextTypeAlignments.html">TextTypeAlignments</a></p>
+<p><a href="pe_TextWrapModes.html">TextWrapModes</a></p>
+<p><a href="pe_TextWrapSideOptions.html">TextWrapSideOptions</a></p>
+<p><a href="pe_ThumbsPerPage.html">ThumbsPerPage</a></p>
+<p><a href="pe_TilingTypes.html">TilingTypes</a></p>
+<p><a href="pe_ToolTipOptions.html">ToolTipOptions</a></p>
+<p><a href="pe_ToolsPanelOptions.html">ToolsPanelOptions</a></p>
+<p><a href="pe_TrapEndTypes.html">TrapEndTypes</a></p>
+<p><a href="pe_TrapImagePlacementTypes.html">TrapImagePlacementTypes</a></p>
+<p><a href="pe_Trapping.html">Trapping</a></p>
+<p><a href="pe_UIColors.html">UIColors</a></p>
+<p><a href="pe_UITools.html">UITools</a></p>
+<p><a href="pe_UndoModes.html">UndoModes</a></p>
+<p><a href="pe_UpdateLinkOptions.html">UpdateLinkOptions</a></p>
+<p><a href="pe_UserInteractionLevels.html">UserInteractionLevels</a></p>
+<p><a href="pe_VariableNumberingStyles.html">VariableNumberingStyles</a></p>
+<p><a href="pe_VariableScopes.html">VariableScopes</a></p>
+<p><a href="pe_VariableTypes.html">VariableTypes</a></p>
+<p><a href="pe_VersionCueSyncStatus.html">VersionCueSyncStatus</a></p>
+<p><a href="pe_VersionState.html">VersionState</a></p>
+<p><a href="pe_VerticalAlignment.html">VerticalAlignment</a></p>
+<p><a href="pe_VerticalJustification.html">VerticalJustification</a></p>
+<p><a href="pe_VerticallyRelativeTo.html">VerticallyRelativeTo</a></p>
+<p><a href="pe_ViewDisplaySettings.html">ViewDisplaySettings</a></p>
+<p><a href="pe_ViewZoomStyle.html">ViewZoomStyle</a></p>
+<p><a href="pe_WarichuAlignment.html">WarichuAlignment</a></p>
+<p><a href="pe_WatermarkHorizontalPositionEnum.html">WatermarkHorizontalPositionEnum</a></p>
+<p><a href="pe_WatermarkVerticalPositionEnum.html">WatermarkVerticalPositionEnum</a></p>
+<p><a href="pe_WhenScalingOptions.html">WhenScalingOptions</a></p>
+<p><a href="pe_XFLRasterizeFormatOptions.html">XFLRasterizeFormatOptions</a></p>
+<p><a href="pe_XMLElementLocation.html">XMLElementLocation</a></p>
+<p><a href="pe_XMLElementPosition.html">XMLElementPosition</a></p>
+<p><a href="pe_XMLExportUntaggedTablesFormat.html">XMLExportUntaggedTablesFormat</a></p>
+<p><a href="pe_XMLFileEncoding.html">XMLFileEncoding</a></p>
+<p><a href="pe_XMLImportStyles.html">XMLImportStyles</a></p>
+<p><a href="pe_XMLTransformFile.html">XMLTransformFile</a></p>
+<p><a href="pe_ZoomOptions.html">ZoomOptions</a></p>
+</td></tr></table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center">
+		Contents
+	 :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

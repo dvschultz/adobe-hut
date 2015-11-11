@@ -1,0 +1,328 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Font</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, font">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Font</h1></td></tr>
+<tr><td>&nbsp;</td><td>A font.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#checkOpenTypeFeature" title="Checks whether the font supports the specified OpenType feature.">checkOpenTypeFeature</a>, <a href="#createSubsetFont" title="Create a copy of the font with just enough information to render the list of characters given.">createSubsetFont</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#toSource" title="Generates a string which, if executed, will return the Font.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Application.html">Application</a> | <a href="pc_Document.html">Document</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Font</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="allowEditableEmbedding"></a>allowEditableEmbedding</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the font can be embedded.</td></tr>
+<tr><td><a name="allowOutlines"></a>allowOutlines</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the font can be converted to outlines.</td></tr>
+<tr><td><a name="allowPDFEmbedding"></a>allowPDFEmbedding</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the font can be embedded in a PDF document.</td></tr>
+<tr><td><a name="allowPrinting"></a>allowPrinting</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the can font be printed.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="fontFamily"></a>fontFamily</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the font family</td></tr>
+<tr><td><a name="fontStyleName"></a>fontStyleName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the font style.</td></tr>
+<tr><td><a name="fontStyleNameNative"></a>fontStyleNameNative</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The native name of the font style.</td></tr>
+<tr><td><a name="fontType"></a>fontType</td><td><a href="pe_FontTypes.html">FontTypes</a>:<br>FontTypes.TYPE_1<br>FontTypes.TRUETYPE<br>FontTypes.CID<br>FontTypes.ATC<br>FontTypes.BITMAP<br>FontTypes.OCF<br>FontTypes.OPENTYPE_CFF<br>FontTypes.OPENTYPE_CID<br>FontTypes.OPENTYPE_TT<br>FontTypes.UNKNOWN</td>
+<td>readonly</td><td>The type of font.</td></tr>
+<tr><td><a name="fullName"></a>fullName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The full font name.</td></tr>
+<tr><td><a name="fullNameNative"></a>fullNameNative</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The full native name of the font.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the Font within its containing object.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="location"></a>location</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The full path to the Font.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the Font.</td></tr>
+<tr><td><a name="ordering"></a>ordering</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The ordering of a CID font.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Application.html">Application</a><br><a href="pc_Document.html">Document</a></td>
+<td>readonly</td><td>The parent of the Font (a Document or Application).</td></tr>
+<tr><td><a name="platformName"></a>platformName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The platform font name.</td></tr>
+<tr><td><a name="postscriptName"></a>postscriptName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The PostScript name of the font.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="registry"></a>registry</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The registry of a CID font.</td></tr>
+<tr><td><a name="restrictedPrinting"></a>restrictedPrinting</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the font allows only restricted printing.</td></tr>
+<tr><td><a name="status"></a>status</td><td><a href="pe_FontStatus.html">FontStatus</a>:<br>FontStatus.INSTALLED<br>FontStatus.NOT_AVAILABLE<br>FontStatus.FAUXED<br>FontStatus.SUBSTITUTED<br>FontStatus.UNKNOWN</td>
+<td>readonly</td><td>The status of the font.</td></tr>
+<tr><td><a name="version"></a>version</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The font version.</td></tr>
+<tr class="lastRow"><td><a name="writingScript"></a>writingScript</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The writing script.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="checkOpenTypeFeature"></a><a href="pc_Boolean.html">bool</a>  <span class="func">checkOpenTypeFeature</span> (<span class="arg">using</span>:
+<span class="argt">varies</span>)<br>
+Checks whether the font supports the specified OpenType feature.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>using</td><td><a href="pe_OpenTypeFeature.html">OpenTypeFeature</a><br><a href="pc_String.html">String</a></td><td>The OpenType feature to check for, specified either as an OpenType feature or a string. Can accept: OpenTypeFeature enumerator or String.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="createSubsetFont"></a><span class="rett">void</span>  <span class="func">createSubsetFont</span> (<span class="arg">charactersForSubset</span>:
+<span class="argt">string</span>, <span class="arg">fontDestination</span>:
+<a href="pc_File.html">File</a>)<br>
+Create a copy of the font with just enough information to render the list of characters given.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>charactersForSubset</td><td><a href="pc_string.html">string</a></td><td>String with all the characters used in the resulting font.</td></tr>
+<tr class="lastRow"><td>fontDestination</td><td><a href="pc_File.html">File</a></td><td>File location for the new font.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_Font.html">Font</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the Font.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Bullet.html">Bullet</a>.bulletsFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGlyphPreference.html">ChangeGlyphPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CompositeFontEntry.html">CompositeFontEntry</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGlyphPreference.html">FindGlyphPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GridDataInformation.html">GridDataInformation</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_LayoutGridDataInformation.html">LayoutGridDataInformation</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StoryGridDataInformation.html">StoryGridDataInformation</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.rubyFont</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#nextItem">Fonts.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>Font</b>)
+</p><p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#previousItem">Fonts.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>Font</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Font</b> <b>Font</b>.<a href="pc_Font.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#[]">Fonts.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#anyItem">Fonts.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Font</b> <a href="pc_Fonts.html#everyItem">Fonts.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#firstItem">Fonts.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#item">Fonts.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#itemByName">Fonts.itemByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Font</b> <a href="pc_Fonts.html#itemByRange">Fonts.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#lastItem">Fonts.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#middleItem">Fonts.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#nextItem">Fonts.nextItem</a> (<span class="arg">obj</span>:
+<b>Font</b>)
+</p>
+<p class="hangIndent"><b>Font</b> <a href="pc_Fonts.html#previousItem">Fonts.previousItem</a> (<span class="arg">obj</span>:
+<b>Font</b>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: $</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, $">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>$</h1></td></tr>
+<tr><td>&nbsp;</td><td>The $ object provides a number of debugging facilities and informational methods.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#about" title="Shows an About box for the ExtendScript component, and returns the text for the box.">about</a>, <a href="#bp" title="Breaks execution at the current position.">bp</a>, <a href="#colorPicker" title="Invokes the platform-specific color selection dialog, and returns the selected color.">colorPicker</a>, <a href="#evalFile" title="Loads and evaluates a file.">evalFile</a>, <a href="#gc" title="Initiates garbage collection in the ExtendScript engine.">gc</a>, <a href="#getenv" title="Retrieves the value of an environment variable.">getenv</a>, <a href="#setenv" title="Sets the value of an environment variable.">setenv</a>, <a href="#sleep" title="Suspends the calling thread for a number of milliseconds.">sleep</a>, <a href="#toString" title="Converts this object to a string.">toString</a>, <a href="#write" title="Prints text to the Console.">write</a>, <a href="#writeln" title="Prints text to the Console, and adds a newline character.">writeln</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="build"></a>build</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The ExtendScript build information.</td></tr>
+<tr><td><a name="buildDate"></a>buildDate</td><td><a href="pc_Date.html">Date</a></td>
+<td>readonly</td><td>The ExtendScript build date.</td></tr>
+<tr><td><a name="decimalPoint"></a>decimalPoint</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The character used as the decimal point character in formatted numeric output.</td></tr>
+<tr><td><a name="engineName"></a>engineName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the current ExtendScript engine, if set.</td></tr>
+<tr><td><a name="error"></a>error</td><td><a href="pc_Error.html">Error</a></td>
+<td>r/w</td><td>The most recent run-time error information.<br>
+						Assigning error text to this property generates a run-time error; however, the preferred way to generate a run-time error is to throw an&nbsp;<a href="pc_Error.html">Error</a>&nbsp;object.
+					</td></tr>
+<tr><td><a name="fileName"></a>fileName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The file name of the current script.</td></tr>
+<tr><td><a name="flags"></a>flags</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Gets or sets low-level debug output flags.<br>
+						A logical AND of bit flag values:
+						<br>&bull;&nbsp;0x0002 (2): Displays each line with its line number as it is executed.
+						<br>&bull;&nbsp;0x0040 (64): Enables excessive garbage collection. Usually, garbage collection starts when the number of objects has increased by a certain amount since the last garbage collection. This flag causes ExtendScript to garbage collect after almost every statement. This impairs performance severely, but is useful when you suspect that an object gets released too soon.
+						<br>&bull;&nbsp;0x0080 (128): Displays all calls with their arguments and the return value.
+						<br>&bull;&nbsp;
+							0x0100 (256): Enables extended error handling (see&nbsp;<b>strict</b>).
+						
+						<br>&bull;&nbsp;0x0200 (512): Enables the localization feature of the toString method. Equivalent to the localize property.
+					</td></tr>
+<tr><td><a name="global"></a>global</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>A reference to the global object, which contains the JavaScript global namespace.</td></tr>
+<tr><td><a name="hiresTimer"></a>hiresTimer</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>
+						A high-resolution timer, measuring the time in microseconds. The timer starts when ExtendScript is
+						initialized during the application startup sequence. Every read access resets the timer to Zero.
+					</td></tr>
+<tr><td><a name="includePath"></a>includePath</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The path for include files for the current script.</td></tr>
+<tr><td><a name="level"></a>level</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The current debugging level, which enables or disables the JavaScript debugger.<br>One of 0 (no debugging), 1 (break on runtime errors), or 2 (full debug mode).</td></tr>
+<tr><td><a name="line"></a>line</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The current line number of the currently executing script.</td></tr>
+<tr><td><a name="locale"></a>locale</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>Gets or sets the current locale.<br>
+						The string contains five characters in the form LL_RR, where LL is an ISO 639 language specifier, and RR is an ISO 3166 region specifier.<br>Initially, this is the value that the application or the platform returns for the current user. You can set it to temporarily change the locale for testing. To return to the application or platform setting, set to undefined, null, or the empty string.
+					</td></tr>
+<tr><td><a name="localize"></a>localize</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Set to true to enable the extended localization features of the built-in toString() method.</td></tr>
+<tr><td><a name="memCache"></a>memCache</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The ExtendScript memory cache size, in bytes.</td></tr>
+<tr><td><a name="os"></a>os</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The current operating system version information.<br><table class="example"><tr><td><b>Example</b></td><td class="example">
+						
+							$.os<br>Result: Windows XP 5.1 Service Pack 2
+						
+					</td></tr></table></td></tr>
+<tr><td><a name="screens"></a>screens</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>An array of objects containing information about the display screens attached to your computer.<br>
+						Each object has the properties&nbsp;<i>left, top, right, bottom</i>, which contain the four corners of each screen in global coordinates.<br>A property&nbsp;<i>primary</i>&nbsp;is true if that object describes the primary display.
+					</td></tr>
+<tr><td><a name="stack"></a>stack</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The current stack trace.</td></tr>
+<tr><td><a name="strict"></a>strict</td><td>any</td>
+<td>r/w</td><td>Sets or clears strict mode for object modification.<br>When true, any attempt to write to a read-only property causes a runtime error. Some objects do not permit the creation of new properties when true.</td></tr>
+<tr class="lastRow"><td><a name="version"></a>version</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The version number of the ExtendScript engine.<br>Formatted as a three-part number and description; for example: "3.92.95 (debug)".</td></tr>
+</table></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><p class="spaceBelow"><a name="about"></a>string <span class="func">about</span> ()<br>
+Shows an About box for the ExtendScript component, and returns the text for the box.</p>
+
+<p class="spaceBelow"><a name="bp"></a><span class="rett">void</span>  <span class="func">bp</span> ([<span class="arg">condition</span>:
+<span class="argt">any</span>])<br>
+Breaks execution at the current position.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>condition</td><td>
+						any
+					</td><td>A string containing a JavaScript statement to be used as a condition. If the statement evaluates to true or nonzero when this point is reached, execution stops. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="colorPicker"></a>number <span class="func">colorPicker</span> (<span class="arg">color</span>:
+<span class="argt">number</span>)<br>
+Invokes the platform-specific color selection dialog, and returns the selected color.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>color</td><td><a href="pc_number.html">number</a></td><td>The color to be preselected in the dialog, as 0xRRGGBB, or -1 for the platform default.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="evalFile"></a><span class="rett">any</span>  <span class="func">evalFile</span> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">timeout</span>:
+<span class="argt">number</span>=<span class="defv">10000</span>])<br>
+Loads and evaluates a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>file</td><td><a href="pc_File.html">File</a></td><td>The file to load.</td></tr>
+<tr class="lastRow"><td>timeout</td><td><a href="pc_number.html">number</a></td><td>An optional timeout in milliseconds. (default: <b>10000</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="gc"></a><span class="rett">void</span>  <span class="func">gc</span> ()<br>
+Initiates garbage collection in the ExtendScript engine.</p>
+
+<p class="spaceBelow"><a name="getenv"></a>string <span class="func">getenv</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Retrieves the value of an environment variable.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The name of the variable.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setenv"></a><span class="rett">void</span>  <span class="func">setenv</span> (<span class="arg">name</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+Sets the value of an environment variable.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>name</td><td><a href="pc_string.html">string</a></td><td>The name of the variable.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_string.html">string</a></td><td>The value of the variable.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="sleep"></a><span class="rett">void</span>  <span class="func">sleep</span> (<span class="arg">msecs</span>:
+<span class="argt">number</span>)<br>
+Suspends the calling thread for a number of milliseconds.<br>
+During a sleep period, checks at 100 millisecond intervals to see whether the sleep should be terminated. This can happen if there is a break request, or if the script timeout has expired.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>msecs</td><td><a href="pc_number.html">number</a></td><td>Number of milliseconds to sleep.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Converts this object to a string.</p>
+
+<p class="spaceBelow"><a name="write"></a><span class="rett">void</span>  <span class="func">write</span> (<span class="arg">text</span>:
+<span class="argt">any</span>)<br>
+Prints text to the Console.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td>
+						any
+					</td><td>The text to print. All arguments are concatenated.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="writeln"></a><span class="rett">void</span>  <span class="func">writeln</span> (<span class="arg">text</span>:
+<span class="argt">any</span>)<br>
+Prints text to the Console, and adds a newline character.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td>
+						any
+					</td><td>The text to print. All arguments are concatenated.</td></tr>
+</table>
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

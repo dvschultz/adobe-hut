@@ -1,0 +1,226 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Panel (SUI)</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, panel (sui)">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Panel (SUI)</h1></td></tr>
+<tr><td>&nbsp;</td><td><p>A container for other types of controls, with an optional frame. </p><p>A panel can specify layout options for its child elements. Hiding a panel hides all its children. Making it visible makes visible those children that are not individually hidden. </p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#add" title="Adds a child element to this container.">add</a>, <a href="#addEventListener" title="Registers an event handler for a particular type of event occuring in this element.">addEventListener</a>, <a href="#dispatchEvent" title="Simulates the occurrence of an event in this target.">dispatchEvent</a>, <a href="#hide" title="Hides this element.">hide</a>, <a href="#onDraw" title="An event-handler callback function, called when the panel is about to be drawn.">onDraw</a>, <a href="#remove" title="Removes the specified child control from this group's&nbsp;children&nbsp;array.">remove</a>, <a href="#removeEventListener" title="Unregisters an event handler for a particular type of event occuring in this element.">removeEventListener</a>, <a href="#show" title="Shows this element.">show</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Panel (SUI)</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="alignChildren"></a>alignChildren</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>Specifies how to align the child elements.</td></tr>
+<tr><td><a name="alignment"></a>alignment</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>
+            The alignment style for this element. If defined, this value overrides the <i>alignChildren</i> setting for the parent container.
+          <br>
+            This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
+            <br>&bull;&nbsp;
+              For orientation=row:<b>top</b>, <b>bottom</b>, <b>fill</b>
+            
+            <br>&bull;&nbsp;
+              For orientation=column: <b>left</b>, <b>right</b>, <b>fill</b>
+            
+            <br>&bull;&nbsp;
+              For orientation=stack:<b>top</b>, <b>bottom</b>, <b>left</b>, <b>right</b>, <b>fill</b>
+            
+          </td></tr>
+<tr><td><a name="bounds"></a>bounds</td><td><a href="pc_Bounds.html">Bounds</a></td>
+<td>r/w</td><td>The boundaries of the element, in parent-relative coordinates. <br>Setting an element's size or location changes its bounds property, and vice-versa.</td></tr>
+<tr><td><a name="characters"></a>characters</td><td><a href="pc_Number.html">Number</a> (min: 0)</td>
+<td>r/w</td><td>
+            Reserve space for the specified number of characters; affects calculation of&nbsp;preferredSize&nbsp;.
+          </td></tr>
+<tr><td><a name="children"></a>children</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>An array of child elements.</td></tr>
+<tr><td><a name="enabled"></a>enabled</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>True if this element is enabled.<br>An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance. </td></tr>
+<tr><td><a name="graphics"></a>graphics</td><td><a href="pc_ScriptUIGraphics.html">ScriptUIGraphics</a></td>
+<td>readonly</td><td>
+            The graphics object that can be used to customize the element's appearance, in response to the&nbsp;onDraw()&nbsp;event.
+          </td></tr>
+<tr><td><a name="helpTip"></a>helpTip</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The help text that is displayed when the mouse hovers over the element.</td></tr>
+<tr><td><a name="indent"></a>indent</td><td><a href="pc_Number.html">Number</a> (min: 0)</td>
+<td>r/w</td><td>The number of pixels to indent the element during automatic layout.<br>Applies for column orientation and left alignment, or row orientation and top alignment.</td></tr>
+<tr><td><a name="justify"></a>justify</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The default text justification style for child text elements.  (default: <b>left</b>)<br>
+            One of <b>left</b>, <b>center</b>, or <b>right</b>. Justification only works if this value is set on creation of the element.
+          </td></tr>
+<tr><td><a name="layout"></a>layout</td><td><a href="pc_LayoutManager.html">LayoutManager</a></td>
+<td>r/w</td><td>The layout manager for this container.<br>
+            The first time a container object is made visible, ScriptUI invokes this layout manager by calling its&nbsp;layout()&nbsp;function. Default is an instance of the&nbsp;LayoutManager&nbsp;class that is automatically created when the container element is created.
+          </td></tr>
+<tr><td><a name="location"></a>location</td><td><a href="pc_Point.html">Point</a></td>
+<td>r/w</td><td>The upper left corner of this element's frame relative to its parent.<br>The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa. </td></tr>
+<tr><td><a name="margins"></a>margins</td><td><a href="pc_Number.html">Number</a></td>
+<td>r/w</td><td>The number of pixels between the edges of a container and the outermost child elements.<br> You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines. </td></tr>
+<tr><td><a name="maximumSize"></a>maximumSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td> The maximum height and width to which the element can be resized.</td></tr>
+<tr><td><a name="minimumSize"></a>minimumSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td> The minimum height and width to which the element can be resized.</td></tr>
+<tr><td><a name="orientation"></a>orientation</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The layout orientation of children in a container.<br>
+            Interpreted by the layout manager for the container. The default&nbsp;LayoutManager&nbsp; Object accepts the (case-insensitive) values <b>row</b>, <b>column</b>, or <b>stack</b>.  For window and panel, the default is column, and for group the default is row. The allowed values for the containerís <b>alignChildren</b> and its childrenís <b>alignment</b> properties depend on the orientation.
+          </td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The parent element.</td></tr>
+<tr><td><a name="preferredSize"></a>preferredSize</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td>The preferred size, used by layout managers to determine the best size for each element.<br>If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default. </td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>An object that contains one or more creation properties of the control (properties used only when the element is created). <br>
+            Creation properties of a Panel object can include:
+            <br>&bull;&nbsp;
+              <b>borderStyle</b>: A string that specifies the appearance of the border drawn around the panel. One of <b>black</b>, <b>etched</b>, <b>gray</b>, <b>raised</b>, <b>sunken</b>. Default is <b>etched</b>.
+            
+            <br>&bull;&nbsp;
+              <b>su1PanelCoordinates</b>: Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
+            
+          </td></tr>
+<tr><td><a name="size"></a>size</td><td><a href="pc_Dimension.html">Dimension</a></td>
+<td>r/w</td><td>The current dimensions of this element.<br>
+            Initially undefined, and unless explicitly set by a script, it is defined by a&nbsp;LayoutManager&nbsp;. A script can explicitly set size before the layout manager is invoked to establish an element size other than the <i>preferredSize</i> or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
+          </td></tr>
+<tr><td><a name="spacing"></a>spacing</td><td><a href="pc_Number.html">Number</a></td>
+<td>r/w</td><td>The number of pixels separating one child element from its adjacent sibling element.<br>Because each container holds only a single row or column of children, only a single spacing value is needed for a container. The default value is based on the type of container, and is chosen to match standard Adobe UI guidelines. </td></tr>
+<tr><td><a name="text"></a>text</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The title or label text, a localizable string.</td></tr>
+<tr><td><a name="type"></a>type</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>The element type; "panel".</td></tr>
+<tr><td><a name="visible"></a>visible</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>True if this element is shown, false if it is hidden.<br>When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.</td></tr>
+<tr><td><a name="window"></a>window</td><td><a href="pc_Window (SUI).html">Window (SUI)</a></td>
+<td>readonly</td><td>The window that this element belongs to.</td></tr>
+<tr class="lastRow"><td><a name="windowBounds"></a>windowBounds</td><td><a href="pc_Bounds.html">Bounds</a></td>
+<td>readonly</td><td>The bounds of this element relative to the top-level parent window.</td></tr>
+</table></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Events</h4><p class="spaceBelow"><a name="onDraw"></a><span class="rett">void</span>  <span class="func">onDraw</span> ()<br>
+An event-handler callback function, called when the panel is about to be drawn. <br>
+
+            Allows the script to modify or control the appearance, using the controlís associated&nbsp;<a href="pc_ScriptUIGraphics.html">ScriptUIGraphics</a>&nbsp;object. Handler takes one argument, a&nbsp;<a href="pc_DrawState.html">DrawState</a>&nbsp;object.
+          </p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="add"></a><a href="pc_Object.html">Object</a> <span class="func">add</span> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])<br>
+Adds a child element to this container.<br>
+Creates and returns a new control or container object and adds it to the children of this group.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>type</td><td><a href="pc_String.html">String</a></td><td>
+                The type of the child element, as specified for the type property.
+              <br>
+                Control types are listed in the <i>JavaScript Tools Guide</i>.
+              </td></tr>
+<tr><td>bounds</td><td><a href="pc_Bounds.html">Bounds</a></td><td>A bounds specification that describes the size and position of the new control or container, relative to its parent. <br>
+                If supplied, this value creates a new&nbsp;Bounds&nbsp;object which is assigned to the new objectís <b>bounds</b> property.
+               (Optional)</td></tr>
+<tr><td>text</td><td><a href="pc_String.html">String</a></td><td>The text or label, a localizable string.<br>
+                Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new objectís <b>text</b> property.
+               (Optional)</td></tr>
+<tr class="lastRow"><td>properties</td><td><a href="pc_Object.html">Object</a></td><td>An object that contains one or more creation properties of the new child (properties used only when the element is created). <br>
+                The creation properties depend on the element type. See <br> property of each control type.
+               (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="addEventListener"></a><a href="pc_Boolean.html">Boolean</a> <span class="func">addEventListener</span> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])<br>
+Registers an event handler for a particular type of event occuring in this element.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventName</td><td><a href="pc_String.html">String</a></td><td>The name of the event.<br>
+                Event names are listed in the <i>JavaScript Tools Guide</i>.
+              </td></tr>
+<tr><td>handler</td><td><a href="pc_Function.html">Function</a></td><td>The function that handles the event.<br>
+                This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the&nbsp;UIEvent&nbsp;object.
+              </td></tr>
+<tr class="lastRow"><td>capturePhase</td><td><a href="pc_Boolean.html">Boolean</a></td><td>When true, the handler is called only in the capturing phase of the event propagation.  (default: <b>false</b>)<br>Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="dispatchEvent"></a><a href="pc_Event.html">Event</a> <span class="func">dispatchEvent</span> ()<br>
+Simulates the occurrence of an event in this target. <br>
+
+            A script can create a&nbsp;<a href="pc_UIEvent.html">UIEvent</a>&nbsp;object for a specific event and pass it to this method to start the event propagation for the event.
+          </p>
+
+<p class="spaceBelow"><a name="hide"></a><span class="rett">void</span>  <span class="func">hide</span> ()<br>
+Hides this element.</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> (<span class="arg">what</span>:
+<span class="argt">Any</span>)<br>
+
+            Removes the specified child control from this group's&nbsp;<a href="pc_Panel (SUI).html#children">children</a>&nbsp;array.
+          <br>
+ No error results if the child does not exist. 
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>what</td><td>Any</td><td>
+                The child control to remove, specified by 0-based index, text property value, or as a control object.
+              </td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">Boolean</a> <span class="func">removeEventListener</span> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])<br>
+Unregisters an event handler for a particular type of event occuring in this element.<br>
+ All arguments must be identical to those that were used to register the event handler.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventName</td><td><a href="pc_String.html">String</a></td><td>The name of the event.</td></tr>
+<tr><td>handler</td><td><a href="pc_Function.html">Function</a></td><td>The function that handles the event.</td></tr>
+<tr class="lastRow"><td>capturePhase</td><td><a href="pc_Boolean.html">Boolean</a></td><td>Whether to call the handler only in the capturing phase of the event propagation. (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="show"></a><span class="rett">void</span>  <span class="func">show</span> ()<br>
+Shows this element.<br>
+ When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

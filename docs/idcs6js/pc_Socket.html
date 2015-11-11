@@ -1,0 +1,144 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Socket</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, socket">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Socket</h1></td></tr>
+<tr><td>&nbsp;</td><td>Creates a TCP/IP connection, or establishes a TCP/IP server.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Socket" title="Creates a new Socket object.">Socket</a>, <a href="#close" title="Terminates the open connection.">close</a>, <a href="#listen" title="Instructs the object to start listening for an incoming connection.">listen</a>, <a href="#open" title="Opens the connection for subsequent read/write operations.">open</a>, <a href="#poll" title="Checks a listening object for a new incoming connection.">poll</a>, <a href="#read" title="Reads up to the specified number of characters from the connection. CR characters are ignored unless the encoding is set to &#34;BINARY&#34;.">read</a>, <a href="#readln" title="Reads one line of text up to the next line feed.">readln</a>, <a href="#write" title="Concatenates all arguments into a single string and writes that string to the connection.">write</a>, <a href="#writeln" title="Concatenates all arguments into a single string, appends a LF character, and writes that string to the connection.">writeln</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="connected"></a>connected</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>When true, the connection is active.</td></tr>
+<tr><td><a name="encoding"></a>encoding</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>Sets or retrieves the name of the encoding used to transmit data.<br>Typical values are "ASCII", "BINARY", or "UTF-8".</td></tr>
+<tr><td><a name="eof"></a>eof</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>When true, the receive buffer is empty.</td></tr>
+<tr><td><a name="error"></a>error</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A message describing the most recent error. Setting this value clears any error message.</td></tr>
+<tr><td><a name="host"></a>host</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the remote computer when a connection is established.<br> If the connection is shut down or does not exist, the property contains the empty string.</td></tr>
+<tr class="lastRow"><td><a name="timeout"></a>timeout</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The timeout in seconds to be applied to read or write operations. (default: <b>10</b>)</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Socket"></a><a href="pc_Socket.html">Socket</a> <span class="func">Socket</span> ()<br>
+Creates a new Socket object.</p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="close"></a><a href="pc_Boolean.html">bool</a>  <span class="func">close</span> ()<br>
+Terminates the open connection.<br>
+
+						Returns true if the connection was closed, false on I/O errors.<br>
+						Deleting the object also closes the connection, but not until JavaScript garbage-collects the object. The connection might stay open longer than you wish if you do not close it explicitly.
+					</p>
+
+<p class="spaceBelow"><a name="listen"></a><a href="pc_Boolean.html">bool</a>  <span class="func">listen</span> (<span class="arg">port</span>:
+<span class="argt">number</span>[, <span class="arg">encoding</span>:
+<span class="argt">string</span>=<span class="defv">ASCII</span>])<br>
+Instructs the object to start listening for an incoming connection.<br>
+The call to open() and the call to listen()are mutually exclusive. Call one function or the other, not both.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>port</td><td><a href="pc_number.html">number</a> (range: 1 - 65535)</td><td>
+								The TCP/IP port number to listen on.
+							<br>
+								Valid port numbers are 1 to 65535. Typical values are 80 for a Web server, 23 for a Telnet server and so on.
+							</td></tr>
+<tr class="lastRow"><td>encoding</td><td><a href="pc_string.html">string</a></td><td>The encoding to be used for the connection (default: <b>ASCII</b>)<br>Typical values are "ASCII", "BINARY", or "UTF-8". (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="open"></a><a href="pc_Boolean.html">bool</a>  <span class="func">open</span> (<span class="arg">host</span>:
+<span class="argt">string</span>[, <span class="arg">encoding</span>:
+<span class="argt">string</span>=<span class="defv">ASCII</span>])<br>
+Opens the connection for subsequent read/write operations.<br>
+The call to open() and the call to listen() are mutually exclusive. Call one function or the other, not both.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>host</td><td><a href="pc_string.html">string</a></td><td>The server to connect to. <br>This can be a DNS name, an IPv4 address, or an IPv6 address, followed by a colon and a port number.</td></tr>
+<tr class="lastRow"><td>encoding</td><td><a href="pc_string.html">string</a></td><td>The encoding to be used for the connection (default: <b>ASCII</b>)<br>Typical values are "ASCII", "binary", or "UTF-8". (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="poll"></a><a href="pc_Socket.html">Socket</a> <span class="func">poll</span> ()<br>
+Checks a listening object for a new incoming connection.<br>
+If a connection request was detected, the method returns a new Socket object that wraps the new connection. Use this connection object to communicate with the remote computer. After use, close the connection and delete the JavaScript object. If no new connection request was detected, the method returns null.</p>
+
+<p class="spaceBelow"><a name="read"></a>string <span class="func">read</span> ([<span class="arg">count</span>:
+<span class="argt">number</span>])<br>
+
+						Reads up to the specified number of characters from the connection. CR characters are ignored unless the encoding is set to "BINARY".
+					<br>
+Returns a string that contains up to the number of characters that were supposed to be read, or the number of characters read before the connection closed or timed out.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>count</td><td><a href="pc_number.html">number</a></td><td>The number of characters to read.<br>If not supplied, the connection attempts to read as many characters it can get and returns immediately.  (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="readln"></a>string <span class="func">readln</span> ()<br>
+Reads one line of text up to the next line feed. <br>
+Line feeds are recognized as LF or CRLF pairs. CR characters are ignored. Returns a string containing the characters.</p>
+
+<p class="spaceBelow"><a name="write"></a><a href="pc_Boolean.html">bool</a>  <span class="func">write</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Concatenates all arguments into a single string and writes that string to the connection.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>
+								Any number of string values. All arguments are concatenated to form the string to be written. CRLF sequences are converted to LFs unless the encoding is set to "BINARY".
+							</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="writeln"></a><a href="pc_Boolean.html">bool</a>  <span class="func">writeln</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Concatenates all arguments into a single string, appends a LF character, and writes that string to the connection.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>
+								Any number of string values. All arguments are concatenated to form the string to be written. CRLF sequences are converted to LFs unless the encoding is set to "BINARY".
+							</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Example</h3></td>
+<td><table class="example"><tr><td>See file</td><td class="example">Socket.jsx</td></tr></table></td></tr><tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Socket</b> <b>Socket</b>.<a href="pc_Socket.html#Socket">Socket</a> ()
+</p>
+<p class="hangIndent"><b>Socket</b> <b>Socket</b>.<a href="pc_Socket.html#poll">poll</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

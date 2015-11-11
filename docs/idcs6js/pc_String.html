@@ -1,0 +1,2596 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: String</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, string">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>String</h1></td></tr>
+<tr><td>&nbsp;</td><td>A character string. Each character is adressable by index.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#String" title="Returns a string representation of the value given as an argument.">String</a>, <a href="#anchor" title="Returns a string consisting of this string enclosed in a <a&gt; tag.">anchor</a>, <a href="#big" title="Returns a string consisting of this string enclosed in a <big&gt; tag.">big</a>, <a href="#blink" title="Returns a string consisting of this string enclosed in a <blink&gt; tag.">blink</a>, <a href="#bold" title="Returns a string consisting of this string enclosed in a <b&gt; tag.">bold</a>, <a href="#charAt" title="Returns the character at the specified index.">charAt</a>, <a href="#charCodeAt" title="Returns the Unicode value of the character at the given index.">charCodeAt</a>, <a href="#concat" title="If necessary, converts the one or more given values to strings.">concat</a>, <a href="#fixed" title="Returns a string consisting of this string enclosed in a <tt&gt; tag.">fixed</a>, <a href="#fontcolor" title="Returns a string consisting of this string enclosed in a <font&gt; tag.">fontcolor</a>, <a href="#fontsize" title="Returns a string consisting of this string enclosed in a <font&gt; tag.">fontsize</a>, <a href="#fromCharCode" title="Returns a string created by concatenation one or more characters specified as ASCII values.">fromCharCode</a>, <a href="#indexOf" title="Returns the index within the string of the first occurrence of the specified string, starting the search at fromIndex if provided.">indexOf</a>, <a href="#italics" title="Returns a string consisting of this string enclosed in a <i&gt; tag.">italics</a>, <a href="#lastIndexOf" title="Returns the index within the string of the last occurrence of the specified value.">lastIndexOf</a>, <a href="#link" title="Returns a string consisting of this string enclosed in a <a&gt; tag.">link</a>, <a href="#localeCompare" title="Performs a localized comparison of two strings.">localeCompare</a>, <a href="#match" title="Matches a string against a regular expression.">match</a>, <a href="#replace" title="">replace</a>, <a href="#search" title="">search</a>, <a href="#slice" title="Extracts a substring of the given string and returns it as a new string.">slice</a>, <a href="#small" title="Returns a string consisting of this string enclosed in a <small&gt; tag.">small</a>, <a href="#split" title="Splits a string into a group of substrings, places those strings in an array, and returns the array.">split</a>, <a href="#strike" title="Returns a string consisting of this string enclosed in a <strike&gt; tag.">strike</a>, <a href="#sub" title="Returns a string consisting of this string enclosed in a <sub&gt; tag.">sub</a>, <a href="#substr" title="Returns a string containing the characters beginning at the specified index, start, through the specified number of characters.">substr</a>, <a href="#substring" title="Returns a substring of the given string by extracting characters from indexA up to but not including indexB.">substring</a>, <a href="#sup" title="Returns a string consisting of this string enclosed in a <sup&gt; tag.">sup</a>, <a href="#toLocaleLowerCase" title="Returns a new string which contains all the characters of the original string converted to lowercase (localized).">toLocaleLowerCase</a>, <a href="#toLocaleUpperCase" title="Returns a new string which contains all the characters of the original string converted to uppercase (localized).">toLocaleUpperCase</a>, <a href="#toLowerCase" title="Returns a new string which contains all the characters of the original string converted to lowercase.">toLowerCase</a>, <a href="#toSource" title="Creates a string representation of this object that can be fed back to&nbsp;eval()&nbsp;to re-create an object. Works only with built-in classes.">toSource</a>, <a href="#toString" title="Returns itself.">toString</a>, <a href="#toUpperCase" title="Returns a new string which contains all the characters of the original string converted to uppercase.">toUpperCase</a>, <a href="#valueOf" title="Returns itself.">valueOf</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr class="lastRow"><td><a name="length"></a>length</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The length of the string.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="String"></a><a href="pc_String.html">String</a> <span class="func">String</span> (<span class="arg">value</span>:
+<span class="argt">any</span>)<br>
+Returns a string representation of the value given as an argument.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td>
+						any
+					</td><td>A number, variable, or object to convert to a string.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">new String(value)</td></tr></table>
+
+<h4>Class</h4><p class="spaceBelow"><a name="fromCharCode"></a><a href="pc_String.html">String</a> <span class="func">fromCharCode</span> (<span class="arg">value1</span>:
+<span class="argt">number</span>)<br>
+Returns a string created by concatenation one or more characters specified as ASCII values.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value1</td><td><a href="pc_number.html">number</a></td><td>One or more ASCII values.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">String.fromCharCode(value1,...valueN)</td></tr></table>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="anchor"></a>string <span class="func">anchor</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Returns a string consisting of this string enclosed in a &lt;a&gt; tag.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><b>string</b></td><td>The text to be stored in the anchors' name attribute.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="big"></a>string <span class="func">big</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;big&gt; tag.</p>
+
+<p class="spaceBelow"><a name="blink"></a>string <span class="func">blink</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;blink&gt; tag.</p>
+
+<p class="spaceBelow"><a name="bold"></a>string <span class="func">bold</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;b&gt; tag.</p>
+
+<p class="spaceBelow"><a name="charAt"></a>string <span class="func">charAt</span> (<span class="arg">index</span>:
+<span class="argt">number</span>)<br>
+Returns the character at the specified index.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>index</td><td><a href="pc_number.html">number</a></td><td>An integer between 0 and string.length -1, specifying the character to return.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.charAt(index)</td></tr></table>
+
+<p class="spaceBelow"><a name="charCodeAt"></a>number <span class="func">charCodeAt</span> (<span class="arg">index</span>:
+<span class="argt">number</span>)<br>
+Returns the Unicode value of the character at the given index.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>index</td><td><a href="pc_number.html">number</a></td><td>An integer between 0 and string.length -1, specifying the character.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.charCodeAt(index)</td></tr></table>
+
+<p class="spaceBelow"><a name="concat"></a>string <span class="func">concat</span> (<span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+If necessary, converts the one or more given values to strings.<br>
+Those values are concatenated with the original string, the result is returned. The original string is not effected.  Returns the concatenated string.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td><b>string</b></td><td>The values to be concatenated with the given string.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.concat(value1,...valueN)</td></tr></table>
+
+<p class="spaceBelow"><a name="fixed"></a>string <span class="func">fixed</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;tt&gt; tag.</p>
+
+<p class="spaceBelow"><a name="fontcolor"></a>string <span class="func">fontcolor</span> (<span class="arg">color</span>:
+<span class="argt">string</span>)<br>
+Returns a string consisting of this string enclosed in a &lt;font&gt; tag.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>color</td><td><b>string</b></td><td>The value to be stored in the tag's color attribute.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="fontsize"></a>string <span class="func">fontsize</span> (<span class="arg">size</span>:
+<span class="argt">number</span>)<br>
+Returns a string consisting of this string enclosed in a &lt;font&gt; tag.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>size</td><td><a href="pc_number.html">number</a></td><td>The value to be stored in the tag's size attribute.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="indexOf"></a>number <span class="func">indexOf</span> (<span class="arg">searchValue</span>:
+<span class="argt">string</span>[, <span class="arg">offset</span>:
+<span class="argt">number</span>])<br>
+Returns the index within the string of the first occurrence of the specified string, starting the search at fromIndex if provided.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>searchValue</td><td><b>string</b></td><td>The string for which to search.</td></tr>
+<tr class="lastRow"><td>offset</td><td><a href="pc_number.html">number</a></td><td>The starting offset of the search. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.indexOf(searchValue, fromIndex)</td></tr></table>
+
+<p class="spaceBelow"><a name="italics"></a>string <span class="func">italics</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;i&gt; tag.</p>
+
+<p class="spaceBelow"><a name="lastIndexOf"></a>number <span class="func">lastIndexOf</span> (<span class="arg">searchValue</span>:
+<span class="argt">string</span>[, <span class="arg">offset</span>:
+<span class="argt">number</span>])<br>
+Returns the index within the string of the last occurrence of the specified value.<br>
+The string is searched backward, starting at fromIndex.  Returns the index within the string where the last occurrence of searchValue was found, or -1 if it was not found.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>searchValue</td><td><b>string</b></td><td>The string for which to search.</td></tr>
+<tr class="lastRow"><td>offset</td><td><a href="pc_number.html">number</a></td><td>The starting offset of the search. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.lastIndexOf(searchValue, fromIndex)</td></tr></table>
+
+<p class="spaceBelow"><a name="link"></a>string <span class="func">link</span> (<span class="arg">href</span>:
+<span class="argt">string</span>)<br>
+Returns a string consisting of this string enclosed in a &lt;a&gt; tag.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>href</td><td><b>string</b></td><td>The value to be stored in the tag's href attribute.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="localeCompare"></a>number <span class="func">localeCompare</span> (<span class="arg">what</span>:
+<span class="argt">string</span>)<br>
+Performs a localized comparison of two strings.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>what</td><td><b>string</b></td><td>The string to compare with.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="match"></a><a href="pc_Array.html">Array</a> <span class="func">match</span> (<span class="arg">regexp</span>:
+<a href="pc_RegExp.html">RegExp</a>)<br>
+
+						Matches a string against a regular expression.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>regexp</td><td><a href="pc_RegExp.html">RegExp</a></td><td>The regular expression to use.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="replace"></a>string <span class="func">replace</span> (<span class="arg">what</span>:
+<span class="argt">any</span>, <span class="arg">with</span>:
+<span class="argt">string</span>)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>what</td><td>
+						any
+					</td><td></td></tr>
+<tr class="lastRow"><td>with</td><td><b>string</b></td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="search"></a>number <span class="func">search</span> (<span class="arg">search</span>:
+<a href="pc_RegExp.html">RegExp</a>)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>search</td><td><a href="pc_RegExp.html">RegExp</a></td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="slice"></a>string <span class="func">slice</span> (<span class="arg">startSlice</span>:
+<span class="argt">number</span>[, <span class="arg">endSlice</span>:
+<span class="argt">number</span>])<br>
+Extracts a substring of the given string and returns it as a new string.<br>
+The substring begins at startSlice, and includes all characters up to, but not including the character at the index endSlice.   A negative value indexes from the end of the string.  For example, a negative value for startSlice is resolved as: string. length + startSlice.  The original string is unchanged.  Returns a substring of characters from the given string, starting at startSlice and ending with endSlice-1.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>startSlice</td><td><a href="pc_number.html">number</a></td><td>The index at which to begin extraction.<br></td></tr>
+<tr class="lastRow"><td>endSlice</td><td><a href="pc_number.html">number</a></td><td>The index at which to end extraction.<br>If omitted, slice extracts to the end of the string. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.slice(startSlice, endSlice)</td></tr></table>
+
+<p class="spaceBelow"><a name="small"></a>string <span class="func">small</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;small&gt; tag.</p>
+
+<p class="spaceBelow"><a name="split"></a>string <span class="func">split</span> (<span class="arg">delimiter</span>:
+<span class="argt">string</span>, <span class="arg">limit</span>:
+<span class="argt">number</span>)<br>
+Splits a string into a group of substrings, places those strings in an array, and returns the array.<br>
+The substrings are created by breaking the original string at places that match delimiter, the delimiter characters are removed.  Returns an array whose elements are the substrings.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>delimiter</td><td><b>string</b></td><td>Specifies the string to use for delimiting.<br>If delimiter is omitted, the array returned contains one element, consisting of the entire string.</td></tr>
+<tr class="lastRow"><td>limit</td><td><a href="pc_number.html">number</a></td><td></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.split(delimiter)</td></tr></table>
+
+<p class="spaceBelow"><a name="strike"></a>string <span class="func">strike</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;strike&gt; tag.</p>
+
+<p class="spaceBelow"><a name="sub"></a>string <span class="func">sub</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;sub&gt; tag.</p>
+
+<p class="spaceBelow"><a name="substr"></a>string <span class="func">substr</span> (<span class="arg">start</span>:
+<span class="argt">number</span>, <span class="arg">length</span>:
+<span class="argt">number</span>)<br>
+Returns a string containing the characters beginning at the specified index, start, through the specified number of characters.<br>
+The original string is unchanged.  Returns a string containing the extracted characters.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>start</td><td><a href="pc_number.html">number</a></td><td>Location at which to begin extracting characters.<br></td></tr>
+<tr class="lastRow"><td>length</td><td><a href="pc_number.html">number</a></td><td>(OptIonal) The number of characters to extract.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.substr(start, length)</td></tr></table>
+
+<p class="spaceBelow"><a name="substring"></a>string <span class="func">substring</span> (<span class="arg">indexA</span>:
+<span class="argt">number</span>[, <span class="arg">indexB</span>:
+<span class="argt">number</span>])<br>
+Returns a substring of the given string by extracting characters from indexA up to but not including indexB.<br>
+The original string is unchanged.  Returns a substring of characters from the given string, starting at indexA and ending with indexB-1.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>indexA</td><td><a href="pc_number.html">number</a></td><td>The index to begin extracting.<br></td></tr>
+<tr class="lastRow"><td>indexB</td><td><a href="pc_number.html">number</a></td><td>(Optional) The index at which to end extraction.<br>If omitted, slice extracts to the end of the string.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.substring(indexA, indexB)</td></tr></table>
+
+<p class="spaceBelow"><a name="sup"></a>string <span class="func">sup</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;sup&gt; tag.</p>
+
+<p class="spaceBelow"><a name="toLocaleLowerCase"></a>string <span class="func">toLocaleLowerCase</span> ()<br>
+Returns a new string which contains all the characters of the original string converted to lowercase (localized).<br>
+The original string is unchanged.</p>
+
+<p class="spaceBelow"><a name="toLocaleUpperCase"></a>string <span class="func">toLocaleUpperCase</span> ()<br>
+Returns a new string which contains all the characters of the original string converted to uppercase (localized).<br>
+The original string is unchanged.</p>
+
+<p class="spaceBelow"><a name="toLowerCase"></a>string <span class="func">toLowerCase</span> ()<br>
+Returns a new string which contains all the characters of the original string converted to lowercase.<br>
+The original string is unchanged.</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.toLowerCase()</td></tr></table>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+
+						Creates a string representation of this object that can be fed back to&nbsp;<a href="pc_global.html">eval()</a>&nbsp;to re-create an object. Works only with built-in classes.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Returns itself.</p>
+
+<p class="spaceBelow"><a name="toUpperCase"></a>string <span class="func">toUpperCase</span> ()<br>
+Returns a new string which contains all the characters of the original string converted to uppercase.<br>
+The original string is unchanged.</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.toUpperCase()</td></tr></table>
+
+<p class="spaceBelow"><a name="valueOf"></a>string <span class="func">valueOf</span> ()<br>
+Returns itself.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_AnimationSetting.html">AnimationSetting</a>.preset</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bullet.html">Bullet</a>.bulletsFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bullet.html">Bullet</a>.bulletsFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button.html">Button</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button.html">Button</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button.html">Button</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.appliedCellStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.bottomEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.diagonalLineStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.innerColumnStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.innerRowStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.leftEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.rightEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Cell.html">Cell</a>.topEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.basedOn</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.bottomEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.diagonalLineStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.leftEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.rightEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.topEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGlyphPreference.html">ChangeGlyphPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGlyphPreference.html">ChangeGlyphPreference</a>.fontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.bulletsTextAfter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.changeTo</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.composer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.fontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.kentenCustomCharacter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.kerningMethod</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.markupTag</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.numberingExpression</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.appliedObjectStyles</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.bulletsTextAfter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.changeTo</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.composer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.fontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.kentenCustomCharacter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.kerningMethod</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.markupTag</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.numberingExpression</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.bulletsTextAfter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.composer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.fontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.kentenCustomCharacter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.kerningMethod</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.markupTag</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.numberingExpression</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChapterNumberPreference.html">ChapterNumberPreference</a>.chapterNumberFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.basedOn</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.fontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.kentenCustomCharacter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.kerningMethod</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CheckBox.html">CheckBox</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CheckBox.html">CheckBox</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CheckBox.html">CheckBox</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.bottomEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.diagonalLineStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.innerColumnStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.innerRowStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.leftEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.rightEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Column.html">Column</a>.topEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ComboBox.html">ComboBox</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ComboBox.html">ComboBox</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ComboBox.html">ComboBox</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CompositeFontEntry.html">CompositeFontEntry</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CustomTextVariablePreference.html">CustomTextVariablePreference</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DTD.html">DTD</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Document.html">Document</a>.activeLayer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPS.html">EPS</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPS.html">EPS</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPS.html">EPS</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPSExportPreference.html">EPSExportPreference</a>.pageRange</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPSText.html">EPSText</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPSText.html">EPSText</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPSText.html">EPSText</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.textselection</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.eventPhase</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGlyphPreference.html">FindGlyphPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGlyphPreference.html">FindGlyphPreference</a>.fontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.bulletsTextAfter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.composer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.findWhat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.fontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.kentenCustomCharacter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.kerningMethod</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.numberingExpression</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.appliedObjectStyles</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.bulletsTextAfter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.composer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.findWhat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.fontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.kentenCustomCharacter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.kerningMethod</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.numberingExpression</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.bulletsTextAfter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.composer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.fontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.kentenCustomCharacter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.kerningMethod</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.numberingExpression</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Footnote.html">Footnote</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.continuingRuleColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.continuingRuleGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.continuingRuleType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.footnoteNumberingStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.markerPositioning</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.restartNumbering</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.ruleColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.ruleGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.ruleType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FootnoteOption.html">FootnoteOption</a>.showPrefixSuffix</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FormField.html">FormField</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FormField.html">FormField</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FormField.html">FormField</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Graphic.html">Graphic</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Graphic.html">Graphic</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Graphic.html">Graphic</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GraphicLine.html">GraphicLine</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GraphicLine.html">GraphicLine</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GraphicLine.html">GraphicLine</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GridDataInformation.html">GridDataInformation</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group.html">Group</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group.html">Group</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group.html">Group</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.alignChildren</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.orientation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_HtmlItem.html">HtmlItem</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_HtmlItem.html">HtmlItem</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_HtmlItem.html">HtmlItem</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Image.html">Image</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Image.html">Image</a>.profile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Image.html">Image</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Image.html">Image</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ImportedPage.html">ImportedPage</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ImportedPage.html">ImportedPage</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ImportedPage.html">ImportedPage</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IndexOptions.html">IndexOptions</a>.titleStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InteractivePDFExportPreference.html">InteractivePDFExportPreference</a>.pageRange</p>
+</p>
+<p><p class="hangIndent"><a href="pc_KeyboardState.html">KeyboardState</a>.keyName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_LayoutGridDataInformation.html">LayoutGridDataInformation</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_LayoutWindow.html">LayoutWindow</a>.activeLayer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox.html">ListBox</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox.html">ListBox</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox.html">ListBox</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MatchCharacterStylePreference.html">MatchCharacterStylePreference</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MatchParagraphStylePreference.html">MatchParagraphStylePreference</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MediaItem.html">MediaItem</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MediaItem.html">MediaItem</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MediaItem.html">MediaItem</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Movie.html">Movie</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Movie.html">Movie</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Movie.html">Movie</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MultiStateObject.html">MultiStateObject</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MultiStateObject.html">MultiStateObject</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MultiStateObject.html">MultiStateObject</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_NestedGrepStyle.html">NestedGrepStyle</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_NestedLineStyle.html">NestedLineStyle</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_NestedStyle.html">NestedStyle</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_NestedStyle.html">NestedStyle</a>.delimiter</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ObjectStyle.html">ObjectStyle</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ObjectStyle.html">ObjectStyle</a>.basedOn</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ObjectStyle.html">ObjectStyle</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ObjectStyle.html">ObjectStyle</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ObjectStyle.html">ObjectStyle</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Oval.html">Oval</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Oval.html">Oval</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Oval.html">Oval</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDF.html">PDF</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDF.html">PDF</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDF.html">PDF</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreference.html">PDFExportPreference</a>.effectivePDFDestinationProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreference.html">PDFExportPreference</a>.effectivePDFXProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreference.html">PDFExportPreference</a>.pageRange</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreference.html">PDFExportPreference</a>.pdfDestinationProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreference.html">PDFExportPreference</a>.pdfMarkType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreference.html">PDFExportPreference</a>.pdfXProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreset.html">PDFExportPreset</a>.effectivePDFDestinationProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreset.html">PDFExportPreset</a>.effectivePDFXProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreset.html">PDFExportPreset</a>.pdfDestinationProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreset.html">PDFExportPreset</a>.pdfMarkType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreset.html">PDFExportPreset</a>.pdfXProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PICT.html">PICT</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PICT.html">PICT</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PICT.html">PICT</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Page.html">Page</a>.appliedTrapPreset</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItemDefault.html">PageItemDefault</a>.appliedGraphicObjectStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItemDefault.html">PageItemDefault</a>.appliedGridObjectStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItemDefault.html">PageItemDefault</a>.appliedTextObjectStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItemDefault.html">PageItemDefault</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItemDefault.html">PageItemDefault</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItemDefault.html">PageItemDefault</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.alignChildren</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.orientation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.basedOn</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Polygon.html">Polygon</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Polygon.html">Polygon</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Polygon.html">Polygon</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PreflightBookOption.html">PreflightBookOption</a>.preflightScope</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PreflightBookOption.html">PreflightBookOption</a>.preflightWorkingProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PreflightOption.html">PreflightOption</a>.preflightScope</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PreflightOption.html">PreflightOption</a>.preflightWorkingProfile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintBookletOption.html">PrintBookletOption</a>.pageRange</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintBookletPrintPreference.html">PrintBookletPrintPreference</a>.crd</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintBookletPrintPreference.html">PrintBookletPrintPreference</a>.markType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintBookletPrintPreference.html">PrintBookletPrintPreference</a>.paperSize</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintBookletPrintPreference.html">PrintBookletPrintPreference</a>.ppd</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintBookletPrintPreference.html">PrintBookletPrintPreference</a>.printer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintBookletPrintPreference.html">PrintBookletPrintPreference</a>.profile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintBookletPrintPreference.html">PrintBookletPrintPreference</a>.screening</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.crd</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.markType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.pageRange</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.paperSize</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.ppd</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.printer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.profile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.screening</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrinterPreset.html">PrinterPreset</a>.crd</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrinterPreset.html">PrinterPreset</a>.markType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrinterPreset.html">PrinterPreset</a>.paperSize</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrinterPreset.html">PrinterPreset</a>.ppd</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrinterPreset.html">PrinterPreset</a>.printer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrinterPreset.html">PrinterPreset</a>.profile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrinterPreset.html">PrinterPreset</a>.screening</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton.html">RadioButton</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton.html">RadioButton</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton.html">RadioButton</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Rectangle.html">Rectangle</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Rectangle.html">Rectangle</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Rectangle.html">Rectangle</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.bottomEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.diagonalLineStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.innerColumnStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.innerRowStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.leftEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.rightEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Row.html">Row</a>.topEdgeStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RuleDataObject.html">RuleDataObject</a>.dataValue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SWFExportPreference.html">SWFExportPreference</a>.pageRange</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUI.html">ScriptUI</a>.Alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUI.html">ScriptUI</a>.coreVersion</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUI.html">ScriptUI</a>.frameworkName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a>.theme</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a>.family</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a>.name</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a>.substitute</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIImage.html">ScriptUIImage</a>.format</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIImage.html">ScriptUIImage</a>.name</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIImage.html">ScriptUIImage</a>.pathname</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIPen.html">ScriptUIPen</a>.theme</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIPen.html">ScriptUIPen</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Section.html">Section</a>.pageNumberStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SignatureField.html">SignatureField</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SignatureField.html">SignatureField</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SignatureField.html">SignatureField</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Sound.html">Sound</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Sound.html">Sound</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Sound.html">Sound</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SplineItem.html">SplineItem</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SplineItem.html">SplineItem</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SplineItem.html">SplineItem</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StoryGridDataInformation.html">StoryGridDataInformation</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StrokeFillProxySetting.html">StrokeFillProxySetting</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StrokeFillProxySetting.html">StrokeFillProxySetting</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TOCStyleEntry.html">TOCStyleEntry</a>.formatStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TOCStyleEntry.html">TOCStyleEntry</a>.pageNumberStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TOCStyleEntry.html">TOCStyleEntry</a>.separatorStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.appliedTableStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.bottomBorderStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.endColumnLineStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.endRowStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.leftBorderStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.rightBorderStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.startColumnStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.startRowStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Table.html">Table</a>.topBorderStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.basedOn</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.bodyRegionCellStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.bottomBorderStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.endColumnLineStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.endRowStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.footerRegionCellStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.headerRegionCellStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.leftBorderStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.leftColumnRegionCellStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.rightBorderStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.rightColumnRegionCellStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.startColumnStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.startRowStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a>.topBorderStrokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextBox.html">TextBox</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextBox.html">TextBox</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextBox.html">TextBox</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextPath.html">TextPath</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.eventPhase</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_WMF.html">WMF</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_WMF.html">WMF</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_WMF.html">WMF</a>.strokeType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.alignChildren</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.frameworkName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.orientation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.underlineType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XFLExportPreference.html">XFLExportPreference</a>.pageRange</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLElement.html">XMLElement</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLElement.html">XMLElement</a>.markupTag</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLExportMap.html">XMLExportMap</a>.mappedStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLExportMap.html">XMLExportMap</a>.markupTag</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLImportMap.html">XMLImportMap</a>.mappedStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLImportMap.html">XMLImportMap</a>.markupTag</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.appliedCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.appliedFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.appliedLanguage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.appliedNumberingList</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.appliedParagraphStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.bulletsCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.contents</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.dropCapStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.fillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.kentenFillColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.kentenFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.kentenFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.kentenStrokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.kinsokuSet</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.mojikumi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.numberingCharacterStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.numberingFormat</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.rubyFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.rubyFont</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.rubyFontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.rubyStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.ruleAboveColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.ruleAboveGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.ruleAboveType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.ruleBelowColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.ruleBelowGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.ruleBelowType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.strikeThroughColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.strikeThroughGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.strikeThroughType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.strokeColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.underlineColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.underlineGapColor</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.underlineType</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Button (SUI).html#addEventListener">Button.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Button (SUI).html#notify">Button.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Button (SUI).html#removeEventListener">Button.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Checkbox (SUI).html#addEventListener">Checkbox.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Checkbox (SUI).html#notify">Checkbox.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Checkbox (SUI).html#removeEventListener">Checkbox.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_DropDownList.html#add">DropDownList.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">text</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_DropDownList.html#addEventListener">DropDownList.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_DropDownList.html#find">DropDownList.find</a>
+		(<span class="arg">text</span>:
+<b>String</b>)
+</p><p class="hangIndent">void <a href="pc_DropDownList.html#notify">DropDownList.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_DropDownList.html#removeEventListener">DropDownList.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_EditText.html#addEventListener">EditText.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_EditText.html#notify">EditText.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_EditText.html#removeEventListener">EditText.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Event (SUI).html">Event (SUI)</a> <a href="pc_Events (SUI).html#createEvent">Events.createEvent</a>
+		(<span class="arg">eventType</span>:
+<b>String</b>)
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_FlashPlayer.html#addEventListener">FlashPlayer.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">Any <a href="pc_FlashPlayer.html#invokePlayerFunction">FlashPlayer.invokePlayerFunction</a>
+		(<span class="arg">name</span>:
+<b>String</b>[, <span class="arg">argument</span>:
+<span class="argt">Any</span>])
+</p><p class="hangIndent">void <a href="pc_FlashPlayer.html#notify">FlashPlayer.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_FlashPlayer.html#removeEventListener">FlashPlayer.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Object.html">Object</a> <a href="pc_Group (SUI).html#add">Group.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<b>String</b>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Group (SUI).html#addEventListener">Group.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Group (SUI).html#removeEventListener">Group.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_IconButton.html#addEventListener">IconButton.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_IconButton.html#notify">IconButton.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_IconButton.html#removeEventListener">IconButton.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_ListBox (SUI).html#add">ListBox.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">text</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_ListBox (SUI).html#addEventListener">ListBox.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_ListBox (SUI).html#find">ListBox.find</a>
+		(<span class="arg">text</span>:
+<b>String</b>)
+</p><p class="hangIndent">void <a href="pc_ListBox (SUI).html#notify">ListBox.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_ListBox (SUI).html#removeEventListener">ListBox.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Object.html">Object</a> <a href="pc_Panel (SUI).html#add">Panel.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<b>String</b>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Panel (SUI).html#addEventListener">Panel.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Panel (SUI).html#removeEventListener">Panel.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Progressbar.html#addEventListener">Progressbar.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Progressbar.html#removeEventListener">Progressbar.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_RadioButton (SUI).html#addEventListener">RadioButton.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_RadioButton (SUI).html#notify">RadioButton.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_RadioButton (SUI).html#removeEventListener">RadioButton.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>String</b> <a href="pc_ScriptUI.html#getResourceText">ScriptUI.getResourceText</a>
+		(<span class="arg">text</span>:
+<b>String</b>)
+</p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a> <a href="pc_ScriptUI.html#newFont">ScriptUI.newFont</a>
+		(<span class="arg">name</span>:
+<b>String</b>, <span class="arg">style</span>:
+<b>String</b> | <a href="pc_Number.html">Number</a>, <span class="arg">size</span>:
+<a href="pc_Number.html">Number</a>)
+</p><p class="hangIndent"><a href="pc_ScriptUIImage.html">ScriptUIImage</a> <a href="pc_ScriptUI.html#newImage">ScriptUI.newImage</a>
+		(<span class="arg">normal</span>:
+<b>String</b>[, <span class="arg">disabled</span>:
+<b>String</b>][, <span class="arg">pressed</span>:
+<b>String</b>][, <span class="arg">rollover</span>:
+<b>String</b>])
+</p><p class="hangIndent">void <a href="pc_ScriptUIGraphics.html#drawString">ScriptUIGraphics.drawString</a>
+		(<span class="arg">text</span>:
+<b>String</b>, <span class="arg">pen</span>:
+<a href="pc_ScriptUIPen.html">ScriptUIPen</a>, <span class="arg">x</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">y</span>:
+<a href="pc_Number.html">Number</a>[, <span class="arg">font</span>:
+<a href="pc_ScriptUIFont.html">ScriptUIFont</a>])
+</p><p class="hangIndent"><a href="pc_Dimension.html">Dimension</a> <a href="pc_ScriptUIGraphics.html#measureString">ScriptUIGraphics.measureString</a>
+		(<span class="arg">text</span>:
+<b>String</b>[, <span class="arg">font</span>:
+<a href="pc_ScriptUIFont.html">ScriptUIFont</a>][, <span class="arg">boundingWidth</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent"><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a> <a href="pc_ScriptUIGraphics.html#newBrush">ScriptUIGraphics.newBrush</a>
+		(<span class="arg">type</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">color</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a> | <b>String</b>)
+</p><p class="hangIndent"><a href="pc_ScriptUIPen.html">ScriptUIPen</a> <a href="pc_ScriptUIGraphics.html#newPen">ScriptUIGraphics.newPen</a>
+		(<span class="arg">type</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">color</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a> | <b>String</b>, <span class="arg">width</span>:
+<a href="pc_Number.html">Number</a>)
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Scrollbar.html#addEventListener">Scrollbar.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Scrollbar.html#notify">Scrollbar.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Scrollbar.html#removeEventListener">Scrollbar.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Slider.html#addEventListener">Slider.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Slider.html#notify">Slider.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Slider.html#removeEventListener">Slider.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_StaticText (SUI).html#addEventListener">StaticText.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_StaticText (SUI).html#notify">StaticText.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_StaticText (SUI).html#removeEventListener">StaticText.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_TreeView.html#add">TreeView.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">text</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_TreeView.html#addEventListener">TreeView.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_TreeView.html#find">TreeView.find</a>
+		(<span class="arg">text</span>:
+<b>String</b>)
+</p><p class="hangIndent">void <a href="pc_TreeView.html#notify">TreeView.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_TreeView.html#removeEventListener">TreeView.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a> <a href="pc_UIEvent.html#UIEvent">UIEvent.UIEvent</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<a href="pc_Object.html">Object</a>][, <span class="arg">detail</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent">void <a href="pc_UIEvent.html#initEvent">UIEvent.initEvent</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">cancelable</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_UIEvent.html#initUIEvent">UIEvent.initUIEvent</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<a href="pc_Object.html">Object</a>][, <span class="arg">detail</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent">void <a href="pc_Window (SUI).html#Window">Window.Window</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">title</span>:
+<b>String</b>][, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Object.html">Object</a> <a href="pc_Window (SUI).html#add">Window.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<b>String</b>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Window (SUI).html#addEventListener">Window.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Window (SUI).html#alert">Window.alert</a>
+		(<span class="arg">message</span>:
+<b>String</b>[, <span class="arg">title</span>:
+<b>String</b>][, <span class="arg">errorIcon</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Window (SUI).html#confirm">Window.confirm</a>
+		(<span class="arg">message</span>:
+<b>String</b>[, <span class="arg">noAsDefault</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">title</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Window.html">Window</a> <a href="pc_Window (SUI).html#find">Window.find</a>
+		(<span class="arg">type</span>:
+<b>String</b>, <span class="arg">title</span>:
+<b>String</b>)
+</p><p class="hangIndent">void <a href="pc_Window (SUI).html#notify">Window.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><b>String</b> <a href="pc_Window (SUI).html#prompt">Window.prompt</a>
+		(<span class="arg">prompt</span>:
+<b>String</b>[, <span class="arg">default</span>:
+<b>String</b>][, <span class="arg">title</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Window (SUI).html#removeEventListener">Window.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>String</b> <a href="pc_ScriptUI.html#getResourceText">ScriptUI.getResourceText</a> (<span class="arg">text</span>:
+<b>String</b>)
+</p>
+<p class="hangIndent"><b>String</b> <b>String</b>.<a href="pc_String.html#String">String</a> (<span class="arg">value</span>:
+<span class="argt">any</span>)
+</p>
+<p class="hangIndent"><b>String</b> <b>String</b>.<a href="pc_String.html#fromCharCode">fromCharCode</a> (<span class="arg">value1</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>String</b> <a href="pc_Window (SUI).html#prompt">Window (SUI).prompt</a> (<span class="arg">prompt</span>:
+<b>String</b>[, <span class="arg">default</span>:
+<b>String</b>][, <span class="arg">title</span>:
+<b>String</b>])
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

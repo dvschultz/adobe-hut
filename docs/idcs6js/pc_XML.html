@@ -1,0 +1,396 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: XML</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, xml">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>XML</h1></td></tr>
+<tr><td>&nbsp;</td><td>Wraps XML into an object.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#XML" title="Parses an XML string. Throws an error if the XML is incorrect.">XML</a>, <a href="#addNamespace" title="Adds a namespace declaration to the node. Returns the XML object itself.">addNamespace</a>, <a href="#appendChild" title="Appends the given XML to this XML as a child. Returns the XML object itself.">appendChild</a>, <a href="#attribute" title="Returns a list containing all attribute elements matching the given name.">attribute</a>, <a href="#attributes" title="Returns a list containing all attribute elements.">attributes</a>, <a href="#child" title="Returns a list containing all children of this XML matching the given element name.">child</a>, <a href="#childIndex" title="Returns a number representing the ordinal position of this XML object within the context of its parent.">childIndex</a>, <a href="#children" title="Returns an XML object containing all the properties of this XML object in order.">children</a>, <a href="#comments" title="Returns an XML object containing the properties of this XML object that represent XML comments.">comments</a>, <a href="#contains" title="Checks if this XML object contains the given XML object.">contains</a>, <a href="#copy" title="Creates a copy of this XML object.">copy</a>, <a href="#defaultSettings" title="Returns an object containing the default parsing and print settings for XML.">defaultSettings</a>, <a href="#descendants" title="Returns all the XML-valued descendants of this XML object with the given name.">descendants</a>, <a href="#elements" title="Returns a list of XML children that are elements with a given name, or all children that are XML elements.">elements</a>, <a href="#hasComplexContent" title="Reports whether this XML object contains complex content.">hasComplexContent</a>, <a href="#hasSimpleContent" title="Reports whether this XML object contains simple content.">hasSimpleContent</a>, <a href="#inScopeNamespaces" title="Returns an array of Namespace objects mirroring the current list of valid namespaces at this element.">inScopeNamespaces</a>, <a href="#insertChildAfter" title="Inserts the given child2 after the given child1 in this XML object and returns this XML object.">insertChildAfter</a>, <a href="#insertChildBefore" title="Inserts the given child2 before the given child1 in this XML object and returns this XML object.">insertChildBefore</a>, <a href="#length" title="Returns the number of elements contained in an XML list. If this XML object is not a list, returns 1.">length</a>, <a href="#localName" title="Returns the local name of this XML object.">localName</a>, <a href="#name" title="Returns a QName object containing the URI and the local name of the element.">name</a>, <a href="#namespace" title="Returns a Namespace object containing the namespace URI of the current element.">namespace</a>, <a href="#namespaceDeclarations" title="Returns an array containing all namespace declarations of this XML object.">namespaceDeclarations</a>, <a href="#nodeKind" title="Returns the type of this XML object as one of the strings &#34;element&#34;, &#34;attribute&#34;, &#34;comment&#34;, &#34;processing-instruction&#34;, or &#34;text&#34;.">nodeKind</a>, <a href="#normalize" title="Puts all text nodes in this and all descendant XML objects into a normal form by merging adjacent text nodes and eliminating empty text nodes. Returns this XML object.">normalize</a>, <a href="#parent" title="Returns the parent object of this XML object.">parent</a>, <a href="#prependChild" title="Inserts a given child into this object before its existing XML properties, and returns this XML object.">prependChild</a>, <a href="#processingInstructions" title="Returns a list of preprocessing instructions.">processingInstructions</a>, <a href="#removeNamespace" title="Removes the given namespace from this XML, and returns this XML.">removeNamespace</a>, <a href="#replace" title="Replaces the value of specified XML properties of this XML object returns this XML object.">replace</a>, <a href="#setChildren" title="Replaces all of the XML-valued properties in this object with a new value, and returns this XML object.">setChildren</a>, <a href="#setLocalName" title="Replaces the local name of this XML object with a string constructed from the given name">setLocalName</a>, <a href="#setName" title="Replaces the name of this XML object with the given QName object.">setName</a>, <a href="#setNamespace" title="Sets the namespace for this XML element.">setNamespace</a>, <a href="#setSettings" title="Sets the parsing and print setting for XML using an object returned by the settings() method.">setSettings</a>, <a href="#settings" title="Returns an object containing the current parsing and print settings for XML.">settings</a>, <a href="#text" title="Returns an XML list containing all XML properties of this XML object that represent XML text nodes.">text</a>, <a href="#toString" title="Returns the string representation of this object.">toString</a>, <a href="#toXMLString" title="Returns an XML-encoded string representation of this XML object.">toXMLString</a>, <a href="#xpath" title="Evaluates the given XPath expression in accordance with the W3C XPath recommendation, using this XML object as the context node.">xpath</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="ignoreComments"></a>ignoreComments</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Controls whether XML comments should be parsed (false) or ignored (true). (default: <b>true</b>)</td></tr>
+<tr><td><a name="ignoreProcessingInstructions"></a>ignoreProcessingInstructions</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Controls whether XML preprocessing instructions should be parsed (false) or ignored (true). (default: <b>true</b>)</td></tr>
+<tr><td><a name="ignoreWhitespace"></a>ignoreWhitespace</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Controls whether whitespace should be parsed (false) or ignored (true). (default: <b>true</b>)</td></tr>
+<tr><td><a name="prettyIndent"></a>prettyIndent</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of spaces used to indent pretty-printed XML. (default: <b>2</b>)</td></tr>
+<tr class="lastRow"><td><a name="prettyPrinting"></a>prettyPrinting</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>When true, XML is pretty-printed when converting to a string. (default: <b>true</b>)</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="XML"></a><a href="pc_XML.html">XML</a> <span class="func">XML</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Parses an XML string. Throws an error if the XML is incorrect.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>The text to parse.</td></tr>
+</table>
+</p>
+
+<h4>Class</h4><p class="spaceBelow"><a name="defaultSettings"></a><a href="pc_Object.html">Object</a> <span class="func">defaultSettings</span> ()<br>
+Returns an object containing the default parsing and print settings for XML.</p>
+
+<p class="spaceBelow"><a name="setSettings"></a><span class="rett">void</span>  <span class="func">setSettings</span> (<span class="arg">obj</span>:
+<a href="pc_Object.html">Object</a>)<br>
+
+						Sets the parsing and print setting for XML using an object returned by the <a href="pc_XML.html#settings">settings()</a> method.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>obj</td><td><a href="pc_Object.html">Object</a></td><td>The object containing the settings to set.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="settings"></a><a href="pc_Object.html">Object</a> <span class="func">settings</span> ()<br>
+Returns an object containing the current parsing and print settings for XML.</p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="addNamespace"></a><a href="pc_XML.html">XML</a> <span class="func">addNamespace</span> (<span class="arg">namespace</span>:
+<a href="pc_Namespace.html">Namespace</a>)<br>
+Adds a namespace declaration to the node. Returns the XML object itself.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>namespace</td><td><a href="pc_Namespace.html">Namespace</a></td><td>The namespace to add.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="appendChild"></a><a href="pc_XML.html">XML</a> <span class="func">appendChild</span> (<span class="arg">child</span>:
+<b>XML</b>)<br>
+Appends the given XML to this XML as a child. Returns the XML object itself.<br>
+If the argument is not XML, creates a new XML element containing the argument as text. The element name of that new XML is the same as the last element in the original XML.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>child</td><td><span class="rett">XML</span></td><td>The child XML to add.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="attribute"></a><a href="pc_XML.html">XML</a> <span class="func">attribute</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Returns a list containing all attribute elements matching the given name.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The attribute name to look for.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="attributes"></a><a href="pc_XML.html">XML</a> <span class="func">attributes</span> ()<br>
+Returns a list containing all attribute elements.</p>
+
+<p class="spaceBelow"><a name="child"></a><a href="pc_XML.html">XML</a> <span class="func">child</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Returns a list containing all children of this XML matching the given element name.<br>
+If the argument is a number, uses the number as index into the array of children.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The name or the index of the child element.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="childIndex"></a>number <span class="func">childIndex</span> ()<br>
+Returns a number representing the ordinal position of this XML object within the context of its parent.</p>
+
+<p class="spaceBelow"><a name="children"></a><a href="pc_XML.html">XML</a> <span class="func">children</span> ()<br>
+Returns an XML object containing all the properties of this XML object in order.</p>
+
+<p class="spaceBelow"><a name="comments"></a><a href="pc_XML.html">XML</a> <span class="func">comments</span> ()<br>
+Returns an XML object containing the properties of this XML object that represent XML comments.</p>
+
+<p class="spaceBelow"><a name="contains"></a><a href="pc_Boolean.html">bool</a>  <span class="func">contains</span> (<span class="arg">xml</span>:
+<b>XML</b>)<br>
+Checks if this XML object contains the given XML object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>xml</td><td><span class="rett">XML</span></td><td>The XML to search for.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="copy"></a><a href="pc_XML.html">XML</a> <span class="func">copy</span> ()<br>
+Creates a copy of this XML object.</p>
+
+<p class="spaceBelow"><a name="descendants"></a><a href="pc_XML.html">XML</a> <span class="func">descendants</span> ([<span class="arg">name</span>:
+<span class="argt">string</span>])<br>
+Returns all the XML-valued descendants of this XML object with the given name.<br>
+If the name parameter is omitted, returns all descendants of this XML object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The name of the descendant to find. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="elements"></a><a href="pc_XML.html">XML</a> <span class="func">elements</span> ([<span class="arg">name</span>:
+<span class="argt">string</span>])<br>
+Returns a list of XML children that are elements with a given name, or all children that are XML elements.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The element name. If not supplied, gets all children that are XML elements. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="hasComplexContent"></a><a href="pc_Boolean.html">bool</a>  <span class="func">hasComplexContent</span> ()<br>
+Reports whether this XML object contains complex content.<br>
+An XML object is considered to contain complex content if it represents an XML element that has child elements. XML objects representing attributes, comments, processing instructions and text nodes do not have complex content. The existence of attributes, comments, processing instructions and text nodes within an XML object is not significant in determining if it has complex content.</p>
+
+<p class="spaceBelow"><a name="hasSimpleContent"></a><a href="pc_Boolean.html">bool</a>  <span class="func">hasSimpleContent</span> ()<br>
+Reports whether this XML object contains simple content.<br>
+An XML object is considered to contain simple content if it represents a text node, represents an attribute node or if it represents an XML element that has no child elements. XML objects representing comments and processing instructions do not have simple content. The existence of attributes, comments, processing instructions and text nodes within an XML object is not significant in determining if it has simple content.</p>
+
+<p class="spaceBelow"><a name="inScopeNamespaces"></a><a href="pc_Array.html">Array</a> <span class="func">inScopeNamespaces</span> ()<br>
+
+						Returns an array of <a href="pc_Namespace.html">Namespace</a> objects mirroring the current list of valid namespaces at this element.
+					<br>
+The last element of the  returned array is the default namespace.</p>
+
+<p class="spaceBelow"><a name="insertChildAfter"></a><span class="rett">void</span>  <span class="func">insertChildAfter</span> (<span class="arg">child1</span>:
+<b>XML</b>, <span class="arg">child2</span>:
+<b>XML</b>)<br>
+Inserts the given child2 after the given child1 in this XML object and returns this XML object.<br>
+If child1 is null, the method inserts child2 before all children of this XML object (that is, after none of them). If child1 does not exist in this XML object, the method returns without modifying this XML object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>child1</td><td><span class="rett">XML</span></td><td>The child to insert the other child after.<br>If null, the method inserts child2 before all children of this XML object.</td></tr>
+<tr class="lastRow"><td>child2</td><td><span class="rett">XML</span></td><td>The XML to insert.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="insertChildBefore"></a><span class="rett">void</span>  <span class="func">insertChildBefore</span> (<span class="arg">child1</span>:
+<b>XML</b>, <span class="arg">child2</span>:
+<b>XML</b>)<br>
+Inserts the given child2 before the given child1 in this XML object and returns this XML object.<br>
+If child1 is null, the method inserts child2 after all children of this XML object (that is, before none of them). If child1 does not exist in this XML object, the method returns without modifying this XML object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>child1</td><td><span class="rett">XML</span></td><td>The child to search for.<br>If null, the method inserts child2 after all children of this XML object.</td></tr>
+<tr class="lastRow"><td>child2</td><td><span class="rett">XML</span></td><td>The XML to insert.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="length"></a>number <span class="func">length</span> ()<br>
+Returns the number of elements contained in an XML list. If this XML object is not a list, returns 1.</p>
+
+<p class="spaceBelow"><a name="localName"></a>string <span class="func">localName</span> ()<br>
+Returns the local name of this XML object.<br>
+This value corresponds to the element name unless the name has a namespace prefix. For example, if the element has the name "ns:tag", the return value is "tag".</p>
+
+<p class="spaceBelow"><a name="name"></a><a href="pc_QName.html">QName</a> <span class="func">name</span> ()<br>
+Returns a QName object containing the URI and the local name of the element.</p>
+
+<p class="spaceBelow"><a name="namespace"></a><a href="pc_Namespace.html">Namespace</a> <span class="func">namespace</span> ()<br>
+Returns a Namespace object containing the namespace URI of the current element.</p>
+
+<p class="spaceBelow"><a name="namespaceDeclarations"></a><a href="pc_Array.html">Array</a> <span class="func">namespaceDeclarations</span> ()<br>
+Returns an array containing all namespace declarations of this XML object.</p>
+
+<p class="spaceBelow"><a name="nodeKind"></a>string <span class="func">nodeKind</span> ()<br>
+Returns the type of this XML object as one of the strings "element", "attribute", "comment", "processing-instruction", or "text".</p>
+
+<p class="spaceBelow"><a name="normalize"></a><a href="pc_XML.html">XML</a> <span class="func">normalize</span> ()<br>
+Puts all text nodes in this and all descendant XML objects into a normal form by merging adjacent text nodes and eliminating empty text nodes. Returns this XML object.</p>
+
+<p class="spaceBelow"><a name="parent"></a><a href="pc_XML.html">XML</a> <span class="func">parent</span> ()<br>
+Returns the parent object of this XML object.<br>
+The root object, as returned by the XML constructor, does not have a parent and returns null. Note that the E4X standard does not define what happens if this XML object is a list containing elements with multiple parents.</p>
+
+<p class="spaceBelow"><a name="prependChild"></a><a href="pc_XML.html">XML</a> <span class="func">prependChild</span> (<span class="arg">child</span>:
+<b>XML</b>)<br>
+Inserts a given child into this object before its existing XML properties, and returns this XML object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>child</td><td><span class="rett">XML</span></td><td>The XML to insert.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="processingInstructions"></a><a href="pc_XML.html">XML</a> <span class="func">processingInstructions</span> ([<span class="arg">name</span>:
+<span class="argt">string</span>])<br>
+Returns a list of preprocessing instructions.<br>
+Collects processing-instructions with the given name, if supplied. Otherwise, returns an XML list containing all the children of this XML object that are processing-instructions regardless of their name.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The name of the preprocessing instruction to return. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="removeNamespace"></a><a href="pc_XML.html">XML</a> <span class="func">removeNamespace</span> (<span class="arg">namespace</span>:
+<a href="pc_Namespace.html">Namespace</a>)<br>
+Removes the given namespace from this XML, and returns this XML.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>namespace</td><td><a href="pc_Namespace.html">Namespace</a></td><td>The namespace to remove.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="replace"></a><a href="pc_XML.html">XML</a> <span class="func">replace</span> (<span class="arg">name</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<b>XML</b>)<br>
+Replaces the value of specified XML properties of this XML object returns this XML object. <br>
+
+						This method acts like the assignment operator.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>name</td><td><a href="pc_string.html">string</a></td><td>The property name.<br>Can be a numeric property name, a name for a set of XML elements, or the properties wildcard ‚Äú*‚Äù. If this XML object contains no properties that match the name, the method returns without modifying this XML object.  </td></tr>
+<tr class="lastRow"><td>value</td><td><span class="rett">XML</span></td><td>The XML with which to replace the value of the matching property.<br>Can be an XML object, XML list or any value that can be converted to a String with toString().</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setChildren"></a><a href="pc_XML.html">XML</a> <span class="func">setChildren</span> (<span class="arg">value</span>:
+<b>XML</b>)<br>
+Replaces all of the XML-valued properties in this object with a new value, and returns this XML object. 
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td><span class="rett">XML</span></td><td>The new value, which can be a single XML object or an XML list.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setLocalName"></a><span class="rett">void</span>  <span class="func">setLocalName</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Replaces the local name of this XML object  with a string constructed from the given name<br>
+The local name is any part behind a colon character. If there is no colon, it is the entire name.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The name to set.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setName"></a><span class="rett">void</span>  <span class="func">setName</span> (<span class="arg">name</span>:
+<a href="pc_QName.html">QName</a>)<br>
+Replaces the name of this XML object with the given QName object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_QName.html">QName</a></td><td>The fully qualified name.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setNamespace"></a><span class="rett">void</span>  <span class="func">setNamespace</span> (<span class="arg">namespace</span>:
+<a href="pc_Namespace.html">Namespace</a>)<br>
+Sets the namespace for this XML element. <br>
+If the namespace has not been declared in the tree above this element, adds a namespace declaration.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>namespace</td><td><a href="pc_Namespace.html">Namespace</a></td><td>The namespace to set.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="text"></a><a href="pc_XML.html">XML</a> <span class="func">text</span> ()<br>
+Returns an XML list containing all XML properties of this XML object that represent XML text nodes.</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Returns the string representation of this object.<br>
+For text and attribute nodes, this is the textual value of the node; for other elements, this is the result of calling the toXMLString() method. If this XML object is a list, concatenates the result of calling toString() on each element.</p>
+
+<p class="spaceBelow"><a name="toXMLString"></a>string <span class="func">toXMLString</span> ()<br>
+Returns an XML-encoded string representation of this XML object.<br>
+
+						Always includes the start tag, attributes and end tag of the XML object regardless of its content. It is provided for cases when the default XML to string conversion rules are not desired. Interprets the global settings <a href="pc_XML.html">XML.prettyPrint</a> and <a href="pc_XML.html">XML.prettyIndent</a>.
+					</p>
+
+<p class="spaceBelow"><a name="xpath"></a><a href="pc_XML.html">XML</a> <span class="func">xpath</span> (<span class="arg">expr</span>:
+<span class="argt">string</span>)<br>
+Evaluates the given XPath expression in accordance with the W3C XPath recommendation, using this XML object as the context node.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>expr</td><td><a href="pc_string.html">string</a></td><td>The XPath expression to use.</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>XML</b> <a href="pc_XML.html#appendChild">XML.appendChild</a>
+		(<span class="arg">child</span>:
+<b>XML</b>)
+</p><p class="hangIndent">bool <a href="pc_XML.html#contains">XML.contains</a>
+		(<span class="arg">xml</span>:
+<b>XML</b>)
+</p><p class="hangIndent">void <a href="pc_XML.html#insertChildAfter">XML.insertChildAfter</a>
+		(<span class="arg">child1</span>:
+<b>XML</b>, <span class="arg">child2</span>:
+<b>XML</b>)
+</p><p class="hangIndent">void <a href="pc_XML.html#insertChildBefore">XML.insertChildBefore</a>
+		(<span class="arg">child1</span>:
+<b>XML</b>, <span class="arg">child2</span>:
+<b>XML</b>)
+</p><p class="hangIndent"><b>XML</b> <a href="pc_XML.html#prependChild">XML.prependChild</a>
+		(<span class="arg">child</span>:
+<b>XML</b>)
+</p><p class="hangIndent"><b>XML</b> <a href="pc_XML.html#replace">XML.replace</a>
+		(<span class="arg">name</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<b>XML</b>)
+</p><p class="hangIndent"><b>XML</b> <a href="pc_XML.html#setChildren">XML.setChildren</a>
+		(<span class="arg">value</span>:
+<b>XML</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>XML</b> <a href="pc_Reflection.html#toXML">Reflection.toXML</a> ()
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#XML">XML</a> (<span class="arg">text</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#addNamespace">addNamespace</a> (<span class="arg">namespace</span>:
+<a href="pc_Namespace.html">Namespace</a>)
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#appendChild">appendChild</a> (<span class="arg">child</span>:
+<b>XML</b>)
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#attribute">attribute</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#attributes">attributes</a> ()
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#child">child</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#children">children</a> ()
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#comments">comments</a> ()
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#copy">copy</a> ()
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#descendants">descendants</a> ([<span class="arg">name</span>:
+<span class="argt">string</span>])
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#elements">elements</a> ([<span class="arg">name</span>:
+<span class="argt">string</span>])
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#normalize">normalize</a> ()
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#parent">parent</a> ()
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#prependChild">prependChild</a> (<span class="arg">child</span>:
+<b>XML</b>)
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#processingInstructions">processingInstructions</a> ([<span class="arg">name</span>:
+<span class="argt">string</span>])
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#removeNamespace">removeNamespace</a> (<span class="arg">namespace</span>:
+<a href="pc_Namespace.html">Namespace</a>)
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#replace">replace</a> (<span class="arg">name</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<b>XML</b>)
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#setChildren">setChildren</a> (<span class="arg">value</span>:
+<b>XML</b>)
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#text">text</a> ()
+</p>
+<p class="hangIndent"><b>XML</b> <b>XML</b>.<a href="pc_XML.html#xpath">xpath</a> (<span class="arg">expr</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

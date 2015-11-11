@@ -1,0 +1,322 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Number</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, number">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Number</h1></td></tr>
+<tr><td>&nbsp;</td><td>Wraps a numeric value.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Number" title="Returns a new Number object set to the value of the argument converted to a number.">Number</a>, <a href="#toExponential" title="Converts the Number object to a string in scientific notation.">toExponential</a>, <a href="#toFixed" title="Converts the Number object to a string with fixed decimals.">toFixed</a>, <a href="#toLocaleString" title="Returns the value of a Number object converted to a string, using localized conventions.">toLocaleString</a>, <a href="#toPrecision" title="Converts the Number object to a string in either scientific or fixed notation, epending on its value.">toPrecision</a>, <a href="#toSource" title="Creates a string representation of this object that can be fed back to&nbsp;eval()&nbsp;to re-create an object. Works only with built-in classes.">toSource</a>, <a href="#toString" title="Returns the value of a Number object converted to a string.">toString</a>, <a href="#valueOf" title="Returns the value of a Number object as a primitive number.">valueOf</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="MAX_VALUE"></a>MAX_VALUE</td><td><b>number</b></td>
+<td>readonly</td><td>A constant representing the largest representable number. (default: <b>1.7976931348623158e+308</b>)</td></tr>
+<tr><td><a name="MIN_VALUE"></a>MIN_VALUE</td><td><b>number</b></td>
+<td>readonly</td><td>A constant representing the smallest representable number. (default: <b>2.2250738585072014e-308</b>)</td></tr>
+<tr><td><a name="NEGATIVE_INFINITY"></a>NEGATIVE_INFINITY</td><td><b>number</b></td>
+<td>readonly</td><td>A constant representing negative infinity.</td></tr>
+<tr><td><a name="NaN"></a>NaN</td><td><b>number</b></td>
+<td>readonly</td><td>A constant representing the special "Not a Number" value. (default: <b>NaN</b>)</td></tr>
+<tr class="lastRow"><td><a name="POSITIVE_INFINITY"></a>POSITIVE_INFINITY</td><td><b>number</b></td>
+<td>readonly</td><td>A constant representing positive infinity.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Number"></a><a href="pc_Number.html">Number</a> <span class="func">Number</span> (<span class="arg">value</span>:
+<span class="argt">any</span>)<br>
+Returns a new Number object set to the value of the argument converted to a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td>
+						any
+					</td><td>The value of the object being created.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">new Number(value)</td></tr></table>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="toExponential"></a>number <span class="func">toExponential</span> (<span class="arg">decimals</span>:
+<span class="argt">number</span>)<br>
+Converts the Number object to a string in scientific notation.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>decimals</td><td><b>number</b></td><td>The number of decimals.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toFixed"></a>number <span class="func">toFixed</span> (<span class="arg">decimals</span>:
+<span class="argt">number</span>)<br>
+Converts the Number object to a string with fixed decimals.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>decimals</td><td><b>number</b></td><td>The number of decimals.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toLocaleString"></a>number <span class="func">toLocaleString</span> ()<br>
+Returns the value of a Number object converted to a string, using localized conventions.</p>
+
+<p class="spaceBelow"><a name="toPrecision"></a>number <span class="func">toPrecision</span> (<span class="arg">decimals</span>:
+<span class="argt">number</span>)<br>
+Converts the Number object to a string in either scientific or fixed notation, epending on its value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>decimals</td><td><b>number</b></td><td>The number of decimals.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>number <span class="func">toSource</span> ()<br>
+
+						Creates a string representation of this object that can be fed back to&nbsp;<a href="pc_global.html">eval()</a>&nbsp;to re-create an object. Works only with built-in classes.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>number <span class="func">toString</span> ([<span class="arg">radix</span>:
+<span class="argt">number</span>])<br>
+Returns the value of a Number object converted to a string.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>radix</td><td><b>number</b></td><td>The optional conversion radix. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">num.toString(16)</td></tr></table>
+
+<p class="spaceBelow"><a name="valueOf"></a>number <span class="func">valueOf</span> ()<br>
+Returns the value of a Number object as a primitive number.</p><table class="example"><tr><td><b>Example</b></td><td class="example">num.valueOf()</td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Bounds.html">Bounds</a>.bottom</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bounds.html">Bounds</a>.height</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bounds.html">Bounds</a>.left</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bounds.html">Bounds</a>.length</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bounds.html">Bounds</a>.right</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bounds.html">Bounds</a>.top</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bounds.html">Bounds</a>.width</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bounds.html">Bounds</a>.x</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Bounds.html">Bounds</a>.y</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.characters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.characters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Dimension.html">Dimension</a>.height</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Dimension.html">Dimension</a>.length</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Dimension.html">Dimension</a>.width</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.characters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.margins</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.spacing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.index</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.characters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.margins</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.spacing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Point.html">Point</a>.left</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Point.html">Point</a>.length</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Point.html">Point</a>.top</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Point.html">Point</a>.x</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Point.html">Point</a>.y</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.maxvalue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.minvalue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.value</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.characters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a>.color</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a>.size</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIPen.html">ScriptUIPen</a>.color</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIPen.html">ScriptUIPen</a>.lineWidth</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.jumpdelta</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.maxvalue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.minvalue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.stepdelta</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.value</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.maxvalue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.minvalue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.value</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.characters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.characters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.indent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.margins</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.opacity</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.spacing</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a> <a href="pc_ScriptUI.html#newFont">ScriptUI.newFont</a>
+		(<span class="arg">name</span>:
+<a href="pc_String.html">String</a>, <span class="arg">style</span>:
+<a href="pc_String.html">String</a> | <b>Number</b>, <span class="arg">size</span>:
+<b>Number</b>)
+</p><p class="hangIndent">void <a href="pc_ScriptUIGraphics.html#drawFocusRing">ScriptUIGraphics.drawFocusRing</a>
+		(<span class="arg">left</span>:
+<b>Number</b>, <span class="arg">top</span>:
+<b>Number</b>, <span class="arg">width</span>:
+<b>Number</b>, <span class="arg">height</span>:
+<b>Number</b>)
+</p><p class="hangIndent">void <a href="pc_ScriptUIGraphics.html#drawImage">ScriptUIGraphics.drawImage</a>
+		(<span class="arg">image</span>:
+<a href="pc_ScriptUIImage.html">ScriptUIImage</a>, <span class="arg">left</span>:
+<b>Number</b>, <span class="arg">top</span>:
+<b>Number</b>[, <span class="arg">width</span>:
+<b>Number</b>][, <span class="arg">height</span>:
+<b>Number</b>])
+</p><p class="hangIndent">void <a href="pc_ScriptUIGraphics.html#drawString">ScriptUIGraphics.drawString</a>
+		(<span class="arg">text</span>:
+<a href="pc_String.html">String</a>, <span class="arg">pen</span>:
+<a href="pc_ScriptUIPen.html">ScriptUIPen</a>, <span class="arg">x</span>:
+<b>Number</b>, <span class="arg">y</span>:
+<b>Number</b>[, <span class="arg">font</span>:
+<a href="pc_ScriptUIFont.html">ScriptUIFont</a>])
+</p><p class="hangIndent"><a href="pc_Point.html">Point</a> <a href="pc_ScriptUIGraphics.html#ellipsePath">ScriptUIGraphics.ellipsePath</a>
+		(<span class="arg">left</span>:
+<b>Number</b>, <span class="arg">top</span>:
+<b>Number</b>, <span class="arg">width</span>:
+<b>Number</b>, <span class="arg">height</span>:
+<b>Number</b>)
+</p><p class="hangIndent"><a href="pc_Point.html">Point</a> <a href="pc_ScriptUIGraphics.html#lineTo">ScriptUIGraphics.lineTo</a>
+		(<span class="arg">x</span>:
+<b>Number</b>, <span class="arg">y</span>:
+<b>Number</b>)
+</p><p class="hangIndent"><a href="pc_Dimension.html">Dimension</a> <a href="pc_ScriptUIGraphics.html#measureString">ScriptUIGraphics.measureString</a>
+		(<span class="arg">text</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">font</span>:
+<a href="pc_ScriptUIFont.html">ScriptUIFont</a>][, <span class="arg">boundingWidth</span>:
+<b>Number</b>])
+</p><p class="hangIndent"><a href="pc_Point.html">Point</a> <a href="pc_ScriptUIGraphics.html#moveTo">ScriptUIGraphics.moveTo</a>
+		(<span class="arg">x</span>:
+<b>Number</b>, <span class="arg">y</span>:
+<b>Number</b>)
+</p><p class="hangIndent"><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a> <a href="pc_ScriptUIGraphics.html#newBrush">ScriptUIGraphics.newBrush</a>
+		(<span class="arg">type</span>:
+<b>Number</b>, <span class="arg">color</span>:
+<a href="pc_Array.html">Array</a> of <b>Number</b> | <a href="pc_String.html">String</a>)
+</p><p class="hangIndent"><a href="pc_ScriptUIPen.html">ScriptUIPen</a> <a href="pc_ScriptUIGraphics.html#newPen">ScriptUIGraphics.newPen</a>
+		(<span class="arg">type</span>:
+<b>Number</b>, <span class="arg">color</span>:
+<a href="pc_Array.html">Array</a> of <b>Number</b> | <a href="pc_String.html">String</a>, <span class="arg">width</span>:
+<b>Number</b>)
+</p><p class="hangIndent"><a href="pc_Point.html">Point</a> <a href="pc_ScriptUIGraphics.html#rectPath">ScriptUIGraphics.rectPath</a>
+		(<span class="arg">left</span>:
+<b>Number</b>, <span class="arg">top</span>:
+<b>Number</b>, <span class="arg">width</span>:
+<b>Number</b>, <span class="arg">height</span>:
+<b>Number</b>)
+</p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a> <a href="pc_UIEvent.html#UIEvent">UIEvent.UIEvent</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<a href="pc_Object.html">Object</a>][, <span class="arg">detail</span>:
+<b>Number</b>])
+</p><p class="hangIndent">void <a href="pc_UIEvent.html#initUIEvent">UIEvent.initUIEvent</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<a href="pc_Object.html">Object</a>][, <span class="arg">detail</span>:
+<b>Number</b>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Number</b> <b>Number</b>.<a href="pc_Number.html#Number">Number</a> (<span class="arg">value</span>:
+<span class="argt">any</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: ListItem</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, listitem">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>ListItem</h1></td></tr>
+<tr><td>&nbsp;</td><td><p>An item in a list box, drop-down list, or tree view. </p><p>
+        You can specify initial items in the creation parameters when creating the parent list. Create new items using the <i>add()</i> method (<a href="pc_ListBox (SUI).html#add">ListBox.add()</a>, <a href="pc_DropDownList.html#add">DropDownList.add()</a>, <a href="pc_TreeView.html#add">TreeView.add()</a>) in the parent list with control type="item", or, for&nbsp;<a href="pc_DropDownList.html">DropDownList</a>&nbsp;controls, type="separator".<br>For a multi-column list box, the object represents one selectable row. Its&nbsp;<a href="pc_ListItem.html#text">text</a>&nbsp;and&nbsp;<a href="pc_ListItem.html#image">image</a>&nbsp;values specify the label in the first column, and the&nbsp;<a href="pc_ListItem.html#subitems">subitems</a>&nbsp;property specifies the labels in the additional columns.
+      </p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>ListItem</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="checked"></a>checked</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>The checked state of an item in a list.<br>When true, the item is marked with the platform-appropriate checkmark. When false, no checkmark is drawn, but space is reserved for it in the left margin, so that the item lines up with other checkable items. When undefined, no space is reserved for a checkmark.</td></tr>
+<tr><td><a name="expanded"></a>expanded</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>
+            The expansion state of an item of type <i>node</i> that is a child of a&nbsp;<a href="pc_TreeView.html">TreeView</a>&nbsp;list control.
+          <br>When true, the item is in the expanded state and its children are shown, when false, it is collapsed and children are hidden.</td></tr>
+<tr><td><a name="image"></a>image</td><td><a href="pc_ScriptUIImage.html">ScriptUIImage</a></td>
+<td>r/w</td><td>An image object for an icon to display in the item.<br>
+            When specified, the image appropriate to the selections state is drawn to the left of the text label. If the parent is a multi-column list box, this describes the label in the first column. Labels in additional columns are described by the&nbsp;<a href="pc_ListItem.html">subitems</a>&nbsp;property.
+          </td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_Number.html">Number</a></td>
+<td>readonly</td><td>
+            The 0-based index of this item in the <i>items</i> collection of its parent list control.
+          </td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The parent element, a list control.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>An object that contains one or more creation properties of the item (properties used only when the element is created). <br>A ListItem object has no creation properties. </td></tr>
+<tr><td><a name="selected"></a>selected</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>The selection state of this item.<br>When true, the item is part of the selection for its parent list. When false, the item is not selected. Set to true to select this item in a single-selection list, or to add it to the selection array for a multi-selection list. </td></tr>
+<tr><td><a name="subItems"></a>subItems</td><td><a href="pc_Array.html">Array</a></td>
+<td>readonly</td><td>
+            When the parent is a multi-column&nbsp;<a href="pc_ListBox (SUI).html">ListBox</a>, this describes the labels for this selectable row in additional columns.
+          <br>
+            A array of JavaScript objects whose length is one less than the number of columns. The first member describes the label in the second column. Each member object has two properties, of which you can specify one or both:
+            <br>&bull;&nbsp;
+              <b>text</b>: A display string for the corresponding label.
+            
+            <br>&bull;&nbsp;
+              <b>image</b>: An&nbsp;<a href="pc_ScriptUIImage.html">ScriptUIImage</a>&nbsp;object for the corresponding label.
+            
+          </td></tr>
+<tr><td><a name="text"></a>text</td><td><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The label text to display for the item, a localizable string.<br>
+            If the parent is a multi-column list box, this describes the label in the first column. Labels in additional columns are described by the&nbsp;<a href="pc_ListItem.html">subitems</a>&nbsp;property.
+          </td></tr>
+<tr class="lastRow"><td><a name="type"></a>type</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>The element type.<br>
+            Normally "item", but an item whose parent is a&nbsp;<a href="pc_DropDownList.html">DropDownList</a>&nbsp;control can have type "separator". A separator item is not mouse-sensitive and is drawn as a horizontal line across the drop-down or pop-up menu.
+          </td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.items</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.selection</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.items</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.selection</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.items</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.selection</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent">void <a href="pc_TreeView.html#onCollapse">TreeView.onCollapse</a>
+		(<span class="arg">item</span>:
+<b>ListItem</b>)
+</p><p class="hangIndent">void <a href="pc_TreeView.html#onExpand">TreeView.onExpand</a>
+		(<span class="arg">item</span>:
+<b>ListItem</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>ListItem</b> <a href="pc_DropDownList.html#add">DropDownList.add</a> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>])
+</p>
+<p class="hangIndent"><b>ListItem</b> <a href="pc_DropDownList.html#find">DropDownList.find</a> (<span class="arg">text</span>:
+<a href="pc_String.html">String</a>)
+</p>
+<p class="hangIndent"><b>ListItem</b> <a href="pc_ListBox (SUI).html#add">ListBox (SUI).add</a> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>])
+</p>
+<p class="hangIndent"><b>ListItem</b> <a href="pc_ListBox (SUI).html#find">ListBox (SUI).find</a> (<span class="arg">text</span>:
+<a href="pc_String.html">String</a>)
+</p>
+<p class="hangIndent"><b>ListItem</b> <a href="pc_TreeView.html#add">TreeView.add</a> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>])
+</p>
+<p class="hangIndent"><b>ListItem</b> <a href="pc_TreeView.html#find">TreeView.find</a> (<span class="arg">text</span>:
+<a href="pc_String.html">String</a>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Event (SUI)</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, event (sui)">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Event (SUI)</h1></td></tr>
+<tr><td>&nbsp;</td><td><p>
+        Base class for <a href="pc_UIEvent.html">UIEvent</a>.
+      </p><p>Encapsulates input event information for an event that propagates through a container and control hierarchy.  Implements W3C standard event handling. </p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#preventDefault" title="Prevents the default action associated with this event from being called.">preventDefault</a>, <a href="#stopPropagation" title="Stops the propagation of this event.">stopPropagation</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="bubbles"></a>bubbles</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>readonly</td><td>True if the event is of a type that bubbles.</td></tr>
+<tr><td><a name="cancelable"></a>cancelable</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>readonly</td><td>True if the default action associated with the event can be canceled with preventDefault().</td></tr>
+<tr><td><a name="captures"></a>captures</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>readonly</td><td>True if this event can be captured.</td></tr>
+<tr><td><a name="currentTarget"></a>currentTarget</td><td><a href="pc_Boolean.html">Boolean</a></td>
+<td>readonly</td><td>The event target object which is currently handling the event. During capturing and bubbling, this is different from the property target.</td></tr>
+<tr><td><a name="eventPhase"></a>eventPhase</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>The current phase of event propagation; one of none, target, capture, bubble.</td></tr>
+<tr><td><a name="target"></a>target</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The event target object for this event.</td></tr>
+<tr><td><a name="timeStamp"></a>timeStamp</td><td><a href="pc_Date.html">Date</a></td>
+<td>readonly</td><td>The date and time at which the event occurred.</td></tr>
+<tr class="lastRow"><td><a name="type"></a>type</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>The name of the event that this object represents.<br>
+            Event types are listed in the <i>JavaScript Tools Guide</i>.
+          </td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="AT_TARGET"></a>AT_TARGET</td><td>any</td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="BUBBLING_PHASE"></a>BUBBLING_PHASE</td><td>any</td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="CAPTURING_PHASE"></a>CAPTURING_PHASE</td><td>any</td>
+<td>readonly</td><td></td></tr>
+<tr class="lastRow"><td><a name="NOT_DISPATCHING"></a>NOT_DISPATCHING</td><td>any</td>
+<td>readonly</td><td></td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="preventDefault"></a><span class="rett">void</span>  <span class="func">preventDefault</span> ()<br>
+Prevents the default action associated with this event from being called.</p>
+
+<p class="spaceBelow"><a name="stopPropagation"></a><span class="rett">void</span>  <span class="func">stopPropagation</span> ()<br>
+Stops the propagation of this event.</p>
+
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Event</b> <a href="pc_Events (SUI).html#createEvent">Events (SUI).createEvent</a> (<span class="arg">eventType</span>:
+<a href="pc_String.html">String</a>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

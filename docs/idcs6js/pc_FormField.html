@@ -1,0 +1,605 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: FormField</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, formfield">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>FormField</h1></td></tr>
+<tr><td>&nbsp;</td><td><p class="spaceBelow">A form field. Base Class: <a href="pc_PageItem.html">PageItem</a></p><p>Superclass of <a href="pc_Button.html">Button</a>, <a href="pc_CheckBox.html">CheckBox</a>, <a href="pc_ComboBox.html">ComboBox</a>, <a href="pc_ListBox.html">ListBox</a>, <a href="pc_MultiStateObject.html">MultiStateObject</a>, <a href="pc_RadioButton.html">RadioButton</a>, <a href="pc_SignatureField.html">SignatureField</a>,  and <a href="pc_TextBox.html">TextBox</a></p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#applyObjectStyle" title="Applies the specified object style.">applyObjectStyle</a>, <a href="#asynchronousExportFile" title="asynchronously exports the object(s) to a file.">asynchronousExportFile</a>, <a href="#autoTag" title="Tag the object or the parent story using default tags defined in XML preference.">autoTag</a>, <a href="#changeObject" title="Finds objects that match the find what value and replace the objects with the change to value.">changeObject</a>, <a href="#clearObjectStyleOverrides" title="Clear overrides for object style">clearObjectStyleOverrides</a>, <a href="#clearTransformations" title="Clears transformations from the FormField. Transformations include rotation, scaling, flipping, fitting, and shearing.">clearTransformations</a>, <a href="#contentPlace" title="Duplicate an object and place it into the target page item.">contentPlace</a>, <a href="#convertShape" title="Converts the FormField to a different shape.">convertShape</a>, <a href="#detach" title="Detaches an overridden master page item from the master page.">detach</a>, <a href="#duplicate" title="Duplicates the FormField at the specified location or offset.">duplicate</a>, <a href="#exportFile" title="Exports the object(s) to a file.">exportFile</a>, <a href="#extractLabel" title="Gets the label value associated with the specified key.">extractLabel</a>, <a href="#findObject" title="Finds objects that match the find what value.">findObject</a>, <a href="#fit" title="Applies the specified fit option to content in a frame.">fit</a>, <a href="#flipItem" title="Flips the FormField.">flipItem</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#insertLabel" title="Sets the label to the value associated with the specified key.">insertLabel</a>, <a href="#markup" title="Associates the page item with the specified XML element while preserving existing content.">markup</a>, <a href="#move" title="Moves the FormField to a new location. Note: Either the 'to' or 'by' parameter is required; if both parameters are defined, only the to value is used.">move</a>, <a href="#override" title="Overrides a master page item and places the item on the document page as a new object.">override</a>, <a href="#placeXML" title="Places XML content into the specified object. Note: Replaces any existing content.">placeXML</a>, <a href="#redefineScaling" title="Apply an item's scaling to its content if possible.">redefineScaling</a>, <a href="#reframe" title="Move the bounding box of the page item">reframe</a>, <a href="#remove" title="Deletes the FormField.">remove</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#removeOverride" title="Removes the override from a previously overridden master page item.">removeOverride</a>, <a href="#resize" title="Resize the page item.">resize</a>, <a href="#resolve" title="Get the coordinates of the given location in the specified coordinate system.">resolve</a>, <a href="#select" title="Selects the object.">select</a>, <a href="#store" title="Stores the object in the specified library.">store</a>, <a href="#toSource" title="Generates a string which, if executed, will return the FormField.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a>, <a href="#transform" title="Transform the page item.">transform</a>, <a href="#transformAgain" title="Transforms the FormField using the last transformation performed on any object. Transformations include moving, rotating, shearing, scaling, and flipping.">transformAgain</a>, <a href="#transformAgainIndividually" title="Transforms the FormField using the last transformation performed on any FormField. Transformations include moving, rotating, shearing, scaling, and flipping.">transformAgainIndividually</a>, <a href="#transformSequenceAgain" title="Transforms the FormField using the last sequence of transform operations performed on any single object or performed at the same time on any group of objects. Transformations include moving, rotating, shearing, scaling, and flipping.">transformSequenceAgain</a>, <a href="#transformSequenceAgainIndividually" title="Transforms the FormField using the last sequence of transformations performed on any single object or performed at the same time on any group of objects. Transformations include moving, rotating, shearing, scaling, and flipping.">transformSequenceAgainIndividually</a>, <a href="#transformValuesOf" title="Get the transformation values of the page item.">transformValuesOf</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Character.html">Character</a> | <a href="pc_GraphicLine.html">GraphicLine</a> | <a href="pc_Group.html">Group</a> | <a href="pc_MasterSpread.html">MasterSpread</a> | <a href="pc_Oval.html">Oval</a> | <a href="pc_PlaceGun.html">PlaceGun</a> | <a href="pc_Polygon.html">Polygon</a> | <a href="pc_Rectangle.html">Rectangle</a> | <a href="pc_Snippet.html">Snippet</a> | <a href="pc_SplineItem.html">SplineItem</a> | <a href="pc_Spread.html">Spread</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_PageItem.html">PageItem</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>FormField</center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_Button.html">Button</a> | <a href="pc_CheckBox.html">CheckBox</a> | <a href="pc_ComboBox.html">ComboBox</a> | <a href="pc_ListBox.html">ListBox</a> | <a href="pc_MultiStateObject.html">MultiStateObject</a> | <a href="pc_RadioButton.html">RadioButton</a> | <a href="pc_SignatureField.html">SignatureField</a> | <a href="pc_TextBox.html">TextBox</a></center></td></tr></table><table class="framed" align="center"><tr><td class="framed"><center><a href="pc_AnchoredObjectSetting.html">AnchoredObjectSetting</a> | <a href="pc_AnimationSetting.html">AnimationSetting</a> | <a href="pc_ContentTransparencySetting.html">ContentTransparencySetting</a> | <a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_FillTransparencySetting.html">FillTransparencySetting</a> | <a href="pc_LinkedPageItemOption.html">LinkedPageItemOption</a> | <a href="pc_MutationEvent.html">MutationEvent</a> | <a href="pc_Preference.html">Preference</a> | <a href="pc_StrokeTransparencySetting.html">StrokeTransparencySetting</a> | <a href="pc_TextWrapPreference.html">TextWrapPreference</a> | <a href="pc_TimingSetting.html">TimingSetting</a> | <a href="pc_TransparencySetting.html">TransparencySetting</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="absoluteFlip"></a>absoluteFlip</td><td><a href="pe_Flip.html">Flip</a>:<br>Flip.NONE<br>Flip.HORIZONTAL<br>Flip.VERTICAL<br>Flip.HORIZONTAL_AND_VERTICAL<br>Flip.BOTH</td>
+<td>r/w</td><td>Indicates whether the FormField has been flipped independently of its parent object and, if yes, the direction in which the FormField was flipped.</td></tr>
+<tr><td><a name="absoluteHorizontalScale"></a>absoluteHorizontalScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The horizontal scale of the FormField relative to its containing object.</td></tr>
+<tr><td><a name="absoluteRotationAngle"></a>absoluteRotationAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The rotation angle of the FormField relative to its containing object. (Range: -360 to 360)</td></tr>
+<tr><td><a name="absoluteShearAngle"></a>absoluteShearAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The skewing angle of the FormField relative to its containing object. (Range: -360 to 360)</td></tr>
+<tr><td><a name="absoluteVerticalScale"></a>absoluteVerticalScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The vertical scale of the FormField relative to its containing object.</td></tr>
+<tr><td><a name="activeStateIndex"></a>activeStateIndex</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The index of the active state in the object's states collection.</td></tr>
+<tr><td><a name="allArticles"></a>allArticles</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Article.html">Article</a></td>
+<td>readonly</td><td>The list of all articles this page item is part of</td></tr>
+<tr><td><a name="allGraphics"></a>allGraphics</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Graphic.html">Graphic</a></td>
+<td>readonly</td><td>Lists all graphics contained by the FormField.</td></tr>
+<tr><td><a name="allPageItems"></a>allPageItems</td><td><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a></td>
+<td>readonly</td><td>Lists all page items contained by the FormField.</td></tr>
+<tr><td><a name="allowOverrides"></a>allowOverrides</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the master page item can be overridden.</td></tr>
+<tr><td><a name="anchoredObjectSettings"></a>anchoredObjectSettings</td><td><a href="pc_AnchoredObjectSetting.html">AnchoredObjectSetting</a></td>
+<td>readonly</td><td>Anchored object settings.</td></tr>
+<tr><td><a name="animationSettings"></a>animationSettings</td><td><a href="pc_AnimationSetting.html">AnimationSetting</a></td>
+<td>readonly</td><td>The page item animation settings.</td></tr>
+<tr><td><a name="appliedObjectStyle"></a>appliedObjectStyle</td><td><a href="pc_ObjectStyle.html">ObjectStyle</a></td>
+<td>r/w</td><td>The object style applied to the FormField.</td></tr>
+<tr><td><a name="associatedXMLElement"></a>associatedXMLElement</td><td><a href="pc_XMLItem.html">XMLItem</a></td>
+<td>readonly</td><td>The XML element associated with the FormField.</td></tr>
+<tr><td><a name="bottomLeftCornerOption"></a>bottomLeftCornerOption</td><td><a href="pe_CornerOptions.html">CornerOptions</a>:<br>CornerOptions.NONE<br>CornerOptions.ROUNDED_CORNER<br>CornerOptions.INVERSE_ROUNDED_CORNER<br>CornerOptions.INSET_CORNER<br>CornerOptions.BEVEL_CORNER<br>CornerOptions.FANCY_CORNER</td>
+<td>r/w</td><td>The shape to apply to the bottom left corner of rectangular shapes.</td></tr>
+<tr><td><a name="bottomLeftCornerRadius"></a>bottomLeftCornerRadius</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The radius in measurement units of the corner effect applied to the bottom left corner of rectangular shapes</td></tr>
+<tr><td><a name="bottomRightCornerOption"></a>bottomRightCornerOption</td><td><a href="pe_CornerOptions.html">CornerOptions</a>:<br>CornerOptions.NONE<br>CornerOptions.ROUNDED_CORNER<br>CornerOptions.INVERSE_ROUNDED_CORNER<br>CornerOptions.INSET_CORNER<br>CornerOptions.BEVEL_CORNER<br>CornerOptions.FANCY_CORNER</td>
+<td>r/w</td><td>The shape to apply to the bottom right corner of rectangular shapes.</td></tr>
+<tr><td><a name="bottomRightCornerRadius"></a>bottomRightCornerRadius</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The radius in measurement units of the corner effect applied to the bottom right corner of rectangular shapes</td></tr>
+<tr><td><a name="contentTransparencySettings"></a>contentTransparencySettings</td><td><a href="pc_ContentTransparencySetting.html">ContentTransparencySetting</a></td>
+<td>readonly</td><td>Transparency settings for the content of the FormField.</td></tr>
+<tr><td><a name="description"></a>description</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The description of the FormField.</td></tr>
+<tr><td><a name="endCap"></a>endCap</td><td><a href="pe_EndCap.html">EndCap</a>:<br>EndCap.BUTT_END_CAP<br>EndCap.ROUND_END_CAP<br>EndCap.PROJECTING_END_CAP</td>
+<td>r/w</td><td>The end shape of an open path.</td></tr>
+<tr><td><a name="endJoin"></a>endJoin</td><td><a href="pe_EndJoin.html">EndJoin</a>:<br>EndJoin.MITER_END_JOIN<br>EndJoin.ROUND_END_JOIN<br>EndJoin.BEVEL_END_JOIN</td>
+<td>r/w</td><td>The corner join applied to the FormField.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="fillColor"></a>fillColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the fill of the FormField. . Can also accept: String.</td></tr>
+<tr><td><a name="fillTint"></a>fillTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The percent of tint to use in the FormField's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)</td></tr>
+<tr><td><a name="fillTransparencySettings"></a>fillTransparencySettings</td><td><a href="pc_FillTransparencySetting.html">FillTransparencySetting</a></td>
+<td>readonly</td><td>Transparency settings for the fill applied to the FormField.</td></tr>
+<tr><td><a name="flip"></a>flip</td><td><a href="pe_Flip.html">Flip</a>:<br>Flip.NONE<br>Flip.HORIZONTAL<br>Flip.VERTICAL<br>Flip.HORIZONTAL_AND_VERTICAL<br>Flip.BOTH</td>
+<td>r/w</td><td>The direction in which to flip the printed image.</td></tr>
+<tr><td><a name="gapColor"></a>gapColor</td><td><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of a dashed, dotted, or striped stroke. For information, see stroke type.</td></tr>
+<tr><td><a name="gapTint"></a>gapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint as a percentage of the gap color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)</td></tr>
+<tr><td><a name="geometricBounds"></a>geometricBounds</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The bounds of the FormField excluding the stroke width, in the format [y1, x1, y2, x2], which give the coordinates of the top-left and bottom-right corners of the bounding box.</td></tr>
+<tr><td><a name="gradientFillAngle"></a>gradientFillAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The angle of a linear gradient applied to the fill of the FormField. (Range: -180 to 180)</td></tr>
+<tr><td><a name="gradientFillLength"></a>gradientFillLength</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the FormField.</td></tr>
+<tr><td><a name="gradientFillStart"></a>gradientFillStart</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The starting point (in page coordinates) of a gradient applied to the fill of the FormField, in the format [x, y].</td></tr>
+<tr><td><a name="gradientStrokeAngle"></a>gradientStrokeAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The angle of a linear gradient applied to the stroke of the FormField. (Range: -180 to 180)</td></tr>
+<tr><td><a name="gradientStrokeLength"></a>gradientStrokeLength</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the FormField.</td></tr>
+<tr><td><a name="gradientStrokeStart"></a>gradientStrokeStart</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The starting point (in page coordinates) of a gradient applied to the stroke of the FormField, in the format [x, y].</td></tr>
+<tr><td><a name="horizontalLayoutConstraints"></a>horizontalLayoutConstraints</td><td><a href="pc_Array.html">Array</a> of <a href="pe_DimensionsConstraints.html">DimensionsConstraints</a>:<br>DimensionsConstraints.FIXED_DIMENSION<br>DimensionsConstraints.FLEXIBLE_DIMENSION</td>
+<td>r/w</td><td>The left margin, width, and right margin constraints this item is subject to when using the object-based layout rule.</td></tr>
+<tr><td><a name="horizontalScale"></a>horizontalScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The horizontal scaling applied to the FormField.</td></tr>
+<tr><td><a name="id"></a>id</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The unique ID of the FormField.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the FormField within its containing object.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="itemLayer"></a>itemLayer</td><td><a href="pc_Layer.html">Layer</a></td>
+<td>r/w</td><td>The layer that the FormField is on.</td></tr>
+<tr><td><a name="label"></a>label</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A property that can be set to any string.</td></tr>
+<tr><td><a name="leftLineEnd"></a>leftLineEnd</td><td><a href="pe_ArrowHead.html">ArrowHead</a>:<br>ArrowHead.NONE<br>ArrowHead.SIMPLE_ARROW_HEAD<br>ArrowHead.SIMPLE_WIDE_ARROW_HEAD<br>ArrowHead.TRIANGLE_ARROW_HEAD<br>ArrowHead.TRIANGLE_WIDE_ARROW_HEAD<br>ArrowHead.BARBED_ARROW_HEAD<br>ArrowHead.CURVED_ARROW_HEAD<br>ArrowHead.CIRCLE_ARROW_HEAD<br>ArrowHead.CIRCLE_SOLID_ARROW_HEAD<br>ArrowHead.SQUARE_ARROW_HEAD<br>ArrowHead.SQUARE_SOLID_ARROW_HEAD<br>ArrowHead.BAR_ARROW_HEAD</td>
+<td>r/w</td><td>The arrowhead applied to the start of the path.</td></tr>
+<tr><td><a name="linkedPageItemOptions"></a>linkedPageItemOptions</td><td><a href="pc_LinkedPageItemOption.html">LinkedPageItemOption</a></td>
+<td>readonly</td><td>Linked Page Item options</td></tr>
+<tr><td><a name="localDisplaySetting"></a>localDisplaySetting</td><td><a href="pe_DisplaySettingOptions.html">DisplaySettingOptions</a>:<br>DisplaySettingOptions.HIGH_QUALITY<br>DisplaySettingOptions.TYPICAL<br>DisplaySettingOptions.OPTIMIZED<br>DisplaySettingOptions.DEFAULT_VALUE</td>
+<td>r/w</td><td>Display performance options for the FormField.</td></tr>
+<tr><td><a name="locked"></a>locked</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the FormField is locked.</td></tr>
+<tr><td><a name="miterLimit"></a>miterLimit</td><td><a href="pc_number.html">number</a> (range: 1 - 500)</td>
+<td>r/w</td><td>The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join. (default: <b>4</b>)</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The name of the FormField.</td></tr>
+<tr><td><a name="nonprinting"></a>nonprinting</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the FormField does not print.</td></tr>
+<tr><td><a name="overprintFill"></a>overprintFill</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the FormField's fill color overprints any underlying objects. If false, the fill color knocks out the underlying colors.</td></tr>
+<tr><td><a name="overprintGap"></a>overprintGap</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color overprints any underlying colors. If false, the gap color knocks out the underlying colors.</td></tr>
+<tr><td><a name="overprintStroke"></a>overprintStroke</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the FormField's stroke color overprints any underlying objects. If false, the stroke color knocks out the  underlying colors.</td></tr>
+<tr><td><a name="overridden"></a>overridden</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the object originated on a master spread and was overridden. If false, the object either originated on a master spread and was not overridden, or the object did not originate on a master page.</td></tr>
+<tr><td><a name="overriddenMasterPageItem"></a>overriddenMasterPageItem</td><td><a href="pc_Graphic.html">Graphic</a><br><a href="pc_Guide.html">Guide</a><br><a href="pc_Movie.html">Movie</a><br><a href="pc_PageItem.html">PageItem</a><br><a href="pc_Sound.html">Sound</a></td>
+<td>readonly</td><td>An object that originated on a master page and has been overridden. Can return: PageItem, Guide, Graphic, Movie or Sound.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Character.html">Character</a><br><a href="pc_GraphicLine.html">GraphicLine</a><br><a href="pc_Group.html">Group</a><br><a href="pc_MasterSpread.html">MasterSpread</a><br><a href="pc_Oval.html">Oval</a><br><a href="pc_PlaceGun.html">PlaceGun</a><br><a href="pc_Polygon.html">Polygon</a><br><a href="pc_Rectangle.html">Rectangle</a><br><a href="pc_Snippet.html">Snippet</a><br><a href="pc_SplineItem.html">SplineItem</a><br><a href="pc_Spread.html">Spread</a></td>
+<td>readonly</td><td>The parent of the FormField (a PlaceGun, Spread, MasterSpread, SplineItem, Polygon, GraphicLine, Rectangle, Oval, Group, Character or Snippet).</td></tr>
+<tr><td><a name="parentPage"></a>parentPage</td><td><a href="pc_Page.html">Page</a></td>
+<td>readonly</td><td>The page on which this page item appears.</td></tr>
+<tr><td><a name="preferences"></a>preferences</td><td><a href="pc_Preferences.html">Preferences</a> <a class="sing" href="pc_Preference.html">Preference</a></td>
+<td>readonly</td><td>A collection of preferences objects.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="rightLineEnd"></a>rightLineEnd</td><td><a href="pe_ArrowHead.html">ArrowHead</a>:<br>ArrowHead.NONE<br>ArrowHead.SIMPLE_ARROW_HEAD<br>ArrowHead.SIMPLE_WIDE_ARROW_HEAD<br>ArrowHead.TRIANGLE_ARROW_HEAD<br>ArrowHead.TRIANGLE_WIDE_ARROW_HEAD<br>ArrowHead.BARBED_ARROW_HEAD<br>ArrowHead.CURVED_ARROW_HEAD<br>ArrowHead.CIRCLE_ARROW_HEAD<br>ArrowHead.CIRCLE_SOLID_ARROW_HEAD<br>ArrowHead.SQUARE_ARROW_HEAD<br>ArrowHead.SQUARE_SOLID_ARROW_HEAD<br>ArrowHead.BAR_ARROW_HEAD</td>
+<td>r/w</td><td>The arrowhead applied to the end of the path.</td></tr>
+<tr><td><a name="rotationAngle"></a>rotationAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The rotatation angle of the FormField. (Range: -360 to 360)</td></tr>
+<tr><td><a name="shearAngle"></a>shearAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The skewing angle applied to the FormField. (Range: -360 to 360)</td></tr>
+<tr><td><a name="strokeAlignment"></a>strokeAlignment</td><td><a href="pe_StrokeAlignment.html">StrokeAlignment</a>:<br>StrokeAlignment.CENTER_ALIGNMENT<br>StrokeAlignment.INSIDE_ALIGNMENT<br>StrokeAlignment.OUTSIDE_ALIGNMENT</td>
+<td>r/w</td><td>The stroke alignment applied to the FormField.</td></tr>
+<tr><td><a name="strokeColor"></a>strokeColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the FormField. Can also accept: String.</td></tr>
+<tr><td><a name="strokeCornerAdjustment"></a>strokeCornerAdjustment</td><td><a href="pe_StrokeCornerAdjustment.html">StrokeCornerAdjustment</a>:<br>StrokeCornerAdjustment.NONE<br>StrokeCornerAdjustment.DASHES<br>StrokeCornerAdjustment.GAPS<br>StrokeCornerAdjustment.DASHES_AND_GAPS</td>
+<td>r/w</td><td>The corner adjustment applied to the FormField.</td></tr>
+<tr><td><a name="strokeDashAndGap"></a>strokeDashAndGap</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The dash and gap measurements that define the pattern of a custom dashed line. Define up to six values (in points) in the format [dash1, gap1, dash2, gap2, dash3, gap3].</td></tr>
+<tr><td><a name="strokeTint"></a>strokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The percent of tint to use in object's stroke color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)</td></tr>
+<tr><td><a name="strokeTransparencySettings"></a>strokeTransparencySettings</td><td><a href="pc_StrokeTransparencySetting.html">StrokeTransparencySetting</a></td>
+<td>readonly</td><td>Transparency settings for the stroke.</td></tr>
+<tr><td><a name="strokeType"></a>strokeType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The name of the stroke style to apply. Can also accept: String.</td></tr>
+<tr><td><a name="strokeWeight"></a>strokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The weight (in points) to apply to the FormField's stroke.</td></tr>
+<tr><td><a name="textWrapPreferences"></a>textWrapPreferences</td><td><a href="pc_TextWrapPreference.html">TextWrapPreference</a></td>
+<td>readonly</td><td>The text wrap preference properties that define the default formatting for wrapping text around objects.</td></tr>
+<tr><td><a name="timingSettings"></a>timingSettings</td><td><a href="pc_TimingSetting.html">TimingSetting</a></td>
+<td>readonly</td><td>The object timing settings.</td></tr>
+<tr><td><a name="topLeftCornerOption"></a>topLeftCornerOption</td><td><a href="pe_CornerOptions.html">CornerOptions</a>:<br>CornerOptions.NONE<br>CornerOptions.ROUNDED_CORNER<br>CornerOptions.INVERSE_ROUNDED_CORNER<br>CornerOptions.INSET_CORNER<br>CornerOptions.BEVEL_CORNER<br>CornerOptions.FANCY_CORNER</td>
+<td>r/w</td><td>The shape to be applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes.Note: corner option differs from end join in which you can set a radius for a corner option, whereas the rounded or beveled effect of an end join depends on the stroke weight.</td></tr>
+<tr><td><a name="topLeftCornerRadius"></a>topLeftCornerRadius</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The radius in measurement units of the corner effect applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes</td></tr>
+<tr><td><a name="topRightCornerOption"></a>topRightCornerOption</td><td><a href="pe_CornerOptions.html">CornerOptions</a>:<br>CornerOptions.NONE<br>CornerOptions.ROUNDED_CORNER<br>CornerOptions.INVERSE_ROUNDED_CORNER<br>CornerOptions.INSET_CORNER<br>CornerOptions.BEVEL_CORNER<br>CornerOptions.FANCY_CORNER</td>
+<td>r/w</td><td>The shape to apply to the top right corner of rectangular shapes</td></tr>
+<tr><td><a name="topRightCornerRadius"></a>topRightCornerRadius</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The radius in measurement units of the corner effect applied to the top right corner of rectangular shapes</td></tr>
+<tr><td><a name="transparencySettings"></a>transparencySettings</td><td><a href="pc_TransparencySetting.html">TransparencySetting</a></td>
+<td>readonly</td><td>Transparency settings.</td></tr>
+<tr><td><a name="verticalLayoutConstraints"></a>verticalLayoutConstraints</td><td><a href="pc_Array.html">Array</a> of <a href="pe_DimensionsConstraints.html">DimensionsConstraints</a>:<br>DimensionsConstraints.FIXED_DIMENSION<br>DimensionsConstraints.FLEXIBLE_DIMENSION</td>
+<td>r/w</td><td>The top margin, height, and bottom margin constraints this item is subject to when using the object-based layout rule.</td></tr>
+<tr><td><a name="verticalScale"></a>verticalScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The vertical scaling applied to the FormField.</td></tr>
+<tr><td><a name="visible"></a>visible</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the FormField is visible.</td></tr>
+<tr class="lastRow"><td><a name="visibleBounds"></a>visibleBounds</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The bounds of the FormField including the stroke width, in the format [y1, x1, y2, x2], which give the coordinates of the top-left and bottom-right corners of the bounding box.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="AFTER_PLACE"></a>AFTER_PLACE</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>Dispatched after a FormField is placed. This event bubbles. This event is not cancelable. (default: <b>afterPlace</b>)</td></tr>
+<tr class="lastRow"><td><a name="BEFORE_PLACE"></a>BEFORE_PLACE</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>Dispatched before a FormField is placed. This event bubbles. This event is cancelable. (default: <b>beforePlace</b>)</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="applyObjectStyle"></a><span class="rett">void</span>  <span class="func">applyObjectStyle</span> (<span class="arg">using</span>:
+<a href="pc_ObjectStyle.html">ObjectStyle</a>[, <span class="arg">clearingOverrides</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">clearingOverridesThroughRootObjectStyle</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Applies the specified object style.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>using</td><td><a href="pc_ObjectStyle.html">ObjectStyle</a></td><td>The object style to apply.</td></tr>
+<tr><td>clearingOverrides</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, clears the FormField's existing attributes before applying the style. (Optional) (default: <b>true</b>)</td></tr>
+<tr class="lastRow"><td>clearingOverridesThroughRootObjectStyle</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, clears attributes and formatting applied to the FormField that are not defined in the object style. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="asynchronousExportFile"></a><a href="pc_BackgroundTask.html">BackgroundTask</a> <span class="func">asynchronousExportFile</span> (<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+asynchronously exports the object(s) to a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>format</td><td><a href="pe_ExportFormat.html">ExportFormat</a><br><a href="pc_String.html">String</a></td><td>The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.</td></tr>
+<tr><td>to</td><td><a href="pc_File.html">File</a></td><td>The path to the export file.</td></tr>
+<tr><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, displays the export options dialog. (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>using</td><td><a href="pc_PDFExportPreset.html">PDFExportPreset</a></td><td>The export style. (Optional)</td></tr>
+<tr><td>versionComments</td><td><a href="pc_string.html">string</a></td><td>The comment for this version. (Optional)</td></tr>
+<tr class="lastRow"><td>forceSave</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, forcibly saves a version. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="autoTag"></a><span class="rett">void</span>  <span class="func">autoTag</span> ()<br>
+Tag the object or the parent story using default tags defined in XML preference.</p>
+
+<p class="spaceBelow"><a name="changeObject"></a><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a> <span class="func">changeObject</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds objects that match the find what value and replace the objects with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="clearObjectStyleOverrides"></a><span class="rett">void</span>  <span class="func">clearObjectStyleOverrides</span> ()<br>
+Clear overrides for object style</p>
+
+<p class="spaceBelow"><a name="clearTransformations"></a><span class="rett">void</span>  <span class="func">clearTransformations</span> ()<br>
+Clears transformations from the FormField. Transformations include rotation, scaling, flipping, fitting, and shearing.</p>
+
+<p class="spaceBelow"><a name="contentPlace"></a><a href="pc_Array.html">Array</a> of <span class="rett">any</span>  <span class="func">contentPlace</span> (<span class="arg">pageItems</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a>[, <span class="arg">linkPageItems</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">linkStories</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">mapStyles</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Duplicate an object and place it into the target page item.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>pageItems</td><td><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a></td><td>One or more page items to place or load</td></tr>
+<tr><td>linkPageItems</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to link pageItems in content placer (if true it will override link stories value) (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>linkStories</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to link stories in content placer (only applicable for single story, pageItem links will also be created in case of more than one item) (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>mapStyles</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to map styles in content placer (Optional) (default: <b>false</b>)</td></tr>
+<tr class="lastRow"><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to display the link options dialog (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="convertShape"></a><span class="rett">void</span>  <span class="func">convertShape</span> (<span class="arg">given</span>:
+<a href="pe_ConvertShapeOptions.html">ConvertShapeOptions</a>[, <span class="arg">numberOfSides</span>:
+<span class="argt">number</span>][, <span class="arg">insetPercentage</span>:
+<span class="argt">number</span>][, <span class="arg">cornerRadius</span>:
+<span class="argt">Measurement Unit (Number or String)</span>])<br>
+Converts the FormField to a different shape.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>given</td><td><a href="pe_ConvertShapeOptions.html">ConvertShapeOptions</a>:<br>ConvertShapeOptions.CONVERT_TO_RECTANGLE<br>ConvertShapeOptions.CONVERT_TO_ROUNDED_RECTANGLE<br>ConvertShapeOptions.CONVERT_TO_BEVELED_RECTANGLE<br>ConvertShapeOptions.CONVERT_TO_INVERSE_ROUNDED_RECTANGLE<br>ConvertShapeOptions.CONVERT_TO_OVAL<br>ConvertShapeOptions.CONVERT_TO_TRIANGLE<br>ConvertShapeOptions.CONVERT_TO_POLYGON<br>ConvertShapeOptions.CONVERT_TO_LINE<br>ConvertShapeOptions.CONVERT_TO_STRAIGHT_LINE<br>ConvertShapeOptions.CONVERT_TO_OPEN_PATH<br>ConvertShapeOptions.CONVERT_TO_CLOSED_PATH</td><td>The FormField's new shape.</td></tr>
+<tr><td>numberOfSides</td><td><a href="pc_number.html">number</a> (range: 3 - 100)</td><td>The number of sides for the resulting polygon. (Range: 3 to 100) (Optional)</td></tr>
+<tr><td>insetPercentage</td><td><a href="pc_number.html">number</a> (range: 0 - 100)</td><td>The star inset percentage for the resulting polygon. (Range: 0.0 to 100.0)  (Optional)</td></tr>
+<tr class="lastRow"><td>cornerRadius</td><td>Measurement Unit (Number or String) (range: 0 - 800)</td><td>The corner radius of the resulting rectangle. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="detach"></a><span class="rett">void</span>  <span class="func">detach</span> ()<br>
+Detaches an overridden master page item from the master page.</p>
+
+<p class="spaceBelow"><a name="duplicate"></a><a href="pc_PageItem.html">PageItem</a> <span class="func">duplicate</span> ([<span class="arg">to</span>:
+<span class="argt">varies</span>][, <span class="arg">by</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>])<br>
+Duplicates the FormField at the specified location or offset.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>to</td><td><a href="pc_Array.html">Array</a> of 2 Units<br><a href="pc_Layer.html">Layer</a><br><a href="pc_Page.html">Page</a><br><a href="pc_Spread.html">Spread</a></td><td>The location of the new FormField, specified in coordinates in the format [x, y]. Can accept: Array of 2 Units, Spread, Page or Layer. (Optional)</td></tr>
+<tr class="lastRow"><td>by</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td><td>Amount by which to offset the new FormField from the original FormField's position. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="exportFile"></a><span class="rett">void</span>  <span class="func">exportFile</span> (<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Exports the object(s) to a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>format</td><td><a href="pe_ExportFormat.html">ExportFormat</a><br><a href="pc_String.html">String</a></td><td>The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.</td></tr>
+<tr><td>to</td><td><a href="pc_File.html">File</a></td><td>The path to the export file.</td></tr>
+<tr><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, displays the export options dialog. (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>using</td><td><a href="pc_PDFExportPreset.html">PDFExportPreset</a></td><td>The export style. (Optional)</td></tr>
+<tr><td>versionComments</td><td><a href="pc_string.html">string</a></td><td>The comment for this version. (Optional)</td></tr>
+<tr class="lastRow"><td>forceSave</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, forcibly saves a version. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="extractLabel"></a>string <span class="func">extractLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Gets the label value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findObject"></a><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a> <span class="func">findObject</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds objects that match the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="fit"></a><span class="rett">void</span>  <span class="func">fit</span> (<span class="arg">given</span>:
+<a href="pe_FitOptions.html">FitOptions</a>)<br>
+Applies the specified fit option to content in a frame.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>given</td><td><a href="pe_FitOptions.html">FitOptions</a>:<br>FitOptions.CONTENT_TO_FRAME<br>FitOptions.CENTER_CONTENT<br>FitOptions.PROPORTIONALLY<br>FitOptions.FRAME_TO_CONTENT<br>FitOptions.FILL_PROPORTIONALLY<br>FitOptions.APPLY_FRAME_FITTING_OPTIONS</td><td>The fit option to use.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="flipItem"></a><span class="rett">void</span>  <span class="func">flipItem</span> (<span class="arg">given</span>:
+<a href="pe_Flip.html">Flip</a>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])<br>
+Flips the FormField.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>given</td><td><a href="pe_Flip.html">Flip</a>:<br>Flip.NONE<br>Flip.HORIZONTAL<br>Flip.VERTICAL<br>Flip.HORIZONTAL_AND_VERTICAL<br>Flip.BOTH</td><td>The axis around which to flip the FormField.</td></tr>
+<tr class="lastRow"><td>around</td><td><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pc_Array.html">Array</a> of 2 Units</td><td>The point around which to flip the FormField. Can accept: Array of 2 Units or AnchorPoint enumerator. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_FormField.html">FormField</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="insertLabel"></a><span class="rett">void</span>  <span class="func">insertLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+Sets the label to the value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_string.html">string</a></td><td>The value.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="markup"></a><span class="rett">void</span>  <span class="func">markup</span> (<span class="arg">using</span>:
+<a href="pc_XMLElement.html">XMLElement</a>)<br>
+Associates the page item with the specified XML element while preserving existing content.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>using</td><td><a href="pc_XMLElement.html">XMLElement</a></td><td>The XML element.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="move"></a><span class="rett">void</span>  <span class="func">move</span> ([<span class="arg">to</span>:
+<span class="argt">varies</span>][, <span class="arg">by</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>])<br>
+Moves the FormField to a new location. Note: Either the 'to' or 'by' parameter is required; if both parameters are defined, only the to value is used.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>to</td><td><a href="pc_Array.html">Array</a> of 2 Units<br><a href="pc_Layer.html">Layer</a><br><a href="pc_Page.html">Page</a><br><a href="pc_Spread.html">Spread</a></td><td>The new location of the FormField,in the format (x, y). Can accept: Array of 2 Units, Spread, Page or Layer. (Optional)</td></tr>
+<tr class="lastRow"><td>by</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td><td>The amount (in measurement units) to move the FormField relative to its current position, in the format (x, y). (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="override"></a><span class="rett">any</span>  <span class="func">override</span> (<span class="arg">destinationPage</span>:
+<a href="pc_Page.html">Page</a>)<br>
+Overrides a master page item and places the item on the document page as a new object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>destinationPage</td><td><a href="pc_Page.html">Page</a></td><td>The document page that contains the master page item to override.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="placeXML"></a><span class="rett">void</span>  <span class="func">placeXML</span> (<span class="arg">using</span>:
+<a href="pc_XMLElement.html">XMLElement</a>)<br>
+Places XML content into the specified object. Note: Replaces any existing content.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>using</td><td><a href="pc_XMLElement.html">XMLElement</a></td><td>The XML element whose content you want to place.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="redefineScaling"></a><span class="rett">void</span>  <span class="func">redefineScaling</span> ([<span class="arg">to</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">number</span>])<br>
+Apply an item's scaling to its content if possible.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>to</td><td><a href="pc_Array.html">Array</a> of <a href="pc_number.html">number</a></td><td>The scale factors to be left on the item.  The default is {1.0, 1.0}. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="reframe"></a><span class="rett">void</span>  <span class="func">reframe</span> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">opposingCorners</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>)<br>
+Move the bounding box of the page item
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>in</td><td>boundsKind:BoundingBoxLimits<br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Ordered array containing coordinateSpace:CoordinateSpaces</td><td>The bounding box to resize. Can accept: CoordinateSpaces enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.</td></tr>
+<tr class="lastRow"><td>opposingCorners</td><td><a href="pc_Array.html">Array</a> of 
+						any
+					</td><td>Opposing corners of new bounding box in the given coordinate space</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes the FormField.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="removeOverride"></a><span class="rett">void</span>  <span class="func">removeOverride</span> ()<br>
+Removes the override from a previously overridden master page item.</p>
+
+<p class="spaceBelow"><a name="resize"></a><span class="rett">void</span>  <span class="func">resize</span> (<span class="arg">in</span>:
+<span class="argt">varies</span>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">by</span>:
+<a href="pe_ResizeMethods.html">ResizeMethods</a>, <span class="arg">values</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">varies</span>[, <span class="arg">resizeIndividually</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Resize the page item.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>in</td><td><a href="pe_BoundingBoxLimits.html">BoundingBoxLimits</a><br>boundsKind:BoundingBoxLimits<br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Ordered array containing coordinateSpace:CoordinateSpaces</td><td>The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.</td></tr>
+<tr><td>from</td><td><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pc_Array.html">Array</a> of 2 Reals<br><a href="pc_Array.html">Array</a> of Arrays of 2 Reals<br><a href="pe_BoundingBoxLimits.html">BoundingBoxLimits</a><br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Long Integers</td><td>The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.</td></tr>
+<tr><td>by</td><td><a href="pe_ResizeMethods.html">ResizeMethods</a>:<br>ResizeMethods.ADDING_CURRENT_DIMENSIONS_TO<br>ResizeMethods.MULTIPLYING_CURRENT_DIMENSIONS_BY<br>ResizeMethods.REPLACING_CURRENT_DIMENSIONS_WITH<br>ResizeMethods.RESHAPING_AREA_TO_RATIO<br>ResizeMethods.RESHAPING_BORDER_TO_RATIO</td><td>How the current dimensions are affected by the given values</td></tr>
+<tr><td>values</td><td><a href="pc_Array.html">Array</a> of :<br><a href="pc_Array.html">Array</a> of Reals<br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br><a href="pe_ResizeConstraints.html">ResizeConstraints</a></td><td>The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method). Can accept: Array of Reals, ResizeConstraints enumerators or CoordinateSpaces enumerators.</td></tr>
+<tr><td>resizeIndividually</td><td><a href="pc_Boolean.html">bool</a></td><td>If false and multiple page items are targeted, the new dimensions are attained only by moving the individual items rather than resizing them. (Optional) (default: <b>true</b>)</td></tr>
+<tr class="lastRow"><td>consideringRulerUnits</td><td><a href="pc_Boolean.html">bool</a></td><td>If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="resolve"></a><span class="rett">any</span>  <span class="func">resolve</span> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Get the coordinates of the given location in the specified coordinate system.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>location</td><td><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pc_Array.html">Array</a> of 2 Reals<br><a href="pc_Array.html">Array</a> of Arrays of 2 Reals<br><a href="pe_BoundingBoxLimits.html">BoundingBoxLimits</a><br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Long Integers</td><td>The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.</td></tr>
+<tr><td>in</td><td><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>:<br>CoordinateSpaces.PASTEBOARD_COORDINATES<br>CoordinateSpaces.PARENT_COORDINATES<br>CoordinateSpaces.INNER_COORDINATES<br>CoordinateSpaces.PAGE_COORDINATES<br>CoordinateSpaces.SPREAD_COORDINATES</td><td>The coordinate space to use.</td></tr>
+<tr class="lastRow"><td>consideringRulerUnits</td><td><a href="pc_Boolean.html">bool</a></td><td>If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="select"></a><span class="rett">void</span>  <span class="func">select</span> ([<span class="arg">existingSelection</span>:
+<a href="pe_SelectionOptions.html">SelectionOptions</a>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])<br>
+Selects the object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>existingSelection</td><td><a href="pe_SelectionOptions.html">SelectionOptions</a>:<br>SelectionOptions.ADD_TO<br>SelectionOptions.REMOVE_FROM<br>SelectionOptions.REPLACE_WITH<br>SelectionOptions.SET_KEY</td><td>The selection status of the FormField in relation to previously selected objects. (Optional) (default: <b>SelectionOptions.REPLACE_WITH</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="store"></a><a href="pc_Asset.html">Asset</a> <span class="func">store</span> (<span class="arg">using</span>:
+<a href="pc_Library.html">Library</a>[, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])<br>
+Stores the object in the specified library.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>using</td><td><a href="pc_Library.html">Library</a></td><td>The library in which to store the object.</td></tr>
+<tr class="lastRow"><td>withProperties</td><td><a href="pc_Object.html">Object</a></td><td>Initial values for properties of the new FormField (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the FormField.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+<p class="spaceBelow"><a name="transform"></a><span class="rett">void</span>  <span class="func">transform</span> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Transform the page item.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>in</td><td><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>:<br>CoordinateSpaces.PASTEBOARD_COORDINATES<br>CoordinateSpaces.PARENT_COORDINATES<br>CoordinateSpaces.INNER_COORDINATES<br>CoordinateSpaces.PAGE_COORDINATES<br>CoordinateSpaces.SPREAD_COORDINATES</td><td>The coordinate space to use</td></tr>
+<tr><td>from</td><td><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pe_AnchorPoint.html">AnchorPoint</a><br><a href="pc_Array.html">Array</a> of 2 Reals<br><a href="pc_Array.html">Array</a> of Arrays of 2 Reals<br><a href="pe_BoundingBoxLimits.html">BoundingBoxLimits</a><br><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a><br>Long Integers</td><td>The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.</td></tr>
+<tr><td>withMatrix</td><td><a href="pc_Array.html">Array</a> of 6 Reals<br><a href="pc_TransformationMatrix.html">TransformationMatrix</a></td><td>Transform matrix. Can accept: Array of 6 Reals or TransformationMatrix.</td></tr>
+<tr><td>replacingCurrent</td><td><a href="pc_Array.html">Array</a> of <a href="pe_MatrixContent.html">MatrixContent</a><br>Long Integer<br><a href="pe_MatrixContent.html">MatrixContent</a></td><td>Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.  Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two. Can accept: MatrixContent enumerator, Array of MatrixContent enumerators or Long Integer. (Optional)</td></tr>
+<tr class="lastRow"><td>consideringRulerUnits</td><td><a href="pc_Boolean.html">bool</a></td><td>If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="transformAgain"></a><a href="pc_Array.html">Array</a> of string <span class="func">transformAgain</span> ()<br>
+Transforms the FormField using the last transformation performed on any object. Transformations include moving, rotating, shearing, scaling, and flipping.</p>
+
+<p class="spaceBelow"><a name="transformAgainIndividually"></a><a href="pc_Array.html">Array</a> of string <span class="func">transformAgainIndividually</span> ()<br>
+Transforms the FormField using the last transformation performed on any FormField. Transformations include moving, rotating, shearing, scaling, and flipping.</p>
+
+<p class="spaceBelow"><a name="transformSequenceAgain"></a><a href="pc_Array.html">Array</a> of string <span class="func">transformSequenceAgain</span> ()<br>
+Transforms the FormField using the last sequence of transform operations performed on any single object or performed at the same time on any group of objects. Transformations include moving, rotating, shearing, scaling, and flipping.</p>
+
+<p class="spaceBelow"><a name="transformSequenceAgainIndividually"></a><a href="pc_Array.html">Array</a> of string <span class="func">transformSequenceAgainIndividually</span> ()<br>
+Transforms the FormField using the last sequence of transformations performed on any single object or performed at the same time on any group of objects. Transformations include moving, rotating, shearing, scaling, and flipping.</p>
+
+<p class="spaceBelow"><a name="transformValuesOf"></a><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <span class="func">transformValuesOf</span> (<span class="arg">in</span>:
+<a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>)<br>
+Get the transformation values of the page item.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>in</td><td><a href="pe_CoordinateSpaces.html">CoordinateSpaces</a>:<br>CoordinateSpaces.PASTEBOARD_COORDINATES<br>CoordinateSpaces.PARENT_COORDINATES<br>CoordinateSpaces.INNER_COORDINATES<br>CoordinateSpaces.PAGE_COORDINATES<br>CoordinateSpaces.SPREAD_COORDINATES</td><td>The coordinate space to use</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#nextItem">FormFields.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>FormField</b>)
+</p><p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#previousItem">FormFields.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>FormField</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>FormField</b> <b>FormField</b>.<a href="pc_FormField.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#[]">FormFields.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#add">FormFields.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<a href="pe_LocationOptions.html">LocationOptions</a>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#anyItem">FormFields.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>FormField</b> <a href="pc_FormFields.html#everyItem">FormFields.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#firstItem">FormFields.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#item">FormFields.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#itemByID">FormFields.itemByID</a> (<span class="arg">id</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#itemByName">FormFields.itemByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>FormField</b> <a href="pc_FormFields.html#itemByRange">FormFields.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#lastItem">FormFields.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#middleItem">FormFields.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#nextItem">FormFields.nextItem</a> (<span class="arg">obj</span>:
+<b>FormField</b>)
+</p>
+<p class="hangIndent"><b>FormField</b> <a href="pc_FormFields.html#previousItem">FormFields.previousItem</a> (<span class="arg">obj</span>:
+<b>FormField</b>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: LocationOptions</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, locationoptions">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>LocationOptions</h1></td></tr>
+<tr><td>&nbsp;</td><td>Options for specifying location relative to the reference object or within the containing object.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>LocationOptions.AFTER</td><td>Places the object after the reference object.</td><td>1634104421  = 
+				'afte'
+			</td></tr>
+<tr><td>LocationOptions.AT_BEGINNING</td><td>Places the object at the beginning of the containing object.</td><td>1650945639  = 
+				'bgng'
+			</td></tr>
+<tr><td>LocationOptions.AT_END</td><td>Places the object at the end of the containing object.</td><td>1701733408  = 
+				'end '
+			</td></tr>
+<tr><td>LocationOptions.BEFORE</td><td>Places the object before the reference object.</td><td>1650812527  = 
+				'befo'
+			</td></tr>
+<tr class="lastRow"><td>LocationOptions.UNKNOWN</td><td>No location specified.</td><td>1433299822  = 
+				'Unkn'
+			</td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>In function</h3>
+
+<p class="hangIndent"><a href="pc_Article.html">Article</a> <a href="pc_Article.html#move">Article.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<a href="pc_Article.html">Article</a>])
+</p>
+<p class="hangIndent"><a href="pc_ArticleChild.html">ArticleChild</a> <a href="pc_ArticleChild.html#move">ArticleChild.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<a href="pc_ArticleChild.html">ArticleChild</a>])
+</p>
+<p class="hangIndent"><a href="pc_ArticleMember.html">ArticleMember</a> <a href="pc_ArticleMember.html#move">ArticleMember.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<a href="pc_ArticleMember.html">ArticleMember</a>])
+</p>
+<p class="hangIndent"><a href="pc_ArticleMember.html">ArticleMember</a> <a href="pc_ArticleMembers.html#add">ArticleMembers.add</a> (<span class="arg">itemRef</span>:
+<a href="pc_PageItem.html">PageItem</a>[, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<a href="pc_ArticleMember.html">ArticleMember</a>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Article.html">Article</a> <a href="pc_Articles.html#add">Articles.add</a> ([<span class="arg">name</span>:
+<span class="argt">string</span>][, <span class="arg">articleExportStatus</span>:
+<span class="argt">bool</span>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<a href="pc_Article.html">Article</a>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_AssignedStory.html">AssignedStory</a> <a href="pc_AssignedStory.html#move">AssignedStory.move</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_BookContent.html">BookContent</a> <a href="pc_BookContent.html#move">BookContent.move</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<a href="pc_BookContent.html">BookContent</a>])
+</p>
+<p class="hangIndent"><a href="pc_Bookmark.html">Bookmark</a> <a href="pc_Bookmark.html#move">Bookmark.move</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Button.html">Button</a> <a href="pc_Buttons.html#add">Buttons.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a> <a href="pc_CellStyle.html#move">CellStyle.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_CellStyleGroup.html">CellStyleGroup</a> <a href="pc_CellStyleGroup.html#move">CellStyleGroup.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Character.html#duplicate">Character.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Character.html#move">Character.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a> <a href="pc_CharacterStyle.html#move">CharacterStyle.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_CharacterStyleGroup.html">CharacterStyleGroup</a> <a href="pc_CharacterStyleGroup.html#move">CharacterStyleGroup.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_CheckBox.html">CheckBox</a> <a href="pc_CheckBoxes.html#add">CheckBoxes.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Columns.html#add">Columns.add</a> ([<span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_ComboBox.html">ComboBox</a> <a href="pc_ComboBoxes.html#add">ComboBoxes.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Footnote.html">Footnote</a> <a href="pc_Footnotes.html#add">Footnotes.add</a> ([<span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_FormField.html">FormField</a> <a href="pc_FormFields.html#add">FormFields.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_GraphicLine.html">GraphicLine</a> <a href="pc_GraphicLines.html#add">GraphicLines.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Group.html">Group</a> <a href="pc_Groups.html#add">Groups.add</a> (<span class="arg">groupItems</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a>[, <span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_HtmlItem.html">HtmlItem</a> <a href="pc_HtmlItems.html#add">HtmlItems.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_InsertionPoint.html#duplicate">InsertionPoint.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_InsertionPoint.html#move">InsertionPoint.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Layer.html">Layer</a> <a href="pc_Layer.html#move">Layer.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<a href="pc_Layer.html">Layer</a>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Line.html#duplicate">Line.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Line.html#move">Line.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_ListBox.html">ListBox</a> <a href="pc_ListBoxes.html#add">ListBoxes.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_MasterSpread.html#duplicate">MasterSpread.duplicate</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_MenuItem.html">MenuItem</a> <a href="pc_MenuItems.html#add">MenuItems.add</a> (<span class="arg">associatedMenuAction</span>:
+<a href="pc_MenuAction.html">MenuAction</a>[, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<a href="pc_MenuElement.html">MenuElement</a>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_MenuSeparator.html">MenuSeparator</a> <a href="pc_MenuSeparators.html#add">MenuSeparators.add</a> ([<span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<a href="pc_MenuElement.html">MenuElement</a>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Movie.html">Movie</a> <a href="pc_Movies.html#add">Movies.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_MultiStateObject.html">MultiStateObject</a> <a href="pc_MultiStateObjects.html#add">MultiStateObjects.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Note.html">Note</a> <a href="pc_Note.html#move">Note.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Note.html">Note</a> <a href="pc_Notes.html#add">Notes.add</a> ([<span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_ObjectStyle.html">ObjectStyle</a> <a href="pc_ObjectStyle.html#move">ObjectStyle.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_ObjectStyleGroup.html">ObjectStyleGroup</a> <a href="pc_ObjectStyleGroup.html#move">ObjectStyleGroup.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Oval.html">Oval</a> <a href="pc_Ovals.html#add">Ovals.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Page.html">Page</a> <a href="pc_Page.html#duplicate">Page.duplicate</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Page.html">Page</a> <a href="pc_Page.html#move">Page.move</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">binding</span>:
+<a href="pe_BindingOptions.html">BindingOptions</a>=<span class="defv">BindingOptions.DEFAULT_VALUE</span>])
+</p>
+<p class="hangIndent"><a href="pc_Page.html">Page</a> <a href="pc_Pages.html#add">Pages.add</a> ([<span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Paragraph.html#duplicate">Paragraph.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Paragraph.html#move">Paragraph.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a> <a href="pc_ParagraphStyle.html#move">ParagraphStyle.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_ParagraphStyleGroup.html">ParagraphStyleGroup</a> <a href="pc_ParagraphStyleGroup.html#move">ParagraphStyleGroup.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Polygon.html">Polygon</a> <a href="pc_Polygons.html#add">Polygons.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">numberOfSides</span>:
+<span class="argt">number</span>][, <span class="arg">insetPercentage</span>:
+<span class="argt">number</span>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_RadioButton.html">RadioButton</a> <a href="pc_RadioButtons.html#add">RadioButtons.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Rectangle.html">Rectangle</a> <a href="pc_Rectangles.html#add">Rectangles.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Rows.html#add">Rows.add</a> ([<span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_SignatureField.html">SignatureField</a> <a href="pc_SignatureFields.html#add">SignatureFields.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Sound.html">Sound</a> <a href="pc_Sounds.html#add">Sounds.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Spread.html#duplicate">Spread.duplicate</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Spread.html">Spread</a> <a href="pc_Spread.html#move">Spread.move</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Spread.html">Spread</a> <a href="pc_Spreads.html#add">Spreads.add</a> ([<span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Story.html#duplicate">Story.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Story.html#move">Story.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Submenu.html">Submenu</a> <a href="pc_Submenus.html#add">Submenus.add</a> (<span class="arg">title</span>:
+<span class="argt">string</span>[, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.AT_END</span>][, <span class="arg">reference</span>:
+<a href="pc_MenuElement.html">MenuElement</a>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_TableStyle.html">TableStyle</a> <a href="pc_TableStyle.html#move">TableStyle.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_TableStyleGroup.html">TableStyleGroup</a> <a href="pc_TableStyleGroup.html#move">TableStyleGroup.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Table.html">Table</a> <a href="pc_Tables.html#add">Tables.add</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Text.html#duplicate">Text.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Text.html#move">Text.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_TextBox.html">TextBox</a> <a href="pc_TextBoxes.html#add">TextBoxes.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_TextColumn.html#duplicate">TextColumn.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_TextColumn.html#move">TextColumn.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a> <a href="pc_TextFrames.html#add">TextFrames.add</a> ([<span class="arg">layer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">at</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_TextStyleRange.html#duplicate">TextStyleRange.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_TextStyleRange.html#move">TextStyleRange.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_TextVariableInstance.html">TextVariableInstance</a> <a href="pc_TextVariableInstances.html#add">TextVariableInstances.add</a> ([<span class="arg">to</span>:
+<b>LocationOptions</b>=<span class="defv">LocationOptions.UNKNOWN</span>][, <span class="arg">reference</span>:
+<span class="argt">varies</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><a href="pc_TimingGroup.html">TimingGroup</a> <a href="pc_TimingGroup.html#move">TimingGroup.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_TimingTarget.html">TimingTarget</a> <a href="pc_TimingTarget.html#move">TimingTarget.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Word.html#duplicate">Word.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_Word.html#move">Word.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_XMLComment.html">XMLComment</a> <a href="pc_XMLComment.html#move">XMLComment.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_XMLElement.html">XMLElement</a> <a href="pc_XMLElement.html#move">XMLElement.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_XMLInstruction.html">XMLInstruction</a> <a href="pc_XMLInstruction.html#move">XMLInstruction.move</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent"><a href="pc_Text.html">Text</a> <a href="pc_XmlStory.html#duplicate">XmlStory.duplicate</a> (<span class="arg">to</span>:
+<b>LocationOptions</b>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

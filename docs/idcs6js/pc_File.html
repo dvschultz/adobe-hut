@@ -1,0 +1,1594 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: File</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, file">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>File</h1></td></tr>
+<tr><td>&nbsp;</td><td>Represents a file in the local file system in a platform-independent manner.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#File" title="Creates and returns a new File object referring to a given file system location.">File</a>, <a href="#changePath" title="Changes the path specification of the referenced file.">changePath</a>, <a href="#close" title="Closes this open file.">close</a>, <a href="#copy" title="Copies this object‚Äôs referenced file to the specified target location.">copy</a>, <a href="#createAlias" title="Makes this file a file-system alias or shortcut to the specified file.">createAlias</a>, <a href="#decode" title="Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.">decode</a>, <a href="#encode" title="Encodes a string as required by RFC 2396, and returns the encoded string.">encode</a>, <a href="#execute" title="Executes or opens this file using the appropriate application, as if it had been double-clicked in a file browser.">execute</a>, <a href="#getRelativeURI" title="Retrieves and returns the path for this file, relative to the specified base path, in URI notation.">getRelativeURI</a>, <a href="#isEncodingAvailable" title="Reports whether a given encoding is available.">isEncodingAvailable</a>, <a href="#open" title="Opens the referenced file for subsequent read/write operations. The method resolves any aliases to find the file.">open</a>, <a href="#openDialog" title="Opens a dialog so the user can select one or more files to open.">openDialog</a>, <a href="#openDlg" title="Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file or files, and creates new File objects to represent the selected files.">openDlg</a>, <a href="#read" title="Reads the contents of the file, starting at the current position.">read</a>, <a href="#readch" title="Reads a single text character from the file at the current position.">readch</a>, <a href="#readln" title="Reads a single line of text from the file at the current position.">readln</a>, <a href="#remove" title="Deletes the file associated with this object from disk immediately, without moving it to the system trash.">remove</a>, <a href="#rename" title="Renames the associated file.">rename</a>, <a href="#resolve" title="Attempts to resolve the file-system alias or shortcut that this object refers to.">resolve</a>, <a href="#saveDialog" title="Opens a dialog so the user can select a file name to save to.">saveDialog</a>, <a href="#saveDlg" title="Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file location to which to save information, and creates a new File object to represent the selected file.">saveDlg</a>, <a href="#seek" title="Seeks to a given position in the file.">seek</a>, <a href="#tell" title="Retrieves the current position as a byte offset from the start of the file.">tell</a>, <a href="#toSource" title="Creates and returns a serialized string representation of this object.">toSource</a>, <a href="#toString" title="Converts this object to a string.">toString</a>, <a href="#write" title="Writes the specified text to the file at the current position.">write</a>, <a href="#writeln" title="Writes a string to the file at the current position and appends a line-feed sequence.">writeln</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Folder.html">Folder</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>File</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="absoluteURI"></a>absoluteURI</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The full path name for the referenced file in URI notation.</td></tr>
+<tr><td><a name="alias"></a>alias</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the object refers to a file system alias or shortcut.</td></tr>
+<tr><td><a name="created"></a>created</td><td><a href="pc_Date.html">Date</a></td>
+<td>readonly</td><td>The creation date of the referenced file, or null if the object does not refer to a file on disk.</td></tr>
+<tr><td><a name="creator"></a>creator</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>In Mac OS, the file creator as a four-character string. In Windows or UNIX, value is "????".</td></tr>
+<tr><td><a name="displayName"></a>displayName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The localized name of the referenced file, without the path specification.</td></tr>
+<tr><td><a name="encoding"></a>encoding</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>Gets or sets the encoding for subsequent read/write operations.<br>
+						One of the encoding constants listed in the&nbsp;<i>JavaScript Tools Guide</i>. If the value is not recognized, uses the system default encoding.<br>A special encoder, BINARY, is used to read binary files. It stores each byte of the file as one Unicode character regardless of any encoding. When writing, the lower byte of each Unicode character is treated as a single byte to write.
+					</td></tr>
+<tr><td><a name="eof"></a>eof</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>When true, a read attempt caused the current position to be at the end of the file, or the file is not open.</td></tr>
+<tr><td><a name="error"></a>error</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A string containing a message describing the most recent file system error.<br>Typically set by the file system, but a script can set it. Setting this value clears any error message and resets the error bit for opened files. Contains the empty string if there is no error.</td></tr>
+<tr><td><a name="exists"></a>exists</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, this object refers to a file or file-system alias that actually exists in the file system.</td></tr>
+<tr><td><a name="fsName"></a>fsName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The platform-specific full path name for the referenced file.</td></tr>
+<tr><td><a name="fullName"></a>fullName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The full path name for the referenced file in URI notation.</td></tr>
+<tr><td><a name="hidden"></a>hidden</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>When true, the file is not shown in the platform-specific file browser.<br>If the object references a file-system alias or shortcut, the flag is altered on the alias, not on the original file.</td></tr>
+<tr><td><a name="length"></a>length</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The size of the file in bytes.<br>Can be set only for a file that is not open, in which case it truncates or pads the file with 0-bytes to the new length.</td></tr>
+<tr><td><a name="lineFeed"></a>lineFeed</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>How line feed characters are written in the file system.<br>One of the values "Windows", "Macintosh", or "Unix".</td></tr>
+<tr><td><a name="modified"></a>modified</td><td><a href="pc_Date.html">Date</a></td>
+<td>readonly</td><td>The date of the referenced file's last modification, or null if the object does not refer to a file on the disk.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The file name portion of the absolute URI for the referenced file, without the path specification.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Folder.html">Folder</a></td>
+<td>readonly</td><td>The Folder object for the folder that contains this file.</td></tr>
+<tr><td><a name="path"></a>path</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The path portion of the absolute URI for the referenced file, without the file name.</td></tr>
+<tr><td><a name="readonly"></a>readonly</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>When true, prevents the file from being altered or deleted.<br>If the referenced file is a file-system alias or shortcut, the flag is altered on the alias, not on the original file.</td></tr>
+<tr><td><a name="relativeURI"></a>relativeURI</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The path name for the object in URI notation, relative to the current folder.</td></tr>
+<tr class="lastRow"><td><a name="type"></a>type</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The file type as a four-character string.<br>
+						<br>&bull;&nbsp;In Mac OS, the Mac OS file type.
+						<br>&bull;&nbsp;In Windows, "appl" for .EXE files, "shlb" for .DLL files and "TEXT" for any other file.
+					</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr class="lastRow"><td><a name="fs"></a>fs</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the file system.<br>This is a class property accessed through the File constructor. Valid values are "Windows", "Macintosh", and "Unix".</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="File"></a><a href="pc_File.html">File</a> <span class="func">File</span> ([<span class="arg">path</span>:
+<span class="argt">string</span>])<br>
+Creates and returns a new File object referring to a given file system location.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>path</td><td><a href="pc_string.html">string</a></td><td>The full or partial path name of the file,  in platform-specific or URI format.<br>
+								The value stored in the object is the absolute path. The file that the path refers to does not need to exist.If the path refers to an existing folder:
+								<br>&bull;&nbsp;The File function returns a Folder object instead of a File object.
+								<br>&bull;&nbsp;The new operator returns a File object for a nonexisting file with the same name.
+							 (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">new File(path)</td></tr></table>
+
+<h4>Class</h4><p class="spaceBelow"><a name="decode"></a>string <span class="func">decode</span> (<span class="arg">uri</span>:
+<span class="argt">string</span>)<br>
+
+						Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
+					<br>
+
+						See also&nbsp;<a href="pc_String.html">String.decodeURI()</a>.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>uri</td><td><a href="pc_string.html">string</a></td><td>The UTF-8 encoded string to decode.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="encode"></a>string <span class="func">encode</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Encodes a string as required by RFC 2396, and returns the encoded string.<br>
+
+						All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".<br>
+						Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )<br>
+						See also&nbsp;<a href="pc_global.html">encodeURI()</a>.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The string to encode.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="isEncodingAvailable"></a><a href="pc_Boolean.html">bool</a>  <span class="func">isEncodingAvailable</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Reports whether a given encoding is available.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The encoding name.<br>
+								Typical values are "ASCII", "binary", or "UTF-8".  For a complete list of supported encodings, see the&nbsp;<i>JavaScript Tools Guide</i>.
+							</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="openDialog"></a><a href="pc_File.html">File</a> <span class="func">openDialog</span> (<span class="arg">prompt</span>:
+<span class="argt">string</span>[, <span class="arg">filter</span>:
+<span class="argt">any</span>=<span class="defv">null</span>][, <span class="arg">multiSelect</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Opens a dialog so the user can select one or more files to open.<br>
+
+						Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file or multiple files, and creates new File objects to represent the selected files.
+						<br>&bull;&nbsp;If the user clicks OK, returns a File object for the selected file, or an array of objects if multiple files are selected.
+						<br>&bull;&nbsp;If the user cancels, returns null.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>prompt</td><td><a href="pc_string.html">string</a></td><td>The prompt text, displayed if the dialog allows a prompt.</td></tr>
+<tr><td>filter</td><td>
+						any
+					</td><td>A filter that limits the types of files displayed in the dialog. (default: <b>null</b>)<br>
+								<br>&bull;&nbsp;In Windows,  a filter expression such as "Javascript files:*.jsx;All files:*.*".
+								<br>&bull;&nbsp;In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
+							 (Optional)</td></tr>
+<tr class="lastRow"><td>multiSelect</td><td><a href="pc_Boolean.html">bool</a></td><td>When true, the user can select multiple files and the return value is an array. (default: <b>false</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="saveDialog"></a><a href="pc_File.html">File</a> <span class="func">saveDialog</span> (<span class="arg">prompt</span>:
+<span class="argt">string</span>[, <span class="arg">filter</span>:
+<span class="argt">any</span>=<span class="defv">null</span>])<br>
+Opens a dialog so the user can select a file name to save to.<br>
+
+						Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file location to which to save information, and creates a new File object to represent the selected file location.
+						<br>&bull;&nbsp;If the user clicks OK, returns a File object for the selected file location.
+						<br>&bull;&nbsp;If the user cancels, returns null.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>prompt</td><td><a href="pc_string.html">string</a></td><td>The prompt text, displayed if the dialog allows a prompt.</td></tr>
+<tr class="lastRow"><td>filter</td><td>
+						any
+					</td><td>In Windows only, a filter that limits the types of files displayed in the dialog. (default: <b>null</b>)<br>In Windows only,  a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.  (Optional)</td></tr>
+</table>
+</p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="changePath"></a><a href="pc_Boolean.html">bool</a>  <span class="func">changePath</span> (<span class="arg">path</span>:
+<span class="argt">string</span>)<br>
+Changes the path specification of the referenced file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>path</td><td><a href="pc_string.html">string</a></td><td>A string containing the new path, absolute or relative to the current folder.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">file.changePath ("..");</td></tr></table>
+
+<p class="spaceBelow"><a name="close"></a><a href="pc_Boolean.html">bool</a>  <span class="func">close</span> ()<br>
+Closes this open file.<br>
+Returns true if the file was closed successfully, false if an I/O error occurred.</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.close()</td></tr></table>
+
+<p class="spaceBelow"><a name="copy"></a><a href="pc_Boolean.html">bool</a>  <span class="func">copy</span> (<span class="arg">target</span>:
+<span class="argt">string</span> | <b>File</b>)<br>
+Copies this object‚Äôs referenced file to the specified target location.<br>
+
+						Resolves any aliases to find the source file. If a file exists at the target location, it is overwritten.
+						Returns true if the copy was successful.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>target</td><td><a href="pc_string.html">string</a> | <span class="rett">File</span></td><td>A string with the URI path to the target location, or a File object that references the target location.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.copy(target)</td></tr></table>
+
+<p class="spaceBelow"><a name="createAlias"></a><span class="rett">void</span>  <span class="func">createAlias</span> (<span class="arg">path</span>:
+<span class="argt">string</span>)<br>
+Makes this file a file-system alias or shortcut to the specified file.<br>
+The referenced file for this object must not yet exist on disk. Returns true if the operation was successful.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>path</td><td><a href="pc_string.html">string</a></td><td>A string containing the path of the target file.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="execute"></a><a href="pc_Boolean.html">bool</a>  <span class="func">execute</span> ()<br>
+Executes or opens this file using the appropriate application, as if it had been double-clicked in a file browser.<br>
+
+						You can use this method to run scripts, launch applications, and so on.<br>Returns true immediately if the application launch was successful.
+					</p>
+
+<p class="spaceBelow"><a name="getRelativeURI"></a>string <span class="func">getRelativeURI</span> (<span class="arg">basePath</span>:
+<span class="argt">string</span>)<br>
+Retrieves and returns the path for this file, relative to the specified base path, in URI notation.<br>
+If no base path is supplied, the URI is relative to the path of the current folder.  Returns a string containing the relative URI.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>basePath</td><td><a href="pc_string.html">string</a></td><td>A base path in URI notation.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.getRelativeURI(basePath)</td></tr></table>
+
+<p class="spaceBelow"><a name="open"></a><a href="pc_Boolean.html">bool</a>  <span class="func">open</span> (<span class="arg">mode</span>:
+<span class="argt">string</span>[, <span class="arg">type</span>:
+<span class="argt">string</span>][, <span class="arg">creator</span>:
+<span class="argt">string</span>])<br>
+Opens the referenced file for subsequent read/write operations. The method resolves any aliases to find the file.<br>
+
+						Returns true if the file was opened successfully.<br>The method attempts to detect the encoding of the open file. It reads a few bytes at the current location and tries to detect the Byte Order Mark character 0xFFFE. If found, the current position is advanced behind the detected character and the encoding property is set to one of the strings UCS-2BE, UCS-2LE, UCS4-BE, UCS-4LE, or UTF-8. If the marker character is not found, it checks for zero bytes at the current location and makes an assumption about one of the above formats (except UTF-8). If everything fails, the encoding property is set to the system encoding.<br>
+						IMPORTANT: Be careful about opening a file more than once. The operating system usually permits you to do so, but if you start writing to the file using two different File objects, you can destroy your data.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>mode</td><td><a href="pc_string.html">string</a></td><td>The read-write mode, a single-character string.<br>
+								One of these characters:
+								<br>&bull;&nbsp;r (read) Opens for reading. If the file does not exist or cannot be found, the call fails.
+								<br>&bull;&nbsp;w (write) Opens a file for writing. If the file exists, its contents are destroyed. If the file does not exist, creates a new, empty file.
+								<br>&bull;&nbsp;e (edit) Opens an existing file for reading and writing.
+								<br>&bull;&nbsp;a (append) Opens an existing file for reading and writing, and moves the current position to the end of the file.
+							</td></tr>
+<tr><td>type</td><td><a href="pc_string.html">string</a></td><td>In Mac OS, the type of a newly created file, a 4-character string. Ignored in Windows and UNIX. (Optional)</td></tr>
+<tr class="lastRow"><td>creator</td><td><a href="pc_string.html">string</a></td><td>In Mac OS, the creator of a newly created file, a 4-character string. Ignored in Windows and UNIX. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.open(mode, type, creator)</td></tr></table>
+
+<p class="spaceBelow"><a name="openDlg"></a><a href="pc_File.html">File</a> <span class="func">openDlg</span> (<span class="arg">prompt</span>:
+<span class="argt">string</span>[, <span class="arg">filter</span>:
+<span class="argt">any</span>=<span class="defv">null</span>][, <span class="arg">multiSelect</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file or files, and creates new File objects to represent the selected files.<br>
+
+						Differs from the class method openDialog() in that it presets the current folder to this File object‚Äôs parent folder and the current file to this object‚Äôs associated file.
+						<br>&bull;&nbsp;If the user clicks OK, returns a File or Folder object for the selected file or folder, or an array of objects.
+						<br>&bull;&nbsp;If the user cancels, returns null.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>prompt</td><td><a href="pc_string.html">string</a></td><td>A string containing the prompt text, if the dialog allows a prompt.</td></tr>
+<tr><td>filter</td><td>
+						any
+					</td><td>A filter that limits the types of files displayed in the dialog. (default: <b>null</b>)<br>
+								<br>&bull;&nbsp;In Windows,  a filter expression such as "Javascript files:*.jsx;All files:*.*".
+								<br>&bull;&nbsp;In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
+							 (Optional)</td></tr>
+<tr class="lastRow"><td>multiSelect</td><td><a href="pc_Boolean.html">bool</a></td><td>When true, the user can select multiple files and the return value is an array. (default: <b>false</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="read"></a>string <span class="func">read</span> ([<span class="arg">chars</span>:
+<span class="argt">number</span>])<br>
+Reads the contents of the file, starting at the current position.<br>
+Returns a string that contains up to the specified number of characters. If a number of characters is not supplied, reads from the current position to the end of the file. If the file is encoded, multiple bytes might be read to create single Unicode characters.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>chars</td><td><a href="pc_number.html">number</a></td><td>An integer specifying the number of characters to read. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.read(chars)</td></tr></table>
+
+<p class="spaceBelow"><a name="readch"></a>string <span class="func">readch</span> ()<br>
+Reads a single text character from the file at the current position.<br>
+Line feeds are recognized as CR, LF, CRLF or LFCR pairs.  If the file is encoded, multiple bytes might be read to create a single Unicode character. Returns a string that contains the character.</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.readch()</td></tr></table>
+
+<p class="spaceBelow"><a name="readln"></a>string <span class="func">readln</span> ()<br>
+Reads a single line of text from the file at the current position.<br>
+Line feeds are recognized as CR, LF, CRLF or LFCR pairs.. If the file is encoded, multiple bytes might be read to create single Unicode characters. Returns a string that contains the text.</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.readln()</td></tr></table>
+
+<p class="spaceBelow"><a name="remove"></a><a href="pc_Boolean.html">bool</a>  <span class="func">remove</span> ()<br>
+Deletes the file associated with this object from disk immediately, without moving it to the system trash.<br>
+
+						Does not resolve aliases; instead, deletes the referenced alias or shortcut file itself. Returns true if the file was successfully removed.
+						<br>&bull;&nbsp;IMPORTANT: Cannot be undone. It is recommended that you prompt the user for permission before deleting.
+					</p>
+
+<p class="spaceBelow"><a name="rename"></a><a href="pc_Boolean.html">bool</a>  <span class="func">rename</span> (<span class="arg">newName</span>:
+<span class="argt">string</span>)<br>
+Renames the associated file.<br>
+Does not resolve aliases, but renames the referenced alias or shortcut file itself. Returns true if the file was successfully renamed.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>newName</td><td><a href="pc_string.html">string</a></td><td>The new file name, with no path information.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.rename(newName)</td></tr></table>
+
+<p class="spaceBelow"><a name="resolve"></a><a href="pc_File.html">File</a> <span class="func">resolve</span> ()<br>
+Attempts to resolve the file-system alias or shortcut that this object refers to.<br>
+If successful, creates and returns a new File object that points to the resolved file system element. Returns null if this object does not refer to an alias, or if the alias could not be resolved.</p>
+
+<p class="spaceBelow"><a name="saveDlg"></a><a href="pc_File.html">File</a> <span class="func">saveDlg</span> (<span class="arg">prompt</span>:
+<span class="argt">string</span>[, <span class="arg">filter</span>:
+<span class="argt">any</span>=<span class="defv">null</span>])<br>
+Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file location to which to save information, and creates a new File object to represent the selected file.<br>
+Differs from the class method <a href="pc_File.html#saveDialog">saveDialog()</a> in that it presets the current folder to this File object‚Äôs parent folder and the file to this object‚Äôs associated file.
+						<br>&bull;&nbsp;If the user clicks OK, returns a File object for the selected file.
+						<br>&bull;&nbsp;If the user cancels, returns null.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>prompt</td><td><a href="pc_string.html">string</a></td><td>A string containing the prompt text, if the dialog allows a prompt.</td></tr>
+<tr class="lastRow"><td>filter</td><td>
+						any
+					</td><td>In Windows only, a filter that limits the types of files displayed in the dialog. (default: <b>null</b>)<br>In Windows only,  a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.  (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="seek"></a><a href="pc_Boolean.html">bool</a>  <span class="func">seek</span> (<span class="arg">pos</span>:
+<span class="argt">number</span>[, <span class="arg">mode</span>:
+<span class="argt">number</span>=<span class="defv">0</span>])<br>
+Seeks to a given position in the file.<br>
+The new position cannot be less than 0 or greater than the current file size. Returns true if the position was changed.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>pos</td><td><a href="pc_number.html">number</a></td><td>
+								The new current position in the file as an offset in bytes from the start, current position, or end, depending on the&nbsp;mode.
+							</td></tr>
+<tr class="lastRow"><td>mode</td><td><a href="pc_number.html">number</a> (range: 0 - 2)</td><td>The seek mode. (default: <b>0</b>)<br>
+								One of:
+								<br>&bull;&nbsp;0: Seek to absolute position, where pos=0 is the first byte of the file. This is the default.
+								<br>&bull;&nbsp;1: Seek relative to the current position.
+								<br>&bull;&nbsp;2. Seek backward from the end of the file.
+							 (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.seek(pos, mode)</td></tr></table>
+
+<p class="spaceBelow"><a name="tell"></a>number <span class="func">tell</span> ()<br>
+Retrieves the current position as a byte offset from the start of the file.<br>
+Returns a number, the position index.</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.tell()</td></tr></table>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Creates and returns a serialized string representation of this object.<br>
+
+						Pass the resulting string to&nbsp;<a href="pc_global.html">eval()</a>&nbsp;to recreate the object.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Converts this object to a string.</p>
+
+<p class="spaceBelow"><a name="write"></a><a href="pc_Boolean.html">bool</a>  <span class="func">write</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Writes the specified text to the file at the current position.<br>
+
+						You can supply multiple&nbsp;<i>text</i>&nbsp;values; the strings are concatenated to form a single string.<br>For encoded files, writing a single Unicode character may write multiple bytes. Returns true if the write was successful.<br>IMPORTANT: Be careful not to write to a file that is open in another application or object, as this can overwrite existing data.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>A text string to be written.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.write(text, ...)</td></tr></table>
+
+<p class="spaceBelow"><a name="writeln"></a><a href="pc_Boolean.html">bool</a>  <span class="func">writeln</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Writes a string to the file at the current position and appends a line-feed sequence.<br>
+
+						You can supply multiple&nbsp;<i>text</i>&nbsp;values. The strings are concatenated into a single string, which is written in the file followed by one line-feed sequence, of the style specified by this object's&nbsp;<i>linefeed</i>&nbsp;property.<br>For encoded files, writing a single Unicode character may write multiple bytes.  Returns true if the write was successful.<br>IMPORTANT: Be careful not to write to a file that is open in another application or object, as this can overwrite existing data.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>A text string to be written.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.writeln(text, ...)</td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.activeScript</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Application.html">Application</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Application.html">Application</a>.fullName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_AssignedStory.html">AssignedStory</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Assignment.html">Assignment</a>.documentPath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Assignment.html">Assignment</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Book.html">Book</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Book.html">Book</a>.fullName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_BookContent.html">BookContent</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_BookContent.html">BookContent</a>.fullName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ColorSetting.html">ColorSetting</a>.cmsSettingsPath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Document.html">Document</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Document.html">Document</a>.fullName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DocumentEvent.html">DocumentEvent</a>.fullName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EventListener.html">EventListener</a>.handler</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GeneralPreference.html">GeneralPreference</a>.temporaryFolder</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GotoAnchorBehavior.html">GotoAnchorBehavior</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_HyperlinkExternalPageDestination.html">HyperlinkExternalPageDestination</a>.documentPath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ImportExportEvent.html">ImportExportEvent</a>.fullName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Library.html">Library</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Library.html">Library</a>.fullName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Link.html">Link</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Movie.html">Movie</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_OpenFileBehavior.html">OpenFileBehavior</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreset.html">PDFExportPreset</a>.fullName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintBookletPrintPreference.html">PrintBookletPrintPreference</a>.printFile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.printFile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrinterPreset.html">PrinterPreset</a>.printFile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Reflection.html">Reflection</a>.sampleFile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ReflectionInfo.html">ReflectionInfo</a>.sampleFile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptPreference.html">ScriptPreference</a>.scriptsFolder</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Sound.html">Sound</a>.filePath</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ToolBox.html">ToolBox</a>.currentToolIconFile</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLExportPreference.html">XMLExportPreference</a>.preferredBrowser</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLExportPreference.html">XMLExportPreference</a>.transformFilename</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XMLImportPreference.html">XMLImportPreference</a>.transformFilename</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent">any <a href="pc_$.html#evalFile">$.evalFile</a>
+		(<span class="arg">file</span>:
+<b>File</b>[, <span class="arg">timeout</span>:
+<span class="argt">number</span>=<span class="defv">10000</span>])
+</p><p class="hangIndent">void <a href="pc_AnimationSetting.html#saveACopy">AnimationSetting.saveACopy</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Application.html#exportPresets">Application.exportPresets</a>
+		(<span class="arg">format</span>:
+<a href="pe_ExportPresetFormat.html">ExportPresetFormat</a>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Application.html#exportStrokeStyles">Application.exportStrokeStyles</a>
+		(<span class="arg">to</span>:
+<b>File</b>, <span class="arg">strokeStyleList</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_StrokeStyle.html">StrokeStyle</a>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Application.html#generateIDMLSchema">Application.generateIDMLSchema</a>
+		(<span class="arg">to</span>:
+<b>File</b>[, <span class="arg">packageFormat</span>:
+<span class="argt">bool</span>])
+</p><p class="hangIndent">void <a href="pc_Application.html#importFile">Application.importFile</a>
+		(<span class="arg">format</span>:
+<a href="pe_ExportPresetFormat.html">ExportPresetFormat</a>, <span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Application.html#importStyles">Application.importStyles</a>
+		(<span class="arg">format</span>:
+<a href="pe_ImportFormat.html">ImportFormat</a>, <span class="arg">from</span>:
+<b>File</b>[, <span class="arg">globalStrategy</span>:
+<a href="pe_GlobalClashResolutionStrategy.html">GlobalClashResolutionStrategy</a>=<span class="defv">GlobalClashResolutionStrategy.LOAD_ALL_WITH_OVERWRITE</span>])
+</p><p class="hangIndent">void <a href="pc_Application.html#loadConditions">Application.loadConditions</a>
+		(<span class="arg">from</span>:
+<b>File</b>[, <span class="arg">loadConditionSets</span>:
+<span class="argt">bool</span>])
+</p><p class="hangIndent"><a href="pc_MotionPreset.html">MotionPreset</a> <a href="pc_Application.html#loadMotionPreset">Application.loadMotionPreset</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_PreflightProfile.html">PreflightProfile</a> <a href="pc_Application.html#loadPreflightProfile">Application.loadPreflightProfile</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Application.html#loadSwatches">Application.loadSwatches</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Application.html#loadXMLTags">Application.loadXMLTags</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Application.html#packageUCF">Application.packageUCF</a>
+		(<span class="arg">sourceFolder</span>:
+<b>File</b>, <span class="arg">ucfFile</span>:
+<b>File</b>[, <span class="arg">mimeMediaType</span>:
+<span class="argt">string</span>=<span class="defv">application/vnd.adobe.indesign-idml-package</span>])
+</p><p class="hangIndent">void <a href="pc_Application.html#saveSwatches">Application.saveSwatches</a>
+		(<span class="arg">to</span>:
+<b>File</b>, <span class="arg">swatchList</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Swatch.html">Swatch</a>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Application.html#saveXMLTags">Application.saveXMLTags</a>
+		(<span class="arg">to</span>:
+<b>File</b>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Application.html#unpackageUCF">Application.unpackageUCF</a>
+		(<span class="arg">ucfFile</span>:
+<b>File</b>, <span class="arg">destinationFolder</span>:
+<b>File</b>)
+</p><p class="hangIndent"><b>File</b> <a href="pc_Assignment.html#createPackage">Assignment.createPackage</a>
+		(<span class="arg">filePath</span>:
+<b>File</b>[, <span class="arg">submit</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Assignment.html">Assignment</a> <a href="pc_Assignments.html#add">Assignments.add</a>
+		(<span class="arg">filePath</span>:
+<b>File</b>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent">void <a href="pc_Book.html#close">Book.close</a>
+		([<span class="arg">saving</span>:
+<a href="pe_SaveOptions.html">SaveOptions</a>=<span class="defv">SaveOptions.ASK</span>][, <span class="arg">savingIn</span>:
+<b>File</b>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Book.html#exportFile">Book.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>[, <span class="arg">to</span>:
+<b>File</b>][, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">whichDocuments</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_BookContent.html">BookContent</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">bool <a href="pc_Book.html#packageForPrint">Book.packageForPrint</a>
+		(<span class="arg">to</span>:
+<b>File</b>, <span class="arg">copyingFonts</span>:
+<span class="argt">bool</span>, <span class="arg">copyingLinkedGraphics</span>:
+<span class="argt">bool</span>, <span class="arg">copyingProfiles</span>:
+<span class="argt">bool</span>, <span class="arg">updatingGraphics</span>:
+<span class="argt">bool</span>, <span class="arg">includingHiddenLayers</span>:
+<span class="argt">bool</span>, <span class="arg">ignorePreflightErrors</span>:
+<span class="argt">bool</span>, <span class="arg">creatingReport</span>:
+<span class="argt">bool</span>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Book.html#preflight">Book.preflight</a>
+		([<span class="arg">to</span>:
+<b>File</b>][, <span class="arg">autoOpen</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Book.html#save">Book.save</a>
+		([<span class="arg">to</span>:
+<b>File</b>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_BookContent.html#preflight">BookContent.preflight</a>
+		([<span class="arg">to</span>:
+<b>File</b>][, <span class="arg">autoOpen</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BookContent.html">BookContent</a> <a href="pc_BookContent.html#replace">BookContent.replace</a>
+		(<span class="arg">using</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_BookContent.html">BookContent</a> <a href="pc_BookContents.html#add">BookContents.add</a>
+		(<span class="arg">fullName</span>:
+<b>File</b>[, <span class="arg">at</span>:
+<span class="argt">number</span>=<span class="defv">-1</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Book.html">Book</a> <a href="pc_Books.html#add">Books.add</a>
+		(<span class="arg">fullName</span>:
+<b>File</b>[, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Button.html#asynchronousExportFile">Button.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Button.html#exportFile">Button.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Character.html#asynchronousExportFile">Character.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Character.html#exportFile">Character.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Character.html#place">Character.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_CheckBox.html#asynchronousExportFile">CheckBox.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_CheckBox.html#exportFile">CheckBox.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_ComboBox.html#asynchronousExportFile">ComboBox.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_ComboBox.html#exportFile">ComboBox.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_DataMerge.html#exportFile">DataMerge.exportFile</a>
+		(<span class="arg">to</span>:
+<b>File</b>[, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">outputOversetReportFile</span>:
+<b>File</b>])
+</p><p class="hangIndent">void <a href="pc_DataMerge.html#mergeRecords">DataMerge.mergeRecords</a>
+		([<span class="arg">outputOversetReportFile</span>:
+<b>File</b>])
+</p><p class="hangIndent">void <a href="pc_DataMerge.html#selectDataSource">DataMerge.selectDataSource</a>
+		(<span class="arg">dataSourceFile</span>:
+<b>File</b>)
+</p><p class="hangIndent">bool <a href="pc_DataMergePreference.html#alertMissingImages">DataMergePreference.alertMissingImages</a>
+		(<span class="arg">outputMissingImagesReportFile</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Document.html#asynchronousExportFile">Document.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#close">Document.close</a>
+		([<span class="arg">saving</span>:
+<a href="pe_SaveOptions.html">SaveOptions</a>=<span class="defv">SaveOptions.ASK</span>][, <span class="arg">savingIn</span>:
+<b>File</b>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#exportFile">Document.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#exportStrokeStyles">Document.exportStrokeStyles</a>
+		(<span class="arg">to</span>:
+<b>File</b>, <span class="arg">strokeStyleList</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_StrokeStyle.html">StrokeStyle</a>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#importDtd">Document.importDtd</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Document.html#importFormats">Document.importFormats</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Document.html#importStyles">Document.importStyles</a>
+		(<span class="arg">format</span>:
+<a href="pe_ImportFormat.html">ImportFormat</a>, <span class="arg">from</span>:
+<b>File</b>[, <span class="arg">globalStrategy</span>:
+<a href="pe_GlobalClashResolutionStrategy.html">GlobalClashResolutionStrategy</a>=<span class="defv">GlobalClashResolutionStrategy.LOAD_ALL_WITH_OVERWRITE</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#importXML">Document.importXML</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Document.html#loadConditions">Document.loadConditions</a>
+		(<span class="arg">from</span>:
+<b>File</b>[, <span class="arg">loadConditionSets</span>:
+<span class="argt">bool</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#loadMasters">Document.loadMasters</a>
+		(<span class="arg">from</span>:
+<b>File</b>[, <span class="arg">globalStrategyForMasterPage</span>:
+<a href="pe_GlobalClashResolutionStrategyForMasterPage.html">GlobalClashResolutionStrategyForMasterPage</a>=<span class="defv">GlobalClashResolutionStrategyForMasterPage.LOAD_ALL_WITH_OVERWRITE</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#loadSwatches">Document.loadSwatches</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Document.html#loadXMLTags">Document.loadXMLTags</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent">bool <a href="pc_Document.html#packageForPrint">Document.packageForPrint</a>
+		(<span class="arg">to</span>:
+<b>File</b>, <span class="arg">copyingFonts</span>:
+<span class="argt">bool</span>, <span class="arg">copyingLinkedGraphics</span>:
+<span class="argt">bool</span>, <span class="arg">copyingProfiles</span>:
+<span class="argt">bool</span>, <span class="arg">updatingGraphics</span>:
+<span class="argt">bool</span>, <span class="arg">includingHiddenLayers</span>:
+<span class="argt">bool</span>, <span class="arg">ignorePreflightErrors</span>:
+<span class="argt">bool</span>, <span class="arg">creatingReport</span>:
+<span class="argt">bool</span>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Document.html">Document</a> <a href="pc_Document.html#save">Document.save</a>
+		([<span class="arg">to</span>:
+<b>File</b>][, <span class="arg">stationery</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#saveACopy">Document.saveACopy</a>
+		([<span class="arg">to</span>:
+<b>File</b>][, <span class="arg">stationery</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#saveSwatches">Document.saveSwatches</a>
+		(<span class="arg">to</span>:
+<b>File</b>, <span class="arg">swatchList</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Swatch.html">Swatch</a>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Document.html#saveXMLTags">Document.saveXMLTags</a>
+		(<span class="arg">to</span>:
+<b>File</b>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_EPS.html#asynchronousExportFile">EPS.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_EPS.html#exportFile">EPS.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of string <a href="pc_EPS.html#exportForWeb">EPS.exportForWeb</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_EPS.html#place">EPS.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_EPSText.html#asynchronousExportFile">EPSText.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_EPSText.html#exportFile">EPSText.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_EPSText.html#place">EPSText.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent">bool <a href="pc_File.html#copy">File.copy</a>
+		(<span class="arg">target</span>:
+<span class="argt">string</span> | <b>File</b>)
+</p><p class="hangIndent">void <a href="pc_FlashPlayer.html#loadMovie">FlashPlayer.loadMovie</a>
+		(<span class="arg">file</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_Font.html#createSubsetFont">Font.createSubsetFont</a>
+		(<span class="arg">charactersForSubset</span>:
+<span class="argt">string</span>, <span class="arg">fontDestination</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_FormField.html#asynchronousExportFile">FormField.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_FormField.html#exportFile">FormField.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Graphic.html#asynchronousExportFile">Graphic.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Graphic.html#exportFile">Graphic.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of string <a href="pc_Graphic.html#exportForWeb">Graphic.exportForWeb</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Graphic.html#place">Graphic.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_GraphicLine.html#asynchronousExportFile">GraphicLine.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_GraphicLine.html#exportFile">GraphicLine.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_GraphicLine.html#place">GraphicLine.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Group.html#asynchronousExportFile">Group.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Group.html#exportFile">Group.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_HtmlItem.html#asynchronousExportFile">HtmlItem.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_HtmlItem.html#exportFile">HtmlItem.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_HtmlItem.html#place">HtmlItem.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Image.html#asynchronousExportFile">Image.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Image.html#exportFile">Image.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of string <a href="pc_Image.html#exportForWeb">Image.exportForWeb</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Image.html#place">Image.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_ImportedPage.html#asynchronousExportFile">ImportedPage.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_ImportedPage.html#exportFile">ImportedPage.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of string <a href="pc_ImportedPage.html#exportForWeb">ImportedPage.exportForWeb</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_ImportedPage.html#place">ImportedPage.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent">void <a href="pc_Index.html#importTopics">Index.importTopics</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_InsertionPoint.html#asynchronousExportFile">InsertionPoint.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_InsertionPoint.html#exportFile">InsertionPoint.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_InsertionPoint.html#place">InsertionPoint.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Library.html">Library</a> <a href="pc_Libraries.html#add">Libraries.add</a>
+		(<span class="arg">fullName</span>:
+<b>File</b>[, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Line.html#asynchronousExportFile">Line.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Line.html#exportFile">Line.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Line.html#place">Line.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent">void <a href="pc_Link.html#copyLink">Link.copyLink</a>
+		(<span class="arg">to</span>:
+<b>File</b>[, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Link.html#unembed">Link.unembed</a>
+		([<span class="arg">to</span>:
+<b>File</b>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_ListBox.html#asynchronousExportFile">ListBox.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_ListBox.html#exportFile">ListBox.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_MasterSpread.html#place">MasterSpread.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">placePoint</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>][, <span class="arg">destinationLayer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">autoflowing</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_MediaItem.html#asynchronousExportFile">MediaItem.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_MediaItem.html#exportFile">MediaItem.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_MediaItem.html#place">MediaItem.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent">void <a href="pc_MetadataPreference.html#append">MetadataPreference.append</a>
+		(<span class="arg">from</span>:
+<b>File</b>[, <span class="arg">affectAll</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_MetadataPreference.html#replace">MetadataPreference.replace</a>
+		(<span class="arg">using</span>:
+<b>File</b>[, <span class="arg">affectAll</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_MetadataPreference.html#save">MetadataPreference.save</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent">void <a href="pc_MotionPreset.html#saveACopy">MotionPreset.saveACopy</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Movie.html#asynchronousExportFile">Movie.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Movie.html#exportFile">Movie.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Movie.html#place">Movie.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_MultiStateObject.html#asynchronousExportFile">MultiStateObject.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_MultiStateObject.html#exportFile">MultiStateObject.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Oval.html#asynchronousExportFile">Oval.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Oval.html#exportFile">Oval.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Oval.html#place">Oval.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_PDF.html#asynchronousExportFile">PDF.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_PDF.html#exportFile">PDF.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of string <a href="pc_PDF.html#exportForWeb">PDF.exportForWeb</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_PDF.html#place">PDF.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_PICT.html#asynchronousExportFile">PICT.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_PICT.html#exportFile">PICT.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of string <a href="pc_PICT.html#exportForWeb">PICT.exportForWeb</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_PICT.html#place">PICT.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Page.html#place">Page.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">placePoint</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>][, <span class="arg">destinationLayer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">autoflowing</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_PageItem.html#asynchronousExportFile">PageItem.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_PageItem.html#exportFile">PageItem.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_PageItem.html#place">PageItem.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Paragraph.html#asynchronousExportFile">Paragraph.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Paragraph.html#exportFile">Paragraph.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Paragraph.html#place">Paragraph.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Polygon.html#asynchronousExportFile">Polygon.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Polygon.html#exportFile">Polygon.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Polygon.html#place">Polygon.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent">void <a href="pc_PreflightProcess.html#saveReport">PreflightProcess.saveReport</a>
+		(<span class="arg">to</span>:
+<b>File</b>[, <span class="arg">autoOpen</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_PreflightProfile.html#save">PreflightProfile.save</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_RadioButton.html#asynchronousExportFile">RadioButton.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_RadioButton.html#exportFile">RadioButton.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Rectangle.html#asynchronousExportFile">Rectangle.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Rectangle.html#exportFile">Rectangle.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Rectangle.html#place">Rectangle.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_SignatureField.html#asynchronousExportFile">SignatureField.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_SignatureField.html#exportFile">SignatureField.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Sound.html#asynchronousExportFile">Sound.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Sound.html#exportFile">Sound.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Sound.html#place">Sound.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_SplineItem.html#asynchronousExportFile">SplineItem.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_SplineItem.html#exportFile">SplineItem.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_SplineItem.html#place">SplineItem.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Spread.html#place">Spread.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">placePoint</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">Measurement Unit (Number or String)</span>][, <span class="arg">destinationLayer</span>:
+<a href="pc_Layer.html">Layer</a>][, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">autoflowing</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Story.html#asynchronousExportFile">Story.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Story.html#exportFile">Story.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Text.html#asynchronousExportFile">Text.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Text.html#exportFile">Text.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Text.html#place">Text.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_TextBox.html#asynchronousExportFile">TextBox.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_TextBox.html#exportFile">TextBox.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_TextColumn.html#asynchronousExportFile">TextColumn.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_TextColumn.html#exportFile">TextColumn.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_TextColumn.html#place">TextColumn.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_TextFrame.html#asynchronousExportFile">TextFrame.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_TextFrame.html#exportFile">TextFrame.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_TextFrame.html#place">TextFrame.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_TextStyleRange.html#asynchronousExportFile">TextStyleRange.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_TextStyleRange.html#exportFile">TextStyleRange.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_TextStyleRange.html#place">TextStyleRange.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_WMF.html#asynchronousExportFile">WMF.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_WMF.html#exportFile">WMF.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of string <a href="pc_WMF.html#exportForWeb">WMF.exportForWeb</a>
+		(<span class="arg">to</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_WMF.html#place">WMF.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_Word.html#asynchronousExportFile">Word.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Word.html#exportFile">Word.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Array.html">array</a> of varies=any <a href="pc_Word.html#place">Word.place</a>
+		(<span class="arg">fileName</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_XMLElement.html#asynchronousExportFile">XMLElement.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_XMLElement.html#exportFile">XMLElement.exportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_XMLElement.html#importXML">XMLElement.importXML</a>
+		(<span class="arg">from</span>:
+<b>File</b>)
+</p><p class="hangIndent"><a href="pc_BackgroundTask.html">BackgroundTask</a> <a href="pc_XmlStory.html#asynchronousExportFile">XmlStory.asynchronousExportFile</a>
+		(<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<b>File</b>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>File</b> <a href="pc_Assignment.html#createPackage">Assignment.createPackage</a> (<span class="arg">filePath</span>:
+<b>File</b>[, <span class="arg">submit</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><b>File</b> <b>File</b>.<a href="pc_File.html#File">File</a> ([<span class="arg">path</span>:
+<span class="argt">string</span>])
+</p>
+<p class="hangIndent"><b>File</b> <b>File</b>.<a href="pc_File.html#openDialog">openDialog</a> (<span class="arg">prompt</span>:
+<span class="argt">string</span>[, <span class="arg">filter</span>:
+<span class="argt">any</span>=<span class="defv">null</span>][, <span class="arg">multiSelect</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>File</b> <b>File</b>.<a href="pc_File.html#openDlg">openDlg</a> (<span class="arg">prompt</span>:
+<span class="argt">string</span>[, <span class="arg">filter</span>:
+<span class="argt">any</span>=<span class="defv">null</span>][, <span class="arg">multiSelect</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>File</b> <b>File</b>.<a href="pc_File.html#resolve">resolve</a> ()
+</p>
+<p class="hangIndent"><b>File</b> <b>File</b>.<a href="pc_File.html#saveDialog">saveDialog</a> (<span class="arg">prompt</span>:
+<span class="argt">string</span>[, <span class="arg">filter</span>:
+<span class="argt">any</span>=<span class="defv">null</span>])
+</p>
+<p class="hangIndent"><b>File</b> <b>File</b>.<a href="pc_File.html#saveDlg">saveDlg</a> (<span class="arg">prompt</span>:
+<span class="argt">string</span>[, <span class="arg">filter</span>:
+<span class="argt">any</span>=<span class="defv">null</span>])
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

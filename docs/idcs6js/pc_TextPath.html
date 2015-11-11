@@ -1,0 +1,310 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: TextPath</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, textpath">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>TextPath</h1></td></tr>
+<tr><td>&nbsp;</td><td>A text object that is on a path.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#changeGlyph" title="Finds glyphs that match the find what value and replaces the glyphs with the change to value.">changeGlyph</a>, <a href="#changeGrep" title="Finds text that matches the find what value and replaces the text with the change to value.">changeGrep</a>, <a href="#changeText" title="Finds text that matches the find what value and replaces the text with the change to value.">changeText</a>, <a href="#changeTransliterate" title="Finds text that matches the find character type value and replaces the text with the change character type value.">changeTransliterate</a>, <a href="#extractLabel" title="Gets the label value associated with the specified key.">extractLabel</a>, <a href="#findGlyph" title="Finds glyphs that match the find what value.">findGlyph</a>, <a href="#findGrep" title="Finds text that matches the find what value.">findGrep</a>, <a href="#findText" title="Finds text that matches the find what value.">findText</a>, <a href="#findTransliterate" title="Finds text that matches the find character type value.">findTransliterate</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#insertLabel" title="Sets the label to the value associated with the specified key.">insertLabel</a>, <a href="#remove" title="Deletes the TextPath.">remove</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#toSource" title="Generates a string which, if executed, will return the TextPath.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_EPSText.html">EPSText</a> | <a href="pc_GraphicLine.html">GraphicLine</a> | <a href="pc_Oval.html">Oval</a> | <a href="pc_Polygon.html">Polygon</a> | <a href="pc_Rectangle.html">Rectangle</a> | <a href="pc_SplineItem.html">SplineItem</a> | <a href="pc_TextFrame.html">TextFrame</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>TextPath</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Character.html">Character</a> | <a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_InsertionPoint.html">InsertionPoint</a> | <a href="pc_Line.html">Line</a> | <a href="pc_MutationEvent.html">MutationEvent</a> | <a href="pc_Paragraph.html">Paragraph</a> | <a href="pc_Text.html">Text</a> | <a href="pc_TextColumn.html">TextColumn</a> | <a href="pc_TextStyleRange.html">TextStyleRange</a> | <a href="pc_Word.html">Word</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="centerBracket"></a>centerBracket</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The halfway point between the start bracket and the end bracket.</td></tr>
+<tr><td><a name="characters"></a>characters</td><td><a href="pc_Characters.html">Characters</a> <a class="sing" href="pc_Character.html">Character</a></td>
+<td>readonly</td><td>A collection of characters.</td></tr>
+<tr><td><a name="contents"></a>contents</td><td><a href="pe_SpecialCharacters.html">SpecialCharacters</a><br><a href="pc_String.html">String</a><br><a href="pe_TextFrameContents.html">TextFrameContents</a></td>
+<td>r/w</td><td>The contents of the text frame. Can return: String, TextFrameContents enumerator or SpecialCharacters enumerator.</td></tr>
+<tr><td><a name="endBracket"></a>endBracket</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The end of the type on a path. Note: Additional text becomes overset text unless the text is linked to another path or text frame.</td></tr>
+<tr><td><a name="endTextFrame"></a>endTextFrame</td><td><a href="pc_TextFrame.html">TextFrame</a><br><b>TextPath</b></td>
+<td>readonly</td><td>The last text frame in the thread. Can return: TextFrame or TextPath.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="flipPathEffect"></a>flipPathEffect</td><td><a href="pe_FlipValues.html">FlipValues</a>:<br>FlipValues.NOT_FLIPPED<br>FlipValues.FLIPPED<br>FlipValues.UNDEFINED_FLIP_VALUE</td>
+<td>r/w</td><td>The flip effect applied to the type on a path.</td></tr>
+<tr><td><a name="id"></a>id</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The unique ID of the TextPath.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the TextPath within its containing object.</td></tr>
+<tr><td><a name="insertionPoints"></a>insertionPoints</td><td><a href="pc_InsertionPoints.html">InsertionPoints</a> <a class="sing" href="pc_InsertionPoint.html">InsertionPoint</a></td>
+<td>readonly</td><td>A collection of insertion points.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="label"></a>label</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A property that can be set to any string.</td></tr>
+<tr><td><a name="lines"></a>lines</td><td><a href="pc_Lines.html">Lines</a> <a class="sing" href="pc_Line.html">Line</a></td>
+<td>readonly</td><td>A collection of lines.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The name of the TextPath; this is an alias to the TextPath's label property.</td></tr>
+<tr><td><a name="nextTextFrame"></a>nextTextFrame</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_TextFrame.html">TextFrame</a><br><b>TextPath</b></td>
+<td>r/w</td><td>The next text frame in the thread. Can return: TextFrame or TextPath. Can also accept: NothingEnum enumerator.</td></tr>
+<tr><td><a name="overflows"></a>overflows</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the story has overset text.</td></tr>
+<tr><td><a name="paragraphs"></a>paragraphs</td><td><a href="pc_Paragraphs.html">Paragraphs</a> <a class="sing" href="pc_Paragraph.html">Paragraph</a></td>
+<td>readonly</td><td>A collection of paragraphs.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_EPSText.html">EPSText</a><br><a href="pc_GraphicLine.html">GraphicLine</a><br><a href="pc_Oval.html">Oval</a><br><a href="pc_Polygon.html">Polygon</a><br><a href="pc_Rectangle.html">Rectangle</a><br><a href="pc_SplineItem.html">SplineItem</a><br><a href="pc_TextFrame.html">TextFrame</a></td>
+<td>readonly</td><td>The parent of the TextPath (a SplineItem, Polygon, GraphicLine, Rectangle, Oval, TextFrame or EPSText).</td></tr>
+<tr><td><a name="parentStory"></a>parentStory</td><td><a href="pc_Story.html">Story</a></td>
+<td>readonly</td><td>The story that contains the text.</td></tr>
+<tr><td><a name="pathAlignment"></a>pathAlignment</td><td><a href="pe_PathTypeAlignments.html">PathTypeAlignments</a>:<br>PathTypeAlignments.TOP_PATH_ALIGNMENT<br>PathTypeAlignments.BOTTOM_PATH_ALIGNMENT<br>PathTypeAlignments.CENTER_PATH_ALIGNMENT</td>
+<td>r/w</td><td>The alignment of the type on a path.</td></tr>
+<tr><td><a name="pathEffect"></a>pathEffect</td><td><a href="pe_TextPathEffects.html">TextPathEffects</a>:<br>TextPathEffects.RAINBOW_PATH_EFFECT<br>TextPathEffects.SKEW_PATH_EFFECT<br>TextPathEffects.RIBBON_PATH_EFFECT<br>TextPathEffects.STAIR_STEP_PATH_EFFECT<br>TextPathEffects.GRAVITY_PATH_EFFECT</td>
+<td>r/w</td><td>The effect applied to the type on a path.</td></tr>
+<tr><td><a name="pathSpacing"></a>pathSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The spacing applied to the type on a path.</td></tr>
+<tr><td><a name="previousTextFrame"></a>previousTextFrame</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_TextFrame.html">TextFrame</a><br><b>TextPath</b></td>
+<td>r/w</td><td>The previous text frame in the thread. Can return: TextFrame or TextPath. Can also accept: NothingEnum enumerator.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="startBracket"></a>startBracket</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The location of the start of the type on the path, expressed in points. Note: 0 is the first point on the path.</td></tr>
+<tr><td><a name="startTextFrame"></a>startTextFrame</td><td><a href="pc_TextFrame.html">TextFrame</a><br><b>TextPath</b></td>
+<td>readonly</td><td>The first text frame in the thread. Can return: TextFrame or TextPath.</td></tr>
+<tr><td><a name="textAlignment"></a>textAlignment</td><td><a href="pe_TextTypeAlignments.html">TextTypeAlignments</a>:<br>TextTypeAlignments.ASCENDER_TEXT_ALIGNMENT<br>TextTypeAlignments.DESCENDER_TEXT_ALIGNMENT<br>TextTypeAlignments.CENTER_TEXT_ALIGNMENT<br>TextTypeAlignments.BASELINE_TEXT_ALIGNMENT<br>TextTypeAlignments.ABOVE_RIGHT_EM_BOX_TEXT_ALIGNMENT<br>TextTypeAlignments.BELOW_LEFT_EM_BOX_TEXT_ALIGNMENT<br>TextTypeAlignments.ABOVE_RIGHT_ICF_BOX_TEXT_ALIGNMENT<br>TextTypeAlignments.BELOW_LEFT_ICF_BOX_TEXT_ALIGNMENT</td>
+<td>r/w</td><td>The alignment applied to the type on a path.</td></tr>
+<tr><td><a name="textColumns"></a>textColumns</td><td><a href="pc_TextColumns.html">TextColumns</a> <a class="sing" href="pc_TextColumn.html">TextColumn</a></td>
+<td>readonly</td><td>A collection of text columns.</td></tr>
+<tr><td><a name="textFrameIndex"></a>textFrameIndex</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the text frame within the story.</td></tr>
+<tr><td><a name="textStyleRanges"></a>textStyleRanges</td><td><a href="pc_TextStyleRanges.html">TextStyleRanges</a> <a class="sing" href="pc_TextStyleRange.html">TextStyleRange</a></td>
+<td>readonly</td><td>A collection of text style ranges.</td></tr>
+<tr><td><a name="texts"></a>texts</td><td><a href="pc_Texts.html">Texts</a> <a class="sing" href="pc_Text.html">Text</a></td>
+<td>readonly</td><td>A collection of text objects.</td></tr>
+<tr class="lastRow"><td><a name="words"></a>words</td><td><a href="pc_Words.html">Words</a> <a class="sing" href="pc_Word.html">Word</a></td>
+<td>readonly</td><td>A collection of words.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="AFTER_PLACE"></a>AFTER_PLACE</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>Dispatched after a TextPath is placed. This event bubbles. This event is not cancelable. (default: <b>afterPlace</b>)</td></tr>
+<tr class="lastRow"><td><a name="BEFORE_PLACE"></a>BEFORE_PLACE</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>Dispatched before a TextPath is placed. This event bubbles. This event is cancelable. (default: <b>beforePlace</b>)</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeGlyph"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeGlyph</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds glyphs that match the find what value and replaces the glyphs with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeGrep"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeGrep</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value and replaces the text with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeText"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeText</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value and replaces the text with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeTransliterate"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeTransliterate</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find character type value and replaces the text with the change character type value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="extractLabel"></a>string <span class="func">extractLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Gets the label value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findGlyph"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findGlyph</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds glyphs that match the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findGrep"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findGrep</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findText"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findText</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findTransliterate"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findTransliterate</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find character type value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_TextPath.html">TextPath</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="insertLabel"></a><span class="rett">void</span>  <span class="func">insertLabel</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+Sets the label to the value associated with the specified key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The key.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_string.html">string</a></td><td>The value.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes the TextPath.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the TextPath.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.endTextFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.nextTextFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.previousTextFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.startTextFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextPath.html">TextPath</a>.endTextFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextPath.html">TextPath</a>.nextTextFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextPath.html">TextPath</a>.previousTextFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextPath.html">TextPath</a>.startTextFrame</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#nextItem">TextPaths.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>TextPath</b>)
+</p><p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#previousItem">TextPaths.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>TextPath</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TextPath</b> <b>TextPath</b>.<a href="pc_TextPath.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#[]">TextPaths.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#add">TextPaths.add</a> ([<span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#anyItem">TextPaths.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TextPath</b> <a href="pc_TextPaths.html#everyItem">TextPaths.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#firstItem">TextPaths.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#item">TextPaths.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#itemByID">TextPaths.itemByID</a> (<span class="arg">id</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#itemByName">TextPaths.itemByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>TextPath</b> <a href="pc_TextPaths.html#itemByRange">TextPaths.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#lastItem">TextPaths.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#middleItem">TextPaths.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#nextItem">TextPaths.nextItem</a> (<span class="arg">obj</span>:
+<b>TextPath</b>)
+</p>
+<p class="hangIndent"><b>TextPath</b> <a href="pc_TextPaths.html#previousItem">TextPaths.previousItem</a> (<span class="arg">obj</span>:
+<b>TextPath</b>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

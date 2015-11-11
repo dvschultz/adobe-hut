@@ -1,0 +1,1010 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Paragraph</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, paragraph">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Paragraph</h1></td></tr>
+<tr><td>&nbsp;</td><td>A paragraph. Base Class: <a href="pc_Text.html">Text</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#applyCharacterStyle" title="Apply a character style.">applyCharacterStyle</a>, <a href="#applyConditions" title="Apply one or more conditions.">applyConditions</a>, <a href="#applyParagraphStyle" title="Apply a paragraph style.">applyParagraphStyle</a>, <a href="#asynchronousExportFile" title="asynchronously exports the object(s) to a file.">asynchronousExportFile</a>, <a href="#autoTag" title="Tag the object or the parent story using default tags defined in XML preference.">autoTag</a>, <a href="#changeGlyph" title="Finds glyphs that match the find what value and replaces the glyphs with the change to value.">changeGlyph</a>, <a href="#changeGrep" title="Finds text that matches the find what value and replaces the text with the change to value.">changeGrep</a>, <a href="#changeText" title="Finds text that matches the find what value and replaces the text with the change to value.">changeText</a>, <a href="#changeTransliterate" title="Finds text that matches the find character type value and replaces the text with the change character type value.">changeTransliterate</a>, <a href="#changecase" title="Sets the case of the text.">changecase</a>, <a href="#clearOverrides" title="Clears the specified types of override.">clearOverrides</a>, <a href="#convertBulletsAndNumberingToText" title="Convert bullets and numbering to text.">convertBulletsAndNumberingToText</a>, <a href="#convertToNote" title="Converts the text to a note.">convertToNote</a>, <a href="#convertToTable" title="Converts the text to a table.">convertToTable</a>, <a href="#createOutlines" title="Converts text to outlines. Each line of text becomes a polygon object. When the converted text is a single letter that has no internal spaces or detached parts, the polygon contains only a single path. Note: To determine whether a font allows the creation of outlines, see allow outlines.">createOutlines</a>, <a href="#duplicate" title="Duplicates the text in the specified location.">duplicate</a>, <a href="#exportFile" title="Exports the object(s) to a file.">exportFile</a>, <a href="#findGlyph" title="Finds glyphs that match the find what value.">findGlyph</a>, <a href="#findGrep" title="Finds text that matches the find what value.">findGrep</a>, <a href="#findHyperlinks" title="Finds hyperlink sources that intersecting with specified text range.">findHyperlinks</a>, <a href="#findText" title="Finds text that matches the find what value.">findText</a>, <a href="#findTransliterate" title="Finds text that matches the find character type value.">findTransliterate</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#markup" title="Associates the page item with the specified XML element while preserving existing content.">markup</a>, <a href="#move" title="Moves the text to the specified location.">move</a>, <a href="#place" title="Places the file.">place</a>, <a href="#recompose" title="Recomposes the text in the Paragraph.">recompose</a>, <a href="#remove" title="Deletes the Paragraph.">remove</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#select" title="Selects the object.">select</a>, <a href="#showText" title="Jump to the text range.">showText</a>, <a href="#toSource" title="Generates a string which, if executed, will return the Paragraph.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Cell.html">Cell</a> | <a href="pc_Change.html">Change</a> | <a href="pc_Character.html">Character</a> | <a href="pc_Footnote.html">Footnote</a> | <a href="pc_HiddenText.html">HiddenText</a> | <a href="pc_InsertionPoint.html">InsertionPoint</a> | <a href="pc_Line.html">Line</a> | <a href="pc_Note.html">Note</a> | <b>Paragraph</b> | <a href="pc_Story.html">Story</a> | <a href="pc_Text.html">Text</a> | <a href="pc_TextColumn.html">TextColumn</a> | <a href="pc_TextFrame.html">TextFrame</a> | <a href="pc_TextPath.html">TextPath</a> | <a href="pc_TextStyleRange.html">TextStyleRange</a> | <a href="pc_Word.html">Word</a> | <a href="pc_XMLElement.html">XMLElement</a> | <a href="pc_XmlStory.html">XmlStory</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_Text.html">Text</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Paragraph</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Bullet.html">Bullet</a> | <a href="pc_Character.html">Character</a> | <a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_InsertionPoint.html">InsertionPoint</a> | <a href="pc_Line.html">Line</a> | <a href="pc_MutationEvent.html">MutationEvent</a> | <a href="pc_NestedGrepStyle.html">NestedGrepStyle</a> | <a href="pc_NestedLineStyle.html">NestedLineStyle</a> | <a href="pc_NestedStyle.html">NestedStyle</a> | <a href="pc_NumberingRestartPolicy.html">NumberingRestartPolicy</a> | <b>Paragraph</b> | <a href="pc_Preference.html">Preference</a> | <a href="pc_TabStop.html">TabStop</a> | <a href="pc_Table.html">Table</a> | <a href="pc_Text.html">Text</a> | <a href="pc_TextColumn.html">TextColumn</a> | <a href="pc_TextStyleRange.html">TextStyleRange</a> | <a href="pc_Word.html">Word</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="alignToBaseline"></a>alignToBaseline</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, aligns the baseline of the text to the baseline grid.</td></tr>
+<tr><td><a name="allGraphics"></a>allGraphics</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Graphic.html">Graphic</a></td>
+<td>readonly</td><td>Lists all graphics contained by the Paragraph.</td></tr>
+<tr><td><a name="allPageItems"></a>allPageItems</td><td><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a></td>
+<td>readonly</td><td>Lists all page items contained by the Paragraph.</td></tr>
+<tr><td><a name="allowArbitraryHyphenation"></a>allowArbitraryHyphenation</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, words unassociated with a hyphenation dictionary can break to the next line on any character.</td></tr>
+<tr><td><a name="appliedCharacterStyle"></a>appliedCharacterStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The character style applied to the text. Can also accept: String.</td></tr>
+<tr><td><a name="appliedConditions"></a>appliedConditions</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Condition.html">Condition</a></td>
+<td>r/w</td><td>The applied conditions.</td></tr>
+<tr><td><a name="appliedFont"></a>appliedFont</td><td><a href="pc_Font.html">Font</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font applied to the Paragraph, specified as either a font object or the name of font family. Can return: Font or String.</td></tr>
+<tr><td><a name="appliedLanguage"></a>appliedLanguage</td><td><a href="pc_Language.html">Language</a><br><a href="pc_LanguageWithVendors.html">LanguageWithVendors</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The language of the text. Can return: LanguageWithVendors or Language. Can also accept: String.</td></tr>
+<tr><td><a name="appliedNestedStyles"></a>appliedNestedStyles</td><td><a href="pc_Array.html">Array</a> of <a href="pc_CharacterStyle.html">CharacterStyle</a></td>
+<td>readonly</td><td>The applied character styles dictated by nested styles.</td></tr>
+<tr><td><a name="appliedNumberingList"></a>appliedNumberingList</td><td><a href="pc_NumberingList.html">NumberingList</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The list to be part of. Can return: NumberingList or String.</td></tr>
+<tr><td><a name="appliedParagraphStyle"></a>appliedParagraphStyle</td><td><a href="pc_ParagraphStyle.html">ParagraphStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The paragraph style applied to the text. Can also accept: String.</td></tr>
+<tr><td><a name="ascent"></a>ascent</td><td>Measurement Unit (Number or String)</td>
+<td>readonly</td><td>The maximum ascent of any character in the text.</td></tr>
+<tr><td><a name="associatedXMLElements"></a>associatedXMLElements</td><td><a href="pc_Array.html">Array</a> of <a href="pc_XMLItem.html">XMLItem</a></td>
+<td>readonly</td><td>The XML elements associated with the Paragraph.</td></tr>
+<tr><td><a name="autoLeading"></a>autoLeading</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The percent of the type size to use for auto leading. (Range: 0 to 500).</td></tr>
+<tr><td><a name="autoTcy"></a>autoTcy</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of half-width characters at or below which the characters automatically run horizontally in vertical text.</td></tr>
+<tr><td><a name="autoTcyIncludeRoman"></a>autoTcyIncludeRoman</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, auto tcy includes Roman characters.</td></tr>
+<tr><td><a name="balanceRaggedLines"></a>balanceRaggedLines</td><td><a href="pe_BalanceLinesStyle.html">BalanceLinesStyle</a><br><a href="pc_Boolean.html">Boolean</a></td>
+<td>r/w</td><td>If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer. Can return: Boolean or BalanceLinesStyle enumerator.</td></tr>
+<tr><td><a name="baseline"></a>baseline</td><td>Measurement Unit (Number or String)</td>
+<td>readonly</td><td>The vertical offset of the text.</td></tr>
+<tr><td><a name="baselineShift"></a>baselineShift</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The baseline shift applied to the text.</td></tr>
+<tr><td><a name="bulletChar"></a>bulletChar</td><td><a href="pc_Bullet.html">Bullet</a></td>
+<td>readonly</td><td>Bullet character.</td></tr>
+<tr><td><a name="bulletsAlignment"></a>bulletsAlignment</td><td><a href="pe_ListAlignment.html">ListAlignment</a>:<br>ListAlignment.LEFT_ALIGN<br>ListAlignment.CENTER_ALIGN<br>ListAlignment.RIGHT_ALIGN</td>
+<td>r/w</td><td>The alignment of the bullet character.</td></tr>
+<tr><td><a name="bulletsAndNumberingListType"></a>bulletsAndNumberingListType</td><td><a href="pe_ListType.html">ListType</a>:<br>ListType.NO_LIST<br>ListType.BULLET_LIST<br>ListType.NUMBERED_LIST</td>
+<td>r/w</td><td>List type for bullets and numbering.</td></tr>
+<tr><td><a name="bulletsAndNumberingResultText"></a>bulletsAndNumberingResultText</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The current bullets or numbering string.</td></tr>
+<tr><td><a name="bulletsCharacterStyle"></a>bulletsCharacterStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The character style to be used for the text after string. Can return: CharacterStyle or String.</td></tr>
+<tr><td><a name="bulletsTextAfter"></a>bulletsTextAfter</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The text after string expression for bullets.</td></tr>
+<tr><td><a name="bunriKinshi"></a>bunriKinshi</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.</td></tr>
+<tr><td><a name="buttons"></a>buttons</td><td><a href="pc_Buttons.html">Buttons</a> <a class="sing" href="pc_Button.html">Button</a></td>
+<td>readonly</td><td>A collection of buttons.</td></tr>
+<tr><td><a name="capitalization"></a>capitalization</td><td><a href="pe_Capitalization.html">Capitalization</a>:<br>Capitalization.NORMAL<br>Capitalization.SMALL_CAPS<br>Capitalization.ALL_CAPS<br>Capitalization.CAP_TO_SMALL_CAP</td>
+<td>r/w</td><td>The capitalization scheme.</td></tr>
+<tr><td><a name="characterAlignment"></a>characterAlignment</td><td><a href="pe_CharacterAlignment.html">CharacterAlignment</a>:<br>CharacterAlignment.ALIGN_BASELINE<br>CharacterAlignment.ALIGN_EM_TOP<br>CharacterAlignment.ALIGN_EM_CENTER<br>CharacterAlignment.ALIGN_EM_BOTTOM<br>CharacterAlignment.ALIGN_ICF_TOP<br>CharacterAlignment.ALIGN_ICF_BOTTOM</td>
+<td>r/w</td><td>The alignment of small characters to the largest character in the line.</td></tr>
+<tr><td><a name="characterDirection"></a>characterDirection</td><td><a href="pe_CharacterDirectionOptions.html">CharacterDirectionOptions</a>:<br>CharacterDirectionOptions.DEFAULT_DIRECTION<br>CharacterDirectionOptions.LEFT_TO_RIGHT_DIRECTION<br>CharacterDirectionOptions.RIGHT_TO_LEFT_DIRECTION</td>
+<td>r/w</td><td>The direction of the character.</td></tr>
+<tr><td><a name="characterRotation"></a>characterRotation</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise.</td></tr>
+<tr><td><a name="characters"></a>characters</td><td><a href="pc_Characters.html">Characters</a> <a class="sing" href="pc_Character.html">Character</a></td>
+<td>readonly</td><td>A collection of characters.</td></tr>
+<tr><td><a name="checkBoxes"></a>checkBoxes</td><td><a href="pc_CheckBoxes.html">CheckBoxes</a></td>
+<td>readonly</td><td>A collection of checkboxes.</td></tr>
+<tr><td><a name="cjkGridTracking"></a>cjkGridTracking</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses grid tracking to track non-Roman characters in CJK grids.</td></tr>
+<tr><td><a name="comboBoxes"></a>comboBoxes</td><td><a href="pc_ComboBoxes.html">ComboBoxes</a></td>
+<td>readonly</td><td>A collection of comboboxes.</td></tr>
+<tr><td><a name="composer"></a>composer</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The text composer to use to compose the text.</td></tr>
+<tr><td><a name="contents"></a>contents</td><td><a href="pe_SpecialCharacters.html">SpecialCharacters</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The contents of the text. Can return: String or SpecialCharacters enumerator.</td></tr>
+<tr><td><a name="descent"></a>descent</td><td>Measurement Unit (Number or String)</td>
+<td>readonly</td><td>The maximum descent of any character in the text.</td></tr>
+<tr><td><a name="desiredGlyphScaling"></a>desiredGlyphScaling</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The desired width (as a percentage) of individual characters. (Range: 50 to 200)</td></tr>
+<tr><td><a name="desiredLetterSpacing"></a>desiredLetterSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The desired letter spacing, specified as a percentge of the built-in space between letters in the font. (Range: -100 to 500)</td></tr>
+<tr><td><a name="desiredWordSpacing"></a>desiredWordSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The desired word spacing, specified as a percentage of the font word space value. (Range: 0 to 1000)</td></tr>
+<tr><td><a name="diacriticPosition"></a>diacriticPosition</td><td><a href="pe_DiacriticPositionOptions.html">DiacriticPositionOptions</a>:<br>DiacriticPositionOptions.DEFAULT_POSITION<br>DiacriticPositionOptions.LOOSE_POSITION<br>DiacriticPositionOptions.MEDIUM_POSITION<br>DiacriticPositionOptions.TIGHT_POSITION<br>DiacriticPositionOptions.OPENTYPE_POSITION<br>DiacriticPositionOptions.OPENTYPE_POSITION_FROM_BASELINE</td>
+<td>r/w</td><td>Position of diacriticical characters.</td></tr>
+<tr><td><a name="digitsType"></a>digitsType</td><td><a href="pe_DigitsTypeOptions.html">DigitsTypeOptions</a>:<br>DigitsTypeOptions.DEFAULT_DIGITS<br>DigitsTypeOptions.ARABIC_DIGITS<br>DigitsTypeOptions.HINDI_DIGITS<br>DigitsTypeOptions.FARSI_DIGITS<br>DigitsTypeOptions.NATIVE_DIGITS<br>DigitsTypeOptions.FULL_FARSI_DIGITS<br>DigitsTypeOptions.THAI_DIGITS<br>DigitsTypeOptions.LAO_DIGITS<br>DigitsTypeOptions.DEVANAGARI_DIGITS<br>DigitsTypeOptions.BENGALI_DIGITS<br>DigitsTypeOptions.GURMUKHI_DIGITS<br>DigitsTypeOptions.GUJARATI_DIGITS<br>DigitsTypeOptions.ORIYA_DIGITS<br>DigitsTypeOptions.TAMIL_DIGITS<br>DigitsTypeOptions.TELUGU_DIGITS<br>DigitsTypeOptions.KANNADA_DIGITS<br>DigitsTypeOptions.MALAYALAM_DIGITS<br>DigitsTypeOptions.TIBETAN_DIGITS<br>DigitsTypeOptions.KHMER_DIGITS<br>DigitsTypeOptions.BURMESE_DIGITS</td>
+<td>r/w</td><td>The digits type.</td></tr>
+<tr><td><a name="dropCapCharacters"></a>dropCapCharacters</td><td><a href="pc_number.html">number</a> (range: 0 - 150)</td>
+<td>r/w</td><td>The number of characters to drop cap.</td></tr>
+<tr><td><a name="dropCapLines"></a>dropCapLines</td><td><a href="pc_number.html">number</a> (range: 0 - 25)</td>
+<td>r/w</td><td>The number of lines to drop cap.</td></tr>
+<tr><td><a name="dropCapStyle"></a>dropCapStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The character style to apply to the drop cap. Can also accept: String.</td></tr>
+<tr><td><a name="dropcapDetail"></a>dropcapDetail</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid.</td></tr>
+<tr><td><a name="endBaseline"></a>endBaseline</td><td>Measurement Unit (Number or String)</td>
+<td>readonly</td><td>Vertical offset of the end of the text.</td></tr>
+<tr><td><a name="endHorizontalOffset"></a>endHorizontalOffset</td><td>Measurement Unit (Number or String)</td>
+<td>readonly</td><td>Horizontal offset of the end of the text.</td></tr>
+<tr><td><a name="endJoin"></a>endJoin</td><td><a href="pe_OutlineJoin.html">OutlineJoin</a>:<br>OutlineJoin.MITER_END_JOIN<br>OutlineJoin.ROUND_END_JOIN<br>OutlineJoin.BEVEL_END_JOIN</td>
+<td>r/w</td><td>The stroke join type applied to the characters of the text.</td></tr>
+<tr><td><a name="epstexts"></a>epstexts</td><td><a href="pc_EPSTexts.html">EPSTexts</a> <a class="sing" href="pc_EPSText.html">EPSText</a></td>
+<td>readonly</td><td>EPSTexts</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="fillColor"></a>fillColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the fill of the Paragraph. . Can also accept: String.</td></tr>
+<tr><td><a name="fillTint"></a>fillTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the fill color of the Paragraph. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)</td></tr>
+<tr><td><a name="firstLineIndent"></a>firstLineIndent</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to indent the first line.</td></tr>
+<tr><td><a name="fontStyle"></a>fontStyle</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The name of the font style.</td></tr>
+<tr><td><a name="footnotes"></a>footnotes</td><td><a href="pc_Footnotes.html">Footnotes</a> <a class="sing" href="pc_Footnote.html">Footnote</a></td>
+<td>readonly</td><td>A collection of footnotes.</td></tr>
+<tr><td><a name="formFields"></a>formFields</td><td><a href="pc_FormFields.html">FormFields</a> <a class="sing" href="pc_FormField.html">FormField</a></td>
+<td>readonly</td><td>A collection of form fields.</td></tr>
+<tr><td><a name="glyphForm"></a>glyphForm</td><td><a href="pe_AlternateGlyphForms.html">AlternateGlyphForms</a>:<br>AlternateGlyphForms.NONE<br>AlternateGlyphForms.TRADITIONAL_FORM<br>AlternateGlyphForms.EXPERT_FORM<br>AlternateGlyphForms.JIS78_FORM<br>AlternateGlyphForms.JIS83_FORM<br>AlternateGlyphForms.MONOSPACED_HALF_WIDTH_FORM<br>AlternateGlyphForms.THIRD_WIDTH_FORM<br>AlternateGlyphForms.QUARTER_WIDTH_FORM<br>AlternateGlyphForms.NLC_FORM<br>AlternateGlyphForms.PROPORTIONAL_WIDTH_FORM<br>AlternateGlyphForms.FULL_WIDTH_FORM<br>AlternateGlyphForms.JIS04_FORM<br>AlternateGlyphForms.JIS90_FORM</td>
+<td>r/w</td><td>The glyph variant to substitute for standard glyphs.</td></tr>
+<tr><td><a name="gradientFillAngle"></a>gradientFillAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180)</td></tr>
+<tr><td><a name="gradientFillLength"></a>gradientFillLength</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text.</td></tr>
+<tr><td><a name="gradientFillStart"></a>gradientFillStart</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The starting point (in page coordinates) of a gradient applied to the fill of the text, in the format [x, y].</td></tr>
+<tr><td><a name="gradientStrokeAngle"></a>gradientStrokeAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180)</td></tr>
+<tr><td><a name="gradientStrokeLength"></a>gradientStrokeLength</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text.</td></tr>
+<tr><td><a name="gradientStrokeStart"></a>gradientStrokeStart</td><td><a href="pc_Array.html">Array</a> of Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The starting point (in page coordinates) of a gradient applied to the stroke of the text, in the format [x, y].</td></tr>
+<tr><td><a name="graphicLines"></a>graphicLines</td><td><a href="pc_GraphicLines.html">GraphicLines</a> <a class="sing" href="pc_GraphicLine.html">GraphicLine</a></td>
+<td>readonly</td><td>A collection of graphic lines.</td></tr>
+<tr><td><a name="gridAlignFirstLineOnly"></a>gridAlignFirstLineOnly</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, aligns only the first line to the frame grid or baseline grid. If false, aligns all lines to the grid.</td></tr>
+<tr><td><a name="gridAlignment"></a>gridAlignment</td><td><a href="pe_GridAlignment.html">GridAlignment</a>:<br>GridAlignment.NONE<br>GridAlignment.ALIGN_BASELINE<br>GridAlignment.ALIGN_EM_TOP<br>GridAlignment.ALIGN_EM_CENTER<br>GridAlignment.ALIGN_EM_BOTTOM<br>GridAlignment.ALIGN_ICF_TOP<br>GridAlignment.ALIGN_ICF_BOTTOM</td>
+<td>r/w</td><td>The alignment to the frame grid or baseline grid.</td></tr>
+<tr><td><a name="gridGyoudori"></a>gridGyoudori</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The manual gyoudori setting.</td></tr>
+<tr><td><a name="groups"></a>groups</td><td><a href="pc_Groups.html">Groups</a> <a class="sing" href="pc_Group.html">Group</a></td>
+<td>readonly</td><td>A collection of groups.</td></tr>
+<tr><td><a name="hiddenTexts"></a>hiddenTexts</td><td><a href="pc_HiddenTexts.html">HiddenTexts</a> <a class="sing" href="pc_HiddenText.html">HiddenText</a></td>
+<td>readonly</td><td>A collection of hidden text objects.</td></tr>
+<tr><td><a name="horizontalOffset"></a>horizontalOffset</td><td>Measurement Unit (Number or String)</td>
+<td>readonly</td><td>The horizontal offset of the text.</td></tr>
+<tr><td><a name="horizontalScale"></a>horizontalScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The horizontal scaling applied to the Paragraph.</td></tr>
+<tr><td><a name="hyphenWeight"></a>hyphenWeight</td><td><a href="pc_number.html">number</a> (range: 0 - 10)</td>
+<td>r/w</td><td>The relative desirability of better spacing vs. fewer hyphens. A lower value results in greater use of hyphens. (Range: 0 to 100)</td></tr>
+<tr><td><a name="hyphenateAcrossColumns"></a>hyphenateAcrossColumns</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, allows the last word in a text column to be hyphenated.</td></tr>
+<tr><td><a name="hyphenateAfterFirst"></a>hyphenateAfterFirst</td><td><a href="pc_number.html">number</a> (range: 1 - 15)</td>
+<td>r/w</td><td>The mininum number of letters at the beginning of a word that can be broken by a hyphen.</td></tr>
+<tr><td><a name="hyphenateBeforeLast"></a>hyphenateBeforeLast</td><td><a href="pc_number.html">number</a> (range: 1 - 15)</td>
+<td>r/w</td><td>The minimum number of letters at the end of a word that can be broken by a hyphen.</td></tr>
+<tr><td><a name="hyphenateCapitalizedWords"></a>hyphenateCapitalizedWords</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, allows hyphenation of capitalized words.</td></tr>
+<tr><td><a name="hyphenateLadderLimit"></a>hyphenateLadderLimit</td><td><a href="pc_number.html">number</a> (range: 0 - 25)</td>
+<td>r/w</td><td>The maximum number of hyphens that can appear on consecutive lines. To specify unlimited consecutive lines, use zero.</td></tr>
+<tr><td><a name="hyphenateLastWord"></a>hyphenateLastWord</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.</td></tr>
+<tr><td><a name="hyphenateWordsLongerThan"></a>hyphenateWordsLongerThan</td><td><a href="pc_number.html">number</a> (range: 3 - 25)</td>
+<td>r/w</td><td>The minimum number of letters a word must have in order to qualify for hyphenation.</td></tr>
+<tr><td><a name="hyphenation"></a>hyphenation</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, allows hyphenation.</td></tr>
+<tr><td><a name="hyphenationZone"></a>hyphenationZone</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount of white space allowed at the end of a line of non-justified text before hypenation begins. Note: Valid when composer is single-line composer.</td></tr>
+<tr><td><a name="ignoreEdgeAlignment"></a>ignoreEdgeAlignment</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, ignores optical edge alignment for the paragraph.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the text in the collection or parent object.</td></tr>
+<tr><td><a name="insertionPoints"></a>insertionPoints</td><td><a href="pc_InsertionPoints.html">InsertionPoints</a> <a class="sing" href="pc_InsertionPoint.html">InsertionPoint</a></td>
+<td>readonly</td><td>A collection of insertion points.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="jidori"></a>jidori</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of grid squares in which to arrange the text.</td></tr>
+<tr><td><a name="justification"></a>justification</td><td><a href="pe_Justification.html">Justification</a>:<br>Justification.LEFT_ALIGN<br>Justification.CENTER_ALIGN<br>Justification.RIGHT_ALIGN<br>Justification.LEFT_JUSTIFIED<br>Justification.RIGHT_JUSTIFIED<br>Justification.CENTER_JUSTIFIED<br>Justification.FULLY_JUSTIFIED<br>Justification.TO_BINDING_SIDE<br>Justification.AWAY_FROM_BINDING_SIDE</td>
+<td>r/w</td><td>The paragraph alignment.</td></tr>
+<tr><td><a name="kashidas"></a>kashidas</td><td><a href="pe_KashidasOptions.html">KashidasOptions</a>:<br>KashidasOptions.DEFAULT_KASHIDAS<br>KashidasOptions.KASHIDAS_OFF</td>
+<td>r/w</td><td>Use of Kashidas for justification</td></tr>
+<tr><td><a name="keepAllLinesTogether"></a>keepAllLinesTogether</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.</td></tr>
+<tr><td><a name="keepFirstLines"></a>keepFirstLines</td><td><a href="pc_number.html">number</a> (range: 1 - 50)</td>
+<td>r/w</td><td>The minimum number of lines to keep together in a paragraph before allowing a page break.</td></tr>
+<tr><td><a name="keepLastLines"></a>keepLastLines</td><td><a href="pc_number.html">number</a> (range: 1 - 50)</td>
+<td>r/w</td><td>The minimum number of lines to keep together in a paragraph after a page break.</td></tr>
+<tr><td><a name="keepLinesTogether"></a>keepLinesTogether</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.</td></tr>
+<tr><td><a name="keepRuleAboveInFrame"></a>keepRuleAboveInFrame</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.</td></tr>
+<tr><td><a name="keepWithNext"></a>keepWithNext</td><td><a href="pc_number.html">number</a> (range: 0 - 5)</td>
+<td>r/w</td><td>The minimum number of lines to keep with the next paragraph.</td></tr>
+<tr><td><a name="keepWithPrevious"></a>keepWithPrevious</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If the first line in the paragraph should be kept with the last line of previous paragraph.</td></tr>
+<tr><td><a name="kentenAlignment"></a>kentenAlignment</td><td><a href="pe_KentenAlignment.html">KentenAlignment</a>:<br>KentenAlignment.ALIGN_KENTEN_LEFT<br>KentenAlignment.ALIGN_KENTEN_CENTER</td>
+<td>r/w</td><td>The alignment of kenten characters relative to the parent characters.</td></tr>
+<tr><td><a name="kentenCharacterSet"></a>kentenCharacterSet</td><td><a href="pe_KentenCharacterSet.html">KentenCharacterSet</a>:<br>KentenCharacterSet.CHARACTER_INPUT<br>KentenCharacterSet.SHIFT_JIS<br>KentenCharacterSet.JIS<br>KentenCharacterSet.KUTEN<br>KentenCharacterSet.UNICODE</td>
+<td>r/w</td><td>The character set used for the custom kenten character. Note: Valid only when kenten kind is custom.</td></tr>
+<tr><td><a name="kentenCustomCharacter"></a>kentenCustomCharacter</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The character used for kenten. Note: Valid only when kenten kind is custom.</td></tr>
+<tr><td><a name="kentenFillColor"></a>kentenFillColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch or String.</td></tr>
+<tr><td><a name="kentenFont"></a>kentenFont</td><td><a href="pc_Font.html">Font</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font to use for kenten characters. Can return: Font or String.</td></tr>
+<tr><td><a name="kentenFontSize"></a>kentenFontSize</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The size (in points) of kenten characters.</td></tr>
+<tr><td><a name="kentenFontStyle"></a>kentenFontStyle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font style of kenten characters. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenKind"></a>kentenKind</td><td><a href="pe_KentenCharacter.html">KentenCharacter</a>:<br>KentenCharacter.NONE<br>KentenCharacter.KENTEN_SESAME_DOT<br>KentenCharacter.KENTEN_WHITE_SESAME_DOT<br>KentenCharacter.KENTEN_BLACK_CIRCLE<br>KentenCharacter.KENTEN_WHITE_CIRCLE<br>KentenCharacter.KENTEN_BLACK_TRIANGLE<br>KentenCharacter.KENTEN_WHITE_TRIANGLE<br>KentenCharacter.KENTEN_BULLSEYE<br>KentenCharacter.KENTEN_FISHEYE<br>KentenCharacter.KENTEN_SMALL_BLACK_CIRCLE<br>KentenCharacter.KENTEN_SMALL_WHITE_CIRCLE<br>KentenCharacter.CUSTOM</td>
+<td>r/w</td><td>The style of kenten characters.</td></tr>
+<tr><td><a name="kentenOverprintFill"></a>kentenOverprintFill</td><td><a href="pe_AdornmentOverprint.html">AdornmentOverprint</a>:<br>AdornmentOverprint.AUTO<br>AdornmentOverprint.OVERPRINT_ON<br>AdornmentOverprint.OVERPRINT_OFF</td>
+<td>r/w</td><td>The method of overprinting the kenten fill.</td></tr>
+<tr><td><a name="kentenOverprintStroke"></a>kentenOverprintStroke</td><td><a href="pe_AdornmentOverprint.html">AdornmentOverprint</a>:<br>AdornmentOverprint.AUTO<br>AdornmentOverprint.OVERPRINT_ON<br>AdornmentOverprint.OVERPRINT_OFF</td>
+<td>r/w</td><td>The method of overprinting the kenten stroke.</td></tr>
+<tr><td><a name="kentenPlacement"></a>kentenPlacement</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The distance between kenten characters and their parent characters.</td></tr>
+<tr><td><a name="kentenPosition"></a>kentenPosition</td><td><a href="pe_RubyKentenPosition.html">RubyKentenPosition</a>:<br>RubyKentenPosition.ABOVE_RIGHT<br>RubyKentenPosition.BELOW_LEFT</td>
+<td>r/w</td><td>The kenten position relative to the parent character.</td></tr>
+<tr><td><a name="kentenStrokeColor"></a>kentenStrokeColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters. Can return: Swatch or String.</td></tr>
+<tr><td><a name="kentenStrokeTint"></a>kentenStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100)</td></tr>
+<tr><td><a name="kentenTint"></a>kentenTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The fill tint (as a percentage) of kenten characters. (Range: 0 to 100)</td></tr>
+<tr><td><a name="kentenWeight"></a>kentenWeight</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The stroke weight (in points) of kenten characters.</td></tr>
+<tr><td><a name="kentenXScale"></a>kentenXScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The horizontal size of kenten characters as a percent of the original size.</td></tr>
+<tr><td><a name="kentenYScale"></a>kentenYScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The vertical size of kenten charachers as a percent of the original size.</td></tr>
+<tr><td><a name="kerningMethod"></a>kerningMethod</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The type of pair kerning.</td></tr>
+<tr><td><a name="kerningValue"></a>kerningValue</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount of space to add or remove between characters, specified in thousands of an em.</td></tr>
+<tr><td><a name="keyboardDirection"></a>keyboardDirection</td><td><a href="pe_CharacterDirectionOptions.html">CharacterDirectionOptions</a>:<br>CharacterDirectionOptions.DEFAULT_DIRECTION<br>CharacterDirectionOptions.LEFT_TO_RIGHT_DIRECTION<br>CharacterDirectionOptions.RIGHT_TO_LEFT_DIRECTION</td>
+<td>r/w</td><td>The keyboard direction of the character.</td></tr>
+<tr><td><a name="kinsokuHangType"></a>kinsokuHangType</td><td><a href="pe_KinsokuHangTypes.html">KinsokuHangTypes</a>:<br>KinsokuHangTypes.NONE<br>KinsokuHangTypes.KINSOKU_HANG_REGULAR<br>KinsokuHangTypes.KINSOKU_HANG_FORCE</td>
+<td>r/w</td><td>The type of hanging punctuation to allow. Note: Valid only when a kinsoku set is in effect.</td></tr>
+<tr><td><a name="kinsokuSet"></a>kinsokuSet</td><td><a href="pe_KinsokuSet.html">KinsokuSet</a><br><a href="pc_KinsokuTable.html">KinsokuTable</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The kinsoku set that determines legitimate line breaks. Can return: KinsokuTable, KinsokuSet enumerator or String.</td></tr>
+<tr><td><a name="kinsokuType"></a>kinsokuType</td><td><a href="pe_KinsokuType.html">KinsokuType</a>:<br>KinsokuType.KINSOKU_PUSH_IN_FIRST<br>KinsokuType.KINSOKU_PUSH_OUT_FIRST<br>KinsokuType.KINSOKU_PUSH_OUT_ONLY<br>KinsokuType.KINSOKU_PRIORITIZE_ADJUSTMENT_AMOUNT</td>
+<td>r/w</td><td>The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.</td></tr>
+<tr><td><a name="lastLineIndent"></a>lastLineIndent</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to indent the last line in the paragraph.</td></tr>
+<tr><td><a name="leading"></a>leading</td><td><a href="pe_Leading.html">Leading</a><br>Unit</td>
+<td>r/w</td><td>The leading applied to the text. Can return: Unit or Leading enumerator.</td></tr>
+<tr><td><a name="leadingAki"></a>leadingAki</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount of space before each character.</td></tr>
+<tr><td><a name="leadingModel"></a>leadingModel</td><td><a href="pe_LeadingModel.html">LeadingModel</a>:<br>LeadingModel.LEADING_MODEL_ROMAN<br>LeadingModel.LEADING_MODEL_AKI_BELOW<br>LeadingModel.LEADING_MODEL_AKI_ABOVE<br>LeadingModel.LEADING_MODEL_CENTER<br>LeadingModel.LEADING_MODEL_CENTER_DOWN</td>
+<td>r/w</td><td>The point from which leading is measured from line to line.</td></tr>
+<tr><td><a name="leftIndent"></a>leftIndent</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The width of the left indent.</td></tr>
+<tr><td><a name="length"></a>length</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The number of objects in the collection.</td></tr>
+<tr><td><a name="ligatures"></a>ligatures</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.</td></tr>
+<tr><td><a name="lines"></a>lines</td><td><a href="pc_Lines.html">Lines</a> <a class="sing" href="pc_Line.html">Line</a></td>
+<td>readonly</td><td>A collection of lines.</td></tr>
+<tr><td><a name="listBoxes"></a>listBoxes</td><td><a href="pc_ListBoxes.html">ListBoxes</a></td>
+<td>readonly</td><td>A collection of listboxes.</td></tr>
+<tr><td><a name="maximumGlyphScaling"></a>maximumGlyphScaling</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The maximum width (as a percentage) of individual characters. (Range: 50 to 200)</td></tr>
+<tr><td><a name="maximumLetterSpacing"></a>maximumLetterSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The maximum letter spacing, specified as a percentge of the built-in space between letters in the font. (Range: -100 to 500) Note: Valid only when text is justified.</td></tr>
+<tr><td><a name="maximumWordSpacing"></a>maximumWordSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The maximum word spacing, specified as a percentage of the font word space value. Note: Valid only when text is justified. (Range: 0 to 1000)</td></tr>
+<tr><td><a name="minimumGlyphScaling"></a>minimumGlyphScaling</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The minimum width (as a percentage) of individual characters. (Range: 50 to 200)</td></tr>
+<tr><td><a name="minimumLetterSpacing"></a>minimumLetterSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The minimum letter spacing, specified as a percentge of the built-in space between letters in the font. (Range: -100 to 500) Note: Valid only when text is justified.</td></tr>
+<tr><td><a name="minimumWordSpacing"></a>minimumWordSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The minimum word spacing, specified as a percentage of the font word space value. Note: Valid only when text is justified. (Range: 0 to 1000)</td></tr>
+<tr><td><a name="miterLimit"></a>miterLimit</td><td><a href="pc_number.html">number</a> (range: 0 - 1000)</td>
+<td>r/w</td><td>The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join. (default: <b>4</b>)</td></tr>
+<tr><td><a name="mojikumi"></a>mojikumi</td><td><a href="pc_MojikumiTable.html">MojikumiTable</a><br><a href="pe_MojikumiTableDefaults.html">MojikumiTableDefaults</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The mojikumi table. For information, see mojikumi table defaults. Can return: MojikumiTable, String or MojikumiTableDefaults enumerator.</td></tr>
+<tr><td><a name="multiStateObjects"></a>multiStateObjects</td><td><a href="pc_MultiStateObjects.html">MultiStateObjects</a> <a class="sing" href="pc_MultiStateObject.html">MultiStateObject</a></td>
+<td>readonly</td><td>A collection of multi-state objects.</td></tr>
+<tr><td><a name="nestedGrepStyles"></a>nestedGrepStyles</td><td><a href="pc_NestedGrepStyles.html">NestedGrepStyles</a> <a class="sing" href="pc_NestedGrepStyle.html">NestedGrepStyle</a></td>
+<td>readonly</td><td>A collection of nested GREP styles.</td></tr>
+<tr><td><a name="nestedLineStyles"></a>nestedLineStyles</td><td><a href="pc_NestedLineStyles.html">NestedLineStyles</a> <a class="sing" href="pc_NestedLineStyle.html">NestedLineStyle</a></td>
+<td>readonly</td><td>A collection of nested line styles.</td></tr>
+<tr><td><a name="nestedStyles"></a>nestedStyles</td><td><a href="pc_NestedStyles.html">NestedStyles</a> <a class="sing" href="pc_NestedStyle.html">NestedStyle</a></td>
+<td>readonly</td><td>A collection of nested styles.</td></tr>
+<tr><td><a name="noBreak"></a>noBreak</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, keeps the text on the same line.</td></tr>
+<tr><td><a name="notes"></a>notes</td><td><a href="pc_Notes.html">Notes</a> <a class="sing" href="pc_Note.html">Note</a></td>
+<td>readonly</td><td>A collection of notes.</td></tr>
+<tr><td><a name="numberingAlignment"></a>numberingAlignment</td><td><a href="pe_ListAlignment.html">ListAlignment</a>:<br>ListAlignment.LEFT_ALIGN<br>ListAlignment.CENTER_ALIGN<br>ListAlignment.RIGHT_ALIGN</td>
+<td>r/w</td><td>The alignment of the number.</td></tr>
+<tr><td><a name="numberingApplyRestartPolicy"></a>numberingApplyRestartPolicy</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, apply the numbering restart policy.</td></tr>
+<tr><td><a name="numberingCharacterStyle"></a>numberingCharacterStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The character style to be used for the number string. Can return: CharacterStyle or String.</td></tr>
+<tr><td><a name="numberingContinue"></a>numberingContinue</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Continue the numbering at this level.</td></tr>
+<tr><td><a name="numberingExpression"></a>numberingExpression</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The number string expression for numbering.</td></tr>
+<tr><td><a name="numberingFormat"></a>numberingFormat</td><td><a href="pe_NumberingStyle.html">NumberingStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>Numbering format options. Can return: NumberingStyle enumerator or String.</td></tr>
+<tr><td><a name="numberingLevel"></a>numberingLevel</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The level of the paragraph.</td></tr>
+<tr><td><a name="numberingRestartPolicies"></a>numberingRestartPolicies</td><td><a href="pc_NumberingRestartPolicy.html">NumberingRestartPolicy</a></td>
+<td>readonly</td><td>Numbering restart policies.</td></tr>
+<tr><td><a name="numberingResultNumber"></a>numberingResultNumber</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The current level number value.</td></tr>
+<tr><td><a name="numberingStartAt"></a>numberingStartAt</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Determines starting number in a numbered list.</td></tr>
+<tr><td><a name="opentypeFeatures"></a>opentypeFeatures</td><td><a href="pc_Array.html">Array</a> of <br><a href="pc_Array.html">Array</a> of 2 Strings<br>Long Integers</td>
+<td>r/w</td><td>OpenType features. Can return: Array of Array of 2 Strings or Long Integers.</td></tr>
+<tr><td><a name="otfContextualAlternate"></a>otfContextualAlternate</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses contextual alternate forms in OpenType fonts.</td></tr>
+<tr><td><a name="otfDiscretionaryLigature"></a>otfDiscretionaryLigature</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses discretionary ligatures in OpenType fonts.</td></tr>
+<tr><td><a name="otfFigureStyle"></a>otfFigureStyle</td><td><a href="pe_OTFFigureStyle.html">OTFFigureStyle</a>:<br>OTFFigureStyle.TABULAR_LINING<br>OTFFigureStyle.PROPORTIONAL_OLDSTYLE<br>OTFFigureStyle.PROPORTIONAL_LINING<br>OTFFigureStyle.TABULAR_OLDSTYLE<br>OTFFigureStyle.DEFAULT_VALUE</td>
+<td>r/w</td><td>The figure style in OpenType fonts.</td></tr>
+<tr><td><a name="otfFraction"></a>otfFraction</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses fractions in OpenType fonts.</td></tr>
+<tr><td><a name="otfHVKana"></a>otfHVKana</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, switches hiragana fonts, which have different glyphs for horizontal and vertical.</td></tr>
+<tr><td><a name="otfHistorical"></a>otfHistorical</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, use historical forms in OpenType fonts.</td></tr>
+<tr><td><a name="otfJustificationAlternate"></a>otfJustificationAlternate</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, use alternate justification forms in OpenType fonts</td></tr>
+<tr><td><a name="otfLocale"></a>otfLocale</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses localized forms in OpenType fonts.</td></tr>
+<tr><td><a name="otfMark"></a>otfMark</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses mark positioning in OpenType fonts.</td></tr>
+<tr><td><a name="otfOrdinal"></a>otfOrdinal</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses ordinals in OpenType fonts.</td></tr>
+<tr><td><a name="otfOverlapSwash"></a>otfOverlapSwash</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, use overlapping swash forms in OpenType fonts</td></tr>
+<tr><td><a name="otfProportionalMetrics"></a>otfProportionalMetrics</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, kerns according to proportional CJK metrics in OpenType fonts.</td></tr>
+<tr><td><a name="otfRomanItalics"></a>otfRomanItalics</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, applies italics to half-width alphanumerics.</td></tr>
+<tr><td><a name="otfSlashedZero"></a>otfSlashedZero</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, use a slashed zeroes in OpenType fonts.</td></tr>
+<tr><td><a name="otfStretchedAlternate"></a>otfStretchedAlternate</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, use stretched alternate forms in OpenType fonts</td></tr>
+<tr><td><a name="otfStylisticAlternate"></a>otfStylisticAlternate</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, use stylistic alternate forms in OpenType fonts</td></tr>
+<tr><td><a name="otfStylisticSets"></a>otfStylisticSets</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The stylistic sets to use in OpenType fonts.</td></tr>
+<tr><td><a name="otfSwash"></a>otfSwash</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses swash forms in OpenType fonts.</td></tr>
+<tr><td><a name="otfTitling"></a>otfTitling</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses titling forms in OpenType fonts.</td></tr>
+<tr><td><a name="ovals"></a>ovals</td><td><a href="pc_Ovals.html">Ovals</a> <a class="sing" href="pc_Oval.html">Oval</a></td>
+<td>readonly</td><td>A collection of ellipses.</td></tr>
+<tr><td><a name="overprintFill"></a>overprintFill</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the fill color of the characters will overprint.</td></tr>
+<tr><td><a name="overprintStroke"></a>overprintStroke</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the stroke of the characters will overprint.</td></tr>
+<tr><td><a name="pageItems"></a>pageItems</td><td><a href="pc_PageItems.html">PageItems</a> <a class="sing" href="pc_PageItem.html">PageItem</a></td>
+<td>readonly</td><td>The page items collection, which can be used to process all page items in a container (such as a document, page, or group), regardless of type.</td></tr>
+<tr><td><a name="paragraphDirection"></a>paragraphDirection</td><td><a href="pe_ParagraphDirectionOptions.html">ParagraphDirectionOptions</a>:<br>ParagraphDirectionOptions.LEFT_TO_RIGHT_DIRECTION<br>ParagraphDirectionOptions.RIGHT_TO_LEFT_DIRECTION</td>
+<td>r/w</td><td>Paragraph direction.</td></tr>
+<tr><td><a name="paragraphGyoudori"></a>paragraphGyoudori</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.</td></tr>
+<tr><td><a name="paragraphJustification"></a>paragraphJustification</td><td><a href="pe_ParagraphJustificationOptions.html">ParagraphJustificationOptions</a>:<br>ParagraphJustificationOptions.DEFAULT_JUSTIFICATION<br>ParagraphJustificationOptions.ARABIC_JUSTIFICATION<br>ParagraphJustificationOptions.NASKH_JUSTIFICATION<br>ParagraphJustificationOptions.NASKH_TATWEEL_JUSTIFICATION<br>ParagraphJustificationOptions.NASKH_KASHIDA_JUSTIFICATION<br>ParagraphJustificationOptions.NASKH_TATWEEL_JUSTIFICATION_FRAC<br>ParagraphJustificationOptions.NASKH_KASHIDA_JUSTIFICATION_FRAC</td>
+<td>r/w</td><td>Paragraph justification.</td></tr>
+<tr><td><a name="paragraphKashidaWidth"></a>paragraphKashidaWidth</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long</td></tr>
+<tr><td><a name="paragraphs"></a>paragraphs</td><td><a href="pc_Paragraphs.html">Paragraphs</a> <a class="sing" href="pc_Paragraph.html">Paragraph</a></td>
+<td>readonly</td><td>A collection of paragraphs.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Cell.html">Cell</a><br><a href="pc_Change.html">Change</a><br><a href="pc_Character.html">Character</a><br><a href="pc_Footnote.html">Footnote</a><br><a href="pc_HiddenText.html">HiddenText</a><br><a href="pc_InsertionPoint.html">InsertionPoint</a><br><a href="pc_Line.html">Line</a><br><a href="pc_Note.html">Note</a><br><b>Paragraph</b><br><a href="pc_Story.html">Story</a><br><a href="pc_Text.html">Text</a><br><a href="pc_TextColumn.html">TextColumn</a><br><a href="pc_TextFrame.html">TextFrame</a><br><a href="pc_TextPath.html">TextPath</a><br><a href="pc_TextStyleRange.html">TextStyleRange</a><br><a href="pc_Word.html">Word</a><br><a href="pc_XMLElement.html">XMLElement</a><br><a href="pc_XmlStory.html">XmlStory</a></td>
+<td>readonly</td><td>The parent of the Paragraph (a XmlStory, TextPath, TextFrame, Text, InsertionPoint, TextStyleRange, Paragraph, TextColumn, Line, Word, Character, Story, Cell, XMLElement, Footnote, Note, Change or HiddenText).</td></tr>
+<tr><td><a name="parentStory"></a>parentStory</td><td><a href="pc_Story.html">Story</a></td>
+<td>readonly</td><td>The story that contains the text.</td></tr>
+<tr><td><a name="parentTextFrames"></a>parentTextFrames</td><td><a href="pc_Array.html">Array</a> of <br><a href="pc_TextFrames.html">TextFrames</a><br><a href="pc_TextPaths.html">TextPaths</a></td>
+<td>readonly</td><td>An array of the text frames that contain the text. Can return: Array of TextFrames or TextPaths.</td></tr>
+<tr><td><a name="pointSize"></a>pointSize</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The text size.</td></tr>
+<tr><td><a name="polygons"></a>polygons</td><td><a href="pc_Polygons.html">Polygons</a> <a class="sing" href="pc_Polygon.html">Polygon</a></td>
+<td>readonly</td><td>A collection of polygons.</td></tr>
+<tr><td><a name="position"></a>position</td><td><a href="pe_Position.html">Position</a>:<br>Position.NORMAL<br>Position.SUPERSCRIPT<br>Position.SUBSCRIPT<br>Position.OT_SUPERSCRIPT<br>Position.OT_SUBSCRIPT<br>Position.OT_NUMERATOR<br>Position.OT_DENOMINATOR</td>
+<td>r/w</td><td>The text position relative to the baseline.</td></tr>
+<tr><td><a name="positionalForm"></a>positionalForm</td><td><a href="pe_PositionalForms.html">PositionalForms</a>:<br>PositionalForms.NONE<br>PositionalForms.CALCULATE<br>PositionalForms.INITIAL<br>PositionalForms.MEDIAL<br>PositionalForms.FINAL<br>PositionalForms.ISOLATED</td>
+<td>r/w</td><td>The OpenType positional form.</td></tr>
+<tr><td><a name="preferences"></a>preferences</td><td><a href="pc_Preferences.html">Preferences</a> <a class="sing" href="pc_Preference.html">Preference</a></td>
+<td>readonly</td><td>A collection of preferences objects.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="radioButtons"></a>radioButtons</td><td><a href="pc_RadioButtons.html">RadioButtons</a> <a class="sing" href="pc_RadioButton.html">RadioButton</a></td>
+<td>readonly</td><td>A collection of radio buttons.</td></tr>
+<tr><td><a name="rectangles"></a>rectangles</td><td><a href="pc_Rectangles.html">Rectangles</a> <a class="sing" href="pc_Rectangle.html">Rectangle</a></td>
+<td>readonly</td><td>A collection of rectangles.</td></tr>
+<tr><td><a name="rensuuji"></a>rensuuji</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.</td></tr>
+<tr><td><a name="rightIndent"></a>rightIndent</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The width of the right indent.</td></tr>
+<tr><td><a name="rotateSingleByteCharacters"></a>rotateSingleByteCharacters</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, rotates Roman characters in vertical text.</td></tr>
+<tr><td><a name="rubyAlignment"></a>rubyAlignment</td><td><a href="pe_RubyAlignments.html">RubyAlignments</a>:<br>RubyAlignments.RUBY_LEFT<br>RubyAlignments.RUBY_CENTER<br>RubyAlignments.RUBY_RIGHT<br>RubyAlignments.RUBY_FULL_JUSTIFY<br>RubyAlignments.RUBY_JIS<br>RubyAlignments.RUBY_EQUAL_AKI<br>RubyAlignments.RUBY_1_AKI</td>
+<td>r/w</td><td>The ruby alignment.</td></tr>
+<tr><td><a name="rubyAutoAlign"></a>rubyAutoAlign</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, auto aligns ruby.</td></tr>
+<tr><td><a name="rubyAutoScaling"></a>rubyAutoScaling</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent.</td></tr>
+<tr><td><a name="rubyAutoTcyAutoScale"></a>rubyAutoTcyAutoScale</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.</td></tr>
+<tr><td><a name="rubyAutoTcyDigits"></a>rubyAutoTcyDigits</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of digits included in auto tcy (tate-chuu-yoko) in ruby.</td></tr>
+<tr><td><a name="rubyAutoTcyIncludeRoman"></a>rubyAutoTcyIncludeRoman</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.</td></tr>
+<tr><td><a name="rubyFill"></a>rubyFill</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch or String.</td></tr>
+<tr><td><a name="rubyFlag"></a>rubyFlag</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, ruby is on.</td></tr>
+<tr><td><a name="rubyFont"></a>rubyFont</td><td><a href="pc_Font.html">Font</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font applied to ruby characters. Can return: Font or String.</td></tr>
+<tr><td><a name="rubyFontSize"></a>rubyFontSize</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The size (in points) of ruby characters.</td></tr>
+<tr><td><a name="rubyFontStyle"></a>rubyFontStyle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font style of ruby characters. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyOpenTypePro"></a>rubyOpenTypePro</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, uses OpenType Pro fonts for ruby.</td></tr>
+<tr><td><a name="rubyOverhang"></a>rubyOverhang</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount.</td></tr>
+<tr><td><a name="rubyOverprintFill"></a>rubyOverprintFill</td><td><a href="pe_AdornmentOverprint.html">AdornmentOverprint</a>:<br>AdornmentOverprint.AUTO<br>AdornmentOverprint.OVERPRINT_ON<br>AdornmentOverprint.OVERPRINT_OFF</td>
+<td>r/w</td><td>The method of overprinting the ruby fill.</td></tr>
+<tr><td><a name="rubyOverprintStroke"></a>rubyOverprintStroke</td><td><a href="pe_AdornmentOverprint.html">AdornmentOverprint</a>:<br>AdornmentOverprint.AUTO<br>AdornmentOverprint.OVERPRINT_ON<br>AdornmentOverprint.OVERPRINT_OFF</td>
+<td>r/w</td><td>The method of overprinting the ruby stroke.</td></tr>
+<tr><td><a name="rubyParentOverhangAmount"></a>rubyParentOverhangAmount</td><td><a href="pe_RubyOverhang.html">RubyOverhang</a>:<br>RubyOverhang.NONE<br>RubyOverhang.RUBY_OVERHANG_ONE_RUBY<br>RubyOverhang.RUBY_OVERHANG_HALF_RUBY<br>RubyOverhang.RUBY_OVERHANG_ONE_CHAR<br>RubyOverhang.RUBY_OVERHANG_HALF_CHAR<br>RubyOverhang.RUBY_OVERHANG_NO_LIMIT</td>
+<td>r/w</td><td>The amount by which ruby characters can overhang the parent text.</td></tr>
+<tr><td><a name="rubyParentScalingPercent"></a>rubyParentScalingPercent</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount (as a percentage) to scale the parent text size to determine the ruby text size.</td></tr>
+<tr><td><a name="rubyParentSpacing"></a>rubyParentSpacing</td><td><a href="pe_RubyParentSpacing.html">RubyParentSpacing</a>:<br>RubyParentSpacing.RUBY_PARENT_NO_ADJUSTMENT<br>RubyParentSpacing.RUBY_PARENT_BOTH_SIDES<br>RubyParentSpacing.RUBY_PARENT_121_AKI<br>RubyParentSpacing.RUBY_PARENT_EQUAL_AKI<br>RubyParentSpacing.RUBY_PARENT_FULL_JUSTIFY</td>
+<td>r/w</td><td>The ruby spacing relative to the parent text.</td></tr>
+<tr><td><a name="rubyPosition"></a>rubyPosition</td><td><a href="pe_RubyKentenPosition.html">RubyKentenPosition</a>:<br>RubyKentenPosition.ABOVE_RIGHT<br>RubyKentenPosition.BELOW_LEFT</td>
+<td>r/w</td><td>The position of ruby characters relative to the parent text.</td></tr>
+<tr><td><a name="rubyString"></a>rubyString</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The ruby string contents.</td></tr>
+<tr><td><a name="rubyStroke"></a>rubyStroke</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters. Can return: Swatch or String.</td></tr>
+<tr><td><a name="rubyStrokeTint"></a>rubyStrokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The stroke tint (as a percentage) of ruby characters.</td></tr>
+<tr><td><a name="rubyTint"></a>rubyTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the ruby fill color. (Range: 0 to 100)</td></tr>
+<tr><td><a name="rubyType"></a>rubyType</td><td><a href="pe_RubyTypes.html">RubyTypes</a>:<br>RubyTypes.GROUP_RUBY<br>RubyTypes.PER_CHARACTER_RUBY</td>
+<td>r/w</td><td>The ruby type.</td></tr>
+<tr><td><a name="rubyWeight"></a>rubyWeight</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The stroke weight (in points) of ruby characters.</td></tr>
+<tr><td><a name="rubyXOffset"></a>rubyXOffset</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount of horizontal space between ruby and parent characters.</td></tr>
+<tr><td><a name="rubyXScale"></a>rubyXScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The horizontal size of ruby characters, specified as a percent of the original size.</td></tr>
+<tr><td><a name="rubyYOffset"></a>rubyYOffset</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount of vertical space between ruby and parent characters.</td></tr>
+<tr><td><a name="rubyYScale"></a>rubyYScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The vertical size of ruby characters, specified as a percent of the original size.</td></tr>
+<tr><td><a name="ruleAbove"></a>ruleAbove</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, places a rule above the paragraph.</td></tr>
+<tr><td><a name="ruleAboveColor"></a>ruleAboveColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above. Can return: Swatch or String.</td></tr>
+<tr><td><a name="ruleAboveGapColor"></a>ruleAboveGapColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid. Can return: Swatch or String.</td></tr>
+<tr><td><a name="ruleAboveGapOverprint"></a>ruleAboveGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the stroke gap of the paragraph rule above will overprint. Note: Valid only the rule above type is not solid.</td></tr>
+<tr><td><a name="ruleAboveGapTint"></a>ruleAboveGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the stroke gap color of the paragraph rule. (Range: 0 to 100) Note: Valid only when the rule above type is not solid.</td></tr>
+<tr><td><a name="ruleAboveLeftIndent"></a>ruleAboveLeftIndent</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The distance to indent the left edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.</td></tr>
+<tr><td><a name="ruleAboveLineWeight"></a>ruleAboveLineWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The line weight of the rule above.</td></tr>
+<tr><td><a name="ruleAboveOffset"></a>ruleAboveOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the paragraph rule above from the baseline of the first line the paragraph.</td></tr>
+<tr><td><a name="ruleAboveOverprint"></a>ruleAboveOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the paragraph rule above will overprint.</td></tr>
+<tr><td><a name="ruleAboveRightIndent"></a>ruleAboveRightIndent</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The distance to indent the right edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.</td></tr>
+<tr><td><a name="ruleAboveTint"></a>ruleAboveTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the paragraph rule above. (Range: 0 to 100)</td></tr>
+<tr><td><a name="ruleAboveType"></a>ruleAboveType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the rule above the paragraph. Can return: StrokeStyle or String.</td></tr>
+<tr><td><a name="ruleAboveWidth"></a>ruleAboveWidth</td><td><a href="pe_RuleWidth.html">RuleWidth</a>:<br>RuleWidth.TEXT_WIDTH<br>RuleWidth.COLUMN_WIDTH</td>
+<td>r/w</td><td>The basis (text width or column width) used to calculate the width of the paragraph rule above.</td></tr>
+<tr><td><a name="ruleBelow"></a>ruleBelow</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, applies a paragraph rule below.</td></tr>
+<tr><td><a name="ruleBelowColor"></a>ruleBelowColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below. Can return: Swatch or String.</td></tr>
+<tr><td><a name="ruleBelowGapColor"></a>ruleBelowGapColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid. Can return: Swatch or String.</td></tr>
+<tr><td><a name="ruleBelowGapOverprint"></a>ruleBelowGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the rule below will overprint.</td></tr>
+<tr><td><a name="ruleBelowGapTint"></a>ruleBelowGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the stroke gap color of the paragraph rule below. (Range: 0 to 100) Note: Valid only when the paragraph rule below type is not solid.</td></tr>
+<tr><td><a name="ruleBelowLeftIndent"></a>ruleBelowLeftIndent</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The distance to indent the left edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.</td></tr>
+<tr><td><a name="ruleBelowLineWeight"></a>ruleBelowLineWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The line weight of the rule below.</td></tr>
+<tr><td><a name="ruleBelowOffset"></a>ruleBelowOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount to offset the the paragraph rule below from the baseline of the last line of the paragraph.</td></tr>
+<tr><td><a name="ruleBelowOverprint"></a>ruleBelowOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the rule below will overprint.</td></tr>
+<tr><td><a name="ruleBelowRightIndent"></a>ruleBelowRightIndent</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The distance to indent the right edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.</td></tr>
+<tr><td><a name="ruleBelowTint"></a>ruleBelowTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the paragraph rule below. (Range: 0 to 100)</td></tr>
+<tr><td><a name="ruleBelowType"></a>ruleBelowType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the rule below the paragraph. Can return: StrokeStyle or String.</td></tr>
+<tr><td><a name="ruleBelowWidth"></a>ruleBelowWidth</td><td><a href="pe_RuleWidth.html">RuleWidth</a>:<br>RuleWidth.TEXT_WIDTH<br>RuleWidth.COLUMN_WIDTH</td>
+<td>r/w</td><td>The basis (text width or column width) used to calculate the width of the paragraph rule below.</td></tr>
+<tr><td><a name="scaleAffectsLineHeight"></a>scaleAffectsLineHeight</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the line changes size when characters are scaled.</td></tr>
+<tr><td><a name="shataiAdjustRotation"></a>shataiAdjustRotation</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, applies shatai rotation.</td></tr>
+<tr><td><a name="shataiAdjustTsume"></a>shataiAdjustTsume</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, adjusts shatai tsume.</td></tr>
+<tr><td><a name="shataiDegreeAngle"></a>shataiDegreeAngle</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The shatai lens angle (in degrees).</td></tr>
+<tr><td><a name="shataiMagnification"></a>shataiMagnification</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount (as a percentage) of shatai obliquing to apply.</td></tr>
+<tr><td><a name="signatureFields"></a>signatureFields</td><td><a href="pc_SignatureFields.html">SignatureFields</a> <a class="sing" href="pc_SignatureField.html">SignatureField</a></td>
+<td>readonly</td><td>A collection of signature fields.</td></tr>
+<tr><td><a name="singleWordJustification"></a>singleWordJustification</td><td><a href="pe_SingleWordJustification.html">SingleWordJustification</a>:<br>SingleWordJustification.LEFT_ALIGN<br>SingleWordJustification.CENTER_ALIGN<br>SingleWordJustification.RIGHT_ALIGN<br>SingleWordJustification.FULLY_JUSTIFIED</td>
+<td>r/w</td><td>The alignment to use for lines that contain a single word.</td></tr>
+<tr><td><a name="skew"></a>skew</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The skew angle of the Paragraph.</td></tr>
+<tr><td><a name="spaceAfter"></a>spaceAfter</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The height of the paragraph space below.</td></tr>
+<tr><td><a name="spaceBefore"></a>spaceBefore</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The height of the paragraph space above.</td></tr>
+<tr><td><a name="spanColumnMinSpaceAfter"></a>spanColumnMinSpaceAfter</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The minimum space after a span or a split column</td></tr>
+<tr><td><a name="spanColumnMinSpaceBefore"></a>spanColumnMinSpaceBefore</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The minimum space before a span or a split column</td></tr>
+<tr><td><a name="spanColumnType"></a>spanColumnType</td><td><a href="pe_SpanColumnTypeOptions.html">SpanColumnTypeOptions</a>:<br>SpanColumnTypeOptions.SINGLE_COLUMN<br>SpanColumnTypeOptions.SPAN_COLUMNS<br>SpanColumnTypeOptions.SPLIT_COLUMNS</td>
+<td>r/w</td><td>Whether a paragraph should be a single column, span columns or split columns</td></tr>
+<tr><td><a name="spanSplitColumnCount"></a>spanSplitColumnCount</td><td>Short Integer (1 - 40)<br><a href="pe_SpanColumnCountOptions.html">SpanColumnCountOptions</a></td>
+<td>r/w</td><td>The number of columns a paragraph spans or the number of split columns. Can return: Short Integer (1 - 40) or SpanColumnCountOptions enumerator.</td></tr>
+<tr><td><a name="splineItems"></a>splineItems</td><td><a href="pc_SplineItems.html">SplineItems</a> <a class="sing" href="pc_SplineItem.html">SplineItem</a></td>
+<td>readonly</td><td>The spline items collection.</td></tr>
+<tr><td><a name="splitColumnInsideGutter"></a>splitColumnInsideGutter</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The inside gutter if the paragraph splits columns</td></tr>
+<tr><td><a name="splitColumnOutsideGutter"></a>splitColumnOutsideGutter</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The outside gutter if the paragraph splits columns</td></tr>
+<tr><td><a name="startParagraph"></a>startParagraph</td><td><a href="pe_StartParagraph.html">StartParagraph</a>:<br>StartParagraph.ANYWHERE<br>StartParagraph.NEXT_COLUMN<br>StartParagraph.NEXT_FRAME<br>StartParagraph.NEXT_PAGE<br>StartParagraph.NEXT_ODD_PAGE<br>StartParagraph.NEXT_EVEN_PAGE</td>
+<td>r/w</td><td>The location at which to start the paragraph.</td></tr>
+<tr><td><a name="strikeThroughColor"></a>strikeThroughColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke. Can return: Swatch or String.</td></tr>
+<tr><td><a name="strikeThroughGapColor"></a>strikeThroughGapColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke. Can return: Swatch or String.</td></tr>
+<tr><td><a name="strikeThroughGapOverprint"></a>strikeThroughGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.</td></tr>
+<tr><td><a name="strikeThroughGapTint"></a>strikeThroughGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.</td></tr>
+<tr><td><a name="strikeThroughOffset"></a>strikeThroughOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount by which to offset the strikethrough stroke from the text baseline.</td></tr>
+<tr><td><a name="strikeThroughOverprint"></a>strikeThroughOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the strikethrough stroke will overprint.</td></tr>
+<tr><td><a name="strikeThroughTint"></a>strikeThroughTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100)</td></tr>
+<tr><td><a name="strikeThroughType"></a>strikeThroughType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the strikethrough stroke. Can return: StrokeStyle or String.</td></tr>
+<tr><td><a name="strikeThroughWeight"></a>strikeThroughWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the strikethrough stroke.</td></tr>
+<tr><td><a name="strikeThru"></a>strikeThru</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, draws a strikethrough line through the text.</td></tr>
+<tr><td><a name="strokeAlignment"></a>strokeAlignment</td><td><a href="pe_TextStrokeAlign.html">TextStrokeAlign</a>:<br>TextStrokeAlign.CENTER_ALIGNMENT<br>TextStrokeAlign.OUTSIDE_ALIGNMENT</td>
+<td>r/w</td><td>The stroke alignment applied to the text.</td></tr>
+<tr><td><a name="strokeColor"></a>strokeColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the Paragraph. Can also accept: String.</td></tr>
+<tr><td><a name="strokeTint"></a>strokeTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the stroke color of the Paragraph. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)</td></tr>
+<tr><td><a name="strokeWeight"></a>strokeWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight applied to the characters of the text.</td></tr>
+<tr><td><a name="styleOverridden"></a>styleOverridden</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>If true, the applied style has been overridden with additional attributes.</td></tr>
+<tr><td><a name="tabList"></a>tabList</td><td><a href="pc_Array.html">Array</a> of <br>Arrays of Property Name/Value Pairs</td>
+<td>r/w</td><td>A list of the tab stops in the paragraph. Can return: Array of Arrays of Property Name/Value Pairs.</td></tr>
+<tr><td><a name="tabStops"></a>tabStops</td><td><a href="pc_TabStops.html">TabStops</a> <a class="sing" href="pc_TabStop.html">TabStop</a></td>
+<td>readonly</td><td>A collection of tab stops.</td></tr>
+<tr><td><a name="tables"></a>tables</td><td><a href="pc_Tables.html">Tables</a> <a class="sing" href="pc_Table.html">Table</a></td>
+<td>readonly</td><td>A collection of tables.</td></tr>
+<tr><td><a name="tatechuyoko"></a>tatechuyoko</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, makes the character horizontal in vertical text.</td></tr>
+<tr><td><a name="tatechuyokoXOffset"></a>tatechuyokoXOffset</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The horizontal offset for horizontal characters in vertical text.</td></tr>
+<tr><td><a name="tatechuyokoYOffset"></a>tatechuyokoYOffset</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The vertical offset for horizontal characters in vertical text.</td></tr>
+<tr><td><a name="textBoxes"></a>textBoxes</td><td><a href="pc_TextBoxes.html">TextBoxes</a></td>
+<td>readonly</td><td>A collection of text boxes.</td></tr>
+<tr><td><a name="textColumns"></a>textColumns</td><td><a href="pc_TextColumns.html">TextColumns</a> <a class="sing" href="pc_TextColumn.html">TextColumn</a></td>
+<td>readonly</td><td>A collection of text columns.</td></tr>
+<tr><td><a name="textFrames"></a>textFrames</td><td><a href="pc_TextFrames.html">TextFrames</a> <a class="sing" href="pc_TextFrame.html">TextFrame</a></td>
+<td>readonly</td><td>A collection of text frames.</td></tr>
+<tr><td><a name="textStyleRanges"></a>textStyleRanges</td><td><a href="pc_TextStyleRanges.html">TextStyleRanges</a> <a class="sing" href="pc_TextStyleRange.html">TextStyleRange</a></td>
+<td>readonly</td><td>A collection of text style ranges.</td></tr>
+<tr><td><a name="textVariableInstances"></a>textVariableInstances</td><td><a href="pc_TextVariableInstances.html">TextVariableInstances</a> <a class="sing" href="pc_TextVariableInstance.html">TextVariableInstance</a></td>
+<td>readonly</td><td>A collection of text variable instances.</td></tr>
+<tr><td><a name="texts"></a>texts</td><td><a href="pc_Texts.html">Texts</a> <a class="sing" href="pc_Text.html">Text</a></td>
+<td>readonly</td><td>A collection of text objects.</td></tr>
+<tr><td><a name="tracking"></a>tracking</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount by which to loosen or tighten a block of text, specified in thousands of an em.</td></tr>
+<tr><td><a name="trailingAki"></a>trailingAki</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount of space after each character.</td></tr>
+<tr><td><a name="treatIdeographicSpaceAsSpace"></a>treatIdeographicSpaceAsSpace</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, ideographic spaces will not wrap to the next line like text characters.</td></tr>
+<tr><td><a name="tsume"></a>tsume</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount of horizontal character compression.</td></tr>
+<tr><td><a name="underline"></a>underline</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, underlines the text.</td></tr>
+<tr><td><a name="underlineColor"></a>underlineColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch or String.</td></tr>
+<tr><td><a name="underlineGapColor"></a>underlineGapColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid. Can return: Swatch or String.</td></tr>
+<tr><td><a name="underlineGapOverprint"></a>underlineGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the gap color of the underline stroke will overprint.</td></tr>
+<tr><td><a name="underlineGapTint"></a>underlineGapTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.</td></tr>
+<tr><td><a name="underlineOffset"></a>underlineOffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The amount by which to offset the underline from the text baseline.</td></tr>
+<tr><td><a name="underlineOverprint"></a>underlineOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the underline stroke color will overprint.</td></tr>
+<tr><td><a name="underlineTint"></a>underlineTint</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The underline stroke tint (as a percentage). (Range: 0 to 100)</td></tr>
+<tr><td><a name="underlineType"></a>underlineType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the underline stroke. Can return: StrokeStyle or String.</td></tr>
+<tr><td><a name="underlineWeight"></a>underlineWeight</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The stroke weight of the underline stroke.</td></tr>
+<tr><td><a name="verticalScale"></a>verticalScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The vertical scaling applied to the Paragraph.</td></tr>
+<tr><td><a name="warichu"></a>warichu</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, turns on warichu.</td></tr>
+<tr><td><a name="warichuAlignment"></a>warichuAlignment</td><td><a href="pe_WarichuAlignment.html">WarichuAlignment</a>:<br>WarichuAlignment.AUTO<br>WarichuAlignment.LEFT_ALIGN<br>WarichuAlignment.CENTER_ALIGN<br>WarichuAlignment.RIGHT_ALIGN<br>WarichuAlignment.FULLY_JUSTIFIED<br>WarichuAlignment.LEFT_JUSTIFIED<br>WarichuAlignment.CENTER_JUSTIFIED<br>WarichuAlignment.RIGHT_JUSTIFIED</td>
+<td>r/w</td><td>The warichu alignment.</td></tr>
+<tr><td><a name="warichuCharsAfterBreak"></a>warichuCharsAfterBreak</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The minimum number of characters allowed after a line break.</td></tr>
+<tr><td><a name="warichuCharsBeforeBreak"></a>warichuCharsBeforeBreak</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The minimum number of characters allowed before a line break.</td></tr>
+<tr><td><a name="warichuLineSpacing"></a>warichuLineSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The gap between lines of warichu characters.</td></tr>
+<tr><td><a name="warichuLines"></a>warichuLines</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The number of lines of warichu within a single normal line.</td></tr>
+<tr><td><a name="warichuSize"></a>warichuSize</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount (as a percentage) to scale parent text size to determine warichu size.</td></tr>
+<tr><td><a name="words"></a>words</td><td><a href="pc_Words.html">Words</a> <a class="sing" href="pc_Word.html">Word</a></td>
+<td>readonly</td><td>A collection of words.</td></tr>
+<tr><td><a name="xOffsetDiacritic"></a>xOffsetDiacritic</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The x (horizontal) offset for diacritic adjustment.</td></tr>
+<tr class="lastRow"><td><a name="yOffsetDiacritic"></a>yOffsetDiacritic</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The y (vertical) offset for diacritic adjustment.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="applyCharacterStyle"></a><span class="rett">void</span>  <span class="func">applyCharacterStyle</span> (<span class="arg">using</span>:
+<a href="pc_CharacterStyle.html">CharacterStyle</a>)<br>
+Apply a character style.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>using</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a></td><td>The character style to apply.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="applyConditions"></a><span class="rett">void</span>  <span class="func">applyConditions</span> (<span class="arg">using</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Condition.html">Condition</a>[, <span class="arg">removeExisting</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Apply one or more conditions.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>using</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Condition.html">Condition</a></td><td>The condition(s) to apply</td></tr>
+<tr class="lastRow"><td>removeExisting</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, remove existing conditions. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="applyParagraphStyle"></a><span class="rett">void</span>  <span class="func">applyParagraphStyle</span> (<span class="arg">using</span>:
+<a href="pc_ParagraphStyle.html">ParagraphStyle</a>[, <span class="arg">clearingOverrides</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])<br>
+Apply a paragraph style.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>using</td><td><a href="pc_ParagraphStyle.html">ParagraphStyle</a></td><td>The paragraph style to apply.</td></tr>
+<tr class="lastRow"><td>clearingOverrides</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, clear any text attributes before applying the style. (Optional) (default: <b>true</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="asynchronousExportFile"></a><a href="pc_BackgroundTask.html">BackgroundTask</a> <span class="func">asynchronousExportFile</span> (<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+asynchronously exports the object(s) to a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>format</td><td><a href="pe_ExportFormat.html">ExportFormat</a><br><a href="pc_String.html">String</a></td><td>The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.</td></tr>
+<tr><td>to</td><td><a href="pc_File.html">File</a></td><td>The path to the export file.</td></tr>
+<tr><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, displays the export options dialog. (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>using</td><td><a href="pc_PDFExportPreset.html">PDFExportPreset</a></td><td>The export style. (Optional)</td></tr>
+<tr><td>versionComments</td><td><a href="pc_string.html">string</a></td><td>The comment for this version. (Optional)</td></tr>
+<tr class="lastRow"><td>forceSave</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, forcibly saves a version. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="autoTag"></a><span class="rett">void</span>  <span class="func">autoTag</span> ()<br>
+Tag the object or the parent story using default tags defined in XML preference.</p>
+
+<p class="spaceBelow"><a name="changeGlyph"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeGlyph</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds glyphs that match the find what value and replaces the glyphs with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeGrep"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeGrep</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value and replaces the text with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeText"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeText</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value and replaces the text with the change to value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changeTransliterate"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">changeTransliterate</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find character type value and replaces the text with the change character type value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="changecase"></a><span class="rett">void</span>  <span class="func">changecase</span> (<span class="arg">using</span>:
+<a href="pe_ChangecaseMode.html">ChangecaseMode</a>)<br>
+Sets the case of the text.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>using</td><td><a href="pe_ChangecaseMode.html">ChangecaseMode</a>:<br>ChangecaseMode.UPPERCASE<br>ChangecaseMode.LOWERCASE<br>ChangecaseMode.TITLECASE<br>ChangecaseMode.SENTENCECASE</td><td>The text case option.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="clearOverrides"></a><span class="rett">void</span>  <span class="func">clearOverrides</span> ([<span class="arg">overridesToClear</span>:
+<a href="pe_OverrideType.html">OverrideType</a>=<span class="defv">OverrideType.ALL</span>])<br>
+Clears the specified types of override.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>overridesToClear</td><td><a href="pe_OverrideType.html">OverrideType</a>:<br>OverrideType.ALL<br>OverrideType.CHARACTER_ONLY<br>OverrideType.PARAGRAPH_ONLY</td><td>The types of override to clear. (Optional) (default: <b>OverrideType.ALL</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="convertBulletsAndNumberingToText"></a><span class="rett">void</span>  <span class="func">convertBulletsAndNumberingToText</span> ()<br>
+Convert bullets and numbering to text.</p>
+
+<p class="spaceBelow"><a name="convertToNote"></a><a href="pc_Note.html">Note</a> <span class="func">convertToNote</span> ()<br>
+Converts the text to a note.</p>
+
+<p class="spaceBelow"><a name="convertToTable"></a><a href="pc_Table.html">Table</a> <span class="func">convertToTable</span> ([<span class="arg">columnSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">rowSeparator</span>:
+<span class="argt">string</span>][, <span class="arg">numberOfColumns</span>:
+<span class="argt">number</span>=<span class="defv">1</span>])<br>
+Converts the text to a table.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>columnSeparator</td><td><a href="pc_string.html">string</a></td><td>The character that starts a new column in the new table. (Optional)</td></tr>
+<tr><td>rowSeparator</td><td><a href="pc_string.html">string</a></td><td>The character starts a new row in the new table. (Optional)</td></tr>
+<tr class="lastRow"><td>numberOfColumns</td><td><a href="pc_number.html">number</a></td><td>The number of columns in the table. Note: Valid only when the column and row separator characters are the same. (Optional) (default: <b>1</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="createOutlines"></a><a href="pc_Array.html">Array</a> of <a href="pc_PageItem.html">PageItem</a> <span class="func">createOutlines</span> ([<span class="arg">deleteOriginal</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])<br>
+Converts text to outlines. Each line of text becomes a polygon object. When the converted text is a single letter that has no internal spaces or detached parts, the polygon contains only a single path. Note: To determine whether a font allows the creation of outlines, see allow outlines.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>deleteOriginal</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, deletes the original text. If false, creates the outlines as separate object(s) on top of the text.  (Optional) (default: <b>true</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="duplicate"></a><a href="pc_Text.html">Text</a> <span class="func">duplicate</span> (<span class="arg">to</span>:
+<a href="pe_LocationOptions.html">LocationOptions</a>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])<br>
+Duplicates the text in the specified location.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>to</td><td><a href="pe_LocationOptions.html">LocationOptions</a>:<br>LocationOptions.BEFORE<br>LocationOptions.AFTER<br>LocationOptions.AT_END<br>LocationOptions.AT_BEGINNING<br>LocationOptions.UNKNOWN</td><td>The location relative to the reference object or within the containing object.</td></tr>
+<tr class="lastRow"><td>reference</td><td><a href="pc_Cell.html">Cell</a><br><a href="pc_Column.html">Column</a><br><a href="pc_PageItem.html">PageItem</a><br><a href="pc_Row.html">Row</a><br><a href="pc_Story.html">Story</a><br><a href="pc_Table.html">Table</a><br><a href="pc_Text.html">Text</a></td><td>The reference object. Note: Required when the to parameter specifies before or after. Can accept: Text, Story, Cell, Row, Column, Table or PageItem. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="exportFile"></a><span class="rett">void</span>  <span class="func">exportFile</span> (<span class="arg">format</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">using</span>:
+<a href="pc_PDFExportPreset.html">PDFExportPreset</a>][, <span class="arg">versionComments</span>:
+<span class="argt">string</span>][, <span class="arg">forceSave</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Exports the object(s) to a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>format</td><td><a href="pe_ExportFormat.html">ExportFormat</a><br><a href="pc_String.html">String</a></td><td>The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.</td></tr>
+<tr><td>to</td><td><a href="pc_File.html">File</a></td><td>The path to the export file.</td></tr>
+<tr><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, displays the export options dialog. (Optional) (default: <b>false</b>)</td></tr>
+<tr><td>using</td><td><a href="pc_PDFExportPreset.html">PDFExportPreset</a></td><td>The export style. (Optional)</td></tr>
+<tr><td>versionComments</td><td><a href="pc_string.html">string</a></td><td>The comment for this version. (Optional)</td></tr>
+<tr class="lastRow"><td>forceSave</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, forcibly saves a version. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findGlyph"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findGlyph</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds glyphs that match the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findGrep"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findGrep</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findHyperlinks"></a><a href="pc_Array.html">Array</a> of <a href="pc_HyperlinkTextSource.html">HyperlinkTextSource</a> <span class="func">findHyperlinks</span> ([<span class="arg">sortOrder</span>:
+<a href="pe_RangeSortOrder.html">RangeSortOrder</a>])<br>
+Finds hyperlink sources that intersecting with specified text range.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>sortOrder</td><td><a href="pe_RangeSortOrder.html">RangeSortOrder</a>:<br>RangeSortOrder.NO_SORT<br>RangeSortOrder.ASCENDING_SORT<br>RangeSortOrder.DESCENDING_SORT</td><td>The sort order of found ranges. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findText"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findText</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find what value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="findTransliterate"></a><a href="pc_Array.html">Array</a> of <a href="pc_Text.html">Text</a> <span class="func">findTransliterate</span> ([<span class="arg">reverseOrder</span>:
+<span class="argt">bool</span>])<br>
+Finds text that matches the find character type value.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>reverseOrder</td><td><a href="pc_Boolean.html">bool</a></td><td>If true, returns the results in reverse order. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_Paragraph.html">Paragraph</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="markup"></a><span class="rett">void</span>  <span class="func">markup</span> (<span class="arg">using</span>:
+<a href="pc_XMLElement.html">XMLElement</a>)<br>
+Associates the page item with the specified XML element while preserving existing content.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>using</td><td><a href="pc_XMLElement.html">XMLElement</a></td><td>The XML element.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="move"></a><a href="pc_Text.html">Text</a> <span class="func">move</span> (<span class="arg">to</span>:
+<a href="pe_LocationOptions.html">LocationOptions</a>[, <span class="arg">reference</span>:
+<span class="argt">varies</span>])<br>
+Moves the text to the specified location.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>to</td><td><a href="pe_LocationOptions.html">LocationOptions</a>:<br>LocationOptions.BEFORE<br>LocationOptions.AFTER<br>LocationOptions.AT_END<br>LocationOptions.AT_BEGINNING<br>LocationOptions.UNKNOWN</td><td>The location relative to the reference object or within the containing object.</td></tr>
+<tr class="lastRow"><td>reference</td><td><a href="pc_Cell.html">Cell</a><br><a href="pc_Column.html">Column</a><br><a href="pc_PageItem.html">PageItem</a><br><a href="pc_Row.html">Row</a><br><a href="pc_Story.html">Story</a><br><a href="pc_Table.html">Table</a><br><a href="pc_Text.html">Text</a></td><td>The reference object. Note: Required when the to parameter specifies before or after. Can accept: Text, Story, Cell, Row, Column, Table or PageItem. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="place"></a><a href="pc_Array.html">Array</a> of <span class="rett">any</span>  <span class="func">place</span> (<span class="arg">fileName</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">showingOptions</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])<br>
+Places the file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>fileName</td><td><a href="pc_File.html">File</a></td><td>The file to place</td></tr>
+<tr><td>showingOptions</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to display the import options dialog (Optional) (default: <b>false</b>)</td></tr>
+<tr class="lastRow"><td>withProperties</td><td><a href="pc_Object.html">Object</a></td><td>Initial values for properties of the placed object(s) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="recompose"></a><span class="rett">void</span>  <span class="func">recompose</span> ()<br>
+Recomposes the text in the Paragraph.</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes the Paragraph.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="select"></a><span class="rett">void</span>  <span class="func">select</span> ([<span class="arg">existingSelection</span>:
+<a href="pe_SelectionOptions.html">SelectionOptions</a>=<span class="defv">SelectionOptions.REPLACE_WITH</span>])<br>
+Selects the object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>existingSelection</td><td><a href="pe_SelectionOptions.html">SelectionOptions</a>:<br>SelectionOptions.ADD_TO<br>SelectionOptions.REMOVE_FROM<br>SelectionOptions.REPLACE_WITH<br>SelectionOptions.SET_KEY</td><td>The selection status of the Paragraph in relation to previously selected objects. (Optional) (default: <b>SelectionOptions.REPLACE_WITH</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="showText"></a><span class="rett">void</span>  <span class="func">showText</span> ()<br>
+Jump to the text range.</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the Paragraph.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#nextItem">Paragraphs.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>Paragraph</b>)
+</p><p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#previousItem">Paragraphs.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>Paragraph</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Paragraph</b> <b>Paragraph</b>.<a href="pc_Paragraph.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#[]">Paragraphs.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#anyItem">Paragraphs.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Paragraph</b> <a href="pc_Paragraphs.html#everyItem">Paragraphs.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#firstItem">Paragraphs.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#item">Paragraphs.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>Paragraph</b> <a href="pc_Paragraphs.html#itemByRange">Paragraphs.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#lastItem">Paragraphs.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#middleItem">Paragraphs.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#nextItem">Paragraphs.nextItem</a> (<span class="arg">obj</span>:
+<b>Paragraph</b>)
+</p>
+<p class="hangIndent"><b>Paragraph</b> <a href="pc_Paragraphs.html#previousItem">Paragraphs.previousItem</a> (<span class="arg">obj</span>:
+<b>Paragraph</b>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

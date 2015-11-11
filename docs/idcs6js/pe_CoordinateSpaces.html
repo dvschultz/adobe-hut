@@ -1,0 +1,552 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: CoordinateSpaces</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, coordinatespaces">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>CoordinateSpaces</h1></td></tr>
+<tr><td>&nbsp;</td><td>Coordinate space options.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>CoordinateSpaces.INNER_COORDINATES</td><td>Inner coordinates</td><td>2021222766  = 
+				'xyin'
+			</td></tr>
+<tr><td>CoordinateSpaces.PAGE_COORDINATES</td><td>Page coordinates.</td><td>2021224551  = 
+				'xypg'
+			</td></tr>
+<tr><td>CoordinateSpaces.PARENT_COORDINATES</td><td>Parent coordinates</td><td>2021224545  = 
+				'xypa'
+			</td></tr>
+<tr><td>CoordinateSpaces.PASTEBOARD_COORDINATES</td><td>Pasteboard coordinates</td><td>2021224546  = 
+				'xypb'
+			</td></tr>
+<tr class="lastRow"><td>CoordinateSpaces.SPREAD_COORDINATES</td><td>Spread coordinates.</td><td>2021225328  = 
+				'xysp'
+			</td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>In function</h3>
+
+<p class="hangIndent"><i>any</i>  <a href="pc_Button.html#resolve">Button.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Button.html#transform">Button.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Button.html#transformValuesOf">Button.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_CheckBox.html#resolve">CheckBox.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_CheckBox.html#transform">CheckBox.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_CheckBox.html#transformValuesOf">CheckBox.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_ComboBox.html#resolve">ComboBox.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ComboBox.html#transform">ComboBox.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_ComboBox.html#transformValuesOf">ComboBox.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_EPS.html#resolve">EPS.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_EPS.html#transform">EPS.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_EPS.html#transformValuesOf">EPS.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_EPSText.html#resolve">EPSText.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_EPSText.html#transform">EPSText.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_EPSText.html#transformValuesOf">EPSText.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_FormField.html#resolve">FormField.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_FormField.html#transform">FormField.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_FormField.html#transformValuesOf">FormField.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Graphic.html#resolve">Graphic.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Graphic.html#transform">Graphic.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Graphic.html#transformValuesOf">Graphic.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_GraphicLine.html#resolve">GraphicLine.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_GraphicLine.html#transform">GraphicLine.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_GraphicLine.html#transformValuesOf">GraphicLine.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Group.html#resolve">Group.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Group.html#transform">Group.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Group.html#transformValuesOf">Group.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Guide.html#resolve">Guide.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Guide.html#transformValuesOf">Guide.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_HtmlItem.html#resolve">HtmlItem.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_HtmlItem.html#transform">HtmlItem.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_HtmlItem.html#transformValuesOf">HtmlItem.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Image.html#resolve">Image.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Image.html#transform">Image.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Image.html#transformValuesOf">Image.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_ImportedPage.html#resolve">ImportedPage.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ImportedPage.html#transform">ImportedPage.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_ImportedPage.html#transformValuesOf">ImportedPage.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_ListBox.html#resolve">ListBox.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ListBox.html#transform">ListBox.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_ListBox.html#transformValuesOf">ListBox.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_MasterSpread.html#resolve">MasterSpread.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MasterSpread.html#transform">MasterSpread.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_MasterSpread.html#transformValuesOf">MasterSpread.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_MediaItem.html#resolve">MediaItem.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MediaItem.html#transform">MediaItem.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_MediaItem.html#transformValuesOf">MediaItem.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Movie.html#resolve">Movie.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Movie.html#transform">Movie.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Movie.html#transformValuesOf">Movie.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_MultiStateObject.html#resolve">MultiStateObject.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MultiStateObject.html#transform">MultiStateObject.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_MultiStateObject.html#transformValuesOf">MultiStateObject.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Oval.html#resolve">Oval.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Oval.html#transform">Oval.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Oval.html#transformValuesOf">Oval.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_PDF.html#resolve">PDF.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PDF.html#transform">PDF.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_PDF.html#transformValuesOf">PDF.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_PICT.html#resolve">PICT.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PICT.html#transform">PICT.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_PICT.html#transformValuesOf">PICT.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Page.html#resolve">Page.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Page.html#transform">Page.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Page.html#transformValuesOf">Page.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_PageItem.html#resolve">PageItem.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PageItem.html#transform">PageItem.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_PageItem.html#transformValuesOf">PageItem.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Polygon.html#resolve">Polygon.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Polygon.html#transform">Polygon.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Polygon.html#transformValuesOf">Polygon.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_RadioButton.html#resolve">RadioButton.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_RadioButton.html#transform">RadioButton.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_RadioButton.html#transformValuesOf">RadioButton.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Rectangle.html#resolve">Rectangle.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Rectangle.html#transform">Rectangle.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Rectangle.html#transformValuesOf">Rectangle.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_SignatureField.html#resolve">SignatureField.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_SignatureField.html#transform">SignatureField.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_SignatureField.html#transformValuesOf">SignatureField.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Sound.html#resolve">Sound.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Sound.html#transform">Sound.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Sound.html#transformValuesOf">Sound.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_SplineItem.html#resolve">SplineItem.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_SplineItem.html#transform">SplineItem.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_SplineItem.html#transformValuesOf">SplineItem.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_Spread.html#resolve">Spread.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Spread.html#transform">Spread.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_Spread.html#transformValuesOf">Spread.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_TextBox.html#resolve">TextBox.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextBox.html#transform">TextBox.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_TextBox.html#transformValuesOf">TextBox.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_TextFrame.html#resolve">TextFrame.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextFrame.html#transform">TextFrame.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_TextFrame.html#transformValuesOf">TextFrame.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+<p class="hangIndent"><i>any</i>  <a href="pc_WMF.html#resolve">WMF.resolve</a> (<span class="arg">location</span>:
+<span class="argt">varies</span>, <span class="arg">in</span>:
+<b>CoordinateSpaces</b>[, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_WMF.html#transform">WMF.transform</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>, <span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">withMatrix</span>:
+<span class="argt">varies</span>[, <span class="arg">replacingCurrent</span>:
+<span class="argt">varies</span>][, <span class="arg">consideringRulerUnits</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <a href="pc_TransformationMatrix.html">TransformationMatrix</a> <a href="pc_WMF.html#transformValuesOf">WMF.transformValuesOf</a> (<span class="arg">in</span>:
+<b>CoordinateSpaces</b>)
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,1481 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Boolean</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, boolean">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Boolean</h1></td></tr>
+<tr><td>&nbsp;</td><td>Wraps a Boolean value.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Boolean" title="Creates and returns a new Boolean object set to the value of the argument converted to a boolean.">Boolean</a>, <a href="#toSource" title="Creates a string representation of this object that can be fed back to&nbsp;eval()&nbsp;to re-create an object. Works only with built-in classes.">toSource</a>, <a href="#toString" title="Returns the string representation of the value of bool.">toString</a>, <a href="#valueOf" title="Returns the primitive value of bool.">valueOf</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Boolean"></a><a href="pc_Boolean.html">bool</a>  <span class="func">Boolean</span> (<span class="arg">value</span>:
+<span class="argt">any</span>)<br>
+Creates and returns a new Boolean object set to the value of the argument converted to a boolean.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td>
+						any
+					</td><td>The value to be converted to a Boolean.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">new Boolean(value)</td></tr></table>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+
+						Creates a string representation of this object that can be fed back to&nbsp;<a href="pc_global.html">eval()</a>&nbsp;to re-create an object. Works only with built-in classes.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Returns the string representation of the value of bool.<br>
+The method returns the string true if the primitive value of bool is true; otherwise it returns the string false.</p><table class="example"><tr><td><b>Example</b></td><td class="example">bool.toString()</td></tr></table>
+
+<p class="spaceBelow"><a name="valueOf"></a><a href="pc_Boolean.html">bool</a>  <span class="func">valueOf</span> ()<br>
+Returns the primitive value of bool.<br>
+The method returns true if the primitive value of bool is true; otherwise it returns false.</p><table class="example"><tr><td><b>Example</b></td><td class="example">bool.valueOf()</td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.bottomEdgeStrokeGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.bottomEdgeStrokeOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.clipContentToCell</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.diagonalLineInFront</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.diagonalLineStrokeGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.diagonalLineStrokeOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.leftEdgeStrokeGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.leftEdgeStrokeOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.rightEdgeStrokeGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.rightEdgeStrokeOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.topEdgeStrokeGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.topEdgeStrokeOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.topLeftDiagonalLine</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CellStyle.html">CellStyle</a>.topRightDiagonalLine</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.allowArbitraryHyphenation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.autoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.bunriKinshi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.cjkGridTracking</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.hyphenateAcrossColumns</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.hyphenateLastWord</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.ignoreEdgeAlignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.keepAllLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.keepLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.keepRuleAboveInFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.keepWithPrevious</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.ligatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.noBreak</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.numberingApplyRestartPolicy</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.numberingContinue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfContextualAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfDiscretionaryLigature</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfFraction</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfHVKana</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfHistorical</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfJustificationAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfLocale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfMark</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfOrdinal</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfOverlapSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfProportionalMetrics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfRomanItalics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfSlashedZero</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfStretchedAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfStylisticAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.otfTitling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.overprintStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.paragraphGyoudori</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rensuuji</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rotateSingleByteCharacters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyAutoAlign</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyAutoScaling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyAutoTcyAutoScale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyAutoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyOpenTypePro</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.rubyOverhang</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.scaleAffectsLineHeight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.shataiAdjustRotation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.shataiAdjustTsume</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.strikeThroughGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.strikeThroughOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.strikeThru</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.tatechuyoko</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.treatIdeographicSpaceAsSpace</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.underline</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.underlineGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.underlineOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeGrepPreference.html">ChangeGrepPreference</a>.warichu</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.applyToMasterPageOnly</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.ignoreWrap</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.includeInsideEdges</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.inverse</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.lockPosition</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.nonprinting</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.opticalMarginAlignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.overprintGap</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.overprintStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.pinPosition</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.spineRelative</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.useCustomBaselineFrameGrid</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.useFixedColumnWidth</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.useMinimumHeightForAutoSizing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.useMinimumWidthForAutoSizing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.useNoLineBreaksForAutoSizing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeObjectPreference.html">ChangeObjectPreference</a>.userModifiedWrap</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.allowArbitraryHyphenation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.autoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.bunriKinshi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.cjkGridTracking</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.hyphenateAcrossColumns</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.hyphenateLastWord</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.ignoreEdgeAlignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.keepAllLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.keepLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.keepRuleAboveInFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.keepWithPrevious</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.ligatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.noBreak</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.numberingApplyRestartPolicy</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.numberingContinue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfContextualAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfDiscretionaryLigature</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfFraction</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfHVKana</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfHistorical</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfJustificationAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfLocale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfMark</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfOrdinal</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfOverlapSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfProportionalMetrics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfRomanItalics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfSlashedZero</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfStretchedAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfStylisticAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.otfTitling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.overprintStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.paragraphGyoudori</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rensuuji</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rotateSingleByteCharacters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyAutoAlign</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyAutoScaling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyAutoTcyAutoScale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyAutoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyOpenTypePro</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.rubyOverhang</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.scaleAffectsLineHeight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.shataiAdjustRotation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.shataiAdjustTsume</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.strikeThroughGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.strikeThroughOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.strikeThru</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.tatechuyoko</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.treatIdeographicSpaceAsSpace</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.underline</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.underlineGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.underlineOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTextPreference.html">ChangeTextPreference</a>.warichu</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.allowArbitraryHyphenation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.autoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.bunriKinshi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.cjkGridTracking</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.hyphenateAcrossColumns</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.hyphenateLastWord</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.ignoreEdgeAlignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.keepAllLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.keepLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.keepRuleAboveInFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.ligatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.noBreak</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.numberingApplyRestartPolicy</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.numberingContinue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfContextualAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfDiscretionaryLigature</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfFraction</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfHVKana</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfHistorical</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfLocale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfMark</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfOrdinal</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfProportionalMetrics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfRomanItalics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfSlashedZero</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.otfTitling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.overprintStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.paragraphGyoudori</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rensuuji</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rotateSingleByteCharacters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyAutoAlign</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyAutoScaling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyAutoTcyAutoScale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyAutoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyOpenTypePro</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.rubyOverhang</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.scaleAffectsLineHeight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.shataiAdjustRotation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.shataiAdjustTsume</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.strikeThroughGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.strikeThroughOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.strikeThru</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.tatechuyoko</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.treatIdeographicSpaceAsSpace</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.underline</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.underlineGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.underlineOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ChangeTransliteratePreference.html">ChangeTransliteratePreference</a>.warichu</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Character.html">Character</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.cjkGridTracking</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.imported</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.ligatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.noBreak</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfContextualAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfDiscretionaryLigature</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfFraction</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfHVKana</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfHistorical</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfJustificationAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfLocale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfMark</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfOrdinal</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfOverlapSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfProportionalMetrics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfRomanItalics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfSlashedZero</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfStretchedAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfStylisticAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.otfTitling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.overprintStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyAutoAlign</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyAutoScaling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyAutoTcyAutoScale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyAutoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyOpenTypePro</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.rubyOverhang</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.scaleAffectsLineHeight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.shataiAdjustRotation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.shataiAdjustTsume</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.strikeThroughGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.strikeThroughOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.strikeThru</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.tatechuyoko</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.underline</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.underlineGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.underlineOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.warichu</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.value</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.altKeyPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.capsLockKeyPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.cmdKeyPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.ctrlKeyPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.hasFocus</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.leftButtonPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.middleButtonPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.mouseOver</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.numLockKeyPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.optKeyPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.rightButtonPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DrawState.html">DrawState</a>.shiftKeyPressed</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.bubbles</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.cancelable</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.captures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.currentTarget</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeBevelAndEmbossSetting.html">FindChangeBevelAndEmbossSetting</a>.applied</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeBevelAndEmbossSetting.html">FindChangeBevelAndEmbossSetting</a>.useGlobalLight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeBlendingSetting.html">FindChangeBlendingSetting</a>.isolateBlending</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeBlendingSetting.html">FindChangeBlendingSetting</a>.knockoutGroup</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeDirectionalFeatherSetting.html">FindChangeDirectionalFeatherSetting</a>.applied</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeDropShadowSetting.html">FindChangeDropShadowSetting</a>.honorOtherEffects</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeDropShadowSetting.html">FindChangeDropShadowSetting</a>.knockedOut</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeDropShadowSetting.html">FindChangeDropShadowSetting</a>.useGlobalLight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeGradientFeatherSetting.html">FindChangeGradientFeatherSetting</a>.applied</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeInnerGlowSetting.html">FindChangeInnerGlowSetting</a>.applied</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeInnerShadowSetting.html">FindChangeInnerShadowSetting</a>.applied</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeInnerShadowSetting.html">FindChangeInnerShadowSetting</a>.useGlobalLight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeOuterGlowSetting.html">FindChangeOuterGlowSetting</a>.applied</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeSatinSetting.html">FindChangeSatinSetting</a>.applied</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindChangeSatinSetting.html">FindChangeSatinSetting</a>.invertEffect</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.allowArbitraryHyphenation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.autoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.bunriKinshi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.cjkGridTracking</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.hyphenateAcrossColumns</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.hyphenateLastWord</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.ignoreEdgeAlignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.keepAllLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.keepLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.keepRuleAboveInFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.keepWithPrevious</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.ligatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.noBreak</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.numberingApplyRestartPolicy</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.numberingContinue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfContextualAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfDiscretionaryLigature</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfFraction</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfHVKana</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfHistorical</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfJustificationAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfLocale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfMark</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfOrdinal</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfOverlapSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfProportionalMetrics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfRomanItalics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfSlashedZero</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfStretchedAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfStylisticAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.otfTitling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.overprintStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.paragraphGyoudori</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rensuuji</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rotateSingleByteCharacters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyAutoAlign</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyAutoScaling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyAutoTcyAutoScale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyAutoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyOpenTypePro</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.rubyOverhang</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.scaleAffectsLineHeight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.shataiAdjustRotation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.shataiAdjustTsume</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.strikeThroughGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.strikeThroughOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.strikeThru</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.tatechuyoko</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.treatIdeographicSpaceAsSpace</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.underline</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.underlineGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.underlineOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindGrepPreference.html">FindGrepPreference</a>.warichu</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.applyToMasterPageOnly</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.ignoreWrap</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.includeInsideEdges</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.inverse</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.lockPosition</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.nonprinting</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.opticalMarginAlignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.overprintGap</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.overprintStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.pinPosition</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.spineRelative</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.useCustomBaselineFrameGrid</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.useFixedColumnWidth</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.useMinimumHeightForAutoSizing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.useMinimumWidthForAutoSizing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.useNoLineBreaksForAutoSizing</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindObjectPreference.html">FindObjectPreference</a>.userModifiedWrap</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.allowArbitraryHyphenation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.autoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.bunriKinshi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.cjkGridTracking</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.hyphenateAcrossColumns</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.hyphenateLastWord</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.ignoreEdgeAlignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.keepAllLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.keepLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.keepRuleAboveInFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.keepWithPrevious</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.ligatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.noBreak</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.numberingApplyRestartPolicy</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.numberingContinue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfContextualAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfDiscretionaryLigature</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfFraction</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfHVKana</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfHistorical</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfJustificationAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfLocale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfMark</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfOrdinal</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfOverlapSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfProportionalMetrics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfRomanItalics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfSlashedZero</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfStretchedAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfStylisticAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.otfTitling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.overprintStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.paragraphGyoudori</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rensuuji</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rotateSingleByteCharacters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyAutoAlign</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyAutoScaling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyAutoTcyAutoScale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyAutoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyOpenTypePro</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.rubyOverhang</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.scaleAffectsLineHeight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.shataiAdjustRotation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.shataiAdjustTsume</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.strikeThroughGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.strikeThroughOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.strikeThru</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.tatechuyoko</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.treatIdeographicSpaceAsSpace</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.underline</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.underlineGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.underlineOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTextPreference.html">FindTextPreference</a>.warichu</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.allowArbitraryHyphenation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.autoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.bunriKinshi</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.cjkGridTracking</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.hyphenateAcrossColumns</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.hyphenateLastWord</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.ignoreEdgeAlignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.keepAllLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.keepLinesTogether</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.keepRuleAboveInFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.ligatures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.noBreak</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.numberingApplyRestartPolicy</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.numberingContinue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfContextualAlternate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfDiscretionaryLigature</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfFraction</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfHVKana</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfHistorical</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfLocale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfMark</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfOrdinal</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfProportionalMetrics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfRomanItalics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfSlashedZero</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfSwash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.otfTitling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.overprintFill</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.overprintStroke</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.paragraphGyoudori</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rensuuji</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rotateSingleByteCharacters</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyAutoAlign</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyAutoScaling</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyAutoTcyAutoScale</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyAutoTcyIncludeRoman</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyOpenTypePro</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.rubyOverhang</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.scaleAffectsLineHeight</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.shataiAdjustRotation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.shataiAdjustTsume</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.strikeThroughGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.strikeThroughOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.strikeThru</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.tatechuyoko</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.treatIdeographicSpaceAsSpace</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.underline</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.underlineGapOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.underlineOverprint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FindTransliteratePreference.html">FindTransliteratePreference</a>.warichu</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_KeyboardState.html">KeyboardState</a>.altKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_KeyboardState.html">KeyboardState</a>.ctrlKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_KeyboardState.html">KeyboardState</a>.metaKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_KeyboardState.html">KeyboardState</a>.shiftKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Line.html">Line</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.checked</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.expanded</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.selected</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreference.html">PDFExportPreference</a>.includeICCProfiles</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PDFExportPreset.html">PDFExportPreset</a>.includeICCProfiles</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraph.html">Paragraph</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.value</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RuleDataObject.html">RuleDataObject</a>.dataValue</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Text.html">Text</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextColumn.html">TextColumn</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextDefault.html">TextDefault</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextStyleRange.html">TextStyleRange</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.bubbles</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.cancelable</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.captures</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.currentTarget</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.active</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.enabled</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.maximized</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.minimized</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.visible</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Word.html">Word</a>.balanceRaggedLines</p>
+</p>
+<p><p class="hangIndent"><a href="pc_XmlStory.html">XmlStory</a>.balanceRaggedLines</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>Boolean</b> <a href="pc_Button (SUI).html#addEventListener">Button.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Button (SUI).html#removeEventListener">Button.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Checkbox (SUI).html#addEventListener">Checkbox.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Checkbox (SUI).html#removeEventListener">Checkbox.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_DropDownList.html#addEventListener">DropDownList.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_DropDownList.html#removeEventListener">DropDownList.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_EditText.html#addEventListener">EditText.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_EditText.html#removeEventListener">EditText.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_FlashPlayer.html#addEventListener">FlashPlayer.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_FlashPlayer.html#playMovie">FlashPlayer.playMovie</a>
+		([<span class="arg">rewind</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_FlashPlayer.html#removeEventListener">FlashPlayer.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Group (SUI).html#addEventListener">Group.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Group (SUI).html#removeEventListener">Group.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_IconButton.html#addEventListener">IconButton.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_IconButton.html#removeEventListener">IconButton.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_ListBox (SUI).html#addEventListener">ListBox.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_ListBox (SUI).html#removeEventListener">ListBox.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Panel (SUI).html#addEventListener">Panel.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Panel (SUI).html#removeEventListener">Panel.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Progressbar.html#addEventListener">Progressbar.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Progressbar.html#removeEventListener">Progressbar.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_RadioButton (SUI).html#addEventListener">RadioButton.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_RadioButton (SUI).html#removeEventListener">RadioButton.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Scrollbar.html#addEventListener">Scrollbar.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Scrollbar.html#removeEventListener">Scrollbar.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Slider.html#addEventListener">Slider.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Slider.html#removeEventListener">Slider.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_StaticText (SUI).html#addEventListener">StaticText.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_StaticText (SUI).html#removeEventListener">StaticText.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_TreeView.html#addEventListener">TreeView.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_TreeView.html#removeEventListener">TreeView.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a> <a href="pc_UIEvent.html#UIEvent">UIEvent.UIEvent</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">captures</span>:
+<b>Boolean</b>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<b>Boolean</b>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<a href="pc_Object.html">Object</a>][, <span class="arg">detail</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent">void <a href="pc_UIEvent.html#initEvent">UIEvent.initEvent</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">captures</span>:
+<b>Boolean</b>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<b>Boolean</b>=<span class="defv">false</span>][, <span class="arg">cancelable</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_UIEvent.html#initUIEvent">UIEvent.initUIEvent</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">captures</span>:
+<b>Boolean</b>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<b>Boolean</b>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<a href="pc_Object.html">Object</a>][, <span class="arg">detail</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Window (SUI).html#addEventListener">Window.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Window (SUI).html#alert">Window.alert</a>
+		(<span class="arg">message</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">title</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">errorIcon</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Window (SUI).html#confirm">Window.confirm</a>
+		(<span class="arg">message</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">noAsDefault</span>:
+<b>Boolean</b>=<span class="defv">false</span>][, <span class="arg">title</span>:
+<a href="pc_String.html">String</a>])
+</p><p class="hangIndent"><b>Boolean</b> <a href="pc_Window (SUI).html#removeEventListener">Window.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Boolean</b> <a href="pc_Button (SUI).html#addEventListener">Button (SUI).addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Button (SUI).html#removeEventListener">Button (SUI).removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Checkbox (SUI).html#addEventListener">Checkbox (SUI).addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Checkbox (SUI).html#removeEventListener">Checkbox (SUI).removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_DropDownList.html#addEventListener">DropDownList.addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_DropDownList.html#removeEventListener">DropDownList.removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_EditText.html#addEventListener">EditText.addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_EditText.html#removeEventListener">EditText.removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_FlashPlayer.html#addEventListener">FlashPlayer.addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_FlashPlayer.html#removeEventListener">FlashPlayer.removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Group (SUI).html#addEventListener">Group (SUI).addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Group (SUI).html#removeEventListener">Group (SUI).removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_IconButton.html#addEventListener">IconButton.addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_IconButton.html#removeEventListener">IconButton.removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_ListBox (SUI).html#addEventListener">ListBox (SUI).addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_ListBox (SUI).html#removeEventListener">ListBox (SUI).removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Panel (SUI).html#addEventListener">Panel (SUI).addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Panel (SUI).html#removeEventListener">Panel (SUI).removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Progressbar.html#addEventListener">Progressbar.addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Progressbar.html#removeEventListener">Progressbar.removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_RadioButton (SUI).html#addEventListener">RadioButton (SUI).addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_RadioButton (SUI).html#removeEventListener">RadioButton (SUI).removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Scrollbar.html#addEventListener">Scrollbar.addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Scrollbar.html#removeEventListener">Scrollbar.removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Slider.html#addEventListener">Slider.addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Slider.html#removeEventListener">Slider.removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_StaticText (SUI).html#addEventListener">StaticText (SUI).addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_StaticText (SUI).html#removeEventListener">StaticText (SUI).removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_TreeView.html#addEventListener">TreeView.addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_TreeView.html#removeEventListener">TreeView.removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Window (SUI).html#addEventListener">Window (SUI).addEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Window (SUI).html#confirm">Window (SUI).confirm</a> (<span class="arg">message</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">noAsDefault</span>:
+<b>Boolean</b>=<span class="defv">false</span>][, <span class="arg">title</span>:
+<a href="pc_String.html">String</a>])
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Window (SUI).html#onClose">Window (SUI).onClose</a> ()
+</p>
+<p class="hangIndent"><b>Boolean</b> <a href="pc_Window (SUI).html#removeEventListener">Window (SUI).removeEventListener</a> (<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<b>Boolean</b>=<span class="defv">false</span>])
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

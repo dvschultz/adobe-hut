@@ -1,0 +1,405 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Date</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, date">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Date</h1></td></tr>
+<tr><td>&nbsp;</td><td>A date/time object.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Date" title="Returns a new Date object holding the current date and time.">Date</a>, <a href="#UTC" title="Returns the number of milliseconds between midnight January 1, 1970, UTC, and the specified time.">UTC</a>, <a href="#getDate" title="Returns the day of the month of the specified Date object in local time.">getDate</a>, <a href="#getDay" title="Returns the day of the week for the specified Date object in local time.">getDay</a>, <a href="#getFullYear" title="Returns the four digit year of the specified Date object in local time.">getFullYear</a>, <a href="#getHours" title="Returns the hour of the specified Date object in local time.">getHours</a>, <a href="#getMilliseconds" title="Returns the milliseconds of the specified Date object in local time.">getMilliseconds</a>, <a href="#getMinutes" title="Returns the minutes of the specified Date object in local time.">getMinutes</a>, <a href="#getMonth" title="Returns the month of the specified Date object in local time.">getMonth</a>, <a href="#getSeconds" title="Returns the seconds of the specified Date object in local time.">getSeconds</a>, <a href="#getTime" title="Returns the number of milliseconds since midnight January 1,1970 UTC for the specified Date object.">getTime</a>, <a href="#getTimezoneOffset" title="Returns the difference in minutes between the computer's local time and UTC.">getTimezoneOffset</a>, <a href="#getUTCDate" title="Returns the day of the month of the specified Date object according to UTC.">getUTCDate</a>, <a href="#getUTCDay" title="Returns the day of the week for the specified Date object according to UTC.">getUTCDay</a>, <a href="#getUTCFullYear" title="Returns the four digit year of the specified Date object according to UTC.">getUTCFullYear</a>, <a href="#getUTCHours" title="Returns the hour of the specified Date object according to UTC.">getUTCHours</a>, <a href="#getUTCMilliseconds" title="Returns the milliseconds of the specified Date object according to UTC.">getUTCMilliseconds</a>, <a href="#getUTCMinutes" title="Returns the minutes of the specified Date object according to UTC.">getUTCMinutes</a>, <a href="#getUTCMonth" title="Returns the month of the specified Date object according to UTC.">getUTCMonth</a>, <a href="#getUTCSeconds" title="Returns the seconds of the specified Date object according to UTC.">getUTCSeconds</a>, <a href="#getYear" title="Returns the year of the specified Date object, as a difference from 1900, in local time.">getYear</a>, <a href="#parse" title="Parses a string, returning a new Date object. The string should be similar to the string returned bt toString().">parse</a>, <a href="#setDate" title="Sets the day of the month of a specified Date object according to local time.">setDate</a>, <a href="#setFullYear" title="Sets the year of a specified Date object according to local time.">setFullYear</a>, <a href="#setHours" title="Sets the hours of a specified Date object according to local time.">setHours</a>, <a href="#setMilliseconds" title="Sets the milliseconds of a specified Date object according to local time.">setMilliseconds</a>, <a href="#setMinutes" title="Sets the minutes of a specified Date object according to local time.">setMinutes</a>, <a href="#setMonth" title="Sets the month of a specified Date object according to local time.">setMonth</a>, <a href="#setSeconds" title="Sets the seconds of a specified Date object according to local time.">setSeconds</a>, <a href="#setTime" title="Sets the date of a specified Date object in milliseconds since midnight, January 1, 1970.">setTime</a>, <a href="#setUTCDate" title="Sets the date of a specified Date object according to universal time.">setUTCDate</a>, <a href="#setUTCFullYear" title="Sets the year of a specified Date object according to UTC, can also set the month and date.">setUTCFullYear</a>, <a href="#setUTCHours" title="Sets the hours of a specified Date object according to UTC.">setUTCHours</a>, <a href="#setUTCMilliseconds" title="Sets the milliseconds of a specified Date object according to UTC.">setUTCMilliseconds</a>, <a href="#setUTCMinutes" title="Sets the minutes of a specified Date object according to UTC.">setUTCMinutes</a>, <a href="#setUTCMonth" title="Sets the month of a specified Date object according to UTC.">setUTCMonth</a>, <a href="#setUTCSeconds" title="Sets the seconds of a specified Date object according to UTC.">setUTCSeconds</a>, <a href="#setYear" title="Sets the year of a specified Date object according to local time, as a difference between the current year and 1900.">setYear</a>, <a href="#toDateString" title="">toDateString</a>, <a href="#toGMTString" title="">toGMTString</a>, <a href="#toLocaleDateString" title="">toLocaleDateString</a>, <a href="#toLocaleString" title="">toLocaleString</a>, <a href="#toLocaleTimeString" title="">toLocaleTimeString</a>, <a href="#toSource" title="Creates a string representation of this object that can be fed back to&nbsp;eval()&nbsp;to re-create an object. Works only with built-in classes.">toSource</a>, <a href="#toString" title="Returns a string value representing the date and time stored in the Date object in human readable format.">toString</a>, <a href="#toTimeString" title="">toTimeString</a>, <a href="#toUTCString" title="">toUTCString</a>, <a href="#valueOf" title="The valueOf() method returns the number of milliseconds that have passed since midnight, Returns an integer.">valueOf</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Date"></a><a href="pc_Date.html">Date</a> <span class="func">Date</span> (<span class="arg">year</span>:
+<span class="argt">number</span>[, <span class="arg">month</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">day</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">hours</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">min</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">sec</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">ms</span>:
+<span class="argt">number</span>=<span class="defv">0</span>])<br>
+Returns a new Date object holding the current date and time.<br>
+If parameters are supplied, returns a new Date object holding the supplied date and time.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>year</td><td><a href="pc_number.html">number</a></td><td>The year expressed in four digits.</td></tr>
+<tr><td>month</td><td><a href="pc_number.html">number</a> (range: 0 - 11)</td><td>An integer value from 0 (Jan) to 11 (Dec). (default: <b>0</b>) (Optional)</td></tr>
+<tr><td>day</td><td><a href="pc_number.html">number</a> (range: 1 - 31)</td><td>An integer value from 1 to 31, If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+<tr><td>hours</td><td><a href="pc_number.html">number</a> (range: 0 - 23)</td><td>An integer value from 0 (midnight) to 23 (11 PM). If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+<tr><td>min</td><td><a href="pc_number.html">number</a> (range: 0 - 59)</td><td>An integer value from 0 to 59. If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+<tr><td>sec</td><td><a href="pc_number.html">number</a> (range: 0 - 59)</td><td>An Integer value from 0 to 59. If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>ms</td><td><a href="pc_number.html">number</a> (range: 0 - 999)</td><td>An integer value from 0 to 999. If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">
+						new Date()<br>new Date (2006, 9, 25, 15, 30)
+					</td></tr></table>
+
+<h4>Class</h4><p class="spaceBelow"><a name="UTC"></a><a href="pc_Date.html">Date</a> <span class="func">UTC</span> (<span class="arg">year</span>:
+<span class="argt">number</span>[, <span class="arg">month</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">day</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">hours</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">min</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">sec</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">ms</span>:
+<span class="argt">number</span>=<span class="defv">0</span>])<br>
+Returns the number of milliseconds between midnight January 1, 1970, UTC, and the specified time.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>year</td><td><a href="pc_number.html">number</a></td><td>The year expressed in four digits, for example, 2001.<br>To indicate for a year from 1900 to 1999, you can specify a value from 0 to 99.</td></tr>
+<tr><td>month</td><td><a href="pc_number.html">number</a> (range: 0 - 11)</td><td>An integer value from 0 (Jan) to 11 (Dec). (default: <b>0</b>) (Optional)</td></tr>
+<tr><td>day</td><td><a href="pc_number.html">number</a> (range: 1 - 31)</td><td>An integer value from 1 to 31, If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+<tr><td>hours</td><td><a href="pc_number.html">number</a> (range: 0 - 23)</td><td>An integer value from 0 (midnight) to 23 (11 PM). If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+<tr><td>min</td><td><a href="pc_number.html">number</a> (range: 0 - 59)</td><td>An integer value from 0 to 59. If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+<tr><td>sec</td><td><a href="pc_number.html">number</a> (range: 0 - 59)</td><td>An Integer value from 0 to 59. If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>ms</td><td><a href="pc_number.html">number</a> (range: 0 - 999)</td><td>An integer value from 0 to 999. If this argument is not supplied, its value is set to 0. (default: <b>0</b>) (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">Date.UTC(year , month, date, hour, min, sec, ms)</td></tr></table>
+
+<p class="spaceBelow"><a name="parse"></a><a href="pc_Date.html">Date</a> <span class="func">parse</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Parses a string, returning a new Date object. The string should be similar to the string returned bt toString().
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>The string to parse.</td></tr>
+</table>
+</p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="getDate"></a>number <span class="func">getDate</span> ()<br>
+Returns the day of the month of the specified Date object in local time. Range: 1 - 31</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getDate()</td></tr></table>
+
+<p class="spaceBelow"><a name="getDay"></a>number <span class="func">getDay</span> ()<br>
+Returns the day of the week for the specified Date object in local time.<br>
+This is an integer from 0 (Sunday) to 6 (Saturday).  Returns the day of the week for date. Range: 0 - 6</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getDay()</td></tr></table>
+
+<p class="spaceBelow"><a name="getFullYear"></a>number <span class="func">getFullYear</span> ()<br>
+Returns the four digit year of the specified Date object in local time.</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getFullYear()</td></tr></table>
+
+<p class="spaceBelow"><a name="getHours"></a>number <span class="func">getHours</span> ()<br>
+Returns the hour of the specified Date object in local time. Range: 0 - 23</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getHours()</td></tr></table>
+
+<p class="spaceBelow"><a name="getMilliseconds"></a>number <span class="func">getMilliseconds</span> ()<br>
+Returns the milliseconds of the specified Date object in local time. Range: 0 - 999</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getMilliseconds()</td></tr></table>
+
+<p class="spaceBelow"><a name="getMinutes"></a>number <span class="func">getMinutes</span> ()<br>
+Returns the minutes of the specified Date object in local time. Range: 0 - 59</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getMinutes()</td></tr></table>
+
+<p class="spaceBelow"><a name="getMonth"></a>number <span class="func">getMonth</span> ()<br>
+Returns the month of the specified Date object in local time. Range: 0 - 11</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getMonth()</td></tr></table>
+
+<p class="spaceBelow"><a name="getSeconds"></a>number <span class="func">getSeconds</span> ()<br>
+Returns the seconds of the specified Date object in local time. Range: 0 - 59</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getSeconds()</td></tr></table>
+
+<p class="spaceBelow"><a name="getTime"></a>number <span class="func">getTime</span> ()<br>
+Returns the number of milliseconds since midnight January 1,1970 UTC for the specified Date object.</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getTime()</td></tr></table>
+
+<p class="spaceBelow"><a name="getTimezoneOffset"></a>number <span class="func">getTimezoneOffset</span> ()<br>
+Returns the difference in minutes between the computer's local time and UTC.</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getTimezoneOffset()</td></tr></table>
+
+<p class="spaceBelow"><a name="getUTCDate"></a>number <span class="func">getUTCDate</span> ()<br>
+Returns the day of the month of the specified Date object according to UTC. Range: 1 - 31</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getUTCDate()</td></tr></table>
+
+<p class="spaceBelow"><a name="getUTCDay"></a>number <span class="func">getUTCDay</span> ()<br>
+Returns the day of the week for the specified Date object according to UTC. Range: 0 - 6</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getUTCDay()</td></tr></table>
+
+<p class="spaceBelow"><a name="getUTCFullYear"></a>number <span class="func">getUTCFullYear</span> ()<br>
+Returns the four digit year of the specified Date object according to UTC.</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getUTCFullYear()</td></tr></table>
+
+<p class="spaceBelow"><a name="getUTCHours"></a>number <span class="func">getUTCHours</span> ()<br>
+Returns the hour of the specified Date object according to UTC. Range: 0 - 23</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getUTCHours()</td></tr></table>
+
+<p class="spaceBelow"><a name="getUTCMilliseconds"></a>number <span class="func">getUTCMilliseconds</span> ()<br>
+Returns the milliseconds of the specified Date object according to UTC. Range: 0 - 999</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getUTCMilliseconds()</td></tr></table>
+
+<p class="spaceBelow"><a name="getUTCMinutes"></a>number <span class="func">getUTCMinutes</span> ()<br>
+Returns the minutes of the specified Date object according to UTC. Range: 0 - 59</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getUTCMinutes()</td></tr></table>
+
+<p class="spaceBelow"><a name="getUTCMonth"></a>number <span class="func">getUTCMonth</span> ()<br>
+Returns the month of the specified Date object according to UTC. Range: 0 - 11</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getUTCMonth()</td></tr></table>
+
+<p class="spaceBelow"><a name="getUTCSeconds"></a>number <span class="func">getUTCSeconds</span> ()<br>
+Returns the seconds of the specified Date object according to UTC. Range: 0 - 59</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getUTCSeconds()</td></tr></table>
+
+<p class="spaceBelow"><a name="getYear"></a>number <span class="func">getYear</span> ()<br>
+Returns the year of the specified Date object, as a difference from 1900, in local time.</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.getYear()</td></tr></table>
+
+<p class="spaceBelow"><a name="setDate"></a>number <span class="func">setDate</span> (<span class="arg">date</span>:
+<span class="argt">number</span>)<br>
+Sets the day of the month of a specified Date object according to local time.<br>
+Returns the number of milliseconds between the new date and midnight, January 1, 1970.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>date</td><td><a href="pc_number.html">number</a> (range: 1 - 31)</td><td>An integer from 1 to 31 indicating the day of the month.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setDate(date)</td></tr></table>
+
+<p class="spaceBelow"><a name="setFullYear"></a>number <span class="func">setFullYear</span> (<span class="arg">year</span>:
+<span class="argt">number</span>)<br>
+Sets the year of a specified Date object according to local time.<br>
+This method can also set month and date if those arguments are specified. Returns the number of milliseconds between the new date and midnight, January 1, 1970.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>year</td><td><a href="pc_number.html">number</a></td><td>A four-digit integer value indicating the year to set.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setFullYear(year, month, date)</td></tr></table>
+
+<p class="spaceBelow"><a name="setHours"></a>number <span class="func">setHours</span> (<span class="arg">hour</span>:
+<span class="argt">number</span>)<br>
+Sets the hours of a specified Date object according to local time.<br>
+Returns the number of milliseconds between the new date and midnight, January 1, 1970.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>hour</td><td><a href="pc_number.html">number</a> (range: 0 - 23)</td><td>An integer value from 0 (midnight) to 23 (11 PM).<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setHours(hour)</td></tr></table>
+
+<p class="spaceBelow"><a name="setMilliseconds"></a>number <span class="func">setMilliseconds</span> (<span class="arg">ms</span>:
+<span class="argt">number</span>)<br>
+Sets the milliseconds of a specified Date object according to local time.<br>
+Returns the number of milliseconds between the new date and midnight, January 1, 1970.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>ms</td><td><a href="pc_number.html">number</a> (range: 0 - 999)</td><td>An integer value from 0 to 999.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setMilliseconds(ms)</td></tr></table>
+
+<p class="spaceBelow"><a name="setMinutes"></a>number <span class="func">setMinutes</span> (<span class="arg">minutes</span>:
+<span class="argt">number</span>)<br>
+Sets the minutes of a specified Date object according to local time.<br>
+Returns the number of milliseconds between the new date and midnight, January 1, 1970.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>minutes</td><td><a href="pc_number.html">number</a> (range: 0 - 59)</td><td>An integer value from 0 to 59.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setMinutes(minutes)</td></tr></table>
+
+<p class="spaceBelow"><a name="setMonth"></a>number <span class="func">setMonth</span> (<span class="arg">month</span>:
+<span class="argt">number</span>)<br>
+Sets the month of a specified Date object according to local time.<br>
+Returns the number of milliseconds between the new date and midnight, January 1, 1970.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>month</td><td><a href="pc_number.html">number</a> (range: 0 - 11)</td><td>An integer value from 0 (Jan) to 11 (Dec).<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setMonth(month)</td></tr></table>
+
+<p class="spaceBelow"><a name="setSeconds"></a>number <span class="func">setSeconds</span> (<span class="arg">seconds</span>:
+<span class="argt">number</span>)<br>
+Sets the seconds of a specified Date object according to local time.<br>
+Returns the number of milliseconds between the new date and midnight, January 1, 1970.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>seconds</td><td><a href="pc_number.html">number</a> (range: 0 - 59)</td><td>An integer value from 0 to 59.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setSeconds(seconds)</td></tr></table>
+
+<p class="spaceBelow"><a name="setTime"></a>number <span class="func">setTime</span> (<span class="arg">ms</span>:
+<span class="argt">number</span>)<br>
+Sets the date of a specified Date object in milliseconds since midnight, January 1, 1970.<br>
+Returns the value of ms.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>ms</td><td><a href="pc_number.html">number</a></td><td>An integer indicating the number of milliseconds between the date set and midnight, January 1, 1970.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setTime(ms)</td></tr></table>
+
+<p class="spaceBelow"><a name="setUTCDate"></a>number <span class="func">setUTCDate</span> (<span class="arg">date</span>:
+<span class="argt">number</span>)<br>
+Sets the date of a specified Date object according to universal time.<br>
+Returns the number of milliseconds between the new date and midnight, January 1, 1970 in UTC time.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>date</td><td><a href="pc_number.html">number</a> (range: 1 - 31)</td><td>An integer from 1 to 31 indicating the day of the month.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setUTCDate(date)</td></tr></table>
+
+<p class="spaceBelow"><a name="setUTCFullYear"></a>number <span class="func">setUTCFullYear</span> (<span class="arg">year</span>:
+<span class="argt">number</span>)<br>
+Sets the year of a specified Date object according to UTC, can also set the month and date.<br>
+Returns the number of milliseconds between the date set and midnight, January 1, 1970, in UTC.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>year</td><td><a href="pc_number.html">number</a></td><td>The year expressed in four digits.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setUTCFullYear(year, month, date)</td></tr></table>
+
+<p class="spaceBelow"><a name="setUTCHours"></a>number <span class="func">setUTCHours</span> (<span class="arg">hours</span>:
+<span class="argt">number</span>)<br>
+Sets the hours of a specified Date object according to UTC.<br>
+Returns the number of milliseconds between the date set and midnight, January 1, 1970, in UTC.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>hours</td><td><a href="pc_number.html">number</a> (range: 0 - 23)</td><td>An integer value from 0 (midnight) to 23 (11 PM) indicating the hour to be set.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setUTCHours(hours)</td></tr></table>
+
+<p class="spaceBelow"><a name="setUTCMilliseconds"></a>number <span class="func">setUTCMilliseconds</span> (<span class="arg">ms</span>:
+<span class="argt">number</span>)<br>
+Sets the milliseconds of a specified Date object according to UTC.<br>
+Returns the number of milliseconds between the date set and midnight, January 1, 1970, in UTC.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>ms</td><td><a href="pc_number.html">number</a> (range: 0 - 999)</td><td>An integer value in the range of 0 to 999 indicating the number of milliseconds to set.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setUTCMilliseconds(ms)</td></tr></table>
+
+<p class="spaceBelow"><a name="setUTCMinutes"></a>number <span class="func">setUTCMinutes</span> (<span class="arg">min</span>:
+<span class="argt">number</span>)<br>
+Sets the minutes of a specified Date object according to UTC.<br>
+Returns the number of milliseconds between the date set and midnight, January 1, 1970, in UTC.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>min</td><td><a href="pc_number.html">number</a> (range: 0 - 59)</td><td>An integer value in the range 0 to 59 indicating the number of minutes to be set.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setUTCMinutes(min)</td></tr></table>
+
+<p class="spaceBelow"><a name="setUTCMonth"></a>number <span class="func">setUTCMonth</span> (<span class="arg">month</span>:
+<span class="argt">number</span>)<br>
+Sets the month of a specified Date object according to UTC.<br>
+Returns the number of milliseconds between the date set and midnight, January 1, 1970, in UTC.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>month</td><td><a href="pc_number.html">number</a> (range: 0 - 11)</td><td>An integer value in the range 0 (Jan.) to 11 (Dec.) indicating the month to set.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setUTCMonth(month)</td></tr></table>
+
+<p class="spaceBelow"><a name="setUTCSeconds"></a>number <span class="func">setUTCSeconds</span> (<span class="arg">sec</span>:
+<span class="argt">number</span>)<br>
+Sets the seconds of a specified Date object according to UTC.<br>
+Returns the number of milliseconds between the date set and midnight, January 1, 1970, in UTC.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>sec</td><td><a href="pc_number.html">number</a> (range: 0 - 59)</td><td>An integer value in the range 0 to 59 indicating the number of seconds to set.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setUTCSeconds(sec)</td></tr></table>
+
+<p class="spaceBelow"><a name="setYear"></a>number <span class="func">setYear</span> (<span class="arg">year</span>:
+<span class="argt">number</span>)<br>
+Sets the year of a specified Date object according to local time, as a difference between the current year and 1900.<br>
+Returns the number of milliseconds between the date set and midnight, January 1, 1970.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>year</td><td><a href="pc_number.html">number</a></td><td>An integer value indicating the year to set.<br>The method interprets a 1- or 2- digit value to mean the 1900s; for example, 13 is interpreted to mean 1913.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.setYear(year, month, date)</td></tr></table>
+
+<p class="spaceBelow"><a name="toDateString"></a>string <span class="func">toDateString</span> ()
+Returns the date as a string.</p>
+
+<p class="spaceBelow"><a name="toGMTString"></a>string <span class="func">toGMTString</span> ()
+Returns the date and time adjusted to GMT (UTC) as a string.</p>
+
+<p class="spaceBelow"><a name="toLocaleDateString"></a>string <span class="func">toLocaleDateString</span> ()
+Returns the date as a localized string.</p>
+
+<p class="spaceBelow"><a name="toLocaleString"></a>string <span class="func">toLocaleString</span> ()
+Returns a string value representing the date and time stored in the Date object in human readable format (localized).</p>
+
+<p class="spaceBelow"><a name="toLocaleTimeString"></a>string <span class="func">toLocaleTimeString</span> ()
+Returns the time as a localized string.</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+
+						Creates a string representation of this object that can be fed back to&nbsp;<a href="pc_global.html">eval()</a>&nbsp;to re-create an object. Works only with built-in classes.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Returns a string value representing the date and time stored in the Date object in human readable format.<br>
+Returns the following string is an example of the format returned by this method: Mon Aug 13, 10:54:21 GMT-0700 2001.</p><table class="example"><tr><td><b>Example</b></td><td class="example">date.toString()</td></tr></table>
+
+<p class="spaceBelow"><a name="toTimeString"></a>string <span class="func">toTimeString</span> ()
+Returns the time as a string.</p>
+
+<p class="spaceBelow"><a name="toUTCString"></a>string <span class="func">toUTCString</span> ()
+Returns the date and time adjusted to UTC as a string.</p>
+
+<p class="spaceBelow"><a name="valueOf"></a>number <span class="func">valueOf</span> ()<br>
+The valueOf() method returns the number of milliseconds that have passed since midnight, Returns an integer.<br>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_$.html">$</a>.buildDate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Asset.html">Asset</a>.date</p>
+</p>
+<p><p class="hangIndent"><a href="pc_BookContent.html">BookContent</a>.date</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Change.html">Change</a>.date</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DocumentEvent.html">DocumentEvent</a>.timeStamp</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event.html">Event</a>.timeStamp</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.timeStamp</p>
+</p>
+<p><p class="hangIndent"><a href="pc_File.html">File</a>.created</p>
+</p>
+<p><p class="hangIndent"><a href="pc_File.html">File</a>.modified</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.created</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.modified</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IdleEvent.html">IdleEvent</a>.timeStamp</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ImportExportEvent.html">ImportExportEvent</a>.timeStamp</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Link.html">Link</a>.date</p>
+</p>
+<p><p class="hangIndent"><a href="pc_LinkMetadata.html">LinkMetadata</a>.creationDate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_LinkMetadata.html">LinkMetadata</a>.modificationDate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MetadataPreference.html">MetadataPreference</a>.creationDate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MetadataPreference.html">MetadataPreference</a>.modificationDate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MutationEvent.html">MutationEvent</a>.timeStamp</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Note.html">Note</a>.creationDate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Note.html">Note</a>.modificationDate</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PrintEvent.html">PrintEvent</a>.timeStamp</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.timeStamp</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Date</b> <b>Date</b>.<a href="pc_Date.html#Date">Date</a> (<span class="arg">year</span>:
+<span class="argt">number</span>[, <span class="arg">month</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">day</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">hours</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">min</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">sec</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">ms</span>:
+<span class="argt">number</span>=<span class="defv">0</span>])
+</p>
+<p class="hangIndent"><b>Date</b> <b>Date</b>.<a href="pc_Date.html#UTC">UTC</a> (<span class="arg">year</span>:
+<span class="argt">number</span>[, <span class="arg">month</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">day</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">hours</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">min</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">sec</span>:
+<span class="argt">number</span>=<span class="defv">0</span>][, <span class="arg">ms</span>:
+<span class="argt">number</span>=<span class="defv">0</span>])
+</p>
+<p class="hangIndent"><b>Date</b> <b>Date</b>.<a href="pc_Date.html#parse">parse</a> (<span class="arg">text</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

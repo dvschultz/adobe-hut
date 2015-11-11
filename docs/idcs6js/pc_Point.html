@@ -1,0 +1,119 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Point</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, point">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Point</h1></td></tr>
+<tr><td>&nbsp;</td><td><p>Defines the location of a window or UI element. Contains a 2-element array. </p><p>
+        Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
+        A Point object is created when you set an elementís <b>location</b> property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
+      </p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="left"></a>left</td><td><a href="pc_Number.html">Number</a></td>
+<td>r/w</td><td>The left coordinate.</td></tr>
+<tr><td><a name="length"></a>length</td><td><a href="pc_Number.html">Number</a></td>
+<td>readonly</td><td>The array length. (default: <b>2</b>)</td></tr>
+<tr><td><a name="top"></a>top</td><td><a href="pc_Number.html">Number</a></td>
+<td>r/w</td><td>The top coordinate.</td></tr>
+<tr><td><a name="x"></a>x</td><td><a href="pc_Number.html">Number</a></td>
+<td>r/w</td><td>The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.</td></tr>
+<tr class="lastRow"><td><a name="y"></a>y</td><td><a href="pc_Number.html">Number</a></td>
+<td>r/w</td><td>The vertical coordinate, a pixel offset from the origin of the element's coordinate space.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIGraphics.html">ScriptUIGraphics</a>.currentPoint</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.location</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.frameLocation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.location</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Point</b> <a href="pc_ScriptUIGraphics.html#ellipsePath">ScriptUIGraphics.ellipsePath</a> (<span class="arg">left</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">top</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">width</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">height</span>:
+<a href="pc_Number.html">Number</a>)
+</p>
+<p class="hangIndent"><b>Point</b> <a href="pc_ScriptUIGraphics.html#lineTo">ScriptUIGraphics.lineTo</a> (<span class="arg">x</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">y</span>:
+<a href="pc_Number.html">Number</a>)
+</p>
+<p class="hangIndent"><b>Point</b> <a href="pc_ScriptUIGraphics.html#moveTo">ScriptUIGraphics.moveTo</a> (<span class="arg">x</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">y</span>:
+<a href="pc_Number.html">Number</a>)
+</p>
+<p class="hangIndent"><b>Point</b> <a href="pc_ScriptUIGraphics.html#rectPath">ScriptUIGraphics.rectPath</a> (<span class="arg">left</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">top</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">width</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">height</span>:
+<a href="pc_Number.html">Number</a>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

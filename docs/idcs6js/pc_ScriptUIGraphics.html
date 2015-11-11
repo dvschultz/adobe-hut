@@ -1,0 +1,316 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: ScriptUIGraphics</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, scriptuigraphics">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>ScriptUIGraphics</h1></td></tr>
+<tr><td>&nbsp;</td><td><p>
+        An object used to draw custom graphics, found in the <i>graphics</i> property of window, container, and control objects.
+      </p><p>
+        Allows a script to customize aspects of the elementís appearance, such as the color and font. Use an <i>onDraw</i> callback function to set these properties or call the functions.<b></b>All measurements are in pixels.
+      </p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#closePath" title="Closes the current path.">closePath</a>, <a href="#drawFocusRing" title="Draws a focus ring within a region of this element.">drawFocusRing</a>, <a href="#drawImage" title="Draws an image within a given region of the element.">drawImage</a>, <a href="#drawOSControl" title="Draw the platform-specific control associated with this element.">drawOSControl</a>, <a href="#drawString" title="Draw a string of text starting at a given point in this element, using a given drawing pen and font.">drawString</a>, <a href="#ellipsePath" title="Defines an elliptical path within a given rectangular area in the&nbsp;currentPath&nbsp;object, which can be filled using&nbsp;fillPath()&nbsp;or stroked using&nbsp;strokePath().">ellipsePath</a>, <a href="#fillPath" title="Fills a path using a given painting brush.">fillPath</a>, <a href="#lineTo" title="Adds a path segment to the&nbsp;currentPath.">lineTo</a>, <a href="#measureString" title="Calculates the size needed to display a string using the given font.">measureString</a>, <a href="#moveTo" title="Adds a given point to the&nbsp;currentPath, and makes it the current drawing position.">moveTo</a>, <a href="#newBrush" title="Creates a new painting brush object.">newBrush</a>, <a href="#newPath" title="Creates a new, empty path object.">newPath</a>, <a href="#newPen" title="Creates a new drawing pen object.">newPen</a>, <a href="#rectPath" title="Defines a rectangular path in the&nbsp;currentPath&nbsp;object.">rectPath</a>, <a href="#strokePath" title="Strokes the path segments of a path with a given drawing pen.">strokePath</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="backgroundColor"></a>backgroundColor</td><td><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a></td>
+<td>r/w</td><td>The background color for containers; for non-containers, the parent background color.<br>The paint color and style is defined in this brush object.</td></tr>
+<tr><td><a name="currentPath"></a>currentPath</td><td><a href="pc_ScriptUIPath.html">ScriptUIPath</a></td>
+<td>readonly</td><td>The current drawing path, encapsulated in a path object.</td></tr>
+<tr><td><a name="currentPoint"></a>currentPoint</td><td><a href="pc_Point.html">Point</a></td>
+<td>readonly</td><td>The current position in the current drawing path.</td></tr>
+<tr><td><a name="disabledBackgroundColor"></a>disabledBackgroundColor</td><td><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a></td>
+<td>r/w</td><td>The background color for containers when disabled or inactive; for non-containers, the parent background color.<br>The paint color and style is defined in this brush object.</td></tr>
+<tr><td><a name="disabledForegroundColor"></a>disabledForegroundColor</td><td><a href="pc_ScriptUIPen.html">ScriptUIPen</a></td>
+<td>r/w</td><td>The text color when the element is disabled or inactive.<br>The paint color and style is defined in this pen object.</td></tr>
+<tr><td><a name="font"></a>font</td><td><a href="pc_ScriptUIFont.html">ScriptUIFont</a></td>
+<td>r/w</td><td>The default font to use for displaying text.</td></tr>
+<tr class="lastRow"><td><a name="foregroundColor"></a>foregroundColor</td><td><a href="pc_ScriptUIPen.html">ScriptUIPen</a></td>
+<td>r/w</td><td>The text color.<br>The paint color and style is defined in this pen object.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="BrushType"></a>BrushType</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>
+            Contains the enumerated constants for the <i>type</i> argument of&nbsp;<a href="pc_ScriptUIGraphics.html#newBrush">newBrush()</a>.
+          <br>Type constants are: SOLID_COLOR, THEME_COLOR.</td></tr>
+<tr class="lastRow"><td><a name="PenType"></a>PenType</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>
+            Contains the enumerated constants for the <i>type</i> argument of&nbsp;<a href="pc_ScriptUIGraphics.html#newPen">newPen()</a>.
+          <br>Type constants are: SOLID_COLOR, THEME_COLOR.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="closePath"></a><span class="rett">void</span>  <span class="func">closePath</span> ()<br>
+Closes the current path.<br>
+
+            Defines a line from the current postion (<a href="pc_ScriptUIGraphics.html">currentPoint</a>) to the start point of the current path (the value of&nbsp;<a href="pc_ScriptUIGraphics.html">currentPath</a>).
+          </p>
+
+<p class="spaceBelow"><a name="drawFocusRing"></a><span class="rett">void</span>  <span class="func">drawFocusRing</span> (<span class="arg">left</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">top</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">width</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">height</span>:
+<a href="pc_Number.html">Number</a>)<br>
+Draws a focus ring within a region of this element.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>left</td><td><a href="pc_Number.html">Number</a></td><td>The left coordinate of the region.<br>Value is relative to the origin of this element.</td></tr>
+<tr><td>top</td><td><a href="pc_Number.html">Number</a></td><td>The top coordinate of the region.<br>Value is relative to the origin of this element.</td></tr>
+<tr><td>width</td><td><a href="pc_Number.html">Number</a></td><td>The width of the region in pixels.</td></tr>
+<tr class="lastRow"><td>height</td><td><a href="pc_Number.html">Number</a></td><td>The height of the region in pixels.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="drawImage"></a><span class="rett">void</span>  <span class="func">drawImage</span> (<span class="arg">image</span>:
+<a href="pc_ScriptUIImage.html">ScriptUIImage</a>, <span class="arg">left</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">top</span>:
+<a href="pc_Number.html">Number</a>[, <span class="arg">width</span>:
+<a href="pc_Number.html">Number</a>][, <span class="arg">height</span>:
+<a href="pc_Number.html">Number</a>])<br>
+Draws an image within a given region of the element.<br>
+Uses the version of the image that is appropriate to the element's current state.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>image</td><td><a href="pc_ScriptUIImage.html">ScriptUIImage</a></td><td>The image to draw.<br>This object contains different versions of an image appropriate to various element states, such as a dimmed version for the disabled state.</td></tr>
+<tr><td>left</td><td><a href="pc_Number.html">Number</a></td><td>The left coordinate of the region, relative to the origin of this element.</td></tr>
+<tr><td>top</td><td><a href="pc_Number.html">Number</a></td><td>The top coordinate of the region, relative to the origin of this element.</td></tr>
+<tr><td>width</td><td><a href="pc_Number.html">Number</a></td><td>The width in pixels. If provided, the image is stretched or shrunk to fit. If omitted, uses the original image width. (Optional)</td></tr>
+<tr class="lastRow"><td>height</td><td><a href="pc_Number.html">Number</a></td><td>The height in pixels. If provided, the image is stretched or shrunk to fit. If omitted, uses the original image height. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="drawOSControl"></a><span class="rett">void</span>  <span class="func">drawOSControl</span> ()<br>
+Draw the platform-specific control associated with this element.</p>
+
+<p class="spaceBelow"><a name="drawString"></a><span class="rett">void</span>  <span class="func">drawString</span> (<span class="arg">text</span>:
+<a href="pc_String.html">String</a>, <span class="arg">pen</span>:
+<a href="pc_ScriptUIPen.html">ScriptUIPen</a>, <span class="arg">x</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">y</span>:
+<a href="pc_Number.html">Number</a>[, <span class="arg">font</span>:
+<a href="pc_ScriptUIFont.html">ScriptUIFont</a>])<br>
+Draw a string of text starting at a given point in this element, using a given drawing pen and font.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>text</td><td><a href="pc_String.html">String</a></td><td>The text string.</td></tr>
+<tr><td>pen</td><td><a href="pc_ScriptUIPen.html">ScriptUIPen</a></td><td>The drawing pen to use.</td></tr>
+<tr><td>x</td><td><a href="pc_Number.html">Number</a></td><td>The left coordinate, relative to the origin of this element.</td></tr>
+<tr><td>y</td><td><a href="pc_Number.html">Number</a></td><td>The top coordinate, relative to the origin of this element.</td></tr>
+<tr class="lastRow"><td>font</td><td><a href="pc_ScriptUIFont.html">ScriptUIFont</a></td><td>
+                The font to use. Default is the &nbsp;font&nbsp;value in this object.
+               (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="ellipsePath"></a><a href="pc_Point.html">Point</a> <span class="func">ellipsePath</span> (<span class="arg">left</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">top</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">width</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">height</span>:
+<a href="pc_Number.html">Number</a>)<br>
+
+            Defines an elliptical path within a given rectangular area in the&nbsp;<a href="pc_ScriptUIGraphics.html">currentPath</a>&nbsp;object, which can be filled using&nbsp;<a href="pc_ScriptUIGraphics.html#fillPath">fillPath()</a>&nbsp;or stroked using&nbsp;<a href="pc_ScriptUIGraphics.html#strokePath">strokePath()</a>.
+          <br>
+
+            Returns a&nbsp;<a href="pc_Point.html">Point</a>&nbsp;object for the upper left corner of the area, which is the new&nbsp;<a href="pc_ScriptUIGraphics.html">currentPoint</a>.
+          
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>left</td><td><a href="pc_Number.html">Number</a></td><td>The left coordinate of the region, relative to the origin of this element.</td></tr>
+<tr><td>top</td><td><a href="pc_Number.html">Number</a></td><td>The top coordinate of the region, relative to the origin of this element.</td></tr>
+<tr><td>width</td><td><a href="pc_Number.html">Number</a></td><td>The width of the region in pixels.</td></tr>
+<tr class="lastRow"><td>height</td><td><a href="pc_Number.html">Number</a></td><td>The height of the region in pixels.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="fillPath"></a><span class="rett">void</span>  <span class="func">fillPath</span> (<span class="arg">brush</span>:
+<a href="pc_ScriptUIBrush.html">ScriptUIBrush</a>[, <span class="arg">path</span>:
+<a href="pc_ScriptUIPath.html">ScriptUIPath</a>])<br>
+Fills a path using a given painting brush.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>brush</td><td><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a></td><td>The brush object that defines the fill color.</td></tr>
+<tr class="lastRow"><td>path</td><td><a href="pc_ScriptUIPath.html">ScriptUIPath</a></td><td>
+                The path object. Default is the&nbsp;currentPath.
+               (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="lineTo"></a><a href="pc_Point.html">Point</a> <span class="func">lineTo</span> (<span class="arg">x</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">y</span>:
+<a href="pc_Number.html">Number</a>)<br>
+
+            Adds a path segment to the&nbsp;<a href="pc_ScriptUIGraphics.html">currentPath</a>.
+          <br>
+
+            The line is defined from the&nbsp;<a href="pc_ScriptUIGraphics.html">currentPoint</a>&nbsp;to the specified destination point. Returns the&nbsp;<a href="pc_Point.html">Point</a>&nbsp;object  for the destination point, which becomes the new value of&nbsp;<a href="pc_ScriptUIGraphics.html">currentPoint</a>.
+          
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>x</td><td><a href="pc_Number.html">Number</a></td><td>The X coordinate for the destination point, relative to the origin of this element.</td></tr>
+<tr class="lastRow"><td>y</td><td><a href="pc_Number.html">Number</a></td><td>The Y coordinate for the destination point, relative to the origin of this element.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="measureString"></a><a href="pc_Dimension.html">Dimension</a> <span class="func">measureString</span> (<span class="arg">text</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">font</span>:
+<a href="pc_ScriptUIFont.html">ScriptUIFont</a>][, <span class="arg">boundingWidth</span>:
+<a href="pc_Number.html">Number</a>])<br>
+Calculates the size needed to display a string using the given font.<br>
+
+            Returns a&nbsp;<a href="pc_Dimension.html">Dimension</a>&nbsp;object that contains the height and width of the string in pixels.
+          
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>text</td><td><a href="pc_String.html">String</a></td><td>The text string to measure.</td></tr>
+<tr><td>font</td><td><a href="pc_ScriptUIFont.html">ScriptUIFont</a></td><td>
+                The font to use. Default is the&nbsp;font&nbsp;value in this object.
+               (Optional)</td></tr>
+<tr class="lastRow"><td>boundingWidth</td><td><a href="pc_Number.html">Number</a></td><td>The bounding width. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="moveTo"></a><a href="pc_Point.html">Point</a> <span class="func">moveTo</span> (<span class="arg">x</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">y</span>:
+<a href="pc_Number.html">Number</a>)<br>
+
+            Adds a given point to the&nbsp;<a href="pc_ScriptUIGraphics.html">currentPath</a>, and makes it the current drawing position.
+          <br>
+
+            Returns the&nbsp;<a href="pc_Point.html">Point</a>&nbsp;object which is the new value of&nbsp;<a href="pc_ScriptUIGraphics.html">currentPoint</a>.
+          
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>x</td><td><a href="pc_Number.html">Number</a></td><td>The X coordinate for the new point, relative to the origin of this element.</td></tr>
+<tr class="lastRow"><td>y</td><td><a href="pc_Number.html">Number</a></td><td>The Y coordinate for the new point, relative to the origin of this element.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="newBrush"></a><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a> <span class="func">newBrush</span> (<span class="arg">type</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">color</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a> | <a href="pc_String.html">String</a>)<br>
+Creates a new painting brush object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>type</td><td><a href="pc_Number.html">Number</a></td><td>The brush type, solid or theme.<br>
+                One of the constants <i>ScriptUIGraphics.BrushType.SOLID_COLOR</i> or <i>ScriptUIGraphics.BrushType.THEME_COLOR</i>.
+              </td></tr>
+<tr class="lastRow"><td>color</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a> | <a href="pc_String.html">String</a></td><td>The brush color.<br>
+                <br>&bull;&nbsp;If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque.
+                <br>&bull;&nbsp;If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
+              </td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="newPath"></a><a href="pc_ScriptUIPath.html">ScriptUIPath</a> <span class="func">newPath</span> ()<br>
+Creates a new, empty path object.<br>
+
+            Replaces any existing path in&nbsp;<span class="rett">currentPath</span>.
+          </p>
+
+<p class="spaceBelow"><a name="newPen"></a><a href="pc_ScriptUIPen.html">ScriptUIPen</a> <span class="func">newPen</span> (<span class="arg">type</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">color</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a> | <a href="pc_String.html">String</a>, <span class="arg">width</span>:
+<a href="pc_Number.html">Number</a>)<br>
+Creates a new drawing pen object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>type</td><td><a href="pc_Number.html">Number</a></td><td>The pen type, solid or theme.<br>
+                One of the constants <i>ScriptUIGraphics.PenType.SOLID_COLOR</i> or <i>ScriptUIGraphics.PenType.THEME_COLOR</i>.
+              </td></tr>
+<tr><td>color</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a> | <a href="pc_String.html">String</a></td><td>The pen color.<br>
+                <br>&bull;&nbsp;If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque.
+                <br>&bull;&nbsp;If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
+              </td></tr>
+<tr class="lastRow"><td>width</td><td><a href="pc_Number.html">Number</a></td><td>The width of the pen line in pixels.<br>The line is centered around the current point. For example, if the value is 2, drawing a line from (0, 10) to (5, 10) paints the two rows of pixels directly above and below y-position 10.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="rectPath"></a><a href="pc_Point.html">Point</a> <span class="func">rectPath</span> (<span class="arg">left</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">top</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">width</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">height</span>:
+<a href="pc_Number.html">Number</a>)<br>
+
+            Defines a rectangular path in the&nbsp;<a href="pc_ScriptUIGraphics.html">currentPath</a>&nbsp;object.
+          <br>
+
+            The rectangle can be filled using&nbsp;<a href="pc_ScriptUIGraphics.html#fillPath">fillPath()</a>&nbsp;or stroked using&nbsp;<a href="pc_ScriptUIGraphics.html#strokePath">strokePath()</a>.<br>Returns the&nbsp;<a href="pc_Point.html">Point</a>&nbsp;object  for the upper left corner of the rectangle, which becomes the new value of&nbsp;<a href="pc_ScriptUIGraphics.html">currentPoint</a>.
+          
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>left</td><td><a href="pc_Number.html">Number</a></td><td>The left coordinate relative to the origin of this element.</td></tr>
+<tr><td>top</td><td><a href="pc_Number.html">Number</a></td><td>The top coordinate relative to the origin of this element.</td></tr>
+<tr><td>width</td><td><a href="pc_Number.html">Number</a></td><td>The width in pixels.</td></tr>
+<tr class="lastRow"><td>height</td><td><a href="pc_Number.html">Number</a></td><td>The height in pixels.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="strokePath"></a><span class="rett">void</span>  <span class="func">strokePath</span> (<span class="arg">pen</span>:
+<a href="pc_ScriptUIPen.html">ScriptUIPen</a>[, <span class="arg">path</span>:
+<a href="pc_ScriptUIPath.html">ScriptUIPath</a>])<br>
+Strokes the path segments of a path with a given drawing pen.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>pen</td><td><a href="pc_ScriptUIPen.html">ScriptUIPen</a></td><td>The drawing pen that defines the color and line width.</td></tr>
+<tr class="lastRow"><td>path</td><td><a href="pc_ScriptUIPath.html">ScriptUIPath</a></td><td>
+                The path object. Default is the&nbsp;currentPath.
+               (Optional)</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.graphics</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.graphics</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

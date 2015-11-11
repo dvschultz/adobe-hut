@@ -1,0 +1,182 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: AnchoredObjectSetting</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, anchoredobjectsetting">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>AnchoredObjectSetting</h1></td></tr>
+<tr><td>&nbsp;</td><td>The settings for an anchored object. Base Class: <a href="pc_Preference.html">Preference</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#insertAnchoredObject" title="Inserts the anchored object into specified story.">insertAnchoredObject</a>, <a href="#releaseAnchoredObject" title="Releases the anchored object from its associated text.">releaseAnchoredObject</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#toSource" title="Generates a string which, if executed, will return the AnchoredObjectSetting.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Application.html">Application</a> | <a href="pc_Button.html">Button</a> | <a href="pc_CheckBox.html">CheckBox</a> | <a href="pc_ComboBox.html">ComboBox</a> | <a href="pc_Document.html">Document</a> | <a href="pc_EPSText.html">EPSText</a> | <a href="pc_FormField.html">FormField</a> | <a href="pc_GraphicLine.html">GraphicLine</a> | <a href="pc_Group.html">Group</a> | <a href="pc_ListBox.html">ListBox</a> | <a href="pc_MultiStateObject.html">MultiStateObject</a> | <a href="pc_ObjectStyle.html">ObjectStyle</a> | <a href="pc_Oval.html">Oval</a> | <a href="pc_Polygon.html">Polygon</a> | <a href="pc_RadioButton.html">RadioButton</a> | <a href="pc_Rectangle.html">Rectangle</a> | <a href="pc_SignatureField.html">SignatureField</a> | <a href="pc_SplineItem.html">SplineItem</a> | <a href="pc_TextBox.html">TextBox</a> | <a href="pc_TextFrame.html">TextFrame</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_Preference.html">Preference</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>AnchoredObjectSetting</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="anchorPoint"></a>anchorPoint</td><td><a href="pe_AnchorPoint.html">AnchorPoint</a>:<br>AnchorPoint.TOP_LEFT_ANCHOR<br>AnchorPoint.TOP_CENTER_ANCHOR<br>AnchorPoint.TOP_RIGHT_ANCHOR<br>AnchorPoint.LEFT_CENTER_ANCHOR<br>AnchorPoint.CENTER_ANCHOR<br>AnchorPoint.RIGHT_CENTER_ANCHOR<br>AnchorPoint.BOTTOM_LEFT_ANCHOR<br>AnchorPoint.BOTTOM_CENTER_ANCHOR<br>AnchorPoint.BOTTOM_RIGHT_ANCHOR</td>
+<td>r/w</td><td>The point in the anchored object to position.</td></tr>
+<tr><td><a name="anchorSpaceAbove"></a>anchorSpaceAbove</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The space above an above-line anchored object.</td></tr>
+<tr><td><a name="anchorXoffset"></a>anchorXoffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The horizontal (x) offset of the anchored object.</td></tr>
+<tr><td><a name="anchorYoffset"></a>anchorYoffset</td><td>Measurement Unit (Number or String)</td>
+<td>r/w</td><td>The vertical (y) offset of the anchored object. Corresponds to the space after property for above line positioning.</td></tr>
+<tr><td><a name="anchoredPosition"></a>anchoredPosition</td><td><a href="pe_AnchorPosition.html">AnchorPosition</a>:<br>AnchorPosition.INLINE_POSITION<br>AnchorPosition.ABOVE_LINE<br>AnchorPosition.ANCHORED</td>
+<td>r/w</td><td>The position of the anchored object relative to the anchor.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="horizontalAlignment"></a>horizontalAlignment</td><td><a href="pe_HorizontalAlignment.html">HorizontalAlignment</a>:<br>HorizontalAlignment.RIGHT_ALIGN<br>HorizontalAlignment.LEFT_ALIGN<br>HorizontalAlignment.CENTER_ALIGN<br>HorizontalAlignment.TEXT_ALIGN</td>
+<td>r/w</td><td>When anchored position is above line, the position of the anchored object is relative to the text area. When anchored position is custom, the horizontal alignment of the anchored object is set by the horizontal reference point. Note: Not valid when anchored position is inline.</td></tr>
+<tr><td><a name="horizontalReferencePoint"></a>horizontalReferencePoint</td><td><a href="pe_AnchoredRelativeTo.html">AnchoredRelativeTo</a>:<br>AnchoredRelativeTo.COLUMN_EDGE<br>AnchoredRelativeTo.TEXT_FRAME<br>AnchoredRelativeTo.PAGE_MARGINS<br>AnchoredRelativeTo.PAGE_EDGE<br>AnchoredRelativeTo.ANCHOR_LOCATION</td>
+<td>r/w</td><td>The horizontal reference point on the page. Valid only when anchored position is custom.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="lockPosition"></a>lockPosition</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, prevents manual positioning of the anchored object.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Application.html">Application</a><br><a href="pc_Button.html">Button</a><br><a href="pc_CheckBox.html">CheckBox</a><br><a href="pc_ComboBox.html">ComboBox</a><br><a href="pc_Document.html">Document</a><br><a href="pc_EPSText.html">EPSText</a><br><a href="pc_FormField.html">FormField</a><br><a href="pc_GraphicLine.html">GraphicLine</a><br><a href="pc_Group.html">Group</a><br><a href="pc_ListBox.html">ListBox</a><br><a href="pc_MultiStateObject.html">MultiStateObject</a><br><a href="pc_ObjectStyle.html">ObjectStyle</a><br><a href="pc_Oval.html">Oval</a><br><a href="pc_Polygon.html">Polygon</a><br><a href="pc_RadioButton.html">RadioButton</a><br><a href="pc_Rectangle.html">Rectangle</a><br><a href="pc_SignatureField.html">SignatureField</a><br><a href="pc_SplineItem.html">SplineItem</a><br><a href="pc_TextBox.html">TextBox</a><br><a href="pc_TextFrame.html">TextFrame</a></td>
+<td>readonly</td><td>The parent of the AnchoredObjectSetting (a Application, Document, EPSText, SplineItem, Polygon, GraphicLine, Rectangle, Oval, Group, TextFrame, Button, FormField, SignatureField, TextBox, RadioButton, ListBox, ComboBox, CheckBox, MultiStateObject or ObjectStyle).</td></tr>
+<tr><td><a name="pinPosition"></a>pinPosition</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, pins the position of the anchored object within the text frame top and bottom.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="spineRelative"></a>spineRelative</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, the position of the anchored object is relative to the binding spine of the page or spread.</td></tr>
+<tr><td><a name="verticalAlignment"></a>verticalAlignment</td><td><a href="pe_VerticalAlignment.html">VerticalAlignment</a>:<br>VerticalAlignment.TOP_ALIGN<br>VerticalAlignment.BOTTOM_ALIGN<br>VerticalAlignment.CENTER_ALIGN</td>
+<td>r/w</td><td>The vertical alignment of the anchored object reference point with the vertical reference point on the page. Notes: Valid only when anchored position is custom.</td></tr>
+<tr class="lastRow"><td><a name="verticalReferencePoint"></a>verticalReferencePoint</td><td><a href="pe_VerticallyRelativeTo.html">VerticallyRelativeTo</a>:<br>VerticallyRelativeTo.COLUMN_EDGE<br>VerticallyRelativeTo.TEXT_FRAME<br>VerticallyRelativeTo.PAGE_MARGINS<br>VerticallyRelativeTo.PAGE_EDGE<br>VerticallyRelativeTo.LINE_BASELINE<br>VerticallyRelativeTo.LINE_XHEIGHT<br>VerticallyRelativeTo.LINE_ASCENT<br>VerticallyRelativeTo.CAPHEIGHT<br>VerticallyRelativeTo.TOP_OF_LEADING<br>VerticallyRelativeTo.EMBOX_TOP<br>VerticallyRelativeTo.EMBOX_MIDDLE<br>VerticallyRelativeTo.EMBOX_BOTTOM</td>
+<td>r/w</td><td>The vertical reference point on the page. Valid when anchored position is custom.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_AnchoredObjectSetting.html">AnchoredObjectSetting</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="insertAnchoredObject"></a><span class="rett">void</span>  <span class="func">insertAnchoredObject</span> (<span class="arg">storyOffset</span>:
+<a href="pc_InsertionPoint.html">InsertionPoint</a>[, <span class="arg">anchoredPosition</span>:
+<a href="pe_AnchorPosition.html">AnchorPosition</a>])<br>
+Inserts the anchored object into specified story.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>storyOffset</td><td><a href="pc_InsertionPoint.html">InsertionPoint</a></td><td>The location within the story, specified as an insertion point.</td></tr>
+<tr class="lastRow"><td>anchoredPosition</td><td><a href="pe_AnchorPosition.html">AnchorPosition</a>:<br>AnchorPosition.INLINE_POSITION<br>AnchorPosition.ABOVE_LINE<br>AnchorPosition.ANCHORED</td><td>The position of the anchored object relative to the anchor. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="releaseAnchoredObject"></a><span class="rett">void</span>  <span class="func">releaseAnchoredObject</span> ()<br>
+Releases the anchored object from its associated text.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the AnchoredObjectSetting.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button.html">Button</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CheckBox.html">CheckBox</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ComboBox.html">ComboBox</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Document.html">Document</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EPSText.html">EPSText</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FormField.html">FormField</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GraphicLine.html">GraphicLine</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group.html">Group</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox.html">ListBox</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MultiStateObject.html">MultiStateObject</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ObjectStyle.html">ObjectStyle</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Oval.html">Oval</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Polygon.html">Polygon</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton.html">RadioButton</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Rectangle.html">Rectangle</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SignatureField.html">SignatureField</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SplineItem.html">SplineItem</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextBox.html">TextBox</a>.anchoredObjectSettings</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.anchoredObjectSettings</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>AnchoredObjectSetting</b> <b>AnchoredObjectSetting</b>.<a href="pc_AnchoredObjectSetting.html#getElements">getElements</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

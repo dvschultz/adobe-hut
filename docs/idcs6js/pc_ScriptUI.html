@@ -1,0 +1,114 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: ScriptUI</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, scriptui">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>ScriptUI</h1></td></tr>
+<tr><td>&nbsp;</td><td>A global class containing central information about ScriptUI. Not instantiable. </td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#getResourceText" title="Finds and returns the resource for a given text string from the host application's resource data.">getResourceText</a>, <a href="#newFont" title="Creates a new font object for use in text controls and titles.">newFont</a>, <a href="#newImage" title="Loads a new image from resources or disk files into an image object.">newImage</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="Alignment"></a>Alignment</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>
+            Collects the enumerated values that can be used in the <i>alignment</i> and <i>alignChildren</i> properties of controls and containers.
+          <br> Predefined alignment values are: TOP, BOTTOM, LEFT, RIGHT, FILL, CENTER </td></tr>
+<tr><td><a name="FontStyle"></a>FontStyle</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>
+            Collects the enumerated values that can be used as the style argument to the&nbsp;<a href="pc_ScriptUI.html#newFont">ScriptUI.newFont()</a>&nbsp;method.
+          <br>Predefined styles are REGULAR, BOLD, ITALIC, BOLDITALIC.</td></tr>
+<tr><td><a name="applicationFonts"></a>applicationFonts</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The font constants defined by the host application.</td></tr>
+<tr><td><a name="compatibility"></a>compatibility</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>An object whose properties are the names of compatability modes supported by the host application. <br>
+            The presence of <b>ScriptUI.compatability.su1PanelCoordinates</b> means that the application allows backward compatibility with the coordinate system of Panel elements in ScriptUI version 1.
+          </td></tr>
+<tr><td><a name="coreVersion"></a>coreVersion</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>A string containing the internal version number of the ScriptUI module.</td></tr>
+<tr><td><a name="environment"></a>environment</td><td><a href="pc_Environment.html">Environment</a></td>
+<td>readonly</td><td>An object whose properties define attributes of the environment in which ScriptUI operates.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>An object whose properties and methods provide access to objects used in the ScriptUI event system.<br>
+            It contains one function, <b>createEvent()</b>, which allows you to create event objects in order to simulate user-interaction event
+          </td></tr>
+<tr><td><a name="frameworkName"></a>frameworkName</td><td><a href="pc_String.html">String</a></td>
+<td>readonly</td><td>A string containing the name of the UI component framework with which this version of ScriptUI is compatible.</td></tr>
+<tr class="lastRow"><td><a name="version"></a>version</td><td>Any</td>
+<td>readonly</td><td>A string containing the version number of the ScriptUI component framework</td></tr>
+</table></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><p class="spaceBelow"><a name="getResourceText"></a><a href="pc_String.html">String</a> <span class="func">getResourceText</span> (<span class="arg">text</span>:
+<a href="pc_String.html">String</a>)<br>
+Finds and returns the resource for a given text string from the host application's resource data. <br>
+If no string resource matches the given text, the text itself is returned.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_String.html">String</a></td><td>The text to match.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="newFont"></a><a href="pc_ScriptUIFont.html">ScriptUIFont</a> <span class="func">newFont</span> (<span class="arg">name</span>:
+<a href="pc_String.html">String</a>, <span class="arg">style</span>:
+<a href="pc_String.html">String</a> | <a href="pc_Number.html">Number</a>, <span class="arg">size</span>:
+<a href="pc_Number.html">Number</a>)<br>
+Creates a new font object for use in text controls and titles.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>name</td><td><a href="pc_String.html">String</a></td><td>The font name, or the font family name.</td></tr>
+<tr><td>style</td><td><a href="pc_String.html">String</a> | <a href="pc_Number.html">Number</a></td><td>
+                The font style; can be string, or one of the values of&nbsp;ScriptUI.FontStyle.
+              </td></tr>
+<tr class="lastRow"><td>size</td><td><a href="pc_Number.html">Number</a></td><td>The font size in points.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="newImage"></a><a href="pc_ScriptUIImage.html">ScriptUIImage</a> <span class="func">newImage</span> (<span class="arg">normal</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">disabled</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">pressed</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">rollover</span>:
+<a href="pc_String.html">String</a>])<br>
+Loads a new image from resources or disk files into an image object.<br>
+Creates a new global image object for use in controls that can display images, loading the associated images from the specified resources or image files. 
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>normal</td><td><a href="pc_String.html">String</a></td><td>The resource name or the disk file path to the image used for the normal state.</td></tr>
+<tr><td>disabled</td><td><a href="pc_String.html">String</a></td><td>The resource name, or the disk file path to the image used for the disabled state. (Optional)</td></tr>
+<tr><td>pressed</td><td><a href="pc_String.html">String</a></td><td>The resource name, or the file-system path to the image used for the pressed state. (Optional)</td></tr>
+<tr class="lastRow"><td>rollover</td><td><a href="pc_String.html">String</a></td><td>The resource name, or the file-system path to the image used for the rollover state. (Optional)</td></tr>
+</table>
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

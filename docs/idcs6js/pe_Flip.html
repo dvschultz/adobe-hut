@@ -1,0 +1,303 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Flip</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, flip">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>Flip</h1></td></tr>
+<tr><td>&nbsp;</td><td>Flip direction options.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>Flip.BOTH</td><td>Horizontal and vertical flip (same as rotate 180)</td><td>1651471464  = 
+				'both'
+			</td></tr>
+<tr><td>Flip.HORIZONTAL</td><td>Flips the printed image horizontally.</td><td>1752134266  = 
+				'horz'
+			</td></tr>
+<tr><td>Flip.HORIZONTAL_AND_VERTICAL</td><td>Flips the printed image horizontally and vertically (same as rotate 180).</td><td>1215977068  = 
+				'HzVl'
+			</td></tr>
+<tr><td>Flip.NONE</td><td>The printed image is not flipped.</td><td>1852796517  = 
+				'none'
+			</td></tr>
+<tr class="lastRow"><td>Flip.VERTICAL</td><td>Flips the printed image vertically.</td><td>1986359924  = 
+				'vert'
+			</td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>In function</h3>
+
+<p class="hangIndent">void  <a href="pc_Button.html#flipItem">Button.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_CheckBox.html#flipItem">CheckBox.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ComboBox.html#flipItem">ComboBox.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_EPS.html#flipItem">EPS.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_EPSText.html#flipItem">EPSText.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_FormField.html#flipItem">FormField.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Graphic.html#flipItem">Graphic.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_GraphicLine.html#flipItem">GraphicLine.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Group.html#flipItem">Group.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_HtmlItem.html#flipItem">HtmlItem.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Image.html#flipItem">Image.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ImportedPage.html#flipItem">ImportedPage.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_ListBox.html#flipItem">ListBox.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MediaItem.html#flipItem">MediaItem.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Movie.html#flipItem">Movie.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_MultiStateObject.html#flipItem">MultiStateObject.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Oval.html#flipItem">Oval.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PDF.html#flipItem">PDF.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PICT.html#flipItem">PICT.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PageItem.html#flipItem">PageItem.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Polygon.html#flipItem">Polygon.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_RadioButton.html#flipItem">RadioButton.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Rectangle.html#flipItem">Rectangle.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_SignatureField.html#flipItem">SignatureField.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_Sound.html#flipItem">Sound.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_SplineItem.html#flipItem">SplineItem.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextBox.html#flipItem">TextBox.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_TextFrame.html#flipItem">TextFrame.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_WMF.html#flipItem">WMF.flipItem</a> (<span class="arg">given</span>:
+<b>Flip</b>[, <span class="arg">around</span>:
+<span class="argt">varies</span>])
+</p>
+
+<h3>As property</h3>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Button.html">Button</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Button.html">Button</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_CheckBox.html">CheckBox</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_CheckBox.html">CheckBox</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_ComboBox.html">ComboBox</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_ComboBox.html">ComboBox</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_EPS.html">EPS</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_EPS.html">EPS</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_EPSText.html">EPSText</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_EPSText.html">EPSText</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_FormField.html">FormField</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_FormField.html">FormField</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Graphic.html">Graphic</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Graphic.html">Graphic</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_GraphicLine.html">GraphicLine</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_GraphicLine.html">GraphicLine</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Group.html">Group</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Group.html">Group</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_HtmlItem.html">HtmlItem</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_HtmlItem.html">HtmlItem</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Image.html">Image</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Image.html">Image</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_ImportedPage.html">ImportedPage</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_ImportedPage.html">ImportedPage</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_ListBox.html">ListBox</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_ListBox.html">ListBox</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_MediaItem.html">MediaItem</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_MediaItem.html">MediaItem</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Movie.html">Movie</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Movie.html">Movie</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_MultiStateObject.html">MultiStateObject</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_MultiStateObject.html">MultiStateObject</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Oval.html">Oval</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Oval.html">Oval</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_PDF.html">PDF</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_PDF.html">PDF</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_PICT.html">PICT</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_PICT.html">PICT</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Polygon.html">Polygon</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Polygon.html">Polygon</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_PrintBookletPrintPreference.html">PrintBookletPrintPreference</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_PrintPreference.html">PrintPreference</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_PrinterPreset.html">PrinterPreset</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_RadioButton.html">RadioButton</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_RadioButton.html">RadioButton</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Rectangle.html">Rectangle</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Rectangle.html">Rectangle</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_SignatureField.html">SignatureField</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_SignatureField.html">SignatureField</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Sound.html">Sound</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_Sound.html">Sound</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_SplineItem.html">SplineItem</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_SplineItem.html">SplineItem</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_TextBox.html">TextBox</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_TextBox.html">TextBox</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_TextFrame.html">TextFrame</a>.absoluteFlip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_WMF.html">WMF</a>.flip</p>
+</p>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_WMF.html">WMF</a>.absoluteFlip</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

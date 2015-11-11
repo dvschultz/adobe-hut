@@ -1,0 +1,100 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: NestedStyleDelimiters</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, nestedstyledelimiters">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>NestedStyleDelimiters</h1></td></tr>
+<tr><td>&nbsp;</td><td>Delimiter options for marking the end of the application of the nested style.</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>NestedStyleDelimiters.ANY_CHARACTER</td><td>Uses the first character or characters other than zero-width markers as the nested style delimiter. Zero-width markers include anchors, index markers, XML tags, and so on.</td><td>1380541539  = 
+				'RIdc'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.ANY_WORD</td><td>Uses the first word or words in the paragraph as the nested style delimiter. The first word is considered all characters preceding the first space or white space character in the paragraph.</td><td>1380541559  = 
+				'RIdw'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.AUTO_PAGE_NUMBER</td><td>Uses the first automatic page number as the nested style delimiter.</td><td>1396797550  = 
+				'SApn'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.DIGITS</td><td>Uses the first numeric character or characters as the nested style delimiter. Note: To specify the number of digits, see repetition.</td><td>1380541540  = 
+				'RIdd'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.DROPCAP</td><td>Uses the dropcap as the nested style delimiter.</td><td>1380541507  = 
+				'RIdC'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.EM_SPACE</td><td>Uses the first em space as the nested style delimiter.</td><td>1397058899  = 
+				'SEmS'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.END_NESTED_STYLE</td><td>Uses the inserted end nested style here character as the nested style delimiter.</td><td>1396855379  = 
+				'SBRS'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.EN_SPACE</td><td>Uses the first en space as the nested style delimiter.</td><td>1397059155  = 
+				'SEnS'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.FORCED_LINE_BREAK</td><td>Uses the first forced line break as the nested style delimiter.</td><td>1397124194  = 
+				'SFlb'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.INDENT_HERE_TAB</td><td>Uses the first indent-to-here tab character as the nested style delimiter. Note: Does not use the first indent-to-here tab stop. If no actual indent-to-here tab character has been inserted in the paragraph, the nested style is applied through the end of the paragraph.</td><td>1397319796  = 
+				'SIht'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.INLINE_GRAPHIC</td><td>Uses the first inline graphic as the nested style delimiter.</td><td>1380541545  = 
+				'RIdi'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.LETTERS</td><td>Uses the first alpha character or characters as the nested style delimiter. Note: To specify the number of letters, see repetition.</td><td>1380541548  = 
+				'RIdl'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.NONBREAKING_SPACE</td><td>Uses the first nonbreaking space as the nested style delimiter.</td><td>1397645907  = 
+				'SNbS'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.REPEAT</td><td>Repeat</td><td>1380545132  = 
+				'RIrl'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.SECTION_MARKER</td><td>Uses the first section name marker as the nested style delimiter.</td><td>1400073805  = 
+				'SsnM'
+			</td></tr>
+<tr><td>NestedStyleDelimiters.SENTENCE</td><td>Uses the first sentence or sentences in the paragraph as the nested style delimiter. The first sentence is considered all text preceding the first period, question mark, or exclamation mark in the paragraph.</td><td>1380541555  = 
+				'RIds'
+			</td></tr>
+<tr class="lastRow"><td>NestedStyleDelimiters.TABS</td><td>Uses the first tab character as the nested style delimiter. Note: Does not use the first tab stop. If no actual tab character has been inserted in the paragraph, the nested style is applied through the end of the paragraph.</td><td>1380541556  = 
+				'RIdt'
+			</td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>As property</h3>
+<p class="hangIndent"><p class="hangIndent"><a href="pc_NestedStyle.html">NestedStyle</a>.delimiter</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

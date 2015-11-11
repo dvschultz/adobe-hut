@@ -1,0 +1,138 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: RegExp</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, regexp">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>RegExp</h1></td></tr>
+<tr><td>&nbsp;</td><td>Wraps a regular expression.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#RegExp" title="Creates and returns a new RegExp object set to the value of the argument converted to a regular expression.">RegExp</a>, <a href="#compile" title="Compiles a string to a regular expression. Returns true if the compilation was successful.">compile</a>, <a href="#exec" title="Execute a regular expression.">exec</a>, <a href="#test" title="Execute a regular expression, and return true if there is a match.">test</a>, <a href="#toString" title="Converts this RegExp object to a string.">toString</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="$1"></a>$1</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The matched subexpression #1.</td></tr>
+<tr><td><a name="$2"></a>$2</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The matched subexpression #2.</td></tr>
+<tr><td><a name="$3"></a>$3</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The matched subexpression #3.</td></tr>
+<tr><td><a name="$4"></a>$4</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The matched subexpression #4.</td></tr>
+<tr><td><a name="$5"></a>$5</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The matched subexpression #5.</td></tr>
+<tr><td><a name="$6"></a>$6</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The matched subexpression #6.</td></tr>
+<tr><td><a name="$7"></a>$7</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The matched subexpression #7.</td></tr>
+<tr><td><a name="$8"></a>$8</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The matched subexpression #8.</td></tr>
+<tr><td><a name="$9"></a>$9</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The matched subexpression #9.</td></tr>
+<tr><td><a name="global"></a>global</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Indicates whether the match is a global match.</td></tr>
+<tr><td><a name="ignoreCase"></a>ignoreCase</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Indicates whether the match is not case sensitive.</td></tr>
+<tr><td><a name="input"></a>input</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The original input string.</td></tr>
+<tr><td><a name="lastMatch"></a>lastMatch</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The last match.</td></tr>
+<tr><td><a name="lastParen"></a>lastParen</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The value of the last matched subexpression.</td></tr>
+<tr><td><a name="leftContext"></a>leftContext</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The string before the match.</td></tr>
+<tr><td><a name="multiline"></a>multiline</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Indicates whether the match matches multiple lines.</td></tr>
+<tr class="lastRow"><td><a name="rightContext"></a>rightContext</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The string after the match.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="RegExp"></a><a href="pc_RegExp.html">RegExp</a> <span class="func">RegExp</span> (<span class="arg">pattern</span>:
+<span class="argt">string</span>[, <span class="arg">flags</span>:
+<span class="argt">string</span>])<br>
+Creates and returns a new RegExp object set to the value of the argument converted to a regular expression.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>pattern</td><td><a href="pc_string.html">string</a></td><td>The pattern to convert.</td></tr>
+<tr class="lastRow"><td>flags</td><td><a href="pc_string.html">string</a></td><td>Flags that control how the conversion is performed.<br>A string containing any combination of the letters i, m, g:
+							<br>&bull;&nbsp;"i" -- ignore case in pattern matching
+								<br>&bull;&nbsp;"m" -- treat the string as multiple lines
+								<br>&bull;&nbsp;"g" -- do global pattern matching (Optional)</td></tr>
+</table>
+</p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="compile"></a><a href="pc_Boolean.html">bool</a>  <span class="func">compile</span> (<span class="arg">pattern</span>:
+<span class="argt">string</span>)<br>
+Compiles a string to a regular expression. Returns true if the compilation was successful.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>pattern</td><td><a href="pc_string.html">string</a></td><td>The pattern to compile.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="exec"></a><a href="pc_Array.html">Array</a> <span class="func">exec</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Execute a regular expression.<br>
+The return value is an array of matches, with the first element containing the match, and successive elements containing the results of any matching subexpression in their order of appearance. If there is no match, the result is null.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>The string to match.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="test"></a><a href="pc_Boolean.html">bool</a>  <span class="func">test</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Execute a regular expression, and return true if there is a match.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>The string to match.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Converts this RegExp object to a string.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><a href="pc_Array.html">Array</a> <a href="pc_String.html#match">String.match</a>
+		(<span class="arg">regexp</span>:
+<b>RegExp</b>)
+</p><p class="hangIndent">number <a href="pc_String.html#search">String.search</a>
+		(<span class="arg">search</span>:
+<b>RegExp</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>RegExp</b> <b>RegExp</b>.<a href="pc_RegExp.html#RegExp">RegExp</a> (<span class="arg">pattern</span>:
+<span class="argt">string</span>[, <span class="arg">flags</span>:
+<span class="argt">string</span>])
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

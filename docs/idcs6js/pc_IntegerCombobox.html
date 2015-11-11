@@ -1,0 +1,162 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: IntegerCombobox</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, integercombobox">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>IntegerCombobox</h1></td></tr>
+<tr><td>&nbsp;</td><td>An integer entry control featuring both a pop-up menu and an entry field. Note: .5 is rounded up. Base Class: <a href="pc_Widget.html">Widget</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#toSource" title="Generates a string which, if executed, will return the IntegerCombobox.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_BorderPanel.html">BorderPanel</a> | <a href="pc_DialogColumn.html">DialogColumn</a> | <a href="pc_DialogRow.html">DialogRow</a> | <a href="pc_EnablingGroup.html">EnablingGroup</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_Widget.html">Widget</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>IntegerCombobox</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="editContents"></a>editContents</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The default value in an editbox control. Note: Do not specify both edit contents and edit value. If both are specified, the one that occurs later in the script is used.</td></tr>
+<tr><td><a name="editValue"></a>editValue</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The real number default value of the editbox or combobox. Note: For measurement controls, the value is interpreted in points. The points value is converted to edit units when the dialog opens. Note: Do not specify both edit value and edit contents. If both are specified, the one that occurs later in the script is used.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="id"></a>id</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The unique ID of the IntegerCombobox.</td></tr>
+<tr><td><a name="index"></a>index</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The index of the IntegerCombobox within its containing object.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="largeNudge"></a>largeNudge</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount to increment/decrement the value when a user selects the control and holds down the Shift key while pressing an arrow key on the keyboard.</td></tr>
+<tr><td><a name="maximumValue"></a>maximumValue</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The maximum value that a user is allowed to type in a numeric editbox or combobox. Note: The value for a measurement editbox or combobox is interpreted in points, regardless of the edit units specified for the control. The points value is converted automatically to the edit unit when the dialog is opened.</td></tr>
+<tr><td><a name="minWidth"></a>minWidth</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The width of the control. For an editbox or combobox, specifies the minimum width of the box.</td></tr>
+<tr><td><a name="minimumValue"></a>minimumValue</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The minumim value that a user is allowed to type in a numeric editbox or combobox. Note: The value for a measurement editbox or combobox is interpreted in points, regardless of the edit units specified for the control. The points value is converted automatically to the edit unit when the dialog is opened.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_BorderPanel.html">BorderPanel</a><br><a href="pc_DialogColumn.html">DialogColumn</a><br><a href="pc_DialogRow.html">DialogRow</a><br><a href="pc_EnablingGroup.html">EnablingGroup</a></td>
+<td>readonly</td><td>The parent of the IntegerCombobox (a DialogColumn, DialogRow, EnablingGroup or BorderPanel).</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="smallNudge"></a>smallNudge</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount to increment/decrement the value when the user selects the control and presses an arrow key on the keyboard.</td></tr>
+<tr class="lastRow"><td><a name="stringList"></a>stringList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The menu items on a dropdown or combobox control, as an array of strings.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_IntegerCombobox.html">IntegerCombobox</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the IntegerCombobox.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#nextItem">IntegerComboboxes.nextItem</a>
+		(<span class="arg">obj</span>:
+<b>IntegerCombobox</b>)
+</p><p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#previousItem">IntegerComboboxes.previousItem</a>
+		(<span class="arg">obj</span>:
+<b>IntegerCombobox</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>IntegerCombobox</b> <b>IntegerCombobox</b>.<a href="pc_IntegerCombobox.html#getElements">getElements</a> ()
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#[]">IntegerComboboxes.[]</a> (<span class="arg">index</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#add">IntegerComboboxes.add</a> ([<span class="arg">withProperties</span>:
+<a href="pc_Object.html">Object</a>])
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#anyItem">IntegerComboboxes.anyItem</a> ()
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#everyItem">IntegerComboboxes.everyItem</a> ()
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#firstItem">IntegerComboboxes.firstItem</a> ()
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#item">IntegerComboboxes.item</a> (<span class="arg">index</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#itemByID">IntegerComboboxes.itemByID</a> (<span class="arg">id</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#itemByRange">IntegerComboboxes.itemByRange</a> (<span class="arg">from</span>:
+<span class="argt">varies</span>, <span class="arg">to</span>:
+<span class="argt">varies</span>)
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#lastItem">IntegerComboboxes.lastItem</a> ()
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#middleItem">IntegerComboboxes.middleItem</a> ()
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#nextItem">IntegerComboboxes.nextItem</a> (<span class="arg">obj</span>:
+<b>IntegerCombobox</b>)
+</p>
+<p class="hangIndent"><b>IntegerCombobox</b> <a href="pc_IntegerComboboxes.html#previousItem">IntegerComboboxes.previousItem</a> (<span class="arg">obj</span>:
+<b>IntegerCombobox</b>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

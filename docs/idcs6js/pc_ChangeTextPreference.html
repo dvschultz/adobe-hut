@@ -1,0 +1,539 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: ChangeTextPreference</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, changetextpreference">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>ChangeTextPreference</h1></td></tr>
+<tr><td>&nbsp;</td><td>Change text preferences. Base Class: <a href="pc_Preference.html">Preference</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#toSource" title="Generates a string which, if executed, will return the ChangeTextPreference.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Application.html">Application</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_Preference.html">Preference</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>ChangeTextPreference</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Bullet.html">Bullet</a> | <a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a> | <a href="pc_NumberingRestartPolicy.html">NumberingRestartPolicy</a> | <a href="pc_Preference.html">Preference</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="allowArbitraryHyphenation"></a>allowArbitraryHyphenation</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, words unassociated with a hyphenation dictionary can break to the next line on any character. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="appliedCharacterStyle"></a>appliedCharacterStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.</td></tr>
+<tr><td><a name="appliedConditions"></a>appliedConditions</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Strings</td>
+<td>r/w</td><td>The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]". Can return: Array of Strings or NothingEnum enumerator. Can also accept: Array of Conditions.</td></tr>
+<tr><td><a name="appliedFont"></a>appliedFont</td><td><a href="pc_Font.html">Font</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font applied to the ChangeTextPreference, specified as either a font object or the name of font family. Can return: Font, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="appliedLanguage"></a>appliedLanguage</td><td><a href="pc_Language.html">Language</a><br><a href="pc_LanguageWithVendors.html">LanguageWithVendors</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The language to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Language or LanguageWithVendors.</td></tr>
+<tr><td><a name="appliedNumberingList"></a>appliedNumberingList</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_NumberingList.html">NumberingList</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The list to be part of. Can return: NumberingList, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="appliedParagraphStyle"></a>appliedParagraphStyle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_ParagraphStyle.html">ParagraphStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The paragraph style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: ParagraphStyle.</td></tr>
+<tr><td><a name="autoLeading"></a>autoLeading</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The percent of the type size to use for auto leading. (Range: 0 to 500). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="autoTcy"></a>autoTcy</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer</td>
+<td>r/w</td><td>The number of half-width characters at or below which the characters automatically run horizontally in vertical text. Can return: Short Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="autoTcyIncludeRoman"></a>autoTcyIncludeRoman</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, auto tcy includes Roman characters. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="balanceRaggedLines"></a>balanceRaggedLines</td><td><a href="pe_BalanceLinesStyle.html">BalanceLinesStyle</a><br><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer. Can return: Boolean, BalanceLinesStyle enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="baselineShift"></a>baselineShift</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The baseline shift applied to the text. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="bulletChar"></a>bulletChar</td><td><a href="pc_Bullet.html">Bullet</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>readonly</td><td>Bullet character. Can return: Bullet or NothingEnum enumerator.</td></tr>
+<tr><td><a name="bulletsAndNumberingListType"></a>bulletsAndNumberingListType</td><td><a href="pe_ListType.html">ListType</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>List type for bullets and numbering. Can return: ListType enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="bulletsCharacterStyle"></a>bulletsCharacterStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The character style to be used for the text after string. Can return: CharacterStyle, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="bulletsTextAfter"></a>bulletsTextAfter</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The text after string expression for bullets. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="bunriKinshi"></a>bunriKinshi</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="capitalization"></a>capitalization</td><td><a href="pe_Capitalization.html">Capitalization</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The capitalization scheme. Can return: Capitalization enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="changeConditionsMode"></a>changeConditionsMode</td><td><a href="pe_ChangeConditionsModes.html">ChangeConditionsModes</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The change conditions mode, change either replaces applied conditions or adds to applied conditions. Can return: ChangeConditionsModes enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="changeTo"></a>changeTo</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The replacement ChangeTextPreference. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="characterAlignment"></a>characterAlignment</td><td><a href="pe_CharacterAlignment.html">CharacterAlignment</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The alignment of small characters to the largest character in the line. Can return: CharacterAlignment enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="characterDirection"></a>characterDirection</td><td><a href="pe_CharacterDirectionOptions.html">CharacterDirectionOptions</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The direction of the character. Can return: CharacterDirectionOptions enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="characterRotation"></a>characterRotation</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="cjkGridTracking"></a>cjkGridTracking</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="composer"></a>composer</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The text composer to use to compose the text. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="diacriticPosition"></a>diacriticPosition</td><td><a href="pe_DiacriticPositionOptions.html">DiacriticPositionOptions</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>Position of diacriticical characters. Can return: DiacriticPositionOptions enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="digitsType"></a>digitsType</td><td><a href="pe_DigitsTypeOptions.html">DigitsTypeOptions</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The digits type. Can return: DigitsTypeOptions enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="dropCapCharacters"></a>dropCapCharacters</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer (0 - 150)</td>
+<td>r/w</td><td>The number of characters to drop cap. Can return: Short Integer (0 - 150) or NothingEnum enumerator.</td></tr>
+<tr><td><a name="dropCapLines"></a>dropCapLines</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer (0 - 25)</td>
+<td>r/w</td><td>The number of lines to drop cap. Can return: Short Integer (0 - 25) or NothingEnum enumerator.</td></tr>
+<tr><td><a name="dropcapDetail"></a>dropcapDetail</td><td>Long Integer<br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid. Can return: Long Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="endJoin"></a>endJoin</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_OutlineJoin.html">OutlineJoin</a></td>
+<td>r/w</td><td>The stroke join type applied to the characters of the text. Can return: OutlineJoin enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="fillColor"></a>fillColor</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.</td></tr>
+<tr><td><a name="fillTint"></a>fillTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The tint (as a percentage) of the fill color of the ChangeTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="firstLineIndent"></a>firstLineIndent</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The amount to indent the first line. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="fontStyle"></a>fontStyle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The name of the font style. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="glyphForm"></a>glyphForm</td><td><a href="pe_AlternateGlyphForms.html">AlternateGlyphForms</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The glyph variant to substitute for standard glyphs. Can return: AlternateGlyphForms enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="gradientFillAngle"></a>gradientFillAngle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="gradientFillLength"></a>gradientFillLength</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="gradientFillStart"></a>gradientFillStart</td><td>2 Units<br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The starting point (in page coordinates) of a gradient applied to the fill of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.</td></tr>
+<tr><td><a name="gradientStrokeAngle"></a>gradientStrokeAngle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="gradientStrokeLength"></a>gradientStrokeLength</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="gradientStrokeStart"></a>gradientStrokeStart</td><td>2 Units<br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The starting point (in page coordinates) of a gradient applied to the stroke of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.</td></tr>
+<tr><td><a name="gridAlignment"></a>gridAlignment</td><td><a href="pe_GridAlignment.html">GridAlignment</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The alignment to the frame grid or baseline grid. Can return: GridAlignment enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="gridGyoudori"></a>gridGyoudori</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer</td>
+<td>r/w</td><td>The manual gyoudori setting. Can return: Short Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="horizontalScale"></a>horizontalScale</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The horizontal scaling applied to the ChangeTextPreference. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="hyphenateAcrossColumns"></a>hyphenateAcrossColumns</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="hyphenateLastWord"></a>hyphenateLastWord</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="ignoreEdgeAlignment"></a>ignoreEdgeAlignment</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, ignores optical edge alignment for the paragraph. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="jidori"></a>jidori</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer</td>
+<td>r/w</td><td>The number of grid squares in which to arrange the text. . Can return: Short Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="justification"></a>justification</td><td><a href="pe_Justification.html">Justification</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The paragraph alignment. Can return: Justification enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kashidas"></a>kashidas</td><td><a href="pe_KashidasOptions.html">KashidasOptions</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>Use of Kashidas for justification. Can return: KashidasOptions enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="keepAllLinesTogether"></a>keepAllLinesTogether</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="keepFirstLines"></a>keepFirstLines</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer (1 - 50)</td>
+<td>r/w</td><td>The minimum number of lines to keep together in a paragraph before allowing a page break. Can return: Short Integer (1 - 50) or NothingEnum enumerator.</td></tr>
+<tr><td><a name="keepLastLines"></a>keepLastLines</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer (1 - 50)</td>
+<td>r/w</td><td>The minimum number of lines to keep together in a paragraph after a page break. Can return: Short Integer (1 - 50) or NothingEnum enumerator.</td></tr>
+<tr><td><a name="keepLinesTogether"></a>keepLinesTogether</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="keepRuleAboveInFrame"></a>keepRuleAboveInFrame</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="keepWithNext"></a>keepWithNext</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer (0 - 5)</td>
+<td>r/w</td><td>The minimum number of lines to keep with the next paragraph. Can return: Short Integer (0 - 5) or NothingEnum enumerator.</td></tr>
+<tr><td><a name="keepWithPrevious"></a>keepWithPrevious</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If the first line in the paragraph should be kept with the last line of previous paragraph. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenAlignment"></a>kentenAlignment</td><td><a href="pe_KentenAlignment.html">KentenAlignment</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The alignment of kenten characters relative to the parent characters. . Can return: KentenAlignment enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenCharacterSet"></a>kentenCharacterSet</td><td><a href="pe_KentenCharacterSet.html">KentenCharacterSet</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The character set used for the custom kenten character. Note: Valid only when kenten kind is custom. . Can return: KentenCharacterSet enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenCustomCharacter"></a>kentenCustomCharacter</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The character used for kenten. Note: Valid only when kenten kind is custom. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenFillColor"></a>kentenFillColor</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenFont"></a>kentenFont</td><td><a href="pc_Font.html">Font</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font to use for kenten characters. Can return: Font, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenFontSize"></a>kentenFontSize</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The size (in points) of kenten characters. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenFontStyle"></a>kentenFontStyle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font style of kenten characters. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenKind"></a>kentenKind</td><td><a href="pe_KentenCharacter.html">KentenCharacter</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The style of kenten characters. Can return: KentenCharacter enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenOverprintFill"></a>kentenOverprintFill</td><td><a href="pe_AdornmentOverprint.html">AdornmentOverprint</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The method of overprinting the kenten fill. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenOverprintStroke"></a>kentenOverprintStroke</td><td><a href="pe_AdornmentOverprint.html">AdornmentOverprint</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The method of overprinting the kenten stroke. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenPlacement"></a>kentenPlacement</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The distance between kenten characters and their parent characters. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenPosition"></a>kentenPosition</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_RubyKentenPosition.html">RubyKentenPosition</a></td>
+<td>r/w</td><td>The kenten position relative to the parent character. Can return: RubyKentenPosition enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenStrokeColor"></a>kentenStrokeColor</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters. Can return: Swatch, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenStrokeTint"></a>kentenStrokeTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenTint"></a>kentenTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The fill tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenWeight"></a>kentenWeight</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The stroke weight (in points) of kenten characters. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenXScale"></a>kentenXScale</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The horizontal size of kenten characters as a percent of the original size. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kentenYScale"></a>kentenYScale</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The vertical size of kenten charachers as a percent of the original size. . Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kerningMethod"></a>kerningMethod</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The type of pair kerning. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kerningValue"></a>kerningValue</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount of space to add or remove between characters, specified in thousands of an em. . Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="keyboardDirection"></a>keyboardDirection</td><td><a href="pe_CharacterDirectionOptions.html">CharacterDirectionOptions</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The keyboard direction of the character. Can return: CharacterDirectionOptions enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kinsokuHangType"></a>kinsokuHangType</td><td><a href="pe_KinsokuHangTypes.html">KinsokuHangTypes</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The type of hanging punctuation to allow. Note: Valid only when a kinsoku set is in effect. Can return: KinsokuHangTypes enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kinsokuSet"></a>kinsokuSet</td><td><a href="pe_KinsokuSet.html">KinsokuSet</a><br><a href="pc_KinsokuTable.html">KinsokuTable</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The kinsoku set that determines legitimate line breaks. Can return: KinsokuTable, KinsokuSet enumerator, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="kinsokuType"></a>kinsokuType</td><td><a href="pe_KinsokuType.html">KinsokuType</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined. Can return: KinsokuType enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="lastLineIndent"></a>lastLineIndent</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The amount to indent the last line in the paragraph. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="leading"></a>leading</td><td><a href="pe_Leading.html">Leading</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The leading applied to the text. Can return: Unit, Leading enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="leadingAki"></a>leadingAki</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount of space before each character. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="leadingModel"></a>leadingModel</td><td><a href="pe_LeadingModel.html">LeadingModel</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The point from which leading is measured from line to line. Can return: LeadingModel enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="leftIndent"></a>leftIndent</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The width of the left indent. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="ligatures"></a>ligatures</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="markupTag"></a>markupTag</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_XMLTag.html">XMLTag</a></td>
+<td>r/w</td><td>The XML tag applied to the element. Can return: String or NothingEnum enumerator. Can also accept: XMLTag.</td></tr>
+<tr><td><a name="miterLimit"></a>miterLimit</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real (0 - 1000)</td>
+<td>r/w</td><td>The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join. Can return: Real (0 - 1000) or NothingEnum enumerator. (default: <b>4</b>)</td></tr>
+<tr><td><a name="mojikumi"></a>mojikumi</td><td><a href="pc_MojikumiTable.html">MojikumiTable</a><br><a href="pe_MojikumiTableDefaults.html">MojikumiTableDefaults</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The mojikumi table. For information, see mojikumi table defaults. Can return: MojikumiTable, String, MojikumiTableDefaults enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="noBreak"></a>noBreak</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, keeps the text on the same line. . Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="numberingApplyRestartPolicy"></a>numberingApplyRestartPolicy</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, apply the numbering restart policy. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="numberingCharacterStyle"></a>numberingCharacterStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The character style to be used for the number string. Can return: CharacterStyle, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="numberingContinue"></a>numberingContinue</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>Continue the numbering at this level. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="numberingExpression"></a>numberingExpression</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The number string expression for numbering. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="numberingFormat"></a>numberingFormat</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_NumberingStyle.html">NumberingStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>Numbering format options. Can return: NumberingStyle enumerator, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="numberingLevel"></a>numberingLevel</td><td>Long Integer<br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The level of the paragraph. Can return: Long Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="numberingRestartPolicies"></a>numberingRestartPolicies</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_NumberingRestartPolicy.html">NumberingRestartPolicy</a></td>
+<td>readonly</td><td>Numbering restart policies. Can return: NumberingRestartPolicy or NothingEnum enumerator.</td></tr>
+<tr><td><a name="numberingStartAt"></a>numberingStartAt</td><td>Long Integer<br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>Determines starting number in a numbered list. Can return: Long Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfContextualAlternate"></a>otfContextualAlternate</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses contextual alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfDiscretionaryLigature"></a>otfDiscretionaryLigature</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses discretionary ligatures in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfFigureStyle"></a>otfFigureStyle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_OTFFigureStyle.html">OTFFigureStyle</a></td>
+<td>r/w</td><td>The figure style in OpenType fonts. Can return: OTFFigureStyle enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfFraction"></a>otfFraction</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses fractions in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfHVKana"></a>otfHVKana</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. . Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfHistorical"></a>otfHistorical</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, use historical forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfJustificationAlternate"></a>otfJustificationAlternate</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, use alternate justification forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfLocale"></a>otfLocale</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses localized forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfMark"></a>otfMark</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses mark positioning in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfOrdinal"></a>otfOrdinal</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses ordinals in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfOverlapSwash"></a>otfOverlapSwash</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, use overlapping swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfProportionalMetrics"></a>otfProportionalMetrics</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, kerns according to proportional CJK metrics in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfRomanItalics"></a>otfRomanItalics</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, applies italics to half-width alphanumerics. . Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfSlashedZero"></a>otfSlashedZero</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, use a slashed zeroes in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfStretchedAlternate"></a>otfStretchedAlternate</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, use stretched alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfStylisticAlternate"></a>otfStylisticAlternate</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, use stylistic alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfStylisticSets"></a>otfStylisticSets</td><td>Long Integer<br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The stylistic sets to use in OpenType fonts. Can return: Long Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfSwash"></a>otfSwash</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="otfTitling"></a>otfTitling</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses titling forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="overprintFill"></a>overprintFill</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, the fill color of the characters will overprint. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="overprintStroke"></a>overprintStroke</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, the stroke of the characters will overprint. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="paragraphDirection"></a>paragraphDirection</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_ParagraphDirectionOptions.html">ParagraphDirectionOptions</a></td>
+<td>r/w</td><td>Paragraph direction. Can return: ParagraphDirectionOptions enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="paragraphGyoudori"></a>paragraphGyoudori</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="paragraphJustification"></a>paragraphJustification</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_ParagraphJustificationOptions.html">ParagraphJustificationOptions</a></td>
+<td>r/w</td><td>Paragraph justification. Can return: ParagraphJustificationOptions enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="paragraphKashidaWidth"></a>paragraphKashidaWidth</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Application.html">Application</a></td>
+<td>readonly</td><td>The parent of the ChangeTextPreference (a Application).</td></tr>
+<tr><td><a name="pointSize"></a>pointSize</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The text size. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="position"></a>position</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_Position.html">Position</a></td>
+<td>r/w</td><td>The text position relative to the baseline. Can return: Position enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="positionalForm"></a>positionalForm</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_PositionalForms.html">PositionalForms</a></td>
+<td>r/w</td><td>The OpenType positional form. Can return: PositionalForms enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="preferences"></a>preferences</td><td><a href="pc_Preferences.html">Preferences</a> <a class="sing" href="pc_Preference.html">Preference</a></td>
+<td>readonly</td><td>A collection of preferences objects.</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="rensuuji"></a>rensuuji</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rightIndent"></a>rightIndent</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The width of the right indent. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rotateSingleByteCharacters"></a>rotateSingleByteCharacters</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyAlignment"></a>rubyAlignment</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_RubyAlignments.html">RubyAlignments</a></td>
+<td>r/w</td><td>The ruby alignment. Can return: RubyAlignments enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyAutoAlign"></a>rubyAutoAlign</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, auto aligns ruby. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyAutoScaling"></a>rubyAutoScaling</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. . Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyAutoTcyAutoScale"></a>rubyAutoTcyAutoScale</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyAutoTcyDigits"></a>rubyAutoTcyDigits</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer</td>
+<td>r/w</td><td>The number of digits included in auto tcy (tate-chuu-yoko) in ruby. Can return: Short Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyAutoTcyIncludeRoman"></a>rubyAutoTcyIncludeRoman</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyFill"></a>rubyFill</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyFont"></a>rubyFont</td><td><a href="pc_Font.html">Font</a><br><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font applied to ruby characters. Can return: Font, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyFontSize"></a>rubyFontSize</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The size (in points) of ruby characters. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyFontStyle"></a>rubyFontStyle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The font style of ruby characters. Can return: String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyOpenTypePro"></a>rubyOpenTypePro</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, uses OpenType Pro fonts for ruby. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyOverhang"></a>rubyOverhang</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. . Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyOverprintFill"></a>rubyOverprintFill</td><td><a href="pe_AdornmentOverprint.html">AdornmentOverprint</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The method of overprinting the ruby fill. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyOverprintStroke"></a>rubyOverprintStroke</td><td><a href="pe_AdornmentOverprint.html">AdornmentOverprint</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>The method of overprinting the ruby stroke. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyParentOverhangAmount"></a>rubyParentOverhangAmount</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_RubyOverhang.html">RubyOverhang</a></td>
+<td>r/w</td><td>The amount by which ruby characters can overhang the parent text. Can return: RubyOverhang enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyParentScalingPercent"></a>rubyParentScalingPercent</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount (as a percentage) to scale the parent text size to determine the ruby text size. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyParentSpacing"></a>rubyParentSpacing</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_RubyParentSpacing.html">RubyParentSpacing</a></td>
+<td>r/w</td><td>The ruby spacing relative to the parent text. . Can return: RubyParentSpacing enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyPosition"></a>rubyPosition</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_RubyKentenPosition.html">RubyKentenPosition</a></td>
+<td>r/w</td><td>The position of ruby characters relative to the parent text. Can return: RubyKentenPosition enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyStroke"></a>rubyStroke</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters. Can return: Swatch, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyStrokeTint"></a>rubyStrokeTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The stroke tint (as a percentage) of ruby characters. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyTint"></a>rubyTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The tint (as a percentage) of the ruby fill color. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyType"></a>rubyType</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_RubyTypes.html">RubyTypes</a></td>
+<td>r/w</td><td>The ruby type. Can return: RubyTypes enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyWeight"></a>rubyWeight</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The stroke weight (in points) of ruby characters. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyXOffset"></a>rubyXOffset</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount of horizontal space between ruby and parent characters. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyXScale"></a>rubyXScale</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The horizontal size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyYOffset"></a>rubyYOffset</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount of vertical space between ruby and parent characters. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="rubyYScale"></a>rubyYScale</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The vertical size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="scaleAffectsLineHeight"></a>scaleAffectsLineHeight</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="shataiAdjustRotation"></a>shataiAdjustRotation</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, applies shatai rotation. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="shataiAdjustTsume"></a>shataiAdjustTsume</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, adjusts shatai tsume. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="shataiDegreeAngle"></a>shataiDegreeAngle</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The shatai lens angle (in degrees). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="shataiMagnification"></a>shataiMagnification</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount (as a percentage) of shatai obliquing to apply. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="singleWordJustification"></a>singleWordJustification</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_SingleWordJustification.html">SingleWordJustification</a></td>
+<td>r/w</td><td>The alignment to use for lines that contain a single word. Can return: SingleWordJustification enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="skew"></a>skew</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The skew angle of the ChangeTextPreference. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="spaceAfter"></a>spaceAfter</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The height of the paragraph space below. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="spaceBefore"></a>spaceBefore</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The height of the paragraph space above. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="spanColumnMinSpaceAfter"></a>spanColumnMinSpaceAfter</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The minimum space after a span or a split column. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="spanColumnMinSpaceBefore"></a>spanColumnMinSpaceBefore</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The minimum space before a span or a split column. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="spanColumnType"></a>spanColumnType</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_SpanColumnTypeOptions.html">SpanColumnTypeOptions</a></td>
+<td>r/w</td><td>Whether a paragraph should be a single column, span columns or split columns. Can return: SpanColumnTypeOptions enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="spanSplitColumnCount"></a>spanSplitColumnCount</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer (1 - 40)<br><a href="pe_SpanColumnCountOptions.html">SpanColumnCountOptions</a></td>
+<td>r/w</td><td>The number of columns a paragraph spans or the number of split columns. Can return: Short Integer (1 - 40), SpanColumnCountOptions enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="splitColumnInsideGutter"></a>splitColumnInsideGutter</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The inside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="splitColumnOutsideGutter"></a>splitColumnOutsideGutter</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The outside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="startParagraph"></a>startParagraph</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_StartParagraph.html">StartParagraph</a></td>
+<td>r/w</td><td>The location at which to start the paragraph. Can return: StartParagraph enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThroughColor"></a>strikeThroughColor</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke. Can return: Swatch, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThroughGapColor"></a>strikeThroughGapColor</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke. Can return: Swatch, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThroughGapOverprint"></a>strikeThroughGapOverprint</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThroughGapTint"></a>strikeThroughGapTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThroughOffset"></a>strikeThroughOffset</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The amount by which to offset the strikethrough stroke from the text baseline. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThroughOverprint"></a>strikeThroughOverprint</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThroughTint"></a>strikeThroughTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThroughType"></a>strikeThroughType</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the strikethrough stroke. Can return: StrokeStyle, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThroughWeight"></a>strikeThroughWeight</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The stroke weight of the strikethrough stroke. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strikeThru"></a>strikeThru</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strokeAlignment"></a>strokeAlignment</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_TextStrokeAlign.html">TextStrokeAlign</a></td>
+<td>r/w</td><td>The stroke alignment applied to the text. Can return: TextStrokeAlign enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strokeColor"></a>strokeColor</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.</td></tr>
+<tr><td><a name="strokeTint"></a>strokeTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The tint (as a percentage) of the stroke color of the ChangeTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="strokeWeight"></a>strokeWeight</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The stroke weight applied to the characters of the text. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="tatechuyoko"></a>tatechuyoko</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="tatechuyokoXOffset"></a>tatechuyokoXOffset</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The horizontal offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="tatechuyokoYOffset"></a>tatechuyokoYOffset</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The vertical offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="tracking"></a>tracking</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount by which to loosen or tighten a block of text, specified in thousands of an em. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="trailingAki"></a>trailingAki</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount of space after each character. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="treatIdeographicSpaceAsSpace"></a>treatIdeographicSpaceAsSpace</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="tsume"></a>tsume</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount of horizontal character compression. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underline"></a>underline</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, underlines the text. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underlineColor"></a>underlineColor</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underlineGapColor"></a>underlineGapColor</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid. Can return: Swatch, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underlineGapOverprint"></a>underlineGapOverprint</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, the gap color of the underline stroke will overprint. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underlineGapTint"></a>underlineGapTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underlineOffset"></a>underlineOffset</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The amount by which to offset the underline from the text baseline. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underlineOverprint"></a>underlineOverprint</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underlineTint"></a>underlineTint</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The underline stroke tint (as a percentage). (Range: 0 to 100). Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underlineType"></a>underlineType</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the underline stroke. Can return: StrokeStyle, String or NothingEnum enumerator.</td></tr>
+<tr><td><a name="underlineWeight"></a>underlineWeight</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Unit</td>
+<td>r/w</td><td>The stroke weight of the underline stroke. Can return: Unit or NothingEnum enumerator.</td></tr>
+<tr><td><a name="verticalScale"></a>verticalScale</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The vertical scaling applied to the ChangeTextPreference. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="warichu"></a>warichu</td><td><a href="pc_Boolean.html">Boolean</a><br><a href="pe_NothingEnum.html">NothingEnum</a></td>
+<td>r/w</td><td>If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.</td></tr>
+<tr><td><a name="warichuAlignment"></a>warichuAlignment</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br><a href="pe_WarichuAlignment.html">WarichuAlignment</a></td>
+<td>r/w</td><td>The warichu alignment. Can return: WarichuAlignment enumerator or NothingEnum enumerator.</td></tr>
+<tr><td><a name="warichuCharsAfterBreak"></a>warichuCharsAfterBreak</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer</td>
+<td>r/w</td><td>The minimum number of characters allowed after a line break. . Can return: Short Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="warichuCharsBeforeBreak"></a>warichuCharsBeforeBreak</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer</td>
+<td>r/w</td><td>The minimum number of characters allowed before a line break. Can return: Short Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="warichuLineSpacing"></a>warichuLineSpacing</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The gap between lines of warichu characters. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="warichuLines"></a>warichuLines</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Short Integer</td>
+<td>r/w</td><td>The number of lines of warichu within a single normal line. Can return: Short Integer or NothingEnum enumerator.</td></tr>
+<tr><td><a name="warichuSize"></a>warichuSize</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The amount (as a percentage) to scale parent text size to determine warichu size. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr><td><a name="xOffsetDiacritic"></a>xOffsetDiacritic</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The x (horizontal) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.</td></tr>
+<tr class="lastRow"><td><a name="yOffsetDiacritic"></a>yOffsetDiacritic</td><td><a href="pe_NothingEnum.html">NothingEnum</a><br>Real</td>
+<td>r/w</td><td>The y (vertical) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_ChangeTextPreference.html">ChangeTextPreference</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the ChangeTextPreference.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.changeTextPreferences</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>ChangeTextPreference</b> <b>ChangeTextPreference</b>.<a href="pc_ChangeTextPreference.html#getElements">getElements</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

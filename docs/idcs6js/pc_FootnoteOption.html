@@ -1,0 +1,189 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: FootnoteOption</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, footnoteoption">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>FootnoteOption</h1></td></tr>
+<tr><td>&nbsp;</td><td>Options for specifying default footnote formatting. Base Class: <a href="pc_Preference.html">Preference</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#addEventListener" title="Adds an event listener.">addEventListener</a>, <a href="#getElements" title="Resolves the object specifier, creating an array of object references.">getElements</a>, <a href="#removeEventListener" title="Removes the event listener.">removeEventListener</a>, <a href="#toSource" title="Generates a string which, if executed, will return the FootnoteOption.">toSource</a>, <a href="#toSpecifier" title="Retrieves the object specifier.">toSpecifier</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Application.html">Application</a> | <a href="pc_Document.html">Document</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_Preference.html">Preference</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>FootnoteOption</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_Event.html">Event</a> | <a href="pc_EventListener.html">EventListener</a> | <a href="pc_MutationEvent.html">MutationEvent</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="continuingRuleColor"></a>continuingRuleColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the rule above continued footnote text. Note: Valid when continuing rule on is true. Can return: Swatch or String.</td></tr>
+<tr><td><a name="continuingRuleGapColor"></a>continuingRuleGapColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the rule above continued footnote text. Note: Valid when continuing rule type is not solid. Can return: Swatch or String.</td></tr>
+<tr><td><a name="continuingRuleGapOverprint"></a>continuingRuleGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, overprints the gap color of the rule above continued footnote text. Note: Valid when continuing rule type is not solid.</td></tr>
+<tr><td><a name="continuingRuleGapTint"></a>continuingRuleGapTint</td><td><a href="pc_number.html">number</a> (range: 0 - 100)</td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of the rule above continued footnote text. (Range: 0 to 100) Note: Valid when continuing rule type is not solid.</td></tr>
+<tr><td><a name="continuingRuleLeftIndent"></a>continuingRuleLeftIndent</td><td>Measurement Unit (Number or String) (range: -103680 - 103680)</td>
+<td>r/w</td><td>The amount to left indent the rule above continued footnote text. Note: Valid when continuing rule on is true.</td></tr>
+<tr><td><a name="continuingRuleLineWeight"></a>continuingRuleLineWeight</td><td>Measurement Unit (Number or String) (range: 0 - 1000)</td>
+<td>r/w</td><td>The stroke weight of the rule above continued footnote text. (Range: 0 to 1000) Note: Valid when continuing rule on is true.</td></tr>
+<tr><td><a name="continuingRuleOffset"></a>continuingRuleOffset</td><td>Measurement Unit (Number or String) (range: -15552 - 15552)</td>
+<td>r/w</td><td>The vertical offset of the rule above continued footnote text. Note: Valid when continuing rule on is true.</td></tr>
+<tr><td><a name="continuingRuleOn"></a>continuingRuleOn</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, draws a rule above footnote text that continues from a previous column. Note: Valid when no splitting is false or undefined.</td></tr>
+<tr><td><a name="continuingRuleOverprint"></a>continuingRuleOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, overprints the rule above continued footnote text. Note: Valid when continuing rule on is true.</td></tr>
+<tr><td><a name="continuingRuleTint"></a>continuingRuleTint</td><td><a href="pc_number.html">number</a> (range: 0 - 100)</td>
+<td>r/w</td><td>The tint (as a percentage) of the rule above continued footnote text. (Range: 0 to 100) Note: Valid when continuing rule type is not solid.</td></tr>
+<tr><td><a name="continuingRuleType"></a>continuingRuleType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the rule above continued footnote text. Note: Valid when continuing rule on is true. Can return: StrokeStyle or String.</td></tr>
+<tr><td><a name="continuingRuleWidth"></a>continuingRuleWidth</td><td>Measurement Unit (Number or String) (range: 0 - 103680)</td>
+<td>r/w</td><td>The length of the rule above continued footnote text. Note: Valid when continuing rule on is true.</td></tr>
+<tr><td><a name="eosPlacement"></a>eosPlacement</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, footnotes at the end of the story are placed just below the text. If false, footnotes at the end of the story are placed at the bottom of the column.</td></tr>
+<tr><td><a name="eventListeners"></a>eventListeners</td><td><a href="pc_EventListeners.html">EventListeners</a> <a class="sing" href="pc_EventListener.html">EventListener</a></td>
+<td>readonly</td><td>A collection of event listeners.</td></tr>
+<tr><td><a name="events"></a>events</td><td><a href="pc_Events.html">Events</a> <a class="sing" href="pc_Event.html">Event</a></td>
+<td>readonly</td><td>A collection of events.</td></tr>
+<tr><td><a name="footnoteFirstBaselineOffset"></a>footnoteFirstBaselineOffset</td><td><a href="pe_FootnoteFirstBaseline.html">FootnoteFirstBaseline</a>:<br>FootnoteFirstBaseline.ASCENT_OFFSET<br>FootnoteFirstBaseline.CAP_HEIGHT<br>FootnoteFirstBaseline.LEADING_OFFSET<br>FootnoteFirstBaseline.EMBOX_HEIGHT<br>FootnoteFirstBaseline.X_HEIGHT<br>FootnoteFirstBaseline.FIXED_HEIGHT</td>
+<td>r/w</td><td>The distance between the top of the footnote container and the footnote text.</td></tr>
+<tr><td><a name="footnoteMarkerStyle"></a>footnoteMarkerStyle</td><td><a href="pc_CharacterStyle.html">CharacterStyle</a></td>
+<td>r/w</td><td>The character style to apply to footnote reference numbers in the main text.</td></tr>
+<tr><td><a name="footnoteMinimumFirstBaselineOffset"></a>footnoteMinimumFirstBaselineOffset</td><td>Measurement Unit (Number or String) (range: 0 - 103680)</td>
+<td>r/w</td><td>The minimum distance between the baseline of the text and the top of the footnote container.</td></tr>
+<tr><td><a name="footnoteNumberingStyle"></a>footnoteNumberingStyle</td><td><a href="pe_FootnoteNumberingStyle.html">FootnoteNumberingStyle</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The footnote numbering style. Can return: FootnoteNumberingStyle enumerator or String.</td></tr>
+<tr><td><a name="footnoteTextStyle"></a>footnoteTextStyle</td><td><a href="pc_ParagraphStyle.html">ParagraphStyle</a></td>
+<td>r/w</td><td>The paragraph style to apply to footnotes. Note: The space before and after the paragraph defined in the paragraph style is ignored for footnotes. To define space above and between footnotes, see spacer and space between.</td></tr>
+<tr><td><a name="isValid"></a>isValid</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Returns true if the object specifier resolves to valid objects.</td></tr>
+<tr><td><a name="markerPositioning"></a>markerPositioning</td><td><a href="pe_FootnoteMarkerPositioning.html">FootnoteMarkerPositioning</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The position of footnote reference numbers in the main text. Can return: FootnoteMarkerPositioning enumerator or String.</td></tr>
+<tr><td><a name="noSplitting"></a>noSplitting</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, footnotes cannot split across columns. If false, footnotes flow into succeeding columns when the footnote text causes the footnote area to expand upward to reach the footnote reference number in the main text.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Application.html">Application</a><br><a href="pc_Document.html">Document</a></td>
+<td>readonly</td><td>The parent of the FootnoteOption (a Application or Document).</td></tr>
+<tr><td><a name="prefix"></a>prefix</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The prefix text of the footnote. (Limit: 0 to 100 characters)</td></tr>
+<tr><td><a name="properties"></a>properties</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>A property that allows setting of several properties at the same time.</td></tr>
+<tr><td><a name="restartNumbering"></a>restartNumbering</td><td><a href="pe_FootnoteRestarting.html">FootnoteRestarting</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The point at which to restart footnote numbering. Can return: FootnoteRestarting enumerator or String.</td></tr>
+<tr><td><a name="ruleColor"></a>ruleColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the rule above the first footnote in the column. Note: Valid when rule on is true. Can return: Swatch or String.</td></tr>
+<tr><td><a name="ruleGapColor"></a>ruleGapColor</td><td><a href="pc_String.html">String</a><br><a href="pc_Swatch.html">Swatch</a></td>
+<td>r/w</td><td>The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the rule above the first footnote in the column. Note: Valid when rule type is not solid. Can return: Swatch or String.</td></tr>
+<tr><td><a name="ruleGapOverprint"></a>ruleGapOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, overprints the gap color of the rule above the first footnote in the column. Note: Valid when rule type is not solid.</td></tr>
+<tr><td><a name="ruleGapTint"></a>ruleGapTint</td><td><a href="pc_number.html">number</a> (range: 0 - 100)</td>
+<td>r/w</td><td>The tint (as a percentage) of the gap color of the rule above the first footnote in the column. (Range: 0 to 100) Note: Valid when rule type is not solid.</td></tr>
+<tr><td><a name="ruleLeftIndent"></a>ruleLeftIndent</td><td>Measurement Unit (Number or String) (range: -103680 - 103680)</td>
+<td>r/w</td><td>The amount to left indent the rule above the first footnote in the column. Note: Valid when rule on is true.</td></tr>
+<tr><td><a name="ruleLineWeight"></a>ruleLineWeight</td><td>Measurement Unit (Number or String) (range: 0 - 1000)</td>
+<td>r/w</td><td>The stroke weight of the rule above the first footnote in the column. (Range: 0 to 1000) Note: Valid when rule on is true.</td></tr>
+<tr><td><a name="ruleOffset"></a>ruleOffset</td><td>Measurement Unit (Number or String) (range: -15552 - 15552)</td>
+<td>r/w</td><td>The vertical offset of the rule above the first footnote in the column. Note: Valid when rule on is true.</td></tr>
+<tr><td><a name="ruleOn"></a>ruleOn</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, draws a rule between the text and the first footnote in the column.</td></tr>
+<tr><td><a name="ruleOverprint"></a>ruleOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, overprints the rule above the first footnote in the column. Note: Valid when rule on is true.</td></tr>
+<tr><td><a name="ruleTint"></a>ruleTint</td><td><a href="pc_number.html">number</a> (range: 0 - 100)</td>
+<td>r/w</td><td>The tint (as a percentage) of the rule above the first footnote in the column. (Range: 0 to 100) Note: Valid when rule on is true.</td></tr>
+<tr><td><a name="ruleType"></a>ruleType</td><td><a href="pc_String.html">String</a><br><a href="pc_StrokeStyle.html">StrokeStyle</a></td>
+<td>r/w</td><td>The stroke type of the rule above the first footnote in a column. Note: Valid when rule on is true. Can return: StrokeStyle or String.</td></tr>
+<tr><td><a name="ruleWidth"></a>ruleWidth</td><td>Measurement Unit (Number or String) (range: 0 - 103680)</td>
+<td>r/w</td><td>The length of the rule above the first footnote in the column. Note: Valid when rule on is true.</td></tr>
+<tr><td><a name="separatorText"></a>separatorText</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The text to insert between the footnote marker number and the footnote text. (Range: 0 to 100 characters)</td></tr>
+<tr><td><a name="showPrefixSuffix"></a>showPrefixSuffix</td><td><a href="pe_FootnotePrefixSuffix.html">FootnotePrefixSuffix</a><br><a href="pc_String.html">String</a></td>
+<td>r/w</td><td>The position of the footnote prefix and/or suffix. Can return: FootnotePrefixSuffix enumerator or String.</td></tr>
+<tr><td><a name="spaceBetween"></a>spaceBetween</td><td>Measurement Unit (Number or String) (range: 0 - 864)</td>
+<td>r/w</td><td>The amount of vertical space between footnotes. Note: The space before and space after defined for the paragraph style applied to the footnote is ignored.</td></tr>
+<tr><td><a name="spacer"></a>spacer</td><td>Measurement Unit (Number or String) (range: 0 - 864)</td>
+<td>r/w</td><td>The minimum amount of vertical space between the bottom of the text column and the first footnote. Note: The space before amount defined in the paragraph style applied to the footnote is ignored for the first footnote.</td></tr>
+<tr><td><a name="startAt"></a>startAt</td><td><a href="pc_number.html">number</a> (range: 1 - 100000)</td>
+<td>r/w</td><td>The number at which to start footnote numbering.</td></tr>
+<tr class="lastRow"><td><a name="suffix"></a>suffix</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The suffix text of the footnote. (Limit: 0 to 100 characters)</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="addEventListener"></a><a href="pc_EventListener.html">EventListener</a> <span class="func">addEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Adds an event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getElements"></a><a href="pc_Array.html">Array</a> of <a href="pc_FootnoteOption.html">FootnoteOption</a> <span class="func">getElements</span> ()<br>
+Resolves the object specifier, creating an array of object references.</p>
+
+<p class="spaceBelow"><a name="removeEventListener"></a><a href="pc_Boolean.html">bool</a>  <span class="func">removeEventListener</span> (<span class="arg">eventType</span>:
+<span class="argt">string</span>, <span class="arg">handler</span>:
+<span class="argt">varies</span>[, <span class="arg">captures</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Removes the event listener.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>eventType</td><td><a href="pc_string.html">string</a></td><td>The registered event type.</td></tr>
+<tr><td>handler</td><td><a href="pc_File.html">File</a><br><a href="pc_Function.html">JavaScript Function</a></td><td>The registered event handler. Can accept: File or JavaScript Function.</td></tr>
+<tr class="lastRow"><td>captures</td><td><a href="pc_Boolean.html">bool</a></td><td>This parameter is obsolete. (Optional) (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Generates a string which, if executed, will return the FootnoteOption.</p>
+
+<p class="spaceBelow"><a name="toSpecifier"></a>string <span class="func">toSpecifier</span> ()<br>
+Retrieves the object specifier.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.footnoteOptions</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Document.html">Document</a>.footnoteOptions</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><a href="pc_Array.html">Array</a> of <b>FootnoteOption</b> <b>FootnoteOption</b>.<a href="pc_FootnoteOption.html#getElements">getElements</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Function</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, function">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Function</h1></td></tr>
+<tr><td>&nbsp;</td><td>Wraps a built-in or JavaScript function.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Function" title="">Function</a>, <a href="#apply" title="Apply a&nbsp;this&nbsp;object and an argument list to a function.">apply</a>, <a href="#call" title="Apply a&nbsp;this&nbsp;object and arguments to a function.">call</a>, <a href="#toSource" title="Creates a string representation of this object that can be fed back to&nbsp;eval()&nbsp;to re-create an object. Works only with JavaScript functions.">toSource</a>, <a href="#toString" title="Returns the function definition as a string.">toString</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="arguments"></a>arguments</td><td><a href="pc_Object.html">Object</a></td>
+<td>r/w</td><td>The function arguments, packed into an array.<br>This property is deprecated; use the arguments property within the function body.</td></tr>
+<tr><td><a name="arity"></a>arity</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The number of formal arguments.<br>This property is deprecated; use the length property instead.</td></tr>
+<tr><td><a name="length"></a>length</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The number of formal arguments.</td></tr>
+<tr class="lastRow"><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The function name.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Function"></a><a href="pc_Function.html">Function</a> <span class="func">Function</span> (<span class="arg">arguments</span>:
+<span class="argt">string</span>, <span class="arg">body</span>:
+<span class="argt">string</span>)
+The Function constructor parses the argument list and creates a Function object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>arguments</td><td><a href="pc_string.html">string</a></td><td>The list of formal arguments, separated by commas.<br>The formal arguments can also be supplied one by one; in this case, the last argument to the Function constructor is considered to be the function body.</td></tr>
+<tr class="lastRow"><td>body</td><td><a href="pc_string.html">string</a></td><td>The body of the function to create.</td></tr>
+</table>
+</p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="apply"></a><span class="rett">any</span>  <span class="func">apply</span> (<span class="arg">thisObj</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">args</span>:
+<a href="pc_Array.html">Array</a>)<br>
+
+						Apply a&nbsp;<i>this</i>&nbsp;object and an argument list to a function.
+					<br>
+
+						This function is different from&nbsp;<i>call()</i>; here, the arguments are suppliedas an Array object.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>thisObj</td><td><a href="pc_Object.html">Object</a></td><td>
+								The object to be used as&nbsp;<i>this</i>.
+							</td></tr>
+<tr class="lastRow"><td>args</td><td><a href="pc_Array.html">Array</a></td><td>An array of arguments.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="call"></a><span class="rett">any</span>  <span class="func">call</span> (<span class="arg">thisObj</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">argument</span>:
+<span class="argt">any</span>)<br>
+
+						Apply a&nbsp;<i>this</i>&nbsp;object and arguments to a function.
+					<br>
+
+						This function is different from&nbsp;<i>apply()</i>; here, the arguments are supplied one by one.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>thisObj</td><td><a href="pc_Object.html">Object</a></td><td>
+								The object to be used as&nbsp;<i>this</i>.
+							</td></tr>
+<tr class="lastRow"><td>argument</td><td>
+						any
+					</td><td>The first agument to the function. Add as many as needed.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+
+						Creates a string representation of this object that can be fed back to&nbsp;<a href="pc_global.html">eval()</a>&nbsp;to re-create an object. Works only with JavaScript functions.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Returns the function definition as a string.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_EventListener.html">EventListener</a>.handler</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Object.html">Object</a>.constructor</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent">void <a href="pc_Array.html#sort">Array.sort</a>
+		(<span class="arg">userFunction</span>:
+<b>Function</b>)
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Button (SUI).html#addEventListener">Button.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Button (SUI).html#removeEventListener">Button.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Checkbox (SUI).html#addEventListener">Checkbox.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Checkbox (SUI).html#removeEventListener">Checkbox.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_DropDownList.html#addEventListener">DropDownList.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_DropDownList.html#removeEventListener">DropDownList.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_EditText.html#addEventListener">EditText.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_EditText.html#removeEventListener">EditText.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_FlashPlayer.html#addEventListener">FlashPlayer.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_FlashPlayer.html#removeEventListener">FlashPlayer.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Group (SUI).html#addEventListener">Group.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Group (SUI).html#removeEventListener">Group.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_IconButton.html#addEventListener">IconButton.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_IconButton.html#removeEventListener">IconButton.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_ListBox (SUI).html#addEventListener">ListBox.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_ListBox (SUI).html#removeEventListener">ListBox.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Object.html#watch">Object.watch</a>
+		(<span class="arg">name</span>:
+<span class="argt">string</span>, <span class="arg">func</span>:
+<b>Function</b>)
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Panel (SUI).html#addEventListener">Panel.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Panel (SUI).html#removeEventListener">Panel.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Progressbar.html#addEventListener">Progressbar.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Progressbar.html#removeEventListener">Progressbar.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_RadioButton (SUI).html#addEventListener">RadioButton.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_RadioButton (SUI).html#removeEventListener">RadioButton.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Scrollbar.html#addEventListener">Scrollbar.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Scrollbar.html#removeEventListener">Scrollbar.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Slider.html#addEventListener">Slider.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Slider.html#removeEventListener">Slider.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_StaticText (SUI).html#addEventListener">StaticText.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_StaticText (SUI).html#removeEventListener">StaticText.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_TreeView.html#addEventListener">TreeView.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_TreeView.html#removeEventListener">TreeView.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Window (SUI).html#addEventListener">Window.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Window (SUI).html#removeEventListener">Window.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<a href="pc_String.html">String</a>, <span class="arg">handler</span>:
+<b>Function</b>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Function</b> <b>Function</b>.<a href="pc_Function.html#Function">Function</a> (<span class="arg">arguments</span>:
+<span class="argt">string</span>, <span class="arg">body</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

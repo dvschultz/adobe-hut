@@ -1,0 +1,245 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: global</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, global">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>global</h1></td></tr>
+<tr><td>&nbsp;</td><td>The global methods and properties for ExtendScript.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#alert" title="Displays an alert box">alert</a>, <a href="#confirm" title="Displays an alert box with Yes and No buttons; returns true for Yes">confirm</a>, <a href="#decodeURI" title="Decodes a string created with&nbsp;encodeURI().">decodeURI</a>, <a href="#decodeURIComponent" title="Decodes a string created with&nbsp;encodeURIComponent().">decodeURIComponent</a>, <a href="#encodeURI" title="Encodes a string after RFC2396.">encodeURI</a>, <a href="#encodeURIComponent" title="Encodes a string after RFC2396.">encodeURIComponent</a>, <a href="#escape" title="Creates a URL-encoded string from aString.">escape</a>, <a href="#eval" title="Evaluates its argument as a JavaScript script, and returns the result of evaluation.">eval</a>, <a href="#isFinite" title="Evaluates an expression and reports whether the result is a finite number.">isFinite</a>, <a href="#isNaN" title="Evaluates an expression and reports whether the result is &#34;Not-a-Number&#34; (NaN).">isNaN</a>, <a href="#isXMLName" title="Returns true if the supplied string is a valid XML name.">isXMLName</a>, <a href="#localize" title="Localizes a ZString-encoded string and merges additional arguments into the string.">localize</a>, <a href="#parseFloat" title="Extracts a floating-point number from a string.">parseFloat</a>, <a href="#parseInt" title="Extracts an integer from a string.">parseInt</a>, <a href="#prompt" title="Displays a dialog allowing the user to enter text">prompt</a>, <a href="#setDefaultXMLNamespace" title="Defines the default XML namespace.">setDefaultXMLNamespace</a>, <a href="#unescape" title="Translates URL-encoded string into a regular string, and returns that string.">unescape</a>, <a href="#uneval" title="Creates a source code representation of the supplied argument, and returns it as a string.">uneval</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="Infinity"></a>Infinity</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The Infinity global property is a predefined variable with the value for infinity. (default: <b>+Infinity</b>)</td></tr>
+<tr><td><a name="NaN"></a>NaN</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The NaN global property is a predefined variable with the value NaN (Not-a-Number), as specified by the IEEE-754 standard. (default: <b>NaN</b>)</td></tr>
+<tr class="lastRow"><td><a name="undefined"></a>undefined</td><td>Undefined</td>
+<td>r/w</td><td>This global property is a predefined variable with the value for an undefined value. (default: <b>undefined</b>)</td></tr>
+</table></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="alert"></a><span class="rett">void</span>  <span class="func">alert</span> (<span class="arg">message</span>:
+<span class="argt">string</span>[, <span class="arg">title</span>:
+<span class="argt">string</span>][, <span class="arg">errorIcon</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Displays an alert box
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>message</td><td><a href="pc_string.html">string</a></td><td>The text to display</td></tr>
+<tr><td>title</td><td><a href="pc_string.html">string</a></td><td>The title of the alert; ignored on the Macintosh (Optional)</td></tr>
+<tr class="lastRow"><td>errorIcon</td><td><a href="pc_Boolean.html">bool</a></td><td>Display an Error icon; ignored on the Macintosh (default: <b>false</b>)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="confirm"></a><a href="pc_Boolean.html">bool</a>  <span class="func">confirm</span> (<span class="arg">message</span>:
+<span class="argt">string</span>[, <span class="arg">noAsDefault</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">title</span>:
+<span class="argt">string</span>])<br>
+Displays an alert box with Yes and No buttons; returns true for Yes
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>message</td><td><a href="pc_string.html">string</a></td><td>The text to display</td></tr>
+<tr><td>noAsDefault</td><td><a href="pc_Boolean.html">bool</a></td><td>Set to true to set the No button as the default button (default: <b>false</b>)</td></tr>
+<tr class="lastRow"><td>title</td><td><a href="pc_string.html">string</a></td><td>The title of the alert; ignored on the Macintosh (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="decodeURI"></a>string <span class="func">decodeURI</span> (<span class="arg">uri</span>:
+<span class="argt">string</span>)<br>
+
+						Decodes a string created with&nbsp;<a href="pc_global.html">encodeURI()</a>.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>uri</td><td><a href="pc_string.html">string</a></td><td>The text to decode.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="decodeURIComponent"></a>string <span class="func">decodeURIComponent</span> (<span class="arg">uri</span>:
+<span class="argt">string</span>)<br>
+
+						Decodes a string created with&nbsp;<a href="pc_global.html">encodeURIComponent()</a>.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>uri</td><td><a href="pc_string.html">string</a></td><td>The text to decode.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="encodeURI"></a>string <span class="func">encodeURI</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Encodes a string after RFC2396.<br>
+
+						Create an UTF-8 ASCII encoded version of this string. The string is converted into UTF-8. Every non-alphanumeric character is encoded as a percent escape
+						character of the form %xx, where xx is the hex value of the character. After the conversion to UTF-8 encoding and escaping, it is guaranteed that the string does not contain characters codes greater than 127. The list of characters not to be encoded is -_.!~*'();/?:@&amp;=+$,#. The method returns false on errors.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>The text to encode.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="encodeURIComponent"></a>string <span class="func">encodeURIComponent</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Encodes a string after RFC2396.<br>
+
+						Create an UTF-8 ASCII encoded version of this string. The string is converted into UTF-8. Every non-alphanumeric character is encoded as a percent escape
+						character of the form %xx, where xx is the hex value of the character. After the conversion to UTF-8 encoding and escaping, it is guaranteed that the string does not contain characters codes greater than 127. The list of characters not to be encoded is -_.!~*'(). The method returns false on errors.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>The text to encode.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="escape"></a>string <span class="func">escape</span> (<span class="arg">aString</span>:
+<span class="argt">string</span>)<br>
+Creates a URL-encoded string from aString.<br>
+In the new string, characters of aString that require URL encoding are replaced with the format %xx, where xx is the hexadecimal value of the character code in the Unicode character set.  This format is used to transmit information appended to a URL during, for example, execution of the GET method.  Use the unescape() global function to translate the string back into its original format. Returns a string which is aString URL-encoded.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>aString</td><td><a href="pc_string.html">string</a></td><td>The string to be encoded.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">escape(aString)</td></tr></table>
+
+<p class="spaceBelow"><a name="eval"></a><span class="rett">any</span>  <span class="func">eval</span> (<span class="arg">stringExpression</span>:
+<span class="argt">string</span>)<br>
+Evaluates its argument as a JavaScript script, and returns the result of evaluation.<br>
+You can pass the result of an object's toSource() method to reconstruct that object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>stringExpression</td><td><a href="pc_string.html">string</a></td><td>The string to evaluate.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">eval(stringExpression)</td></tr></table>
+
+<p class="spaceBelow"><a name="isFinite"></a><a href="pc_Boolean.html">bool</a>  <span class="func">isFinite</span> (<span class="arg">expression</span>:
+<span class="argt">number</span>)<br>
+Evaluates an expression and reports whether the result is a finite number.<br>
+Returns true if the expression is a finite number, false otherwise. False if the value is infinity or negative infinity.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>expression</td><td><a href="pc_number.html">number</a></td><td>Any valid JavaScript expression.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">isFinite(expression)</td></tr></table>
+
+<p class="spaceBelow"><a name="isNaN"></a><a href="pc_Boolean.html">bool</a>  <span class="func">isNaN</span> (<span class="arg">expression</span>:
+<span class="argt">number</span>)<br>
+Evaluates an expression and reports whether the result is "Not-a-Number" (NaN).<br>
+Returns true if the result of evaluation is not a number (NaN), false if the value is a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>expression</td><td><a href="pc_number.html">number</a></td><td>Any valid JavaScript expression.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">isNaN(expression)</td></tr></table>
+
+<p class="spaceBelow"><a name="isXMLName"></a><a href="pc_Boolean.html">bool</a>  <span class="func">isXMLName</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Returns true if the supplied string is a valid XML name.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The XML name to test.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="localize"></a>string <span class="func">localize</span> (<span class="arg">what</span>:
+<span class="argt">string</span>[, <span class="arg">argument</span>:
+<span class="argt">any</span>])<br>
+Localizes a ZString-encoded string and merges additional arguments into the string.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>what</td><td><a href="pc_string.html">string</a></td><td>The string to localize. A ZString-encoded string that can contain placeholder for additional arguments in the form %1 to %n.</td></tr>
+<tr class="lastRow"><td>argument</td><td>
+						any
+					</td><td>Optional argument(s) to be merged into the string. There may be more than one argument. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="parseFloat"></a>number <span class="func">parseFloat</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Extracts a floating-point number from a string.<br>
+Parses a string to find the first set of characters that can be converted to a floating point number, and returns that number, or NaN if it does not encounter characters that it can converted to a number.  The function supports exponential notation.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>The string from which to extract a floating point number.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">parseFloat(aString)</td></tr></table>
+
+<p class="spaceBelow"><a name="parseInt"></a>number <span class="func">parseInt</span> (<span class="arg">text</span>:
+<span class="argt">string</span>[, <span class="arg">base</span>:
+<span class="argt">number</span>])<br>
+Extracts an integer from a string.<br>
+Parses a string to find the first set of characters, in a specified base, that can be converted to an integer, and returns that integer, or NaN if it does not encounter characters that it can convert to a number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>text</td><td><a href="pc_string.html">string</a></td><td>The string from which to extract an integer.<br></td></tr>
+<tr class="lastRow"><td>base</td><td><a href="pc_number.html">number</a> (range: 2 - 36)</td><td>The base of the string to parse (from base 2 to base 36).<br>If not supplied, base is determined by the format of string. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">parseInt(aString, base)</td></tr></table>
+
+<p class="spaceBelow"><a name="prompt"></a>string <span class="func">prompt</span> (<span class="arg">prompt</span>:
+<span class="argt">string</span>[, <span class="arg">default</span>:
+<span class="argt">string</span>][, <span class="arg">title</span>:
+<span class="argt">string</span>])<br>
+Displays a dialog allowing the user to enter text<br>
+Returns null if the user cancelled the dialog, the text otherwise
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>prompt</td><td><a href="pc_string.html">string</a></td><td>The text to display</td></tr>
+<tr><td>default</td><td><a href="pc_string.html">string</a></td><td>The default text to preset the edit field with (Optional)</td></tr>
+<tr class="lastRow"><td>title</td><td><a href="pc_string.html">string</a></td><td>The title of the dialog; (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setDefaultXMLNamespace"></a><span class="rett">void</span>  <span class="func">setDefaultXMLNamespace</span> (<span class="arg">namespace</span>:
+<a href="pc_Namespace.html">Namespace</a>)<br>
+Defines the default XML namespace.<br>
+
+						This is a replacement function for the standard JavaScript statement&nbsp;set default xml namespace.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>namespace</td><td><a href="pc_Namespace.html">Namespace</a></td><td>The namespace to use.<br>
+								Omit this parameter to return to the empty namespace. This is either a&nbsp;Namespace&nbsp;object or a string.
+							</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="unescape"></a>string <span class="func">unescape</span> (<span class="arg">stringExpression</span>:
+<span class="argt">string</span>)<br>
+Translates URL-encoded string into a regular string, and returns that string.<br>
+Use the escape() global function to URL-encode strings.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>stringExpression</td><td><a href="pc_string.html">string</a></td><td>The URL-encoded string to convert.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">unescape(stringExpression)</td></tr></table>
+
+<p class="spaceBelow"><a name="uneval"></a>string <span class="func">uneval</span> (<span class="arg">what</span>:
+<span class="argt">any</span>)<br>
+Creates a source code representation of the supplied argument, and returns it as a string.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>what</td><td>
+						any
+					</td><td>The object to uneval.</td></tr>
+</table>
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

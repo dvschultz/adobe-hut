@@ -1,0 +1,318 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe InDesign CS6 (8.0) Object Model JS: Folder</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="indesign, cs6, javascript, folder">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Folder</h1></td></tr>
+<tr><td>&nbsp;</td><td>Represents a file-system folder or directory in a platform-independent manner.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Folder" title="Creates and returns a new Folder object referring to a given file-system location.">Folder</a>, <a href="#changePath" title="Changes the path specification of the referenced folder.">changePath</a>, <a href="#create" title="Creates a folder at the location given by this object's&nbsp;path&nbsp;property.">create</a>, <a href="#decode" title="Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.">decode</a>, <a href="#encode" title="Encodes a string as required by RFC 2396, and returns the encoded string.">encode</a>, <a href="#execute" title="Opens this folder in the platform-specific file browser (as if it had been double-clicked in the file browser).">execute</a>, <a href="#getFiles" title="Retrieves the contents of this folder, filtered by the supplied mask.">getFiles</a>, <a href="#getRelativeURI" title="Retrieves and returns the path for this file, relative to the specified base path, in URI notation.">getRelativeURI</a>, <a href="#isEncodingAvailable" title="Reports whether a given encoding is available.">isEncodingAvailable</a>, <a href="#remove" title="Deletes the folder associated with this object from disk immediately, without moving it to the system trash.">remove</a>, <a href="#rename" title="Renames the associated folder.">rename</a>, <a href="#resolve" title="Attempts to resolve the file-system alias or shortcut that this object refers to.">resolve</a>, <a href="#selectDialog" title="Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.">selectDialog</a>, <a href="#selectDlg" title="Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.">selectDlg</a>, <a href="#toSource" title="Creates and returns a serialized string representation of this object.">toSource</a>, <a href="#toString" title="Converts this object to a string.">toString</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><b>Folder</b></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Folder</center></td></tr></table>
+<table class="framed" align="center"><tr><td class="framed"><center><a href="pc_File.html">File</a> | <b>Folder</b></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="absoluteURI"></a>absoluteURI</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The full path name for the referenced folder in URI notation.</td></tr>
+<tr><td><a name="alias"></a>alias</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>When true, the object refers to a file system alias or shortcut.</td></tr>
+<tr><td><a name="created"></a>created</td><td><a href="pc_Date.html">Date</a></td>
+<td>readonly</td><td>The creation date of the referenced folder, or null if the object does not refer to a folder on disk.</td></tr>
+<tr><td><a name="displayName"></a>displayName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The localized name portion of the absolute URI for the referenced folder, without the path specification.</td></tr>
+<tr><td><a name="error"></a>error</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A message describing the most recent file system error.<br>Typically set by the file system, but a script can set it. Setting this value clears any error message and resets the error bit for opened files. Contains the empty string if there is no error.</td></tr>
+<tr><td><a name="exists"></a>exists</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>When true, this object refers to a folder that currently exists in the file system.</td></tr>
+<tr><td><a name="fsName"></a>fsName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The platform-specific name of the referenced folder as a full path name.</td></tr>
+<tr><td><a name="fullName"></a>fullName</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The full path name for the referenced folder in URI notation. .</td></tr>
+<tr><td><a name="modified"></a>modified</td><td><a href="pc_Date.html">Date</a></td>
+<td>readonly</td><td>The date of the referenced folder's last modification, or null if the object does not refer to a folder on disk.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The folder name portion of the absolute URI for the referenced file, without the path specification.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><b>Folder</b></td>
+<td>readonly</td><td>TThe Folder object for the folder that contains this folder, or null if this object refers to the root folder of a volume.</td></tr>
+<tr><td><a name="path"></a>path</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The path portion of the object absolute URI for the referenced file, without the folder name.</td></tr>
+<tr class="lastRow"><td><a name="relativeURI"></a>relativeURI</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The path name for the referenced folder in URI notation, relative to the current folder.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="appData"></a>appData</td><td><b>Folder</b></td>
+<td>readonly</td><td>The folder containing the application data for all users.<br>
+						<br>&bull;&nbsp;In Windows, the value of %APPDATA% (by default, C:\\Documents and Settings\\All Users\\Application Data)
+						<br>&bull;&nbsp;In Mac OS, /Library/Application Support
+					</td></tr>
+<tr><td><a name="appPackage"></a>appPackage</td><td><b>Folder</b></td>
+<td>readonly</td><td>In Mac OS, a Folder object for the folder containing the bundle of the running application.</td></tr>
+<tr><td><a name="commonFiles"></a>commonFiles</td><td><b>Folder</b></td>
+<td>readonly</td><td>A Folder object for the folder containing common files for all programs installed by the user.<br>
+						<br>&bull;&nbsp;In Windows, the value of %CommonProgramFiles% (by default, C:\\Program Files\\Common Files)
+						<br>&bull;&nbsp;In Mac OS, /Library/Application Support
+					</td></tr>
+<tr><td><a name="current"></a>current</td><td><b>Folder</b></td>
+<td>r/w</td><td>A Folder object for the current folder.<br>Assign a Folder object or a string containing the new path name to set the current folder. This is a class property accessed through the Folder constructor.</td></tr>
+<tr><td><a name="desktop"></a>desktop</td><td><b>Folder</b></td>
+<td>readonly</td><td>A Folder object for the folder that contains the user‚Äôs desktop.<br>
+						<br>&bull;&nbsp;In Windows, C:\\Documents and Settings\\username\\Desktop
+						<br>&bull;&nbsp;In Mac OS, ~/Desktop
+					</td></tr>
+<tr><td><a name="fs"></a>fs</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The name of the current file system.<br>One of "Windows", "Macintosh", or "Unix".</td></tr>
+<tr><td><a name="myDocuments"></a>myDocuments</td><td><b>Folder</b></td>
+<td>readonly</td><td>A folder pointing to the user's My Documents folder.<br>
+						<br>&bull;&nbsp;In Windows, C:\\Documents and Settings\\username\\My Documents
+						<br>&bull;&nbsp;In Mac OS,  ~/Documents
+					</td></tr>
+<tr><td><a name="startup"></a>startup</td><td><b>Folder</b></td>
+<td>readonly</td><td>A Folder object for the folder containing the executable image of the running application.</td></tr>
+<tr><td><a name="system"></a>system</td><td><b>Folder</b></td>
+<td>readonly</td><td>A Folder object for the folder containing the operating system files.<br>
+						<br>&bull;&nbsp;In Windows, the value of %windir% (by default, C:\\Windows)
+						<br>&bull;&nbsp;In Mac OS, /System
+					</td></tr>
+<tr><td><a name="temp"></a>temp</td><td><b>Folder</b></td>
+<td>readonly</td><td>A Folder object for the default folder for temporary files.</td></tr>
+<tr><td><a name="trash"></a>trash</td><td><b>Folder</b></td>
+<td>readonly</td><td>A Folder object for the folder containing deleted items. On Windows, the trash folder is a virtual
+								   folder containing a database; therefore, the property value is null on Windows.</td></tr>
+<tr class="lastRow"><td><a name="userData"></a>userData</td><td><b>Folder</b></td>
+<td>readonly</td><td>A Folder object for the folder containing the user's application data.<br>
+						<br>&bull;&nbsp;
+							In Windows, the value of %USERDATA% (by default, C:\\Documents and Settings\\<i>username</i>\\Application Data)
+						
+						<br>&bull;&nbsp;In Mac OS,  ~/Library/Application Support.
+					</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Folder"></a><a href="pc_Folder.html">Folder</a> <span class="func">Folder</span> ([<span class="arg">path</span>:
+<span class="argt">string</span>])<br>
+Creates and returns a new Folder object referring to a given file-system location.<br>
+If the path name refers to an already existing disk file, a File object is returned instead.  Returns the new Folder object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>path</td><td><a href="pc_string.html">string</a></td><td>The absolute or relative path to the folder associated with this object, specified in URI format.<br>
+								The value stored in the object is the absolute path.The path need not refer to an existing folder. If the path refers to an existing file, rather than a folder:
+								<br>&bull;&nbsp;
+									The&nbsp;<i>Folder()</i>&nbsp;function returns a File object instead of a Folder object.
+								
+								<br>&bull;&nbsp;
+									The&nbsp;<i>new</i>&nbsp;operator returns a Folder object for a nonexisting folder with the same name.
+								
+							 (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">new Folder(path)</td></tr></table>
+
+<h4>Class</h4><p class="spaceBelow"><a name="decode"></a>string <span class="func">decode</span> (<span class="arg">uri</span>:
+<span class="argt">string</span>)<br>
+Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.<br>
+
+						See also&nbsp;<a href="pc_String.html">String.decodeURI()</a>.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>uri</td><td><a href="pc_string.html">string</a></td><td>The UTF-8 string to decode.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="encode"></a>string <span class="func">encode</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Encodes a string as required by RFC 2396, and returns the encoded string.<br>
+
+						All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".<br>
+						Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )<br>
+						See also&nbsp;<a href="pc_global.html">encodeURI()</a>.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The string to encode.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="isEncodingAvailable"></a><a href="pc_Boolean.html">bool</a>  <span class="func">isEncodingAvailable</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Reports whether a given encoding is available.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The encoding name.<br>
+								Typical values are "ASCII", "binary", or "UTF-8".  For a complete list of supported encodings, see the&nbsp;<i>JavaScript Tools Guide</i>.
+							</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="selectDialog"></a><a href="pc_Folder.html">Folder</a> <span class="func">selectDialog</span> (<span class="arg">prompt</span>:
+<span class="argt">string</span>)<br>
+Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.<br>
+
+						Differs from the object method selectDlg() in that it does not preselect a folder.
+						<br>&bull;&nbsp;If the user clicks OK, returns a File or Folder object for the selected file or folder.
+						<br>&bull;&nbsp;If the user cancels, returns null.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>prompt</td><td><a href="pc_string.html">string</a></td><td>The prompt text, if the dialog allows a prompt.</td></tr>
+</table>
+</p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="changePath"></a><a href="pc_Boolean.html">bool</a>  <span class="func">changePath</span> (<span class="arg">path</span>:
+<span class="argt">string</span>)<br>
+Changes the path specification of the referenced folder.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>path</td><td><a href="pc_string.html">string</a></td><td>A string containing the new path, absolute or relative to the current folder.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">folder.changePath ("..");</td></tr></table>
+
+<p class="spaceBelow"><a name="create"></a><a href="pc_Boolean.html">bool</a>  <span class="func">create</span> ()<br>
+
+						Creates a folder at the location given by this object's&nbsp;<i>path</i>&nbsp;property.
+					<br>
+Returns true if the folder was created.</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFolder.create()</td></tr></table>
+
+<p class="spaceBelow"><a name="execute"></a><a href="pc_Boolean.html">bool</a>  <span class="func">execute</span> ()<br>
+Opens this folder in the platform-specific file browser (as if it had been double-clicked in the file browser).<br>
+Returns true immediately if the folder was opened successfully.</p>
+
+<p class="spaceBelow"><a name="getFiles"></a><a href="pc_Array.html">Array</a> <span class="func">getFiles</span> (<span class="arg">mask</span>:
+<span class="argt">any</span>)<br>
+Retrieves the contents of this folder, filtered by the supplied mask.<br>
+Returns an array of File and Folder objects, or null if this object's referenced folder does not exist.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>mask</td><td>
+						any
+					</td><td>A search mask for file names, specified as a string or a function.<br>
+								A mask string can contain question mark (?) and asterisk (*) wild cards. Default is "*", which matches all file names.
+								<br>Can also be the name of a function that takes a File or Folder object as its argument. It is called for each file or folder found in the search; if it returns true, the object is added to the return array.
+								<br>&bull;&nbsp;NOTE: In Windows, all aliases end with the extension .lnk. ExtendScript strips this from the file name when found, in order to preserve compatibility with other operating systems. You can search for all aliases by supplying the search mask "*.lnk", but note that such code is not portable.
+							</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getRelativeURI"></a>string <span class="func">getRelativeURI</span> ([<span class="arg">basePath</span>:
+<span class="argt">string</span>=<span class="defv">.</span>])<br>
+Retrieves and returns the path for this file, relative to the specified base path, in URI notation.<br>
+If no base path is supplied, the URI is relative to the path of the current folder.  Returns a string containing the relative URI.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>basePath</td><td><a href="pc_string.html">string</a></td><td>A base path in URI notation. (default: <b>.</b>) (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFile.getRelativeURI(basePath)</td></tr></table>
+
+<p class="spaceBelow"><a name="remove"></a><a href="pc_Boolean.html">bool</a>  <span class="func">remove</span> ()<br>
+Deletes the folder associated with this object from disk immediately, without moving it to the system trash.<br>
+
+						Folders must be empty before they can be deleted. Does not resolve aliases; instead, deletes the referenced alias or shortcut file itself. Returns true if the file was successfully removed.
+						<br>&bull;&nbsp;IMPORTANT: Cannot be undone. It is recommended that you prompt the user for permission before deleting.
+					</p>
+
+<p class="spaceBelow"><a name="rename"></a><a href="pc_Boolean.html">bool</a>  <span class="func">rename</span> (<span class="arg">newName</span>:
+<span class="argt">string</span>)<br>
+Renames the associated folder.<br>
+Does not resolve aliases, but renames the referenced alias or shortcut file itself. Returns true if the folder was successfully renamed.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>newName</td><td><a href="pc_string.html">string</a></td><td>The new folder name, with no path information.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFolder.rename(newName)</td></tr></table>
+
+<p class="spaceBelow"><a name="resolve"></a><a href="pc_Folder.html">Folder</a> <span class="func">resolve</span> ()<br>
+Attempts to resolve the file-system alias or shortcut that this object refers to.<br>
+If successful, creates and returns a new Folder object that points to the resolved file system element. Returns null if this object does not refer to an alias, or if the alias could not be resolved.</p><table class="example"><tr><td><b>Example</b></td><td class="example">aFolder.resolve()</td></tr></table>
+
+<p class="spaceBelow"><a name="selectDlg"></a><a href="pc_Folder.html">Folder</a> <span class="func">selectDlg</span> (<span class="arg">prompt</span>:
+<span class="argt">string</span>)<br>
+Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.<br>
+
+						Differs from the class method selectDialog() in that it preselects this folder.
+						<br>&bull;&nbsp;If the user clicks OK, returns a File or Folder object for the selected file or folder.
+						<br>&bull;&nbsp;If the user cancels, returns null.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>prompt</td><td><a href="pc_string.html">string</a></td><td>The prompt text, if the dialog allows a prompt.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Creates and returns a serialized string representation of this object.<br>
+
+						Pass the resulting string to&nbsp;<a href="pc_global.html">eval()</a>&nbsp;to recreate the object.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Converts this object to a string.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_File.html">File</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.appData</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.appPackage</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.commonFiles</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.current</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.desktop</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.myDocuments</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.startup</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.system</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.temp</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.trash</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Folder.html">Folder</a>.userData</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Folder</b> <b>Folder</b>.<a href="pc_Folder.html#Folder">Folder</a> ([<span class="arg">path</span>:
+<span class="argt">string</span>])
+</p>
+<p class="hangIndent"><b>Folder</b> <b>Folder</b>.<a href="pc_Folder.html#resolve">resolve</a> ()
+</p>
+<p class="hangIndent"><b>Folder</b> <b>Folder</b>.<a href="pc_Folder.html#selectDialog">selectDialog</a> (<span class="arg">prompt</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><b>Folder</b> <b>Folder</b>.<a href="pc_Folder.html#selectDlg">selectDlg</a> (<span class="arg">prompt</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 28-Apr-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>
