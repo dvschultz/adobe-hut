@@ -1,0 +1,286 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: PageItem</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, pageitem">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>PageItem</h1></td></tr>
+<tr><td>&nbsp;</td><td><p class="spaceBelow">A page item object.</p><p>Superclass of <a href="pc_CompoundPathItem.html">CompoundPathItem</a>, <a href="pc_GraphItem.html">GraphItem</a>, <a href="pc_GroupItem.html">GroupItem</a>, <a href="pc_LegacyTextItem.html">LegacyTextItem</a>, <a href="pc_MeshItem.html">MeshItem</a>, <a href="pc_NonNativeItem.html">NonNativeItem</a>, <a href="pc_PathItem.html">PathItem</a>, <a href="pc_PlacedItem.html">PlacedItem</a>, <a href="pc_PluginItem.html">PluginItem</a>, <a href="pc_RasterItem.html">RasterItem</a>, <a href="pc_SymbolItem.html">SymbolItem</a>,  and <a href="pc_TextFrameItem.html">TextFrameItem</a></p></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#applyEffect" title="Apply effect to selected artItem.">applyEffect</a>, <a href="#bringInPerspective" title="Place art object(s)in perspective grid at spedified perspective plane and coordinate.">bringInPerspective</a>, <a href="#duplicate" title="Duplicate this object.">duplicate</a>, <a href="#move" title="Move the object.">move</a>, <a href="#remove" title="Deletes this object.">remove</a>, <a href="#removeAll" title="Deletes all elements.">removeAll</a>, <a href="#resize" title="Scale art object(s)">resize</a>, <a href="#rotate" title="Rotate art object(s)">rotate</a>, <a href="#sendScriptMessage" title="Sends the script message to the required plugin.">sendScriptMessage</a>, <a href="#transform" title="Transform art object(s) using a transformation matrix.">transform</a>, <a href="#translate" title="Reposition art object(s)">translate</a>, <a href="#zOrder" title="Arranges the art relative to other art in the group or layer.">zOrder</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>PageItem</center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_CompoundPathItem.html">CompoundPathItem</a> | <a href="pc_GraphItem.html">GraphItem</a> | <a href="pc_GroupItem.html">GroupItem</a> | <a href="pc_LegacyTextItem.html">LegacyTextItem</a> | <a href="pc_MeshItem.html">MeshItem</a> | <a href="pc_NonNativeItem.html">NonNativeItem</a> | <a href="pc_PathItem.html">PathItem</a> | <a href="pc_PlacedItem.html">PlacedItem</a> | <a href="pc_PluginItem.html">PluginItem</a> | <a href="pc_RasterItem.html">RasterItem</a> | <a href="pc_SymbolItem.html">SymbolItem</a> | <a href="pc_TextFrameItem.html">TextFrameItem</a></center></td></tr></table>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="URL"></a>URL</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The value of the Adobe URL tag assigned to this artwork item.</td></tr>
+<tr><td><a name="artworkKnockout"></a>artworkKnockout</td><td><a href="pe_KnockoutState.html">KnockoutState</a>:<br>KnockoutState.Unknown<br>KnockoutState.DISABLED<br>KnockoutState.ENABLED<br>KnockoutState.INHERITED</td>
+<td>r/w</td><td>Is the artwork used to create a knockout.</td></tr>
+<tr><td><a name="blendingMode"></a>blendingMode</td><td><a href="pe_BlendModes.html">BlendModes</a>:<br>BlendModes.NORMAL<br>BlendModes.MULTIPLY<br>BlendModes.SCREEN<br>BlendModes.OVERLAY<br>BlendModes.SOFTLIGHT<br>BlendModes.HARDLIGHT<br>BlendModes.COLORDODGE<br>BlendModes.COLORBURN<br>BlendModes.DARKEN<br>BlendModes.LIGHTEN<br>BlendModes.DIFFERENCE<br>BlendModes.EXCLUSION<br>BlendModes.HUE<br>BlendModes.SATURATIONBLEND<br>BlendModes.COLORBLEND<br>BlendModes.LUMINOSITY</td>
+<td>r/w</td><td>The mode used when compositing an object.</td></tr>
+<tr><td><a name="controlBounds"></a>controlBounds</td><td><a href="pc_Rectangle.html">Rectangle</a></td>
+<td>readonly</td><td>The bounds of the artwork including stroke width and controls.</td></tr>
+<tr><td><a name="editable"></a>editable</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Can the art item be modified.</td></tr>
+<tr><td><a name="geometricBounds"></a>geometricBounds</td><td><a href="pc_Rectangle.html">Rectangle</a></td>
+<td>readonly</td><td>The bounds of the artwork excluding stroke width.</td></tr>
+<tr><td><a name="height"></a>height</td><td><a href="pc_number.html">number</a> (range: 0.0 - 16348.0)</td>
+<td>r/w</td><td>The height of the art item.</td></tr>
+<tr><td><a name="hidden"></a>hidden</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is this artwork item hidden?</td></tr>
+<tr><td><a name="isIsolated"></a>isIsolated</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the artwork isolated.</td></tr>
+<tr><td><a name="layer"></a>layer</td><td><a href="pc_Layer.html">Layer</a></td>
+<td>readonly</td><td>The layer to which this artwork belongs.</td></tr>
+<tr><td><a name="left"></a>left</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The left position of the art item.</td></tr>
+<tr><td><a name="locked"></a>locked</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is this artwork item locked?</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The item's name.</td></tr>
+<tr><td><a name="note"></a>note</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The note assigned to this artwork item.</td></tr>
+<tr><td><a name="opacity"></a>opacity</td><td><a href="pc_number.html">number</a> (range: 0.0 - 100.0)</td>
+<td>r/w</td><td>The object's opacity (between 0.0 and 100.0)</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="pixelAligned"></a>pixelAligned</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is this artwork item aligned to Pixel Grid?</td></tr>
+<tr><td><a name="position"></a>position</td><td><a href="pc_Point.html">Point</a></td>
+<td>r/w</td><td>The position of the top left corner of the art item.</td></tr>
+<tr><td><a name="selected"></a>selected</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is this artwork item selected?</td></tr>
+<tr><td><a name="sliced"></a>sliced</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the art item sliced (default: false)</td></tr>
+<tr><td><a name="tags"></a>tags</td><td><a href="pc_Tags.html">Tags</a> <a class="sing" href="pc_Tag.html" title="A tag associated with a piece of artwork.">Tag</a></td>
+<td>readonly</td><td>The collection of tags associated with this page item.</td></tr>
+<tr><td><a name="top"></a>top</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The top position of the art item.</td></tr>
+<tr><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+<tr><td><a name="visibilityVariable"></a>visibilityVariable</td><td>any</td>
+<td>r/w</td><td>The visibility variable bound to this page item.</td></tr>
+<tr><td><a name="visibleBounds"></a>visibleBounds</td><td><a href="pc_Rectangle.html">Rectangle</a></td>
+<td>readonly</td><td>The visible bounds of the artwork including stroke width.</td></tr>
+<tr><td><a name="width"></a>width</td><td><a href="pc_number.html">number</a> (range: 0.0 - 16348.0)</td>
+<td>r/w</td><td>The width of the art item.</td></tr>
+<tr><td><a name="wrapInside"></a>wrapInside</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the text frame object be wrapped inside this object?</td></tr>
+<tr><td><a name="wrapOffset"></a>wrapOffset</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Use this offset when wrapping text around this object.</td></tr>
+<tr><td><a name="wrapped"></a>wrapped</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Wrap text frame objects around this object (text frame must be above the object)</td></tr>
+<tr class="lastRow"><td><a name="zOrderPosition"></a>zOrderPosition</td><td>Int32</td>
+<td>readonly</td><td>The drawing order of the art within it's group or layer.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="applyEffect"></a><span class="rett">void</span>  <span class="func">applyEffect</span> (<span class="arg">liveEffectXML</span>:
+<span class="argt">string</span>)<br>
+Apply effect to selected artItem.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>liveEffectXML</td><td><a href="pc_string.html">string</a></td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="bringInPerspective"></a><span class="rett">void</span>  <span class="func">bringInPerspective</span> (<span class="arg">positionX</span>:
+<span class="argt">number</span>, <span class="arg">positionY</span>:
+<span class="argt">number</span>, <span class="arg">perspectiveGridPlane</span>:
+<a href="pe_PerspectiveGridPlaneType.html">PerspectiveGridPlaneType</a>)<br>
+Place art object(s)in perspective grid at spedified perspective plane and coordinate.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>positionX</td><td><a href="pc_number.html">number</a></td><td>Position towards X direction of specified or active perspective grid plane.</td></tr>
+<tr><td>positionY</td><td><a href="pc_number.html">number</a></td><td>Position towards Y direction of specified or active perspective grid plane.</td></tr>
+<tr class="lastRow"><td>perspectiveGridPlane</td><td><a href="pe_PerspectiveGridPlaneType.html">PerspectiveGridPlaneType</a>:<br>PerspectiveGridPlaneType.NOPLANE<br>PerspectiveGridPlaneType.LEFTPLANE<br>PerspectiveGridPlaneType.RIGHTPLANE<br>PerspectiveGridPlaneType.FLOORPLANE</td><td>Type of perspective grid plane.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="duplicate"></a><a href="pc_PageItem.html">PageItem</a> <span class="func">duplicate</span> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)<br>
+Duplicate this object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>relativeObject</td><td><a href="pc_Object.html">Object</a></td><td></td></tr>
+<tr class="lastRow"><td>insertionLocation</td><td>ElementPlacement</td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="move"></a><a href="pc_PageItem.html">PageItem</a> <span class="func">move</span> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)<br>
+Move the object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>relativeObject</td><td><a href="pc_Object.html">Object</a></td><td></td></tr>
+<tr class="lastRow"><td>insertionLocation</td><td>ElementPlacement</td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes this object.</p>
+
+<p class="spaceBelow"><a name="removeAll"></a><span class="rett">void</span>  <span class="func">removeAll</span> ()<br>
+Deletes all elements.</p>
+
+<p class="spaceBelow"><a name="resize"></a><span class="rett">void</span>  <span class="func">resize</span> (<span class="arg">scaleX</span>:
+<span class="argt">number</span>, <span class="arg">scaleY</span>:
+<span class="argt">number</span>[, <span class="arg">changePositions</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillPatterns</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillGradients</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeStrokePattern</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeLineWidths</span>:
+<span class="argt">number</span>=<span class="defv">100.0</span>][, <span class="arg">scaleAbout</span>:
+<a href="pe_Transformation.html">Transformation</a>=<span class="defv">Transformation.CENTER</span>])<br>
+Scale art object(s)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>scaleX</td><td><a href="pc_number.html">number</a></td><td>Horizontal scaling factor expressed as a percentage (100 = 100%)</td></tr>
+<tr><td>scaleY</td><td><a href="pc_number.html">number</a></td><td>Vertical scaling factor expressed as a percentage (100 = 100%)</td></tr>
+<tr><td>changePositions</td><td><a href="pc_Boolean.html">bool</a></td><td>Are art object positions and orientations effected? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeFillPatterns</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the fill patterns assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeFillGradients</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the fill gradients assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeStrokePattern</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the stroke patterns assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeLineWidths</td><td><a href="pc_number.html">number</a></td><td>The amount line widths are to be scaled (expressed as a percentage) (default: <b>100.0</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>scaleAbout</td><td><a href="pe_Transformation.html">Transformation</a>:<br>Transformation.DOCUMENTORIGIN<br>Transformation.TOPLEFT<br>Transformation.LEFT<br>Transformation.BOTTOMLEFT<br>Transformation.TOP<br>Transformation.CENTER<br>Transformation.BOTTOM<br>Transformation.TOPRIGHT<br>Transformation.RIGHT<br>Transformation.BOTTOMRIGHT</td><td>The point on the art item's bounding box to which the scale is applied. (default: <b>Transformation.CENTER</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="rotate"></a><span class="rett">void</span>  <span class="func">rotate</span> (<span class="arg">angle</span>:
+<span class="argt">number</span>[, <span class="arg">changePositions</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillPatterns</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillGradients</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeStrokePattern</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">rotateAbout</span>:
+<a href="pe_Transformation.html">Transformation</a>=<span class="defv">Transformation.CENTER</span>])<br>
+Rotate art object(s)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>angle</td><td><a href="pc_number.html">number</a></td><td>Angle of rotation (in degrees). Rotation is performed counter-clock wise.</td></tr>
+<tr><td>changePositions</td><td><a href="pc_Boolean.html">bool</a></td><td>Are art object positions and orientations effected? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeFillPatterns</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the fill patterns assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeFillGradients</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the fill gradients assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeStrokePattern</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the stroke patterns assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>rotateAbout</td><td><a href="pe_Transformation.html">Transformation</a>:<br>Transformation.DOCUMENTORIGIN<br>Transformation.TOPLEFT<br>Transformation.LEFT<br>Transformation.BOTTOMLEFT<br>Transformation.TOP<br>Transformation.CENTER<br>Transformation.BOTTOM<br>Transformation.TOPRIGHT<br>Transformation.RIGHT<br>Transformation.BOTTOMRIGHT</td><td>The point on the art item's bounding box to which the rotation is applied. (default: <b>Transformation.CENTER</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="sendScriptMessage"></a>string <span class="func">sendScriptMessage</span> (<span class="arg">pluginName</span>:
+<span class="argt">string</span>, <span class="arg">messageSelector</span>:
+<span class="argt">string</span>, <span class="arg">inputString</span>:
+<span class="argt">string</span>)<br>
+Sends the script message to the required plugin.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>pluginName</td><td><a href="pc_string.html">string</a></td><td>Plugin to which message needs to be sent.</td></tr>
+<tr><td>messageSelector</td><td><a href="pc_string.html">string</a></td><td>Functionality that is to be executed.</td></tr>
+<tr class="lastRow"><td>inputString</td><td><a href="pc_string.html">string</a></td><td>Pass any data encoded in a string.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="transform"></a><span class="rett">void</span>  <span class="func">transform</span> (<span class="arg">transformationMatrix</span>:
+<a href="pc_Matrix.html">Matrix</a>[, <span class="arg">changePositions</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillPatterns</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillGradients</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeStrokePattern</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeLineWidths</span>:
+<span class="argt">number</span>=<span class="defv">100.0</span>][, <span class="arg">transformAbout</span>:
+<a href="pe_Transformation.html">Transformation</a>=<span class="defv">Transformation.CENTER</span>])<br>
+Transform art object(s) using a transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>transformationMatrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>The transformation matrix to be applied to the objects.</td></tr>
+<tr><td>changePositions</td><td><a href="pc_Boolean.html">bool</a></td><td>Are art object positions and orientations effected? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeFillPatterns</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the fill patterns assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeFillGradients</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the fill gradients assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeStrokePattern</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the stroke patterns assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>changeLineWidths</td><td><a href="pc_number.html">number</a></td><td>The amount line widths are to be scaled (expressed as a percentage) (default: <b>100.0</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>transformAbout</td><td><a href="pe_Transformation.html">Transformation</a>:<br>Transformation.DOCUMENTORIGIN<br>Transformation.TOPLEFT<br>Transformation.LEFT<br>Transformation.BOTTOMLEFT<br>Transformation.TOP<br>Transformation.CENTER<br>Transformation.BOTTOM<br>Transformation.TOPRIGHT<br>Transformation.RIGHT<br>Transformation.BOTTOMRIGHT</td><td>The point on the art item's bounding box to which scale and rotation operations apply. (default: <b>Transformation.CENTER</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="translate"></a><span class="rett">void</span>  <span class="func">translate</span> ([<span class="arg">deltaX</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>][, <span class="arg">deltaY</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>][, <span class="arg">transformObjects</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">transformFillPatterns</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">transformFillGradients</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">transformStrokePattern</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])<br>
+Reposition art object(s)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>deltaX</td><td><a href="pc_number.html">number</a></td><td>Horizontal transformation. (default: <b>0.0</b>) (Optional)</td></tr>
+<tr><td>deltaY</td><td><a href="pc_number.html">number</a></td><td>Vertical transformation. (default: <b>0.0</b>) (Optional)</td></tr>
+<tr><td>transformObjects</td><td><a href="pc_Boolean.html">bool</a></td><td>Are art object positions and orientations affected? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>transformFillPatterns</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the fill patterns assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr><td>transformFillGradients</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the fill gradients assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>transformStrokePattern</td><td><a href="pc_Boolean.html">bool</a></td><td>Are the stroke patterns assigned to paths to be transformed? (default: <b>true</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="zOrder"></a><span class="rett">void</span>  <span class="func">zOrder</span> (<span class="arg">zOrderCmd</span>:
+<a href="pe_ZOrderMethod.html">ZOrderMethod</a>)<br>
+Arranges the art relative to other art in the group or layer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>zOrderCmd</td><td><a href="pe_ZOrderMethod.html">ZOrderMethod</a>:<br>ZOrderMethod.BRINGTOFRONT<br>ZOrderMethod.BRINGFORWARD<br>ZOrderMethod.SENDBACKWARD<br>ZOrderMethod.SENDTOBACK</td><td>How to arrange the art.</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_TracingObject.html">TracingObject</a>.sourceArt</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><a href="pc_Symbol.html">Symbol</a> <a href="pc_Symbols.html#add">Symbols.add</a>
+		(<span class="arg">sourceArt</span>:
+<b>PageItem</b>[, <span class="arg">registrationPoint</span>:
+<a href="pe_SymbolRegistrationPoint.html">SymbolRegistrationPoint</a>=<span class="defv">SymbolRegistrationPoint.SYMBOLCENTERPOINT</span>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>PageItem</b> <a href="pc_Document.html#rasterize">Document.rasterize</a> (<span class="arg">sourceArt</span>:
+<span class="argt">any</span>[, <span class="arg">clipBounds</span>:
+<a href="pc_Rectangle.html">Rectangle</a>][, <span class="arg">options</span>:
+<a href="pc_RasterizeOptions.html">RasterizeOptions</a>])
+</p>
+<p class="hangIndent"><b>PageItem</b> <b>PageItem</b>.<a href="pc_PageItem.html#duplicate">duplicate</a> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p>
+<p class="hangIndent"><b>PageItem</b> <b>PageItem</b>.<a href="pc_PageItem.html#move">move</a> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p>
+<p class="hangIndent"><b>PageItem</b> <a href="pc_PageItems.html#getByName">PageItems.getByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><b>PageItem</b> <a href="pc_TracingObject.html#releaseTracing">TracingObject.releaseTracing</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

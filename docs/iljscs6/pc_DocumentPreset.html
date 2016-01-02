@@ -1,0 +1,78 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: DocumentPreset</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, documentpreset">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>DocumentPreset</h1></td></tr>
+<tr><td>&nbsp;</td><td>The new document preset to use for creating a new document.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="artboardLayout"></a>artboardLayout</td><td><a href="pe_DocumentArtboardLayout.html">DocumentArtboardLayout</a>:<br>DocumentArtboardLayout.GridByRow<br>DocumentArtboardLayout.GridByCol<br>DocumentArtboardLayout.Row<br>DocumentArtboardLayout.Column<br>DocumentArtboardLayout.RLGridByRow<br>DocumentArtboardLayout.RLGridByCol<br>DocumentArtboardLayout.RLRow</td>
+<td>r/w</td><td>Layout for artboards. (default: <b>DocumentArtboardLayout.GridByRow</b>)</td></tr>
+<tr><td><a name="artboardRowsOrCols"></a>artboardRowsOrCols</td><td>Int32</td>
+<td>r/w</td><td>Number of rows (for rows layout) OR column(for column layouts)of artboards.Range is 1 to (docNumArtboards - 1) or 1 for single row or column layouts. (default: <b>1</b>)</td></tr>
+<tr><td><a name="artboardSpacing"></a>artboardSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Spacing between artboards. (default: <b>20.0</b>)</td></tr>
+<tr><td><a name="colorMode"></a>colorMode</td><td><a href="pe_DocumentColorSpace.html">DocumentColorSpace</a>:<br>DocumentColorSpace.RGB<br>DocumentColorSpace.CMYK</td>
+<td>r/w</td><td>The color mode for the new document. (default: <b>DocumentColorSpace.CMYK</b>)</td></tr>
+<tr><td><a name="height"></a>height</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The height for the new document. (default: <b>792.0</b>)</td></tr>
+<tr><td><a name="numArtboards"></a>numArtboards</td><td>Int32</td>
+<td>r/w</td><td>Number of artboards for new document.Range (1:100). (default: <b>1</b>)</td></tr>
+<tr><td><a name="previewMode"></a>previewMode</td><td><a href="pe_DocumentPreviewMode.html">DocumentPreviewMode</a>:<br>DocumentPreviewMode.DefaultPreview<br>DocumentPreviewMode.PixelPreview<br>DocumentPreviewMode.OverprintPreview</td>
+<td>r/w</td><td>The preview mode for the new document. (default: <b>DocumentPreviewMode.DefaultPreview</b>)</td></tr>
+<tr><td><a name="rasterResolution"></a>rasterResolution</td><td><a href="pe_DocumentRasterResolution.html">DocumentRasterResolution</a>:<br>DocumentRasterResolution.ScreenResolution<br>DocumentRasterResolution.MediumResolution<br>DocumentRasterResolution.HighResolution</td>
+<td>r/w</td><td>The raster resolution for the new document. (default: <b>DocumentRasterResolution.ScreenResolution</b>)</td></tr>
+<tr><td><a name="title"></a>title</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The title for the new document. (default: <b>Untitled</b>)</td></tr>
+<tr><td><a name="transparencyGrid"></a>transparencyGrid</td><td><a href="pe_DocumentTransparencyGrid.html">DocumentTransparencyGrid</a>:<br>DocumentTransparencyGrid.TransparencyGridNone<br>DocumentTransparencyGrid.TransparencyGridLight<br>DocumentTransparencyGrid.TransparencyGridMedium<br>DocumentTransparencyGrid.TransparencyGridDark<br>DocumentTransparencyGrid.TransparencyGridRed<br>DocumentTransparencyGrid.TransparencyGridOrange<br>DocumentTransparencyGrid.TransparencyGridGreen<br>DocumentTransparencyGrid.TransparencyGridBlue<br>DocumentTransparencyGrid.TransparencyGridPurple</td>
+<td>r/w</td><td>The transparency grid for the new document. (default: <b>DocumentTransparencyGrid.TransparencyGridNone</b>)</td></tr>
+<tr><td><a name="units"></a>units</td><td><a href="pe_RulerUnits.html">RulerUnits</a>:<br>RulerUnits.Unknown<br>RulerUnits.Inches<br>RulerUnits.Centimeters<br>RulerUnits.Points<br>RulerUnits.Picas<br>RulerUnits.Millimeters<br>RulerUnits.Qs<br>RulerUnits.Pixels</td>
+<td>r/w</td><td>The units for the new document. (default: <b>RulerUnits.Points</b>)</td></tr>
+<tr class="lastRow"><td><a name="width"></a>width</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The width for the new document. (default: <b>612.0</b>)</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><a href="pc_Document.html">Document</a> <a href="pc_Documents.html#addDocument">Documents.addDocument</a>
+		(<span class="arg">startupPreset</span>:
+<span class="argt">string</span>, <span class="arg">presetSettings</span>:
+<b>DocumentPreset</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>DocumentPreset</b> <a href="pc_Application.html#getPresetSettings">Application.getPresetSettings</a> (<span class="arg">preset</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

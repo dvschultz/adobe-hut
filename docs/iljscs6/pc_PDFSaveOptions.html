@@ -1,0 +1,156 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: PDFSaveOptions</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, pdfsaveoptions">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>PDFSaveOptions</h1></td></tr>
+<tr><td>&nbsp;</td><td>Options which may be supplied when saving a document as a PDF file.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="acrobatLayers"></a>acrobatLayers</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Create acrobat layers from top-level layers - acrobat 6 only option. (default: <b>false</b>)</td></tr>
+<tr><td><a name="artboardRange"></a>artboardRange</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>Considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.</td></tr>
+<tr><td><a name="bleedLink"></a>bleedLink</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Link 4 bleed values. (default: <b>true</b>)</td></tr>
+<tr><td><a name="bleedOffsetRect"></a>bleedOffsetRect</td><td><a href="pc_Rectangle.html">Rectangle</a></td>
+<td>r/w</td><td>The bleed offset rect.</td></tr>
+<tr><td><a name="colorBars"></a>colorBars</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Draw color bars. (default: <b>false</b>)</td></tr>
+<tr><td><a name="colorCompression"></a>colorCompression</td><td><a href="pe_CompressionQuality.html">CompressionQuality</a>:<br>CompressionQuality.None<br>CompressionQuality.JPEGMINIMUM<br>CompressionQuality.JPEGLOW<br>CompressionQuality.JPEGMEDIUM<br>CompressionQuality.JPEGHIGH<br>CompressionQuality.JPEGMAXIMUM<br>CompressionQuality.ZIP4BIT<br>CompressionQuality.ZIP8BIT<br>CompressionQuality.AUTOMATICJPEGMINIMUM<br>CompressionQuality.AUTOMATICJPEGLOW<br>CompressionQuality.AUTOMATICJPEGMEDIUM<br>CompressionQuality.AUTOMATICJPEGHIGH<br>CompressionQuality.AUTOMATICJPEGMAXIMUM<br>CompressionQuality.AUTOMATICJPEG2000MINIMUM<br>CompressionQuality.AUTOMATICJPEG2000LOW<br>CompressionQuality.AUTOMATICJPEG2000MEDIUM<br>CompressionQuality.AUTOMATICJPEG2000HIGH<br>CompressionQuality.AUTOMATICJPEG2000MAXIMUM<br>CompressionQuality.AUTOMATICJPEG2000LOSSLESS<br>CompressionQuality.JPEG2000MINIMUM<br>CompressionQuality.JPEG2000LOW<br>CompressionQuality.JPEG2000MEDIUM<br>CompressionQuality.JPEG2000HIGH<br>CompressionQuality.JPEG2000MAXIMUM<br>CompressionQuality.JPEG2000LOSSLESS</td>
+<td>r/w</td><td>How should color bitmap images be compressed. (default: <b>CompressionQuality.None</b>)</td></tr>
+<tr><td><a name="colorConversionID"></a>colorConversionID</td><td><a href="pe_ColorConversion.html">ColorConversion</a>:<br>ColorConversion.None<br>ColorConversion.COLORCONVERSIONTODEST<br>ColorConversion.COLORCONVERSIONREPURPOSE</td>
+<td>r/w</td><td>PDF color conversion policy. Three choices are available: (1)No Color Conversion (2) Repurpose (3) Convert to Destination. (default: <b>ColorConversion.None</b>)</td></tr>
+<tr><td><a name="colorDestinationID"></a>colorDestinationID</td><td><a href="pe_ColorDestination.html">ColorDestination</a>:<br>ColorDestination.None<br>ColorDestination.COLORDESTINATIONDOCCMYK<br>ColorDestination.COLORDESTINATIONWORKINGCMYK<br>ColorDestination.COLORDESTINATIONDOCRGB<br>ColorDestination.COLORDESTINATIONWORKINGRGB<br>ColorDestination.COLORDESTINATIONPROFILE</td>
+<td>r/w</td><td>When NoColorConversion is specified for Color Conversion, NoColorDestination is set. (default: <b>ColorDestination.None</b>)</td></tr>
+<tr><td><a name="colorDownsampling"></a>colorDownsampling</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>If zero, no downsampling, otherwise, the resolution to downsample color bitmap images to. (default: <b>150</b>)</td></tr>
+<tr><td><a name="colorDownsamplingImageThreshold"></a>colorDownsamplingImageThreshold</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Downsample if the image's resolution is above this value. (default: <b>225</b>)</td></tr>
+<tr><td><a name="colorDownsamplingMethod"></a>colorDownsamplingMethod</td><td><a href="pe_DownsampleMethod.html">DownsampleMethod</a>:<br>DownsampleMethod.NODOWNSAMPLE<br>DownsampleMethod.AVERAGEDOWNSAMPLE<br>DownsampleMethod.SUBSAMPLE<br>DownsampleMethod.BICUBICDOWNSAMPLE</td>
+<td>r/w</td><td>How should color bitmap images be resampled. (default: <b>DownsampleMethod.NODOWNSAMPLE</b>)</td></tr>
+<tr><td><a name="colorProfileID"></a>colorProfileID</td><td><a href="pe_ColorProfile.html">ColorProfile</a>:<br>ColorProfile.None<br>ColorProfile.INCLUDEALLPROFILE<br>ColorProfile.LEAVEPROFILEUNCHANGED<br>ColorProfile.INCLUDERGBPROFILE<br>ColorProfile.INCLUDEDESTPROFILE</td>
+<td>r/w</td><td>If CMS is off, Don't Include Profiles is set. (default: <b>ColorProfile.None</b>)</td></tr>
+<tr><td><a name="colorTileSize"></a>colorTileSize</td><td>Int32</td>
+<td>r/w</td><td>Tile size when compressing with JPEG2000. (default: <b>256</b>)</td></tr>
+<tr><td><a name="compatibility"></a>compatibility</td><td><a href="pe_PDFCompatibility.html">PDFCompatibility</a>:<br>PDFCompatibility.ACROBAT4<br>PDFCompatibility.ACROBAT5<br>PDFCompatibility.ACROBAT6<br>PDFCompatibility.ACROBAT7<br>PDFCompatibility.ACROBAT8</td>
+<td>r/w</td><td>The version of the Acrobat file format to create. (default: <b>PDFCompatibility.ACROBAT5</b>)</td></tr>
+<tr><td><a name="compressArt"></a>compressArt</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should line art and text be compressed? (default: <b>true</b>)</td></tr>
+<tr><td><a name="documentPassword"></a>documentPassword</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A password string to open the document.</td></tr>
+<tr><td><a name="enableAccess"></a>enableAccess</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Enable accessing 128-bit. (default: <b>true</b>)</td></tr>
+<tr><td><a name="enableCopy"></a>enableCopy</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Enable copying of text 128-bit. (default: <b>true</b>)</td></tr>
+<tr><td><a name="enableCopyAccess"></a>enableCopyAccess</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Enable copying and accessing 40-bit. (default: <b>true</b>)</td></tr>
+<tr><td><a name="enablePlainText"></a>enablePlainText</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Enable plaintext metadata 128-bit - available only for acrobat 6. (default: <b>false</b>)</td></tr>
+<tr><td><a name="flattenerOptions"></a>flattenerOptions</td><td><a href="pc_PrintFlattenerOptions.html">PrintFlattenerOptions</a></td>
+<td>r/w</td><td>The printing flattener options.</td></tr>
+<tr><td><a name="flattenerPreset"></a>flattenerPreset</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The transparency flattener preset name.</td></tr>
+<tr><td><a name="fontSubsetThreshold"></a>fontSubsetThreshold</td><td><a href="pc_number.html">number</a> (range: 0 - 100)</td>
+<td>r/w</td><td>Include a subset of fonts when less than this percentage of characters are used. (default: <b>100</b>)</td></tr>
+<tr><td><a name="generateThumbnails"></a>generateThumbnails</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Generate thumbnails for the saved document. (default: <b>true</b>)</td></tr>
+<tr><td><a name="grayscaleCompression"></a>grayscaleCompression</td><td><a href="pe_CompressionQuality.html">CompressionQuality</a>:<br>CompressionQuality.None<br>CompressionQuality.JPEGMINIMUM<br>CompressionQuality.JPEGLOW<br>CompressionQuality.JPEGMEDIUM<br>CompressionQuality.JPEGHIGH<br>CompressionQuality.JPEGMAXIMUM<br>CompressionQuality.ZIP4BIT<br>CompressionQuality.ZIP8BIT<br>CompressionQuality.AUTOMATICJPEGMINIMUM<br>CompressionQuality.AUTOMATICJPEGLOW<br>CompressionQuality.AUTOMATICJPEGMEDIUM<br>CompressionQuality.AUTOMATICJPEGHIGH<br>CompressionQuality.AUTOMATICJPEGMAXIMUM<br>CompressionQuality.AUTOMATICJPEG2000MINIMUM<br>CompressionQuality.AUTOMATICJPEG2000LOW<br>CompressionQuality.AUTOMATICJPEG2000MEDIUM<br>CompressionQuality.AUTOMATICJPEG2000HIGH<br>CompressionQuality.AUTOMATICJPEG2000MAXIMUM<br>CompressionQuality.AUTOMATICJPEG2000LOSSLESS<br>CompressionQuality.JPEG2000MINIMUM<br>CompressionQuality.JPEG2000LOW<br>CompressionQuality.JPEG2000MEDIUM<br>CompressionQuality.JPEG2000HIGH<br>CompressionQuality.JPEG2000MAXIMUM<br>CompressionQuality.JPEG2000LOSSLESS</td>
+<td>r/w</td><td>How should grayscale bitmap images be compressed. (default: <b>CompressionQuality.None</b>)</td></tr>
+<tr><td><a name="grayscaleDownsampling"></a>grayscaleDownsampling</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>If zero, no downsampling, otherwise, the resolution to downsample grayscale images to. (default: <b>150</b>)</td></tr>
+<tr><td><a name="grayscaleDownsamplingImageThreshold"></a>grayscaleDownsamplingImageThreshold</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Downsample if the image's resolution is above this value. (default: <b>225</b>)</td></tr>
+<tr><td><a name="grayscaleDownsamplingMethod"></a>grayscaleDownsamplingMethod</td><td><a href="pe_DownsampleMethod.html">DownsampleMethod</a>:<br>DownsampleMethod.NODOWNSAMPLE<br>DownsampleMethod.AVERAGEDOWNSAMPLE<br>DownsampleMethod.SUBSAMPLE<br>DownsampleMethod.BICUBICDOWNSAMPLE</td>
+<td>r/w</td><td>How should grayscale bitmap images be resampled. (default: <b>DownsampleMethod.NODOWNSAMPLE</b>)</td></tr>
+<tr><td><a name="grayscaleTileSize"></a>grayscaleTileSize</td><td>Int32</td>
+<td>r/w</td><td>Tile size when compressing with JPEG2000. (default: <b>256</b>)</td></tr>
+<tr><td><a name="monochromeCompression"></a>monochromeCompression</td><td><a href="pe_MonochromeCompression.html">MonochromeCompression</a>:<br>MonochromeCompression.None<br>MonochromeCompression.CCIT3<br>MonochromeCompression.CCIT4<br>MonochromeCompression.MONOZIP<br>MonochromeCompression.RUNLENGTH</td>
+<td>r/w</td><td>How should monochrome bitmap images be compressed. (default: <b>MonochromeCompression.None</b>)</td></tr>
+<tr><td><a name="monochromeDownsampling"></a>monochromeDownsampling</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>If zero, no downsampling, otherwise, the resolution to downsample images to. (default: <b>300</b>)</td></tr>
+<tr><td><a name="monochromeDownsamplingImageThreshold"></a>monochromeDownsamplingImageThreshold</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Downsample if the image's resolution is above this value. (default: <b>450</b>)</td></tr>
+<tr><td><a name="monochromeDownsamplingMethod"></a>monochromeDownsamplingMethod</td><td><a href="pe_DownsampleMethod.html">DownsampleMethod</a>:<br>DownsampleMethod.NODOWNSAMPLE<br>DownsampleMethod.AVERAGEDOWNSAMPLE<br>DownsampleMethod.SUBSAMPLE<br>DownsampleMethod.BICUBICDOWNSAMPLE</td>
+<td>r/w</td><td>How should monochrome bitmap images be resampled. (default: <b>DownsampleMethod.NODOWNSAMPLE</b>)</td></tr>
+<tr><td><a name="offset"></a>offset</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Custom offset (in points) for using the custom paper. (default: <b>0</b>)</td></tr>
+<tr><td><a name="optimization"></a>optimization</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the PDF document be optimized for fast web viewing. (default: <b>false</b>)</td></tr>
+<tr><td><a name="outputCondition"></a>outputCondition</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>This is an optional comment which, if present, is added to the PDF file and describes the intended printing condition.</td></tr>
+<tr><td><a name="outputConditionID"></a>outputConditionID</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>If selected for Output Intent Profile Name, you can set the name of a registered printing condition.</td></tr>
+<tr><td><a name="outputIntentProfile"></a>outputIntentProfile</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>When CMS is on, the output intent profile is the same profile selected for Destination in the Color group box.</td></tr>
+<tr><td><a name="pDFAllowPrinting"></a>pDFAllowPrinting</td><td><a href="pe_PDFPrintAllowedEnum.html">PDFPrintAllowedEnum</a>:<br>PDFPrintAllowedEnum.PRINT128NONE<br>PDFPrintAllowedEnum.PRINT128LOWRESOLUTION<br>PDFPrintAllowedEnum.PRINT128HIGHRESOLUTION<br>PDFPrintAllowedEnum.PRINT40NONE<br>PDFPrintAllowedEnum.PRINT40HIGHRESOLUTION</td>
+<td>r/w</td><td>PDF security printing permission. (default: <b>PDFPrintAllowedEnum.PRINT128HIGHRESOLUTION</b>)</td></tr>
+<tr><td><a name="pDFChangesAllowed"></a>pDFChangesAllowed</td><td><a href="pe_PDFChangesAllowedEnum.html">PDFChangesAllowedEnum</a>:<br>PDFChangesAllowedEnum.CHANGE128NONE<br>PDFChangesAllowedEnum.CHANGE128EDITPAGE<br>PDFChangesAllowedEnum.CHANGE128FILLFORM<br>PDFChangesAllowedEnum.CHANGE128COMMENTING<br>PDFChangesAllowedEnum.CHANGE128ANYCHANGES<br>PDFChangesAllowedEnum.CHANGE40NONE<br>PDFChangesAllowedEnum.CHANGE40COMMENTING<br>PDFChangesAllowedEnum.CHANGE40PAGELAYOUT<br>PDFChangesAllowedEnum.CHANGE40ANYCHANGES</td>
+<td>r/w</td><td>PDF security changes allowed. (default: <b>PDFChangesAllowedEnum.CHANGE128ANYCHANGES</b>)</td></tr>
+<tr><td><a name="pDFPreset"></a>pDFPreset</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The max string length is 255 bytes. Name of PDF preset to use.</td></tr>
+<tr><td><a name="pDFXStandard"></a>pDFXStandard</td><td><a href="pe_PDFXStandard.html">PDFXStandard</a>:<br>PDFXStandard.PDFXNONE<br>PDFXStandard.PDFX1A2001<br>PDFXStandard.PDFX1A2003<br>PDFXStandard.PDFX32001<br>PDFXStandard.PDFX32002<br>PDFXStandard.PDFX32003<br>PDFXStandard.PDFX42007</td>
+<td>r/w</td><td>This control includes the None option for when the user is not complying with any PDF standard. (default: <b>PDFXStandard.PDFXNONE</b>)</td></tr>
+<tr><td><a name="pDFXStandardDescription"></a>pDFXStandardDescription</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>This displays the description from the selected preset.</td></tr>
+<tr><td><a name="pageInformation"></a>pageInformation</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Draw page information. (default: <b>false</b>)</td></tr>
+<tr><td><a name="pageMarksType"></a>pageMarksType</td><td><a href="pe_PageMarksTypes.html">PageMarksTypes</a>:<br>PageMarksTypes.Roman<br>PageMarksTypes.Japanese</td>
+<td>r/w</td><td>The page marks style. (default: <b>PageMarksTypes.Roman</b>)</td></tr>
+<tr><td><a name="permissionPassword"></a>permissionPassword</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>A password string to restrict editing security settings.</td></tr>
+<tr><td><a name="preserveEditability"></a>preserveEditability</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Preserve Illustrator editing capabilities when saving the document. (default: <b>true</b>)</td></tr>
+<tr><td><a name="printerResolution"></a>printerResolution</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Flattening printer resolution. (default: <b>800</b>)</td></tr>
+<tr><td><a name="registrationMarks"></a>registrationMarks</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Draw registration marks. (default: <b>false</b>)</td></tr>
+<tr><td><a name="registryName"></a>registryName</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>URL to the site where the specified output condition is registered. No validation is performed on the URL.</td></tr>
+<tr><td><a name="requireDocumentPassword"></a>requireDocumentPassword</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Require a password to open the document. (default: <b>false</b>)</td></tr>
+<tr><td><a name="requirePermissionPassword"></a>requirePermissionPassword</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Use a password to restrict editing security settings. (default: <b>false</b>)</td></tr>
+<tr><td><a name="trapped"></a>trapped</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>This indicates if manual trapping has been prepared in the document. (default: <b>false</b>)</td></tr>
+<tr><td><a name="trimMarkWeight"></a>trimMarkWeight</td><td><a href="pe_PDFTrimMarkWeight.html">PDFTrimMarkWeight</a>:<br>PDFTrimMarkWeight.TRIMMARKWEIGHT0125<br>PDFTrimMarkWeight.TRIMMARKWEIGHT025<br>PDFTrimMarkWeight.TRIMMARKWEIGHT05</td>
+<td>r/w</td><td>Trim mark weight. (default: <b>PDFTrimMarkWeight.TRIMMARKWEIGHT0125</b>)</td></tr>
+<tr><td><a name="trimMarks"></a>trimMarks</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Draw trim marks. (default: <b>false</b>)</td></tr>
+<tr class="lastRow"><td><a name="viewAfterSaving"></a>viewAfterSaving</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>View PDF after saving. (default: <b>false</b>)</td></tr>
+</table></td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

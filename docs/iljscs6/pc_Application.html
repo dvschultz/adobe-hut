@@ -1,0 +1,581 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: Application</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, application">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Application</h1></td></tr>
+<tr><td>&nbsp;</td><td>The Adobe Illustrator application.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#aATAddItem" title="Add the specified to the sequencer.">aATAddItem</a>, <a href="#aATClear" title="Clear the sequencer.">aATClear</a>, <a href="#aATDuplicateItem" title="Duplicates the specified item(s) from the sequencer.">aATDuplicateItem</a>, <a href="#aATEditItem" title="Opens the specified item from the sequencer in the item editor.">aATEditItem</a>, <a href="#aATErrorsExist" title="Retrieves a boolean indicating the presence of errors in the last script to execute.">aATErrorsExist</a>, <a href="#aATExecuteSession" title="Executes the active session in the sequencer.">aATExecuteSession</a>, <a href="#aATExecuteSessionFromFile" title="Executes the active session in the sequencer.">aATExecuteSessionFromFile</a>, <a href="#aATFileRelativeChanged" title="Switches a files relative token and path.">aATFileRelativeChanged</a>, <a href="#aATFileSaveDialog" title="Prompts the user to save a file or choose a file or directory and returns a relative path string to the file.">aATFileSaveDialog</a>, <a href="#aATGetEditorDialogFile" title="Retrieves a file path to the AAT editor swf.">aATGetEditorDialogFile</a>, <a href="#aATGetErrorDialogFile" title="Retrieves a file path to the AAT error dialog swf.">aATGetErrorDialogFile</a>, <a href="#aATGetListOfRelativePaths" title="Gets an XML string listing the relative paths and the UI strings to display them.">aATGetListOfRelativePaths</a>, <a href="#aATGetSession" title="Get the active session for the sequncer.">aATGetSession</a>, <a href="#aATLoadLibExtension" title="Loads a session file as an extension to the editor.">aATLoadLibExtension</a>, <a href="#aATLoadModel" title="Loads the aat model to the editor.">aATLoadModel</a>, <a href="#aATLoadSessionFile" title="Loads a session into the sequencer.">aATLoadSessionFile</a>, <a href="#aATLoadUIExtension" title="Loads a UI description as an extension to the editor.">aATLoadUIExtension</a>, <a href="#aATMoveItem" title="Moves the specified in the sequencer.">aATMoveItem</a>, <a href="#aATRemoveItem" title="Removes the specified item from the sequencer.">aATRemoveItem</a>, <a href="#aATReplaceItem" title="Replaces the specified to the sequencer.">aATReplaceItem</a>, <a href="#aATSaveAsSession" title="Saves the active session in the sequencer to a new file.">aATSaveAsSession</a>, <a href="#aATSaveSession" title="Saves the active session in the sequencer to a file.">aATSaveSession</a>, <a href="#applyDataToItem" title="Applies the data used in the item editor to the item.">applyDataToItem</a>, <a href="#applySingleDataPointToItem" title="Applies data to the specified item from the sequencer in the item editor.">applySingleDataPointToItem</a>, <a href="#beep" title="">beep</a>, <a href="#concatenateMatrix" title="Concatenate two transformation matrices.">concatenateMatrix</a>, <a href="#concatenateRotationMatrix" title="Concatenate a rotation matrix to a transformation matrix.">concatenateRotationMatrix</a>, <a href="#concatenateScaleMatrix" title="Concatenate a scale matrix to a transformation matrix.">concatenateScaleMatrix</a>, <a href="#concatenateTranslationMatrix" title="Concatenate a translation to a transformation matrix.">concatenateTranslationMatrix</a>, <a href="#convertSampleColor" title="Converts a sample-component color from one color space to another.">convertSampleColor</a>, <a href="#copy" title="Copy current selection to the clipboard.">copy</a>, <a href="#cut" title="Cut current selection to the clipboard.">cut</a>, <a href="#doScript" title="Play an action from the Actions Palette.">doScript</a>, <a href="#dumpPGFFile" title="Dump the PGF portion of ai file to txt file.">dumpPGFFile</a>, <a href="#executeMenuCommand" title="Executes a menu command using the menu shortcut string.">executeMenuCommand</a>, <a href="#getExecutionOutput" title="Retrieves a string containing the results of the last script to execute.">getExecutionOutput</a>, <a href="#getIdentityMatrix" title="Returns an identity matrix.">getIdentityMatrix</a>, <a href="#getPPDFileInfo" title="Get detailed info from the specified PPD file.">getPPDFileInfo</a>, <a href="#getPresetFileOfType" title="Given a preset type, returns the full path to the application's default document profile for the type.">getPresetFileOfType</a>, <a href="#getPresetSettings" title="Given a preset name, tries and retrieves the settings from the preset template.">getPresetSettings</a>, <a href="#getRotationMatrix" title="Returns a rotation transformation matrix.">getRotationMatrix</a>, <a href="#getScaleMatrix" title="Returns a scale transformation matrix.">getScaleMatrix</a>, <a href="#getScriptableHelpGroup" title="Get the scriptable help group object that represents the search widget in the app bar.">getScriptableHelpGroup</a>, <a href="#getTranslationMatrix" title="Returns a translation matrix.">getTranslationMatrix</a>, <a href="#getVersionString" title="Retrieves a string representing the AAT version.">getVersionString</a>, <a href="#invertMatrix" title="Invert a matrix.">invertMatrix</a>, <a href="#isEqualMatrix" title="Compares two matrices for equality.">isEqualMatrix</a>, <a href="#isSingularMatrix" title="Tests if a matrix is singular (cannot be inverted)">isSingularMatrix</a>, <a href="#loadAction" title="Load an action into action palette.">loadAction</a>, <a href="#loadColorSettings" title="Load the color settings from the file. If the file is an empty file spec, the color management will be turned off.">loadColorSettings</a>, <a href="#open" title="Open the specified document file.">open</a>, <a href="#paste" title="Paste clipboard into the current document.">paste</a>, <a href="#quit" title="Quit the application.">quit</a>, <a href="#redo" title="Redo the last transaction.">redo</a>, <a href="#redraw" title="Force Illustrator to redraw its window(s)">redraw</a>, <a href="#reflectCSAW" title="Generate Creative Suite ActionScript Wrappers in specified directory.">reflectCSAW</a>, <a href="#runAPITest" title="Runs API Tests from the TestAPI Plug-in.">runAPITest</a>, <a href="#sendScriptMessage" title="Sends the script message to the required plugin.">sendScriptMessage</a>, <a href="#showPresets" title="Get presets from the file.">showPresets</a>, <a href="#translatePlaceholderText" title="Translate the placeholder text to regular text. A method to enter unicode points in hex values.">translatePlaceholderText</a>, <a href="#translateString" title="Returns a string translated from the key and source data passed in.">translateString</a>, <a href="#undo" title="Undo the last transaction.">undo</a>, <a href="#unloadAction" title="Unloads an action into action palette.">unloadAction</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Application</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="PDFPresetsList"></a>PDFPresetsList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The list of PDF preset names currently available for use.</td></tr>
+<tr><td><a name="PPDFileList"></a>PPDFileList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_PPDFile.html">PPDFile</a></td>
+<td>readonly</td><td>The list of PPD files currently available for use. For performance reasons, the PPDFile entry only contains the model name and file spec of each PPD file.</td></tr>
+<tr><td><a name="activeDocument"></a>activeDocument</td><td><a href="pc_Document.html">Document</a></td>
+<td>r/w</td><td>The active document.</td></tr>
+<tr><td><a name="browserAvailable"></a>browserAvailable</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Is a web browser available?</td></tr>
+<tr><td><a name="buildNumber"></a>buildNumber</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The build number of the Adobe Illustrator application.</td></tr>
+<tr><td><a name="colorSettingsList"></a>colorSettingsList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_File.html">File</a></td>
+<td>readonly</td><td>The list of color settings files currently available for use.</td></tr>
+<tr><td><a name="coordinateSystem"></a>coordinateSystem</td><td><a href="pe_CoordinateSystem.html">CoordinateSystem</a>:<br>CoordinateSystem.DOCUMENTCOORDINATESYSTEM<br>CoordinateSystem.ARTBOARDCOORDINATESYSTEM</td>
+<td>r/w</td><td>Coordinate System used by script.</td></tr>
+<tr><td><a name="defaultColorSettings"></a>defaultColorSettings</td><td><a href="pc_File.html">File</a></td>
+<td>readonly</td><td>The default color settings file for the current application locale.</td></tr>
+<tr><td><a name="documents"></a>documents</td><td><a href="pc_Documents.html">Documents</a> <a class="sing" href="pc_Document.html" title="A document.">Document</a></td>
+<td>readonly</td><td>The open documents.</td></tr>
+<tr><td><a name="flattenerPresetsList"></a>flattenerPresetsList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The list of flattener style names currently available for use.</td></tr>
+<tr><td><a name="freeMemory"></a>freeMemory</td><td>Int32</td>
+<td>readonly</td><td>The amount of unused memory within the Adobe Illustrator partition.</td></tr>
+<tr><td><a name="locale"></a>locale</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The Locale of the Adobe Illustrator application.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The application's name.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="path"></a>path</td><td><a href="pc_File.html">File</a></td>
+<td>readonly</td><td>Path specification for the application.</td></tr>
+<tr><td><a name="preferences"></a>preferences</td><td><a href="pc_Preferences.html">Preferences</a></td>
+<td>readonly</td><td>Preferences for Illustrator.</td></tr>
+<tr><td><a name="printPresetsList"></a>printPresetsList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The list of print preset names currently available for use.</td></tr>
+<tr><td><a name="printerList"></a>printerList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Printer.html">Printer</a></td>
+<td>readonly</td><td>The list of installed printers.</td></tr>
+<tr><td><a name="scriptingVersion"></a>scriptingVersion</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The version of the Scripting plugin.</td></tr>
+<tr><td><a name="selection"></a>selection</td><td>any</td>
+<td>r/w</td><td>The selection visible to the user.</td></tr>
+<tr><td><a name="startupPresetsList"></a>startupPresetsList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The list of presets available for creating a new document.</td></tr>
+<tr><td><a name="textFonts"></a>textFonts</td><td><a href="pc_TextFonts.html">TextFonts</a> <a class="sing" href="pc_TextFont.html" title="An installed font.">TextFont</a></td>
+<td>readonly</td><td>Installed fonts.</td></tr>
+<tr><td><a name="tracingPresetsList"></a>tracingPresetsList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The list of tracing preset names currently available for use.</td></tr>
+<tr><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+<tr><td><a name="userInteractionLevel"></a>userInteractionLevel</td><td><a href="pe_UserInteractionLevel.html">UserInteractionLevel</a>:<br>UserInteractionLevel.DONTDISPLAYALERTS<br>UserInteractionLevel.DISPLAYALERTS</td>
+<td>r/w</td><td>What level of interaction with the user should be allowed when handling script commands.</td></tr>
+<tr><td><a name="version"></a>version</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The version of the Adobe Illustrator application.</td></tr>
+<tr class="lastRow"><td><a name="visible"></a>visible</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Is the application visible.</td></tr>
+</table></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="aATAddItem"></a>string <span class="func">aATAddItem</span> (<span class="arg">sessionIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">destinationSequenceID</span>:
+<span class="argt">Int32</span>, <span class="arg">destinationIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">srcItemIDData</span>:
+<span class="argt">string</span>, <span class="arg">type</span>:
+<span class="argt">string</span>)<br>
+Add the specified to the sequencer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sessionIndex</td><td>Int32</td><td>The index in the session of the top-most sequence for the item to add.</td></tr>
+<tr><td>destinationSequenceID</td><td>Int32</td><td>The UID for the owning sequence.</td></tr>
+<tr><td>destinationIndex</td><td>Int32</td><td>The item UID where to insert.</td></tr>
+<tr><td>srcItemIDData</td><td><a href="pc_string.html">string</a></td><td>The item ID of the item to construct.</td></tr>
+<tr class="lastRow"><td>type</td><td><a href="pc_string.html">string</a></td><td>The source of the item to construct.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="aATClear"></a>string <span class="func">aATClear</span> ()<br>
+Clear the sequencer.</p>
+
+<p class="spaceBelow"><a name="aATDuplicateItem"></a>string <span class="func">aATDuplicateItem</span> (<span class="arg">sessionIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">item</span>:
+<span class="argt">string</span>)<br>
+Duplicates the specified item(s) from the sequencer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sessionIndex</td><td>Int32</td><td>The index in the session of the top-most sequence for the item to add.</td></tr>
+<tr class="lastRow"><td>item</td><td><a href="pc_string.html">string</a></td><td>The item UID(s)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="aATEditItem"></a>string <span class="func">aATEditItem</span> (<span class="arg">sessionIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">item</span>:
+<span class="argt">string</span>)<br>
+Opens the specified item from the sequencer in the item editor.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sessionIndex</td><td>Int32</td><td>The index in the session of the top-most sequence for the item to add.</td></tr>
+<tr class="lastRow"><td>item</td><td><a href="pc_string.html">string</a></td><td>The item UID.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="aATErrorsExist"></a><a href="pc_Boolean.html">bool</a>  <span class="func">aATErrorsExist</span> ()<br>
+Retrieves a boolean indicating the presence of errors in the last script to execute.</p>
+
+<p class="spaceBelow"><a name="aATExecuteSession"></a><span class="rett">void</span>  <span class="func">aATExecuteSession</span> ()<br>
+Executes the active session in the sequencer.</p>
+
+<p class="spaceBelow"><a name="aATExecuteSessionFromFile"></a><span class="rett">void</span>  <span class="func">aATExecuteSessionFromFile</span> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>)<br>
+Executes the active session in the sequencer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>file</td><td><a href="pc_File.html">File</a></td><td>Execute a session file.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="aATFileRelativeChanged"></a>string <span class="func">aATFileRelativeChanged</span> (<span class="arg">path</span>:
+<span class="argt">string</span>, <span class="arg">relative</span>:
+<span class="argt">string</span>, <span class="arg">newRelative</span>:
+<span class="argt">string</span>)<br>
+Switches a files relative token and path.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>path</td><td><a href="pc_string.html">string</a></td><td>The path relative to the folder specified by Relative.</td></tr>
+<tr><td>relative</td><td><a href="pc_string.html">string</a></td><td>The current relative path token.</td></tr>
+<tr class="lastRow"><td>newRelative</td><td><a href="pc_string.html">string</a></td><td>The new relative path token.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="aATFileSaveDialog"></a>string <span class="func">aATFileSaveDialog</span> (<span class="arg">path</span>:
+<span class="argt">string</span>, <span class="arg">relative</span>:
+<span class="argt">string</span>, <span class="arg">type</span>:
+<span class="argt">string</span>)<br>
+Prompts the user to save a file or choose a file or directory and returns a relative path string to the file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>path</td><td><a href="pc_string.html">string</a></td><td>The path relative to the folder specified by Relative.</td></tr>
+<tr><td>relative</td><td><a href="pc_string.html">string</a></td><td>The current relative path token.</td></tr>
+<tr class="lastRow"><td>type</td><td><a href="pc_string.html">string</a></td><td>The type of dialog to show in string format.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="aATGetEditorDialogFile"></a><a href="pc_File.html">File</a> <span class="func">aATGetEditorDialogFile</span> ()<br>
+Retrieves a file path to the AAT editor swf.</p>
+
+<p class="spaceBelow"><a name="aATGetErrorDialogFile"></a><a href="pc_File.html">File</a> <span class="func">aATGetErrorDialogFile</span> ()<br>
+Retrieves a file path to the AAT error dialog swf.</p>
+
+<p class="spaceBelow"><a name="aATGetListOfRelativePaths"></a>string <span class="func">aATGetListOfRelativePaths</span> ()<br>
+Gets an XML string listing the relative paths and the UI strings to display them.</p>
+
+<p class="spaceBelow"><a name="aATGetSession"></a>string <span class="func">aATGetSession</span> ()<br>
+Get the active session for the sequncer.</p>
+
+<p class="spaceBelow"><a name="aATLoadLibExtension"></a>string <span class="func">aATLoadLibExtension</span> ()<br>
+Loads a session file as an extension to the editor.</p>
+
+<p class="spaceBelow"><a name="aATLoadModel"></a>string <span class="func">aATLoadModel</span> ()<br>
+Loads the aat model to the editor.</p>
+
+<p class="spaceBelow"><a name="aATLoadSessionFile"></a>string <span class="func">aATLoadSessionFile</span> ()<br>
+Loads a session into the sequencer.</p>
+
+<p class="spaceBelow"><a name="aATLoadUIExtension"></a>string <span class="func">aATLoadUIExtension</span> ()<br>
+Loads a UI description as an extension to the editor.</p>
+
+<p class="spaceBelow"><a name="aATMoveItem"></a>string <span class="func">aATMoveItem</span> (<span class="arg">sessionIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">moveThisID</span>:
+<span class="argt">string</span>, <span class="arg">newSessionIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">destinationSequenceID</span>:
+<span class="argt">string</span>, <span class="arg">destinationIndex</span>:
+<span class="argt">Int32</span>)<br>
+Moves the specified in the sequencer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sessionIndex</td><td>Int32</td><td>The index in the session of the top-most sequence for the item to move.</td></tr>
+<tr><td>moveThisID</td><td><a href="pc_string.html">string</a></td><td>The UID of the item to replace.</td></tr>
+<tr><td>newSessionIndex</td><td>Int32</td><td>The index in the session of the destination top-most sequence.</td></tr>
+<tr><td>destinationSequenceID</td><td><a href="pc_string.html">string</a></td><td>The UID for the owning sequence.</td></tr>
+<tr class="lastRow"><td>destinationIndex</td><td>Int32</td><td>The index where to insert.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="aATRemoveItem"></a>string <span class="func">aATRemoveItem</span> (<span class="arg">sessionIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">item</span>:
+<span class="argt">string</span>)<br>
+Removes the specified item from the sequencer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sessionIndex</td><td>Int32</td><td>The index in the session of the top-most sequence for the item to add.</td></tr>
+<tr class="lastRow"><td>item</td><td><a href="pc_string.html">string</a></td><td>The item UID.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="aATReplaceItem"></a>string <span class="func">aATReplaceItem</span> (<span class="arg">sessionIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">replaceThisID</span>:
+<span class="argt">Int32</span>, <span class="arg">srcItemIDData</span>:
+<span class="argt">string</span>, <span class="arg">type</span>:
+<span class="argt">string</span>)<br>
+Replaces the specified to the sequencer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sessionIndex</td><td>Int32</td><td>The index in the session of the top-most sequence for the item to add.</td></tr>
+<tr><td>replaceThisID</td><td>Int32</td><td>The UID of the item to replace.</td></tr>
+<tr><td>srcItemIDData</td><td><a href="pc_string.html">string</a></td><td>The item ID of the item to construct.</td></tr>
+<tr class="lastRow"><td>type</td><td><a href="pc_string.html">string</a></td><td>The source of the item to construct.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="aATSaveAsSession"></a>string <span class="func">aATSaveAsSession</span> ()<br>
+Saves the active session in the sequencer to a new file.</p>
+
+<p class="spaceBelow"><a name="aATSaveSession"></a>string <span class="func">aATSaveSession</span> ()<br>
+Saves the active session in the sequencer to a file.</p>
+
+<p class="spaceBelow"><a name="applyDataToItem"></a>string <span class="func">applyDataToItem</span> (<span class="arg">sessionIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">item</span>:
+<span class="argt">string</span>, <span class="arg">data</span>:
+<span class="argt">string</span>)<br>
+Applies the data used in the item editor to the item.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sessionIndex</td><td>Int32</td><td>The index in the session of the top-most sequence for the item to edit.</td></tr>
+<tr><td>item</td><td><a href="pc_string.html">string</a></td><td>The item UID.</td></tr>
+<tr class="lastRow"><td>data</td><td><a href="pc_string.html">string</a></td><td>The data to apply in XML format.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="applySingleDataPointToItem"></a><a href="pc_Boolean.html">bool</a>  <span class="func">applySingleDataPointToItem</span> (<span class="arg">sessionIndex</span>:
+<span class="argt">Int32</span>, <span class="arg">item</span>:
+<span class="argt">string</span>, <span class="arg">dataID</span>:
+<span class="argt">string</span>, <span class="arg">data</span>:
+<span class="argt">string</span>)<br>
+Applies data to the specified item from the sequencer in the item editor.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sessionIndex</td><td>Int32</td><td>The index in the session of the top-most sequence for the item to add.</td></tr>
+<tr><td>item</td><td><a href="pc_string.html">string</a></td><td>The item UID.</td></tr>
+<tr><td>dataID</td><td><a href="pc_string.html">string</a></td><td>The data to apply in XML format.</td></tr>
+<tr class="lastRow"><td>data</td><td><a href="pc_string.html">string</a></td><td>The data to apply in XML format.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="beep"></a><span class="rett">void</span>  <span class="func">beep</span> ()</p>
+
+<p class="spaceBelow"><a name="concatenateMatrix"></a><a href="pc_Matrix.html">Matrix</a> <span class="func">concatenateMatrix</span> (<span class="arg">matrix</span>:
+<a href="pc_Matrix.html">Matrix</a>, <span class="arg">secondMatrix</span>:
+<a href="pc_Matrix.html">Matrix</a>)<br>
+Concatenate two transformation matrices.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>matrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>The matrix that is to be added to.</td></tr>
+<tr class="lastRow"><td>secondMatrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>Second transformation matrix.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="concatenateRotationMatrix"></a><a href="pc_Matrix.html">Matrix</a> <span class="func">concatenateRotationMatrix</span> (<span class="arg">matrix</span>:
+<a href="pc_Matrix.html">Matrix</a>, <span class="arg">angle</span>:
+<span class="argt">number</span>)<br>
+Concatenate a rotation matrix to a transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>matrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>The matrix that is to be added to.</td></tr>
+<tr class="lastRow"><td>angle</td><td><a href="pc_number.html">number</a></td><td>Angle of rotation (in degrees)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="concatenateScaleMatrix"></a><a href="pc_Matrix.html">Matrix</a> <span class="func">concatenateScaleMatrix</span> (<span class="arg">matrix</span>:
+<a href="pc_Matrix.html">Matrix</a>[, <span class="arg">scaleX</span>:
+<span class="argt">number</span>=<span class="defv">100.0</span>][, <span class="arg">scaleY</span>:
+<span class="argt">number</span>=<span class="defv">100.0</span>])<br>
+Concatenate a scale matrix to a transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>matrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>The matrix that is to be added to.</td></tr>
+<tr><td>scaleX</td><td><a href="pc_number.html">number</a></td><td>Horizontal scaling factor expressed as a percentage (100 = 100%) (default: <b>100.0</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>scaleY</td><td><a href="pc_number.html">number</a></td><td>Vertical scaling factor expressed as a percentage (100 = 100%) (default: <b>100.0</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="concatenateTranslationMatrix"></a><a href="pc_Matrix.html">Matrix</a> <span class="func">concatenateTranslationMatrix</span> (<span class="arg">matrix</span>:
+<a href="pc_Matrix.html">Matrix</a>[, <span class="arg">deltaX</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>][, <span class="arg">deltaY</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>])<br>
+Concatenate a translation to a transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>matrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>The matrix that is to be added to.</td></tr>
+<tr><td>deltaX</td><td><a href="pc_number.html">number</a></td><td>Horizontal transformation. (default: <b>0.0</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>deltaY</td><td><a href="pc_number.html">number</a></td><td>Vertical transformation. (default: <b>0.0</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="convertSampleColor"></a><a href="pc_Array.html">Array</a> of number <span class="func">convertSampleColor</span> (<span class="arg">sourceColorSpace</span>:
+<a href="pe_ImageColorSpace.html">ImageColorSpace</a>, <span class="arg">sourceColor</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">number</span>, <span class="arg">destColorSpace</span>:
+<a href="pe_ImageColorSpace.html">ImageColorSpace</a>, <span class="arg">colorConvertPurpose</span>:
+<a href="pe_ColorConvertPurpose.html">ColorConvertPurpose</a>[, <span class="arg">sourceHasAlpha</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>][, <span class="arg">destHasAlpha</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Converts a sample-component color from one color space to another.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sourceColorSpace</td><td><a href="pe_ImageColorSpace.html">ImageColorSpace</a>:<br>ImageColorSpace.GrayScale<br>ImageColorSpace.RGB<br>ImageColorSpace.CMYK<br>ImageColorSpace.LAB<br>ImageColorSpace.Separation<br>ImageColorSpace.DeviceN<br>ImageColorSpace.Indexed</td><td>The source color space.</td></tr>
+<tr><td>sourceColor</td><td><a href="pc_Array.html">Array</a> of <a href="pc_number.html">number</a></td><td>The color to convert, an array of color components. First location of the array should contain alpha if source-has-alpha is true.</td></tr>
+<tr><td>destColorSpace</td><td><a href="pe_ImageColorSpace.html">ImageColorSpace</a>:<br>ImageColorSpace.GrayScale<br>ImageColorSpace.RGB<br>ImageColorSpace.CMYK<br>ImageColorSpace.LAB<br>ImageColorSpace.Separation<br>ImageColorSpace.DeviceN<br>ImageColorSpace.Indexed</td><td>The destination color space.</td></tr>
+<tr><td>colorConvertPurpose</td><td><a href="pe_ColorConvertPurpose.html">ColorConvertPurpose</a>:<br>ColorConvertPurpose.defaultpurpose<br>ColorConvertPurpose.previewpurpose<br>ColorConvertPurpose.exportpurpose<br>ColorConvertPurpose.dummypurpose</td><td>The parameter which passes the purpose of conversion.</td></tr>
+<tr><td>sourceHasAlpha</td><td><a href="pc_Boolean.html">bool</a></td><td>True if alpha channel is present in source color. (default: <b>false</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>destHasAlpha</td><td><a href="pc_Boolean.html">bool</a></td><td>True if alpha channel is present in destination color. (default: <b>false</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="copy"></a><span class="rett">void</span>  <span class="func">copy</span> ()<br>
+Copy current selection to the clipboard.</p>
+
+<p class="spaceBelow"><a name="cut"></a><span class="rett">void</span>  <span class="func">cut</span> ()<br>
+Cut current selection to the clipboard.</p>
+
+<p class="spaceBelow"><a name="doScript"></a><span class="rett">void</span>  <span class="func">doScript</span> (<span class="arg">action</span>:
+<span class="argt">string</span>, <span class="arg">from</span>:
+<span class="argt">string</span>[, <span class="arg">dialogs</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])<br>
+Play an action from the Actions Palette.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>action</td><td><a href="pc_string.html">string</a></td><td>The name of the action to play (note that the case of letters in the Action name is important and must match the case of the name in the Actions palette)</td></tr>
+<tr><td>from</td><td><a href="pc_string.html">string</a></td><td>The name of the action set containing the action being played (note that the case of letters in the Action Set name is important and must match the case of the name in the Actions palette)</td></tr>
+<tr class="lastRow"><td>dialogs</td><td><a href="pc_Boolean.html">bool</a></td><td>Are dialog boxes associated with the action to be presented? (default: <b>true</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="dumpPGFFile"></a><a href="pc_Boolean.html">bool</a>  <span class="func">dumpPGFFile</span> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">documentColorSpace</span>:
+<a href="pe_DocumentColorSpace.html">DocumentColorSpace</a>], <span class="arg">pGFFile</span>:
+<a href="pc_File.html">File</a>)<br>
+Dump the PGF portion of ai file to txt file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>file</td><td><a href="pc_File.html">File</a></td><td>The AI file to be opened.</td></tr>
+<tr><td>documentColorSpace</td><td><a href="pe_DocumentColorSpace.html">DocumentColorSpace</a>:<br>DocumentColorSpace.RGB<br>DocumentColorSpace.CMYK</td><td>Choose color space only for documents saved with multiple color models (pre-Illustrator 9) (Optional)</td></tr>
+<tr class="lastRow"><td>pGFFile</td><td><a href="pc_File.html">File</a></td><td>Folder to save the output PGF file.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="executeMenuCommand"></a><span class="rett">void</span>  <span class="func">executeMenuCommand</span> (<span class="arg">menuCommandString</span>:
+<span class="argt">string</span>)<br>
+Executes a menu command using the menu shortcut string.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>menuCommandString</td><td><a href="pc_string.html">string</a></td><td>Menu command shortcut.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getExecutionOutput"></a>string <span class="func">getExecutionOutput</span> ()<br>
+Retrieves a string containing the results of the last script to execute.</p>
+
+<p class="spaceBelow"><a name="getIdentityMatrix"></a><a href="pc_Matrix.html">Matrix</a> <span class="func">getIdentityMatrix</span> ()<br>
+Returns an identity matrix.</p>
+
+<p class="spaceBelow"><a name="getPPDFileInfo"></a><a href="pc_PPDFileInfo.html">PPDFileInfo</a> <span class="func">getPPDFileInfo</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Get detailed info from the specified PPD file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The model name of the PPD file.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getPresetFileOfType"></a><a href="pc_File.html">File</a> <span class="func">getPresetFileOfType</span> (<span class="arg">presetType</span>:
+<a href="pe_DocumentPresetType.html">DocumentPresetType</a>)<br>
+Given a preset type, returns the full path to the application's default document profile for the type.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>presetType</td><td><a href="pe_DocumentPresetType.html">DocumentPresetType</a>:<br>DocumentPresetType.Print<br>DocumentPresetType.Web<br>DocumentPresetType.Mobile<br>DocumentPresetType.Video<br>DocumentPresetType.BasicCMYK<br>DocumentPresetType.BasicRGB</td><td>The preset type.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getPresetSettings"></a><a href="pc_DocumentPreset.html">DocumentPreset</a> <span class="func">getPresetSettings</span> (<span class="arg">preset</span>:
+<span class="argt">string</span>)<br>
+Given a preset name, tries and retrieves the settings from the preset template.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>preset</td><td><a href="pc_string.html">string</a></td><td>The name of the preset.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getRotationMatrix"></a><a href="pc_Matrix.html">Matrix</a> <span class="func">getRotationMatrix</span> ([<span class="arg">angle</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>])<br>
+Returns a rotation transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>angle</td><td><a href="pc_number.html">number</a></td><td>Angle of rotation (in degrees) (default: <b>0.0</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getScaleMatrix"></a><a href="pc_Matrix.html">Matrix</a> <span class="func">getScaleMatrix</span> ([<span class="arg">scaleX</span>:
+<span class="argt">number</span>=<span class="defv">100.0</span>][, <span class="arg">scaleY</span>:
+<span class="argt">number</span>=<span class="defv">100.0</span>])<br>
+Returns a scale transformation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>scaleX</td><td><a href="pc_number.html">number</a></td><td>Horizontal scaling factor expressed as a percentage (100 = 100%) (default: <b>100.0</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>scaleY</td><td><a href="pc_number.html">number</a></td><td>Vertical scaling factor expressed as a percentage (100 = 100%) (default: <b>100.0</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getScriptableHelpGroup"></a><span class="rett">any</span>  <span class="func">getScriptableHelpGroup</span> ()<br>
+Get the scriptable help group object that represents the search widget in the app bar.</p>
+
+<p class="spaceBelow"><a name="getTranslationMatrix"></a><a href="pc_Matrix.html">Matrix</a> <span class="func">getTranslationMatrix</span> ([<span class="arg">deltaX</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>][, <span class="arg">deltaY</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>])<br>
+Returns a translation matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>deltaX</td><td><a href="pc_number.html">number</a></td><td>Horizontal transformation. (default: <b>0.0</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>deltaY</td><td><a href="pc_number.html">number</a></td><td>Vertical transformation. (default: <b>0.0</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getVersionString"></a>string <span class="func">getVersionString</span> ()<br>
+Retrieves a string representing the AAT version.</p>
+
+<p class="spaceBelow"><a name="invertMatrix"></a><a href="pc_Matrix.html">Matrix</a> <span class="func">invertMatrix</span> (<span class="arg">matrix</span>:
+<a href="pc_Matrix.html">Matrix</a>)<br>
+Invert a matrix.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>matrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>The matrix to invert.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="isEqualMatrix"></a><a href="pc_Boolean.html">bool</a>  <span class="func">isEqualMatrix</span> (<span class="arg">matrix</span>:
+<a href="pc_Matrix.html">Matrix</a>, <span class="arg">secondMatrix</span>:
+<a href="pc_Matrix.html">Matrix</a>)<br>
+Compares two matrices for equality.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>matrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>First transformation matrix to compare.</td></tr>
+<tr class="lastRow"><td>secondMatrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>Second transformation matrix.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="isSingularMatrix"></a><a href="pc_Boolean.html">bool</a>  <span class="func">isSingularMatrix</span> (<span class="arg">matrix</span>:
+<a href="pc_Matrix.html">Matrix</a>)<br>
+Tests if a matrix is singular (cannot be inverted)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>matrix</td><td><a href="pc_Matrix.html">Matrix</a></td><td>The matrix to check.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="loadAction"></a><span class="rett">void</span>  <span class="func">loadAction</span> (<span class="arg">actionFilePath</span>:
+<a href="pc_File.html">File</a>)<br>
+Load an action into action palette.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>actionFilePath</td><td><a href="pc_File.html">File</a></td><td>The path on the system of the action file to be loaded.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="loadColorSettings"></a><span class="rett">void</span>  <span class="func">loadColorSettings</span> (<span class="arg">fileSpec</span>:
+<a href="pc_File.html">File</a>)<br>
+Load the color settings from the file. If the file is an empty file spec, the color management will be turned off.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>fileSpec</td><td><a href="pc_File.html">File</a></td><td>File spec for the color settings.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="open"></a><a href="pc_Document.html">Document</a> <span class="func">open</span> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">documentColorSpace</span>:
+<a href="pe_DocumentColorSpace.html">DocumentColorSpace</a>][, <span class="arg">options</span>:
+<span class="argt">any</span>])<br>
+Open the specified document file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>file</td><td><a href="pc_File.html">File</a></td><td>The file to be opened.</td></tr>
+<tr><td>documentColorSpace</td><td><a href="pe_DocumentColorSpace.html">DocumentColorSpace</a>:<br>DocumentColorSpace.RGB<br>DocumentColorSpace.CMYK</td><td>Choose color space only for documents saved with multiple color models (pre-Illustrator 9) (Optional)</td></tr>
+<tr class="lastRow"><td>options</td><td>
+						any
+					</td><td>Options for opening a particular type of file. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="paste"></a><span class="rett">void</span>  <span class="func">paste</span> ()<br>
+Paste clipboard into the current document.</p>
+
+<p class="spaceBelow"><a name="quit"></a><span class="rett">void</span>  <span class="func">quit</span> ()<br>
+Quit the application.</p>
+
+<p class="spaceBelow"><a name="redo"></a><span class="rett">void</span>  <span class="func">redo</span> ()<br>
+Redo the last transaction.</p>
+
+<p class="spaceBelow"><a name="redraw"></a><span class="rett">void</span>  <span class="func">redraw</span> ()<br>
+Force Illustrator to redraw its window(s)</p>
+
+<p class="spaceBelow"><a name="reflectCSAW"></a><span class="rett">void</span>  <span class="func">reflectCSAW</span> (<span class="arg">outputFolder</span>:
+<a href="pc_File.html">File</a>)<br>
+Generate Creative Suite ActionScript Wrappers in specified directory.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>outputFolder</td><td><a href="pc_File.html">File</a></td><td>Location for the output files.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="runAPITest"></a><span class="rett">void</span>  <span class="func">runAPITest</span> (<span class="arg">testName</span>:
+<span class="argt">string</span>)<br>
+Runs API Tests from the TestAPI Plug-in.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>testName</td><td><a href="pc_string.html">string</a></td><td>Arguments for Running Tests - eg. Name of Test/Suite.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="sendScriptMessage"></a>string <span class="func">sendScriptMessage</span> (<span class="arg">pluginName</span>:
+<span class="argt">string</span>, <span class="arg">messageSelector</span>:
+<span class="argt">string</span>, <span class="arg">inputString</span>:
+<span class="argt">string</span>)<br>
+Sends the script message to the required plugin.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>pluginName</td><td><a href="pc_string.html">string</a></td><td>Plugin to which message needs to be sent.</td></tr>
+<tr><td>messageSelector</td><td><a href="pc_string.html">string</a></td><td>Functionality that is to be executed.</td></tr>
+<tr class="lastRow"><td>inputString</td><td><a href="pc_string.html">string</a></td><td>Pass any data encoded in a string.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="showPresets"></a><a href="pc_Array.html">Array</a> of string <span class="func">showPresets</span> (<span class="arg">fileSpec</span>:
+<a href="pc_File.html">File</a>)<br>
+Get presets from the file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>fileSpec</td><td><a href="pc_File.html">File</a></td><td>File spec to import from.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="translatePlaceholderText"></a>string <span class="func">translatePlaceholderText</span> (<span class="arg">text</span>:
+<span class="argt">string</span>)<br>
+Translate the placeholder text to regular text. A method to enter unicode points in hex values.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>text</td><td><a href="pc_string.html">string</a></td><td>The placeholder text to be translated.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="translateString"></a>string <span class="func">translateString</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">source</span>:
+<span class="argt">string</span>)<br>
+Returns a string translated from the key and source data passed in.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The string to translate.</td></tr>
+<tr class="lastRow"><td>source</td><td><a href="pc_string.html">string</a></td><td>The plugin name from the source of the key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="undo"></a><span class="rett">void</span>  <span class="func">undo</span> ()<br>
+Undo the last transaction.</p>
+
+<p class="spaceBelow"><a name="unloadAction"></a><span class="rett">void</span>  <span class="func">unloadAction</span> (<span class="arg">setName</span>:
+<span class="argt">string</span>, <span class="arg">actionName</span>:
+<span class="argt">string</span>)<br>
+Unloads an action into action palette.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>setName</td><td><a href="pc_string.html">string</a></td><td>Name of the set to be unloaded.</td></tr>
+<tr class="lastRow"><td>actionName</td><td><a href="pc_string.html">string</a></td><td>Name of the action to be unloaded.</td></tr>
+</table>
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,131 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: TextPath</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, textpath">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>TextPath</h1></td></tr>
+<tr><td>&nbsp;</td><td>A text path item.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#setEntirePath" title="Set the path using the provided array of anchor points.">setEntirePath</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>TextPath</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="area"></a>area</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The area of this path in square points.</td></tr>
+<tr><td><a name="blendingMode"></a>blendingMode</td><td><a href="pe_BlendModes.html">BlendModes</a>:<br>BlendModes.NORMAL<br>BlendModes.MULTIPLY<br>BlendModes.SCREEN<br>BlendModes.OVERLAY<br>BlendModes.SOFTLIGHT<br>BlendModes.HARDLIGHT<br>BlendModes.COLORDODGE<br>BlendModes.COLORBURN<br>BlendModes.DARKEN<br>BlendModes.LIGHTEN<br>BlendModes.DIFFERENCE<br>BlendModes.EXCLUSION<br>BlendModes.HUE<br>BlendModes.SATURATIONBLEND<br>BlendModes.COLORBLEND<br>BlendModes.LUMINOSITY</td>
+<td>r/w</td><td>The mode used when compositing an object.</td></tr>
+<tr><td><a name="clipping"></a>clipping</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should this be used as a clipping path?</td></tr>
+<tr><td><a name="closed"></a>closed</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is this path closed?</td></tr>
+<tr><td><a name="editable"></a>editable</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Can the text path be modified.</td></tr>
+<tr><td><a name="evenodd"></a>evenodd</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the even-odd rule be used to determine insideness?</td></tr>
+<tr><td><a name="fillColor"></a>fillColor</td><td><a href="pc_Color.html">Color</a></td>
+<td>r/w</td><td>Fill color.</td></tr>
+<tr><td><a name="fillOverprint"></a>fillOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Will art beneath a filled object be overprinted?</td></tr>
+<tr><td><a name="filled"></a>filled</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the path be filled?</td></tr>
+<tr><td><a name="guides"></a>guides</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is this path a guide object?</td></tr>
+<tr><td><a name="height"></a>height</td><td><a href="pc_number.html">number</a> (range: 0.0 - 16348.0)</td>
+<td>r/w</td><td>The height of the text path.</td></tr>
+<tr><td><a name="left"></a>left</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The left position of the text path.</td></tr>
+<tr><td><a name="note"></a>note</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>Note assigned to the path.</td></tr>
+<tr><td><a name="opacity"></a>opacity</td><td><a href="pc_number.html">number</a> (range: 0.0 - 100.0)</td>
+<td>r/w</td><td>The object's opacity (between 0.0 and 100.0)</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="pathPoints"></a>pathPoints</td><td><a href="pc_PathPoints.html">PathPoints</a> <a class="sing" href="pc_PathPoint.html" title="A point on a path.">PathPoint</a></td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="polarity"></a>polarity</td><td><a href="pe_PolarityValues.html">PolarityValues</a>:<br>PolarityValues.POSITIVE<br>PolarityValues.NEGATIVE</td>
+<td>r/w</td><td>The polarity the path.</td></tr>
+<tr><td><a name="position"></a>position</td><td><a href="pc_Point.html">Point</a></td>
+<td>r/w</td><td>The position of the top left corner of the text path.</td></tr>
+<tr><td><a name="resolution"></a>resolution</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The resolution of the path.</td></tr>
+<tr><td><a name="selectedPathPoints"></a>selectedPathPoints</td><td>ObjectArray</td>
+<td>readonly</td><td>All the selected points in the path.</td></tr>
+<tr><td><a name="strokeCap"></a>strokeCap</td><td><a href="pe_StrokeCap.html">StrokeCap</a>:<br>StrokeCap.BUTTENDCAP<br>StrokeCap.ROUNDENDCAP<br>StrokeCap.PROJECTINGENDCAP</td>
+<td>r/w</td><td>Type of line capping.</td></tr>
+<tr><td><a name="strokeColor"></a>strokeColor</td><td><a href="pc_Color.html">Color</a></td>
+<td>r/w</td><td>Stroke color.</td></tr>
+<tr><td><a name="strokeDashOffset"></a>strokeDashOffset</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The default distance into the dash pattern at which the pattern should be started.</td></tr>
+<tr><td><a name="strokeDashes"></a>strokeDashes</td><td><a href="pc_Array.html">Array</a> of <a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Dash lengths (set to {} for a solid line)</td></tr>
+<tr><td><a name="strokeJoin"></a>strokeJoin</td><td><a href="pe_StrokeJoin.html">StrokeJoin</a>:<br>StrokeJoin.MITERENDJOIN<br>StrokeJoin.ROUNDENDJOIN<br>StrokeJoin.BEVELENDJOIN</td>
+<td>r/w</td><td>Type of joints.</td></tr>
+<tr><td><a name="strokeMiterLimit"></a>strokeMiterLimit</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Whether a join is mitered (pointed) or beveled (squared-off)</td></tr>
+<tr><td><a name="strokeOverprint"></a>strokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Will art beneath a stroked object be overprinted?</td></tr>
+<tr><td><a name="strokeWidth"></a>strokeWidth</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Width of stroke.</td></tr>
+<tr><td><a name="stroked"></a>stroked</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the path be stroked?</td></tr>
+<tr><td><a name="top"></a>top</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The top position of the text path.</td></tr>
+<tr><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+<tr class="lastRow"><td><a name="width"></a>width</td><td><a href="pc_number.html">number</a> (range: 0.0 - 16348.0)</td>
+<td>r/w</td><td>The width of the text path.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="setEntirePath"></a><span class="rett">void</span>  <span class="func">setEntirePath</span> (<span class="arg">pathPoints</span>:
+<a href="pc_Array.html">Array</a> of <span class="argt">any</span>)<br>
+Set the path using the provided array of anchor points.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>pathPoints</td><td><a href="pc_Array.html">Array</a> of 
+						any
+					</td><td>Array of anchor values for the path points.</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_TextFrameItem.html">TextFrameItem</a>.textPath</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

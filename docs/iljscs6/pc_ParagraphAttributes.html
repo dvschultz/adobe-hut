@@ -1,0 +1,129 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: ParagraphAttributes</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, paragraphattributes">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>ParagraphAttributes</h1></td></tr>
+<tr><td>&nbsp;</td><td>Properties of a paragraph.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>ParagraphAttributes</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="autoLeadingAmount"></a>autoLeadingAmount</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Auto leading amount (in percentage)</td></tr>
+<tr><td><a name="bunriKinshi"></a>bunriKinshi</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is BunriKinshi enabled?</td></tr>
+<tr><td><a name="burasagariType"></a>burasagariType</td><td><a href="pe_BurasagariTypeEnum.html">BurasagariTypeEnum</a>:<br>BurasagariTypeEnum.None<br>BurasagariTypeEnum.Standard<br>BurasagariTypeEnum.Forced</td>
+<td>r/w</td><td>The Burasagari type.</td></tr>
+<tr><td><a name="desiredGlyphScaling"></a>desiredGlyphScaling</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Desired glyph scaling expressed as a percentage.</td></tr>
+<tr><td><a name="desiredLetterSpacing"></a>desiredLetterSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Desired letter spacing expressed as a percentage.</td></tr>
+<tr><td><a name="desiredWordSpacing"></a>desiredWordSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Desired word spacing expressed as a percentage.</td></tr>
+<tr><td><a name="everyLineComposer"></a>everyLineComposer</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether to enable every line composer (as opposed to single line composer)?</td></tr>
+<tr><td><a name="firstLineIndent"></a>firstLineIndent</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>First line left indent expressed in points.</td></tr>
+<tr><td><a name="hyphenateCapitalizedWords"></a>hyphenateCapitalizedWords</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is hyphenation enabled for the capitalized words?</td></tr>
+<tr><td><a name="hyphenation"></a>hyphenation</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is hyphenation enabled for the paragraph?</td></tr>
+<tr><td><a name="hyphenationPreference"></a>hyphenationPreference</td><td><a href="pc_number.html">number</a> (range: 0 - 1)</td>
+<td>r/w</td><td>Hyphenation preference scale for better spacing (0) or fewer hyphens (1)</td></tr>
+<tr><td><a name="hyphenationZone"></a>hyphenationZone</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Size of the hyphenation zone.</td></tr>
+<tr><td><a name="justification"></a>justification</td><td><a href="pe_Justification.html">Justification</a>:<br>Justification.LEFT<br>Justification.RIGHT<br>Justification.CENTER<br>Justification.FULLJUSTIFYLASTLINELEFT<br>Justification.FULLJUSTIFYLASTLINERIGHT<br>Justification.FULLJUSTIFYLASTLINECENTER<br>Justification.FULLJUSTIFY</td>
+<td>r/w</td><td>Paragraph justification.</td></tr>
+<tr><td><a name="kinsoku"></a>kinsoku</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The Kinsoku Shori name.</td></tr>
+<tr><td><a name="kinsokuOrder"></a>kinsokuOrder</td><td><a href="pe_KinsokuOrderEnum.html">KinsokuOrderEnum</a>:<br>KinsokuOrderEnum.PUSHIN<br>KinsokuOrderEnum.PUSHOUTFIRST<br>KinsokuOrderEnum.PUSHOUTONLY</td>
+<td>r/w</td><td>The preferred Kinsoku order.</td></tr>
+<tr><td><a name="kurikaeshiMojiShori"></a>kurikaeshiMojiShori</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is KurikaeshiMojiShori enabled?</td></tr>
+<tr><td><a name="leadingType"></a>leadingType</td><td><a href="pe_AutoLeadingType.html">AutoLeadingType</a>:<br>AutoLeadingType.BOTTOMTOBOTTOM<br>AutoLeadingType.TOPTOTOP</td>
+<td>r/w</td><td>Auto leading type.</td></tr>
+<tr><td><a name="leftIndent"></a>leftIndent</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Left indent of margin expressed in points.</td></tr>
+<tr><td><a name="maximumConsecutiveHyphens"></a>maximumConsecutiveHyphens</td><td>Int32</td>
+<td>r/w</td><td>Maximum number of consecutive hypenated lines.</td></tr>
+<tr><td><a name="maximumGlyphScaling"></a>maximumGlyphScaling</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Maximum glyph scaling expressed as a percentage.</td></tr>
+<tr><td><a name="maximumLetterSpacing"></a>maximumLetterSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Maximum letter spacing expressed as a percentage.</td></tr>
+<tr><td><a name="maximumWordSpacing"></a>maximumWordSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Maximum word spacing expressed as a percentage.</td></tr>
+<tr><td><a name="minimumAfterHyphen"></a>minimumAfterHyphen</td><td>Int32</td>
+<td>r/w</td><td>Minimum number of characters after a hyphen.</td></tr>
+<tr><td><a name="minimumBeforeHyphen"></a>minimumBeforeHyphen</td><td>Int32</td>
+<td>r/w</td><td>Minimum number of characters before a hyphen.</td></tr>
+<tr><td><a name="minimumGlyphScaling"></a>minimumGlyphScaling</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Minimum glyph scaling expressed as a percentage.</td></tr>
+<tr><td><a name="minimumHyphenatedWordSize"></a>minimumHyphenatedWordSize</td><td>Int32</td>
+<td>r/w</td><td>Minimum hyphenated word size.</td></tr>
+<tr><td><a name="minimumLetterSpacing"></a>minimumLetterSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Minimum letter spacing expressed as a percentage.</td></tr>
+<tr><td><a name="minimumWordSpacing"></a>minimumWordSpacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Minimum word spacing expressed as a percentage.</td></tr>
+<tr><td><a name="mojikumi"></a>mojikumi</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The Mojikumi name.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="rightIndent"></a>rightIndent</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Right indent of margin expressed in points.</td></tr>
+<tr><td><a name="romanHanging"></a>romanHanging</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is Roman hanging punctuation enabled?</td></tr>
+<tr><td><a name="singleWordJustification"></a>singleWordJustification</td><td><a href="pe_Justification.html">Justification</a>:<br>Justification.LEFT<br>Justification.RIGHT<br>Justification.CENTER<br>Justification.FULLJUSTIFYLASTLINELEFT<br>Justification.FULLJUSTIFYLASTLINERIGHT<br>Justification.FULLJUSTIFYLASTLINECENTER<br>Justification.FULLJUSTIFY</td>
+<td>r/w</td><td>Single word justification.</td></tr>
+<tr><td><a name="spaceAfter"></a>spaceAfter</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Spacing after paragraph in points.</td></tr>
+<tr><td><a name="spaceBefore"></a>spaceBefore</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Spacing before paragraph in points.</td></tr>
+<tr><td><a name="tabStops"></a>tabStops</td><td><a href="pc_Array.html">Array</a> of <a href="pc_TabStopInfo.html">TabStopInfo</a></td>
+<td>r/w</td><td>Tab stop settings.</td></tr>
+<tr class="lastRow"><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+</table></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.paragraphAttributes</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextRange.html">TextRange</a>.paragraphAttributes</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

@@ -1,0 +1,156 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: Layer</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, layer">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Layer</h1></td></tr>
+<tr><td>&nbsp;</td><td>A layer.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#move" title="Move the object.">move</a>, <a href="#remove" title="Deletes this object.">remove</a>, <a href="#removeAll" title="Deletes all elements.">removeAll</a>, <a href="#zOrder" title="Arranges the layer relative to other layers.">zOrder</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Layer</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="artworkKnockout"></a>artworkKnockout</td><td><a href="pe_KnockoutState.html">KnockoutState</a>:<br>KnockoutState.Unknown<br>KnockoutState.DISABLED<br>KnockoutState.ENABLED<br>KnockoutState.INHERITED</td>
+<td>r/w</td><td>Is the artwork used to create a knockout.</td></tr>
+<tr><td><a name="blendingMode"></a>blendingMode</td><td><a href="pe_BlendModes.html">BlendModes</a>:<br>BlendModes.NORMAL<br>BlendModes.MULTIPLY<br>BlendModes.SCREEN<br>BlendModes.OVERLAY<br>BlendModes.SOFTLIGHT<br>BlendModes.HARDLIGHT<br>BlendModes.COLORDODGE<br>BlendModes.COLORBURN<br>BlendModes.DARKEN<br>BlendModes.LIGHTEN<br>BlendModes.DIFFERENCE<br>BlendModes.EXCLUSION<br>BlendModes.HUE<br>BlendModes.SATURATIONBLEND<br>BlendModes.COLORBLEND<br>BlendModes.LUMINOSITY</td>
+<td>r/w</td><td>The mode used when compositing an object.</td></tr>
+<tr><td><a name="color"></a>color</td><td><a href="pc_RGBColor.html">RGBColor</a></td>
+<td>r/w</td><td>Color used when outlining artwork in this layer.</td></tr>
+<tr><td><a name="compoundPathItems"></a>compoundPathItems</td><td><a href="pc_CompoundPathItems.html">CompoundPathItems</a> <a class="sing" href="pc_CompoundPathItem.html" title="Compound path artwork item.">CompoundPathItem</a></td>
+<td>readonly</td><td>The compound path artwork in this layer.</td></tr>
+<tr><td><a name="dimPlacedImages"></a>dimPlacedImages</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is rendered as dimmed in this layer?</td></tr>
+<tr><td><a name="graphItems"></a>graphItems</td><td><a href="pc_GraphItems.html">GraphItems</a> <a class="sing" href="pc_GraphItem.html" title="Graph artwork item.">GraphItem</a></td>
+<td>readonly</td><td>The graph art items in this layer.</td></tr>
+<tr><td><a name="groupItems"></a>groupItems</td><td><a href="pc_GroupItems.html">GroupItems</a> <a class="sing" href="pc_GroupItem.html" title="An artwork group item.">GroupItem</a></td>
+<td>readonly</td><td>The group items in this layer.</td></tr>
+<tr><td><a name="hasSelectedArtwork"></a>hasSelectedArtwork</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is any artwork in this layer selected? Setting this property to false deselects all artwork in the layer.</td></tr>
+<tr><td><a name="isIsolated"></a>isIsolated</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the artwork isolated.</td></tr>
+<tr><td><a name="layers"></a>layers</td><td><a href="pc_Layers.html">Layers</a> <a class="sing" href="pc_Layer.html" title="A layer.">Layer</a></td>
+<td>readonly</td><td>Nested layers.</td></tr>
+<tr><td><a name="legacyTextItems"></a>legacyTextItems</td><td><a href="pc_LegacyTextItems.html">LegacyTextItems</a> <a class="sing" href="pc_LegacyTextItem.html" title="Unconverted legacy text items from documents in pre-version 11 formats.">LegacyTextItem</a></td>
+<td>readonly</td><td>The text frame items in this story.</td></tr>
+<tr><td><a name="locked"></a>locked</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the layer editable?</td></tr>
+<tr><td><a name="meshItems"></a>meshItems</td><td><a href="pc_MeshItems.html">MeshItems</a> <a class="sing" href="pc_MeshItem.html" title="Mesh artwork item.">MeshItem</a></td>
+<td>readonly</td><td>The mesh art items in this layer.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The layer's name.</td></tr>
+<tr><td><a name="nonNativeItems"></a>nonNativeItems</td><td><a href="pc_NonNativeItems.html">NonNativeItems</a> <a class="sing" href="pc_NonNativeItem.html" title="Non-native artwork item.">NonNativeItem</a></td>
+<td>readonly</td><td>The non-native art items in this layer.</td></tr>
+<tr><td><a name="opacity"></a>opacity</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The layer's opacity (between 0.0 and 100.0)</td></tr>
+<tr><td><a name="pageItems"></a>pageItems</td><td><a href="pc_PageItems.html">PageItems</a> <a class="sing" href="pc_PageItem.html" title="A page item object.">PageItem</a></td>
+<td>readonly</td><td>All the artwork in this layer.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="pathItems"></a>pathItems</td><td><a href="pc_PathItems.html">PathItems</a> <a class="sing" href="pc_PathItem.html" title="An artwork path item.">PathItem</a></td>
+<td>readonly</td><td>The path artwork in this layer.</td></tr>
+<tr><td><a name="placedItems"></a>placedItems</td><td><a href="pc_PlacedItems.html">PlacedItems</a> <a class="sing" href="pc_PlacedItem.html" title="Placed artwork item.">PlacedItem</a></td>
+<td>readonly</td><td>The placed art items in this layer.</td></tr>
+<tr><td><a name="pluginItems"></a>pluginItems</td><td><a href="pc_PluginItems.html">PluginItems</a> <a class="sing" href="pc_PluginItem.html" title="Plugin artwork item.">PluginItem</a></td>
+<td>readonly</td><td>The plugin art items in this layer.</td></tr>
+<tr><td><a name="preview"></a>preview</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the layer rendered in preview mode?</td></tr>
+<tr><td><a name="printable"></a>printable</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the layer printable?</td></tr>
+<tr><td><a name="rasterItems"></a>rasterItems</td><td><a href="pc_RasterItems.html">RasterItems</a> <a class="sing" href="pc_RasterItem.html" title="Raster artwork item.">RasterItem</a></td>
+<td>readonly</td><td>The raster art items in this layer.</td></tr>
+<tr><td><a name="sliced"></a>sliced</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the layer sliced (default: false)</td></tr>
+<tr><td><a name="symbolItems"></a>symbolItems</td><td><a href="pc_SymbolItems.html">SymbolItems</a> <a class="sing" href="pc_SymbolItem.html" title="An instance of a Symbol.">SymbolItem</a></td>
+<td>readonly</td><td>The symbol items in this layer.</td></tr>
+<tr><td><a name="textFrames"></a>textFrames</td><td><a href="pc_TextFrameItems.html">TextFrameItems</a> <a class="sing" href="pc_TextFrameItem.html" title="Text frame item.">TextFrameItem</a></td>
+<td>readonly</td><td>The text frame items in this layer.</td></tr>
+<tr><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+<tr><td><a name="visible"></a>visible</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the layer visible?</td></tr>
+<tr class="lastRow"><td><a name="zOrderPosition"></a>zOrderPosition</td><td>Int32</td>
+<td>readonly</td><td>The drawing order of the layer.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="move"></a><a href="pc_Layer.html">Layer</a> <span class="func">move</span> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)<br>
+Move the object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>relativeObject</td><td><a href="pc_Object.html">Object</a></td><td></td></tr>
+<tr class="lastRow"><td>insertionLocation</td><td>ElementPlacement</td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes this object.</p>
+
+<p class="spaceBelow"><a name="removeAll"></a><span class="rett">void</span>  <span class="func">removeAll</span> ()<br>
+Deletes all elements.</p>
+
+<p class="spaceBelow"><a name="zOrder"></a><span class="rett">void</span>  <span class="func">zOrder</span> (<span class="arg">zOrderCmd</span>:
+<a href="pe_ZOrderMethod.html">ZOrderMethod</a>)<br>
+Arranges the layer relative to other layers.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>zOrderCmd</td><td><a href="pe_ZOrderMethod.html">ZOrderMethod</a>:<br>ZOrderMethod.BRINGTOFRONT<br>ZOrderMethod.BRINGFORWARD<br>ZOrderMethod.SENDBACKWARD<br>ZOrderMethod.SENDTOBACK</td><td>How to arrange the layer.</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Document.html">Document</a>.activeLayer</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ExportOptionsFlash.html">ExportOptionsFlash</a>.backgroundLayers</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a>.layer</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Layer</b> <b>Layer</b>.<a href="pc_Layer.html#move">move</a> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p>
+<p class="hangIndent"><b>Layer</b> <a href="pc_Layers.html#add">Layers.add</a> ()
+</p>
+<p class="hangIndent"><b>Layer</b> <a href="pc_Layers.html#getByName">Layers.getByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

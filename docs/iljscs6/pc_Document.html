@@ -1,0 +1,462 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: Document</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, document">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Document</h1></td></tr>
+<tr><td>&nbsp;</td><td>A document.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#activate" title="Activate the first window associated with the document.">activate</a>, <a href="#close" title="Close the specified document(s)">close</a>, <a href="#convertCoordinate" title="Converts the coordinate system of a single point from one coordinate system to another.">convertCoordinate</a>, <a href="#exportFile" title="Export the specified document(s)">exportFile</a>, <a href="#exportPDFPreset" title="Save all PDF presets to a file.">exportPDFPreset</a>, <a href="#exportPerspectiveGridPreset" title="Saves all perspective grid presets to a file.">exportPerspectiveGridPreset</a>, <a href="#exportPrintPreset" title="Export the current print setting to the preset file.">exportPrintPreset</a>, <a href="#exportVariables" title="Save datasets into an XML library. The datasets contain variables and their associated dynamic data.">exportVariables</a>, <a href="#fitArtboardToSelectedArt" title="Change the artboard to selected art bounds.">fitArtboardToSelectedArt</a>, <a href="#getPerspectiveActivePlane" title="Gets the active plane of the active perspective grid of the document.">getPerspectiveActivePlane</a>, <a href="#hidePerspectiveGrid" title="Hides the current active perspective grid for the document, if there is visible perspective grid.">hidePerspectiveGrid</a>, <a href="#imageCapture" title="Capture the artwork content inside the clip bound as raster image, and write out the captured image data into the target image file.">imageCapture</a>, <a href="#importCharacterStyles" title="Load the character styles from the Illustrator file.">importCharacterStyles</a>, <a href="#importPDFPreset" title="Load all PDF presets from a file.">importPDFPreset</a>, <a href="#importParagraphStyles" title="Load the paragraph styles from the Illustrator file.">importParagraphStyles</a>, <a href="#importPerspectiveGridPreset" title="Loads mentioned perspective grid preset, if preset name is specified, else loads all(if no preset name is specified) presets, from the specified file.">importPerspectiveGridPreset</a>, <a href="#importPrintPreset" title="Apply the named print preset from the file to the current print setting.">importPrintPreset</a>, <a href="#importVariables" title="Import a library containing datasets, variables and their associated dynamic data. Importing variables will overwrite existing variables and datasets.">importVariables</a>, <a href="#print" title="Print the document.">print</a>, <a href="#rasterize" title="Rasterize the source art(s) within the specified clip bounds. The source art(s) are disposed as a result of the rasterization.">rasterize</a>, <a href="#rearrangeArtboards" title="Rearrange Artboards in the document.">rearrangeArtboards</a>, <a href="#save" title="Save the document.">save</a>, <a href="#saveAs" title="Save the document with specific save options.">saveAs</a>, <a href="#selectObjectsOnActiveArtboard" title="Select art objects in active artboard.">selectObjectsOnActiveArtboard</a>, <a href="#selectPerspectivePreset" title="Selects a predefined preset to define grid for the current document.">selectPerspectivePreset</a>, <a href="#setPerspectiveActivePlane" title="Sets the active perspective plane for the active grid of the document.">setPerspectiveActivePlane</a>, <a href="#showPerspectiveGrid" title="Shows the current active perspective grid for the document, if no active perspective grid then shows the default perspective grid for the document.">showPerspectiveGrid</a>, <a href="#windowCapture" title="Capture the current document window to the target TIFF image file.">windowCapture</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Document</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="XMPString"></a>XMPString</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The XMP packet string associated with the document.</td></tr>
+<tr><td><a name="activeDataSet"></a>activeDataSet</td><td><a href="pc_DataSet.html">DataSet</a></td>
+<td>r/w</td><td>The active data set.</td></tr>
+<tr><td><a name="activeLayer"></a>activeLayer</td><td><a href="pc_Layer.html">Layer</a></td>
+<td>r/w</td><td>The active layer.</td></tr>
+<tr><td><a name="activeView"></a>activeView</td><td><a href="pc_View.html">View</a></td>
+<td>readonly</td><td>The document's current view.</td></tr>
+<tr><td><a name="artboards"></a>artboards</td><td><a href="pc_Artboards.html">Artboards</a> <a class="sing" href="pc_Artboard.html" title="An artboard object.">Artboard</a></td>
+<td>readonly</td><td>All artboards in the document.</td></tr>
+<tr><td><a name="brushes"></a>brushes</td><td><a href="pc_Brushes.html">Brushes</a></td>
+<td>readonly</td><td>The brushes defined in this document.</td></tr>
+<tr><td><a name="characterStyles"></a>characterStyles</td><td><a href="pc_CharacterStyles.html">CharacterStyles</a> <a class="sing" href="pc_CharacterStyle.html" title="A named style that remembers character attributes.">CharacterStyle</a></td>
+<td>readonly</td><td>The list of character styles in this document.</td></tr>
+<tr><td><a name="compoundPathItems"></a>compoundPathItems</td><td><a href="pc_CompoundPathItems.html">CompoundPathItems</a> <a class="sing" href="pc_CompoundPathItem.html" title="Compound path artwork item.">CompoundPathItem</a></td>
+<td>readonly</td><td>The compound path artwork in this collection.</td></tr>
+<tr><td><a name="cropBox"></a>cropBox</td><td><a href="pc_Rectangle.html">Rectangle</a></td>
+<td>r/w</td><td></td></tr>
+<tr><td><a name="cropStyle"></a>cropStyle</td><td><a href="pe_CropOptions.html">CropOptions</a>:<br>CropOptions.Standard<br>CropOptions.Japanese</td>
+<td>r/w</td><td></td></tr>
+<tr><td><a name="dataSets"></a>dataSets</td><td><a href="pc_DataSets.html">DataSets</a> <a class="sing" href="pc_DataSet.html" title="A set of variables and their associated dynamic data which will be used for dynamic publishing.">DataSet</a></td>
+<td>readonly</td><td>The data sets defined in this document.</td></tr>
+<tr><td><a name="defaultFillColor"></a>defaultFillColor</td><td><a href="pc_Color.html">Color</a></td>
+<td>r/w</td><td>Default fill color.</td></tr>
+<tr><td><a name="defaultFillOverprint"></a>defaultFillOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Will art beneath a filled object be overprinted by default?</td></tr>
+<tr><td><a name="defaultFilled"></a>defaultFilled</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should a new path be filled?</td></tr>
+<tr><td><a name="defaultStrokeCap"></a>defaultStrokeCap</td><td><a href="pe_StrokeCap.html">StrokeCap</a>:<br>StrokeCap.BUTTENDCAP<br>StrokeCap.ROUNDENDCAP<br>StrokeCap.PROJECTINGENDCAP</td>
+<td>r/w</td><td>Default type of line capping.</td></tr>
+<tr><td><a name="defaultStrokeColor"></a>defaultStrokeColor</td><td><a href="pc_Color.html">Color</a></td>
+<td>r/w</td><td>Default stroke color.</td></tr>
+<tr><td><a name="defaultStrokeDashOffset"></a>defaultStrokeDashOffset</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The default distance into the dash pattern at which the pattern should be started.</td></tr>
+<tr><td><a name="defaultStrokeDashes"></a>defaultStrokeDashes</td><td><a href="pc_Array.html">Array</a> of <a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Default dash lengths (set to {} for a solid line)</td></tr>
+<tr><td><a name="defaultStrokeJoin"></a>defaultStrokeJoin</td><td><a href="pe_StrokeJoin.html">StrokeJoin</a>:<br>StrokeJoin.MITERENDJOIN<br>StrokeJoin.ROUNDENDJOIN<br>StrokeJoin.BEVELENDJOIN</td>
+<td>r/w</td><td>Default type of joints.</td></tr>
+<tr><td><a name="defaultStrokeMiterLimit"></a>defaultStrokeMiterLimit</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Specifies whether a join is mitered (pointed) or beveled (squared-off) by default.</td></tr>
+<tr><td><a name="defaultStrokeOverprint"></a>defaultStrokeOverprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Will art beneath a stroked object be overprinted by default?</td></tr>
+<tr><td><a name="defaultStrokeWidth"></a>defaultStrokeWidth</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Default width of stroke.</td></tr>
+<tr><td><a name="defaultStroked"></a>defaultStroked</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should a new path be stroked?</td></tr>
+<tr><td><a name="documentColorSpace"></a>documentColorSpace</td><td><a href="pe_DocumentColorSpace.html">DocumentColorSpace</a>:<br>DocumentColorSpace.RGB<br>DocumentColorSpace.CMYK</td>
+<td>readonly</td><td>The color space used for the document.</td></tr>
+<tr><td><a name="fullName"></a>fullName</td><td><a href="pc_File.html">File</a></td>
+<td>readonly</td><td>The file associated with the document.</td></tr>
+<tr><td><a name="geometricBounds"></a>geometricBounds</td><td><a href="pc_Rectangle.html">Rectangle</a></td>
+<td>readonly</td><td>The bounds of the illustration excluding stroke width.</td></tr>
+<tr><td><a name="gradients"></a>gradients</td><td><a href="pc_Gradients.html">Gradients</a> <a class="sing" href="pc_Gradient.html" title="A gradient.">Gradient</a></td>
+<td>readonly</td><td>The gradients available in this document.</td></tr>
+<tr><td><a name="graphItems"></a>graphItems</td><td><a href="pc_GraphItems.html">GraphItems</a> <a class="sing" href="pc_GraphItem.html" title="Graph artwork item.">GraphItem</a></td>
+<td>readonly</td><td>The graph art items in this document.</td></tr>
+<tr><td><a name="graphicStyles"></a>graphicStyles</td><td><a href="pc_ArtStyles.html">ArtStyles</a> <a class="sing" href="pc_ArtStyle.html" title="An art style.">ArtStyle</a></td>
+<td>readonly</td><td>The graphic styles defined in this document.</td></tr>
+<tr><td><a name="groupItems"></a>groupItems</td><td><a href="pc_GroupItems.html">GroupItems</a> <a class="sing" href="pc_GroupItem.html" title="An artwork group item.">GroupItem</a></td>
+<td>readonly</td><td>The group items in this document.</td></tr>
+<tr><td><a name="height"></a>height</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="inkList"></a>inkList</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Ink.html">Ink</a></td>
+<td>readonly</td><td>The list of inks in this document.</td></tr>
+<tr><td><a name="kinsokuSet"></a>kinsokuSet</td><td><a href="pc_Array.html">Array</a> of <a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The Kinsoku set.</td></tr>
+<tr><td><a name="layers"></a>layers</td><td><a href="pc_Layers.html">Layers</a> <a class="sing" href="pc_Layer.html" title="A layer.">Layer</a></td>
+<td>readonly</td><td>The layers in this document.</td></tr>
+<tr><td><a name="legacyTextItems"></a>legacyTextItems</td><td><a href="pc_LegacyTextItems.html">LegacyTextItems</a> <a class="sing" href="pc_LegacyTextItem.html" title="Unconverted legacy text items from documents in pre-version 11 formats.">LegacyTextItem</a></td>
+<td>readonly</td><td>The text frame items in this story.</td></tr>
+<tr><td><a name="meshItems"></a>meshItems</td><td><a href="pc_MeshItems.html">MeshItems</a> <a class="sing" href="pc_MeshItem.html" title="Mesh artwork item.">MeshItem</a></td>
+<td>readonly</td><td>The mesh art items in this document.</td></tr>
+<tr><td><a name="mojikumiSet"></a>mojikumiSet</td><td><a href="pc_Array.html">Array</a> of <a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The Mojikumi set.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The document's name.</td></tr>
+<tr><td><a name="nonNativeItems"></a>nonNativeItems</td><td><a href="pc_NonNativeItems.html">NonNativeItems</a> <a class="sing" href="pc_NonNativeItem.html" title="Non-native artwork item.">NonNativeItem</a></td>
+<td>readonly</td><td>The non-native art items in this document.</td></tr>
+<tr><td><a name="outputResolution"></a>outputResolution</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="pageItems"></a>pageItems</td><td><a href="pc_PageItems.html">PageItems</a> <a class="sing" href="pc_PageItem.html" title="A page item object.">PageItem</a></td>
+<td>readonly</td><td>All the artwork in this document.</td></tr>
+<tr><td><a name="pageOrigin"></a>pageOrigin</td><td><a href="pc_Point.html">Point</a></td>
+<td>r/w</td><td></td></tr>
+<tr><td><a name="paragraphStyles"></a>paragraphStyles</td><td><a href="pc_ParagraphStyles.html">ParagraphStyles</a> <a class="sing" href="pc_ParagraphStyle.html" title="A named style that remembers paragraph attributes.">ParagraphStyle</a></td>
+<td>readonly</td><td>The list of paragraph styles in this document.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="path"></a>path</td><td><a href="pc_File.html">File</a></td>
+<td>readonly</td><td>Path specification for the document.</td></tr>
+<tr><td><a name="pathItems"></a>pathItems</td><td><a href="pc_PathItems.html">PathItems</a> <a class="sing" href="pc_PathItem.html" title="An artwork path item.">PathItem</a></td>
+<td>readonly</td><td>The path artwork in this document.</td></tr>
+<tr><td><a name="patterns"></a>patterns</td><td><a href="pc_Patterns.html">Patterns</a> <a class="sing" href="pc_Pattern.html" title="A pattern.">Pattern</a></td>
+<td>readonly</td><td>The patterns available in this document.</td></tr>
+<tr><td><a name="placedItems"></a>placedItems</td><td><a href="pc_PlacedItems.html">PlacedItems</a> <a class="sing" href="pc_PlacedItem.html" title="Placed artwork item.">PlacedItem</a></td>
+<td>readonly</td><td>The placed art items in this document.</td></tr>
+<tr><td><a name="pluginItems"></a>pluginItems</td><td><a href="pc_PluginItems.html">PluginItems</a> <a class="sing" href="pc_PluginItem.html" title="Plugin artwork item.">PluginItem</a></td>
+<td>readonly</td><td>The plugin art items in this document.</td></tr>
+<tr><td><a name="printTiles"></a>printTiles</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="rasterEffectSettings"></a>rasterEffectSettings</td><td><a href="pc_RasterEffectOptions.html">RasterEffectOptions</a></td>
+<td>r/w</td><td>The document raster effects settings.</td></tr>
+<tr><td><a name="rasterItems"></a>rasterItems</td><td><a href="pc_RasterItems.html">RasterItems</a> <a class="sing" href="pc_RasterItem.html" title="Raster artwork item.">RasterItem</a></td>
+<td>readonly</td><td>The raster art items in this document.</td></tr>
+<tr><td><a name="rulerOrigin"></a>rulerOrigin</td><td><a href="pc_Point.html">Point</a></td>
+<td>r/w</td><td></td></tr>
+<tr><td><a name="rulerUnits"></a>rulerUnits</td><td><a href="pe_RulerUnits.html">RulerUnits</a>:<br>RulerUnits.Unknown<br>RulerUnits.Inches<br>RulerUnits.Centimeters<br>RulerUnits.Points<br>RulerUnits.Picas<br>RulerUnits.Millimeters<br>RulerUnits.Qs<br>RulerUnits.Pixels</td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="saved"></a>saved</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Has the document been saved?</td></tr>
+<tr><td><a name="selection"></a>selection</td><td>any</td>
+<td>r/w</td><td>The selection within the document.</td></tr>
+<tr><td><a name="showPlacedImages"></a>showPlacedImages</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="splitLongPaths"></a>splitLongPaths</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="spots"></a>spots</td><td><a href="pc_Spots.html">Spots</a> <a class="sing" href="pc_Spot.html" title="A custom color.">Spot</a></td>
+<td>readonly</td><td>The custom spot colors available in this document.</td></tr>
+<tr><td><a name="stationery"></a>stationery</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Is the file a stationery file?</td></tr>
+<tr><td><a name="stories"></a>stories</td><td><a href="pc_Stories.html">Stories</a> <a class="sing" href="pc_Story.html" title="A contiguous block of text.">Story</a></td>
+<td>readonly</td><td>The story items in this document.</td></tr>
+<tr><td><a name="swatchGroups"></a>swatchGroups</td><td><a href="pc_SwatchGroups.html">SwatchGroups</a> <a class="sing" href="pc_SwatchGroup.html" title="A Swatch group.">SwatchGroup</a></td>
+<td>readonly</td><td>The Swatch Groups in this document.</td></tr>
+<tr><td><a name="swatches"></a>swatches</td><td><a href="pc_Swatches.html">Swatches</a></td>
+<td>readonly</td><td>The swatches in this document.</td></tr>
+<tr><td><a name="symbolItems"></a>symbolItems</td><td><a href="pc_SymbolItems.html">SymbolItems</a> <a class="sing" href="pc_SymbolItem.html" title="An instance of a Symbol.">SymbolItem</a></td>
+<td>readonly</td><td>The symbol items in this document.</td></tr>
+<tr><td><a name="symbols"></a>symbols</td><td><a href="pc_Symbols.html">Symbols</a> <a class="sing" href="pc_Symbol.html" title="A symbol.">Symbol</a></td>
+<td>readonly</td><td>The symbols defined in this document.</td></tr>
+<tr><td><a name="tags"></a>tags</td><td><a href="pc_Tags.html">Tags</a> <a class="sing" href="pc_Tag.html" title="A tag associated with a piece of artwork.">Tag</a></td>
+<td>readonly</td><td>The tags in this document.</td></tr>
+<tr><td><a name="textFrames"></a>textFrames</td><td><a href="pc_TextFrameItems.html">TextFrameItems</a> <a class="sing" href="pc_TextFrameItem.html" title="Text frame item.">TextFrameItem</a></td>
+<td>readonly</td><td>The text frame items in this document.</td></tr>
+<tr><td><a name="tileFullPages"></a>tileFullPages</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+<tr><td><a name="useDefaultScreen"></a>useDefaultScreen</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td></td></tr>
+<tr><td><a name="variables"></a>variables</td><td><a href="pc_Variables.html">Variables</a> <a class="sing" href="pc_Variable.html" title="Dynamic object used to create data-driven graphics.">Variable</a></td>
+<td>readonly</td><td>The variables defined in this document.</td></tr>
+<tr><td><a name="variablesLocked"></a>variablesLocked</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>The locked variables.</td></tr>
+<tr><td><a name="views"></a>views</td><td><a href="pc_Views.html">Views</a> <a class="sing" href="pc_View.html" title="A view.">View</a></td>
+<td>readonly</td><td>The views in this document.</td></tr>
+<tr><td><a name="visibleBounds"></a>visibleBounds</td><td><a href="pc_Rectangle.html">Rectangle</a></td>
+<td>readonly</td><td>The visible bounds of the illustration including stroke width.</td></tr>
+<tr class="lastRow"><td><a name="width"></a>width</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td></td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="activate"></a><span class="rett">void</span>  <span class="func">activate</span> ()<br>
+Activate the first window associated with the document.</p>
+
+<p class="spaceBelow"><a name="close"></a><span class="rett">void</span>  <span class="func">close</span> ([<span class="arg">saving</span>:
+<a href="pe_SaveOptions.html">SaveOptions</a>])<br>
+Close the specified document(s)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>saving</td><td><a href="pe_SaveOptions.html">SaveOptions</a>:<br>SaveOptions.SAVECHANGES<br>SaveOptions.DONOTSAVECHANGES<br>SaveOptions.PROMPTTOSAVECHANGES</td><td>Specifies whether changes should be saved before closing. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="convertCoordinate"></a><a href="pc_Point.html">Point</a> <span class="func">convertCoordinate</span> (<span class="arg">coordinate</span>:
+<a href="pc_Point.html">Point</a>, <span class="arg">source</span>:
+<a href="pe_CoordinateSystem.html">CoordinateSystem</a>, <span class="arg">destination</span>:
+<a href="pe_CoordinateSystem.html">CoordinateSystem</a>)<br>
+Converts the coordinate system of a single point from one coordinate system to another.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>coordinate</td><td><a href="pc_Point.html">Point</a></td><td>The Coordinate to convert.</td></tr>
+<tr><td>source</td><td><a href="pe_CoordinateSystem.html">CoordinateSystem</a>:<br>CoordinateSystem.DOCUMENTCOORDINATESYSTEM<br>CoordinateSystem.ARTBOARDCOORDINATESYSTEM</td><td>The source coordinate system.</td></tr>
+<tr class="lastRow"><td>destination</td><td><a href="pe_CoordinateSystem.html">CoordinateSystem</a>:<br>CoordinateSystem.DOCUMENTCOORDINATESYSTEM<br>CoordinateSystem.ARTBOARDCOORDINATESYSTEM</td><td>The destination coordinate system.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="exportFile"></a><span class="rett">void</span>  <span class="func">exportFile</span> (<span class="arg">exportFile</span>:
+<a href="pc_File.html">File</a>, <span class="arg">exportFormat</span>:
+<a href="pe_ExportType.html">ExportType</a>[, <span class="arg">options</span>:
+<span class="argt">any</span>])<br>
+Export the specified document(s)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>exportFile</td><td><a href="pc_File.html">File</a></td><td>The file to export the document to.</td></tr>
+<tr><td>exportFormat</td><td><a href="pe_ExportType.html">ExportType</a>:<br>ExportType.JPEG<br>ExportType.PHOTOSHOP<br>ExportType.SVG<br>ExportType.PNG8<br>ExportType.PNG24<br>ExportType.GIF<br>ExportType.FLASH<br>ExportType.AUTOCAD<br>ExportType.TIFF</td><td>The file type to export the document as.</td></tr>
+<tr class="lastRow"><td>options</td><td>
+						any
+					</td><td>Options for the file type specified. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="exportPDFPreset"></a><span class="rett">void</span>  <span class="func">exportPDFPreset</span> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>)<br>
+Save all PDF presets to a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>file</td><td><a href="pc_File.html">File</a></td><td>File to export to.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="exportPerspectiveGridPreset"></a><span class="rett">void</span>  <span class="func">exportPerspectiveGridPreset</span> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>)<br>
+Saves all perspective grid presets to a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>file</td><td><a href="pc_File.html">File</a></td><td>File to export to.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="exportPrintPreset"></a><span class="rett">void</span>  <span class="func">exportPrintPreset</span> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>)<br>
+Export the current print setting to the preset file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>file</td><td><a href="pc_File.html">File</a></td><td>File to export to.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="exportVariables"></a><span class="rett">void</span>  <span class="func">exportVariables</span> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>)<br>
+Save datasets into an XML library. The datasets contain variables and their associated dynamic data.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>file</td><td><a href="pc_File.html">File</a></td><td>File spec to export to.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="fitArtboardToSelectedArt"></a><a href="pc_Boolean.html">bool</a>  <span class="func">fitArtboardToSelectedArt</span> ([<span class="arg">index</span>:
+<span class="argt">Int32</span>])<br>
+Change the artboard to selected art bounds.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>index</td><td>Int32</td><td>The index of the artboard to update. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getPerspectiveActivePlane"></a><a href="pe_PerspectiveGridPlaneType.html">PerspectiveGridPlaneType</a> <span class="func">getPerspectiveActivePlane</span> ()<br>
+Gets the active plane of the active perspective grid of the document.</p>
+
+<p class="spaceBelow"><a name="hidePerspectiveGrid"></a><a href="pc_Boolean.html">bool</a>  <span class="func">hidePerspectiveGrid</span> ()<br>
+Hides the current active perspective grid for the document, if there is visible perspective grid.</p>
+
+<p class="spaceBelow"><a name="imageCapture"></a><span class="rett">void</span>  <span class="func">imageCapture</span> (<span class="arg">imageFile</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">clipBounds</span>:
+<a href="pc_Rectangle.html">Rectangle</a>][, <span class="arg">options</span>:
+<a href="pc_ImageCaptureOptions.html">ImageCaptureOptions</a>])<br>
+Capture the artwork content inside the clip bound as raster image, and write out the captured image data into the target image file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>imageFile</td><td><a href="pc_File.html">File</a></td><td>The file to which the captured image should be written.</td></tr>
+<tr><td>clipBounds</td><td><a href="pc_Rectangle.html">Rectangle</a></td><td>The rectangular region of the artwork for image capture. If the parameter is omitted, the entire artwork bound is captured. (Optional)</td></tr>
+<tr class="lastRow"><td>options</td><td><a href="pc_ImageCaptureOptions.html">ImageCaptureOptions</a></td><td>Describes the image capture options. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="importCharacterStyles"></a><span class="rett">void</span>  <span class="func">importCharacterStyles</span> (<span class="arg">fileSpec</span>:
+<a href="pc_File.html">File</a>)<br>
+Load the character styles from the Illustrator file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>fileSpec</td><td><a href="pc_File.html">File</a></td><td>File spec to import from.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="importPDFPreset"></a><span class="rett">void</span>  <span class="func">importPDFPreset</span> (<span class="arg">fileSpec</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">replacingPreset</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Load all PDF presets from a file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>fileSpec</td><td><a href="pc_File.html">File</a></td><td>File to import from.</td></tr>
+<tr class="lastRow"><td>replacingPreset</td><td><a href="pc_Boolean.html">bool</a></td><td>Should existing editable presets be replaced? (default: <b>false</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="importParagraphStyles"></a><span class="rett">void</span>  <span class="func">importParagraphStyles</span> (<span class="arg">fileSpec</span>:
+<a href="pc_File.html">File</a>)<br>
+Load the paragraph styles from the Illustrator file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>fileSpec</td><td><a href="pc_File.html">File</a></td><td>File spec to import from.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="importPerspectiveGridPreset"></a><span class="rett">void</span>  <span class="func">importPerspectiveGridPreset</span> (<span class="arg">fileSpec</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">perspectivePreset</span>:
+<span class="argt">string</span>])<br>
+Loads mentioned perspective grid preset, if preset name is specified, else loads all(if no preset name is specified) presets, from the specified file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>fileSpec</td><td><a href="pc_File.html">File</a></td><td>File to import from.</td></tr>
+<tr class="lastRow"><td>perspectivePreset</td><td><a href="pc_string.html">string</a></td><td>Name of perspective grid preset. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="importPrintPreset"></a><span class="rett">void</span>  <span class="func">importPrintPreset</span> (<span class="arg">printPreset</span>:
+<span class="argt">string</span>, <span class="arg">fileSpec</span>:
+<a href="pc_File.html">File</a>)<br>
+Apply the named print preset from the file to the current print setting.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>printPreset</td><td><a href="pc_string.html">string</a></td><td>The name of a print preset to import.</td></tr>
+<tr class="lastRow"><td>fileSpec</td><td><a href="pc_File.html">File</a></td><td>File to import from.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="importVariables"></a><span class="rett">void</span>  <span class="func">importVariables</span> (<span class="arg">fileSpec</span>:
+<a href="pc_File.html">File</a>)<br>
+Import a library containing datasets, variables and their associated dynamic data. Importing variables will overwrite existing variables and datasets.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>fileSpec</td><td><a href="pc_File.html">File</a></td><td>File spec to import from.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="print"></a><span class="rett">void</span>  <span class="func">print</span> ([<span class="arg">options</span>:
+<a href="pc_PrintOptions.html">PrintOptions</a>])<br>
+Print the document.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>options</td><td><a href="pc_PrintOptions.html">PrintOptions</a></td><td>Print options. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="rasterize"></a><a href="pc_PageItem.html">PageItem</a> <span class="func">rasterize</span> (<span class="arg">sourceArt</span>:
+<span class="argt">any</span>[, <span class="arg">clipBounds</span>:
+<a href="pc_Rectangle.html">Rectangle</a>][, <span class="arg">options</span>:
+<a href="pc_RasterizeOptions.html">RasterizeOptions</a>])<br>
+Rasterize the source art(s) within the specified clip bounds. The source art(s) are disposed as a result of the rasterization.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>sourceArt</td><td>
+						any
+					</td><td>The page item(s) to be rasterized.</td></tr>
+<tr><td>clipBounds</td><td><a href="pc_Rectangle.html">Rectangle</a></td><td>The rectangular region of the artwork for the rasterization. If the parameter is omitted, the bounds of the source art(s) is used instead. (Optional)</td></tr>
+<tr class="lastRow"><td>options</td><td><a href="pc_RasterizeOptions.html">RasterizeOptions</a></td><td>Describes the rasterization options. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="rearrangeArtboards"></a><a href="pc_Boolean.html">bool</a>  <span class="func">rearrangeArtboards</span> ([<span class="arg">artboardLayout</span>:
+<a href="pe_DocumentArtboardLayout.html">DocumentArtboardLayout</a>=<span class="defv">DocumentArtboardLayout.GridByRow</span>][, <span class="arg">artboardRowsOrCols</span>:
+<span class="argt">Int32</span>=<span class="defv">1</span>][, <span class="arg">artboardSpacing</span>:
+<span class="argt">number</span>=<span class="defv">20.0</span>][, <span class="arg">artboardMoveArtwork</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])<br>
+Rearrange Artboards in the document.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>artboardLayout</td><td><a href="pe_DocumentArtboardLayout.html">DocumentArtboardLayout</a>:<br>DocumentArtboardLayout.GridByRow<br>DocumentArtboardLayout.GridByCol<br>DocumentArtboardLayout.Row<br>DocumentArtboardLayout.Column<br>DocumentArtboardLayout.RLGridByRow<br>DocumentArtboardLayout.RLGridByCol<br>DocumentArtboardLayout.RLRow</td><td>Layout of artboards for rearrangement. (default: <b>DocumentArtboardLayout.GridByRow</b>) (Optional)</td></tr>
+<tr><td>artboardRowsOrCols</td><td>Int32</td><td>Number of rows (for rows layout) OR column(for column layouts)of artboards.Range is 1 to (docNumArtboards - 1) or 1 for single row or column layouts. (default: <b>1</b>) (Optional)</td></tr>
+<tr><td>artboardSpacing</td><td><a href="pc_number.html">number</a></td><td>Spacing between artboards. (default: <b>20.0</b>) (Optional)</td></tr>
+<tr class="lastRow"><td>artboardMoveArtwork</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to move artwork with artboards. (default: <b>true</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="save"></a><span class="rett">void</span>  <span class="func">save</span> ()<br>
+Save the document.</p>
+
+<p class="spaceBelow"><a name="saveAs"></a><span class="rett">void</span>  <span class="func">saveAs</span> (<span class="arg">saveIn</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">options</span>:
+<span class="argt">any</span>])<br>
+Save the document with specific save options.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>saveIn</td><td><a href="pc_File.html">File</a></td><td>The file to save the document in.</td></tr>
+<tr class="lastRow"><td>options</td><td>
+						any
+					</td><td>Options for the file type specified. (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="selectObjectsOnActiveArtboard"></a><a href="pc_Boolean.html">bool</a>  <span class="func">selectObjectsOnActiveArtboard</span> ()<br>
+Select art objects in active artboard.</p>
+
+<p class="spaceBelow"><a name="selectPerspectivePreset"></a><a href="pc_Boolean.html">bool</a>  <span class="func">selectPerspectivePreset</span> (<span class="arg">perspectivePreset</span>:
+<span class="argt">string</span>)<br>
+Selects a predefined preset to define grid for the current document.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>perspectivePreset</td><td><a href="pc_string.html">string</a></td><td>Name of perspective grid preset.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setPerspectiveActivePlane"></a><a href="pc_Boolean.html">bool</a>  <span class="func">setPerspectiveActivePlane</span> (<span class="arg">perspectiveGridPlane</span>:
+<a href="pe_PerspectiveGridPlaneType.html">PerspectiveGridPlaneType</a>)<br>
+Sets the active perspective plane for the active grid of the document.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>perspectiveGridPlane</td><td><a href="pe_PerspectiveGridPlaneType.html">PerspectiveGridPlaneType</a>:<br>PerspectiveGridPlaneType.NOPLANE<br>PerspectiveGridPlaneType.LEFTPLANE<br>PerspectiveGridPlaneType.RIGHTPLANE<br>PerspectiveGridPlaneType.FLOORPLANE</td><td>Type of perspective grid plane.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="showPerspectiveGrid"></a><a href="pc_Boolean.html">bool</a>  <span class="func">showPerspectiveGrid</span> ()<br>
+Shows the current active perspective grid for the document, if no active perspective grid then shows the default perspective grid for the document.</p>
+
+<p class="spaceBelow"><a name="windowCapture"></a><span class="rett">void</span>  <span class="func">windowCapture</span> (<span class="arg">imageFile</span>:
+<a href="pc_File.html">File</a>, <span class="arg">windowSize</span>:
+<a href="pc_Point.html">Point</a>)<br>
+Capture the current document window to the target TIFF image file.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>imageFile</td><td><a href="pc_File.html">File</a></td><td>The TIFF file to which the captured image should be written.</td></tr>
+<tr class="lastRow"><td>windowSize</td><td><a href="pc_Point.html">Point</a></td><td>The size to make the window before capture.</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.activeDocument</p>
+</p>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Document</b> <a href="pc_Application.html#open">Application.open</a> (<span class="arg">file</span>:
+<a href="pc_File.html">File</a>[, <span class="arg">documentColorSpace</span>:
+<a href="pe_DocumentColorSpace.html">DocumentColorSpace</a>][, <span class="arg">options</span>:
+<span class="argt">any</span>])
+</p>
+<p class="hangIndent"><b>Document</b> <a href="pc_Documents.html#add">Documents.add</a> ([<span class="arg">documentColorSpace</span>:
+<a href="pe_DocumentColorSpace.html">DocumentColorSpace</a>=<span class="defv">DocumentColorSpace.CMYK</span>][, <span class="arg">width</span>:
+<span class="argt">number</span>=<span class="defv">612.0</span>][, <span class="arg">height</span>:
+<span class="argt">number</span>=<span class="defv">792.0</span>][, <span class="arg">numArtboards</span>:
+<span class="argt">Int32</span>=<span class="defv">1</span>][, <span class="arg">artboardLayout</span>:
+<a href="pe_DocumentArtboardLayout.html">DocumentArtboardLayout</a>=<span class="defv">DocumentArtboardLayout.GridByRow</span>][, <span class="arg">artboardSpacing</span>:
+<span class="argt">number</span>=<span class="defv">20.0</span>][, <span class="arg">artboardRowsOrCols</span>:
+<span class="argt">Int32</span>=<span class="defv">1</span>])
+</p>
+<p class="hangIndent"><b>Document</b> <a href="pc_Documents.html#addDocument">Documents.addDocument</a> (<span class="arg">startupPreset</span>:
+<span class="argt">string</span>, <span class="arg">presetSettings</span>:
+<a href="pc_DocumentPreset.html">DocumentPreset</a>)
+</p>
+<p class="hangIndent"><b>Document</b> <a href="pc_Documents.html#getByName">Documents.getByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

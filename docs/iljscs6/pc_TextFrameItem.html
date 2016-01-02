@@ -1,0 +1,201 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: TextFrameItem</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, textframeitem">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>TextFrameItem</h1></td></tr>
+<tr><td>&nbsp;</td><td>Text frame item. Base Class: <a href="pc_PageItem.html">PageItem</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#createOutline" title="Convert text item to path items.">createOutline</a>, <a href="#duplicate" title="Duplicate this object.">duplicate</a>, <a href="#move" title="Move the object.">move</a>, <a href="#remove" title="Deletes this object.">remove</a>, <a href="#removeAll" title="Deletes all elements.">removeAll</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_PageItem.html">PageItem</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>TextFrameItem</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="anchor"></a>anchor</td><td><a href="pc_Point.html">Point</a></td>
+<td>r/w</td><td>The position of the anchor point (start of base line for point text)</td></tr>
+<tr><td><a name="antialias"></a>antialias</td><td><a href="pe_TextAntialias.html">TextAntialias</a>:<br>TextAntialias.NONE<br>TextAntialias.SHARP<br>TextAntialias.CRISP<br>TextAntialias.STRONG</td>
+<td>r/w</td><td>The type of a text anti-aliasing on text frame item.</td></tr>
+<tr><td><a name="characters"></a>characters</td><td><a href="pc_Characters.html">Characters</a></td>
+<td>readonly</td><td>All the characters in this text range.</td></tr>
+<tr><td><a name="columnCount"></a>columnCount</td><td>Int32</td>
+<td>r/w</td><td>The column count in the text frame (area text only)</td></tr>
+<tr><td><a name="columnGutter"></a>columnGutter</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The column gutter in the text frame (area text only)</td></tr>
+<tr><td><a name="contentVariable"></a>contentVariable</td><td>any</td>
+<td>r/w</td><td>The content variable bound to this text art item.</td></tr>
+<tr><td><a name="contents"></a>contents</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The text contents of this text frame.</td></tr>
+<tr><td><a name="endTValue"></a>endTValue</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The end position of text along a path, as a value relative to the path's segments (path text only)</td></tr>
+<tr><td><a name="firstBaseline"></a>firstBaseline</td><td><a href="pe_FirstBaselineType.html">FirstBaselineType</a>:<br>FirstBaselineType.BASELINEASCENT<br>FirstBaselineType.BASELINECAPHEIGHT<br>FirstBaselineType.BASELINELEADING<br>FirstBaselineType.BASELINEXHEIGHT<br>FirstBaselineType.BASELINEEMBOXHEIGHT<br>FirstBaselineType.BASELINEFIXED<br>FirstBaselineType.BASELINELEGACY</td>
+<td>r/w</td><td>The first baseline offset type for text frame item (for Area Text only)</td></tr>
+<tr><td><a name="firstBaselineMin"></a>firstBaselineMin</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The first baseline offset minimum value for text frame item (for Area Text only)</td></tr>
+<tr><td><a name="flowLinksHorizontally"></a>flowLinksHorizontally</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Flow text between linked frame horizontally first. (area text only)</td></tr>
+<tr><td><a name="insertionPoints"></a>insertionPoints</td><td><a href="pc_InsertionPoints.html">InsertionPoints</a> <a class="sing" href="pc_InsertionPoint.html" title="A location between characters, used to insert new text objects.">InsertionPoint</a></td>
+<td>readonly</td><td>All the insertion points in this text range.</td></tr>
+<tr><td><a name="kind"></a>kind</td><td><a href="pe_TextType.html">TextType</a>:<br>TextType.POINTTEXT<br>TextType.AREATEXT<br>TextType.PATHTEXT</td>
+<td>readonly</td><td>The type of a text frame item.</td></tr>
+<tr><td><a name="lines"></a>lines</td><td><a href="pc_Lines.html">Lines</a></td>
+<td>readonly</td><td>All the lines in this text range.</td></tr>
+<tr><td><a name="matrix"></a>matrix</td><td><a href="pc_Matrix.html">Matrix</a></td>
+<td>readonly</td><td>The transformation matrix of the text frame object.</td></tr>
+<tr><td><a name="nextFrame"></a>nextFrame</td><td><b>TextFrameItem</b></td>
+<td>r/w</td><td>The linked text frame following this one.</td></tr>
+<tr><td><a name="opticalAlignment"></a>opticalAlignment</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the optical alignment active?</td></tr>
+<tr><td><a name="orientation"></a>orientation</td><td><a href="pe_TextOrientation.html">TextOrientation</a>:<br>TextOrientation.HORIZONTAL<br>TextOrientation.VERTICAL</td>
+<td>r/w</td><td>The orientation of the text in the frame.</td></tr>
+<tr><td><a name="paragraphs"></a>paragraphs</td><td><a href="pc_Paragraphs.html">Paragraphs</a></td>
+<td>readonly</td><td>All the paragraphs in this text range.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="previousFrame"></a>previousFrame</td><td><b>TextFrameItem</b></td>
+<td>r/w</td><td>The linked text frame preceding this one.</td></tr>
+<tr><td><a name="rowCount"></a>rowCount</td><td>Int32</td>
+<td>r/w</td><td>The row count in the text frame (area text only)</td></tr>
+<tr><td><a name="rowGutter"></a>rowGutter</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The row gutter in the text frame (area text only)</td></tr>
+<tr><td><a name="spacing"></a>spacing</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount of spacing (path text only)</td></tr>
+<tr><td><a name="startTValue"></a>startTValue</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The start position of text along a path, as a value relative to the path's segments (path text only)</td></tr>
+<tr><td><a name="story"></a>story</td><td><a href="pc_Story.html">Story</a></td>
+<td>readonly</td><td>The story of the text frame.</td></tr>
+<tr><td><a name="textPath"></a>textPath</td><td><a href="pc_TextPath.html">TextPath</a></td>
+<td>readonly</td><td>The path for the text frame (area and path text)</td></tr>
+<tr><td><a name="textRange"></a>textRange</td><td><a href="pc_TextRange.html">TextRange</a></td>
+<td>readonly</td><td>The text range of the text frame.</td></tr>
+<tr><td><a name="textRanges"></a>textRanges</td><td><a href="pc_TextRanges.html">TextRanges</a> <a class="sing" href="pc_TextRange.html" title="A range of characters from a text item.">TextRange</a></td>
+<td>readonly</td><td>All the text in this text range.</td></tr>
+<tr><td><a name="textSelection"></a>textSelection</td><td><a href="pc_Array.html">Array</a> of <a href="pc_TextRange.html">TextRange</a></td>
+<td>readonly</td><td>The selected text (ranges) in the story.</td></tr>
+<tr><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+<tr class="lastRow"><td><a name="words"></a>words</td><td><a href="pc_Words.html">Words</a></td>
+<td>readonly</td><td>All the words in this text range.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="createOutline"></a><a href="pc_GroupItem.html">GroupItem</a> <span class="func">createOutline</span> ()<br>
+Convert text item to path items.</p>
+
+<p class="spaceBelow"><a name="duplicate"></a><a href="pc_TextFrameItem.html">TextFrameItem</a> <span class="func">duplicate</span> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)<br>
+Duplicate this object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>relativeObject</td><td><a href="pc_Object.html">Object</a></td><td></td></tr>
+<tr class="lastRow"><td>insertionLocation</td><td>ElementPlacement</td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="move"></a><a href="pc_TextFrameItem.html">TextFrameItem</a> <span class="func">move</span> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)<br>
+Move the object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>relativeObject</td><td><a href="pc_Object.html">Object</a></td><td></td></tr>
+<tr class="lastRow"><td>insertionLocation</td><td>ElementPlacement</td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes this object.</p>
+
+<p class="spaceBelow"><a name="removeAll"></a><span class="rett">void</span>  <span class="func">removeAll</span> ()<br>
+Deletes all elements.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_TextFrameItem.html">TextFrameItem</a>.nextFrame</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrameItem.html">TextFrameItem</a>.previousFrame</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><b>TextFrameItem</b> <a href="pc_TextFrameItems.html#areaText">TextFrameItems.areaText</a>
+		(<span class="arg">textPath</span>:
+<a href="pc_PathItem.html">PathItem</a>[, <span class="arg">orientation</span>:
+<a href="pe_TextOrientation.html">TextOrientation</a>=<span class="defv">TextOrientation.HORIZONTAL</span>][, <span class="arg">baseFrame</span>:
+<b>TextFrameItem</b>][, <span class="arg">postFix</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])
+</p><p class="hangIndent"><b>TextFrameItem</b> <a href="pc_TextFrameItems.html#pathText">TextFrameItems.pathText</a>
+		(<span class="arg">textPath</span>:
+<a href="pc_PathItem.html">PathItem</a>[, <span class="arg">startTValue</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>][, <span class="arg">endTValue</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>][, <span class="arg">orientation</span>:
+<a href="pe_TextOrientation.html">TextOrientation</a>=<span class="defv">TextOrientation.HORIZONTAL</span>][, <span class="arg">baseFrame</span>:
+<b>TextFrameItem</b>][, <span class="arg">postFix</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>TextFrameItem</b> <b>TextFrameItem</b>.<a href="pc_TextFrameItem.html#duplicate">duplicate</a> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p>
+<p class="hangIndent"><b>TextFrameItem</b> <b>TextFrameItem</b>.<a href="pc_TextFrameItem.html#move">move</a> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p>
+<p class="hangIndent"><b>TextFrameItem</b> <a href="pc_TextFrameItems.html#add">TextFrameItems.add</a> ()
+</p>
+<p class="hangIndent"><b>TextFrameItem</b> <a href="pc_TextFrameItems.html#areaText">TextFrameItems.areaText</a> (<span class="arg">textPath</span>:
+<a href="pc_PathItem.html">PathItem</a>[, <span class="arg">orientation</span>:
+<a href="pe_TextOrientation.html">TextOrientation</a>=<span class="defv">TextOrientation.HORIZONTAL</span>][, <span class="arg">baseFrame</span>:
+<b>TextFrameItem</b>][, <span class="arg">postFix</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])
+</p>
+<p class="hangIndent"><b>TextFrameItem</b> <a href="pc_TextFrameItems.html#getByName">TextFrameItems.getByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><b>TextFrameItem</b> <a href="pc_TextFrameItems.html#pathText">TextFrameItems.pathText</a> (<span class="arg">textPath</span>:
+<a href="pc_PathItem.html">PathItem</a>[, <span class="arg">startTValue</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>][, <span class="arg">endTValue</span>:
+<span class="argt">number</span>=<span class="defv">0.0</span>][, <span class="arg">orientation</span>:
+<a href="pe_TextOrientation.html">TextOrientation</a>=<span class="defv">TextOrientation.HORIZONTAL</span>][, <span class="arg">baseFrame</span>:
+<b>TextFrameItem</b>][, <span class="arg">postFix</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>])
+</p>
+<p class="hangIndent"><b>TextFrameItem</b> <a href="pc_TextFrameItems.html#pointText">TextFrameItems.pointText</a> (<span class="arg">anchor</span>:
+<a href="pc_Point.html">Point</a>[, <span class="arg">orientation</span>:
+<a href="pe_TextOrientation.html">TextOrientation</a>=<span class="defv">TextOrientation.HORIZONTAL</span>])
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

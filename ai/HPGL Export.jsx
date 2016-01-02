@@ -1,0 +1,1 @@
+﻿/* WORK IN PROGRESS */var doc,shape;var HPGLfile;if ( app.documents.length > 0 ) {    doc = app.activeDocument;    main();}function main() {    for (var i = doc.pathItems.length - 1; i >= 0; i--) {        shape = doc.pathItems[i];        $.writeln(shape);                if(shape.filled) {        } else {        }    }}

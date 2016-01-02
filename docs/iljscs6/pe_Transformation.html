@@ -1,0 +1,114 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: Transformation</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, transformation">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">Enumeration</h3></td><td><h1>Transformation</h1></td></tr>
+<tr><td>&nbsp;</td><td>The transformation type.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Value</h3>
+</td><td><table width="100%"><tr><th width="25%">Name</th><th width="50%">Description</th><th width="25%">Value</th></tr>
+<tr><td>Transformation.BOTTOM</td><td>Transform relative to the object's bottom edge.</td><td>
+            int
+            7
+          </td></tr>
+<tr><td>Transformation.BOTTOMLEFT</td><td>Transform relative to the object's bottom left corner.</td><td>
+            int
+            4
+          </td></tr>
+<tr><td>Transformation.BOTTOMRIGHT</td><td>Transform relative to the object's bottom right corner.</td><td>
+            int
+            10
+          </td></tr>
+<tr><td>Transformation.CENTER</td><td>Transform relative to the object's center.</td><td>
+            int
+            6
+          </td></tr>
+<tr><td>Transformation.DOCUMENTORIGIN</td><td>Transform relative to the illustration's page origin.</td><td>
+            int
+            1
+          </td></tr>
+<tr><td>Transformation.LEFT</td><td>Transform relative to the object's left edge.</td><td>
+            int
+            3
+          </td></tr>
+<tr><td>Transformation.RIGHT</td><td>Transform relative to the object's right edge.</td><td>
+            int
+            9
+          </td></tr>
+<tr><td>Transformation.TOP</td><td>Transform relative to the object's top edge.</td><td>
+            int
+            5
+          </td></tr>
+<tr><td>Transformation.TOPLEFT</td><td>Transform relative to the object's top left corner.</td><td>
+            int
+            2
+          </td></tr>
+<tr class="lastRow"><td>Transformation.TOPRIGHT</td><td>Transform relative to the object's top right corner.</td><td>
+            int
+            8
+          </td></tr>
+</table>
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Usage</h3>
+</td><td><h3>In function</h3>
+
+<p class="hangIndent">void  <a href="pc_PageItem.html#resize">PageItem.resize</a> (<span class="arg">scaleX</span>:
+<span class="argt">number</span>, <span class="arg">scaleY</span>:
+<span class="argt">number</span>[, <span class="arg">changePositions</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillPatterns</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillGradients</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeStrokePattern</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeLineWidths</span>:
+<span class="argt">number</span>=<span class="defv">100.0</span>][, <span class="arg">scaleAbout</span>:
+<b>Transformation</b>=<span class="defv">Transformation.CENTER</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PageItem.html#rotate">PageItem.rotate</a> (<span class="arg">angle</span>:
+<span class="argt">number</span>[, <span class="arg">changePositions</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillPatterns</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillGradients</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeStrokePattern</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">rotateAbout</span>:
+<b>Transformation</b>=<span class="defv">Transformation.CENTER</span>])
+</p>
+<p class="hangIndent">void  <a href="pc_PageItem.html#transform">PageItem.transform</a> (<span class="arg">transformationMatrix</span>:
+<a href="pc_Matrix.html">Matrix</a>[, <span class="arg">changePositions</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillPatterns</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeFillGradients</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeStrokePattern</span>:
+<span class="argt">bool</span>=<span class="defv">true</span>][, <span class="arg">changeLineWidths</span>:
+<span class="argt">number</span>=<span class="defv">100.0</span>][, <span class="arg">transformAbout</span>:
+<b>Transformation</b>=<span class="defv">Transformation.CENTER</span>])
+</p>
+
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

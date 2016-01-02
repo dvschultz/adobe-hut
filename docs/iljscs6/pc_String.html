@@ -1,0 +1,826 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: String</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, string">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>String</h1></td></tr>
+<tr><td>&nbsp;</td><td>A character string. Each character is adressable by index.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#String" title="Returns a string representation of the value given as an argument.">String</a>, <a href="#anchor" title="Returns a string consisting of this string enclosed in a <a&gt; tag.">anchor</a>, <a href="#big" title="Returns a string consisting of this string enclosed in a <big&gt; tag.">big</a>, <a href="#blink" title="Returns a string consisting of this string enclosed in a <blink&gt; tag.">blink</a>, <a href="#bold" title="Returns a string consisting of this string enclosed in a <b&gt; tag.">bold</a>, <a href="#charAt" title="Returns the character at the specified index.">charAt</a>, <a href="#charCodeAt" title="Returns the Unicode value of the character at the given index.">charCodeAt</a>, <a href="#concat" title="If necessary, converts the one or more given values to strings.">concat</a>, <a href="#fixed" title="Returns a string consisting of this string enclosed in a <tt&gt; tag.">fixed</a>, <a href="#fontcolor" title="Returns a string consisting of this string enclosed in a <font&gt; tag.">fontcolor</a>, <a href="#fontsize" title="Returns a string consisting of this string enclosed in a <font&gt; tag.">fontsize</a>, <a href="#fromCharCode" title="Returns a string created by concatenation one or more characters specified as ASCII values.">fromCharCode</a>, <a href="#indexOf" title="Returns the index within the string of the first occurrence of the specified string, starting the search at fromIndex if provided.">indexOf</a>, <a href="#italics" title="Returns a string consisting of this string enclosed in a <i&gt; tag.">italics</a>, <a href="#lastIndexOf" title="Returns the index within the string of the last occurrence of the specified value.">lastIndexOf</a>, <a href="#link" title="Returns a string consisting of this string enclosed in a <a&gt; tag.">link</a>, <a href="#localeCompare" title="Performs a localized comparison of two strings.">localeCompare</a>, <a href="#match" title="Matches a string against a regular expression.">match</a>, <a href="#replace" title="">replace</a>, <a href="#search" title="">search</a>, <a href="#slice" title="Extracts a substring of the given string and returns it as a new string.">slice</a>, <a href="#small" title="Returns a string consisting of this string enclosed in a <small&gt; tag.">small</a>, <a href="#split" title="Splits a string into a group of substrings, places those strings in an array, and returns the array.">split</a>, <a href="#strike" title="Returns a string consisting of this string enclosed in a <strike&gt; tag.">strike</a>, <a href="#sub" title="Returns a string consisting of this string enclosed in a <sub&gt; tag.">sub</a>, <a href="#substr" title="Returns a string containing the characters beginning at the specified index, start, through the specified number of characters.">substr</a>, <a href="#substring" title="Returns a substring of the given string by extracting characters from indexA up to but not including indexB.">substring</a>, <a href="#sup" title="Returns a string consisting of this string enclosed in a <sup&gt; tag.">sup</a>, <a href="#toLocaleLowerCase" title="Returns a new string which contains all the characters of the original string converted to lowercase (localized).">toLocaleLowerCase</a>, <a href="#toLocaleUpperCase" title="Returns a new string which contains all the characters of the original string converted to uppercase (localized).">toLocaleUpperCase</a>, <a href="#toLowerCase" title="Returns a new string which contains all the characters of the original string converted to lowercase.">toLowerCase</a>, <a href="#toSource" title="Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.">toSource</a>, <a href="#toString" title="Returns itself.">toString</a>, <a href="#toUpperCase" title="Returns a new string which contains all the characters of the original string converted to uppercase.">toUpperCase</a>, <a href="#valueOf" title="Returns itself.">valueOf</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr class="lastRow"><td><a name="length"></a>length</td><td><a href="pc_number.html">number</a></td>
+<td>readonly</td><td>The length of the string.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="String"></a><a href="pc_String.html">String</a> <span class="func">String</span> (<span class="arg">value</span>:
+<span class="argt">any</span>)<br>
+Returns a string representation of the value given as an argument.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td>
+						any
+					</td><td>A number, variable, or object to convert to a string.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">new String(value)</td></tr></table>
+
+<h4>Class</h4><p class="spaceBelow"><a name="fromCharCode"></a><a href="pc_String.html">String</a> <span class="func">fromCharCode</span> (<span class="arg">value1</span>:
+<span class="argt">number</span>)<br>
+Returns a string created by concatenation one or more characters specified as ASCII values.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value1</td><td><a href="pc_number.html">number</a></td><td>One or more ASCII values.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">String.fromCharCode(value1,...valueN)</td></tr></table>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="anchor"></a>string <span class="func">anchor</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Returns a string consisting of this string enclosed in a &lt;a&gt; tag.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><b>string</b></td><td>The text to be stored in the anchors' name attribute.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="big"></a>string <span class="func">big</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;big&gt; tag.</p>
+
+<p class="spaceBelow"><a name="blink"></a>string <span class="func">blink</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;blink&gt; tag.</p>
+
+<p class="spaceBelow"><a name="bold"></a>string <span class="func">bold</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;b&gt; tag.</p>
+
+<p class="spaceBelow"><a name="charAt"></a>string <span class="func">charAt</span> (<span class="arg">index</span>:
+<span class="argt">number</span>)<br>
+Returns the character at the specified index.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>index</td><td><a href="pc_number.html">number</a></td><td>An integer between 0 and string.length -1, specifying the character to return.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.charAt(index)</td></tr></table>
+
+<p class="spaceBelow"><a name="charCodeAt"></a>number <span class="func">charCodeAt</span> (<span class="arg">index</span>:
+<span class="argt">number</span>)<br>
+Returns the Unicode value of the character at the given index.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>index</td><td><a href="pc_number.html">number</a></td><td>An integer between 0 and string.length -1, specifying the character.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.charCodeAt(index)</td></tr></table>
+
+<p class="spaceBelow"><a name="concat"></a>string <span class="func">concat</span> (<span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+If necessary, converts the one or more given values to strings.<br>
+Those values are concatenated with the original string, the result is returned. The original string is not effected.  Returns the concatenated string.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>value</td><td><b>string</b></td><td>The values to be concatenated with the given string.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.concat(value1,...valueN)</td></tr></table>
+
+<p class="spaceBelow"><a name="fixed"></a>string <span class="func">fixed</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;tt&gt; tag.</p>
+
+<p class="spaceBelow"><a name="fontcolor"></a>string <span class="func">fontcolor</span> (<span class="arg">color</span>:
+<span class="argt">string</span>)<br>
+Returns a string consisting of this string enclosed in a &lt;font&gt; tag.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>color</td><td><b>string</b></td><td>The value to be stored in the tag's color attribute.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="fontsize"></a>string <span class="func">fontsize</span> (<span class="arg">size</span>:
+<span class="argt">number</span>)<br>
+Returns a string consisting of this string enclosed in a &lt;font&gt; tag.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>size</td><td><a href="pc_number.html">number</a></td><td>The value to be stored in the tag's size attribute.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="indexOf"></a>number <span class="func">indexOf</span> (<span class="arg">searchValue</span>:
+<span class="argt">string</span>[, <span class="arg">offset</span>:
+<span class="argt">number</span>])<br>
+Returns the index within the string of the first occurrence of the specified string, starting the search at fromIndex if provided.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>searchValue</td><td><b>string</b></td><td>The string for which to search.</td></tr>
+<tr class="lastRow"><td>offset</td><td><a href="pc_number.html">number</a></td><td>The starting offset of the search. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.indexOf(searchValue, fromIndex)</td></tr></table>
+
+<p class="spaceBelow"><a name="italics"></a>string <span class="func">italics</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;i&gt; tag.</p>
+
+<p class="spaceBelow"><a name="lastIndexOf"></a>number <span class="func">lastIndexOf</span> (<span class="arg">searchValue</span>:
+<span class="argt">string</span>[, <span class="arg">offset</span>:
+<span class="argt">number</span>])<br>
+Returns the index within the string of the last occurrence of the specified value.<br>
+The string is searched backward, starting at fromIndex.  Returns the index within the string where the last occurrence of searchValue was found, or -1 if it was not found.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>searchValue</td><td><b>string</b></td><td>The string for which to search.</td></tr>
+<tr class="lastRow"><td>offset</td><td><a href="pc_number.html">number</a></td><td>The starting offset of the search. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.lastIndexOf(searchValue, fromIndex)</td></tr></table>
+
+<p class="spaceBelow"><a name="link"></a>string <span class="func">link</span> (<span class="arg">href</span>:
+<span class="argt">string</span>)<br>
+Returns a string consisting of this string enclosed in a &lt;a&gt; tag.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>href</td><td><b>string</b></td><td>The value to be stored in the tag's href attribute.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="localeCompare"></a>number <span class="func">localeCompare</span> (<span class="arg">what</span>:
+<span class="argt">string</span>)<br>
+Performs a localized comparison of two strings.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>what</td><td><b>string</b></td><td>The string to compare with.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="match"></a><a href="pc_Array.html">Array</a> <span class="func">match</span> (<span class="arg">regexp</span>:
+<a href="pc_RegExp.html">RegExp</a>)<br>
+
+						Matches a string against a regular expression.
+					
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>regexp</td><td><a href="pc_RegExp.html">RegExp</a></td><td>The regular expression to use.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="replace"></a>string <span class="func">replace</span> (<span class="arg">what</span>:
+<span class="argt">any</span>, <span class="arg">with</span>:
+<span class="argt">string</span>)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>what</td><td>
+						any
+					</td><td></td></tr>
+<tr class="lastRow"><td>with</td><td><b>string</b></td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="search"></a>number <span class="func">search</span> (<span class="arg">search</span>:
+<a href="pc_RegExp.html">RegExp</a>)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>search</td><td><a href="pc_RegExp.html">RegExp</a></td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="slice"></a>string <span class="func">slice</span> (<span class="arg">startSlice</span>:
+<span class="argt">number</span>[, <span class="arg">endSlice</span>:
+<span class="argt">number</span>])<br>
+Extracts a substring of the given string and returns it as a new string.<br>
+The substring begins at startSlice, and includes all characters up to, but not including the character at the index endSlice.   A negative value indexes from the end of the string.  For example, a negative value for startSlice is resolved as: string. length + startSlice.  The original string is unchanged.  Returns a substring of characters from the given string, starting at startSlice and ending with endSlice-1.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>startSlice</td><td><a href="pc_number.html">number</a></td><td>The index at which to begin extraction.<br></td></tr>
+<tr class="lastRow"><td>endSlice</td><td><a href="pc_number.html">number</a></td><td>The index at which to end extraction.<br>If omitted, slice extracts to the end of the string. (Optional)</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.slice(startSlice, endSlice)</td></tr></table>
+
+<p class="spaceBelow"><a name="small"></a>string <span class="func">small</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;small&gt; tag.</p>
+
+<p class="spaceBelow"><a name="split"></a>string <span class="func">split</span> (<span class="arg">delimiter</span>:
+<span class="argt">string</span>, <span class="arg">limit</span>:
+<span class="argt">number</span>)<br>
+Splits a string into a group of substrings, places those strings in an array, and returns the array.<br>
+The substrings are created by breaking the original string at places that match delimiter, the delimiter characters are removed.  Returns an array whose elements are the substrings.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>delimiter</td><td><b>string</b></td><td>Specifies the string to use for delimiting.<br>If delimiter is omitted, the array returned contains one element, consisting of the entire string.</td></tr>
+<tr class="lastRow"><td>limit</td><td><a href="pc_number.html">number</a></td><td></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.split(delimiter)</td></tr></table>
+
+<p class="spaceBelow"><a name="strike"></a>string <span class="func">strike</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;strike&gt; tag.</p>
+
+<p class="spaceBelow"><a name="sub"></a>string <span class="func">sub</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;sub&gt; tag.</p>
+
+<p class="spaceBelow"><a name="substr"></a>string <span class="func">substr</span> (<span class="arg">start</span>:
+<span class="argt">number</span>, <span class="arg">length</span>:
+<span class="argt">number</span>)<br>
+Returns a string containing the characters beginning at the specified index, start, through the specified number of characters.<br>
+The original string is unchanged.  Returns a string containing the extracted characters.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>start</td><td><a href="pc_number.html">number</a></td><td>Location at which to begin extracting characters.<br></td></tr>
+<tr class="lastRow"><td>length</td><td><a href="pc_number.html">number</a></td><td>(OptIonal) The number of characters to extract.<br></td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.substr(start, length)</td></tr></table>
+
+<p class="spaceBelow"><a name="substring"></a>string <span class="func">substring</span> (<span class="arg">indexA</span>:
+<span class="argt">number</span>[, <span class="arg">indexB</span>:
+<span class="argt">number</span>])<br>
+Returns a substring of the given string by extracting characters from indexA up to but not including indexB.<br>
+The original string is unchanged.  Returns a substring of characters from the given string, starting at indexA and ending with indexB-1.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>indexA</td><td><a href="pc_number.html">number</a></td><td>The index to begin extracting.<br></td></tr>
+<tr class="lastRow"><td>indexB</td><td><a href="pc_number.html">number</a></td><td>(Optional) The index at which to end extraction.<br>If omitted, slice extracts to the end of the string.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.substring(indexA, indexB)</td></tr></table>
+
+<p class="spaceBelow"><a name="sup"></a>string <span class="func">sup</span> ()<br>
+Returns a string consisting of this string enclosed in a &lt;sup&gt; tag.</p>
+
+<p class="spaceBelow"><a name="toLocaleLowerCase"></a>string <span class="func">toLocaleLowerCase</span> ()<br>
+Returns a new string which contains all the characters of the original string converted to lowercase (localized).<br>
+The original string is unchanged.</p>
+
+<p class="spaceBelow"><a name="toLocaleUpperCase"></a>string <span class="func">toLocaleUpperCase</span> ()<br>
+Returns a new string which contains all the characters of the original string converted to uppercase (localized).<br>
+The original string is unchanged.</p>
+
+<p class="spaceBelow"><a name="toLowerCase"></a>string <span class="func">toLowerCase</span> ()<br>
+Returns a new string which contains all the characters of the original string converted to lowercase.<br>
+The original string is unchanged.</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.toLowerCase()</td></tr></table>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+
+						Creates a string representation of this object that can be fed back to <a href="pc_global.html">eval()</a> to re-create an object. Works only with built-in classes.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Returns itself.</p>
+
+<p class="spaceBelow"><a name="toUpperCase"></a>string <span class="func">toUpperCase</span> ()<br>
+Returns a new string which contains all the characters of the original string converted to uppercase.<br>
+The original string is unchanged.</p><table class="example"><tr><td><b>Example</b></td><td class="example">string.toUpperCase()</td></tr></table>
+
+<p class="spaceBelow"><a name="valueOf"></a>string <span class="func">valueOf</span> ()<br>
+Returns itself.</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.textselection</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.eventPhase</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.alignChildren</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.orientation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_KeyboardState.html">KeyboardState</a>.keyName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.alignChildren</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.orientation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUI.html">ScriptUI</a>.Alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUI.html">ScriptUI</a>.coreVersion</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUI.html">ScriptUI</a>.frameworkName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a>.theme</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a>.family</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a>.name</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a>.substitute</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIImage.html">ScriptUIImage</a>.format</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIImage.html">ScriptUIImage</a>.name</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIImage.html">ScriptUIImage</a>.pathname</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIPen.html">ScriptUIPen</a>.theme</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIPen.html">ScriptUIPen</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.eventPhase</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.type</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.alignChildren</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.alignment</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.frameworkName</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.helpTip</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.justify</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.orientation</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.shortcutKey</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.text</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.type</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Button (SUI).html#addEventListener">Button.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Button (SUI).html#notify">Button.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Button (SUI).html#removeEventListener">Button.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Checkbox (SUI).html#addEventListener">Checkbox.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Checkbox (SUI).html#notify">Checkbox.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Checkbox (SUI).html#removeEventListener">Checkbox.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_DropDownList.html#add">DropDownList.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">text</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_DropDownList.html#addEventListener">DropDownList.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_DropDownList.html#find">DropDownList.find</a>
+		(<span class="arg">text</span>:
+<b>String</b>)
+</p><p class="hangIndent">void <a href="pc_DropDownList.html#notify">DropDownList.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_DropDownList.html#removeEventListener">DropDownList.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_EditText.html#addEventListener">EditText.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_EditText.html#notify">EditText.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_EditText.html#removeEventListener">EditText.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Event (SUI).html">Event (SUI)</a> <a href="pc_Events (SUI).html#createEvent">Events.createEvent</a>
+		(<span class="arg">eventType</span>:
+<b>String</b>)
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_FlashPlayer.html#addEventListener">FlashPlayer.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">Any <a href="pc_FlashPlayer.html#invokePlayerFunction">FlashPlayer.invokePlayerFunction</a>
+		(<span class="arg">name</span>:
+<b>String</b>[, <span class="arg">argument</span>:
+<span class="argt">Any</span>])
+</p><p class="hangIndent">void <a href="pc_FlashPlayer.html#notify">FlashPlayer.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_FlashPlayer.html#removeEventListener">FlashPlayer.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Object.html">Object</a> <a href="pc_Group (SUI).html#add">Group.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<b>String</b>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Group (SUI).html#addEventListener">Group.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Group (SUI).html#removeEventListener">Group.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_IconButton.html#addEventListener">IconButton.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_IconButton.html#notify">IconButton.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_IconButton.html#removeEventListener">IconButton.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_ListBox (SUI).html#add">ListBox.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">text</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_ListBox (SUI).html#addEventListener">ListBox.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_ListBox (SUI).html#find">ListBox.find</a>
+		(<span class="arg">text</span>:
+<b>String</b>)
+</p><p class="hangIndent">void <a href="pc_ListBox (SUI).html#notify">ListBox.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_ListBox (SUI).html#removeEventListener">ListBox.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Object.html">Object</a> <a href="pc_Panel (SUI).html#add">Panel.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<b>String</b>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Panel (SUI).html#addEventListener">Panel.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Panel (SUI).html#removeEventListener">Panel.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Progressbar.html#addEventListener">Progressbar.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Progressbar.html#removeEventListener">Progressbar.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_RadioButton (SUI).html#addEventListener">RadioButton.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_RadioButton (SUI).html#notify">RadioButton.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_RadioButton (SUI).html#removeEventListener">RadioButton.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><b>String</b> <a href="pc_ScriptUI.html#getResourceText">ScriptUI.getResourceText</a>
+		(<span class="arg">text</span>:
+<b>String</b>)
+</p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a> <a href="pc_ScriptUI.html#newFont">ScriptUI.newFont</a>
+		(<span class="arg">name</span>:
+<b>String</b>, <span class="arg">style</span>:
+<b>String</b> | <a href="pc_Number.html">Number</a>, <span class="arg">size</span>:
+<a href="pc_Number.html">Number</a>)
+</p><p class="hangIndent"><a href="pc_ScriptUIImage.html">ScriptUIImage</a> <a href="pc_ScriptUI.html#newImage">ScriptUI.newImage</a>
+		(<span class="arg">normal</span>:
+<b>String</b>[, <span class="arg">disabled</span>:
+<b>String</b>][, <span class="arg">pressed</span>:
+<b>String</b>][, <span class="arg">rollover</span>:
+<b>String</b>])
+</p><p class="hangIndent">void <a href="pc_ScriptUIGraphics.html#drawString">ScriptUIGraphics.drawString</a>
+		(<span class="arg">text</span>:
+<b>String</b>, <span class="arg">pen</span>:
+<a href="pc_ScriptUIPen.html">ScriptUIPen</a>, <span class="arg">x</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">y</span>:
+<a href="pc_Number.html">Number</a>[, <span class="arg">font</span>:
+<a href="pc_ScriptUIFont.html">ScriptUIFont</a>])
+</p><p class="hangIndent"><a href="pc_Dimension.html">Dimension</a> <a href="pc_ScriptUIGraphics.html#measureString">ScriptUIGraphics.measureString</a>
+		(<span class="arg">text</span>:
+<b>String</b>[, <span class="arg">font</span>:
+<a href="pc_ScriptUIFont.html">ScriptUIFont</a>][, <span class="arg">boundingWidth</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent"><a href="pc_ScriptUIBrush.html">ScriptUIBrush</a> <a href="pc_ScriptUIGraphics.html#newBrush">ScriptUIGraphics.newBrush</a>
+		(<span class="arg">type</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">color</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a> | <b>String</b>)
+</p><p class="hangIndent"><a href="pc_ScriptUIPen.html">ScriptUIPen</a> <a href="pc_ScriptUIGraphics.html#newPen">ScriptUIGraphics.newPen</a>
+		(<span class="arg">type</span>:
+<a href="pc_Number.html">Number</a>, <span class="arg">color</span>:
+<a href="pc_Array.html">Array</a> of <a href="pc_Number.html">Number</a> | <b>String</b>, <span class="arg">width</span>:
+<a href="pc_Number.html">Number</a>)
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Scrollbar.html#addEventListener">Scrollbar.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Scrollbar.html#notify">Scrollbar.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Scrollbar.html#removeEventListener">Scrollbar.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Slider.html#addEventListener">Slider.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Slider.html#notify">Slider.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Slider.html#removeEventListener">Slider.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_StaticText (SUI).html#addEventListener">StaticText.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_StaticText (SUI).html#notify">StaticText.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_StaticText (SUI).html#removeEventListener">StaticText.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_TreeView.html#add">TreeView.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">text</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_TreeView.html#addEventListener">TreeView.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a> <a href="pc_TreeView.html#find">TreeView.find</a>
+		(<span class="arg">text</span>:
+<b>String</b>)
+</p><p class="hangIndent">void <a href="pc_TreeView.html#notify">TreeView.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_TreeView.html#removeEventListener">TreeView.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a> <a href="pc_UIEvent.html#UIEvent">UIEvent.UIEvent</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<a href="pc_Object.html">Object</a>][, <span class="arg">detail</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent">void <a href="pc_UIEvent.html#initEvent">UIEvent.initEvent</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">cancelable</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_UIEvent.html#initUIEvent">UIEvent.initUIEvent</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<a href="pc_Object.html">Object</a>][, <span class="arg">detail</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent">void <a href="pc_Window (SUI).html#Window">Window.Window</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">title</span>:
+<b>String</b>][, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Object.html">Object</a> <a href="pc_Window (SUI).html#add">Window.add</a>
+		(<span class="arg">type</span>:
+<b>String</b>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<b>String</b>][, <span class="arg">properties</span>:
+<a href="pc_Object.html">Object</a>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Window (SUI).html#addEventListener">Window.addEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent">void <a href="pc_Window (SUI).html#alert">Window.alert</a>
+		(<span class="arg">message</span>:
+<b>String</b>[, <span class="arg">title</span>:
+<b>String</b>][, <span class="arg">errorIcon</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Window (SUI).html#confirm">Window.confirm</a>
+		(<span class="arg">message</span>:
+<b>String</b>[, <span class="arg">noAsDefault</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">title</span>:
+<b>String</b>])
+</p><p class="hangIndent">Window <a href="pc_Window (SUI).html#find">Window.find</a>
+		(<span class="arg">type</span>:
+<b>String</b>, <span class="arg">title</span>:
+<b>String</b>)
+</p><p class="hangIndent">void <a href="pc_Window (SUI).html#notify">Window.notify</a>
+		([<span class="arg">eventName</span>:
+<b>String</b>])
+</p><p class="hangIndent"><b>String</b> <a href="pc_Window (SUI).html#prompt">Window.prompt</a>
+		(<span class="arg">prompt</span>:
+<b>String</b>[, <span class="arg">default</span>:
+<b>String</b>][, <span class="arg">title</span>:
+<b>String</b>])
+</p><p class="hangIndent"><a href="pc_Boolean.html">Boolean</a> <a href="pc_Window (SUI).html#removeEventListener">Window.removeEventListener</a>
+		(<span class="arg">eventName</span>:
+<b>String</b>, <span class="arg">handler</span>:
+<a href="pc_Function.html">Function</a>[, <span class="arg">capturePhase</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>])
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>String</b> <a href="pc_ScriptUI.html#getResourceText">ScriptUI.getResourceText</a> (<span class="arg">text</span>:
+<b>String</b>)
+</p>
+<p class="hangIndent"><b>String</b> <b>String</b>.<a href="pc_String.html#String">String</a> (<span class="arg">value</span>:
+<span class="argt">any</span>)
+</p>
+<p class="hangIndent"><b>String</b> <b>String</b>.<a href="pc_String.html#fromCharCode">fromCharCode</a> (<span class="arg">value1</span>:
+<span class="argt">number</span>)
+</p>
+<p class="hangIndent"><b>String</b> <a href="pc_Window (SUI).html#prompt">Window (SUI).prompt</a> (<span class="arg">prompt</span>:
+<b>String</b>[, <span class="arg">default</span>:
+<b>String</b>][, <span class="arg">title</span>:
+<b>String</b>])
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

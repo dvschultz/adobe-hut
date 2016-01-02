@@ -1,0 +1,74 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: ExportOptionsSVG</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, exportoptionssvg">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>ExportOptionsSVG</h1></td></tr>
+<tr><td>&nbsp;</td><td>Options which may be supplied when exporting a document as an SVG file.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="DTD"></a>DTD</td><td><a href="pe_SVGDTDVersion.html">SVGDTDVersion</a>:<br>SVGDTDVersion.SVG1_0<br>SVGDTDVersion.SVG1_1<br>SVGDTDVersion.SVGTINY1_1<br>SVGDTDVersion.SVGTINY1_1PLUS<br>SVGDTDVersion.SVGBASIC1_1<br>SVGDTDVersion.SVGTINY1_2</td>
+<td>r/w</td><td>The version of DTD that the exported file should be conforming to. (default: <b>SVGDTDVersion.SVG1_1</b>)</td></tr>
+<tr><td><a name="compressed"></a>compressed</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the exported file be compressed. (default: <b>false</b>)</td></tr>
+<tr><td><a name="coordinatePrecision"></a>coordinatePrecision</td><td>Int32 (range: 1 - 7)</td>
+<td>r/w</td><td>Decimal precision for element coordinate values. (default: <b>3</b>)</td></tr>
+<tr><td><a name="cssProperties"></a>cssProperties</td><td><a href="pe_SVGCSSPropertyLocation.html">SVGCSSPropertyLocation</a>:<br>SVGCSSPropertyLocation.ENTITIES<br>SVGCSSPropertyLocation.STYLEATTRIBUTES<br>SVGCSSPropertyLocation.STYLEELEMENTS<br>SVGCSSPropertyLocation.PRESENTATIONATTRIBUTES</td>
+<td>r/w</td><td>How should the CSS properties of the document be included in the document. (default: <b>SVGCSSPropertyLocation.STYLEATTRIBUTES</b>)</td></tr>
+<tr><td><a name="documentEncoding"></a>documentEncoding</td><td><a href="pe_SVGDocumentEncoding.html">SVGDocumentEncoding</a>:<br>SVGDocumentEncoding.ASCII<br>SVGDocumentEncoding.UTF8<br>SVGDocumentEncoding.UTF16</td>
+<td>r/w</td><td>How should the text in the document be encoded. (default: <b>SVGDocumentEncoding.ASCII</b>)</td></tr>
+<tr><td><a name="embedRasterImages"></a>embedRasterImages</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the raster images in the exported file be included. (default: <b>false</b>)</td></tr>
+<tr><td><a name="fontSubsetting"></a>fontSubsetting</td><td><a href="pe_SVGFontSubsetting.html">SVGFontSubsetting</a>:<br>SVGFontSubsetting.None<br>SVGFontSubsetting.GLYPHSUSED<br>SVGFontSubsetting.COMMONENGLISH<br>SVGFontSubsetting.GLYPHSUSEDPLUSENGLISH<br>SVGFontSubsetting.COMMONROMAN<br>SVGFontSubsetting.GLYPHSUSEDPLUSROMAN<br>SVGFontSubsetting.ALLGLYPHS</td>
+<td>r/w</td><td>What font glyphs should be included in the exported file. (default: <b>SVGFontSubsetting.ALLGLYPHS</b>)</td></tr>
+<tr><td><a name="fontType"></a>fontType</td><td><a href="pe_SVGFontType.html">SVGFontType</a>:<br>SVGFontType.CEFFONT<br>SVGFontType.SVGFONT<br>SVGFontType.OUTLINEFONT</td>
+<td>r/w</td><td>The type of font that should be included in the exported file. (default: <b>SVGFontType.CEFFONT</b>)</td></tr>
+<tr><td><a name="includeFileInfo"></a>includeFileInfo</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td> (default: <b>false</b>)</td></tr>
+<tr><td><a name="includeVariablesAndDatasets"></a>includeVariablesAndDatasets</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td> (default: <b>false</b>)</td></tr>
+<tr><td><a name="optimizeForSVGViewer"></a>optimizeForSVGViewer</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td> (default: <b>false</b>)</td></tr>
+<tr><td><a name="preserveEditability"></a>preserveEditability</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Preserve Illustrator editing capabilities when exporting the document. (default: <b>false</b>)</td></tr>
+<tr><td><a name="sVGAutoKerning"></a>sVGAutoKerning</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is SVG auto kerning allowed? (default: <b>false</b>)</td></tr>
+<tr><td><a name="sVGTextOnPath"></a>sVGTextOnPath</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is SVG text-on-path construct allowed? (default: <b>false</b>)</td></tr>
+<tr class="lastRow"><td><a name="slices"></a>slices</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Preserve slice data in exported document. (default: <b>false</b>)</td></tr>
+</table></td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

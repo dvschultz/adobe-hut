@@ -1,0 +1,134 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: RasterItem</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, rasteritem">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>RasterItem</h1></td></tr>
+<tr><td>&nbsp;</td><td>Raster artwork item. Base Class: <a href="pc_PageItem.html">PageItem</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#colorize" title="Colorize the RasterItem with a CMYK or RGB Color.">colorize</a>, <a href="#duplicate" title="Duplicate this object.">duplicate</a>, <a href="#move" title="Move the object.">move</a>, <a href="#remove" title="Deletes this object.">remove</a>, <a href="#removeAll" title="Deletes all elements.">removeAll</a>, <a href="#trace" title="Trace this raster object using default options. Reorders this raster to the source art.">trace</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedb" align="center"><tr><td><center><a href="pc_PageItem.html">PageItem</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>RasterItem</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="bitsPerChannel"></a>bitsPerChannel</td><td>Int32</td>
+<td>readonly</td><td>The number of bits per channel.</td></tr>
+<tr><td><a name="boundingBox"></a>boundingBox</td><td><a href="pc_Rectangle.html">Rectangle</a></td>
+<td>r/w</td><td>Dimensions of raster art object regardless of transformations.</td></tr>
+<tr><td><a name="channels"></a>channels</td><td>Int32</td>
+<td>readonly</td><td>The number of image channels.</td></tr>
+<tr><td><a name="colorants"></a>colorants</td><td><a href="pc_Array.html">Array</a> of <a href="pc_string.html">string</a></td>
+<td>readonly</td><td>List of colorant names.</td></tr>
+<tr><td><a name="colorizedGrayscale"></a>colorizedGrayscale</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Is the raster art a colorized grayscale image?</td></tr>
+<tr><td><a name="contentVariable"></a>contentVariable</td><td>any</td>
+<td>r/w</td><td>The content variable bound to this raster art object.</td></tr>
+<tr><td><a name="embedded"></a>embedded</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the raster art embedded within the illustration?</td></tr>
+<tr><td><a name="file"></a>file</td><td><a href="pc_File.html">File</a></td>
+<td>readonly</td><td>The file containing the raster artwork.</td></tr>
+<tr><td><a name="imageColorSpace"></a>imageColorSpace</td><td><a href="pe_ImageColorSpace.html">ImageColorSpace</a>:<br>ImageColorSpace.GrayScale<br>ImageColorSpace.RGB<br>ImageColorSpace.CMYK<br>ImageColorSpace.LAB<br>ImageColorSpace.Separation<br>ImageColorSpace.DeviceN<br>ImageColorSpace.Indexed</td>
+<td>readonly</td><td>The color space of the raster image.</td></tr>
+<tr><td><a name="matrix"></a>matrix</td><td><a href="pc_Matrix.html">Matrix</a></td>
+<td>r/w</td><td>The transformation matrix of the raster art object.</td></tr>
+<tr><td><a name="overprint"></a>overprint</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Is the raster art overprinting?</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="status"></a>status</td><td><a href="pe_RasterLinkState.html">RasterLinkState</a>:<br>RasterLinkState.NODATA<br>RasterLinkState.DATAFROMFILE<br>RasterLinkState.DATAMODIFIED</td>
+<td>readonly</td><td>Status of the linked image.</td></tr>
+<tr><td><a name="transparent"></a>transparent</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>readonly</td><td>Is the raster art transparent?</td></tr>
+<tr class="lastRow"><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="colorize"></a><span class="rett">void</span>  <span class="func">colorize</span> (<span class="arg">rasterColor</span>:
+<a href="pc_Color.html">Color</a>)<br>
+Colorize the RasterItem with a CMYK or RGB Color.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>rasterColor</td><td><a href="pc_Color.html">Color</a></td><td>The color to use for coloring the TIFF image.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="duplicate"></a><a href="pc_RasterItem.html">RasterItem</a> <span class="func">duplicate</span> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)<br>
+Duplicate this object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>relativeObject</td><td><a href="pc_Object.html">Object</a></td><td></td></tr>
+<tr class="lastRow"><td>insertionLocation</td><td>ElementPlacement</td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="move"></a><a href="pc_RasterItem.html">RasterItem</a> <span class="func">move</span> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)<br>
+Move the object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>relativeObject</td><td><a href="pc_Object.html">Object</a></td><td></td></tr>
+<tr class="lastRow"><td>insertionLocation</td><td>ElementPlacement</td><td></td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes this object.</p>
+
+<p class="spaceBelow"><a name="removeAll"></a><span class="rett">void</span>  <span class="func">removeAll</span> ()<br>
+Deletes all elements.</p>
+
+<p class="spaceBelow"><a name="trace"></a><a href="pc_PluginItem.html">PluginItem</a> <span class="func">trace</span> ()<br>
+Trace this raster object using default options. Reorders this raster to the source art.</p>
+
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>RasterItem</b> <b>RasterItem</b>.<a href="pc_RasterItem.html#duplicate">duplicate</a> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p>
+<p class="hangIndent"><b>RasterItem</b> <b>RasterItem</b>.<a href="pc_RasterItem.html#move">move</a> (<span class="arg">relativeObject</span>:
+<a href="pc_Object.html">Object</a>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p>
+<p class="hangIndent"><b>RasterItem</b> <a href="pc_RasterItems.html#getByName">RasterItems.getByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

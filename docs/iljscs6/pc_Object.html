@@ -1,0 +1,644 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: Object</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, object">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Object</h1></td></tr>
+<tr><td>&nbsp;</td><td>The base class of all JavaScript objects.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#Object" title="Creates and returns a new object of a given type.">Object</a>, <a href="#hasOwnProperty" title="Reports whether a given property is defined with an instance or within the prototype chain.">hasOwnProperty</a>, <a href="#isPrototypeOf" title="Checks whether the given object is a prototype of this object.">isPrototypeOf</a>, <a href="#isValid" title="Reports whether an object is still valid.">isValid</a>, <a href="#propertyIsEnumerable" title="Reports whether a given property is enumerable.">propertyIsEnumerable</a>, <a href="#toLocaleString" title="Creates and returns a string representing this object, localized for the current locale. See toString().">toLocaleString</a>, <a href="#toSource" title="Creates and returns a string representation of this object.">toSource</a>, <a href="#toString" title="Creates and returns a string representing this object.">toString</a>, <a href="#unwatch" title="Removes the watch function of a property.">unwatch</a>, <a href="#valueOf" title="Retrieves and returns the primitive value of this object.">valueOf</a>, <a href="#watch" title="Adds a watch function to a property, which is called when the value changes.">watch</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="constructor"></a>constructor</td><td><a href="pc_Function.html">Function</a></td>
+<td>readonly</td><td>Points to the constructor function that created this object.<br>Note that this property is treated as an XML element in the XML class.</td></tr>
+<tr><td><a name="prototype"></a>prototype</td><td><b>Object</b></td>
+<td>readonly</td><td>Points to the prototype object for this object.<br>Note that this property is treated as an XML element in the XML class.</td></tr>
+<tr class="lastRow"><td><a name="reflect"></a>reflect</td><td><a href="pc_Reflection.html">Reflection</a></td>
+<td>readonly</td><td>Retrieves and returns the Reflection object associated with this method or a property.<br>Note that this property is treated as an XML element in the XML class.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Constructor</h4><p class="spaceBelow"><a name="Object"></a><a href="pc_Object.html">Object</a> <span class="func">Object</span> (<span class="arg">what</span>:
+<span class="argt">any</span>)<br>
+Creates and returns a new object of a given type.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>what</td><td>
+						any
+					</td><td>The object type.</td></tr>
+</table>
+</p><table class="example"><tr><td><b>Example</b></td><td class="example">new Object()</td></tr></table>
+
+<h4>Class</h4><p class="spaceBelow"><a name="isValid"></a><a href="pc_Boolean.html">bool</a>  <span class="func">isValid</span> (<span class="arg">what</span>:
+<b>Object</b>)<br>
+Reports whether an object is still valid.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>what</td><td><span class="rett">Object</span></td><td>The object to check.</td></tr>
+</table>
+</p>
+
+<h4>Instances</h4><p class="spaceBelow"><a name="hasOwnProperty"></a><a href="pc_Boolean.html">bool</a>  <span class="func">hasOwnProperty</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Reports whether a given property is defined with an instance or within the prototype chain.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The name of the property to check.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="isPrototypeOf"></a><a href="pc_Boolean.html">bool</a>  <span class="func">isPrototypeOf</span> (<span class="arg">what</span>:
+<b>Object</b>)<br>
+Checks whether the given object is a prototype of this object.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>what</td><td><span class="rett">Object</span></td><td>The object to check.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="propertyIsEnumerable"></a><a href="pc_Boolean.html">bool</a>  <span class="func">propertyIsEnumerable</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Reports whether a given property is enumerable.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The name of the property to check.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="toLocaleString"></a>string <span class="func">toLocaleString</span> ()<br>
+
+						Creates and returns a string representing this object, localized for the current locale. See <a href="pc_Object.html">toString()</a>.
+					</p>
+
+<p class="spaceBelow"><a name="toSource"></a>string <span class="func">toSource</span> ()<br>
+Creates and returns a string representation of this object.<br>
+
+						This function serializes the object, so that it can, for example, be passed between engines. Pass the returned string back to <a href="pc_global.html">eval()</a> to recreate the object. Works only with built-in classes.
+					</p>
+
+<p class="spaceBelow"><a name="toString"></a>string <span class="func">toString</span> ()<br>
+Creates and returns a string representing this object.<br>
+
+						Many objects (such as <a href="pc_Date.html">Date</a>) override this method in favor of their own implementation. If an object has no string value and no user-defined toString() method, the default method returns [object type], where <i>type</i> is the object type or the name of the constructor function that created the object.
+					</p><table class="example"><tr><td><b>Example</b></td><td class="example">obj.toString()</td></tr></table>
+
+<p class="spaceBelow"><a name="unwatch"></a><span class="rett">void</span>  <span class="func">unwatch</span> (<span class="arg">name</span>:
+<span class="argt">string</span>)<br>
+Removes the watch function of a property.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>name</td><td><a href="pc_string.html">string</a></td><td>The name of the property to unwatch.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="valueOf"></a><a href="pc_Object.html">Object</a> <span class="func">valueOf</span> ()<br>
+Retrieves and returns the primitive value of this object.<br>
+If the object has no primitive value, returns the object itself.  Note that you rarely need to call this method yourself.  The JavaScript interpreter automatically invokes it when encountering an object where a primitive value is expected.</p><table class="example"><tr><td><b>Example</b></td><td class="example">obj.valueOf()</td></tr></table>
+
+<p class="spaceBelow"><a name="watch"></a><span class="rett">void</span>  <span class="func">watch</span> (<span class="arg">name</span>:
+<span class="argt">string</span>, <span class="arg">func</span>:
+<a href="pc_Function.html">Function</a>)<br>
+Adds a watch function to a property, which is called when the value changes.<br>
+This function can accept, modify, or reject a new value that the user, application, or a script has attempted to place in a property.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>name</td><td><a href="pc_string.html">string</a></td><td>The name of the property to watch.</td></tr>
+<tr class="lastRow"><td>func</td><td><a href="pc_Function.html">Function</a></td><td>The function to be called when the value of this property changes.<br>
+								This function must three arguments, and return as its result the value to be stored in the property. The arguments are:
+								<br>&bull;&nbsp;name: the name of the property that changes.
+								<br>&bull;&nbsp;oldValue: The old property value.
+								<br>&bull;&nbsp;newValue: The new property value that was specified.
+							</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_$.html">$</a>.global</p>
+</p>
+<p><p class="hangIndent"><a href="pc_$.html">$</a>.screens</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Application.html">Application</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ArtStyle.html">ArtStyle</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ArtStyles.html">ArtStyles</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Artboard.html">Artboard</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Artboards.html">Artboards</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Brush.html">Brush</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Brushes.html">Brushes</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Button (SUI).html">Button</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterAttributes.html">CharacterAttributes</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CharacterStyles.html">CharacterStyles</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Characters.html">Characters</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Checkbox (SUI).html">Checkbox</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CompoundPathItem.html">CompoundPathItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_CompoundPathItems.html">CompoundPathItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DataSet.html">DataSet</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DataSets.html">DataSets</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Document.html">Document</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Documents.html">Documents</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_DropDownList.html">DropDownList</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_EditText.html">EditText</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Event (SUI).html">Event</a>.target</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_FlashPlayer.html">FlashPlayer</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Function.html">Function</a>.arguments</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Gradient.html">Gradient</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GradientStop.html">GradientStop</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GradientStops.html">GradientStops</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Gradients.html">Gradients</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GraphItem.html">GraphItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GraphItems.html">GraphItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Group (SUI).html">Group</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GroupItem.html">GroupItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_GroupItems.html">GroupItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_IconButton.html">IconButton</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoint.html">InsertionPoint</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_InsertionPoints.html">InsertionPoints</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Layer.html">Layer</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Layers.html">Layers</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_LegacyTextItem.html">LegacyTextItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_LegacyTextItems.html">LegacyTextItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Lines.html">Lines</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.columns</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListBox (SUI).html">ListBox</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ListItem.html">ListItem</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MeshItem.html">MeshItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_MeshItems.html">MeshItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_NonNativeItem.html">NonNativeItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_NonNativeItems.html">NonNativeItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Object.html">Object</a>.prototype</p>
+</p>
+<p><p class="hangIndent"><a href="pc_OpenOptionsAutoCAD.html">OpenOptionsAutoCAD</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_OpenOptionsPDF.html">OpenOptionsPDF</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_OpenOptionsPhotoshop.html">OpenOptionsPhotoshop</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PageItems.html">PageItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Panel (SUI).html">Panel</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphAttributes.html">ParagraphAttributes</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyles.html">ParagraphStyles</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Paragraphs.html">Paragraphs</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PathItem.html">PathItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PathItems.html">PathItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PathPoint.html">PathPoint</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PathPoints.html">PathPoints</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Pattern.html">Pattern</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Patterns.html">Patterns</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PlacedItem.html">PlacedItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PlacedItems.html">PlacedItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PluginItem.html">PluginItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_PluginItems.html">PluginItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Preferences.html">Preferences</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Progressbar.html">Progressbar</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RadioButton (SUI).html">RadioButton</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RasterItem.html">RasterItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_RasterItems.html">RasterItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUI.html">ScriptUI</a>.FontStyle</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUI.html">ScriptUI</a>.applicationFonts</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUI.html">ScriptUI</a>.compatibility</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIFont.html">ScriptUIFont</a>.style</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIGraphics.html">ScriptUIGraphics</a>.BrushType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ScriptUIGraphics.html">ScriptUIGraphics</a>.PenType</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Scrollbar.html">Scrollbar</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Slider.html">Slider</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Spot.html">Spot</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Spots.html">Spots</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_StaticText (SUI).html">StaticText</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Stories.html">Stories</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Story.html">Story</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Swatch.html">Swatch</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SwatchGroup.html">SwatchGroup</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SwatchGroups.html">SwatchGroups</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Swatches.html">Swatches</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Symbol.html">Symbol</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SymbolItem.html">SymbolItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_SymbolItems.html">SymbolItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Symbols.html">Symbols</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Tag.html">Tag</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Tags.html">Tags</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFont.html">TextFont</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFonts.html">TextFonts</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrameItem.html">TextFrameItem</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextFrameItems.html">TextFrameItems</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextPath.html">TextPath</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextRange.html">TextRange</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextRanges.html">TextRanges</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TracingObject.html">TracingObject</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TracingOptions.html">TracingOptions</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TreeView.html">TreeView</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a>.target</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Variable.html">Variable</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Variables.html">Variables</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_View.html">View</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Views.html">Views</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.cancelElement</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.children</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.defaultElement</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.parent</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Window (SUI).html">Window</a>.properties</p>
+</p>
+<p><p class="hangIndent"><a href="pc_Words.html">Words</a>.parent</p>
+</p>
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Used in:</h3></td><td><p class="hangIndent"><a href="pc_CompoundPathItem.html">CompoundPathItem</a> <a href="pc_CompoundPathItem.html#duplicate">CompoundPathItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_CompoundPathItem.html">CompoundPathItem</a> <a href="pc_CompoundPathItem.html#move">CompoundPathItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent">any <a href="pc_Function.html#apply">Function.apply</a>
+		(<span class="arg">thisObj</span>:
+<b>Object</b>, <span class="arg">args</span>:
+<a href="pc_Array.html">Array</a>)
+</p><p class="hangIndent">any <a href="pc_Function.html#call">Function.call</a>
+		(<span class="arg">thisObj</span>:
+<b>Object</b>, <span class="arg">argument</span>:
+<span class="argt">any</span>)
+</p><p class="hangIndent"><a href="pc_GraphItem.html">GraphItem</a> <a href="pc_GraphItem.html#duplicate">GraphItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_GraphItem.html">GraphItem</a> <a href="pc_GraphItem.html#move">GraphItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><b>Object</b> <a href="pc_Group (SUI).html#add">Group.add</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">properties</span>:
+<b>Object</b>])
+</p><p class="hangIndent"><a href="pc_GroupItem.html">GroupItem</a> <a href="pc_GroupItem.html#duplicate">GroupItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_GroupItem.html">GroupItem</a> <a href="pc_GroupItem.html#move">GroupItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_Layer.html">Layer</a> <a href="pc_Layer.html#move">Layer.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_LegacyTextItem.html">LegacyTextItem</a> <a href="pc_LegacyTextItem.html#move">LegacyTextItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_MeshItem.html">MeshItem</a> <a href="pc_MeshItem.html#duplicate">MeshItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_MeshItem.html">MeshItem</a> <a href="pc_MeshItem.html#move">MeshItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_NonNativeItem.html">NonNativeItem</a> <a href="pc_NonNativeItem.html#duplicate">NonNativeItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_NonNativeItem.html">NonNativeItem</a> <a href="pc_NonNativeItem.html#move">NonNativeItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent">bool <a href="pc_Object.html#isPrototypeOf">Object.isPrototypeOf</a>
+		(<span class="arg">what</span>:
+<b>Object</b>)
+</p><p class="hangIndent">bool <a href="pc_Object.html#isValid">Object.isValid</a>
+		(<span class="arg">what</span>:
+<b>Object</b>)
+</p><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a> <a href="pc_PageItem.html#duplicate">PageItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_PageItem.html">PageItem</a> <a href="pc_PageItem.html#move">PageItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><b>Object</b> <a href="pc_Panel (SUI).html#add">Panel.add</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">properties</span>:
+<b>Object</b>])
+</p><p class="hangIndent"><a href="pc_PathItem.html">PathItem</a> <a href="pc_PathItem.html#duplicate">PathItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_PathItem.html">PathItem</a> <a href="pc_PathItem.html#move">PathItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_PlacedItem.html">PlacedItem</a> <a href="pc_PlacedItem.html#duplicate">PlacedItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_PlacedItem.html">PlacedItem</a> <a href="pc_PlacedItem.html#move">PlacedItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_PluginItem.html">PluginItem</a> <a href="pc_PluginItem.html#duplicate">PluginItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_PluginItem.html">PluginItem</a> <a href="pc_PluginItem.html#move">PluginItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_RasterItem.html">RasterItem</a> <a href="pc_RasterItem.html#duplicate">RasterItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_RasterItem.html">RasterItem</a> <a href="pc_RasterItem.html#move">RasterItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_Symbol.html">Symbol</a> <a href="pc_Symbol.html#duplicate">Symbol.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_SymbolItem.html">SymbolItem</a> <a href="pc_SymbolItem.html#duplicate">SymbolItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_SymbolItem.html">SymbolItem</a> <a href="pc_SymbolItem.html#move">SymbolItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_TextFrameItem.html">TextFrameItem</a> <a href="pc_TextFrameItem.html#duplicate">TextFrameItem.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_TextFrameItem.html">TextFrameItem</a> <a href="pc_TextFrameItem.html#move">TextFrameItem.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_TextRange.html">TextRange</a> <a href="pc_TextRange.html#duplicate">TextRange.duplicate</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_TextRange.html">TextRange</a> <a href="pc_TextRange.html#move">TextRange.move</a>
+		(<span class="arg">relativeObject</span>:
+<b>Object</b>, <span class="arg">insertionLocation</span>:
+<span class="argt">ElementPlacement</span>)
+</p><p class="hangIndent"><a href="pc_UIEvent.html">UIEvent</a> <a href="pc_UIEvent.html#UIEvent">UIEvent.UIEvent</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<b>Object</b>][, <span class="arg">detail</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent">void <a href="pc_UIEvent.html#initUIEvent">UIEvent.initUIEvent</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">captures</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">bubbles</span>:
+<a href="pc_Boolean.html">Boolean</a>=<span class="defv">false</span>][, <span class="arg">view</span>:
+<b>Object</b>][, <span class="arg">detail</span>:
+<a href="pc_Number.html">Number</a>])
+</p><p class="hangIndent">void <a href="pc_Window (SUI).html#Window">Window.Window</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">title</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">properties</span>:
+<b>Object</b>])
+</p><p class="hangIndent"><b>Object</b> <a href="pc_Window (SUI).html#add">Window.add</a>
+		(<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">properties</span>:
+<b>Object</b>])
+</p><p class="hangIndent">void <a href="pc_XML.html#setSettings">XML.setSettings</a>
+		(<span class="arg">obj</span>:
+<b>Object</b>)
+</p></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>Object</b> <a href="pc_Group (SUI).html#add">Group (SUI).add</a> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">properties</span>:
+<b>Object</b>])
+</p>
+<p class="hangIndent"><b>Object</b> <b>Object</b>.<a href="pc_Object.html#Object">Object</a> (<span class="arg">what</span>:
+<span class="argt">any</span>)
+</p>
+<p class="hangIndent"><b>Object</b> <b>Object</b>.<a href="pc_Object.html#valueOf">valueOf</a> ()
+</p>
+<p class="hangIndent"><b>Object</b> <a href="pc_Panel (SUI).html#add">Panel (SUI).add</a> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">properties</span>:
+<b>Object</b>])
+</p>
+<p class="hangIndent"><b>Object</b> <a href="pc_Window (SUI).html#add">Window (SUI).add</a> (<span class="arg">type</span>:
+<a href="pc_String.html">String</a>[, <span class="arg">bounds</span>:
+<a href="pc_Bounds.html">Bounds</a>][, <span class="arg">text</span>:
+<a href="pc_String.html">String</a>][, <span class="arg">properties</span>:
+<b>Object</b>])
+</p>
+<p class="hangIndent"><b>Object</b> <a href="pc_XML.html#defaultSettings">XML.defaultSettings</a> ()
+</p>
+<p class="hangIndent"><b>Object</b> <a href="pc_XML.html#settings">XML.settings</a> ()
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

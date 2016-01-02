@@ -1,0 +1,92 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: CharacterStyle</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, characterstyle">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>CharacterStyle</h1></td></tr>
+<tr><td>&nbsp;</td><td>A named style that remembers character attributes.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#add" title="Adds an element.">add</a>, <a href="#applyTo" title="Apply the character style to text object(s)">applyTo</a>, <a href="#remove" title="Deletes this object.">remove</a>, <a href="#removeAll" title="Deletes all elements.">removeAll</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>CharacterStyle</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="characterAttributes"></a>characterAttributes</td><td><a href="pc_CharacterAttributes.html">CharacterAttributes</a></td>
+<td>readonly</td><td>The character properties for the text range.</td></tr>
+<tr><td><a name="name"></a>name</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>The character style's name.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr class="lastRow"><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="add"></a><a href="pc_CharacterStyle.html">CharacterStyle</a> <span class="func">add</span> ()<br>
+Adds an element.</p>
+
+<p class="spaceBelow"><a name="applyTo"></a><span class="rett">void</span>  <span class="func">applyTo</span> (<span class="arg">textItem</span>:
+<span class="argt">any</span>[, <span class="arg">clearingOverrides</span>:
+<span class="argt">bool</span>=<span class="defv">false</span>])<br>
+Apply the character style to text object(s)
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>textItem</td><td>
+						any
+					</td><td>The text object(s) to apply the style to.</td></tr>
+<tr class="lastRow"><td>clearingOverrides</td><td><a href="pc_Boolean.html">bool</a></td><td>Whether to clear any text attributes before apply the style. (default: <b>false</b>) (Optional)</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="remove"></a><span class="rett">void</span>  <span class="func">remove</span> ()<br>
+Deletes this object.</p>
+
+<p class="spaceBelow"><a name="removeAll"></a><span class="rett">void</span>  <span class="func">removeAll</span> ()<br>
+Deletes all elements.</p>
+
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Return</h3></td>
+<td><p class="hangIndent"><b>CharacterStyle</b> <b>CharacterStyle</b>.<a href="pc_CharacterStyle.html#add">add</a> ()
+</p>
+<p class="hangIndent"><b>CharacterStyle</b> <a href="pc_CharacterStyles.html#add">CharacterStyles.add</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+<p class="hangIndent"><b>CharacterStyle</b> <a href="pc_CharacterStyles.html#getByName">CharacterStyles.getByName</a> (<span class="arg">name</span>:
+<span class="argt">string</span>)
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

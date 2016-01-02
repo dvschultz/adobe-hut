@@ -1,0 +1,94 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: ExportOptionsFlash</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, exportoptionsflash">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>ExportOptionsFlash</h1></td></tr>
+<tr><td>&nbsp;</td><td>Options which may be supplied when exporting a document as an Flash (.SWF) file.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Class</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="artClipping"></a>artClipping</td><td><a href="pe_ArtClippingOption.html">ArtClippingOption</a>:<br>ArtClippingOption.OUTPUTARTBOUNDS<br>ArtClippingOption.OUTPUTARTBOARDBOUNDS<br>ArtClippingOption.OUTPUTCROPRECTBOUNDS</td>
+<td>r/w</td><td>How should the arts be clipped during the output. (default: <b>ArtClippingOption.OUTPUTARTBOUNDS</b>)</td></tr>
+<tr><td><a name="artboardRange"></a>artboardRange</td><td><a href="pc_string.html">string</a></td>
+<td>r/w</td><td>If SaveMultipleArtboards is true,this will be considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.</td></tr>
+<tr><td><a name="backgroundColor"></a>backgroundColor</td><td><a href="pc_RGBColor.html">RGBColor</a></td>
+<td>r/w</td><td>The background color.</td></tr>
+<tr><td><a name="backgroundLayers"></a>backgroundLayers</td><td><a href="pc_Array.html">Array</a> of <a href="pc_Layer.html">Layer</a></td>
+<td>r/w</td><td>A list of layers to be included as the static background in all exported Flash frames.</td></tr>
+<tr><td><a name="blendAnimation"></a>blendAnimation</td><td><a href="pe_BlendAnimationType.html">BlendAnimationType</a>:<br>BlendAnimationType.NOBLENDANIMATION<br>BlendAnimationType.INSEQUENCE<br>BlendAnimationType.INBUILD</td>
+<td>r/w</td><td>Controls how the blend art objects are animated when export to Flash frames. (default: <b>BlendAnimationType.NOBLENDANIMATION</b>)</td></tr>
+<tr><td><a name="compressed"></a>compressed</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the exported file be compressed. (default: <b>false</b>)</td></tr>
+<tr><td><a name="convertTextToOutlines"></a>convertTextToOutlines</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should all text be converted to outlines. (default: <b>false</b>)</td></tr>
+<tr><td><a name="curveQuality"></a>curveQuality</td><td>Int32 (range: 0 - 10)</td>
+<td>r/w</td><td>How much curve information should be preserved. (default: <b>7</b>)</td></tr>
+<tr><td><a name="exportAllSymbols"></a>exportAllSymbols</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should all symbol definitions in the palette be exported to the SWF File. (default: <b>false</b>)</td></tr>
+<tr><td><a name="exportStyle"></a>exportStyle</td><td><a href="pe_FlashExportStyle.html">FlashExportStyle</a>:<br>FlashExportStyle.ARTBOARDSTOFILES<br>FlashExportStyle.ASFLASHFILE<br>FlashExportStyle.LAYERSASFRAMES<br>FlashExportStyle.LAYERSASFILES<br>FlashExportStyle.LAYERSASSYMBOLS</td>
+<td>r/w</td><td>How should the Flash file be created. (default: <b>FlashExportStyle.ASFLASHFILE</b>)</td></tr>
+<tr><td><a name="exportVersion"></a>exportVersion</td><td><a href="pe_FlashExportVersion.html">FlashExportVersion</a>:<br>FlashExportVersion.FLASHVERSION1<br>FlashExportVersion.FLASHVERSION2<br>FlashExportVersion.FLASHVERSION3<br>FlashExportVersion.FLASHVERSION4<br>FlashExportVersion.FLASHVERSION5<br>FlashExportVersion.FLASHVERSION6<br>FlashExportVersion.FLASHVERSION7<br>FlashExportVersion.FLASHVERSION8<br>FlashExportVersion.FLASHVERSION9</td>
+<td>r/w</td><td>Which version of SWF to export. (default: <b>FlashExportVersion.FLASHVERSION9</b>)</td></tr>
+<tr><td><a name="frameRate"></a>frameRate</td><td><a href="pc_number.html">number</a> (range: 0.01 - 120)</td>
+<td>r/w</td><td>When exporting layers to Flash frames. (default: <b>12</b>)</td></tr>
+<tr><td><a name="ignoreTextKerning"></a>ignoreTextKerning</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the kerning information for text objects be ignored. (default: <b>false</b>)</td></tr>
+<tr><td><a name="imageFormat"></a>imageFormat</td><td><a href="pe_FlashImageFormat.html">FlashImageFormat</a>:<br>FlashImageFormat.LOSSLESS<br>FlashImageFormat.LOSSY</td>
+<td>r/w</td><td>How should the images in the exported Flash file be compressed. (default: <b>FlashImageFormat.LOSSLESS</b>)</td></tr>
+<tr><td><a name="includeMetadata"></a>includeMetadata</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>If true, include minimal XMP metadata in the exported file. (default: <b>false</b>)</td></tr>
+<tr><td><a name="jpegMethod"></a>jpegMethod</td><td><a href="pe_FlashJPEGMethod.html">FlashJPEGMethod</a>:<br>FlashJPEGMethod.Standard<br>FlashJPEGMethod.Optimized</td>
+<td>r/w</td><td>What method to use. (default: <b>FlashJPEGMethod.Standard</b>)</td></tr>
+<tr><td><a name="jpegQuality"></a>jpegQuality</td><td>Int32 (range: 0 - 10)</td>
+<td>r/w</td><td>Level of compression. (default: <b>3</b>)</td></tr>
+<tr><td><a name="layerOrder"></a>layerOrder</td><td><a href="pe_LayerOrderType.html">LayerOrderType</a>:<br>LayerOrderType.BOTTOMUP<br>LayerOrderType.TOPDOWN</td>
+<td>r/w</td><td>The order in which the layers will be exported to Flash frames. (default: <b>LayerOrderType.BOTTOMUP</b>)</td></tr>
+<tr><td><a name="looping"></a>looping</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Should the Flash file be set to loop when run. (default: <b>false</b>)</td></tr>
+<tr><td><a name="playbackAccess"></a>playbackAccess</td><td><a href="pe_FlashPlaybackSecurity.html">FlashPlaybackSecurity</a>:<br>FlashPlaybackSecurity.PlaybackLocal<br>FlashPlaybackSecurity.PlaybackNetwork</td>
+<td>r/w</td><td>What access should the SWF file have - local or network access. (default: <b>FlashPlaybackSecurity.PlaybackLocal</b>)</td></tr>
+<tr><td><a name="preserveAppearance"></a>preserveAppearance</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Choose whether to preserve artwork appearance or editability (default) during export. (default: <b>false</b>)</td></tr>
+<tr><td><a name="readOnly"></a>readOnly</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Prevent the exported file from being imported by other applications. (default: <b>false</b>)</td></tr>
+<tr><td><a name="replacing"></a>replacing</td><td><a href="pe_SaveOptions.html">SaveOptions</a>:<br>SaveOptions.SAVECHANGES<br>SaveOptions.DONOTSAVECHANGES<br>SaveOptions.PROMPTTOSAVECHANGES</td>
+<td>r/w</td><td>If a file with the same name already exists, should it be replaced? (default: <b>SaveOptions.PROMPTTOSAVECHANGES</b>)</td></tr>
+<tr><td><a name="resolution"></a>resolution</td><td><a href="pc_number.html">number</a> (range: 72 - 2400)</td>
+<td>r/w</td><td>Pixels per inch. (default: <b>72</b>)</td></tr>
+<tr class="lastRow"><td><a name="saveMultipleArtboards"></a>saveMultipleArtboards</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>All the artboards or range of the artboards will be exported. (default: <b>false</b>)</td></tr>
+</table></td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

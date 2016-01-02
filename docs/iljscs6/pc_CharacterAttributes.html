@@ -1,0 +1,161 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: CharacterAttributes</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, characterattributes">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>CharacterAttributes</h1></td></tr>
+<tr><td>&nbsp;</td><td>Properties of a character.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>CharacterAttributes</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="Tsume"></a>Tsume</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The percentage of space reduction around a Japanese character (100 = 100%)</td></tr>
+<tr><td><a name="akiLeft"></a>akiLeft</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The em amount of left aki.</td></tr>
+<tr><td><a name="akiRight"></a>akiRight</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The em amount of right aki amount.</td></tr>
+<tr><td><a name="alignment"></a>alignment</td><td><a href="pe_StyleRunAlignmentType.html">StyleRunAlignmentType</a>:<br>StyleRunAlignmentType.bottom<br>StyleRunAlignmentType.icfBottom<br>StyleRunAlignmentType.ROMANBASELINE<br>StyleRunAlignmentType.center<br>StyleRunAlignmentType.icfTop<br>StyleRunAlignmentType.top</td>
+<td>r/w</td><td>The character alignment type.</td></tr>
+<tr><td><a name="alternateGlyphs"></a>alternateGlyphs</td><td><a href="pe_AlternateGlyphsForm.html">AlternateGlyphsForm</a>:<br>AlternateGlyphsForm.DEFAULTFORM<br>AlternateGlyphsForm.TRADITIONAL<br>AlternateGlyphsForm.EXPERT<br>AlternateGlyphsForm.JIS78FORM<br>AlternateGlyphsForm.JIS83FORM<br>AlternateGlyphsForm.HALFWIDTH<br>AlternateGlyphsForm.THIRDWIDTH<br>AlternateGlyphsForm.QUARTERWIDTH<br>AlternateGlyphsForm.FULLWIDTH<br>AlternateGlyphsForm.PROPORTIONALWIDTH<br>AlternateGlyphsForm.JIS90FORM<br>AlternateGlyphsForm.JIS04FORM</td>
+<td>r/w</td><td>The alternate glyphs form.</td></tr>
+<tr><td><a name="autoLeading"></a>autoLeading</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether to use automatic leading.</td></tr>
+<tr><td><a name="baselineDirection"></a>baselineDirection</td><td><a href="pe_BaselineDirectionType.html">BaselineDirectionType</a>:<br>BaselineDirectionType.Standard<br>BaselineDirectionType.VerticalRotated<br>BaselineDirectionType.TateChuYoko</td>
+<td>r/w</td><td>The Japanese text baseline direction.</td></tr>
+<tr><td><a name="baselinePosition"></a>baselinePosition</td><td><a href="pe_FontBaselineOption.html">FontBaselineOption</a>:<br>FontBaselineOption.NORMALBASELINE<br>FontBaselineOption.SUPERSCRIPT<br>FontBaselineOption.SUBSCRIPT</td>
+<td>r/w</td><td>The baseline position of text.</td></tr>
+<tr><td><a name="baselineShift"></a>baselineShift</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount of shift (in points) of the text baseline.</td></tr>
+<tr><td><a name="capitalization"></a>capitalization</td><td><a href="pe_FontCapsOption.html">FontCapsOption</a>:<br>FontCapsOption.NORMALCAPS<br>FontCapsOption.SMALLCAPS<br>FontCapsOption.ALLCAPS<br>FontCapsOption.ALLSMALLCAPS</td>
+<td>r/w</td><td>The case of text.</td></tr>
+<tr><td><a name="connectionForms"></a>connectionForms</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the OpenType connection forms should be used.</td></tr>
+<tr><td><a name="contextualLigature"></a>contextualLigature</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the contextual ligature should be used.</td></tr>
+<tr><td><a name="discretionaryLigature"></a>discretionaryLigature</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the discretionary ligature should be used.</td></tr>
+<tr><td><a name="figureStyle"></a>figureStyle</td><td><a href="pe_FigureStyleType.html">FigureStyleType</a>:<br>FigureStyleType.DEFAULTFIGURESTYLE<br>FigureStyleType.TABULAR<br>FigureStyleType.PROPORTIONALOLDSTYLE<br>FigureStyleType.PROPORTIONAL<br>FigureStyleType.TABULAROLDSTYLE</td>
+<td>r/w</td><td>Which figure style to use in OpenType font.</td></tr>
+<tr><td><a name="fillColor"></a>fillColor</td><td><a href="pc_Color.html">Color</a></td>
+<td>r/w</td><td>The color of the text fill.</td></tr>
+<tr><td><a name="fractions"></a>fractions</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the OpenType fractions should be used.</td></tr>
+<tr><td><a name="horizontalScale"></a>horizontalScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Character horizontal scaling factor expressed as a percentage (100 = 100%)</td></tr>
+<tr><td><a name="italics"></a>italics</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Does the Japanese OpenType support italics?</td></tr>
+<tr><td><a name="kerningMethod"></a>kerningMethod</td><td><a href="pe_AutoKernType.html">AutoKernType</a>:<br>AutoKernType.NOAUTOKERN<br>AutoKernType.AUTO<br>AutoKernType.OPTICAL<br>AutoKernType.METRICSROMANONLY</td>
+<td>r/w</td><td>The automatic kerning method to use.</td></tr>
+<tr><td><a name="language"></a>language</td><td><a href="pe_LanguageType.html">LanguageType</a>:<br>LanguageType.ENGLISH<br>LanguageType.FINNISH<br>LanguageType.STANDARDFRENCH<br>LanguageType.CANADIANFRENCH<br>LanguageType.STANDARDGERMAN<br>LanguageType.OLDGERMAN<br>LanguageType.SWISSGERMAN<br>LanguageType.ITALIAN<br>LanguageType.BOKMALNORWEGIAN<br>LanguageType.NYNORSKNORWEGIAN<br>LanguageType.STANDARDPORTUGUESE<br>LanguageType.BRAZILLIANPORTUGUESE<br>LanguageType.SPANISH<br>LanguageType.SWEDISH<br>LanguageType.UKENGLISH<br>LanguageType.DUTCH<br>LanguageType.DANISH<br>LanguageType.CATALAN<br>LanguageType.RUSSIAN<br>LanguageType.UKRANIAN<br>LanguageType.BULGARIAN<br>LanguageType.SERBIAN<br>LanguageType.CZECH<br>LanguageType.POLISH<br>LanguageType.RUMANIAN<br>LanguageType.GREEK<br>LanguageType.TURKISH<br>LanguageType.ICELANDIC<br>LanguageType.HUNGARIAN<br>LanguageType.CHINESE<br>LanguageType.JAPANESE<br>LanguageType.GERMAN2006REFORM<br>LanguageType.DUTCH2005REFORM<br>LanguageType.SWISSGERMAN2006REFORM</td>
+<td>r/w</td><td>The language of text.</td></tr>
+<tr><td><a name="leading"></a>leading</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The amount of space between two lines of text (in points)</td></tr>
+<tr><td><a name="ligature"></a>ligature</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the ligature should be used.</td></tr>
+<tr><td><a name="noBreak"></a>noBreak</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether line breaks are allowed.</td></tr>
+<tr><td><a name="openTypePosition"></a>openTypePosition</td><td><a href="pe_FontOpenTypePositionOption.html">FontOpenTypePositionOption</a>:<br>FontOpenTypePositionOption.OPENTYPEDEFAULT<br>FontOpenTypePositionOption.OPENTYPESUPERSCRIPT<br>FontOpenTypePositionOption.OPENTYPESUBSCRIPT<br>FontOpenTypePositionOption.NUMERATOR<br>FontOpenTypePositionOption.DENOMINATOR</td>
+<td>r/w</td><td>The OpenType baseline position.</td></tr>
+<tr><td><a name="ordinals"></a>ordinals</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the OpenType ordinals should be used.</td></tr>
+<tr><td><a name="ornaments"></a>ornaments</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the OpenType ornaments should be used.</td></tr>
+<tr><td><a name="overprintFill"></a>overprintFill</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether to overprint the fill of the text.</td></tr>
+<tr><td><a name="overprintStroke"></a>overprintStroke</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether to overprint the stroke of the text.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="proportionalMetrics"></a>proportionalMetrics</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Does the Japanese OpenType support proportional font?</td></tr>
+<tr><td><a name="rotation"></a>rotation</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The character rotation angle (in degrees)</td></tr>
+<tr><td><a name="size"></a>size</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Font size in points.</td></tr>
+<tr><td><a name="strikeThrough"></a>strikeThrough</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether to draw a strike through line over the text.</td></tr>
+<tr><td><a name="strokeColor"></a>strokeColor</td><td><a href="pc_Color.html">Color</a></td>
+<td>r/w</td><td>The color of the text stroke.</td></tr>
+<tr><td><a name="strokeWeight"></a>strokeWeight</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Line width of stroke.</td></tr>
+<tr><td><a name="stylisticAlternates"></a>stylisticAlternates</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the OpenType stylistic alternates should be used.</td></tr>
+<tr><td><a name="swash"></a>swash</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the OpenType swash should be used.</td></tr>
+<tr><td><a name="tateChuYokoHorizontal"></a>tateChuYokoHorizontal</td><td>Int32</td>
+<td>r/w</td><td>The Tate-Chu-Yoko horizontal adjustment in points.</td></tr>
+<tr><td><a name="tateChuYokoVertical"></a>tateChuYokoVertical</td><td>Int32</td>
+<td>r/w</td><td>The Tate-Chu-Yoko vertical adjustment in points.</td></tr>
+<tr><td><a name="textFont"></a>textFont</td><td><a href="pc_TextFont.html">TextFont</a></td>
+<td>r/w</td><td>The text font.</td></tr>
+<tr><td><a name="titling"></a>titling</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether the OpenType titling alternates should be used.</td></tr>
+<tr><td><a name="tracking"></a>tracking</td><td>Int32</td>
+<td>r/w</td><td>The tracking or range kerning amount in thousands of an em.</td></tr>
+<tr><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+<tr><td><a name="underline"></a>underline</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether to underline the text.</td></tr>
+<tr><td><a name="verticalScale"></a>verticalScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>Character vertical scaling factor expressed as a percentage (100 = 100%)</td></tr>
+<tr><td><a name="wariChuCharactersAfterBreak"></a>wariChuCharactersAfterBreak</td><td>Int32</td>
+<td>r/w</td><td></td></tr>
+<tr><td><a name="wariChuCharactersBeforeBreak"></a>wariChuCharactersBeforeBreak</td><td>Int32</td>
+<td>r/w</td><td></td></tr>
+<tr><td><a name="wariChuEnabled"></a>wariChuEnabled</td><td><a href="pc_Boolean.html">bool</a></td>
+<td>r/w</td><td>Whether WariChu is enabled.</td></tr>
+<tr><td><a name="wariChuJustification"></a>wariChuJustification</td><td><a href="pe_WariChuJustificationType.html">WariChuJustificationType</a>:<br>WariChuJustificationType.Left<br>WariChuJustificationType.Right<br>WariChuJustificationType.Center<br>WariChuJustificationType.WARICHUFULLJUSTIFYLASTLINELEFT<br>WariChuJustificationType.WARICHUFULLJUSTIFYLASTLINERIGHT<br>WariChuJustificationType.WARICHUFULLJUSTIFYLASTLINECENTER<br>WariChuJustificationType.WARICHUFULLJUSTIFY<br>WariChuJustificationType.WARICHUAUTOJUSTIFY</td>
+<td>r/w</td><td></td></tr>
+<tr><td><a name="wariChuLineGap"></a>wariChuLineGap</td><td>Int32</td>
+<td>r/w</td><td>The Wari-Chu line gap.</td></tr>
+<tr><td><a name="wariChuLines"></a>wariChuLines</td><td>Int32</td>
+<td>r/w</td><td>The number of Wari-Chu (multiple text lines fit into a space meant for one) lines.</td></tr>
+<tr class="lastRow"><td><a name="wariChuScale"></a>wariChuScale</td><td><a href="pc_number.html">number</a></td>
+<td>r/w</td><td>The Wari-Chu scale.</td></tr>
+</table></td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_CharacterStyle.html">CharacterStyle</a>.characterAttributes</p>
+</p>
+<p><p class="hangIndent"><a href="pc_ParagraphStyle.html">ParagraphStyle</a>.characterAttributes</p>
+</p>
+<p><p class="hangIndent"><a href="pc_TextRange.html">TextRange</a>.characterAttributes</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>

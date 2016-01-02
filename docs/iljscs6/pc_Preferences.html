@@ -1,0 +1,147 @@
+<html>
+<!--
+	The text herein and its relationship to other parts, implemented with hyperlinks, is a derivative of original data from Adobe.
+	This implementation is (C) 2010 Jongware.
+
+	"In all countries where the Berne Convention standards apply, copyright is automatic, and need not be obtained through
+	official registration with any government office. Once an idea has been reduced to tangible form, for example by securing
+	it in a fixed medium (such as a drawing, sheet music, photograph, a videotape, or a computer file), the copyright holder is
+	entitled to enforce his or her exclusive rights." (Wikipedia, accessed Oct 23, 2008)
+
+	However,
+
+	"Copyright does not prohibit all copying or replication. In the United States, the fair use doctrine, codified by the
+	Copyright Act of 1976 as 17 U.S.C. § 107, permits some copying and distribution without permission of the copyright holder
+	or payment to same. The statute does not clearly define fair use, but instead gives four non-exclusive factors to consider
+	in a fair use analysis. Those factors are:
+	1.  the purpose and character of the use; 
+	2.  the nature of the copyrighted work; 
+	3.  the amount and substantiality of the portion used in relation to the copyrighted work as a whole; and 
+	4.  the effect of the use upon the potential market for or value of the copyrighted work." (Wikipedia, accessed Oct 23, 2008)
+
+	and the copyright holder allows FAIR USE.
+-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Adobe Illustrator CS6 Type Library JS: Preferences</title>
+<meta name="author" content="Jongware">
+<meta name="generator" content="Kernow 1.4">
+<meta name="version" content="3.0.3i">
+<meta name="keywords" content="illustrator, cs6, javascript, preferences">
+<link rel="stylesheet" type="text/css" href="chmcs6.css">
+<link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body><table width="100%"><tr><td class="sidehead"><h3 class="sidehead">
+Class
+</h3></td>
+<td><h1>Preferences</h1></td></tr>
+<tr><td>&nbsp;</td><td>Preferences for Illustrator.</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">QuickLinks</h3></td>
+<td><a href="#getBooleanPreference" title="Retrieve the value of the application preference key as boolean.">getBooleanPreference</a>, <a href="#getIntegerPreference" title="Retrieve the value of the application preference key as integer.">getIntegerPreference</a>, <a href="#getRealPreference" title="Retrieve the value of the application preference key as real number.">getRealPreference</a>, <a href="#getStringPreference" title="Retrieve the value of the application preference key as string type.">getStringPreference</a>, <a href="#removePreference" title="Delete the application preference key.">removePreference</a>, <a href="#setBooleanPreference" title="Set the value of the application preference key as boolean.">setBooleanPreference</a>, <a href="#setIntegerPreference" title="Set the value of the application preference key as integer.">setIntegerPreference</a>, <a href="#setRealPreference" title="Set the value of the application preference key as real number.">setRealPreference</a>, <a href="#setStringPreference" title="Set the value of the application preference key as string type.">setStringPreference</a></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Hierarchy</h3>
+</td><td><table class="framed" align="center"><tr><td><center><a href="pc_Object.html">Object</a></center></td></tr></table>
+<table class="framedc" align="center"><tr><td class="framed"><center>Preferences</center></td></tr></table>
+
+</td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Properties</h3>
+</td><td><table width="100%"><tr><th>Property</th><th>Type</th><th>Access</th><th>Description</th></tr>
+<tr><td><a name="AutoCADFileOptions"></a>AutoCADFileOptions</td><td><a href="pc_OpenOptionsAutoCAD.html">OpenOptionsAutoCAD</a></td>
+<td>readonly</td><td>Options to use when opening or placing a AutoCAD file.</td></tr>
+<tr><td><a name="PDFFileOptions"></a>PDFFileOptions</td><td><a href="pc_OpenOptionsPDF.html">OpenOptionsPDF</a></td>
+<td>readonly</td><td>Options to use when opening or placing a PDF file.</td></tr>
+<tr><td><a name="parent"></a>parent</td><td><a href="pc_Object.html">Object</a></td>
+<td>readonly</td><td>The object's container.</td></tr>
+<tr><td><a name="photoshopFileOptions"></a>photoshopFileOptions</td><td><a href="pc_OpenOptionsPhotoshop.html">OpenOptionsPhotoshop</a></td>
+<td>readonly</td><td>Options to use when opening or placing a Photoshop file.</td></tr>
+<tr class="lastRow"><td><a name="typename"></a>typename</td><td><a href="pc_string.html">string</a></td>
+<td>readonly</td><td>The class name of the object.</td></tr>
+</table></td></tr>
+<tr><td class="sidehead"><h3 class="sidehead">Methods</h3>
+</td><td><h4>Instances</h4><p class="spaceBelow"><a name="getBooleanPreference"></a><a href="pc_Boolean.html">bool</a>  <span class="func">getBooleanPreference</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Retrieve the value of the application preference key as boolean.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The preference key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getIntegerPreference"></a><span class="rett">Int32</span> <span class="func">getIntegerPreference</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Retrieve the value of the application preference key as integer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The preference key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getRealPreference"></a>number <span class="func">getRealPreference</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Retrieve the value of the application preference key as real number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The preference key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="getStringPreference"></a>string <span class="func">getStringPreference</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Retrieve the value of the application preference key as string type.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The preference key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="removePreference"></a><span class="rett">void</span>  <span class="func">removePreference</span> (<span class="arg">key</span>:
+<span class="argt">string</span>)<br>
+Delete the application preference key.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr class="lastRow"><td>key</td><td><a href="pc_string.html">string</a></td><td>The preference key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setBooleanPreference"></a><span class="rett">void</span>  <span class="func">setBooleanPreference</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">bool</span>)<br>
+Set the value of the application preference key as boolean.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The preference key.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_Boolean.html">bool</a></td><td>The boolean value of the preference key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setIntegerPreference"></a><span class="rett">void</span>  <span class="func">setIntegerPreference</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">Int32</span>)<br>
+Set the value of the application preference key as integer.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The preference key.</td></tr>
+<tr class="lastRow"><td>value</td><td>Int32</td><td>The boolean value of the preference key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setRealPreference"></a><span class="rett">void</span>  <span class="func">setRealPreference</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">number</span>)<br>
+Set the value of the application preference key as real number.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The preference key.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_number.html">number</a></td><td>The real value of the preference key.</td></tr>
+</table>
+</p>
+
+<p class="spaceBelow"><a name="setStringPreference"></a><span class="rett">void</span>  <span class="func">setStringPreference</span> (<span class="arg">key</span>:
+<span class="argt">string</span>, <span class="arg">value</span>:
+<span class="argt">string</span>)<br>
+Set the value of the application preference key as string type.
+<table width="100%"><tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+<tr><td>key</td><td><a href="pc_string.html">string</a></td><td>The preference key.</td></tr>
+<tr class="lastRow"><td>value</td><td><a href="pc_string.html">string</a></td><td>The string value of the preference key.</td></tr>
+</table>
+</p>
+
+</td></tr>
+<tr class="lastRow"><td class="sidehead"><h3 class="sidehead">Element of</h3></td>
+<td><p><p class="hangIndent"><a href="pc_Application.html">Application</a>.preferences</p>
+</p>
+</td></tr>
+</table>
+<table class="bottomline" width="100%"><tr><td width="15%"><span style="color:#aaa; font-size:8pt;">Jongware, 25-Nov-2012 v3.0.3i</span></td><td align="center"><a href="index.html">Contents</a> :: <a href="inxx.html">Index</a></td></tr></table>
+</body></html>
