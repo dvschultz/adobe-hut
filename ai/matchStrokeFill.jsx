@@ -1,0 +1,1 @@
+﻿/* rounds lows and highs of colors */doc = app.activeDocument;for (var p = 0; p < doc.pathItems.length; p++) {    var shape = doc.pathItems[p];    $.writeln(shape.fillColor.blue);    shape.strokeColor = shape.fillColor;}
