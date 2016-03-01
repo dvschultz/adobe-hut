@@ -1,1 +1,1 @@
-﻿#target illustratorvar doc = app.activeDocument;app.executeMenuCommand('selectall'); app.executeMenuCommand('outline');doc.close(SaveOptions.SAVECHANGES);
+﻿#target illustratorvar doc = app.activeDocument;// https://forums.adobe.com/message/7921582#7921582app.executeMenuCommand('selectall'); app.executeMenuCommand('outline');doc.close(SaveOptions.SAVECHANGES);
