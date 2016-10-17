@@ -1,0 +1,1 @@
+﻿app.executeMenuCommand('Add Anchor Points2');app.executeMenuCommand('Add Anchor Points2');app.executeMenuCommand('Add Anchor Points2');//~ app.executeMenuCommand('Add Anchor Points2');
