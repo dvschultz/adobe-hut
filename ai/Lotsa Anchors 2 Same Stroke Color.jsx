@@ -1,0 +1,1 @@
+﻿#target illustrator// http://chuwa.iobb.net/tech/illustrator-cc2014-menu-comman.htmlapp.executeMenuCommand('Find Stroke Color menu item');app.executeMenuCommand('Add Anchor Points2');app.executeMenuCommand('Add Anchor Points2');app.executeMenuCommand('Add Anchor Points2');app.executeMenuCommand('Add Anchor Points2');
