@@ -4,6 +4,7 @@ var folder1 = Folder.selectDialog("Select Image Folder 1");
 var folder2 = Folder.selectDialog("Select Image Folder 2");
 var output = Folder.selectDialog("Select Output Folder");
 var transforms = true;
+var debug = false;
 
 // Save file options
 var options = new ExportOptionsSaveForWeb();
@@ -20,7 +21,7 @@ if (folder1 != null && folder2 != null && output != null) {
         f1 = app.open(files1[i]);
         f1Doc = app.activeDocument;
         f1Name = f1Doc.name;
-        $.writeln(f1Name);
+        if(debug) $.writeln(f1Name);
         //for (var j = 0; j < 1; j++) {
 
         for (var j = 0; j < files2.length; j++) {
@@ -45,7 +46,7 @@ if (folder1 != null && folder2 != null && output != null) {
             fName = f1Name.split('.')[0] + '-' + f2Name.split('.')[0];
             var exportedFile = new File(output + '/' +  fName +  ".png");
             app.activeDocument.exportDocument(exportedFile, ExportType.SAVEFORWEB, options);
-            $.writeln(fName+" processed.")
+            if(debug) $.writeln(fName+" processed.")
             //remove layer
             f1Doc.artLayers[0].remove();
         }
