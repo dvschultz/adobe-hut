@@ -1,3 +1,5 @@
+//vertical 8.5 x 11
+//1600x1080
 var rows = 5,
     columns = 2,
     start_left = 100,
@@ -7,7 +9,84 @@ var rows = 5,
     item_board_count = rows*columns,
     ab_w = 576,
     ab_h = 792,
-    start_count = 21; //for text output only
+    start_count = 1; //for text output only
+
+// horizontal 8.5 x 11
+// var rows = 4,
+//     columns = 3,
+//     start_left = 108,
+//     start_top = 29,
+//     item_width = 192,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 792,
+//     ab_h = 576,
+//     start_count = 11; //for text output only
+
+// horizontal 8.5 x11
+// square 1080x1080
+// var rows = 3,
+//     columns = 5,
+//     start_left = 71.6,
+//     start_top = 93.2,
+//     item_width = 129.6,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 792,
+//     ab_h = 576,
+//     start_count = 1; //for text output only
+
+// vertical 7x9
+// square 1080x1080
+// var rows = 4,
+//     columns = 3,
+//     start_left = 57.2,
+//     start_top = 64.2,
+//     item_width = 129.6,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 504,
+//     ab_h = 648,
+//     start_count = 1; //for text output only
+
+// vertical 8.5x11
+// square 1080x1080
+// var rows = 5,
+//     columns = 4,
+//     start_left = 46.8,
+//     start_top = 62,
+//     item_width = 129.6,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 576,
+//     ab_h = 792,
+//     start_count = 1; //for text output only
+
+// square 8.5x8.5
+// square 1080x1080
+// var rows = 4,
+//     columns = 4,
+//     start_left = 46,
+//     start_top = 46,
+//     item_width = 129.75,
+//     item_height = 129.75,
+//     item_board_count = rows*columns,
+//     ab_w = 576,
+//     ab_h = 576,
+//     start_count = 1; //for text output only
+
+// vertical 8.5 x11
+// square 1080x1080
+// var rows = 3,
+//     columns = 5,
+//     start_left = 71.6,
+//     start_top = 93.2,
+//     item_width = 129.6,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 576,
+//     ab_h = 792,
+//     start_count = 1; //for text output only
 
 // var debug = true;
 // doc = app.activeDocument;
@@ -35,7 +114,7 @@ while (i < images.length) {
         var text = new_doc.layers[0].textFrames.add();
         text.contents = (ab_index + start_count).toString();
         text.textRange.characterAttributes.size = 24;
-        text.textRange.characterAttributes.textFont.style = "Bold";
+        // text.textRange.characterAttributes.textFont.style = "Bold";
         text.position = [ab_left+20,-ab_top - 30];
 
         ab_index++;
