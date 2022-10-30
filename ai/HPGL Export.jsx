@@ -54,7 +54,7 @@ if ( app.documents.length > 0 ) {
     if(COORDINATETYPE == "BOTTOMLEFT") {
         xReset = 0;
         yReset = docH;
-        $.writeln(docH);
+        // $.writeln(docH);
     } else {
         xReset = -1 * Math.abs( (doc.artboards[0].artboardRect[0] - doc.artboards[0].artboardRect[2])/2) ;
         yReset = -1 * Math.abs( (doc.artboards[0].artboardRect[1] - doc.artboards[0].artboardRect[3])/2  ) + docH;
@@ -65,8 +65,8 @@ if ( app.documents.length > 0 ) {
 }
 
 function main() {
-    $.writeln('total paths:' + doc.pathItems.length);
-    $.writeln('total compound paths: ' + doc.compoundPathItems.length);
+    // $.writeln('total paths:' + doc.pathItems.length);
+    // $.writeln('total compound paths: ' + doc.compoundPathItems.length);
     
     if( POLYGONMODE && (doc.compoundPathItems.length > 0) ) {
         for (var c = doc.compoundPathItems.length - 1; c >= 0; c--) {
@@ -93,7 +93,7 @@ function main() {
     
     // now process all non-compound paths
     for (var i = doc.pathItems.length - 1; i >= 0; i--) {
-        $.writeln('processing path:' + i);
+        // $.writeln('processing path:' + i);
         shape = doc.pathItems[i];
 
         if( (shape.parent.typename == "CompoundPathItem") && POLYGONMODE ) {
@@ -148,7 +148,7 @@ function writeFile() {
     var hpgl2,
         docFile = File(doc.fullName);
 
-        $.writeln(doc.fullName);
+        // $.writeln(doc.fullName);
     
     if (splitFile){
         for(var s = 0; s < penStrings.length; s++) {
@@ -265,7 +265,7 @@ function isCircle(shape) {
                t4 = shape.pathPoints[0].pointType == PointType.SMOOTH;
          return (t1 == t2 == t3 == t4 == true );
     }
-    $.writeln('possible error');
+    // $.writeln('possible error');
     return false;
 }
 
@@ -291,7 +291,7 @@ function isRect(shape) {
         (a1 == 0 && a2 == -90 && a3 == 180 && a4 == 90) || (a1 == 0 && a2 == 90 && a3 == 180 && a4 == -90) ||
         (a1 == 180 && a2 == -90 && a3 == 0 && a4 == 90) || (a1 == -90 && a2 == 180 && a3 == 90 && a4 == 0) );
     }
-    $.writeln('possible error');
+    // $.writeln('possible error');
     return false;
 }
 
@@ -484,7 +484,7 @@ function getPenNum(shape) {
             index = colors.indexOf(returnColor(shape.pathItems[0].strokeColor));
             return (index == -1) ? 0 : index;
         } else {
-            $.writeln("error?");
+            // $.writeln("error?");
             //otherwise let’s just guess its the first pen color
             return 0;
         }
@@ -549,7 +549,6 @@ function returnColor(c) {
 
     return "black";
 }
-
 
 
 

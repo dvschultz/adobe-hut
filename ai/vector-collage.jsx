@@ -1,4 +1,4 @@
-//@target Illustrator
+// @target Illustrator
 // INSTRUCTIONS
 // Only have a single document open when running this
 var board_count = 50;

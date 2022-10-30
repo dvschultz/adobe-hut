@@ -26,6 +26,14 @@ var rows = 13,
 //     direction = "YthenX",
 //     start_count = 1; //for text output only
 
+var dlg = new Window( "dialog", "Select Perf Type" );
+    dlg.alertBtnsPnl = dlg.add( "panel", undefined, "Perf Type" );
+    dlg.alertBtnsPnl.perf5 = dlg.alertBtnsPnl.add( "radiobutton", undefined, "5 perf" );
+    dlg.alertBtnsPnl.perf4 = dlg.alertBtnsPnl.add( "radiobutton", undefined, "4 perf" );
+    dlg.alertBtnsPnl.perf5.value = true;
+    dlg.alertBtnsPnl.okBtn = dlg.alertBtnsPnl.add( "button", undefined, "OK", { name: "ok" } );
+    dlg.show();
+
 // var debug = true;
 // doc = app.activeDocument;
 var MAX_DIM = 16344;
@@ -36,6 +44,15 @@ var img_folder = Folder.selectDialog("Select Image Folder"),
     ab_cols = Math.floor(MAX_DIM/ab_w);
     ab_rows = Math.floor(MAX_DIM/ab_h);
     boards_per = ab_cols*ab_rows;
+
+// alert("Perf 5?: " + dlg.alertBtnsPnl.perf5.value)
+// alert("Perf 4?: " + dlg.alertBtnsPnl.perf4.value)
+
+if (dlg.alertBtnsPnl.perf5.value) {
+    item_height = 53.7
+} else if (dlg.alertBtnsPnl.perf4.value) {
+    item_height = 40.3
+}
 
 var new_doc = app.documents.add(DocumentColorSpace.RGB,ab_w,ab_h,board_count,DocumentArtboardLayout.GridByRow,0,ab_rows); 
 
