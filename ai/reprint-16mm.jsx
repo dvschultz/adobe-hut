@@ -1,6 +1,6 @@
 //vertical 8.5 x 11
 //1600x1080
-var rows = 34,
+var rows = 32,
     columns = 10,
     start_left = 30,
     start_top = 22,
@@ -26,8 +26,11 @@ var img_folder = Folder.selectDialog("Select Image Folder"),
 
 var new_doc = app.documents.add(DocumentColorSpace.RGB,ab_w,ab_h,board_count,DocumentArtboardLayout.GridByRow,0,ab_rows); 
 
-i = 0;
+var flip = app.getScaleMatrix(-100,100);
+i = 0
+ii = (images.length-1);
 ab_index = 0;
+
 while (i < images.length) {
     if(i % item_board_count == 0){
         //all coordinates must be relative to correct artboard, so grab top and left of artboard
@@ -58,14 +61,17 @@ while (i < images.length) {
     
 
     var itemToPlace = new_doc.placedItems.add();
-    itemToPlace.file = images[i];   
+    itemToPlace.file = images[ii];   
     itemToPlace.layer = new_doc.currentLayer;
     itemToPlace.top = t;
     itemToPlace.left = l;
-    itemToPlace.width = item_width;
+    itemToPlace.width = item_width; //flips left to right 
     itemToPlace.height = item_height;
+    itemToPlace.transform(flip);
+    itemToPlace.rotate(180)
 
     i++;
+    ii--;
 
     // some debug shit
     // alert(images[i].path + "/" + images[i].name)

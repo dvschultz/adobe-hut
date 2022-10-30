@@ -1,27 +1,27 @@
 //vertical 8.5 x 11
 //1600x1080
-var rows = 5,
-    columns = 2,
-    start_left = 100,
-    start_top = 69,
-    item_width = 192,
-    item_height = 129.6,
-    item_board_count = rows*columns,
-    ab_w = 576,
-    ab_h = 792,
-    start_count = 1; //for text output only
-
-// horizontal 8.5 x 11
-// var rows = 4,
-//     columns = 3,
-//     start_left = 108,
-//     start_top = 29,
+// var rows = 5,
+//     columns = 2,
+//     start_left = 100,
+//     start_top = 69,
 //     item_width = 192,
 //     item_height = 129.6,
 //     item_board_count = rows*columns,
-//     ab_w = 792,
-//     ab_h = 576,
-//     start_count = 11; //for text output only
+//     ab_w = 576,
+//     ab_h = 792,
+//     start_count = 1; //for text output only
+
+// horizontal 8.5 x 11
+var rows = 5,
+    columns = 4,
+    start_left = 60,
+    start_top = 30,
+    item_width = 153.6,
+    item_height = 83.52,
+    item_board_count = rows*columns,
+    ab_w = 792,
+    ab_h = 612,
+    start_count = 1; //for text output only
 
 // horizontal 8.5 x11
 // square 1080x1080
@@ -33,6 +33,19 @@ var rows = 5,
 //     item_height = 129.6,
 //     item_board_count = rows*columns,
 //     ab_w = 792,
+//     ab_h = 576,
+//     start_count = 1; //for text output only
+
+// horizontal 8 x 10.75
+// square 1080x1080
+// var rows = 4,
+//     columns = 5,
+//     start_left = 64.0,
+//     start_top = 28.2,
+//     item_width = 129.6,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 774,
 //     ab_h = 576,
 //     start_count = 1; //for text output only
 
@@ -58,8 +71,47 @@ var rows = 5,
 //     item_width = 129.6,
 //     item_height = 129.6,
 //     item_board_count = rows*columns,
-//     ab_w = 576,
-//     ab_h = 792,
+//     ab_w = 612,
+//     ab_h = 792, //828
+//     start_count = 1; //for text output only
+
+// vertical 8.5x11
+// Black Belly Tarantula
+    // var rows = 5,
+    // columns = 2,
+    // start_left = 75.6,
+    // start_top = 88.8,
+    // item_width = 230.4, //230.4 1920
+    // item_height = 120.96, //128.6 BBT
+    // item_board_count = rows*columns,
+    // ab_w = 612,
+    // ab_h = 792, //828
+    // start_count = 1; //for text output only
+
+// vertical 11x8.5
+// Vertigo
+// var rows = 4,
+// columns = 3,
+// start_left = 75.6,
+// start_top = 84.8,
+// item_width = 230.4, //228.5 BBT
+// item_height = 124.5, //128.6 BBT
+// item_board_count = rows*columns,
+// ab_w = 792,
+// ab_h = 612, //828
+// start_count = 1; //for text output only
+
+// // vertical 8.5x11.5
+// // square 1080x1080
+//     var rows = 5,
+//     columns = 4,
+//     start_left = 46.8,
+//     start_top = 62,
+//     item_width = 129.6,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 612,
+//     ab_h = 828, 
 //     start_count = 1; //for text output only
 
 // square 8.5x8.5
@@ -86,6 +138,45 @@ var rows = 5,
 //     item_board_count = rows*columns,
 //     ab_w = 576,
 //     ab_h = 792,
+//     start_count = 1; //for text output only
+
+// vertical 8.5x12.5
+// square 1080x1080
+// var rows = 6,
+//     columns = 4,
+//     start_left = 46.25,
+//     start_top = 50.5,
+//     item_width = 129.6,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 612,
+//     ab_h = 900,
+//     start_count = 1; //for text output only
+
+// vertical 8.5x11.75
+// square 1080x1080
+// var rows = 6,
+//     columns = 4,
+//     start_left = 46.25,
+//     start_top = 36,
+//     item_width = 129.6,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 612,
+//     ab_h = 846,
+//     start_count = 1; //for text output only
+
+// vertical 4.5x7.5
+// square 1080x1080
+// var rows = 3,
+//     columns = 2,
+//     start_left = 32.5,
+//     start_top = 75.8,
+//     item_width = 129.6,
+//     item_height = 129.6,
+//     item_board_count = rows*columns,
+//     ab_w = 324,
+//     ab_h = 540,
 //     start_count = 1; //for text output only
 
 // var debug = true;
