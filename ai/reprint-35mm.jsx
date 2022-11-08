@@ -1,8 +1,8 @@
-//5 perf
-var rows = 13,
+//4 perf
+var rows = 12,
     columns = 4,
     start_left = 60,
-    start_top = 40,
+    start_top = 50,
     item_width = 71.2,
     item_height = 53.7, //5 perf
     item_board_count     = rows*columns,
@@ -28,9 +28,9 @@ var rows = 13,
 
 var dlg = new Window( "dialog", "Select Perf Type" );
     dlg.alertBtnsPnl = dlg.add( "panel", undefined, "Perf Type" );
-    dlg.alertBtnsPnl.perf5 = dlg.alertBtnsPnl.add( "radiobutton", undefined, "5 perf" );
     dlg.alertBtnsPnl.perf4 = dlg.alertBtnsPnl.add( "radiobutton", undefined, "4 perf" );
-    dlg.alertBtnsPnl.perf5.value = true;
+    dlg.alertBtnsPnl.perf3 = dlg.alertBtnsPnl.add( "radiobutton", undefined, "3 perf" );
+    dlg.alertBtnsPnl.perf4.value = true;
     dlg.alertBtnsPnl.okBtn = dlg.alertBtnsPnl.add( "button", undefined, "OK", { name: "ok" } );
     dlg.show();
 
@@ -48,10 +48,13 @@ var img_folder = Folder.selectDialog("Select Image Folder"),
 // alert("Perf 5?: " + dlg.alertBtnsPnl.perf5.value)
 // alert("Perf 4?: " + dlg.alertBtnsPnl.perf4.value)
 
-if (dlg.alertBtnsPnl.perf5.value) {
+if (dlg.alertBtnsPnl.perf4.value) {
+    rows = 12
     item_height = 53.7
-} else if (dlg.alertBtnsPnl.perf4.value) {
-    item_height = 40.3
+} else if (dlg.alertBtnsPnl.perf3.value) {
+    rows = 16
+    columns = 4
+    item_height = 40.2938
 }
 
 var new_doc = app.documents.add(DocumentColorSpace.RGB,ab_w,ab_h,board_count,DocumentArtboardLayout.GridByRow,0,ab_rows); 
