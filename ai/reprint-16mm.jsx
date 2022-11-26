@@ -1,11 +1,11 @@
 //vertical 8.5 x 11
 //1600x1080
-var rows = 32,
+var rows = 30,
     columns = 10,
     start_left = 30,
     start_top = 22,
-    item_width = 29.5,
-    item_height = 21.575,
+    item_width = 29.628,
+    item_height = 21.493,
     item_board_count = rows*columns,
     ab_w = 612,
     ab_h = 792,
