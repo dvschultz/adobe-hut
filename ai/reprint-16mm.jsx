@@ -1,3 +1,4 @@
+// MAKE SURE TO USE V3 TEMPLATE!!!
 //vertical 8.5 x 11
 //1600x1080
 var rows = 30,
