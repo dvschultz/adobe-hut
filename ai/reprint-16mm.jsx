@@ -5,7 +5,7 @@ var rows = 30,
     columns = 10,
     start_left = 30,
     start_top = 52,
-    item_width = 29.628,
+    item_width = 29.5,
     item_height = 21.6291,
     item_board_count = rows*columns,
     ab_w = 612,
@@ -15,15 +15,42 @@ var rows = 30,
     start_count = 1; //for text output only
 
 var dlg = new Window( "dialog", "Settings" );
+    
     dlg.alertBtnsPnl = dlg.add( "panel", undefined, "Frames per column" );
     // dlg.alertBtnsPnl.perf4 = dlg.alertBtnsPnl.add( "radiobutton", undefined, "4 perf" );
     dlg.alertBtnsPnl.frameCount = dlg.alertBtnsPnl.add ("edittext", undefined, rows.toString());
     // dlg.alertBtnsPnl.frameCount = 5;
+    dlg.alertBtnsPnl2 = dlg.add("panel", undefined, "Size Settings")
+    dlg.alertBtnsPnl.r16 = dlg.alertBtnsPnl2.add( "radiobutton", undefined, "Regular 16" );
+    dlg.alertBtnsPnl.s16 = dlg.alertBtnsPnl2.add( "radiobutton", undefined, "Super 16" );
+    dlg.alertBtnsPnl.r16.value = true;
+
+    dlg.alertBtnsPnl3 = dlg.add("panel", undefined, "Stretch Settings")
+    dlg.alertBtnsPnl.stretch = dlg.alertBtnsPnl3.add( "radiobutton", undefined, "Stretch" );
+    dlg.alertBtnsPnl.pad= dlg.alertBtnsPnl3.add( "radiobutton", undefined, "Pad" );
+    dlg.alertBtnsPnl.stretch.value = true;
+
     dlg.alertBtnsPnl.okBtn = dlg.add( "button", undefined, "OK", { name: "ok" } );
     dlg.show();
 
 rows = parseInt(dlg.alertBtnsPnl.frameCount.text)
+
 // alert(dlg.alertBtnsPnl.frameCount.text)
+
+if (dlg.alertBtnsPnl.r16.value) {
+    item_width = 29.5,
+    item_board_count = rows*columns
+} else if (dlg.alertBtnsPnl.s16.value) {
+    item_width = 37.500,
+    space_x = 16,
+    item_board_count = rows*columns
+}
+
+if (dlg.alertBtnsPnl.stretch.value) {
+    stretchtype = "stretch"
+} else if(dlg.alertBtnsPnl.pad.value) {
+    stretchtype = "pad"
+}
 
 // var debug = true;
 // doc = app.activeDocument;
@@ -72,11 +99,26 @@ while (i < images.length) {
 
         var itemToPlace = new_doc.placedItems.add();
         itemToPlace.file = images[ii];   
+        
+
         itemToPlace.layer = new_doc.currentLayer;
-        itemToPlace.top = t;
-        itemToPlace.left = l;
-        itemToPlace.width = item_width; //flips left to right 
-        itemToPlace.height = item_height;
+        
+
+        if(stretchtype == "pad") {
+            // generate correct height based in input dimensions
+            new_height = itemToPlace.height/(itemToPlace.width/item_width)
+            itemToPlace.top = t - ((item_height-new_height)/2);
+            itemToPlace.left = l;
+            
+            
+            itemToPlace.width = item_width; //flips left to right 
+            itemToPlace.height = new_height;
+        } else {
+            itemToPlace.top = t;
+            itemToPlace.left = l;
+            itemToPlace.width = item_width; //flips left to right 
+            itemToPlace.height = item_height;
+        }
         itemToPlace.transform(flip);
         itemToPlace.rotate(180)
 
