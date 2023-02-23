@@ -14,18 +14,26 @@ var rows = 30,
     direction = "YthenX",
     start_count = 1; //for text output only
 
-var dlg = new Window( "dialog", "Settings" );
+var dlg = new Window( "dialog", "Reprint Settings" );
     
     dlg.alertBtnsPnl = dlg.add( "panel", undefined, "Frames per column" );
+    dlg.alertBtnsPnl.alignment = "left";
+    dlg.alertBtnsPnl.width = 450;
     // dlg.alertBtnsPnl.perf4 = dlg.alertBtnsPnl.add( "radiobutton", undefined, "4 perf" );
     dlg.alertBtnsPnl.frameCount = dlg.alertBtnsPnl.add ("edittext", undefined, rows.toString());
-    // dlg.alertBtnsPnl.frameCount = 5;
-    dlg.alertBtnsPnl2 = dlg.add("panel", undefined, "Size Settings")
+    dlg.alertBtnsPnl.frameCount.characters = 10;
+    dlg.alertBtnsPnl2 = dlg.add("panel", undefined, "Frame Settings")
+    dlg.alertBtnsPnl2.orientation = "row";
+    dlg.alertBtnsPnl2.alignment = "left";
+    dlg.alertBtnsPnl2.width = 450;
     dlg.alertBtnsPnl.r16 = dlg.alertBtnsPnl2.add( "radiobutton", undefined, "Regular 16" );
     dlg.alertBtnsPnl.s16 = dlg.alertBtnsPnl2.add( "radiobutton", undefined, "Super 16" );
     dlg.alertBtnsPnl.r16.value = true;
 
     dlg.alertBtnsPnl3 = dlg.add("panel", undefined, "Stretch Settings")
+    dlg.alertBtnsPnl3.orientation = "row";
+    dlg.alertBtnsPnl3.alignment = "left";
+    dlg.alertBtnsPnl3.width = 450;
     dlg.alertBtnsPnl.stretch = dlg.alertBtnsPnl3.add( "radiobutton", undefined, "Stretch" );
     dlg.alertBtnsPnl.pad= dlg.alertBtnsPnl3.add( "radiobutton", undefined, "Pad" );
     dlg.alertBtnsPnl.stretch.value = true;
