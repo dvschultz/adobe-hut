@@ -16,7 +16,7 @@ var COORDINATETYPE = "BOTTOMLEFT", // "BOTTOMLEFT" or  "CENTER"
     checkForRects = false,
     checkDupePoints = false,
     POLYGONMODE = false,
-    fillMode = "color", //color, random, default
+    fillMode = "default", //color, random, default
     defaultFillType = "",
     fillOptions = fillOptions = ["FT3,45,90;","FT3,45,0;","FT3,45,45;","FT3,45,90;"],
     colors = ["red","green","blue","black"],
