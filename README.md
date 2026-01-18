@@ -181,6 +181,8 @@ To use these agents and skills with Claude Code:
 | `after-effects-sdk` | C++ SDK plugin development. Effect plugins, AEGPs, AEIOs, SmartFX, GPU rendering, and custom UI. |
 | `extendscript-validator` | Validates ExtendScript code for ES3 compatibility. Catches modern JavaScript syntax that won't work in Adobe apps. |
 | `photoshop-uxp-expert` | Photoshop UXP plugin development (v22.0+). Modern JavaScript API including executeAsModal, batchPlay, layers, documents, selections, imaging, and file storage. |
+| `premiere-uxp-expert` | Premiere Pro UXP plugin development (v25.6+). Modern JavaScript API including projects, sequences, tracks, clips, markers, actions/transactions, and manifest configuration. |
+| `indesign-uxp-expert` | InDesign UXP plugin/script development (v18.0+). Modern JavaScript API including documents, pages, text frames, stories, tables, styles, and manifest configuration. |
 
 ### Available Skills
 
@@ -247,6 +249,28 @@ To use these agents and skills with Claude Code:
 | `ps-uxp-events` | Event system: notification listeners, real-time monitoring |
 | `ps-uxp-storage` | File storage: local file system, dialogs, localStorage persistence |
 | `ps-uxp-reference` | Quick reference: constants, version requirements, common patterns |
+
+#### Premiere Pro UXP (Modern JavaScript)
+
+| Skill | Description |
+|-------|-------------|
+| `ppro-uxp-project` | Project and media management: opening projects, importing, project items, bins |
+| `ppro-uxp-sequence` | Sequence operations: timeline navigation, playhead, in/out points, TickTime |
+| `ppro-uxp-tracks` | Track and clip manipulation: accessing tracks, clip properties, timing adjustments |
+| `ppro-uxp-actions` | Actions and transactions: executeTransaction, CompoundAction, undo grouping |
+| `ppro-uxp-markers` | Marker operations: creating, reading, modifying sequence and clip markers |
+| `ppro-uxp-manifest` | Plugin manifest configuration: entrypoints, permissions, icons |
+
+#### InDesign UXP (Modern JavaScript)
+
+| Skill | Description |
+|-------|-------------|
+| `indd-uxp-documents` | Document and page operations: creation, saving, spreads, layers, master pages |
+| `indd-uxp-text` | Text frames, stories, paragraphs, characters, find/change, text threading |
+| `indd-uxp-styles` | Paragraph, character, object, table, and cell styles |
+| `indd-uxp-tables` | Table creation, rows, columns, cell formatting, merging |
+| `indd-uxp-objects` | Page items, graphics, positioning, transformations, groups |
+| `indd-uxp-manifest` | Plugin manifest: entrypoints, permissions, DOM versioning |
 
 ### Usage Examples
 
