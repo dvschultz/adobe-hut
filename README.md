@@ -272,6 +272,12 @@ To use these agents and skills with Claude Code:
 | `indd-uxp-objects` | Page items, graphics, positioning, transformations, groups |
 | `indd-uxp-manifest` | Plugin manifest: entrypoints, permissions, DOM versioning |
 
+#### UXP Development Tools
+
+| Skill | Description |
+|-------|-------------|
+| `uxp-bolt-workflow` | Bolt UXP boilerplate: project creation, uxp.config.ts, Vite builds, hot-reload, multi-panel, webview UI, hybrid C++ plugins, CCX packaging |
+
 ### Usage Examples
 
 Once installed, Claude Code will automatically use these agents when relevant:
