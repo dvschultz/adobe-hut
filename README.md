@@ -9,7 +9,18 @@ A collection of ExtendScript utilities and automation scripts for Adobe Creative
 |--------|-------------|
 | `edl_to_composition.jsx` | Converts CMX 3600 EDL files into compositions with properly timed video layers |
 | `randomize-layers.jsx` | Randomizes the stacking order of layers in the active composition |
+| `trim_and_resequence.jsx` | Trims frames from layer in/out points and resequences clips with no gaps |
 | `ae_video_extractor.js` | Extracts video filenames from all footage in a composition and saves to a text file |
+
+### AEQuery Versions
+
+These scripts use the [AEQuery](https://github.com/docsforadobe/aequery) library for cleaner, more readable code. Requires `lib/aequery.js`.
+
+| Script | Description |
+|--------|-------------|
+| `randomize-layers-aeq.jsx` | Randomizes layer order with undo support and readable code |
+| `trim_and_resequence-aeq.jsx` | Trim and resequence with `aeq.ui` dialogs and selector filtering |
+| `ae_video_extractor-aeq.jsx` | Extract video filenames using chained filter/map and `aeq.writeFile` |
 
 ## Illustrator (`ai/`)
 
@@ -125,6 +136,12 @@ A collection of ExtendScript utilities and automation scripts for Adobe Creative
 |--------|-------------|
 | `indexof.jsx` | Array.prototype.indexOf() polyfill for ES3 |
 | `json2.js` | JSON.stringify() and JSON.parse() polyfill for ES3 |
+
+## External Libraries (`lib/`)
+
+| Library | Description |
+|---------|-------------|
+| `aequery.js` | [AEQuery](https://github.com/docsforadobe/aequery) - jQuery-like library for After Effects scripting with CSS selectors and extended arrays |
 
 ---
 
