@@ -125,3 +125,110 @@ A collection of ExtendScript utilities and automation scripts for Adobe Creative
 |--------|-------------|
 | `indexof.jsx` | Array.prototype.indexOf() polyfill for ES3 |
 | `json2.js` | JSON.stringify() and JSON.parse() polyfill for ES3 |
+
+---
+
+## Claude Code Agents & Skills (`.claude/`)
+
+This repository includes specialized agents and skills for [Claude Code](https://claude.ai/code) that provide expert knowledge for Adobe ExtendScript development and After Effects workflows.
+
+### What Are Agents & Skills?
+
+- **Agents**: Specialized AI assistants with deep knowledge of specific domains. They're automatically invoked when relevant to your task.
+- **Skills**: Focused reference documents and code snippets that Claude can use to help with specific tasks.
+
+### Installation
+
+To use these agents and skills with Claude Code:
+
+1. **Copy the `.claude` folder** to your project root:
+   ```bash
+   cp -r .claude /path/to/your/project/
+   ```
+
+2. **Or copy to your home directory** for global access:
+   ```bash
+   cp -r .claude/agents ~/.claude/agents
+   cp -r .claude/skills ~/.claude/skills
+   ```
+
+3. **Start Claude Code** in your project directory. The agents and skills will be automatically available.
+
+### Available Agents
+
+| Agent | Description |
+|-------|-------------|
+| `after-effects-scripter` | ExtendScript automation for After Effects. Covers the full AE object model, layer operations, keyframes, expressions, render queue, and text handling. |
+| `after-effects-expressions` | After Effects expression language reference. Global objects, property methods, interpolation, vector math, color conversion, and 3D. |
+| `after-effects-sdk` | C++ SDK plugin development. Effect plugins, AEGPs, AEIOs, SmartFX, GPU rendering, and custom UI. |
+| `extendscript-validator` | Validates ExtendScript code for ES3 compatibility. Catches modern JavaScript syntax that won't work in Adobe apps. |
+
+### Available Skills
+
+#### After Effects Expressions
+
+| Skill | Description |
+|-------|-------------|
+| `ae-expression-lib` | Expression snippets: wiggle, loop, time-based, property linking, noise, color |
+| `ae-expression-reference` | Quick reference card for all expression functions |
+| `ae-expression-3d` | 3D expressions: cameras, lights, space transforms, lookAt |
+| `ae-expression-text` | Text expressions: counters, typewriter, dynamic styling |
+| `ae-expression-debug` | Find expression errors, bake to keyframes, validate syntax |
+| `ae-expression-link` | Property linking, controller setup, slider/color controls |
+
+#### After Effects SDK (C++)
+
+| Skill | Description |
+|-------|-------------|
+| `ae-sdk-effects` | Effect plugin development: entry points, parameters, rendering |
+| `ae-sdk-aegp` | AEGP development: function suites, menu commands, project manipulation |
+| `ae-sdk-smartfx` | SmartFX: 32-bit rendering, pre-render phase, GPU effects |
+| `ae-sdk-reference` | Quick reference for SDK types, macros, and patterns |
+
+#### After Effects Scripting
+
+| Skill | Description |
+|-------|-------------|
+| `ae-layer-ops` | Layer operations: creation, duplication, parenting, track mattes |
+| `ae-properties` | Property access, keyframes, expressions via scripting |
+| `ae-text-style` | Text layer styling: fonts, colors, paragraph settings |
+| `ae-text-replace` | Find and replace text across compositions |
+| `ae-batch-export` | Render queue automation, output modules, batch rendering |
+| `ae-footage` | Import footage, replace sources, manage proxies |
+| `ae-markers` | Composition and layer markers, reading/writing marker data |
+| `ae-shape-ops` | Shape layer creation and manipulation |
+| `ae-randomize` | Randomize layer properties and ordering |
+| `ae-new-comp` | Create compositions with various settings |
+| `ae-mogrt` | Motion Graphics templates and Essential Properties |
+| `ae-edl` | EDL parsing and composition creation |
+| `ae-trim-resequence` | Trim layers and resequence timing |
+
+### Usage Examples
+
+Once installed, Claude Code will automatically use these agents when relevant:
+
+```
+You: Create a wiggle expression that only affects the X axis
+
+Claude: [Uses after-effects-expressions agent]
+Here's an expression for X-only wiggle:
+
+var w = wiggle(2, 50);
+[w[0], value[1]]
+```
+
+```
+You: Write a script to batch rename all layers with a prefix
+
+Claude: [Uses after-effects-scripter agent]
+Here's a script to add a prefix to all layer names...
+```
+
+### Contributing
+
+To add new agents or skills:
+
+1. Create a markdown file in `.claude/agents/` or `.claude/skills/`
+2. Add YAML frontmatter with `name` and `description`
+3. Document the domain knowledge, patterns, and code examples
+4. Submit a pull request
