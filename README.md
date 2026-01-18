@@ -162,6 +162,7 @@ To use these agents and skills with Claude Code:
 | `after-effects-expressions` | After Effects expression language reference. Global objects, property methods, interpolation, vector math, color conversion, and 3D. |
 | `after-effects-sdk` | C++ SDK plugin development. Effect plugins, AEGPs, AEIOs, SmartFX, GPU rendering, and custom UI. |
 | `extendscript-validator` | Validates ExtendScript code for ES3 compatibility. Catches modern JavaScript syntax that won't work in Adobe apps. |
+| `photoshop-uxp-expert` | Photoshop UXP plugin development (v22.0+). Modern JavaScript API including executeAsModal, batchPlay, layers, documents, selections, imaging, and file storage. |
 
 ### Available Skills
 
@@ -202,6 +203,21 @@ To use these agents and skills with Claude Code:
 | `ae-mogrt` | Motion Graphics templates and Essential Properties |
 | `ae-edl` | EDL parsing and composition creation |
 | `ae-trim-resequence` | Trim layers and resequence timing |
+
+#### Photoshop UXP (Modern JavaScript)
+
+| Skill | Description |
+|-------|-------------|
+| `ps-uxp-scripting` | UXP scripting with .psjs files: standalone scripts, execution, module access (v23.5+) |
+| `ps-uxp-modal-execution` | executeAsModal patterns: progress reporting, cancellation, history suspension, timeout (v25.10+) |
+| `ps-uxp-batchplay` | batchPlay API: action descriptors, dialog options, chaining, discovery methods |
+| `ps-uxp-layers` | Layer manipulation: properties, transforms, filters, grouping |
+| `ps-uxp-documents` | Document operations: creation, saving, image/canvas size, color modes |
+| `ps-uxp-selections` | Selection API (v25.0+): shape selections, modification, transforms |
+| `ps-uxp-imaging` | Imaging API: getPixels, putPixels, layer masks, pixel manipulation |
+| `ps-uxp-events` | Event system: notification listeners, real-time monitoring |
+| `ps-uxp-storage` | File storage: local file system, dialogs, localStorage persistence |
+| `ps-uxp-reference` | Quick reference: constants, version requirements, common patterns |
 
 ### Usage Examples
 
