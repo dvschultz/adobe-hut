@@ -378,13 +378,14 @@ cell.textRotation = 90;  // 0, 90, 180, or 270
 ### Merge Cells
 
 ```javascript
-// Merge range of cells
+// Merge range of cells using itemByRange
 const startCell = table.rows.item(0).cells.item(0);
 const endCell = table.rows.item(0).cells.item(2);
 
-table.merge(startCell, endCell);
+// Use cells.itemByRange().merge() - the preferred method
+table.cells.itemByRange(startCell, endCell).merge();
 
-// Alternative: merge using cell range
+// Alternative: merge a vertical range
 const cellRange = table.cells.itemByRange(
     table.rows.item(1).cells.item(0),
     table.rows.item(3).cells.item(0)
@@ -417,11 +418,9 @@ cell.split(SplitDirection.VERTICAL);
 ### Apply Table Style
 
 ```javascript
-// Create or get table style
-let tableStyle;
-try {
-    tableStyle = doc.tableStyles.itemByName("Data Table");
-} catch (e) {
+// Create or get table style (use isValid check, not try/catch)
+let tableStyle = doc.tableStyles.itemByName("Data Table");
+if (!tableStyle.isValid) {
     tableStyle = doc.tableStyles.add({
         name: "Data Table"
     });
@@ -570,11 +569,9 @@ function createDataTable(page, bounds, data, options = {}) {
             if (r % 2 === 0) {
                 cell.fillColor = doc.swatches.itemByName("None");
             } else {
-                // Light gray - create if doesn't exist
-                let lightGray;
-                try {
-                    lightGray = doc.colors.itemByName("Light Gray");
-                } catch (e) {
+                // Light gray - create if doesn't exist (use isValid check)
+                let lightGray = doc.colors.itemByName("Light Gray");
+                if (!lightGray.isValid) {
                     lightGray = doc.colors.add({
                         name: "Light Gray",
                         model: ColorModel.PROCESS,

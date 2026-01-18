@@ -63,8 +63,8 @@ frame.paragraphs;            // ParagraphCollection
 frame.insertionPoints;       // InsertionPointCollection
 
 // Frame options
-frame.textFramePreferences.columns;              // Column count
-frame.textFramePreferences.columnGutter;         // Gutter width
+frame.textFramePreferences.textColumnCount;      // Column count
+frame.textFramePreferences.textColumnGutter;     // Gutter width
 frame.textFramePreferences.insetSpacing;         // Text inset
 frame.textFramePreferences.verticalJustification; // Vertical alignment
 ```
@@ -152,8 +152,8 @@ const lastPara = story.paragraphs.lastItem();
 const chars = story.characters.itemByRange(0, 10);
 const words = story.words.itemByRange(0, 5);
 
-// Negative index for end
-const lastWord = story.words.item(-1);
+// Last item (prefer lastItem() over item(-1) for reliability)
+const lastWord = story.words.lastItem();
 ```
 
 ### Adding Text

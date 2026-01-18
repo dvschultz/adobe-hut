@@ -270,7 +270,7 @@ Changes to source files automatically reload the plugin. The WebSocket connectio
 
 ## Multi-Panel Plugins
 
-Unlike CEP, UXP renders all panels in a single space with sections per panel.
+**Note**: In Bolt UXP's approach, all panels are defined in a single codebase using `<uxp-panel>` tags, with different sections rendered per panel. This is a Bolt-specific pattern for managing multi-panel plugins.
 
 ### Configuration
 

@@ -79,16 +79,20 @@ const fs = storage.localFileSystem;
 
 ### DOM Versioning
 
-Request a specific DOM version for compatibility:
+**Note**: DOM versioning support may vary by InDesign version. Verify availability in official Adobe documentation for your target version.
 
 ```javascript
 const indesign = require('indesign');
 
-// Request specific DOM version
+// Request specific DOM version (if supported)
+// This API may not be available in all InDesign versions
 const dom = indesign.dom('19.0');  // Get v19.0 DOM
 
 // Use versioned app
 const { app } = dom;
+
+// Fallback: use standard require if dom() is unavailable
+const { app } = require('indesign');
 ```
 
 ## Core DOM Classes
@@ -124,8 +128,8 @@ const doc = app.activeDocument;
 // Document properties
 doc.name;                    // Document name
 doc.fullName;               // Full file path
-doc.saved;                  // Boolean - has unsaved changes
-doc.modified;               // Boolean - modified since last save
+doc.saved;                  // Boolean - true if document has been saved (no unsaved changes)
+doc.modified;               // Boolean - true if modified since last save
 
 // Collections
 doc.pages;                  // PageCollection
@@ -272,7 +276,7 @@ story.footnotes;             // FootnoteCollection
 // Access text ranges
 story.characters.itemByRange(0, 10);    // Characters 0-10
 story.words.item(0);                     // First word
-story.paragraphs.item(-1);               // Last paragraph
+story.paragraphs.lastItem();             // Last paragraph (prefer lastItem() over item(-1))
 ```
 
 ### Paragraph, Character, Word, Line

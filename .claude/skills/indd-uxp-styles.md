@@ -628,11 +628,9 @@ async function importStylesFromDocument() {
 
 ```javascript
 function createStyleSystem(doc) {
-    // Create colors if needed
-    let darkBlue = null;
-    try {
-        darkBlue = doc.colors.itemByName("Dark Blue");
-    } catch (e) {
+    // Create colors if needed (use isValid check, not try/catch)
+    let darkBlue = doc.colors.itemByName("Dark Blue");
+    if (!darkBlue.isValid) {
         darkBlue = doc.colors.add({
             name: "Dark Blue",
             model: ColorModel.PROCESS,
