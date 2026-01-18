@@ -159,6 +159,7 @@ To use these agents and skills with Claude Code:
 | Agent | Description |
 |-------|-------------|
 | `after-effects-scripter` | ExtendScript automation for After Effects. Covers the full AE object model, layer operations, keyframes, expressions, render queue, and text handling. |
+| `aequery-expert` | AEQuery library for After Effects. jQuery-like CSS selectors, extended arrays, wrapper classes (Comp, Layer, Property, Key), UI building, file operations, and persistent settings. |
 | `after-effects-expressions` | After Effects expression language reference. Global objects, property methods, interpolation, vector math, color conversion, and 3D. |
 | `after-effects-sdk` | C++ SDK plugin development. Effect plugins, AEGPs, AEIOs, SmartFX, GPU rendering, and custom UI. |
 | `extendscript-validator` | Validates ExtendScript code for ES3 compatibility. Catches modern JavaScript syntax that won't work in Adobe apps. |
@@ -176,6 +177,17 @@ To use these agents and skills with Claude Code:
 | `ae-expression-text` | Text expressions: counters, typewriter, dynamic styling |
 | `ae-expression-debug` | Find expression errors, bake to keyframes, validate syntax |
 | `ae-expression-link` | Property linking, controller setup, slider/color controls |
+
+#### AEQuery Library
+
+| Skill | Description |
+|-------|-------------|
+| `aeq-selectors` | CSS-like selector syntax for querying AE objects |
+| `aeq-arrayex` | Extended array methods: forEach, map, filter, find, groupBy, attr |
+| `aeq-wrappers` | Wrapper classes for Comp, Layer, Property, and Key objects |
+| `aeq-ui` | ScriptUI building utilities: dialogs, panels, controls |
+| `aeq-file-settings` | File operations and persistent settings storage |
+| `aeq-project` | Project management: folders, imports, selections, render queue |
 
 #### After Effects SDK (C++)
 
