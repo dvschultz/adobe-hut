@@ -95,7 +95,8 @@
             recordIn: parts[6],
             recordOut: parts[7],
             sourceFilePath: null,  // Will be populated from * SOURCE FILE line
-            clipName: null         // Will be populated from * FROM CLIP NAME line
+            clipName: null,        // Will be populated from * FROM CLIP NAME line
+            note: null             // Will be populated from * Guide segment line
         };
     }
 
@@ -175,6 +176,16 @@
                 var clipNameIdx2 = line.indexOf("*FROM CLIP NAME:");
                 var clipName2 = trim(line.substring(clipNameIdx2 + 16));
                 currentEvent.clipName = clipName2;
+                continue;
+            }
+
+            // Parse Guide segment line for Note value
+            // Format: * Guide segment 0, Note: REST, (silence clip)
+            if (currentEvent && line.indexOf("* Guide segment") !== -1) {
+                var noteMatch = line.match(/Note:\s*([^,]+)/);
+                if (noteMatch && noteMatch[1]) {
+                    currentEvent.note = trim(noteMatch[1]);
+                }
                 continue;
             }
         }
@@ -478,6 +489,11 @@
         layer.startTime = recordInSec - sourceInSec;
         layer.inPoint = recordInSec;
         layer.outPoint = recordOutSec;
+
+        // Mute audio if note is REST
+        if (event.note === "REST") {
+            layer.audioEnabled = false;
+        }
 
         return layer;
     }
