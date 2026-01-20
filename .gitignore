@@ -1,6 +1,14 @@
 # Ignore Mac DS_Store files
 .DS_Store
-indd/NYT Storygrab.jsx
+
+# Node modules
+node_modules/
 
 # Personal ideas/notes - not for version control
 ideas/
+
+# Specific files to ignore
+indd/NYT Storygrab.jsx
+
+# AI-generated images (test outputs)
+ai/Eden_creation_*.png
