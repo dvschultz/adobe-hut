@@ -137,6 +137,7 @@
         if (!saveFile) return;
 
         try {
+            saveFile.encoding = "UTF-8";
             saveFile.open("w");
             saveFile.write(content);
             saveFile.close();

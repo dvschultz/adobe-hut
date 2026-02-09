@@ -126,11 +126,14 @@
         var saveFile = File.saveDialog("Save undersized footage report:", "*.txt");
         if (!saveFile) return;
 
-        var result = aeq.writeFile(saveFile.fsName, content);
-        if (result) {
+        try {
+            saveFile.encoding = "UTF-8";
+            saveFile.open("w");
+            saveFile.write(content);
+            saveFile.close();
             alert("Report saved!\n\nFile: " + saveFile.fsName + "\nUndersized files: " + unique.length);
-        } else {
-            alert("Error saving file.");
+        } catch (e) {
+            alert("Error saving file: " + e.toString());
         }
     }
 
