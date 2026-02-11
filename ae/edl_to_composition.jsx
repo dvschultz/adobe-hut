@@ -458,7 +458,23 @@
         return comp;
     }
 
+    function findExistingFootage(file) {
+        // Check if this file is already imported in the project
+        var filePath = file.fsName;
+        for (var i = 1; i <= app.project.numItems; i++) {
+            var item = app.project.item(i);
+            if (item instanceof FootageItem && item.file && item.file.fsName === filePath) {
+                return item;
+            }
+        }
+        return null;
+    }
+
     function importFootage(file) {
+        // Reuse existing project footage if available
+        var existing = findExistingFootage(file);
+        if (existing) return existing;
+
         try {
             var importOpts = new ImportOptions(file);
             var footageItem = app.project.importFile(importOpts);
