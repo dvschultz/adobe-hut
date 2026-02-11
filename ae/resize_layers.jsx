@@ -55,6 +55,14 @@
         var matchHeight = dimPanel.add("radiobutton", undefined, "Match Height");
         matchWidth.value = true;
 
+        var modePanel = dlg.add("panel", undefined, "Scale Mode");
+        modePanel.orientation = "row";
+        modePanel.alignment = "left";
+        var scaleAll = modePanel.add("radiobutton", undefined, "All");
+        var downscaleOnly = modePanel.add("radiobutton", undefined, "Downscale Only");
+        var upscaleOnly = modePanel.add("radiobutton", undefined, "Upscale Only");
+        scaleAll.value = true;
+
         var scopePanel = dlg.add("panel", undefined, "Layer Scope");
         scopePanel.orientation = "row";
         scopePanel.alignment = "left";
@@ -82,10 +90,15 @@
             return null;
         }
 
+        var scaleMode = "all";
+        if (downscaleOnly.value) scaleMode = "downscale";
+        if (upscaleOnly.value) scaleMode = "upscale";
+
         return {
             targetSize: targetSize,
             matchWidth: matchWidth.value,
-            useSelected: selectedLayers.value
+            useSelected: selectedLayers.value,
+            scaleMode: scaleMode
         };
     }
 
@@ -111,10 +124,11 @@
         return layers;
     }
 
-    function resizeLayers(layers, targetSize, matchWidth) {
+    function resizeLayers(layers, targetSize, matchWidth, scaleMode) {
         var resizedCount = 0;
         var keyframedCount = 0;
         var skippedCount = 0;
+        var filteredCount = 0;
 
         for (var i = 0; i < layers.length; i++) {
             var layer = layers[i];
@@ -131,6 +145,17 @@
 
             try {
                 var sourceDim = matchWidth ? layer.source.width : layer.source.height;
+
+                // Check scale mode filter
+                if (scaleMode === "downscale" && sourceDim <= targetSize) {
+                    filteredCount++;
+                    continue;
+                }
+                if (scaleMode === "upscale" && sourceDim >= targetSize) {
+                    filteredCount++;
+                    continue;
+                }
+
                 var scaleFactor = (targetSize / sourceDim) * 100;
                 layer.property("Transform").property("Scale").setValue([scaleFactor, scaleFactor]);
                 resizedCount++;
@@ -142,7 +167,8 @@
         return {
             resized: resizedCount,
             keyframed: keyframedCount,
-            skipped: skippedCount
+            skipped: skippedCount,
+            filtered: filteredCount
         };
     }
 
@@ -154,6 +180,10 @@
 
         if (result.keyframed > 0) {
             message += "Skipped (scale keyframes): " + result.keyframed + " layers\n";
+        }
+
+        if (result.filtered > 0) {
+            message += "Skipped (scale mode filter): " + result.filtered + " layers\n";
         }
 
         if (result.skipped > 0) {
@@ -188,7 +218,7 @@
             return;
         }
 
-        var result = resizeLayers(layers, settings.targetSize, settings.matchWidth);
+        var result = resizeLayers(layers, settings.targetSize, settings.matchWidth, settings.scaleMode);
         showResults(result);
     }
 
