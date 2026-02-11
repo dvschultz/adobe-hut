@@ -600,11 +600,11 @@
             return;
         }
 
-        // 3. Filter to video events only
+        // 3. Filter to video events only (skip BL / black filler)
         var videoEvents = [];
         for (var i = 0; i < edlData.events.length; i++) {
             var trackType = edlData.events[i].trackType;
-            if (trackType.indexOf("V") === 0) {
+            if (trackType.indexOf("V") === 0 && edlData.events[i].sourceName !== "BL") {
                 videoEvents.push(edlData.events[i]);
             }
         }
