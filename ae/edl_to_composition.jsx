@@ -317,6 +317,11 @@
         // Track known folders and their lookups
         var folderLookups = [];
 
+        // Track manually located files by clip/source name so we don't
+        // prompt for the same clip more than once (handles encoding
+        // mismatches like √© vs é where findFileInLookup fails)
+        var manualMatches = {};  // clipName|sourceName -> File
+
         // Add initial folder if provided
         if (initialFolder) {
             folderLookups.push({
@@ -341,6 +346,21 @@
             var idx = unresolvedIndices[0];
             var event = events[idx];
 
+            // Check if we already have a manual match for this clip
+            var manualFile = null;
+            if (event.clipName && manualMatches[event.clipName.toLowerCase()]) {
+                manualFile = manualMatches[event.clipName.toLowerCase()];
+            }
+            if (!manualFile && event.sourceName && manualMatches[event.sourceName.toLowerCase()]) {
+                manualFile = manualMatches[event.sourceName.toLowerCase()];
+            }
+
+            if (manualFile) {
+                results.resolved[idx] = manualFile;
+                unresolvedIndices.shift();
+                continue;
+            }
+
             // Prompt user for this file
             var promptResult = promptForMissingFile(event, unresolvedIndices.length);
 
@@ -362,6 +382,14 @@
             results.resolved[idx] = linkedFile;
             unresolvedIndices.shift();
 
+            // Remember this manual match for both clipName and sourceName (case-insensitive)
+            if (event.clipName) {
+                manualMatches[event.clipName.toLowerCase()] = linkedFile;
+            }
+            if (event.sourceName) {
+                manualMatches[event.sourceName.toLowerCase()] = linkedFile;
+            }
+
             // Check the folder this file came from for other missing files
             var linkedFolder = linkedFile.parent;
             var alreadyKnown = false;
@@ -379,27 +407,38 @@
                     lookup: buildFolderLookup(linkedFolder)
                 };
                 folderLookups.push(newLookup);
+            }
 
-                // Try to resolve remaining unresolved events with this new folder
-                var stillUnresolved = [];
-                var autoLinked = 0;
-                for (var u = 0; u < unresolvedIndices.length; u++) {
-                    var uIdx = unresolvedIndices[u];
-                    var uEvent = events[uIdx];
-                    var found = tryResolveEvent(uEvent, [newLookup]);
-                    if (found) {
-                        results.resolved[uIdx] = found;
-                        autoLinked++;
-                    } else {
-                        stillUnresolved.push(uIdx);
-                    }
-                }
-                unresolvedIndices = stillUnresolved;
+            // Try to resolve remaining unresolved events with new folder + manual matches
+            var stillUnresolved = [];
+            var autoLinked = 0;
+            for (var u = 0; u < unresolvedIndices.length; u++) {
+                var uIdx = unresolvedIndices[u];
+                var uEvent = events[uIdx];
 
-                // Notify user if we auto-linked files
-                if (autoLinked > 0) {
-                    alert("Auto-linked " + autoLinked + " additional file(s) from:\n" + linkedFolder.fsName);
+                // Try folder-based lookup first
+                var found = tryResolveEvent(uEvent, folderLookups);
+
+                // Fall back to manual matches
+                if (!found && uEvent.clipName && manualMatches[uEvent.clipName.toLowerCase()]) {
+                    found = manualMatches[uEvent.clipName.toLowerCase()];
                 }
+                if (!found && uEvent.sourceName && manualMatches[uEvent.sourceName.toLowerCase()]) {
+                    found = manualMatches[uEvent.sourceName.toLowerCase()];
+                }
+
+                if (found) {
+                    results.resolved[uIdx] = found;
+                    autoLinked++;
+                } else {
+                    stillUnresolved.push(uIdx);
+                }
+            }
+            unresolvedIndices = stillUnresolved;
+
+            // Notify user if we auto-linked files
+            if (autoLinked > 0) {
+                alert("Auto-linked " + autoLinked + " additional file(s).");
             }
         }
 
