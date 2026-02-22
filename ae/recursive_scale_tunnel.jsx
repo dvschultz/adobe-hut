@@ -25,6 +25,12 @@
         return n;
     }
 
+    function parseInteger(value) {
+        var n = parseInt(value, 10);
+        if (isNaN(n)) return null;
+        return n;
+    }
+
     function zeroPad(num, digits) {
         var s = String(num);
         while (s.length < digits) {
@@ -84,6 +90,12 @@
 
         var ctrlCheck = dlg.add("checkbox", undefined, "Create offset controller null");
 
+        dlg.add("statictext", undefined, "Time offset per step (frames):");
+        var timeOffsetGroup = dlg.add("group");
+        var timeOffsetInput = timeOffsetGroup.add("edittext", undefined, "0");
+        timeOffsetInput.characters = 6;
+        timeOffsetGroup.add("statictext", undefined, "(0 = none, cumulative per duplicate)");
+
         var btnGroup = dlg.add("group");
         var okBtn = btnGroup.add("button", undefined, "Apply");
         var cancelBtn = btnGroup.add("button", undefined, "Cancel");
@@ -109,11 +121,18 @@
             return null;
         }
 
+        var timeOffset = parseInteger(timeOffsetInput.text);
+        if (timeOffset === null) {
+            alert("Please enter a whole number for time offset (0 for none).");
+            return null;
+        }
+
         return {
             step: step,
             minSize: minSize,
             useWidth: matchWidth.value,
-            createController: ctrlCheck.value
+            createController: ctrlCheck.value,
+            timeOffsetFrames: timeOffset
         };
     }
 
@@ -159,7 +178,7 @@
         };
     }
 
-    function createTunnel(comp, sourceLayer, settings) {
+    function createTunnel(comp, sourceLayer, settings, frameRate) {
         var dimInfo = getRenderedDimension(sourceLayer, settings.useWidth);
         var renderedDim = dimInfo.rendered;
         var sourceDim = dimInfo.sourceDim;
@@ -218,6 +237,12 @@
             }
 
             dup.name = NAME_PREFIX + baseName + " " + zeroPad(i, padDigits);
+
+            // Apply cumulative time offset (i = duplicate number from original)
+            if (settings.timeOffsetFrames !== 0) {
+                dup.startTime += (i * settings.timeOffsetFrames) / frameRate;
+            }
+
             duplicates.push(dup);
         }
 
@@ -225,7 +250,8 @@
             duplicates: duplicates,
             count: count,
             smallestScale: ((renderedDim - count * settings.step) / sourceDim) * 100,
-            largestScale: ((renderedDim - settings.step) / sourceDim) * 100
+            largestScale: ((renderedDim - settings.step) / sourceDim) * 100,
+            timeOffsetFrames: settings.timeOffsetFrames
         };
     }
 
@@ -261,6 +287,12 @@
         var msg = "Recursive Scale Tunnel Complete!\n\n";
         msg += "Duplicates created: " + result.count + "\n";
         msg += "Scale range: " + Math.round(result.smallestScale * 100) / 100 + "% to " + Math.round(result.largestScale * 100) / 100 + "%\n";
+
+        if (result.timeOffsetFrames !== 0) {
+            var dir = result.timeOffsetFrames > 0 ? "forward" : "backward";
+            var totalFrames = Math.abs(result.timeOffsetFrames * result.count);
+            msg += "Time offset: " + Math.abs(result.timeOffsetFrames) + "f per step " + dir + " (" + totalFrames + "f total)\n";
+        }
 
         if (controllerCreated) {
             msg += 'Offset controller: "' + CTRL_NAME + '" (top of stack)\n';
@@ -326,7 +358,7 @@
             removeExistingTunnelLayers(comp, sourceLayer);
         }
 
-        var result = createTunnel(comp, sourceLayer, settings);
+        var result = createTunnel(comp, sourceLayer, settings, comp.frameRate);
         if (result === null) return;
 
         var controllerCreated = false;
