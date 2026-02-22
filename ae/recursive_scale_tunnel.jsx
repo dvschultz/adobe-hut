@@ -265,12 +265,9 @@
         // Move to top of layer stack
         ctrl.moveTo(1);
 
-        // Build offset expression
-        var exp = [
-            'var ctrl = thisComp.layer("' + CTRL_NAME + '");',
-            'var offset = ctrl.transform.position - [thisComp.width/2, thisComp.height/2];',
-            'value + offset;'
-        ].join("\n");
+        // Link position directly to controller — all tunnel layers share the same
+        // center point (they differ in scale, not position)
+        var exp = 'thisComp.layer("' + CTRL_NAME + '").transform.position';
 
         // Apply to all duplicates
         for (var i = 0; i < duplicates.length; i++) {
