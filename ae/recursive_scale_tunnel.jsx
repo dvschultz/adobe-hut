@@ -89,6 +89,7 @@
         matchWidth.value = true;
 
         var ctrlCheck = dlg.add("checkbox", undefined, "Create offset controller null");
+        ctrlCheck.value = true;
 
         dlg.add("statictext", undefined, "Time offset per step (frames):");
         var timeOffsetGroup = dlg.add("group");
