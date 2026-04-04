@@ -263,20 +263,13 @@
         // Position at comp center
         ctrl.property("Transform").property("Position").setValue([comp.width / 2, comp.height / 2]);
 
-        // Move to top of layer stack
-        ctrl.moveTo(1);
-
-        // Link position directly to controller — all tunnel layers share the same
-        // center point (they differ in scale, not position)
-        var exp = 'thisComp.layer("' + CTRL_NAME + '").transform.position';
-
-        // Apply to all duplicates
+        // Parent all tunnel layers to the controller null — moving the null
+        // moves the entire tunnel. AE auto-compensates child positions so
+        // visual placement stays the same when parenting is first applied.
         for (var i = 0; i < duplicates.length; i++) {
-            duplicates[i].property("Transform").property("Position").expression = exp;
+            duplicates[i].parent = ctrl;
         }
-
-        // Apply to original layer too
-        sourceLayer.property("Transform").property("Position").expression = exp;
+        sourceLayer.parent = ctrl;
     }
 
     // ========== USER FEEDBACK ==========
