@@ -31,6 +31,7 @@
         "#7C5839"  // sepia
     ];
     var DEFAULT_AMOUNT = 100;
+    var DEFAULT_CONTRAST = 20;
 
     // ========== PURE HELPERS ==========
 
@@ -153,13 +154,16 @@
 
     // ========== EFFECT APPLICATION ==========
 
-    function applyRoseHobart(layer, color, amount) {
+    function applyRoseHobart(layer, color, amount, contrast) {
         var effects = layer.property("ADBE Effect Parade");
 
-        // Black & White first, so Tint reads against a desaturated base.
-        // addProperty appends at the bottom of the effect stack; AE renders
-        // top-to-bottom, so this pair always renders LAST for the layer —
-        // intentional, the wash is the final color treatment.
+        // Stack order (top to bottom = render order):
+        //   Black & White → Brightness & Contrast → Tint
+        // Black & White desaturates first; the contrast bump crunches the
+        // grayscale (filmic feel); Tint paints the result with the assigned
+        // color. addProperty appends at the bottom of the effect stack and
+        // AE renders top-to-bottom, so this trio always renders LAST for the
+        // layer — intentional, the wash is the final color treatment.
         var bw = effects.addProperty("ADBE Black&White");
         try {
             bw.name = bw.name + MARKER_SUFFIX;
@@ -169,10 +173,24 @@
                             "aborting to prevent un-rediscoverable artifacts.");
         }
 
+        var bc = effects.addProperty("ADBE Brightness & Contrast 2");
+        try {
+            bc.name = bc.name + MARKER_SUFFIX;
+        } catch (e2) {
+            bc.remove();
+            throw new Error("Could not tag added Brightness & Contrast effect; " +
+                            "aborting to prevent un-rediscoverable artifacts.");
+        }
+        // Brightness & Contrast 2 sub-property indices (locale-stable):
+        //   1 = Brightness  (left at 0)
+        //   2 = Contrast    (assigned dialog value)
+        //   3 = Use Legacy  (left at default false — modern gamma handling)
+        bc.property(2).setValue(contrast);
+
         var tint = effects.addProperty("ADBE Tint");
         try {
             tint.name = tint.name + MARKER_SUFFIX;
-        } catch (e2) {
+        } catch (e3) {
             tint.remove();
             throw new Error("Could not tag added Tint effect; " +
                             "aborting to prevent un-rediscoverable artifacts.");
@@ -218,6 +236,10 @@
         amountRow.add("statictext", undefined, "Tint Amount (%):");
         var amountField = amountRow.add("edittext", undefined, String(DEFAULT_AMOUNT));
         amountField.preferredSize = [60, 22];
+        var contrastRow = optionsPanel.add("group");
+        contrastRow.add("statictext", undefined, "Contrast (0–100):");
+        var contrastField = contrastRow.add("edittext", undefined, String(DEFAULT_CONTRAST));
+        contrastField.preferredSize = [60, 22];
         var seedRow = optionsPanel.add("group");
         seedRow.add("statictext", undefined, "Random Seed (optional):");
         var seedField = seedRow.add("edittext", undefined, "");
@@ -278,6 +300,12 @@
             if (amount < 0) amount = 0;
             if (amount > 100) amount = 100;
 
+            // Contrast: clamp to [0, 100], default to DEFAULT_CONTRAST on non-numeric.
+            var contrast = parseFloat(contrastField.text);
+            if (isNaN(contrast)) contrast = DEFAULT_CONTRAST;
+            if (contrast < 0) contrast = 0;
+            if (contrast > 100) contrast = 100;
+
             // Random Seed: integer or null.
             var seedRaw = seedField.text;
             var seed;
@@ -288,7 +316,7 @@
                 seed = isNaN(n) ? null : n;
             }
 
-            settings = { colors: colors, amount: amount, seed: seed };
+            settings = { colors: colors, amount: amount, contrast: contrast, seed: seed };
             dlg.close(1);
         };
 
@@ -328,7 +356,7 @@
             var layer = targets[i];
             var color = settings.colors[indices[i]];
             removePriorRoseHobartEffects(layer);
-            applyRoseHobart(layer, color, settings.amount);
+            applyRoseHobart(layer, color, settings.amount, settings.contrast);
         }
 
         var seedDescriptor = (settings.seed === null) ? "random" : String(settings.seed);
@@ -336,7 +364,8 @@
         msg += "Layers processed: " + targets.length + "\n";
         msg += "Palette size: " + settings.colors.length + "\n";
         msg += "Seed: " + seedDescriptor + "\n";
-        msg += "Tint Amount: " + settings.amount + "%";
+        msg += "Tint Amount: " + settings.amount + "%\n";
+        msg += "Contrast: " + settings.contrast;
         alert(msg);
     }
 
