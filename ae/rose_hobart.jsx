@@ -14,6 +14,8 @@
  *    first stripping the [rose_hobart] suffix from their effect names;
  *    re-running on imported tagged effects will remove them.
  *  - Locked layers and layers used as track-matte sources are skipped.
+ *  - The palette is remembered between runs (per-user, via app.settings).
+ *    Click "Reset to defaults" to restore the Cornell-blue starter palette.
  *
  * Usage: Run from File > Scripts > Run Script File...
  */
@@ -32,6 +34,31 @@
     ];
     var DEFAULT_AMOUNT = 100;
     var DEFAULT_CONTRAST = 20;
+
+    var SETTINGS_SECTION = "rose_hobart";
+    var SETTINGS_PALETTE_KEY = "palette";
+
+    // ========== PERSISTENT SETTINGS ==========
+
+    // Wrapped in try/catch — app.settings is gated by AE's "Allow Scripts to
+    // Write Files and Access Network" preference on some installs. If access
+    // fails, the script silently falls back to the default palette and does
+    // not persist across runs.
+    function loadSavedPalette() {
+        try {
+            if (app.settings.haveSetting(SETTINGS_SECTION, SETTINGS_PALETTE_KEY)) {
+                var saved = app.settings.getSetting(SETTINGS_SECTION, SETTINGS_PALETTE_KEY);
+                if (saved && saved.length > 0) return saved;
+            }
+        } catch (e) {}
+        return null;
+    }
+
+    function saveCurrentPalette(text) {
+        try {
+            app.settings.saveSetting(SETTINGS_SECTION, SETTINGS_PALETTE_KEY, text);
+        } catch (e) {}
+    }
 
     // ========== PURE HELPERS ==========
 
@@ -207,7 +234,7 @@
 
     function showDialog(layerCount) {
         var dlg = new Window("dialog", "Rose Hobart");
-        dlg.preferredSize = [360, 360];
+        dlg.preferredSize = [380, 440];
         dlg.alignChildren = "fill";
         dlg.margins = 12;
         dlg.spacing = 8;
@@ -219,13 +246,25 @@
         palettePanel.spacing = 4;
         palettePanel.add("statictext", undefined,
             "Paste hex colors (one per line, comma- or whitespace-separated):");
+        var initialPalette = loadSavedPalette();
+        if (initialPalette === null) initialPalette = DEFAULT_PALETTE.join("\n");
         var paletteField = palettePanel.add(
             "edittext",
             undefined,
-            DEFAULT_PALETTE.join("\n"),
+            initialPalette,
             { multiline: true, wantReturn: true, scrolling: true }
         );
         paletteField.preferredSize = [300, 140];
+
+        var resetRow = palettePanel.add("group");
+        resetRow.alignment = ["fill", "top"];
+        resetRow.alignChildren = ["right", "center"];
+        var resetBtn = resetRow.add("button", undefined, "Reset to defaults");
+        resetBtn.preferredSize = [140, 22];
+        resetBtn.onClick = function() {
+            paletteField.text = DEFAULT_PALETTE.join("\n");
+            paletteField.active = true;
+        };
 
         // Options panel
         var optionsPanel = dlg.add("panel", undefined, "Options");
@@ -317,6 +356,7 @@
             }
 
             settings = { colors: colors, amount: amount, contrast: contrast, seed: seed };
+            saveCurrentPalette(paletteField.text);
             dlg.close(1);
         };
 
