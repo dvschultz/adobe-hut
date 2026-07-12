@@ -27,7 +27,9 @@
 
         if (RP.audioOut) {
             var rq = app.project.renderQueue;
-            for (var k = 1; k <= rq.numItems; k++) { try { rq.item(k).render = false; } catch (e) {} }
+            // snapshot existing items' render flags, disable them for our one-off render, restore after
+            var saved = [];
+            for (var k = 1; k <= rq.numItems; k++) { try { saved[k] = rq.item(k).render; rq.item(k).render = false; } catch (e) { saved[k] = null; } }
             var item = rq.items.add(comp);
             item.applyTemplate("Best Settings");
             item.timeSpanStart = 0; item.timeSpanDuration = comp.duration;
@@ -35,6 +37,8 @@
             var af = new File(RP.audioOut); if (af.exists) af.remove();
             om.file = new File(RP.audioOut); item.render = true;
             rq.render();
+            item.remove(); // drop our temp item so the queue is left exactly as we found it
+            for (var k2 = 1; k2 <= rq.numItems; k2++) { try { if (saved[k2] !== null && saved[k2] !== undefined) rq.item(k2).render = saved[k2]; } catch (e) {} }
             done.audio = RP.audioOut;
         }
 

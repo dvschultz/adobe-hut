@@ -37,11 +37,19 @@ fi
 ERR="${SCR%.jsx}.err"
 rm -f "$ERR"
 
-WRAP="var __ERR='$ERR'; try { var __f=new File('$SCR'); __f.open('r'); var __c=__f.read(); __f.close(); eval(__c); } catch(e){ var __ef=new File(__ERR); __ef.encoding='UTF-8'; __ef.open('w'); __ef.write('ERR: '+e.toString()+' @line '+(e.line||'?')); __ef.close(); }"
+# Escape paths for a JS single-quoted literal, and the whole wrapper for an AppleScript
+# double-quoted literal — so paths with apostrophes/backslashes/quotes (e.g. "Director's Tools")
+# don't break the wrapper. Order matters: backslashes first, then the quote char.
+js_sq() { local s=$1; s=${s//\\/\\\\}; s=${s//\'/\\\'}; printf '%s' "$s"; }
+as_dq() { local s=$1; s=${s//\\/\\\\}; s=${s//\"/\\\"}; printf '%s' "$s"; }
+SCR_JS=$(js_sq "$SCR"); ERR_JS=$(js_sq "$ERR")
+
+WRAP="var __ERR='$ERR_JS'; try { var __f=new File('$SCR_JS'); __f.open('r'); var __c=__f.read(); __f.close(); eval(__c); } catch(e){ var __ef=new File(__ERR); __ef.encoding='UTF-8'; __ef.open('w'); __ef.write('ERR: '+e.toString()+' @line '+(e.line||'?')); __ef.close(); }"
+WRAP_AS=$(as_dq "$WRAP")
 
 osascript \
   -e "with timeout of ${TIMEOUT} seconds" \
-  -e "tell application \"${AE_APP}\" to DoScript \"${WRAP}\"" \
+  -e "tell application \"${AE_APP}\" to DoScript \"${WRAP_AS}\"" \
   -e "end timeout" >/dev/null 2>&1
 rc=$?
 

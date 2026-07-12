@@ -13,7 +13,7 @@
 #
 # Frames render at the comp's current *resolution* (Third/Half/Full) — set the comp to Full
 # for a crisp preview. Composited over black. Single-instance (lockfile) so it can't wipe itself.
-set -u
+set -uo pipefail
 HERE="${0:A:h}"
 AERUN="$HERE/aerun.sh"
 LOCK="/tmp/ae_render_preview.lock"
@@ -42,13 +42,17 @@ OUTDIR="$(mktemp -d "/tmp/ae-preview-XXXXXX")/"
 AUDIO_AIF=""
 [ "$AUDIO" = "1" ] && AUDIO_AIF="/tmp/ae_preview_audio.aif"
 
-# params for render-frames.jsx
-{
-  echo -n "var RP={comp:\"$COMP\", "
-  echo -n "f0:${F0:-null}, f1:${F1:-null}, "
-  echo -n "outdir:\"$OUTDIR\", "
-  echo -n "audioOut:$([ -n "$AUDIO_AIF" ] && echo "\"$AUDIO_AIF\"" || echo null)};"
-} > /tmp/ae_render_params.jsx
+# params for render-frames.jsx — build via json.dumps so comp names / paths with quotes,
+# backslashes or newlines are safely escaped (JSON is valid ExtendScript object-literal syntax).
+python3 - "$COMP" "${F0:-}" "${F1:-}" "$OUTDIR" "${AUDIO_AIF:-}" > /tmp/ae_render_params.jsx <<'PY'
+import json, sys
+comp, f0, f1, outdir, aud = sys.argv[1:6]
+rp = {"comp": comp, "outdir": outdir,
+      "f0": int(f0) if f0 else None,
+      "f1": int(f1) if f1 else None,
+      "audioOut": aud if aud else None}
+print("var RP=" + json.dumps(rp) + ";")
+PY
 
 rm -f /tmp/ae_render_done.json
 echo "rendering '$COMP' frames (audio=$AUDIO)…"
@@ -78,6 +82,10 @@ for i in $(seq 1 400); do
   sleep 2
 done
 
+# don't encode a truncated preview — abort if frames are missing
+n=$(find "$OUTDIR" -maxdepth 1 -name 'frame_*.png' | wc -l | tr -d ' ')
+if [ "$n" -lt "$EXPECT" ]; then echo "ERROR: only $n/$EXPECT frames rendered — aborting (AE render stalled/failed)"; exit 1; fi
+
 FIRST=$(find "$OUTDIR" -maxdepth 1 -name 'frame_*.png' | sort | head -1)
 read PW PH < <(magick "$FIRST" -format "%w %h" info: 2>/dev/null || sips -g pixelWidth -g pixelHeight "$FIRST" | awk '/pixel/{print $2}' | paste -sd' ' -)
 OW=$((PW * SCALE)); OH=$((PH * SCALE))
@@ -97,5 +105,7 @@ else
     -filter_complex "[1][0]overlay=shortest=1,scale=${OW}:${OH}:flags=neighbor,format=yuv420p[v]" \
     -map "[v]" -c:v libx264 -crf 20 -pix_fmt yuv420p -movflags +faststart "$OUT" 2>&1 | tail -2
 fi
+rc=$?   # with pipefail this reflects ffmpeg's status, not tail's
+if [ "$rc" -ne 0 ] || [ ! -s "$OUT" ]; then echo "ERROR: ffmpeg failed (rc=$rc) or produced no output"; exit 1; fi
 echo "done: $OUT"
 ls -la "$OUT" 2>/dev/null

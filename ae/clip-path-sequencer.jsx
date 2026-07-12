@@ -76,6 +76,7 @@
             tg.property("ADBE Anchor Point").setValue(threeD ? [sw / 2, sh / 2, 0] : [sw / 2, sh / 2]);
             tg.property("ADBE Scale").setValue(threeD ? [scale, scale, 100] : [scale, scale]);
             tg.property("ADBE Position").setValue(threeD ? [cell[0], cell[1], 0] : [cell[0], cell[1]]);
+            GridCore.cropToAspect(ly, sw, sh, cellW, cellH, CONFIG.CELL_FIT); // fill => crop to cell (no spill)
         }
     } finally {
         app.endUndoGroup();

@@ -90,7 +90,7 @@
         full2x2: function (S, rng) { var c = Q.slice(0); GridCore.shuffle(c, rng); var v = S.slice(0); GridCore.shuffle(v, rng); var o = []; for (var k = 0; k < 4 && k < v.length; k++) o.push(A(v[k], 0, c[k], g2.cellW, g2.cellH)); return o; },
         line3x3: function (S, rng) { var line = GridCore.choice(ROWS3.concat(COLS3), rng), pts = names3(line), v = S.slice(0); GridCore.shuffle(v, rng); var o = []; for (var k = 0; k < 3 && k < v.length; k++) o.push(A(v[k], 0, pts[k], g3.cellW, g3.cellH)); return o; },
         VA3x3: function (S, rng) { var sh = GridCore.choice([V_SHAPE, A_SHAPE], rng), pts = names3(sh), v = S.slice(0); GridCore.shuffle(v, rng); var o = []; for (var k = 0; k < 3 && k < v.length; k++) o.push(A(v[k], 0, pts[k], g3.cellW, g3.cellH)); return o; },
-        scatter3x3: function (S, rng) { var cells = GridCore.sample(objValues(g3.byName), S.length, rng); var v = S.slice(0); GridCore.shuffle(v, rng); var o = []; for (var k = 0; k < v.length; k++) o.push(A(v[k], 0, cells[k], g3.cellW, g3.cellH)); return o; },
+        scatter3x3: function (S, rng) { var all = objValues(g3.byName); var n = Math.min(S.length, all.length); var cells = GridCore.sample(all, n, rng); var v = S.slice(0); GridCore.shuffle(v, rng); var o = []; for (var k = 0; k < n; k++) o.push(A(v[k], 0, cells[k], g3.cellW, g3.cellH)); return o; }, // cap at available cells (>9 layers: extras hidden)
         fill2x2: function (S, rng) { var inst = fillInstances(S, 4), c = Q.slice(0); GridCore.shuffle(c, rng); var o = []; for (var k = 0; k < 4; k++) o.push(A(inst[k][0], inst[k][1], c[k], g2.cellW, g2.cellH)); return o; },
         fill3x3ce: function (S, rng) { var inst = fillInstances(S, 8), c = names3(G3_NO_CENTER); GridCore.shuffle(c, rng); var o = []; for (var k = 0; k < 8; k++) o.push(A(inst[k][0], inst[k][1], c[k], g3.cellW, g3.cellH)); return o; }
     };
@@ -185,6 +185,7 @@
                 S.setValueAtTime(t, threeD ? [sc, sc, 100] : [sc, sc]);
             }
             for (var h = 1; h <= P.numKeys; h++) { P.setInterpolationTypeAtKey(h, HOLD, HOLD); S.setInterpolationTypeAtKey(h, HOLD, HOLD); O.setInterpolationTypeAtKey(h, HOLD, HOLD); }
+            GridCore.cropToAspect(ly, srcW, srcH, W, H, CONFIG.FILL_FIT); // all grid cells share comp aspect -> crop once
         }
         for (var b2 = 0; b2 < idxList.length; b2++) {
             var oi2 = idxList[b2], src = realOf[oi2].source, sw = src.width, sh = src.height;

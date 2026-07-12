@@ -97,20 +97,45 @@ var GridCore = (function () {
     function layerPresence(layer, frameCount, fps, mode) {
         var arr = [], i; for (i = 0; i < frameCount; i++) arr[i] = false;
         var li0 = Math.round(layer.inPoint * fps), li1 = Math.round(layer.outPoint * fps);
-        function mark(a, b) { a = Math.max(0, a); b = Math.min(frameCount, b); for (var f = a; f < b; f++) arr[f] = true; }
+        function mark(a, b) { a = Math.max(0, Math.max(a, li0)); b = Math.min(frameCount, Math.min(b, li1)); for (var f = a; f < b; f++) arr[f] = true; }
         var src = layer.source;
-        if (mode === "precomp-intervals" && src && (src instanceof CompItem)) {
+        // "precomp-intervals" only makes sense for a precomp whose time maps LINEARLY to the parent
+        // (no time remap). Map each internal clip's source time -> parent-comp time via the layer's
+        // startTime + stretch, else internal in/out would be compared against the wrong frames.
+        if (mode === "precomp-intervals" && src && (src instanceof CompItem) && !layer.timeRemapEnabled) {
+            var st = layer.startTime, stf = (layer.stretch || 100) / 100;
             for (var j = 1; j <= src.numLayers; j++) {
                 var il = src.layer(j);
                 if (!il.enabled) continue;
-                var a = Math.max(Math.round(il.inPoint * fps), li0);
-                var b = Math.min(Math.round(il.outPoint * fps), li1);
-                if (b > a) mark(a, b);
+                var aC = st + il.inPoint * stf, bC = st + il.outPoint * stf;
+                if (stf < 0) { var tmp = aC; aC = bC; bC = tmp; } // reversed (negative stretch)
+                mark(Math.round(aC * fps), Math.round(bC * fps));
             }
         } else {
+            // footage layer, or time-remapped precomp (nonlinear — can't derive intervals): use in/out
             mark(li0, li1);
         }
         return arr;
+    }
+
+    // Crop a layer to a target aspect ratio with a centred rectangular mask (in source space).
+    // Combined with fitScale(..,"fill"), the visible region then exactly fills the cell — no spill
+    // into neighbours — at ANY scale (mask is pre-transform), as long as the cell keeps that aspect.
+    // Pass fit==="fit" to instead REMOVE any crop mask (contain/letterbox shows the whole source).
+    function cropToAspect(layer, srcW, srcH, aspW, aspH, fit) {
+        var parade = layer.property("ADBE Mask Parade");
+        while (parade.numProperties > 0) parade.property(1).remove();
+        if (fit === "fit") return; // no crop for contain mode
+        var ar = aspW / aspH, mw, mh;
+        if (srcW / srcH > ar) { mh = srcH; mw = srcH * ar; } else { mw = srcW; mh = srcW / ar; }
+        var cx = srcW / 2, cy = srcH / 2, l = cx - mw / 2, r = cx + mw / 2, t = cy - mh / 2, b = cy + mh / 2;
+        var m = parade.addProperty("ADBE Mask Atom");
+        var sh = new Shape();
+        sh.vertices = [[l, t], [r, t], [r, b], [l, b]];
+        sh.inTangents = [[0, 0], [0, 0], [0, 0], [0, 0]];
+        sh.outTangents = [[0, 0], [0, 0], [0, 0], [0, 0]];
+        sh.closed = true;
+        m.property("ADBE Mask Shape").setValue(sh);
     }
     // Debounce a boolean timeline: close OFF gaps shorter than `dwell`, then remove ON blips shorter than `dwell`.
     function debounce(arr, dwell) {
@@ -138,7 +163,7 @@ var GridCore = (function () {
     return {
         cellCenters: cellCenters, resolvePath: resolvePath, fitScale: fitScale,
         makeRng: makeRng, shuffle: shuffle, choice: choice, sample: sample,
-        layerPresence: layerPresence, debounce: debounce,
+        layerPresence: layerPresence, debounce: debounce, cropToAspect: cropToAspect,
         videoLayers: videoLayers, FIGURE8_3x3: FIGURE8_3x3
     };
 })();
